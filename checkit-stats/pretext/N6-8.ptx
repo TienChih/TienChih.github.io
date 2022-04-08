@@ -1,0 +1,91 @@
+<exercise checkit-seed="8525" checkit-slug="N6" checkit-title="ANOVA">
+  <statement>
+      <p>A psychologist divides test subjects into different groups where they under a different digital interactive experience. Afterwards, she measures their resting heart rates to see if there was any difference.</p>
+      
+      <p>
+          The average resting heart rate for test subjects in Group A was  <m>\bar{x}_1=89.099</m>  bpm, with sample standard deviation <m>s_1=11.727</m> bpm, and sample size <m>n_1=34</m> test subjects.
+      </p>
+      
+      <p>
+          The average resting heart rate for test subjects in Group B was  <m>\bar{x}_2=84.966</m>  bpm, with sample standard deviation <m>s_2=8.066</m> bpm, and sample size <m>n_2=37</m> test subjects.
+      </p>
+      
+      <p>
+          The average resting heart rate for test subjects in Group C was  <m>\bar{x}_3=82.217</m>  bpm, with sample standard deviation <m>s_3=9.975</m> bpm, and sample size <m>n_3=44</m> test subjects.
+      </p>
+      
+      <p>
+          The average resting heart rate of all <m>n=115</m> test subjects was <m>\bar{x}=85.1361</m>  bpm.
+      </p>
+      
+      <ol>
+          <li>
+              State the null hypothesis for this test.
+          </li>
+          <li>
+              State the alternative hypothesis for this test.
+          </li>
+          <li>
+              Using complete sentences, state the meaning of the <m>p</m>-value in the context of this problem.
+          </li>
+          <li>
+              What do we conclude?  Why?
+          </li>
+      </ol>
+      
+     
+      
+      <!--<p>
+          A psychologist divides test subjects into different groups where they under a different digital interactive experience. Afterwards, she measures their resting heart rates to see if there was any difference.<m> </m>  bpm.  <m> </m>  bpm.
+      </p>
+      
+      <ol>
+          <li>
+               <m>n=115</m>?
+          </li>
+          <li>
+              Explain what this power means in the context of this problem.
+          </li>
+          <li>
+               <m>\%</m>?
+          </li>
+      </ol>-->
+      
+      
+          
+          
+          
+          
+      
+  </statement>
+  <answer>
+      <title>Partial Solution:</title>
+      <ul>
+          <li>
+              <m>H_0:\ </m> any differences in the average resting heart rate of test subjects under different Groups is explainable solely by the variation within the Groups.
+          </li>
+          <li>
+              <m>H_A:\ </m> any differences in the average resting heart rate of test subjects under different Groups is explainable solely by the variation within the Groups.
+          </li>
+          <li>
+              <m>p</m>-value=<m>0.012402285258216184</m>
+          </li>
+      </ul>
+      
+     <!--<ul>
+          <li>
+              The standard error if <m>n=115</m> would be <m>SE=</m>.  The cutoff for a statistically significant test is a difference of <m></m>  bpm.  The power of the test is <m>P(X\leq )=\%</m> where <m>X</m> is a normal variable with mean <m></m> and standard error <m></m>.
+         </li>
+         <li>
+              <m></m> bpm,  <m>n=115</m> would only have a <m>\%</m> chance of detecting it.
+         </li>
+         <li>
+             The <m>z</m>-score for a left-tail of <m>\%</m> is <m></m>.  So for this <m>\%</m> tail to be detectable, <m>+SE\approx -1.96SE</m>, so <m>SE\approx  </m>, and for this to be true <m>n\geq 37</m>
+         </li>
+         
+          
+      </ul>-->
+          
+      
+  </answer>
+</exercise>

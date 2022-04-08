@@ -1,0 +1,73 @@
+<exercise checkit-seed="8564" checkit-slug="N2" checkit-title="Inference for single Numerical Variables">
+  <statement>
+      
+      <p>
+          A farmer is curious about the effects of a new fertilizer on the height of her corn stalks.  She measures the heights of a random selection of her stalks.  Out of  <m>49</m>  measured corn stalks, the sample average height  <m>\bar{x}=2.549</m>  meters, with sample standard deviation <m>s=0.197</m>  meters.
+      </p>
+      
+      <ul>
+          <li>  Test the hypothesis that  the average height of her corn stalks  is greater than <m>  2.5</m>  meters.
+              <ol>
+          <li>
+              State the null hypothesis.
+          </li>
+          <li>
+              State the alternative hypothesis.
+          </li>
+          <li>
+              What is the <m>p</m>-value?
+          </li>
+          <li>
+              Using complete sentences, state the meaning of the <m>p</m>-value in the context of this problem.
+          </li>
+          <li>
+              What do we conclude?  Why?
+          </li>
+          
+      </ol>
+          </li>
+          <li>
+              Find a <m>95</m>% confidence interval for the  the average height of her corn stalks.  Using complete sentences, explain what the confidence interval means in the context of this problem.
+          </li>
+      </ul>
+      
+      
+          
+          
+          
+          
+      
+  </statement>
+  <answer>
+      <title>Partial Solution:</title>
+      
+     <ul>
+          <li>
+              The null hypothesis is <m>H_0: \mu=2.5</m>.
+          </li>
+         <li>
+              The alternative hypothesis is <m>H_A: \mu\gneq2.5</m>.
+          </li>
+          <li>
+              The sampling distribution has mean <m>2.5</m> and standard error <m>SE=0.0281428571428571</m>.
+          </li>
+         <li>
+              The sample mean is <m>\bar{x}=2.549</m> which has <m>t</m>-score <m>t=1.741116751269033</m>.
+          </li>
+         <li>
+              The <m>p</m>-value is <m>0.04403492424801314</m>.
+          </li>
+         
+         <li>
+              For a <m>95</m>% confidence interval,  <m>t^*=2.0106347576242323</m>.
+          </li>
+          <li>
+              The  the average height of her corn stalks  has a <m>95</m>% chance of of falling in <m>[2.49241499324972, 2.60558500675028]</m>.
+          </li>
+         
+          
+      </ul>
+          
+      
+  </answer>
+</exercise>

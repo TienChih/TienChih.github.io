@@ -1,0 +1,101 @@
+<exercise checkit-seed="3985" checkit-slug="P4" checkit-title="Random Variables">
+  <statement>
+      
+      <p>
+          A math professor is compiling a section for their #PreTeXt book.  Let <m>X</m> denote   the number of errors currently in the code.  Consider the following probability distribution table for <m>X</m>.
+      </p>
+      
+      <p>
+          <me>
+              \begin{array}{|c
+              |c
+              |c
+              |c
+              |c
+              |c
+              |c
+              |c
+              |
+              }
+              
+              \hline
+              X_i 
+              &amp; 0
+              &amp; 1
+              &amp; 2
+              &amp; 3
+              &amp; 4
+              &amp; 5
+              &amp; 6
+              \\
+              \hline
+              P(X=X_i)
+              &amp; 0.027
+              &amp; 0.285
+              &amp; 0.149
+              &amp; ???
+              &amp; 0.145
+              &amp; 0.135
+              &amp; 0.145
+              \\
+              \hline
+              \end{array}
+          </me>
+      </p>
+      
+      
+      <p>
+          <ol>
+              <li>
+                  What is the value of the missing entry?
+              </li>
+              <li>
+                  Find the expectation of <m>X</m>, <m>E(X)</m>,  and interpret what it means in context of this problem.
+              </li>
+              <li>
+                  Find variance of <m>X</m>, <m>Var(X)</m>.
+              </li>
+              <li>
+                  Find the standard deviation of <m>X</m>, <m>\sigma_X</m>.
+              </li>
+          </ol>
+          
+      </p>
+      
+      
+     
+      
+          
+          
+          
+          
+      
+  </statement>
+  <answer>
+      <title>Partial Solution:</title>
+      
+      
+      
+      
+     <p>
+         <ol>
+             <li>
+                 <m>P(X=3)=0.114</m>.
+             </li>
+             <li>
+                 <m>E(X)=3.05</m>.
+             </li>
+             <li>
+                 <m>Var(X)=3.5195000000000007</m>
+             </li>
+             <li>
+                 <m>\sigma_X=1.8760330487494086</m>
+             </li>
+         </ol>
+          
+          
+      </p>
+          
+      
+  </answer>
+</exercise>

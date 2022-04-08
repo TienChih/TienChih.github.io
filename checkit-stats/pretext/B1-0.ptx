@@ -1,0 +1,50 @@
+<exercise checkit-seed="3123" checkit-slug="B1" checkit-title="Types of Variables">
+  <statement>
+      
+      
+      
+      
+      
+      <p>
+          For each of the following, classify the type of variable described as <em>Numerical</em> or <em>Categorical</em>, as well as the subcategory <em>Continuous</em>, <em>Discrete</em>, <em>Nominal</em> or <em>Ordinal</em>.  Be sure to justify your choices.
+          <ol>
+              <li>A critic rating a movie 1-10.</li>
+              <li>Survey responses about levels of annoyance with smoking in a workplace from Not Annoyed to Extremely Annoyed.</li>
+              <li>The number of homeruns a baseball team scores in a game.</li>
+              <li>Ranking an experience at a doctor's office from Very Pleasant to Very Unpleasant.</li>
+              <li>The distance traveled by a flock of geese during migration in miles.</li>
+              <li>The force of a car collision in N.</li>
+          </ol>
+          
+      </p>
+      
+      
+     
+      
+          
+          
+          
+          
+      
+  </statement>
+  <answer>
+      <title>Partial Solution:</title>
+      
+      
+      
+      
+     <p>
+          <ol>
+              <li>Categorical, Ordinal</li>
+              <li>Categorical, Ordinal</li>
+              <li>Numerical, Discrete</li>
+              <li>Categorical, Ordinal</li>
+              <li>Numerical, Continuous</li>
+              <li>Numerical, Continuous</li>
+          </ol>
+          
+      </p>
+          
+      
+  </answer>
+</exercise>

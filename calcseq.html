@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Sequences and Series</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="assets/css/style.css" rel="stylesheet">
+	
+  <!-- Other Scripts -->
+  <script id="MathJax-script" async
+          src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+  </script>
+  <script src="https://sagecell.sagemath.org/static/embedded_sagecell.js"></script>
+  
+  <script>sagecell.makeSagecell({"inputLocation": ".sage"});</script>
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-82736001-2"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-82736001-2');
+</script>	
+
+  <!-- =======================================================
+  * Template Name: iPortfolio - v3.3.0
+  * Template URL: https://bootstrapmade.com/iportfolio-bootstrap-portfolio-websites-template/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+</head>
+
+<body>
+
+  <!-- ======= Mobile nav toggle button ======= -->
+  <i class="bi bi-list mobile-nav-toggle d-xl-none"></i>
+
+  <!-- ======= Header ======= -->
+  <header id="header">
+    <div class="d-flex flex-column">
+
+      <div class="profile">
+        <img src="assets/img/TienProfile.jpeg" alt="" class="img-fluid rounded-circle">
+        <h1 class="text-light"><a href="index.html">Tien Chih</a></h1>
+        <div class="social-links mt-3 text-center">
+          <a href="https://twitter.com/TChihMath" target="_blank" class="twitter"><i class="bx bxl-twitter"></i></a>
+          <a href="https://youtube.com/channel/UCQGNt2_2eiwN_UMRtzLLYoA/videos" class="youtube" target="_blank"><i class="bx bxl-youtube"></i></a>
+        </div>
+      </div>
+
+      <nav id="navbar" class="nav-menu navbar">
+        <ul>
+          
+        </ul>
+      </nav><!-- .nav-menu -->
+    </div>
+  </header><!-- End Header -->
+
+  <main id="main">
+
+    <!-- ======= Breadcrumbs ======= -->
+    <section class="breadcrumbs">
+      <div class="container">
+
+        <div class="d-flex justify-content-between align-items-center">
+          <h2>Technology</h2>
+          <ol>
+            <li><a href="index.html">Home</a></li>
+			  <li><a href="technology.html">Technology Tools</a></li>
+			  <li><a href="calculus.html">Calculus</a></li>
+            <li>Sequences &amp; Series</li>
+          </ol>
+        </div>
+
+      </div>
+    </section><!-- End Breadcrumbs -->
+
+    <section class="inner-page">
+	  <div class="section-title">
+          <h2>Sequences &amp; Series</h2>
+          <p>"All The Mathematical Methods I Learned In My University Math Degree Became Obsolete In My Lifetime" - Keith Devlin</p>
+        </div>	
+      <div class="container">
+		  <span style="font-weight: bold; text-decoration: underline;">Sequences
+&amp; Series</span>:&nbsp; Enter an expression for a sequence
+a_N.&nbsp; Then it plots a_0 to a_n, as well as the appropriate partial
+sums.&nbsp; You can use a as an adjustable parameter.&nbsp; If you
+suspect your series is the power series of a function, then plot f(a)
+and see if your partial sum converges to this value.&nbsp; (<a href="https://www.desmos.com/calculator/xopgeusktn" target="_blank">https://www.desmos.com/calculator/xopgeusktn</a>)<br>
+<br>
+<br>
+<iframe src="https://www.desmos.com/calculator/xopgeusktn" style="min-height: 600px;" width="100%"></iframe><br>
+<br>
+<br>
+<span style="font-weight: bold; text-decoration: underline;">Sequence
+and Series</span>:&nbsp; Type in the value of a_n, and a maximum value
+for n, N.&nbsp; Then the following will return as ordered pairs (a_k,
+P_k) where P_k is the partial sum a_0+...+a_k:<br>
+<br>
+<br>
+<div class="sage">
+<script type="text/x-sage">
+a(n)=1.0/(n+1)
+N=10
+P=0
+for k in range(N):
+    P+=a(k)
+    print((a(k), P))
+</script></div>
+<br>
+<span style="font-weight: bold; text-decoration: underline;">Taylor
+Expansion</span>:&nbsp; The slider a controls the number of terms in
+the Taylor expansion.&nbsp; Compare graphs of sin(x), cos(x) and ex to
+Taylor expansions of various degrees. (Link <a href="https://www.desmos.com/calculator/eqtiquubzh" target="_blank">https://www.desmos.com/calculator/eqtiquubzh</a>)<br>
+<br>
+<br>
+<iframe src="https://www.desmos.com/calculator/eqtiquubzh" style="min-height: 600px;" width="100%"></iframe><br>
+<br>
+<br>
+<span style="font-weight: bold; text-decoration: underline;">Taylor
+Polynomials</span>:&nbsp; Enter in f(x), the center of the expansion a,
+and the degree of the polynomial k:<br>
+<br>
+<br>
+<div class="sage">
+<script type="text/x-sage">
+f(x)=e^(-x^2)
+a=0
+k=4
+f(x).taylor(x,a,k)
+</script></div>	  
+        
+		  
+	  
+		  
+		  
+		  
+      </div>
+    </section>
+
+  </main><!-- End #main -->
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer">
+    <div class="container">
+      <div class="copyright">
+        &copy; Copyright <strong><span>iPortfolio</span></strong>
+      </div>
+      <div class="credits">
+        <!-- All the links in the footer should remain intact. -->
+        <!-- You can delete the links only if you purchased the pro version. -->
+        <!-- Licensing information: https://bootstrapmade.com/license/ -->
+        <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/iportfolio-bootstrap-portfolio-websites-template/ -->
+        Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+      </div>
+    </div>
+  </footer><!-- End  Footer -->
+
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="assets/vendor/purecounter/purecounter.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/typed.js/typed.min.js"></script>
+  <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>

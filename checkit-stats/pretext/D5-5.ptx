@@ -1,0 +1,81 @@
+<exercise checkit-seed="8456" checkit-slug="D5" checkit-title="Normal Approximation of Binomial Distribution">
+  <statement>
+      
+      
+      <p>
+          Suppose the probability that a person clicks on a malicious link in a scam email is  <m>0.05</m>. A scammer sends scam emails to  <m>9900</m>  people.  Let <m>X</m> denote the  number of people who click the link.  Find the following:
+          
+      </p>
+      
+      
+      
+      
+      <p>
+          <ol>
+              <li>
+                  <m>E(X)</m>, the expected  number of people who click the link.
+              </li>
+              
+              <li>
+                  <p>
+                      <m>\sigma_A</m>, the standard deviation of the  number of people who click the link.
+                  </p>
+                  <p>
+                      Then use the normal approximation of <m>X</m> to find the following:
+                  </p>
+                  
+              </li>
+             
+              <li>
+                  Find the probability that the number of number of people who click the email is  between <m>430 </m> and <m>516</m>  people.
+              </li>
+              
+              
+              <li>
+                  Find <m>X^*</m> such that the probability that  number of people who click the link  is at most  <m>X^*</m>  people is <m>0.28</m>.  (This value need not be a whole number.)
+              </li>
+              
+          </ol>
+          
+      </p>
+      
+      
+     
+      
+          
+          
+          
+          
+      
+  </statement>
+  <answer>
+      <title>Partial Solution:</title>
+      
+      
+      
+      
+     <p>
+          <ol>
+              <li>
+                  <m>E(X)=495.0</m>
+              </li>
+              <li>
+                  <m>\sigma_X=21.68524844220144</m>
+              </li>
+              
+              
+              <li>
+                  <m>P(430\leq\ X\leq\ 516)=0.8322164076958373</m>.
+              </li>
+              
+              <li>
+                  If <m>P(X\leq\ X^*)=0.28</m> then <m>X^*=482.3609371123965</m>  people.
+              </li>
+              
+          </ol>
+          
+      </p>
+          
+      
+  </answer>
+</exercise>

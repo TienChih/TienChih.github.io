@@ -1,0 +1,81 @@
+<exercise checkit-seed="6419" checkit-slug="D5" checkit-title="Normal Approximation of Binomial Distribution">
+  <statement>
+      
+      
+      <p>
+          Suppose there is a vaccine is developed to combat a novel virus.  The probability an eligible adult takes the vaccine is  <m>0.68</m>. The number of eligible adults in a town is  <m>26100</m>  adults.  Let <m>X</m> denote the  number of adults who take the vaccine.  Find the following:
+          
+      </p>
+      
+      
+      
+      
+      <p>
+          <ol>
+              <li>
+                  <m>E(X)</m>, the expected  number of adults who take the vaccine.
+              </li>
+              
+              <li>
+                  <p>
+                      <m>\sigma_A</m>, the standard deviation of the  number of adults who take the vaccine.
+                  </p>
+                  <p>
+                      Then use the normal approximation of <m>X</m> to find the following:
+                  </p>
+                  
+              </li>
+             
+              <li>
+                  Find the probability that the number of adults who take the vaccine is  between <m>17763 </m> and <m>17967</m>  adults.
+              </li>
+              
+              
+              <li>
+                  Find <m>X^*</m> such that the probability that  number of adults who take the vaccine  is at least  <m>X^*</m>  adults is <m>0.32</m>.  (This value need not be a whole number.)
+              </li>
+              
+          </ol>
+          
+      </p>
+      
+      
+     
+      
+          
+          
+          
+          
+      
+  </statement>
+  <answer>
+      <title>Partial Solution:</title>
+      
+      
+      
+      
+     <p>
+          <ol>
+              <li>
+                  <m>E(X)=17748.0</m>
+              </li>
+              <li>
+                  <m>\sigma_X=75.36152864691638</m>
+              </li>
+              
+              
+              <li>
+                  <m>P(17763\leq\ X\leq\ 17967)=0.41928505899649815</m>.
+              </li>
+              
+              <li>
+                  If <m>P(X\geq\ X^*)=0.32</m> then <m>X^*=17783.246496447595</m>  adults.
+              </li>
+              
+          </ol>
+          
+      </p>
+          
+      
+  </answer>
+</exercise>

@@ -1,0 +1,97 @@
+<exercise checkit-seed="6804" checkit-slug="B4" checkit-title="Centers of Data">
+  <statement>
+      
+      
+      
+      
+      
+      <p>
+          Consider the following list of data:
+          <me>
+              86,
+              91,
+              87,
+              93,
+              83,
+              83,
+              84,
+              86,
+              83,
+              84,
+              78,
+              84,
+              82,
+              80,
+              87,
+              87,
+              91,
+              86,
+              90,
+              73,
+              73,
+              81,
+              79,
+              86,
+              90,
+              88,
+              86,
+              69,
+              85,
+              78,
+              90,
+              93,
+              72,
+              92,
+              79,
+          </me>
+          
+      
+          find the following measures of centrality for this data:
+          <ol>
+              <li>
+                  Mean.
+              </li>
+              <li>
+                  Median.
+              </li>
+              <!--<li>
+                  Mode.
+              </li>-->
+          </ol>
+          
+      
+      </p>
+     
+      
+          
+          
+          
+          
+      
+  </statement>
+  <answer>
+      <title>Partial Solution:</title>
+      
+      
+      
+      
+     <p>
+          Find the following measures of centrality for this data:
+          <ol>
+              <li>
+                  Mean: <m>83.97142857142858</m>
+              </li>
+              <li>
+                  Median: <m>85.0</m>
+              </li>
+              <!--<li>
+                  Mode: <m>\text{\texttt{ModeResult(mode=array([86]),{ }count=array([5]))}}</m>
+              </li>-->
+          </ol>
+          
+      
+      </p>
+          
+      
+  </answer>
+</exercise>

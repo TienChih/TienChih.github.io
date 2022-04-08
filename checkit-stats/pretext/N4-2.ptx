@@ -1,0 +1,73 @@
+<exercise checkit-seed="7209" checkit-slug="N4" checkit-title="Inference for difference of means of Numerical Variables">
+  <statement>
+      
+      <p>
+          A wildlife biologist wants to study wild turkeys from two different forests.  Out of  <m>29</m>  captured turkeys from Forest A, the average weight was  <m>\bar{x}_1=17.047</m>  pounds, with sample standard deviation <m>s_1=1.192</m>  pounds.  Then out of <m>29</m>  captured turkeys from Forest B, the average weight was  <m>\bar{x}_2=18.699</m>  pounds, with sample standard deviation <m>s_2=4.97</m>  pounds.
+      </p>
+      
+      <ul>
+          <li>  Test the hypothesis that  the difference in average weight of turkeys between Forest A and Forest B, <m>\mu_1-\mu_2</m>, is less than <m>  -0.1</m>  pounds.
+              <ol>
+          <li>
+              State the null hypothesis.
+          </li>
+          <li>
+              State the alternative hypothesis.
+          </li>
+          <li>
+              What is the <m>p</m>-value?
+          </li>
+          <li>
+              Using complete sentences, state the meaning of the <m>p</m>-value in the context of this problem.
+          </li>
+          <li>
+              What do we conclude?  Why?
+          </li>
+          
+      </ol>
+          </li>
+          <li>
+              Find a <m>95</m>% confidence interval for the  the difference in average weight of turkeys between Forest A and Forest B.  Using complete sentences, explain what the confidence interval means in the context of this problem.
+          </li>
+      </ul>
+      
+      
+          
+          
+          
+          
+      
+  </statement>
+  <answer>
+      <title>Partial Solution:</title>
+      
+     <ul>
+          <li>
+              The null hypothesis is <m>H_0: \mu_1-\mu_2=-0.1</m>.
+          </li>
+         <li>
+              The alternative hypothesis is <m>H_A: \mu_1-\mu_2\lneq-0.1</m>.
+          </li>
+          <li>
+              The sampling distribution has mean <m>-0.1</m> and standard error <m>SE=0.949078754771500</m>.
+          </li>
+         <li>
+              The observesd difference of sample means is <m>\bar{x_1}-\bar{x_2}=-1.652</m> which has <m>t</m>-score <m>t=-1.6352699838630982</m>.
+          </li>
+         <li>
+              The <m>p</m>-value is <m>0.05659324519640774</m>.
+          </li>
+         
+         <li>
+              For a <m>95</m>% confidence interval,  <m>t^*=2.0484071417952463</m>.
+          </li>
+          <li>
+              The  the difference in average weight of turkeys between Forest A and Forest B  has a <m>95</m>% chance of of falling in <m>[-3.59609969940008, 0.292099699400080]</m>.
+          </li>
+         
+          
+      </ul>
+          
+      
+  </answer>
+</exercise>

@@ -1,0 +1,48 @@
+<exercise checkit-seed="1086" checkit-slug="N5" checkit-title="Size of Sample: Means">
+  <statement>
+      
+     
+      
+      <p>
+          A kinesiologist wants to compare the average finishing speeds of the 100 meter dash using two training techniques.  She wants to be able to detect a difference of <m> -0.24</m>  seconds. Suppose she is aware the finishing times of both methods have standard deviation  <m> 0.54</m>  seconds.
+      </p>
+      
+      <ol>
+          <li>
+              What is the power of a test if the number of 100 meter dashes she observed of each training method was  <m>n=32</m>?
+          </li>
+          <li>
+              Explain what this power means in the context of this problem.
+          </li>
+          <li>
+              How many 100 meter dashes of each training method would she have to observe to detect this difference with power  <m>60</m>%?
+          </li>
+      </ol>
+      
+      
+          
+          
+          
+          
+      
+  </statement>
+  <answer>
+      <title>Partial Solution:</title>
+      
+     <ul>
+          <li>
+              The standard error if <m>n=32</m> would be <m>SE=0.135000000000000</m>.  The cutoff for a statistically significant test is a difference of <m>-0.2645951379129073</m>  seconds.  The power of the test is <m>P(X\leq -0.2645951379129073)=42.7718298626919</m>% where <m>X</m> is a normal variable with mean <m>-0.24</m> and standard error <m>0.135000000000000</m>.
+         </li>
+         <li>
+             If there were actually a difference in finishing times of  <m>-0.24</m> seconds,  a study where the number of observations was  <m>n=32</m> would only have a <m>42.7718298626919</m>% chance of detecting it.
+         </li>
+         <li>
+             The <m>z</m>-score for a left-tail of <m>60</m>% is <m>0.2533471031357997</m>.  So for this <m>60</m>% tail to be detectable, <m>-0.24+0.2533471031357997SE\approx -1.96SE</m>, so <m>SE\approx 0.10843482479095082 </m>, and for this to be true <m>n\geq 50</m>
+         </li>
+         
+          
+      </ul>
+          
+      
+  </answer>
+</exercise>

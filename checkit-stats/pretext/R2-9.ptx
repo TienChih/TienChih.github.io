@@ -1,0 +1,159 @@
+<exercise checkit-seed="6233" checkit-slug="R2" checkit-title="Interpreting Linear Regression">
+  <statement>
+      <p>
+          A study is conducted comparing the age of adults to their glucose level (in mg/dL).
+      </p>
+      
+      <p>
+          Consider this table of data collected comparing Age measured in years, and Glucose Level measured in mg/dL:
+          <me>
+               \begin{array}{|c|c|}
+              \hline
+              \text{ Age in years }
+              &amp;
+              \text{ Glucose Level in mg/dL }
+              \\
+              \hline
+               36
+              &amp; 77.8
+                  \\
+               56
+              &amp; 89.0
+                  \\
+               60
+              &amp; 93.5
+                  \\
+               53
+              &amp; 91.0
+                  \\
+               22
+              &amp; 76.8
+                  \\
+               34
+              &amp; 76.2
+                  \\
+               22
+              &amp; 76.3
+                  \\
+               63
+              &amp; 92.1
+                  \\
+               47
+              &amp; 83.3
+                  \\
+               38
+              &amp; 76.9
+                  \\
+               30
+              &amp; 79.9
+                  \\
+               30
+              &amp; 75.3
+                  \\
+               21
+              &amp; 80.2
+                  \\
+               31
+              &amp; 78.8
+                  \\
+               39
+              &amp; 79.3
+                  \\
+               29
+              &amp; 76.2
+                  \\
+               20
+              &amp; 68.9
+                  \\
+               38
+              &amp; 77.8
+                  \\
+               23
+              &amp; 75.9
+                  \\
+               31
+              &amp; 76.1
+                  \\
+               51
+              &amp; 86.6
+                  \\
+               25
+              &amp; 74.3
+                  \\
+               30
+              &amp; 78.7
+                  \\
+               49
+              &amp; 88.6
+                  \\
+               50
+              &amp; 85.2
+                  \\
+              
+              \hline
+              \end{array}
+          </me>
+      </p>
+      <p>
+          <ol>
+              <li>
+                  Find the intercept <m>\beta_0</m> and it's units.
+              </li>
+              <li>
+                  Find the slope <m>\beta_1</m> and it's units.
+              </li>
+              <li>
+                  What does <m>\beta_1</m> tell you about the relationship between Age and Glucose Level?
+              </li>
+              <li>
+                  For an adult with Age <m>60</m> years, what is the estimated Glucose Level?
+              </li>
+              <li>
+                  For an adult with Glucose Level <m>85.3</m> mg/dL, what is the estimated Age?
+              </li>
+              
+          </ol>
+      </p>
+      
+      
+      
+      
+     
+      
+          
+          
+          
+          
+      
+  </statement>
+  <answer>
+      
+      
+      
+     <p>
+          <p>
+          <ol>
+              <li>
+                  <m>\beta_0=63.54142465688517\ </m> mg/dL.
+              </li>
+              <li>
+                  <m>\beta_1=0.459228861614085\ </m> mg/dL<m>/</m>years.
+              </li>
+              <li>
+                 Whenever Age increases by 1 years, Glucose Level changes, on average, by <m>0.459228861614085\ </m> mg/dL.
+              </li>
+              <li>
+                  For an adult with Age <m>\ 60\ </m> years, the estimated Glucose Level is <m>91.09515635373026\ </m> mg/dL.
+              </li>
+              <li>
+                  For an adult with Glucose Level <m>\ 85.3\ </m> mg/dL, the estimated Age is <m>47.38067913814995\ </m> years.
+              </li>
+              
+          </ol>
+      </p>
+          
+      </p>
+          
+      
+  </answer>
+</exercise>

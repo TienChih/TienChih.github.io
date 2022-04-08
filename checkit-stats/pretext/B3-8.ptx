@@ -1,0 +1,41 @@
+<exercise checkit-seed="5512" checkit-slug="B3" checkit-title="Visualizing Data">
+  <statement>
+      
+      
+      
+      
+      
+      <p>
+          Fix and run the following code in the <c>R</c> cell to download the <c>cherry.csv</c> data, and generate a histogram for the height of 31 trees in the Allegheny National Forest, Pennsylvania, in feet, <c>height</c> <c> </c>.
+          
+      </p>
+      <p>
+          <c>cherry = read.csv("https://github.com/TienChih/tbil-stats/raw/main/data/cherry.csv")</c>
+      </p>
+      <p>
+          <c>hist(cherry$FIXME)</c>
+      </p>
+      
+      <p>Indicate what you fixed, and upload the generated image.</p>
+     
+      
+          
+          
+          
+          
+      
+  </statement>
+  <answer>
+      <title>Partial Solution:</title>
+      
+      
+      
+      
+     <p>
+          <c>FIXME</c>'s: <c>height</c> <c> </c>.
+          
+      </p>
+          
+      
+  </answer>
+</exercise>

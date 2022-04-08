@@ -1,0 +1,66 @@
+<exercise checkit-seed="6159" checkit-slug="P1" checkit-title="Introduction to Probability">
+  <statement>
+      
+      <p>
+          We consider the event that there is an accident over the course of the day, and the event that it rains.
+      </p>
+      
+      <p>
+          Suppose that   the probability that    it rains, or there is an accident, over the course of a day is <m>0.1076</m>, the probability that   there is an accident on a road and it rains over the course of a day is <m>0.0098</m>, and finally   the probability that    it rains over the course of a day is <m>0.099</m>.
+      </p>
+      
+      
+      <p>
+          <ol>
+              <li>
+                  <p>
+                      Find the probability that   there is an accident on a road over the course of a day.
+                  </p>
+                  <p>
+                      (For the following, it is advisable to draw a venn diagram using the information above.)
+                  </p>
+                  
+              </li>
+              <li>
+                  Find the probability that  there is no accident on the road but it rains over the course of a day.
+              </li>
+              <li>
+                  Find the probability that  there is an accident on the road or it doesn't rain over the course of a day.
+              </li>
+          </ol>
+          
+      </p>
+      
+      
+     
+      
+          
+          
+          
+          
+      
+  </statement>
+  <answer>
+      <title>Partial Solution:</title>
+      
+      
+      
+      
+     <p>
+          <ol>
+              <li>
+                   The probability that   there is an accident on a road over the course of a day is <m>0.0184</m>.
+              </li>
+              <li>
+                   The  probability that  there is no accident on the road but it rains over the course of a day is <m>0.0892</m>.
+              </li>
+              <li>
+                    The probability that  there is an accident on the road or it doesn't rain over the course of a day is <m>0.9108</m>.
+              </li>
+          </ol>
+          
+      </p>
+          
+      
+  </answer>
+</exercise>

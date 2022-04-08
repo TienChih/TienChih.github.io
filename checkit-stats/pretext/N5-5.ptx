@@ -1,0 +1,48 @@
+<exercise checkit-seed="3410" checkit-slug="N5" checkit-title="Size of Sample: Means">
+  <statement>
+      
+     
+      
+      <p>
+          A sociologist is comparing the average cost of food expenditures of families with similar incomes, but in different neighborhoods.  They want to be able to detect a difference of  <m> -12.13</m>  dollars per month. Suppose they are aware that food expenditures for both neighborhoods have standard deviation  <m> 136.54</m>  dollars per month.
+      </p>
+      
+      <ol>
+          <li>
+              What is the power of a test if the number of families observed from each neighborhood was  <m>n=49</m>?
+          </li>
+          <li>
+              Explain what this power means in the context of this problem.
+          </li>
+          <li>
+              How many families observed from each neighborhood would be needed to detect this difference with power  <m>85</m>%?
+          </li>
+      </ol>
+      
+      
+          
+          
+          
+          
+      
+  </statement>
+  <answer>
+      <title>Partial Solution:</title>
+      
+     <ul>
+          <li>
+              The standard error if <m>n=49</m> would be <m>SE=27.5852456866318</m>.  The cutoff for a statistically significant test is a difference of <m>-54.06608805048713</m>  dollars per month.  The power of the test is <m>P(X\leq -54.06608805048713)=6.422581584203391</m>% where <m>X</m> is a normal variable with mean <m>-12.13</m> and standard error <m>27.5852456866318</m>.
+         </li>
+         <li>
+             If there were actually a difference in average food expenditures of  <m>-12.13</m> dollars per month,  a study where the number of observed families was  <m>n=49</m> would only have a <m>6.422581584203391</m>% chance of detecting it.
+         </li>
+         <li>
+             The <m>z</m>-score for a left-tail of <m>85</m>% is <m>1.0364333894937894</m>.  So for this <m>85</m>% tail to be detectable, <m>-12.13+1.0364333894937894SE\approx -1.96SE</m>, so <m>SE\approx 4.048194710459988 </m>, and for this to be true <m>n\geq 2276</m>
+         </li>
+         
+          
+      </ul>
+          
+      
+  </answer>
+</exercise>

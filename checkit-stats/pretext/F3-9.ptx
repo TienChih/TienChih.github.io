@@ -1,0 +1,64 @@
+<exercise checkit-seed="7263" checkit-slug="F3" checkit-title="Hypothesis Testing">
+  <statement>
+      <p>
+          An education researcher wants to know of the proportion if college students who find a certain subject challenging is less than <m>  32</m>%.  They conduct a survey of college students.
+      </p>
+      <p>
+Suppose that for   <m>n=210</m> surveyed students, <m>58</m> found the subject challenging. Test the hypothesis that  the proportion of all college students that find the subject challenging is less than <m>  32</m>%. 
+      </p>
+      
+      <ol>
+          <li>
+              State the null hypothesis.
+          </li>
+          <li>
+              State the alternative hypothesis.
+          </li>
+          <li>
+              What is the <m>p</m>-value?
+          </li>
+          <li>
+              Using complete sentences, state the meaning of the <m>p</m>-value in the context of this problem.
+          </li>
+          <li>
+              What do we conclude?  Why?
+          </li>
+          
+      </ol>
+          
+          
+          
+          
+      
+  </statement>
+  <answer>
+      <title>Partial Solution:</title>
+      
+     <ul>
+          <li>
+              The null hypothesis is <m>H_0: p=0.32</m>.
+          </li>
+         <li>
+              The alternative hypothesis is <m>H_A: p\lneq0.32</m>.
+          </li>
+          <li>
+              The sampling distribution has mean <m>0.32</m> and standard error <m>SE=0.0321899126465183</m>.
+          </li>
+         <li>
+              The sample proportion is <m>\hat{p}=0.2761904761904762</m> which has <m>z</m>-score <m>z=-1.36097057145206</m>.
+          </li>
+         <li>
+              The <m>p</m>-value is <m>0.08676149481548415</m>.
+          </li>
+         
+          <!--<li>
+              For a % confidence interval,  <m>z^*=</m>.
+          </li>
+          <li>
+              The proportion of all college students that find the subject challenging has a % chance of of falling in <m>[, ]</m>.
+          </li>-->
+      </ul>
+          
+      
+  </answer>
+</exercise>

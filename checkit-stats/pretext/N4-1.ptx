@@ -1,0 +1,73 @@
+<exercise checkit-seed="6858" checkit-slug="N4" checkit-title="Inference for difference of means of Numerical Variables">
+  <statement>
+      
+      <p>
+          A retail chain advertises two different locations using different marketing campaigns, to compare the results.  Out of  <m>45</m>  observed days, the daily revenue for Store A was  <m>\bar{x}_1=880.325</m>  dollars, with sample standard deviation <m>s_1=123.509</m>  dollars.  Then out of <m>45</m>  observed days, the daily revenue for Store B was  <m>\bar{x}_2=907.9390000000001</m>  dollars, with sample standard deviation <m>s_2=36.567</m>  dollars.
+      </p>
+      
+      <ul>
+          <li>  Test the hypothesis that  the difference in average daily retail between  Store A and Store B, <m>\mu_1-\mu_2</m>, is less than <m>  0</m>  dollars.
+              <ol>
+          <li>
+              State the null hypothesis.
+          </li>
+          <li>
+              State the alternative hypothesis.
+          </li>
+          <li>
+              What is the <m>p</m>-value?
+          </li>
+          <li>
+              Using complete sentences, state the meaning of the <m>p</m>-value in the context of this problem.
+          </li>
+          <li>
+              What do we conclude?  Why?
+          </li>
+          
+      </ol>
+          </li>
+          <li>
+              Find a <m>95</m>% confidence interval for the  the difference in average daily retail between  Store A and Store B.  Using complete sentences, explain what the confidence interval means in the context of this problem.
+          </li>
+      </ul>
+      
+      
+          
+          
+          
+          
+      
+  </statement>
+  <answer>
+      <title>Partial Solution:</title>
+      
+     <ul>
+          <li>
+              The null hypothesis is <m>H_0: \mu_1-\mu_2=0</m>.
+          </li>
+         <li>
+              The alternative hypothesis is <m>H_A: \mu_1-\mu_2\lneq0</m>.
+          </li>
+          <li>
+              The sampling distribution has mean <m>0</m> and standard error <m>SE=19.2016310476191</m>.
+          </li>
+         <li>
+              The observesd difference of sample means is <m>\bar{x_1}-\bar{x_2}=-27.614</m> which has <m>t</m>-score <m>t=-1.4381069989064303</m>.
+          </li>
+         <li>
+              The <m>p</m>-value is <m>0.07873934314362938</m>.
+          </li>
+         
+         <li>
+              For a <m>95</m>% confidence interval,  <m>t^*=2.015367574443763</m>.
+          </li>
+          <li>
+              The  the difference in average daily retail between  Store A and Store B  has a <m>95</m>% chance of of falling in <m>[-66.3123445898041, 11.0843445898041]</m>.
+          </li>
+         
+          
+      </ul>
+          
+      
+  </answer>
+</exercise>

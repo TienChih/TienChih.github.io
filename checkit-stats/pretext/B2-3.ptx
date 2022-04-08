@@ -1,0 +1,50 @@
+<exercise checkit-seed="9907" checkit-slug="B2" checkit-title="Sampling Techniques">
+  <statement>
+      
+      
+      
+      
+      
+      <p>
+          For each of the following, classify the sampling technique described as <em>Simple Random Sample</em>, <em>Stratified Random Sampling</em>, <em>Cluster Sampling</em> or <em>Multi-Stage Sampling</em>.  Be sure to justify your choices.
+          <ol>
+              <li>To measure student satisfaction, students are randomly selected from the student body and surveyed.</li>
+              <li>To measure student response to a new general education policy, the administration divides the students by first 2 digits of their id number,  randomly selects several 2 digit codes,  and then randomly selects a few students for each selected id numbers to survey.</li>
+              <li>To test products for defects, a manufacturer seperates products by types, and randomly selects and tests products from each type.</li>
+              <li>To test products for defects, a manufacturer randomly selects and tests products.</li>
+              <li>To measure potential allergic reactions to a medication,  users of the medication are seperated by age range, and after randomly selecting a few age ranges, subjects within those ranges are randomly selected to be tested.</li>
+              <li>To measure the spread of a species of bovine flea, cows are seperated into groups, some are randomly selected and within those groups, some cows are randomly tested for fleas.</li>
+          </ol>
+          
+      </p>
+      
+      
+     
+      
+          
+          
+          
+          
+      
+  </statement>
+  <answer>
+      <title>Partial Solution:</title>
+      
+      
+      
+      
+     <p>
+          <ol>
+              <li>Simple Random Sampling</li>
+              <li>Multi-Stage Sampling</li>
+              <li>Stratified Random Sample</li>
+              <li>Simple Random Sampling</li>
+              <li>Multi-Stage Sampling</li>
+              <li>Multi-Stage Sampling</li>
+          </ol>
+          
+      </p>
+          
+      
+  </answer>
+</exercise>

@@ -1,0 +1,67 @@
+<exercise checkit-seed="8192" checkit-slug="D4" checkit-title="Binomial Distribution">
+  <statement>
+      
+      
+      <p>
+          Suppose a group of people are in a room for extended time with someone infected with a novel virus.  Each of the  <m>5</m>  people has a <m>0.36</m> chance of  contracting the virus.  Suppose that whether or not each  person  contract the virus is independent of the other  people.  Find the following:
+      </p>
+      
+      
+      <p>
+          <ol>
+              <li>
+                  What is the probability that <m>5</m>  people  contract the virus?
+              </li>
+             
+              <li>
+                  What is the probability that <m>3</m>  people  contract the virus?
+              </li>
+              
+              
+              <li>
+                  What is the probability that  greater than  <m>2</m>  people  contract the virus?
+              </li>
+              
+              <li>
+                  What is the probability that between <m>1</m> and <m>2</m> (inclusive)  people  contract the virus?
+              </li>
+          </ol>
+          
+      </p>
+      
+      
+     
+      
+          
+          
+          
+          
+      
+  </statement>
+  <answer>
+      <title>Partial Solution:</title>
+      
+      
+      
+      
+     <p>
+          <ol>
+              <li>
+                  <m>0.006046617599999999</m>
+              </li>
+              <li>
+                  <m>0.191102976</m>
+              </li>
+              <li>
+                  <m>0.2508973056</m>
+              </li>
+              <li>
+                  <m>0.641728512</m>
+              </li>
+          </ol>
+          
+      </p>
+          
+      
+  </answer>
+</exercise>

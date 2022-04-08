@@ -1,0 +1,91 @@
+<exercise checkit-seed="7270" checkit-slug="N6" checkit-title="ANOVA">
+  <statement>
+      <p>An outside consultant audits the pay of company employees from three different divisions with identical performance in order to identity discrepency. </p>
+      
+      <p>
+          The average salary of employees in Division A was  <m>\bar{x}_1=49.244</m>  thousand dollars, with sample standard deviation <m>s_1=4.199</m> thousand dollars, and sample size <m>n_1=31</m> employees.
+      </p>
+      
+      <p>
+          The average salary of employees in Division B was  <m>\bar{x}_2=48.133</m>  thousand dollars, with sample standard deviation <m>s_2=2.693</m> thousand dollars, and sample size <m>n_2=48</m> employees.
+      </p>
+      
+      <p>
+          The average salary of employees in Division C was  <m>\bar{x}_3=47.331</m>  thousand dollars, with sample standard deviation <m>s_3=2.768</m> thousand dollars, and sample size <m>n_3=31</m> employees.
+      </p>
+      
+      <p>
+          The mean salary of all <m>n=110</m> sampled employees was <m>\bar{x}=48.2201</m>  thousand dollars.
+      </p>
+      
+      <ol>
+          <li>
+              State the null hypothesis for this test.
+          </li>
+          <li>
+              State the alternative hypothesis for this test.
+          </li>
+          <li>
+              Using complete sentences, state the meaning of the <m>p</m>-value in the context of this problem.
+          </li>
+          <li>
+              What do we conclude?  Why?
+          </li>
+      </ol>
+      
+     
+      
+      <!--<p>
+          An outside consultant audits the pay of company employees from three different divisions with identical performance in order to identity discrepency. <m> </m>  thousand dollars.  <m> </m>  thousand dollars.
+      </p>
+      
+      <ol>
+          <li>
+               <m>n=110</m>?
+          </li>
+          <li>
+              Explain what this power means in the context of this problem.
+          </li>
+          <li>
+               <m>\%</m>?
+          </li>
+      </ol>-->
+      
+      
+          
+          
+          
+          
+      
+  </statement>
+  <answer>
+      <title>Partial Solution:</title>
+      <ul>
+          <li>
+              <m>H_0:\ </m> any difference in salaries between employees of different divisions is explainable solely by the variation within the Divisions.
+          </li>
+          <li>
+              <m>H_A:\ </m> any difference in salaries between employees of different divisions is explainable solely by the variation within the Divisions.
+          </li>
+          <li>
+              <m>p</m>-value=<m>0.0658271158202609</m>
+          </li>
+      </ul>
+      
+     <!--<ul>
+          <li>
+              The standard error if <m>n=110</m> would be <m>SE=</m>.  The cutoff for a statistically significant test is a difference of <m></m>  thousand dollars.  The power of the test is <m>P(X\leq )=\%</m> where <m>X</m> is a normal variable with mean <m></m> and standard error <m></m>.
+         </li>
+         <li>
+              <m></m> thousand dollars,  <m>n=110</m> would only have a <m>\%</m> chance of detecting it.
+         </li>
+         <li>
+             The <m>z</m>-score for a left-tail of <m>\%</m> is <m></m>.  So for this <m>\%</m> tail to be detectable, <m>+SE\approx -1.96SE</m>, so <m>SE\approx  </m>, and for this to be true <m>n\geq 48</m>
+         </li>
+         
+          
+      </ul>-->
+          
+      
+  </answer>
+</exercise>

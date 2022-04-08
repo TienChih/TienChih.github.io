@@ -1,0 +1,60 @@
+<exercise checkit-seed="8510" checkit-slug="P2" checkit-title="Conditional Probability">
+  <statement>
+      
+      <p>
+          An interview coach promises employees of a company that going through their course will help applicants get a promotion.  We consider the events that an applicant is promoted and the event that they go through the course.
+      </p>
+      
+      <p>
+          Suppose that   the probability that   the applicant gets a promotion is <m>0.32</m>, the probability that   the applicant gets a promotion given that they wen't through the course is <m>0.32</m>, and finally   the probability that    the applicant goes through the course is <m>0.19</m>.
+      </p>
+      
+      
+      <p>
+          <ol>
+              <li>
+                  Find the probability that    the applicant both got a promotion and went through the course.
+              </li>
+              <li>
+                  Find the probability that    the customer went through the course, given that they got a promotion.
+              </li>
+              <li>
+                  Are the events   the applicant gets a promotion, and    the applicant goes through the course independent?
+              </li>
+          </ol>
+          
+      </p>
+      
+      
+     
+      
+          
+          
+          
+          
+      
+  </statement>
+  <answer>
+      <title>Partial Solution:</title>
+      
+      
+      
+      
+     <p>
+          <ol>
+              <li>
+                   The probability that    the applicant both got a promotion and went through the course is <m>0.0608</m>.
+              </li>
+              <li>
+                   The  probability that    the customer went through the course, given that they got a promotion is <m>0.19</m>.
+              </li>
+              <li>
+                  The events   the applicant gets a promotion, and    the applicant goes through the course  are independent.
+              </li>
+          </ol>
+          
+      </p>
+          
+      
+  </answer>
+</exercise>

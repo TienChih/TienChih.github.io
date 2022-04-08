@@ -1,0 +1,64 @@
+<exercise checkit-seed="9689" checkit-slug="C2" checkit-title="Two Categorical Variable Inferences">
+  <statement>
+      <p>
+          A pharmacist is curious about the side effects of a trial drug between males and females.  She wants to know if the difference in rates of side effects between males and females is<m>\, </m> is not equal to <m>\,  -0.01</m>.  She tested the drug on male and female rats.
+      </p>
+      <p>
+          Suppose that of   <m>n_1=199\, </m>tested male rats, <m>x_1=98\, </m>developed side effects and of <m>n_2=199\, </m>tested female rats, <m>x_2=83\, </m>developed side effects. Test the hypothesis that  the difference between the proportion of male rats who would develop side effects: <m>p_1</m>, and the proportion of female rats who would develop side effects: <m>p_2</m>,   is not equal to<m>\,  -0.01</m>.  That is <m>p_1-p_2\neq-0.01</m>.
+      </p>
+      
+      <ol>
+          <li>
+              State the null hypothesis.
+          </li>
+          <li>
+              State the alternative hypothesis.
+          </li>
+          <li>
+              What is the <m>p</m>-value?
+          </li>
+          <li>
+              Using complete sentences, state the meaning of the <m>p</m>-value in the context of this problem.
+          </li>
+          <li>
+              What do we conclude?  Why?
+          </li>
+          
+      </ol>
+          
+          
+          
+          
+      
+  </statement>
+  <answer>
+      <title>Partial Solution:</title>
+      
+     <ul>
+          <li>
+              The null hypothesis is <m>H_0: p_1-p_2=-0.01</m>.
+          </li>
+         <li>
+              The alternative hypothesis is <m>H_A: p_1-p_2\neq-0.01</m>.
+          </li>
+          <li>
+              The sampling distribution has mean <m>-0.01</m> and standard error <m>SE=0.0497768062101294</m>.
+          </li>
+         <li>
+              The difference in sample proportions is <m>\hat{p}=0.0753768844221106</m> which has <m>z</m>-score <m>z=1.71519410188146</m>.
+          </li>
+         <li>
+              The <m>p</m>-value is <m>0.08630964588981782</m>.
+          </li>
+         
+          <!--<li>
+              For a % confidence interval,  <m>z^*=</m>.
+          </li>
+          <li>
+              The proportion of  that would develop side effects has a % chance of of falling in <m>[, ]</m>.
+          </li>-->
+      </ul>
+          
+      
+  </answer>
+</exercise>

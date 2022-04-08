@@ -1,0 +1,70 @@
+<exercise checkit-seed="2905" checkit-slug="P3" checkit-title="Bayes Theorem">
+  <statement>
+      
+      <p>
+          A test is administered for a health condition.  We consider the events that they test positive for the condition, and the event they have the condition.
+      </p>
+      
+      <p>
+          Suppose that   the probability that   the subject tests positive for the condition, given that they have the condition is <m>0.96</m>, the probability that   the subject tests positive for the condition, given that they do not have the condition is <m>0.29</m>.
+      </p>
+      
+      
+      <p>
+          <ol>
+              <li>
+                  Suppose it were the case that the probability    the subject has  the condition was <m>0.11</m>.
+                  <ol>
+                      <li>
+                          Find the probability that   the subject tests positive for the condition.
+                      </li>
+                      <li>
+                          Find the probability that    the subject has the condition, given that they test positive for the condition.
+                      </li>
+                  </ol>
+              </li>
+              <li>
+                  Suppose instead that it was the case where the probability   the subject tests positive for the condition was <m>0.41</m>.  Find the probability that    the subject has  the condition.
+              </li>
+              
+          </ol>
+          
+      </p>
+      
+      
+     
+      
+          
+          
+          
+          
+      
+  </statement>
+  <answer>
+      <title>Partial Solution:</title>
+      
+      
+      
+      
+     <p>
+          <ol>
+              <li>In the first scenario:
+                  <ol>
+                      <li>
+                          The probability that   the subject tests positive for the condition is <m>0.3637</m>
+                      </li>
+                      <li>
+                          The probability that    the subject has the condition, given that they test positive for the condition is <m>0.2903491888919439</m>
+                      </li>
+                  </ol>
+              </li>
+              <li>
+                  In the second scenario, the probability that    the subject has  the condition is <m>0.17910447761194032</m>.
+              </li>
+          </ol>
+          
+      </p>
+          
+      
+  </answer>
+</exercise>

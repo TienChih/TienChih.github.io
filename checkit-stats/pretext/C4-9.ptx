@@ -1,0 +1,78 @@
+<exercise checkit-seed="1278" checkit-slug="C4" checkit-title="Chi^2 independence test">
+  <statement>
+      
+      
+      <p>
+          Two professors poll their students to see if they believe their class was difficult.  They students rate the class difficulty as Low, Moderate or High:
+      </p>
+      
+      
+      <p>
+          <me>
+              \begin{array}{|c|c|c|c|}
+              \hline
+              &amp; \text{ Low } &amp; \text{ Medium } &amp; \text{ High }\\
+              \hline
+              \text{ Dr. Owens } &amp; 29 &amp; 23 &amp; 81\\
+              \hline
+              \text{ Dr. Trahn } &amp; 36 &amp; 19 &amp; 42\\
+              \hline
+              \end{array}
+          </me>
+          
+      </p>
+      
+      
+     
+      <p>
+          Use a <m>\chi^2</m> independence test to test  whether the percieved difficulty is independent of the professor.
+      </p>
+      <ul>
+          <li>
+              State the null hypothesis for this test.
+          </li>
+          <li>
+              State the alternative hypothesis for this test.
+          </li>
+          <li>
+              Using complete sentences, state the meaning of the <m>p</m>-value in the context of this problem.
+          </li>
+          <li>
+              What do we conclude?  Why?
+          </li>
+      </ul>
+          
+          
+          
+          
+      
+  </statement>
+  <answer>
+      <title>Partial Solution:</title>
+      
+      
+      
+      
+     <ul>
+          <li>
+              The null hypothesis is <m>H_0:\ </m>Self-reported levels of difficulty are independent of the professor.
+          </li>
+         <li>
+              The alternative hypothesis is <m>H_A:\ </m>Self-reported levels of difficulty are not independent of the professor.
+          </li>
+          <li>
+              There are <m>2</m> degrees of freedom.
+          </li>
+         <li>
+              The <m>\chi^2</m> value is <m>8.06341564660545</m>.
+          </li>
+         <li>
+              The <m>p</m>-value is <m>0.017744000444866903</m>.
+          </li>
+         
+          
+      </ul>
+          
+      
+  </answer>
+</exercise>

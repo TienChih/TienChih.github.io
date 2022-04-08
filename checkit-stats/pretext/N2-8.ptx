@@ -1,0 +1,73 @@
+<exercise checkit-seed="2257" checkit-slug="N2" checkit-title="Inference for single Numerical Variables">
+  <statement>
+      
+      <p>
+          A financial consultant examines the rates of return of stocks in a portfolio.  He takes a random samples of stocks and analyzes them.  Out of  <m>38</m>  analyzed stocks, the average % rate of return  <m>\bar{x}=22.899</m>  % return, with sample standard deviation <m>s=62.891</m>  % return.
+      </p>
+      
+      <ul>
+          <li>  Test the hypothesis that  the average % rate of return for the portfolio  is not equal to <m>  5</m>  % return.
+              <ol>
+          <li>
+              State the null hypothesis.
+          </li>
+          <li>
+              State the alternative hypothesis.
+          </li>
+          <li>
+              What is the <m>p</m>-value?
+          </li>
+          <li>
+              Using complete sentences, state the meaning of the <m>p</m>-value in the context of this problem.
+          </li>
+          <li>
+              What do we conclude?  Why?
+          </li>
+          
+      </ol>
+          </li>
+          <li>
+              Find a <m>95</m>% confidence interval for the  the average % rate of return for the portfolio.  Using complete sentences, explain what the confidence interval means in the context of this problem.
+          </li>
+      </ul>
+      
+      
+          
+          
+          
+          
+      
+  </statement>
+  <answer>
+      <title>Partial Solution:</title>
+      
+     <ul>
+          <li>
+              The null hypothesis is <m>H_0: \mu=5</m>.
+          </li>
+         <li>
+              The alternative hypothesis is <m>H_A: \mu\neq5</m>.
+          </li>
+          <li>
+              The sampling distribution has mean <m>5</m> and standard error <m>SE=10.2022673963348</m>.
+          </li>
+         <li>
+              The sample mean is <m>\bar{x}=22.899</m> which has <m>t</m>-score <m>t=1.7544139263033143</m>.
+          </li>
+         <li>
+              The <m>p</m>-value is <m>0.08763914052477806</m>.
+          </li>
+         
+         <li>
+              For a <m>95</m>% confidence interval,  <m>t^*=2.02619246302911</m>.
+          </li>
+          <li>
+              The  the average % rate of return for the portfolio  has a <m>95</m>% chance of of falling in <m>[2.22724269573884, 43.5707573042612]</m>.
+          </li>
+         
+          
+      </ul>
+          
+      
+  </answer>
+</exercise>

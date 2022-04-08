@@ -1,0 +1,50 @@
+<exercise checkit-seed="1530" checkit-slug="B1" checkit-title="Types of Variables">
+  <statement>
+      
+      
+      
+      
+      
+      <p>
+          For each of the following, classify the type of variable described as <em>Numerical</em> or <em>Categorical</em>, as well as the subcategory <em>Continuous</em>, <em>Discrete</em>, <em>Nominal</em> or <em>Ordinal</em>.  Be sure to justify your choices.
+          <ol>
+              <li>A review from a job candidiates performance from Exemplary to Unacceptable.</li>
+              <li>The rate per day at which people are infected by a novel virus over the past week.</li>
+              <li>The frequency of wolf attacks on a rancher's herd in attacks/week.</li>
+              <li>The number of voters that will turn out in the next mayoral election.</li>
+              <li>Make and model of a new car.</li>
+              <li>The population of deer in a national park.</li>
+          </ol>
+          
+      </p>
+      
+      
+     
+      
+          
+          
+          
+          
+      
+  </statement>
+  <answer>
+      <title>Partial Solution:</title>
+      
+      
+      
+      
+     <p>
+          <ol>
+              <li>Categorical, Ordinal</li>
+              <li>Numerical, Continuous</li>
+              <li>Numerical, Continuous</li>
+              <li>Numerical, Discrete</li>
+              <li>Categorical, Nominal</li>
+              <li>Numerical, Discrete</li>
+          </ol>
+          
+      </p>
+          
+      
+  </answer>
+</exercise>

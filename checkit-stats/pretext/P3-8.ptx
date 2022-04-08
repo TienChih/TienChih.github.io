@@ -1,0 +1,70 @@
+<exercise checkit-seed="5194" checkit-slug="P3" checkit-title="Bayes Theorem">
+  <statement>
+      
+      <p>
+          A manufacturer has two facilities A and B, each of whome occasionally produce defects.  We consider the events that a product is defective, and the event the product was manufactured in facility A.
+      </p>
+      
+      <p>
+          Suppose that   the probability that   a randomly selected product is defective given that it was manufactured in facility A is <m>0.0061</m>, the probability that   a randomly selected product is defective given that it was not manufactured in facility A is <m>0.0014</m>.
+      </p>
+      
+      
+      <p>
+          <ol>
+              <li>
+                  Suppose it were the case that the probability    a randomly selected product was manufactured in facility A was <m>0.6</m>.
+                  <ol>
+                      <li>
+                          Find the probability that   a randomly selected product was defective.
+                      </li>
+                      <li>
+                          Find the probability that    a randomly selected subject was manufactured in facility A, given that it was defective.
+                      </li>
+                  </ol>
+              </li>
+              <li>
+                  Suppose instead that it was the case where the probability   a randomly selected product was defective was <m>0.0028</m>.  Find the probability that    a randomly selected product was manufactured in facility A.
+              </li>
+              
+          </ol>
+          
+      </p>
+      
+      
+     
+      
+          
+          
+          
+          
+      
+  </statement>
+  <answer>
+      <title>Partial Solution:</title>
+      
+      
+      
+      
+     <p>
+          <ol>
+              <li>In the first scenario:
+                  <ol>
+                      <li>
+                          The probability that   a randomly selected product was defective is <m>0.00422</m>
+                      </li>
+                      <li>
+                          The probability that    a randomly selected subject was manufactured in facility A, given that it was defective is <m>0.8672985781990522</m>
+                      </li>
+                  </ol>
+              </li>
+              <li>
+                  In the second scenario, the probability that    a randomly selected product was manufactured in facility A is <m>0.2978723404255319</m>.
+              </li>
+          </ol>
+          
+      </p>
+          
+      
+  </answer>
+</exercise>

@@ -1,0 +1,73 @@
+<exercise checkit-seed="8901" checkit-slug="N4" checkit-title="Inference for difference of means of Numerical Variables">
+  <statement>
+      
+      <p>
+          A sociologist compares number of daily police stops in two different neighborhoods of the same city with similar size.  Out of  <m>43</m>  observed days, the daily number of stops for Neighborhood A was  <m>\bar{x}_1=78.165</m>  stops, with sample standard deviation <m>s_1=6.938</m>  stops.  Then out of <m>43</m>  observed days, the daily number of stops for Neighborhood A was  <m>\bar{x}_2=73.991</m>  stops, with sample standard deviation <m>s_2=14.368</m>  stops.
+      </p>
+      
+      <ul>
+          <li>  Test the hypothesis that  the difference in average daily police stops between  Neighborhood A and Neighborhood B, <m>\mu_1-\mu_2</m>, is not equal to <m>  0</m>  stops.
+              <ol>
+          <li>
+              State the null hypothesis.
+          </li>
+          <li>
+              State the alternative hypothesis.
+          </li>
+          <li>
+              What is the <m>p</m>-value?
+          </li>
+          <li>
+              Using complete sentences, state the meaning of the <m>p</m>-value in the context of this problem.
+          </li>
+          <li>
+              What do we conclude?  Why?
+          </li>
+          
+      </ol>
+          </li>
+          <li>
+              Find a <m>95</m>% confidence interval for the  the difference in average daily police stops between  Neighborhood A and Neighborhood B.  Using complete sentences, explain what the confidence interval means in the context of this problem.
+          </li>
+      </ul>
+      
+      
+          
+          
+          
+          
+      
+  </statement>
+  <answer>
+      <title>Partial Solution:</title>
+      
+     <ul>
+          <li>
+              The null hypothesis is <m>H_0: \mu_1-\mu_2=0</m>.
+          </li>
+         <li>
+              The alternative hypothesis is <m>H_A: \mu_1-\mu_2\neq0</m>.
+          </li>
+          <li>
+              The sampling distribution has mean <m>0</m> and standard error <m>SE=2.43317797741296</m>.
+          </li>
+         <li>
+              The observesd difference of sample means is <m>\bar{x_1}-\bar{x_2}=4.174</m> which has <m>t</m>-score <m>t=1.715451988612003</m>.
+          </li>
+         <li>
+              The <m>p</m>-value is <m>0.09363214987217683</m>.
+          </li>
+         
+         <li>
+              For a <m>95</m>% confidence interval,  <m>t^*=2.0180817028184443</m>.
+          </li>
+          <li>
+              The  the difference in average daily police stops between  Neighborhood A and Neighborhood B  has a <m>95</m>% chance of of falling in <m>[-0.736351955917892, 9.08435195591789]</m>.
+          </li>
+         
+          
+      </ul>
+          
+      
+  </answer>
+</exercise>

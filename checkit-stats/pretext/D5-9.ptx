@@ -1,0 +1,81 @@
+<exercise checkit-seed="6534" checkit-slug="D5" checkit-title="Normal Approximation of Binomial Distribution">
+  <statement>
+      
+      
+      <p>
+          Suppose probability that a eligible voter will vote in a local midterm election is  <m>0.49</m>. A voting district has  <m>9856</m>  potential voters.  Let <m>X</m> denote the  number of eligible voters who will vote.  Find the following:
+          
+      </p>
+      
+      
+      
+      
+      <p>
+          <ol>
+              <li>
+                  <m>E(X)</m>, the expected  number of eligible voters who will vote.
+              </li>
+              
+              <li>
+                  <p>
+                      <m>\sigma_A</m>, the standard deviation of the  number of eligible voters who will vote.
+                  </p>
+                  <p>
+                      Then use the normal approximation of <m>X</m> to find the following:
+                  </p>
+                  
+              </li>
+             
+              <li>
+                  Find the probability that the number of eligible voters who will vote is  between <m>4773 </m> and <m>4908</m>  potential voters.
+              </li>
+              
+              
+              <li>
+                  Find <m>X^*</m> such that the probability that  number of eligible voters who will vote  is at most  <m>X^*</m>  potential voters is <m>0.8</m>.  (This value need not be a whole number.)
+              </li>
+              
+          </ol>
+          
+      </p>
+      
+      
+     
+      
+          
+          
+          
+          
+      
+  </statement>
+  <answer>
+      <title>Partial Solution:</title>
+      
+      
+      
+      
+     <p>
+          <ol>
+              <li>
+                  <m>E(X)=4829.44</m>
+              </li>
+              <li>
+                  <m>\sigma_X=49.62876585207414</m>
+              </li>
+              
+              
+              <li>
+                  <m>P(4773\leq\ X\leq\ 4908)=0.8155656855579239</m>.
+              </li>
+              
+              <li>
+                  If <m>P(X\leq\ X^*)=0.8</m> then <m>X^*=4871.208623137123</m>  potential voters.
+              </li>
+              
+          </ol>
+          
+      </p>
+          
+      
+  </answer>
+</exercise>

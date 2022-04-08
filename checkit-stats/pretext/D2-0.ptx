@@ -1,0 +1,69 @@
+<exercise checkit-seed="9401" checkit-slug="D2" checkit-title="General Normal Distribution">
+  <statement>
+      
+      
+      <p>
+          Suppose the average height of 5 year old girls is normally distributed with mean  <m>109.15</m>  cm and standard deviation <m>4.09</m>  cm.  Find the following:
+      </p>
+      
+      
+      <p>
+          <ol>
+              <li>
+                  Find the probability that a randomly selected 5 year old girl's height   is at most  <m>106.47 </m>  cm.
+              </li>
+             
+              <li>
+                  Find the probability that a randomly selected 5 year old girl's height  is between <m>102.69 </m> and <m>109.0</m>  cm.
+              </li>
+              
+              
+              <li>
+                  Find <m>X^*</m> such that  the probability that a randomly selected 5 year old girl's height   is at least  <m>X^*</m>  cm is <m>69</m>%.
+              </li>
+              
+              <li>
+                  Find <m>k</m> such that  the probability that a randomly selected 5 year old girl's height  is between <m>109.15-k</m>  cm and <m>109.15+k</m>  cm is <m>33</m>%.
+              </li>
+          </ol>
+          
+      </p>
+      
+      
+     
+      
+          
+          
+          
+          
+      
+  </statement>
+  <answer>
+      <title>Partial Solution:</title>
+      
+      
+      
+      
+     <p>
+          <ol>
+              <li>
+                  <m>P(X\leq 106.47)=0.2561512393824829</m>.
+              </li>
+              
+              <li>
+                  <m>P(102.69\leq X\leq 109.0)=0.4282570930368562</m>.
+              </li>
+              
+              <li>
+                  If <m>P(X\geq\  X^*)=69</m>% then <m>X=107.12197207934892</m>  cm.
+              </li>
+              <li>
+                  If <m>P(109.15-k\leq\  X\leq\  109.15+k)=33</m>% then <m>k=1.742945352070828</m>  cm.
+              </li>
+          </ol>
+          
+      </p>
+          
+      
+  </answer>
+</exercise>

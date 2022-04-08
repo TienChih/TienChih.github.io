@@ -1,0 +1,47 @@
+<exercise checkit-seed="2052" checkit-slug="D3" checkit-title="Counting Principles">
+  <statement>
+      
+      
+      <p>
+          Suppose you had a class of  <m>23</m>  children.
+      </p>
+      
+      
+      <p>
+          <ol>
+              <li>How many ways are there to select <m>20</m>  children  and arrange them so they can take turns giving a presentation?</li>
+              <li>How many ways are there to select <m>5</m>  children  to give a special assignment?</li>
+              <li>How many ways are there to select <m>9</m>  children  and put them in a line to wait their turn for an activity?</li>
+              <li>How many ways are there to select <m>16</m>  children  to take on a field trip?</li>
+          </ol>
+          
+      </p>
+      
+      
+     
+      
+          
+          
+          
+          
+      
+  </statement>
+  <answer>
+      <title>Partial Solution:</title>
+      
+      
+      
+      
+     <p>
+          <ol>
+              <li>4308669456480829440000 ways.</li>
+              <li>33649 ways.</li>
+              <li>296541907200 ways.</li>
+              <li>245157 ways.</li>
+          </ol>
+          
+      </p>
+          
+      
+  </answer>
+</exercise>

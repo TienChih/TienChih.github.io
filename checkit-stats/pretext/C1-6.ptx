@@ -1,0 +1,44 @@
+<exercise checkit-seed="5583" checkit-slug="C1" checkit-title="Size of Sample: Proportion">
+  <statement>
+      <p>
+          A company wants to know what proportion of potential customers prefer their product to their competitors.  They want to find a <m> 95</m>% confidence interval with margin of error <m>ME=0.01</m>.
+      </p>
+      <p>
+          A previous study showed that  of <m>66\ </m> survey respondents,  <m>41\ </m>preferred their product to their competitors.  How many people should now be surveyed to obtain a <m>95</m>% confidence interval with margin of error <m>ME=0.01</m>?
+      </p>
+      
+      <!--<ol>
+          <li>
+              Find a <m>95</m>% confidence interval for the proportion of  that .
+          </li>
+          <li>
+              Using complete sentences, explain what the confidence interval means in the context of this problem.
+          </li>
+          
+      </ol>-->
+          
+          
+          
+          
+      
+  </statement>
+  <answer>
+      <title>Partial Solution:</title>
+      <ul>
+          <li>
+              The sample proportion of the initial study is <m>\hat{p}=0.6212121212121212</m>.
+          </li>
+          <li>
+              For a 95% confidence interval,  <m>z^*=1.9599639845400536</m>.
+          </li>
+          <li>
+              The margin of error is <m>ME=0.01</m>.
+          </li>
+          <li>
+              The number of people should now be surveyed is at least <m>9040</m>.
+          </li>
+      </ul>
+          
+      
+  </answer>
+</exercise>

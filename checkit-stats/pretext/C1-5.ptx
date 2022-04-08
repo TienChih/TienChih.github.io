@@ -1,0 +1,44 @@
+<exercise checkit-seed="9485" checkit-slug="C1" checkit-title="Size of Sample: Proportion">
+  <statement>
+      <p>
+          A sociologist wants to know what proportion of a town's residents feel like they trust their neighbors.  They want to find a <m> 99</m>% confidence interval with margin of error <m>ME=0.05</m>.
+      </p>
+      <p>
+          A previous study showed that  of <m>45\ </m> surveyed residents ,  <m>24\ </m>trusted their neighbors.  How many residents should the sociologist survey now to obtain a <m>99</m>% confidence interval with margin of error <m>ME=0.05</m>?
+      </p>
+      
+      <!--<ol>
+          <li>
+              Find a <m>99</m>% confidence interval for the proportion of  that .
+          </li>
+          <li>
+              Using complete sentences, explain what the confidence interval means in the context of this problem.
+          </li>
+          
+      </ol>-->
+          
+          
+          
+          
+      
+  </statement>
+  <answer>
+      <title>Partial Solution:</title>
+      <ul>
+          <li>
+              The sample proportion of the initial study is <m>\hat{p}=0.5333333333333333</m>.
+          </li>
+          <li>
+              For a 99% confidence interval,  <m>z^*=2.5758293035489</m>.
+          </li>
+          <li>
+              The margin of error is <m>ME=0.05</m>.
+          </li>
+          <li>
+              The number of residents should the sociologist survey now is at least <m>661</m>.
+          </li>
+      </ul>
+          
+      
+  </answer>
+</exercise>

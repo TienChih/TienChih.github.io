@@ -1,0 +1,50 @@
+<exercise checkit-seed="6850" checkit-slug="B1" checkit-title="Types of Variables">
+  <statement>
+      
+      
+      
+      
+      
+      <p>
+          For each of the following, classify the type of variable described as <em>Numerical</em> or <em>Categorical</em>, as well as the subcategory <em>Continuous</em>, <em>Discrete</em>, <em>Nominal</em> or <em>Ordinal</em>.  Be sure to justify your choices.
+          <ol>
+              <li>A review from a job candidiates performance from Exemplary to Unacceptable.</li>
+              <li>The frequency of phone calls made to a police station over the least 24 hours in calls/hour.</li>
+              <li>The number of students who will attend a school in the fall semester.</li>
+              <li>The number of women nominated for a prestigious award.</li>
+              <li>A choice of transportation (air, freight etc.).</li>
+              <li>A 5th graders favorite dessert.</li>
+          </ol>
+          
+      </p>
+      
+      
+     
+      
+          
+          
+          
+          
+      
+  </statement>
+  <answer>
+      <title>Partial Solution:</title>
+      
+      
+      
+      
+     <p>
+          <ol>
+              <li>Categorical, Ordinal</li>
+              <li>Numerical, Continuous</li>
+              <li>Numerical, Discrete</li>
+              <li>Numerical, Discrete</li>
+              <li>Categorical, Nominal</li>
+              <li>Categorical, Nominal</li>
+          </ol>
+          
+      </p>
+          
+      
+  </answer>
+</exercise>

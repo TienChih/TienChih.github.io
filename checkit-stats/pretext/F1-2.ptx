@@ -1,0 +1,46 @@
+<exercise checkit-seed="9238" checkit-slug="F1" checkit-title="Point Estimates">
+  <statement>
+      
+      
+      
+      
+      
+      <p>
+          For each of the following, identify the <em>parameter of interest</em>, and the <em>point estimate</em>.
+          <ol>
+              <li>To estimate the proportion of wolf cubs who will survive to adulthood, 40 wolf cubs are tracked from birth.</li>
+              <li>To estimate the average income in a town, 100 selected residents have their income polled.</li>
+              <li>To estimate the average running speed of a breed of dog, 30 dogs are randomly selected and their top speeds measured.</li>
+              <li>To estimate the average mass of a meteorite after hitting earth, 40 meteorites who have hit earth are measured.</li>
+          </ol>
+          
+      </p>
+      
+      
+     
+      
+          
+          
+          
+          
+      
+  </statement>
+  <answer>
+      <title>Partial Solution:</title>
+      
+      
+      
+      
+     <p>
+          <ol>
+              <li><p>Parameter of Interest: The proportion of all wolf cubs who survive to adulthood.</p>  <p>Point Estimate: The proportion of the tracked wolf cubs who survive to adulthood.</p> </li>
+              <li><p>Parameter of Interest: The average income of all residents of the town.</p>  <p>Point Estimate: the average income of the polled  residents of the town.</p> </li>
+              <li><p>Parameter of Interest: The average running speed of all dogs of a certian breed.</p>  <p>Point Estimate: The average running speed of the selected dogs of a certian breed.</p> </li>
+              <li><p>Parameter of Interest: The average mass of all meteorites after hitting earth.</p>  <p>Point Estimate: The average mass of the measured meteorites after hitting earth.</p> </li>
+          </ol>
+          
+      </p>
+          
+      
+  </answer>
+</exercise>

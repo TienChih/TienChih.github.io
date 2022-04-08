@@ -1,0 +1,47 @@
+<exercise checkit-seed="8240" checkit-slug="D3" checkit-title="Counting Principles">
+  <statement>
+      
+      
+      <p>
+          Suppose a butcher has wholesale orders from  <m>29</m>  clients.
+      </p>
+      
+      
+      <p>
+          <ol>
+              <li>How many ways are there to select <m>2</m>  clients  to offer a special. discount to?</li>
+              <li>How many ways are there to select <m>9</m>  clients  and deliver order to them one at a time?</li>
+              <li>How many ways are there to select <m>25</m>  clients  and arrange them on a waitlist for a new order?</li>
+              <li>How many ways are there to select <m>16</m>  clients  to delay their order until a future date?</li>
+          </ol>
+          
+      </p>
+      
+      
+     
+      
+          
+          
+          
+          
+      
+  </statement>
+  <answer>
+      <title>Partial Solution:</title>
+      
+      
+      
+      
+     <p>
+          <ol>
+              <li>406 ways.</li>
+              <li>3634245014400 ways.</li>
+              <li>368406749739154248105984000000 ways.</li>
+              <li>67863915 ways.</li>
+          </ol>
+          
+      </p>
+          
+      
+  </answer>
+</exercise>

@@ -1,0 +1,148 @@
+<exercise checkit-seed="3720" checkit-slug="B5" checkit-title="Variation of Data">
+  <statement>
+      
+      
+      
+      
+      
+      <p>
+          Consider the following list of data:
+          <me>
+              0,
+              12,
+              18,
+              19,
+              20,
+              24,
+              31,
+              34,
+              39,
+              41,
+              41,
+              52,
+              60,
+              60,
+              62,
+              66,
+              67,
+              68,
+              71,
+              79,
+              80,
+              86,
+              89,
+              90,
+              113,
+              148,
+          </me>
+          
+      
+          find the following measures variation for this data:
+          <ol>
+              <li>
+                  Sample standard deviation.
+              </li>
+              <li>
+                  Sample variance.
+              </li>
+              <li>
+                  Population standard deviation.
+              </li>
+              <li>
+                  Population variance.
+              </li>
+          </ol>
+          
+      
+      </p>
+      
+      <p>
+          Then find an alternative set of measures of variation:
+          <ol>
+              <li>
+                  Min.
+              </li>
+              <li>
+                  Q1.
+              </li>
+              <li>
+                  Median.
+              </li>
+              <li>
+                  Q3.
+              </li>
+              <li>
+                  Max.
+              </li>
+              <li>
+                  IQR.
+              </li>
+          </ol>
+          and use the IQR and the quartiles to identify any outliers
+      </p>
+     
+      
+          
+          
+          
+          
+      
+  </statement>
+  <answer>
+      <title>Partial Solution:</title>
+      
+      
+      
+      
+     <p>
+          Find the following measures of centrality for this data:
+          <ol>
+              <li>
+                  Sample standard deviation: <m>33.87179448358857</m>.
+              </li>
+              <li>
+                  Sample variance: <m>1147.2984615384612</m>.
+              </li>
+              <li>
+                  Population standard deviation: <m>33.21402712158127</m>.
+              </li>
+              <li>
+                  Population variance: <m>1103.171597633136</m>.
+              </li>
+          </ol>
+          
+      
+      </p>
+      
+      <p>
+          <ol>
+              <li>
+                  Min: <m>0</m>.
+              </li>
+              <li>
+                  Q1: <m>31.0</m>.
+              </li>
+              <li>
+                  Median: <m>60.0</m>.
+              </li>
+              <li>
+                  Q3: <m>79.0</m>.
+              </li>
+              <li>
+                  Max: <m>148</m>.
+              </li>
+              <li>
+                  IQR: <m>48.0</m>.
+              </li>
+          </ol>
+          Outliers:
+          
+          <m>
+          </m>
+          
+      
+      </p>
+          
+      
+  </answer>
+</exercise>

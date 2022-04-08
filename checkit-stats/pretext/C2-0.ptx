@@ -1,0 +1,64 @@
+<exercise checkit-seed="6766" checkit-slug="C2" checkit-title="Two Categorical Variable Inferences">
+  <statement>
+      <p>
+          A restaurateur wants to know about the difference in percieved quality of service in her eastern and western locations.  She wants to know if the proportion of customers who liked the service<m>\, </m> is less than <m>\,   0.00</m>.  She polls random diners at both the eastern and western locations.
+      </p>
+      <p>
+          Suppose that of   <m>n_1=259\, </m>polled diners from the eastern location, <m>x_1=118\, </m>liked the service and of <m>n_2=259\, </m>polled diners from the western location, <m>x_2=143\, </m>liked the service. Test the hypothesis that  the difference between the proportion of diners at the eastern location who like the service: <m>p_1</m>, and the proportion of diners at the western location who like the service: <m>p_2</m>,   is less than<m>\,   0.00</m>.  That is <m>p_1-p_2\lneq 0.00</m>.
+      </p>
+      
+      <ol>
+          <li>
+              State the null hypothesis.
+          </li>
+          <li>
+              State the alternative hypothesis.
+          </li>
+          <li>
+              What is the <m>p</m>-value?
+          </li>
+          <li>
+              Using complete sentences, state the meaning of the <m>p</m>-value in the context of this problem.
+          </li>
+          <li>
+              What do we conclude?  Why?
+          </li>
+          
+      </ol>
+          
+          
+          
+          
+      
+  </statement>
+  <answer>
+      <title>Partial Solution:</title>
+      
+     <ul>
+          <li>
+              The null hypothesis is <m>H_0: p_1-p_2= 0.00</m>.
+          </li>
+         <li>
+              The alternative hypothesis is <m>H_A: p_1-p_2\lneq 0.00</m>.
+          </li>
+          <li>
+              The sampling distribution has mean <m> 0.00</m> and standard error <m>SE=0.0439361675140632</m>.
+          </li>
+         <li>
+              The difference in sample proportions is <m>\hat{p}=-0.09652509652509655</m> which has <m>z</m>-score <m>z=-2.19693937788726</m>.
+          </li>
+         <li>
+              The <m>p</m>-value is <m>0.014012388023719657</m>.
+          </li>
+         
+          <!--<li>
+              For a % confidence interval,  <m>z^*=</m>.
+          </li>
+          <li>
+              The proportion of  that like the service has a % chance of of falling in <m>[, ]</m>.
+          </li>-->
+      </ul>
+          
+      
+  </answer>
+</exercise>

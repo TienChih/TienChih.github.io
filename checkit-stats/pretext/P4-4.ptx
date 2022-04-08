@@ -1,0 +1,92 @@
+<exercise checkit-seed="2024" checkit-slug="P4" checkit-title="Random Variables">
+  <statement>
+      
+      <p>
+          Consider a simplified lottery ticket.  It costs $2 to purchase the ticket, and has three possible payouts.  Let <m>X</m> denote   the net possible winnings (accounting for the $2 expense).  Consider the following probability distribution table for <m>X</m>.
+      </p>
+      
+      <p>
+          <me>
+              \begin{array}{|c
+              |c
+              |c
+              |c
+              |c
+              |
+              }
+              
+              \hline
+              X_i 
+              &amp; -2
+              &amp; 8
+              &amp; 23
+              &amp; 98
+              \\
+              \hline
+              P(X=X_i)
+              &amp; 0.854
+              &amp; ???
+              &amp; 0.0096
+              &amp; 0.0003
+              \\
+              \hline
+              \end{array}
+          </me>
+      </p>
+      
+      
+      <p>
+          <ol>
+              <li>
+                  What is the value of the missing entry?
+              </li>
+              <li>
+                  Find the expectation of <m>X</m>, <m>E(X)</m>,  and interpret what it means in context of this problem.
+              </li>
+              <li>
+                  Find variance of <m>X</m>, <m>Var(X)</m>.
+              </li>
+              <li>
+                  Find the standard deviation of <m>X</m>, <m>\sigma_X</m>.
+              </li>
+          </ol>
+          
+      </p>
+      
+      
+     
+      
+          
+          
+          
+          
+      
+  </statement>
+  <answer>
+      <title>Partial Solution:</title>
+      
+      
+      
+      
+     <p>
+         <ol>
+             <li>
+                 <m>P(X=8)=0.1365</m>.
+             </li>
+             <li>
+                 <m>E(X)=-0.3657999999999999</m>.
+             </li>
+             <li>
+                 <m>Var(X)=19.97779036</m>
+             </li>
+             <li>
+                 <m>\sigma_X=4.469652152013622</m>
+             </li>
+         </ol>
+          
+          
+      </p>
+          
+      
+  </answer>
+</exercise>

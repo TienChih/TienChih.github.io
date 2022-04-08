@@ -1,0 +1,158 @@
+<exercise checkit-seed="8007" checkit-slug="R3" checkit-title="Inference and Linear Regression">
+  <statement>
+      <p>
+          A study is done comparing the Annual Rainfall (in mm) and Max Daily Temperature (C) of different sites of a geographic region.
+      </p>
+      
+      <p>
+          Consider this table of data collected comparing Max Daily Temperature measured in C, and Annual Rainfall measured in mm:
+          <me>
+               \begin{array}{|c|c|}
+              \hline
+              \text{ Max Daily Temperature in C }
+              &amp;
+              \text{ Annual Rainfall in mm }
+              \\
+              \hline
+               11.9
+              &amp; 105.8
+                  \\
+               11.9
+              &amp; 91.0
+                  \\
+               10.6
+              &amp; 116.5
+                  \\
+               5.4
+              &amp; 194.2
+                  \\
+               11.9
+              &amp; 84.6
+                  \\
+               9.8
+              &amp; 115.1
+                  \\
+               7.3
+              &amp; 171.2
+                  \\
+               9.7
+              &amp; 115.8
+                  \\
+               11.9
+              &amp; 88.5
+                  \\
+               5.4
+              &amp; 205.6
+                  \\
+               6.9
+              &amp; 157.0
+                  \\
+               11.5
+              &amp; 99.5
+                  \\
+               10.6
+              &amp; 113.1
+                  \\
+               6.6
+              &amp; 180.0
+                  \\
+               8.4
+              &amp; 142.4
+                  \\
+               5.3
+              &amp; 213.8
+                  \\
+               7.0
+              &amp; 178.1
+                  \\
+               9.5
+              &amp; 131.9
+                  \\
+               7.0
+              &amp; 173.6
+                  \\
+               11.7
+              &amp; 110.1
+                  \\
+               7.0
+              &amp; 171.3
+                  \\
+               10.8
+              &amp; 114.4
+                  \\
+              
+              \hline
+              \end{array}
+          </me>
+      </p>
+      <p>
+          Suppose a statistics software returns the following:
+          <ul>
+              <li>
+                  Point estimate for <m>\beta_1</m>: <m>-17.15877068672501</m>.
+              </li>
+              <li>
+                  Point estimate for <m>\beta_0</m>: <m>294.21147604728293</m>.
+              </li>
+              <li>
+                  Standard Error for <m>\beta_1</m>: <m>0.7847581405908088</m>.
+              </li>
+              <li>
+                  <m>t</m>-score for <m>\beta_1</m>: <m>-21.865043252443293</m>.
+              </li>
+              <li>
+                  95% Confidence Interval for <m>\beta_1</m>: <m>[-18.7957474829418, -15.5217938905083]</m>.
+              </li>
+              <li>
+                  <m>p</m>-value for <m>H_0:\beta_1=0, H_A: \beta_1\neq 0</m>: <m>p</m>-value<m>=1.9984014443252818 \times 10^{-15}</m>.
+              </li>
+          </ul>
+      </p>
+      <p>
+          <ol>
+              <li>
+                  Interpret what this Confidence Interval means in the context of this problem.
+              </li>
+              <li>
+                  Interpret what <m>p</m>-value means in the context of this problem.
+              </li>
+              <li>
+                  What do we conclude from this hypothesis test?  Why?
+              </li>
+              
+              
+          </ol>
+      </p>
+      
+      
+      
+      
+     
+      
+          
+          
+          
+          
+      
+  </statement>
+  <answer>
+      
+      
+      
+      
+     <p>
+          <p>
+          <ol>
+              <li>
+              The slope of the regression line  has a <m>95\%</m> chance of of falling in <m>[-18.7957474829418, -15.5217938905083]</m>.
+          </li>
+              
+              
+          </ol>
+      </p>
+          
+      </p>
+          
+      
+  </answer>
+</exercise>

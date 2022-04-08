@@ -1,0 +1,66 @@
+<exercise checkit-seed="4220" checkit-slug="P1" checkit-title="Introduction to Probability">
+  <statement>
+      
+      <p>
+          We consider the event that a restaurant in a large city accepts Visa credit cards, and the event that they accept Mastercard.  We consider a randomly selected restaurant.
+      </p>
+      
+      <p>
+          Suppose that   the probability that    the restaurant accepts at least one of Visa or  Mastercard (but possibly not both) is <m>0.8743</m>, the probability that    the restaurant accepts Mastercard is <m>0.7392</m>, and finally   the probability that   the restaurant accepts both Visa and Mastercard is <m>0.5538</m>.
+      </p>
+      
+      
+      <p>
+          <ol>
+              <li>
+                  <p>
+                      Find the probability that   the restaurant accepts Visa.
+                  </p>
+                  <p>
+                      (For the following, it is advisable to draw a venn diagram using the information above.)
+                  </p>
+                  
+              </li>
+              <li>
+                  Find the probability that  the  restaurant does not accept Visa but does accept Mastercard.
+              </li>
+              <li>
+                  Find the probability that  the  restaurant  accepts Visa or it does not accept Mastercard.
+              </li>
+          </ol>
+          
+      </p>
+      
+      
+     
+      
+          
+          
+          
+          
+      
+  </statement>
+  <answer>
+      <title>Partial Solution:</title>
+      
+      
+      
+      
+     <p>
+          <ol>
+              <li>
+                   The probability that   the restaurant accepts Visa is <m>0.6889</m>.
+              </li>
+              <li>
+                   The  probability that  the  restaurant does not accept Visa but does accept Mastercard is <m>0.1854</m>.
+              </li>
+              <li>
+                    The probability that  the  restaurant  accepts Visa or it does not accept Mastercard is <m>0.8146</m>.
+              </li>
+          </ol>
+          
+      </p>
+          
+      
+  </answer>
+</exercise>

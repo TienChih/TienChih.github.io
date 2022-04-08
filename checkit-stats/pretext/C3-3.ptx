@@ -1,0 +1,60 @@
+<exercise checkit-seed="7111" checkit-slug="C3" checkit-title="Chi^2 goodness of fit test">
+  <statement>
+     <p>
+         In previous locations, a restaurants the main protein for dinner entrees ordered by customers have been  <m>16</m>%  beef, <m>25</m>%  chicken, <m>26</m>%  pork, and <m>33</m>%  vegan.
+      </p>
+      <p>
+          In a random sampling of dinner entrees ordered at their new location, the main proteins were  <m>21</m>  main proteins that were beef, <m>20</m>  main proteins that were chicken, <m>24</m>  main proteins that were pork, and <m>49</m>  main proteins that were vegan.
+      </p>
+      <p>
+          Use a <m>\chi^2</m> goodness of fit test to test whether or not the distributions or ordered main proteins was the same at the new location as previous locations.
+      </p>
+      <ul>
+          <li>
+              State the null hypothesis for this test.
+          </li>
+          <li>
+              State the alternative hypothesis for this test.
+          </li>
+          <li>
+              Using complete sentences, state the meaning of the <m>p</m>-value in the context of this problem.
+          </li>
+          <li>
+              What do we conclude?  Why?
+          </li>
+      </ul>
+          
+          
+          
+          
+      
+  </statement>
+  <answer>
+      <title>Partial Solution:</title>
+      
+      
+      
+      
+     <ul>
+          <li>
+              The null hypothesis is <m>H_0:</m> The distribution of main proteins is the same as previous locations.
+          </li>
+         <li>
+              The alternative hypothesis is <m>H_A:</m> The distribution of main proteins is different from previous locations.
+          </li>
+          <li>
+              There are <m>3</m> degrees of freedom.
+          </li>
+         <li>
+              The <m>\chi^2</m> value is <m>7.46835255387887</m>.
+          </li>
+         <li>
+              The <m>p</m>-value is <m>0.05837721033543897</m>.
+          </li>
+         
+          
+      </ul>
+          
+      
+  </answer>
+</exercise>

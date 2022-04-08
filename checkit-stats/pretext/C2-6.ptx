@@ -1,0 +1,64 @@
+<exercise checkit-seed="2153" checkit-slug="C2" checkit-title="Two Categorical Variable Inferences">
+  <statement>
+      <p>
+          A software engineer wonders about the levels of errors in two beta versions of a product.  They want to know if the rates of crashing between version A and version B<m>\, </m> is not equal to <m>\,   0.00</m>.  They test run each version a number of times.
+      </p>
+      <p>
+          Suppose that of   <m>n_1=277\, </m>test runs of version A, <m>x_1=51\, </m>times the product crashed and of <m>n_2=277\, </m>test runs of version B, <m>x_2=73\, </m>times the product crashed. Test the hypothesis that  the difference between the proportion of times running version A who will crash: <m>p_1</m>, and the proportion of times running version B who will crash: <m>p_2</m>,   is not equal to<m>\,   0.00</m>.  That is <m>p_1-p_2\neq 0.00</m>.
+      </p>
+      
+      <ol>
+          <li>
+              State the null hypothesis.
+          </li>
+          <li>
+              State the alternative hypothesis.
+          </li>
+          <li>
+              What is the <m>p</m>-value?
+          </li>
+          <li>
+              Using complete sentences, state the meaning of the <m>p</m>-value in the context of this problem.
+          </li>
+          <li>
+              What do we conclude?  Why?
+          </li>
+          
+      </ol>
+          
+          
+          
+          
+      
+  </statement>
+  <answer>
+      <title>Partial Solution:</title>
+      
+     <ul>
+          <li>
+              The null hypothesis is <m>H_0: p_1-p_2= 0.00</m>.
+          </li>
+         <li>
+              The alternative hypothesis is <m>H_A: p_1-p_2\neq 0.00</m>.
+          </li>
+          <li>
+              The sampling distribution has mean <m> 0.00</m> and standard error <m>SE=0.0354168897013857</m>.
+          </li>
+         <li>
+              The difference in sample proportions is <m>\hat{p}=-0.07942238267148016</m> which has <m>z</m>-score <m>z=-2.24250021221860</m>.
+          </li>
+         <li>
+              The <m>p</m>-value is <m>0.02492906160827979</m>.
+          </li>
+         
+          <!--<li>
+              For a % confidence interval,  <m>z^*=</m>.
+          </li>
+          <li>
+              The proportion of  that will crash has a % chance of of falling in <m>[, ]</m>.
+          </li>-->
+      </ul>
+          
+      
+  </answer>
+</exercise>

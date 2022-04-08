@@ -1,0 +1,64 @@
+<exercise checkit-seed="7252" checkit-slug="F3" checkit-title="Hypothesis Testing">
+  <statement>
+      <p>
+          An education researcher wants to know of the proportion if college students who find a certain subject challenging is greater than <m>  46</m>%.  They conduct a survey of college students.
+      </p>
+      <p>
+Suppose that for   <m>n=353</m> surveyed students, <m>181</m> found the subject challenging. Test the hypothesis that  the proportion of all college students that find the subject challenging is greater than <m>  46</m>%. 
+      </p>
+      
+      <ol>
+          <li>
+              State the null hypothesis.
+          </li>
+          <li>
+              State the alternative hypothesis.
+          </li>
+          <li>
+              What is the <m>p</m>-value?
+          </li>
+          <li>
+              Using complete sentences, state the meaning of the <m>p</m>-value in the context of this problem.
+          </li>
+          <li>
+              What do we conclude?  Why?
+          </li>
+          
+      </ol>
+          
+          
+          
+          
+      
+  </statement>
+  <answer>
+      <title>Partial Solution:</title>
+      
+     <ul>
+          <li>
+              The null hypothesis is <m>H_0: p=0.46</m>.
+          </li>
+         <li>
+              The alternative hypothesis is <m>H_A: p\gneq0.46</m>.
+          </li>
+          <li>
+              The sampling distribution has mean <m>0.46</m> and standard error <m>SE=0.0265270186705318</m>.
+          </li>
+         <li>
+              The sample proportion is <m>\hat{p}=0.5127478753541076</m> which has <m>z</m>-score <m>z=1.98845848488447</m>.
+          </li>
+         <li>
+              The <m>p</m>-value is <m>0.02338050303819572</m>.
+          </li>
+         
+          <!--<li>
+              For a % confidence interval,  <m>z^*=</m>.
+          </li>
+          <li>
+              The proportion of all college students that find the subject challenging has a % chance of of falling in <m>[, ]</m>.
+          </li>-->
+      </ul>
+          
+      
+  </answer>
+</exercise>

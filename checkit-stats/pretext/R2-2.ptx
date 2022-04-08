@@ -1,0 +1,138 @@
+<exercise checkit-seed="3144" checkit-slug="R2" checkit-title="Interpreting Linear Regression">
+  <statement>
+      <p>
+          A survey is conducted comparing different homes electricity usage (in kilowatt hours), and their electric bills (dollars) within a city.
+      </p>
+      
+      <p>
+          Consider this table of data collected comparing Electricity Usage measured in kilowatt hours, and Electric Bill measured in dollars:
+          <me>
+               \begin{array}{|c|c|}
+              \hline
+              \text{ Electricity Usage in kilowatt hours }
+              &amp;
+              \text{ Electric Bill in dollars }
+              \\
+              \hline
+               150.44
+              &amp; 32.58
+                  \\
+               290.76
+              &amp; 55.6
+                  \\
+               264.82
+              &amp; 48.7
+                  \\
+               256.32
+              &amp; 45.12
+                  \\
+               179.68
+              &amp; 37.62
+                  \\
+               237.94
+              &amp; 46.33
+                  \\
+               162.75
+              &amp; 34.45
+                  \\
+               208.89
+              &amp; 37.91
+                  \\
+               224.26
+              &amp; 45.3
+                  \\
+               231.14
+              &amp; 44.6
+                  \\
+               157.19
+              &amp; 33.45
+                  \\
+               256.03
+              &amp; 46.78
+                  \\
+               161.87
+              &amp; 35.63
+                  \\
+               236.18
+              &amp; 44.63
+                  \\
+               168.67
+              &amp; 34.4
+                  \\
+               188.2
+              &amp; 39.81
+                  \\
+               193.67
+              &amp; 35.69
+                  \\
+               240.46
+              &amp; 46.17
+                  \\
+              
+              \hline
+              \end{array}
+          </me>
+      </p>
+      <p>
+          <ol>
+              <li>
+                  Find the intercept <m>\beta_0</m> and it's units.
+              </li>
+              <li>
+                  Find the slope <m>\beta_1</m> and it's units.
+              </li>
+              <li>
+                  What does <m>\beta_1</m> tell you about the relationship between Electricity Usage and Electric Bill?
+              </li>
+              <li>
+                  For a household with Electricity Usage <m>222.74</m> kilowatt hours, what is the estimated Electric Bill?
+              </li>
+              <li>
+                  For a household with Electric Bill <m>36.18</m> dollars, what is the estimated Electricity Usage?
+              </li>
+              
+          </ol>
+      </p>
+      
+      
+      
+      
+     
+      
+          
+          
+          
+          
+      
+  </statement>
+  <answer>
+      
+      
+      
+     <p>
+          <p>
+          <ol>
+              <li>
+                  <m>\beta_0=8.567388005310903\ </m> dollars.
+              </li>
+              <li>
+                  <m>\beta_1=0.155031545651635\ </m> dollars<m>/</m>kilowatt hours.
+              </li>
+              <li>
+                 Whenever Electricity Usage increases by 1 kilowatt hours, Electric Bill changes, on average, by <m>0.155031545651635\ </m> dollars.
+              </li>
+              <li>
+                  For a household with Electricity Usage <m>\ 222.74\ </m> kilowatt hours, the estimated Electric Bill is <m>43.09911448375608\ </m> dollars.
+              </li>
+              <li>
+                  For a household with Electric Bill <m>\ 36.18\ </m> dollars, the estimated Electricity Usage is <m>178.1096349044746\ </m> kilowatt hours.
+              </li>
+              
+          </ol>
+      </p>
+          
+      </p>
+          
+      
+  </answer>
+</exercise>

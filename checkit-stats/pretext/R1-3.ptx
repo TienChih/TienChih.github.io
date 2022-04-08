@@ -1,0 +1,138 @@
+<exercise checkit-seed="8693" checkit-slug="R1" checkit-title="Linear Correlation of Variables">
+  <statement>
+      <p>
+          A study is conducted comparing the weight of a species of bird (in grams) to it's (in mm).  Birds of this species are captured, their dimensions recorded and released.
+      </p>
+      
+      <p>
+          Consider this table of data collected comparing Weight measured in grams, and Wingspan measured in mm:
+          <me>
+               \begin{array}{|c|c|}
+              \hline
+              \text{ Weight in grams }
+              &amp;
+              \text{ Wingspan in mm }
+              \\
+              \hline
+               16.58
+              &amp; 7.91
+                  \\
+               13.22
+              &amp; 7.42
+                  \\
+               12.03
+              &amp; 6.11
+                  \\
+               10.17
+              &amp; 7.25
+                  \\
+               16.31
+              &amp; 8.71
+                  \\
+               11.13
+              &amp; 6.14
+                  \\
+               15.67
+              &amp; 6.78
+                  \\
+               17.72
+              &amp; 7.67
+                  \\
+               12.86
+              &amp; 6.55
+                  \\
+               8.91
+              &amp; 6.01
+                  \\
+               14.44
+              &amp; 7.63
+                  \\
+               8.79
+              &amp; 5.43
+                  \\
+               13.06
+              &amp; 7.77
+                  \\
+               11.48
+              &amp; 4.12
+                  \\
+               11.11
+              &amp; 6.77
+                  \\
+               15.43
+              &amp; 7.77
+                  \\
+               15.24
+              &amp; 8.1
+                  \\
+               15.66
+              &amp; 7.46
+                  \\
+               17.42
+              &amp; 7.46
+                  \\
+              
+              \hline
+              \end{array}
+          </me>
+      </p>
+      <p>
+          <ol>
+              <li>
+                  Which variable is the explanatory variable, and which is the response variable?
+              </li>
+              <li>
+                  Compute the correlation coefficient <m>R</m>.
+              </li>
+              <li>
+                  What does <m>R</m> tell you about the relationship between Weight and Wingspan?
+              </li>
+              <li>
+                  Compute the <m>R^2</m>.
+              </li>
+              <li>
+                  What proportion of the response variable can be explained by the explanatory variable?
+              </li>
+              
+          </ol>
+      </p>
+      
+      
+      
+      
+     
+      
+          
+          
+          
+          
+      
+  </statement>
+  <answer>
+      
+      
+      
+      
+     <p>
+          <ul>
+              <li>
+                  The exaplanatory variable is Weight in grams and the response variable is Wingspan in mm.
+              </li>
+              <li>
+                  <m>R=0.7237017255.</m>
+              </li>
+              <li>
+                  <m>R^2=0.5237441874916774.</m>
+              </li>
+              <li>
+                  Wingspan is <m>52.37441874916774\%</m> explainable by Weight.
+              </li>
+              
+              
+          </ul>
+          
+      </p>
+          
+      
+  </answer>
+</exercise>

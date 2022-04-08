@@ -1,0 +1,137 @@
+<exercise checkit-seed="4502" checkit-slug="R3" checkit-title="Inference and Linear Regression">
+  <statement>
+      <p>
+          Two graders grade the same set of exams, to see how consistently points are awarded across individual graders.
+      </p>
+      
+      <p>
+          Consider this table of data collected comparing Score by Grader 1 measured in points, and Score by Grader 2 measured in points:
+          <me>
+               \begin{array}{|c|c|}
+              \hline
+              \text{ Score by Grader 1 in points }
+              &amp;
+              \text{ Score by Grader 2 in points }
+              \\
+              \hline
+               29
+              &amp; 15
+                  \\
+               100
+              &amp; 88
+                  \\
+               72
+              &amp; 76
+                  \\
+               100
+              &amp; 98
+                  \\
+               59
+              &amp; 68
+                  \\
+               100
+              &amp; 84
+                  \\
+               46
+              &amp; 67
+                  \\
+               69
+              &amp; 76
+                  \\
+               76
+              &amp; 99
+                  \\
+               94
+              &amp; 76
+                  \\
+               29
+              &amp; 44
+                  \\
+               -26
+              &amp; -27
+                  \\
+               100
+              &amp; 83
+                  \\
+               100
+              &amp; 96
+                  \\
+               -18
+              &amp; -13
+                  \\
+              
+              \hline
+              \end{array}
+          </me>
+      </p>
+      <p>
+          Suppose a statistics software returns the following:
+          <ul>
+              <li>
+                  Point estimate for <m>\beta_1</m>: <m>0.951799332676151</m>.
+              </li>
+              <li>
+                  Point estimate for <m>\beta_0</m>: <m>2.98844137407864</m>.
+              </li>
+              <li>
+                  Standard Error for <m>\beta_1</m>: <m>0.08533814677625189</m>.
+              </li>
+              <li>
+                  <m>t</m>-score for <m>\beta_1</m>: <m>11.153269301379066</m>.
+              </li>
+              <li>
+                  95% Confidence Interval for <m>\beta_1</m>: <m>[0.767437475180115, 1.13616119017219]</m>.
+              </li>
+              <li>
+                  <m>p</m>-value for <m>H_0:\beta_1=0, H_A: \beta_1\neq 0</m>: <m>p</m>-value<m>=5.00079728738001 \times 10^{-08}</m>.
+              </li>
+          </ul>
+      </p>
+      <p>
+          <ol>
+              <li>
+                  Interpret what this Confidence Interval means in the context of this problem.
+              </li>
+              <li>
+                  Interpret what <m>p</m>-value means in the context of this problem.
+              </li>
+              <li>
+                  What do we conclude from this hypothesis test?  Why?
+              </li>
+              
+              
+          </ol>
+      </p>
+      
+      
+      
+      
+     
+      
+          
+          
+          
+          
+      
+  </statement>
+  <answer>
+      
+      
+      
+      
+     <p>
+          <p>
+          <ol>
+              <li>
+              The slope of the regression line  has a <m>95\%</m> chance of of falling in <m>[0.767437475180115, 1.13616119017219]</m>.
+          </li>
+              
+              
+          </ol>
+      </p>
+          
+      </p>
+          
+      
+  </answer>
+</exercise>

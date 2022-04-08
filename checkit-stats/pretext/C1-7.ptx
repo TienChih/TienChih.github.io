@@ -1,0 +1,44 @@
+<exercise checkit-seed="9174" checkit-slug="C1" checkit-title="Size of Sample: Proportion">
+  <statement>
+      <p>
+          A university system administrator wants to know what proportion of students in their system prefer online courses.  She wants to find a <m> 95</m>% confidence interval with margin of error <m>ME=0.03</m>.
+      </p>
+      <p>
+          A previous study showed that  of <m>75\ </m> surveyed students,  <m>48\ </m>preferred online classes.  How many students should she now survey to obtain a <m>95</m>% confidence interval with margin of error <m>ME=0.03</m>?
+      </p>
+      
+      <!--<ol>
+          <li>
+              Find a <m>95</m>% confidence interval for the proportion of  that .
+          </li>
+          <li>
+              Using complete sentences, explain what the confidence interval means in the context of this problem.
+          </li>
+          
+      </ol>-->
+          
+          
+          
+          
+      
+  </statement>
+  <answer>
+      <title>Partial Solution:</title>
+      <ul>
+          <li>
+              The sample proportion of the initial study is <m>\hat{p}=0.64</m>.
+          </li>
+          <li>
+              For a 95% confidence interval,  <m>z^*=1.9599639845400536</m>.
+          </li>
+          <li>
+              The margin of error is <m>ME=0.03</m>.
+          </li>
+          <li>
+              The number of students should she now survey is at least <m>984</m>.
+          </li>
+      </ul>
+          
+      
+  </answer>
+</exercise>

@@ -1,0 +1,41 @@
+<exercise checkit-seed="4436" checkit-slug="B3" checkit-title="Visualizing Data">
+  <statement>
+      
+      
+      
+      
+      
+      <p>
+          Fix and run the following code in the <c>R</c> cell to download the <c>studentscleaned.csv</c> data, and generate a scatter plot for the two exam scores for each student, <c>score1</c> and <c>score2</c>.
+          
+      </p>
+      <p>
+          <c>studentscleaned = read.csv("https://github.com/TienChih/tbil-stats/raw/main/data/studentscleaned.csv")</c>
+      </p>
+      <p>
+          <c>plot(studentscleaned$FIXME1, studentscleaned$FIXME2)</c>
+      </p>
+      
+      <p>Indicate what you fixed, and upload the generated image.</p>
+     
+      
+          
+          
+          
+          
+      
+  </statement>
+  <answer>
+      <title>Partial Solution:</title>
+      
+      
+      
+      
+     <p>
+          <c>FIXME</c>'s: <c>score1</c> and <c>score2</c>.
+          
+      </p>
+          
+      
+  </answer>
+</exercise>

@@ -1,0 +1,69 @@
+<exercise checkit-seed="9034" checkit-slug="D2" checkit-title="General Normal Distribution">
+  <statement>
+      
+      
+      <p>
+          Suppose the average height of 5 year old girls is normally distributed with mean  <m>110.25</m>  cm and standard deviation <m>3.73</m>  cm.  Find the following:
+      </p>
+      
+      
+      <p>
+          <ol>
+              <li>
+                  Find the probability that a randomly selected 5 year old girl's height   is at most  <m>116.92 </m>  cm.
+              </li>
+             
+              <li>
+                  Find the probability that a randomly selected 5 year old girl's height  is between <m>110.59 </m> and <m>119.43</m>  cm.
+              </li>
+              
+              
+              <li>
+                  Find <m>X^*</m> such that  the probability that a randomly selected 5 year old girl's height   is at least  <m>X^*</m>  cm is <m>23</m>%.
+              </li>
+              
+              <li>
+                  Find <m>k</m> such that  the probability that a randomly selected 5 year old girl's height  is between <m>110.25-k</m>  cm and <m>110.25+k</m>  cm is <m>40</m>%.
+              </li>
+          </ol>
+          
+      </p>
+      
+      
+     
+      
+          
+          
+          
+          
+      
+  </statement>
+  <answer>
+      <title>Partial Solution:</title>
+      
+      
+      
+      
+     <p>
+          <ol>
+              <li>
+                  <m>P(X\leq 116.92)=0.963128429513416</m>.
+              </li>
+              
+              <li>
+                  <m>P(110.59\leq X\leq 119.43)=0.45676049780219363</m>.
+              </li>
+              
+              <li>
+                  If <m>P(X\geq\  X^*)=23</m>% then <m>X=113.00589874746085</m>  cm.
+              </li>
+              <li>
+                  If <m>P(110.25-k\leq\  X\leq\  110.25+k)=40</m>% then <m>k=1.9560139124009917</m>  cm.
+              </li>
+          </ol>
+          
+      </p>
+          
+      
+  </answer>
+</exercise>

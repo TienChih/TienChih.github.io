@@ -1,0 +1,64 @@
+<exercise checkit-seed="9217" checkit-slug="C2" checkit-title="Two Categorical Variable Inferences">
+  <statement>
+      <p>
+          A political scientist wonders about differences in support of a new federal mandate in his city.  He wants to know if the difference in rate of support for the mandate between people who voted for the current incumbent major and those who didnt<m>\, </m> is greater than <m>\,   0.00</m>.  He polls both people who voted for, and didn't vote for, the current mayor.
+      </p>
+      <p>
+          Suppose that of   <m>n_1=378\, </m>polled adults who voted for the current mayor, <m>x_1=340\, </m>supported the new federal mandate and of <m>n_2=378\, </m>polled adults who didn't vote for the current mayor, <m>x_2=321\, </m>supported the new federal mandate. Test the hypothesis that  the difference between the proportion of people who voted for the mayor who support the new federal mandate: <m>p_1</m>, and the proportion of people who did not vote for the mayor who support the new federal mandate: <m>p_2</m>,   is greater than<m>\,   0.00</m>.  That is <m>p_1-p_2\gneq 0.00</m>.
+      </p>
+      
+      <ol>
+          <li>
+              State the null hypothesis.
+          </li>
+          <li>
+              State the alternative hypothesis.
+          </li>
+          <li>
+              What is the <m>p</m>-value?
+          </li>
+          <li>
+              Using complete sentences, state the meaning of the <m>p</m>-value in the context of this problem.
+          </li>
+          <li>
+              What do we conclude?  Why?
+          </li>
+          
+      </ol>
+          
+          
+          
+          
+      
+  </statement>
+  <answer>
+      <title>Partial Solution:</title>
+      
+     <ul>
+          <li>
+              The null hypothesis is <m>H_0: p_1-p_2= 0.00</m>.
+          </li>
+         <li>
+              The alternative hypothesis is <m>H_A: p_1-p_2\gneq 0.00</m>.
+          </li>
+          <li>
+              The sampling distribution has mean <m> 0.00</m> and standard error <m>SE=0.0241107008590948</m>.
+          </li>
+         <li>
+              The difference in sample proportions is <m>\hat{p}=0.050264550264550234</m> which has <m>z</m>-score <m>z=2.08474032166469</m>.
+          </li>
+         <li>
+              The <m>p</m>-value is <m>0.018546439225223366</m>.
+          </li>
+         
+          <!--<li>
+              For a % confidence interval,  <m>z^*=</m>.
+          </li>
+          <li>
+              The proportion of  that support the new federal mandate has a % chance of of falling in <m>[, ]</m>.
+          </li>-->
+      </ul>
+          
+      
+  </answer>
+</exercise>

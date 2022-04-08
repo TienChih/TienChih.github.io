@@ -1,0 +1,50 @@
+<exercise checkit-seed="5043" checkit-slug="B1" checkit-title="Types of Variables">
+  <statement>
+      
+      
+      
+      
+      
+      <p>
+          For each of the following, classify the type of variable described as <em>Numerical</em> or <em>Categorical</em>, as well as the subcategory <em>Continuous</em>, <em>Discrete</em>, <em>Nominal</em> or <em>Ordinal</em>.  Be sure to justify your choices.
+          <ol>
+              <li>The ranking of a patient's anxiety from MILD to SEVERE.</li>
+              <li>A college graduate's major.</li>
+              <li>How many traffic accidents a city has over the next year.</li>
+              <li>The number of respondents to a survey indicating they suffer from anxiety.</li>
+              <li>The ranking of one's familiarity with programming languages from 1 through 5.</li>
+              <li>The color of a new shirt.</li>
+          </ol>
+          
+      </p>
+      
+      
+     
+      
+          
+          
+          
+          
+      
+  </statement>
+  <answer>
+      <title>Partial Solution:</title>
+      
+      
+      
+      
+     <p>
+          <ol>
+              <li>Categorical, Ordinal</li>
+              <li>Categorical, Nominal</li>
+              <li>Numerical, Discrete</li>
+              <li>Numerical, Discrete</li>
+              <li>Categorical, Ordinal</li>
+              <li>Categorical, Nominal</li>
+          </ol>
+          
+      </p>
+          
+      
+  </answer>
+</exercise>

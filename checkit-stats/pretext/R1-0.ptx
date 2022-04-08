@@ -1,0 +1,129 @@
+<exercise checkit-seed="7592" checkit-slug="R1" checkit-title="Linear Correlation of Variables">
+  <statement>
+      <p>
+          A professor observes how many cups of coffee they drink in a day, compared to how many hours of sleep they get that night.
+      </p>
+      
+      <p>
+          Consider this table of data collected comparing Coffee Consumption measured in cups, and Sleep measured in hours:
+          <me>
+               \begin{array}{|c|c|}
+              \hline
+              \text{ Coffee Consumption in cups }
+              &amp;
+              \text{ Sleep in hours }
+              \\
+              \hline
+               0
+              &amp; 8.5
+                  \\
+               4
+              &amp; 6.0
+                  \\
+               0
+              &amp; 9.5
+                  \\
+               3
+              &amp; 7.1
+                  \\
+               0
+              &amp; 9.6
+                  \\
+               3
+              &amp; 5.8
+                  \\
+               4
+              &amp; 6.1
+                  \\
+               2
+              &amp; 6.9
+                  \\
+               3
+              &amp; 6.7
+                  \\
+               1
+              &amp; 8.1
+                  \\
+               2
+              &amp; 6.9
+                  \\
+               4
+              &amp; 6.6
+                  \\
+               0
+              &amp; 7.3
+                  \\
+               3
+              &amp; 5.5
+                  \\
+               2
+              &amp; 5.8
+                  \\
+               3
+              &amp; 5.9
+                  \\
+              
+              \hline
+              \end{array}
+          </me>
+      </p>
+      <p>
+          <ol>
+              <li>
+                  Which variable is the explanatory variable, and which is the response variable?
+              </li>
+              <li>
+                  Compute the correlation coefficient <m>R</m>.
+              </li>
+              <li>
+                  What does <m>R</m> tell you about the relationship between Coffee Consumption and Sleep?
+              </li>
+              <li>
+                  Compute the <m>R^2</m>.
+              </li>
+              <li>
+                  What proportion of the response variable can be explained by the explanatory variable?
+              </li>
+              
+          </ol>
+      </p>
+      
+      
+      
+      
+     
+      
+          
+          
+          
+          
+      
+  </statement>
+  <answer>
+      
+      
+      
+      
+     <p>
+          <ul>
+              <li>
+                  The exaplanatory variable is Coffee Consumption in cups and the response variable is Sleep in hours.
+              </li>
+              <li>
+                  <m>R=-0.8646053592.</m>
+              </li>
+              <li>
+                  <m>R^2=0.7475424271573611.</m>
+              </li>
+              <li>
+                  Sleep is <m>74.75424271573611\%</m> explainable by Coffee Consumption.
+              </li>
+              
+              
+          </ul>
+          
+      </p>
+          
+      
+  </answer>
+</exercise>

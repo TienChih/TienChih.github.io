@@ -1,0 +1,60 @@
+<exercise checkit-seed="4260" checkit-slug="C3" checkit-title="Chi^2 goodness of fit test">
+  <statement>
+     <p>
+         The distribution of moth species in a local forest has historically been  <m>27</m>%  species 1, <m>31</m>%  species 2, <m>25</m>%  species 3, and <m>17</m>%  species 4.
+      </p>
+      <p>
+          A year after an industrial accident, a sample of moths collected from this forest consisted of  <m>55</m>  moths of species 1, <m>83</m>  moths of species 2, <m>81</m>  moths of species 3, and <m>39</m>  moths of species 4.
+      </p>
+      <p>
+          Use a <m>\chi^2</m> goodness of fit test to test whether or not the distributions of moths remain unchanged.
+      </p>
+      <ul>
+          <li>
+              State the null hypothesis for this test.
+          </li>
+          <li>
+              State the alternative hypothesis for this test.
+          </li>
+          <li>
+              Using complete sentences, state the meaning of the <m>p</m>-value in the context of this problem.
+          </li>
+          <li>
+              What do we conclude?  Why?
+          </li>
+      </ul>
+          
+          
+          
+          
+      
+  </statement>
+  <answer>
+      <title>Partial Solution:</title>
+      
+      
+      
+      
+     <ul>
+          <li>
+              The null hypothesis is <m>H_0:</m> The distribution of moths remains unchanged after the accident.
+          </li>
+         <li>
+              The alternative hypothesis is <m>H_A:</m> The distribution of months has changed after the accident.
+          </li>
+          <li>
+              There are <m>3</m> degrees of freedom.
+          </li>
+         <li>
+              The <m>\chi^2</m> value is <m>7.95869446664499</m>.
+          </li>
+         <li>
+              The <m>p</m>-value is <m>0.046873124613976413</m>.
+          </li>
+         
+          
+      </ul>
+          
+      
+  </answer>
+</exercise>

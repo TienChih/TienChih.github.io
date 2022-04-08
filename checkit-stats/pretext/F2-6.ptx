@@ -1,0 +1,49 @@
+<exercise checkit-seed="2368" checkit-slug="F2" checkit-title="Confidence Intervals">
+  <statement>
+      <p>
+          A company wondered if people liked the user interface of their upgraded website.  They survey a random selection of their customers.
+      </p>
+      <p>
+Suppose that for   <m>n=65</m> surveyed customers, <m>32</m> preferred the new user interface. 
+      </p>
+      
+      <ol>
+          <li>
+              Find a <m>95</m>% confidence interval for the proportion of all the company's customers that prefer the new interface.
+          </li>
+          <li>
+              Using complete sentences, explain what the confidence interval means in the context of this problem.
+          </li>
+          <li>
+              Suppose the company claims that   <m>62</m>% of all the company's customers  prefer the new interface.  Is this claim consistent with what we found?  Explain why or why not.
+          </li>
+          
+      </ol>
+          
+          
+          
+          
+      
+  </statement>
+  <answer>
+      <ul>
+          <li>
+              The sample proportion is <m>\hat{p}=\frac{32}{65}</m>.
+          </li>
+          <li>
+              The standard error is <m>SE=0.0620100275268651</m>.
+          </li>
+          <li>
+              For a 95% confidence interval,  <m>z^*=1.9599639845400536</m>.
+          </li>
+          <li>
+              The proportion of all the company's customers that prefer the new interface has a 95% chance of of falling in <m>[0.370770271674699, 0.613845112940685]</m>.
+          </li>
+          <li>
+              The claim is not consistent.
+          </li>
+      </ul>
+          
+      
+  </answer>
+</exercise>

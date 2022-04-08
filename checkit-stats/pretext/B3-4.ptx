@@ -1,0 +1,41 @@
+<exercise checkit-seed="5569" checkit-slug="B3" checkit-title="Visualizing Data">
+  <statement>
+      
+      
+      
+      
+      
+      <p>
+          Fix and run the following code in the <c>R</c> cell to download the <c>sulphinpyrazone.csv</c> data, and generate a mosaic plot for whether or not someone treated with sulphinpyrazone for a heart attack, versus the outcome, <c>group</c> and <c>outcome</c>.
+          
+      </p>
+      <p>
+          <c>sulphinpyrazone = read.csv("https://github.com/TienChih/tbil-stats/raw/main/data/sulphinpyrazone.csv")</c>
+      </p>
+      <p>
+          <c>counts = table(sulphinpyrazone$FIXME1, sulphinpyrazone$FIXME2); mosaicplot(counts)</c>
+      </p>
+      
+      <p>Indicate what you fixed, and upload the generated image.</p>
+     
+      
+          
+          
+          
+          
+      
+  </statement>
+  <answer>
+      <title>Partial Solution:</title>
+      
+      
+      
+      
+     <p>
+          <c>FIXME</c>'s: <c>group</c> and <c>outcome</c>.
+          
+      </p>
+          
+      
+  </answer>
+</exercise>

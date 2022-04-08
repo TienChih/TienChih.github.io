@@ -1,0 +1,46 @@
+<exercise checkit-seed="6011" checkit-slug="F1" checkit-title="Point Estimates">
+  <statement>
+      
+      
+      
+      
+      
+      <p>
+          For each of the following, identify the <em>parameter of interest</em>, and the <em>point estimate</em>.
+          <ol>
+              <li>To estimate the average caloric value of fast food items, 50 fast food items are chosen randomly and their avverage caloric value is computed.</li>
+              <li>To estimate the proportion of adults who support a new legislation, 50 adults are polled.</li>
+              <li>To estimate the proportion of adults in a city who smoke, 200 adults are surveyed.</li>
+              <li>To estimate the proportion of 4th graders who like math, 150 4th graders are polled about their affinity for math.</li>
+          </ol>
+          
+      </p>
+      
+      
+     
+      
+          
+          
+          
+          
+      
+  </statement>
+  <answer>
+      <title>Partial Solution:</title>
+      
+      
+      
+      
+     <p>
+          <ol>
+              <li><p>Parameter of Interest: The average caloric value of all fast food items.</p>  <p>Point Estimate: The average caloric value of the selected fast food items.</p> </li>
+              <li><p>Parameter of Interest: The proportion of all adults who support the legislation.</p>  <p>Point Estimate: The proportion of the polled adults who support the legislation.</p> </li>
+              <li><p>Parameter of Interest: The proportion of all adults in the city who smoke.</p>  <p>Point Estimate: The proportion of the surveyed adults in the city who smoke.</p> </li>
+              <li><p>Parameter of Interest: The proportion of all 4th graders who like math.</p>  <p>Point Estimate: The proportion of the polled 4th graders who like math.</p> </li>
+          </ol>
+          
+      </p>
+          
+      
+  </answer>
+</exercise>

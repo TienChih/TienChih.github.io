@@ -1,0 +1,164 @@
+<exercise checkit-seed="5376" checkit-slug="R3" checkit-title="Inference and Linear Regression">
+  <statement>
+      <p>
+          A study is conducted comparing the amount of Time since Injection of a drug, with the Quantity left in the Bloodstream.
+      </p>
+      
+      <p>
+          Consider this table of data collected comparing Time since Injection measured in hours, and Drug Quantity in Body measured in mg/ml:
+          <me>
+               \begin{array}{|c|c|}
+              \hline
+              \text{ Time since Injection in hours }
+              &amp;
+              \text{ Drug Quantity in Body in mg/ml }
+              \\
+              \hline
+               4
+              &amp; 2.08
+                  \\
+               1
+              &amp; 2.27
+                  \\
+               7
+              &amp; 1.75
+                  \\
+               2
+              &amp; 2.66
+                  \\
+               6
+              &amp; 1.88
+                  \\
+               4
+              &amp; 2.09
+                  \\
+               7
+              &amp; 1.77
+                  \\
+               1
+              &amp; 2.61
+                  \\
+               6
+              &amp; 1.67
+                  \\
+               3
+              &amp; 2.47
+                  \\
+               4
+              &amp; 2.19
+                  \\
+               1
+              &amp; 2.47
+                  \\
+               4
+              &amp; 2.01
+                  \\
+               3
+              &amp; 2.37
+                  \\
+               3
+              &amp; 2.39
+                  \\
+               4
+              &amp; 2.38
+                  \\
+               5
+              &amp; 1.79
+                  \\
+               3
+              &amp; 2.34
+                  \\
+               4
+              &amp; 2.0
+                  \\
+               7
+              &amp; 1.79
+                  \\
+               2
+              &amp; 2.41
+                  \\
+               2
+              &amp; 2.71
+                  \\
+               7
+              &amp; 2.1
+                  \\
+               7
+              &amp; 1.9
+                  \\
+              
+              \hline
+              \end{array}
+          </me>
+      </p>
+      <p>
+          Suppose a statistics software returns the following:
+          <ul>
+              <li>
+                  Point estimate for <m>\beta_1</m>: <m>-0.134858466766053</m>.
+              </li>
+              <li>
+                  Point estimate for <m>\beta_0</m>: <m>2.715886303179464</m>.
+              </li>
+              <li>
+                  Standard Error for <m>\beta_1</m>: <m>0.017108673414781075</m>.
+              </li>
+              <li>
+                  <m>t</m>-score for <m>\beta_1</m>: <m>-7.8824619242273775</m>.
+              </li>
+              <li>
+                  95% Confidence Interval for <m>\beta_1</m>: <m>[-0.170339683788533, -0.0993772497435730]</m>.
+              </li>
+              <li>
+                  <m>p</m>-value for <m>H_0:\beta_1=0, H_A: \beta_1\neq 0</m>: <m>p</m>-value<m>=7.540842128506142 \times 10^{-08}</m>.
+              </li>
+          </ul>
+      </p>
+      <p>
+          <ol>
+              <li>
+                  Interpret what this Confidence Interval means in the context of this problem.
+              </li>
+              <li>
+                  Interpret what <m>p</m>-value means in the context of this problem.
+              </li>
+              <li>
+                  What do we conclude from this hypothesis test?  Why?
+              </li>
+              
+              
+          </ol>
+      </p>
+      
+      
+      
+      
+     
+      
+          
+          
+          
+          
+      
+  </statement>
+  <answer>
+      
+      
+      
+      
+     <p>
+          <p>
+          <ol>
+              <li>
+              The slope of the regression line  has a <m>95\%</m> chance of of falling in <m>[-0.170339683788533, -0.0993772497435730]</m>.
+          </li>
+              
+              
+          </ol>
+      </p>
+          
+      </p>
+          
+      
+  </answer>
+</exercise>

@@ -1,0 +1,60 @@
+<exercise checkit-seed="8074" checkit-slug="C3" checkit-title="Chi^2 goodness of fit test">
+  <statement>
+     <p>
+         The distribution of majors at a University are  <m>31</m>%  Business majors, <m>23</m>%  Humanities majors, <m>30</m>%  Social Science majors, and <m>16</m>%  STEM majors.
+      </p>
+      <p>
+          Professor Martinez's introductory lecture class consists of  <m>48</m>  students who are Business majors, <m>38</m>  students who are Humanities majors, <m>27</m>  students who are Social Science majors, and <m>20</m>  students who are STEM majors.
+      </p>
+      <p>
+          Use a <m>\chi^2</m> goodness of fit test to test whether or not the distributions majors in Dr. Martinez's class is representative of the student body at the University.
+      </p>
+      <ul>
+          <li>
+              State the null hypothesis for this test.
+          </li>
+          <li>
+              State the alternative hypothesis for this test.
+          </li>
+          <li>
+              Using complete sentences, state the meaning of the <m>p</m>-value in the context of this problem.
+          </li>
+          <li>
+              What do we conclude?  Why?
+          </li>
+      </ul>
+          
+          
+          
+          
+      
+  </statement>
+  <answer>
+      <title>Partial Solution:</title>
+      
+      
+      
+      
+     <ul>
+          <li>
+              The null hypothesis is <m>H_0:</m> The distribution of students in Dr. Martinez's class is the same as the University's.
+          </li>
+         <li>
+              The alternative hypothesis is <m>H_A:</m> The distribution of students in Dr. Martinez's class is different from the University's.
+          </li>
+          <li>
+              There are <m>3</m> degrees of freedom.
+          </li>
+         <li>
+              The <m>\chi^2</m> value is <m>7.15427769985975</m>.
+          </li>
+         <li>
+              The <m>p</m>-value is <m>0.06713964585546162</m>.
+          </li>
+         
+          
+      </ul>
+          
+      
+  </answer>
+</exercise>

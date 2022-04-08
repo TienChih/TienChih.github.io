@@ -1,0 +1,89 @@
+<exercise checkit-seed="4903" checkit-slug="P4" checkit-title="Random Variables">
+  <statement>
+      
+      <p>
+          A professor decides against using OER's in their statistics class and uses a publisher text instead.  The students have the option of purchase a hardcopy text for 150 dollars, access to a flash e-text for 95 dollars, of a bundle of both for 225 dollars.  Let <m>X</m> denote   the amount spent for this course by randomly selected a student in statistics.  Consider the following probability distribution table for <m>X</m>.
+      </p>
+      
+      <p>
+          <me>
+              \begin{array}{|c
+              |c
+              |c
+              |c
+              |
+              }
+              
+              \hline
+              X_i 
+              &amp; 150
+              &amp; 95
+              &amp; 225
+              \\
+              \hline
+              P(X=X_i)
+              &amp; 0.413
+              &amp; ???
+              &amp; 0.17
+              \\
+              \hline
+              \end{array}
+          </me>
+      </p>
+      
+      
+      <p>
+          <ol>
+              <li>
+                  What is the value of the missing entry?
+              </li>
+              <li>
+                  Find the expectation of <m>X</m>, <m>E(X)</m>,  and interpret what it means in context of this problem.
+              </li>
+              <li>
+                  Find variance of <m>X</m>, <m>Var(X)</m>.
+              </li>
+              <li>
+                  Find the standard deviation of <m>X</m>, <m>\sigma_X</m>.
+              </li>
+          </ol>
+          
+      </p>
+      
+      
+     
+      
+          
+          
+          
+          
+      
+  </statement>
+  <answer>
+      <title>Partial Solution:</title>
+      
+      
+      
+      
+     <p>
+         <ol>
+             <li>
+                 <m>P(X=95)=0.417</m>.
+             </li>
+             <li>
+                 <m>E(X)=139.815</m>.
+             </li>
+             <li>
+                 <m>Var(X)=2113.940774999999</m>
+             </li>
+             <li>
+                 <m>\sigma_X=45.97761167133412</m>
+             </li>
+         </ol>
+          
+          
+      </p>
+          
+      
+  </answer>
+</exercise>

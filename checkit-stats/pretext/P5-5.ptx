@@ -1,0 +1,63 @@
+<exercise checkit-seed="2908" checkit-slug="P5" checkit-title="Linear Combinations of Random Variables">
+  <statement>
+      
+      <p>
+          Let <m>X_1, X_2, Y</m> be independent random variables where <m>E(X_i)=15, Var(X_i)=6</m> and <m>E(Y)=21, Var(Y)=9</m>.
+      </p>
+      
+      <p>
+          Let <m>Z</m> be the random variable defined by: <me>Z=-2X_1+2X_2+3Y.</me>
+      </p>
+      
+      
+      <p>
+          Find the following:
+          <ol>
+              <li>
+                  <m>E(Z).</m>
+              </li>
+              <li>
+                  <m>Var(Z).</m>
+              </li>
+              <li>
+                  <m>\sigma_Z.</m>
+              </li>
+              
+          </ol>
+          
+      </p>
+      
+      
+     
+      
+          
+          
+          
+          
+      
+  </statement>
+  <answer>
+      <title>Partial Solution:</title>
+      
+      
+      
+      
+     <p>
+          <ol>
+              <li>
+                  <m>E(Z)=63.</m>
+              </li>
+              <li>
+                  <m>Var(Z)=129.</m>
+              </li>
+              <li>
+                  <m>\sigma_Z=11.3578166916005.</m>
+              </li>
+              
+          </ol>
+          
+      </p>
+          
+      
+  </answer>
+</exercise>

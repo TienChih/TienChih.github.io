@@ -1,0 +1,60 @@
+<exercise checkit-seed="9466" checkit-slug="P2" checkit-title="Conditional Probability">
+  <statement>
+      
+      <p>
+          A patient is tested for a disease.  We consider the events that they test positive for the disease, and the event that they have the disease.
+      </p>
+      
+      <p>
+          Suppose that   the probability that   the patient tests positive for the disease is <m>0.0592</m>, the probability that   the patient tests positive for the disease, given that they have it is <m>0.96</m>, and finally   the probability that    the patient has the disease is <m>0.0101</m>.
+      </p>
+      
+      
+      <p>
+          <ol>
+              <li>
+                  Find the probability that    the patient has the disase and tests positive for it.
+              </li>
+              <li>
+                  Find the probability that    the patient has the disease, given that they've tested positive for it.
+              </li>
+              <li>
+                  Are the events   the patient tests positive for the disease, and    the patient has the disease independent?
+              </li>
+          </ol>
+          
+      </p>
+      
+      
+     
+      
+          
+          
+          
+          
+      
+  </statement>
+  <answer>
+      <title>Partial Solution:</title>
+      
+      
+      
+      
+     <p>
+          <ol>
+              <li>
+                   The probability that    the patient has the disase and tests positive for it is <m>0.009696</m>.
+              </li>
+              <li>
+                   The  probability that    the patient has the disease, given that they've tested positive for it is <m>0.16378378378378378</m>.
+              </li>
+              <li>
+                  The events   the patient tests positive for the disease, and    the patient has the disease  are not independent.
+              </li>
+          </ol>
+          
+      </p>
+          
+      
+  </answer>
+</exercise>

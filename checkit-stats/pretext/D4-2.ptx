@@ -1,0 +1,67 @@
+<exercise checkit-seed="9776" checkit-slug="D4" checkit-title="Binomial Distribution">
+  <statement>
+      
+      
+      <p>
+          Suppose a group of adults are selected as test subjects for a study.  Each of the  <m>7</m>  people has a <m>0.17</m> chance of  having some type of phobia.  Suppose that whether or not each  person  have some type of phobia is independent of the other  people.  Find the following:
+      </p>
+      
+      
+      <p>
+          <ol>
+              <li>
+                  What is the probability that <m>5</m>  people  have some type of phobia?
+              </li>
+             
+              <li>
+                  What is the probability that <m>6</m>  people  have some type of phobia?
+              </li>
+              
+              
+              <li>
+                  What is the probability that  less than  <m>4</m>  people  have some type of phobia?
+              </li>
+              
+              <li>
+                  What is the probability that between <m>5</m> and <m>6</m> (inclusive)  people  have some type of phobia?
+              </li>
+          </ol>
+          
+      </p>
+      
+      
+     
+      
+          
+          
+          
+          
+      
+  </statement>
+  <answer>
+      <title>Partial Solution:</title>
+      
+      
+      
+      
+     <p>
+          <ol>
+              <li>
+                  <m>0.002054092923330001</m>
+              </li>
+              <li>
+                  <m>0.00014023927589000006</m>
+              </li>
+              <li>
+                  <m>0.9810868867045999</m>
+              </li>
+              <li>
+                  <m>0.002194332199220001</m>
+              </li>
+          </ol>
+          
+      </p>
+          
+      
+  </answer>
+</exercise>

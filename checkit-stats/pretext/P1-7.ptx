@@ -1,0 +1,66 @@
+<exercise checkit-seed="4175" checkit-slug="P1" checkit-title="Introduction to Probability">
+  <statement>
+      
+      <p>
+          An employee has requested both a raise and a promotion.  We consider the event that they recieve a raise, and the event they recieve a promotion.
+      </p>
+      
+      <p>
+          Suppose that   the probability that   the employee gets a raise is <m>0.4728</m>, the probability that    the employee gets a promotion is <m>0.4465</m>, and finally   the probability that    the employee gets either a raise or a promotion is <m>0.6168</m>.
+      </p>
+      
+      
+      <p>
+          <ol>
+              <li>
+                  <p>
+                      Find the probability that   the employee gets a raise and a promotion.
+                  </p>
+                  <p>
+                      (For the following, it is advisable to draw a venn diagram using the information above.)
+                  </p>
+                  
+              </li>
+              <li>
+                  Find the probability that  the employee does not get a raise but they do get a promotion.
+              </li>
+              <li>
+                  Find the probability that  the employee gets a raise or they do not get a promotion.
+              </li>
+          </ol>
+          
+      </p>
+      
+      
+     
+      
+          
+          
+          
+          
+      
+  </statement>
+  <answer>
+      <title>Partial Solution:</title>
+      
+      
+      
+      
+     <p>
+          <ol>
+              <li>
+                   The probability that   the employee gets a raise and a promotion is <m>0.3025</m>.
+              </li>
+              <li>
+                   The  probability that  the employee does not get a raise but they do get a promotion is <m>0.144</m>.
+              </li>
+              <li>
+                    The probability that  the employee gets a raise or they do not get a promotion is <m>0.856</m>.
+              </li>
+          </ol>
+          
+      </p>
+          
+      
+  </answer>
+</exercise>

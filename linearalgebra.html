@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Linear Algebra</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="assets/css/style.css" rel="stylesheet">
+	
+  <!-- Other Scripts -->
+  <script id="MathJax-script" async
+          src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+  </script>
+  <script src="https://sagecell.sagemath.org/static/embedded_sagecell.js"></script>
+  
+  <script>sagecell.makeSagecell({"inputLocation": ".sage"});</script>
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-82736001-2"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-82736001-2');
+</script>	
+
+  <!-- =======================================================
+  * Template Name: iPortfolio - v3.3.0
+  * Template URL: https://bootstrapmade.com/iportfolio-bootstrap-portfolio-websites-template/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+</head>
+
+<body>
+
+  <!-- ======= Mobile nav toggle button ======= -->
+  <i class="bi bi-list mobile-nav-toggle d-xl-none"></i>
+
+  <!-- ======= Header ======= -->
+  <header id="header">
+    <div class="d-flex flex-column">
+
+      <div class="profile">
+        <img src="assets/img/TienProfile.jpeg" alt="" class="img-fluid rounded-circle">
+        <h1 class="text-light"><a href="index.html">Tien Chih</a></h1>
+        <div class="social-links mt-3 text-center">
+          <a href="https://twitter.com/TChihMath" target="_blank" class="twitter"><i class="bx bxl-twitter"></i></a>
+          <a href="https://youtube.com/channel/UCQGNt2_2eiwN_UMRtzLLYoA/videos" class="youtube" target="_blank"><i class="bx bxl-youtube"></i></a>
+		  <a href="schedule.html"  target="_blank"><i class="bx bxs-calendar"></i></a>
+		  <a href="mailto:tien.chih@msubillings.edu"  ><i class="bx bxs-envelope"></i></a>		
+        </div>
+      </div>
+
+      <nav id="navbar" class="nav-menu navbar">
+        <ul>
+          
+        </ul>
+      </nav><!-- .nav-menu -->
+    </div>
+  </header><!-- End Header -->
+
+  <main id="main">
+
+    <!-- ======= Breadcrumbs ======= -->
+    <section class="breadcrumbs">
+      <div class="container">
+
+        <div class="d-flex justify-content-between align-items-center">
+          <h2>Technology</h2>
+          <ol>
+            <li><a href="index.html">Home</a></li>
+			  <li><a href="technology.html">Technology Tools</a></li>
+            <li>Linear Algebra</li>
+          </ol>
+        </div>
+
+      </div>
+    </section><!-- End Breadcrumbs -->
+
+    <section class="inner-page">
+	  <div class="section-title">
+          <h2>Linear Algebra</h2>
+          <p>"All The Mathematical Methods I Learned In My University Math Degree Became Obsolete In My Lifetime" - Keith Devlin</p>
+        </div>	
+      <div class="container">
+		  <span style="font-weight: bold; text-decoration: underline;">Visualizing the geometry of a 2x2 Linear Transformation.</span>:&nbsp; Enter the entries for a 2x2 matrix, and see it's effect on the standard basis, arbitrary vectors, areas, and it's eigenspaces (<a href="https://www.desmos.com/calculator/n0xzbzzprx" target="_blank">https://www.desmos.com/calculator/n0xzbzzprx</a>)<br>
+<br>
+<br>
+<iframe src="https://www.desmos.com/calculator/n0xzbzzprx" style="min-height: 600px;" width="100%"></iframe><br>
+<br>
+<br>	
+		  
+		  <span style="font-weight: bold; text-decoration: underline;">Visualizing the span of two vectors in \(\mathbb{R}^2\).</span>:&nbsp; Shows the span of two vectors in \(\mathbb{R}^2\) (<a href="https://www.desmos.com/calculator/fpbqag6qku" target="_blank">https://www.desmos.com/calculator/fpbqag6qku</a>)<br>
+<br>
+<br>
+<iframe src="https://www.desmos.com/calculator/fpbqag6qku" style="min-height: 600px;" width="100%"></iframe><br>
+<br>
+<br>	
+	  
+	  
+	  
+	  
+	<span style="font-weight: bold; text-decoration: underline;">Solving
+Higher Dimensional System of Equations</span>:&nbsp; When we have more
+than 2 variables, it takes more work to find the solution to the system
+than graphing the 2 lines.&nbsp; The following uses the reduced row
+echelon form technique to solve the system.&nbsp; Right now it is set
+to solve the system:<br>
+<br>
+2x+3y-2z=10<br>
+-2x+y+z=-1<br>
+4y=8<br>
+<br>
+You should see when you evaluate that you get as a solution x=1, y=2,
+z=-1.&nbsp; You can set A to represent whatever system you want, for
+example is the system is<br>
+<br>
+2x-y=-3<br>
+2x+2y=6<br>
+<br>
+Then we should let A=matrix(QQ, [[2,-1,-3],[-2,2,6]])<br>
+<br>
+Which has solution x=2, y=1.<br>
+<br>
+<div class="sage">
+<script type="text/x-sage">
+A=matrix(QQ, [[2,3,-2,10],[-2,1,1,-1],[0,4,0,8]])
+print(A)
+print(' ')
+print(A.rref())
+</script></div>
+<br>
+<br>
+	  
+	  
+<span style="font-weight: bold; text-decoration: underline;">Linear Combinations and Span</span>:&nbsp; Is (3, -1, 13)^T in the span of (1,1,-3)^T, (2, 0, 5)^T? If it were, we should be able to find, a and b such that a(1,1,-3)^T+b(2,0,5)^T=(3,-1,13)^T.  Such an a would satisfy:<br>
+<br>
+1a+2b=3<br>
+1a+0b=-1<br>
+-3a+5b=13<br>
+<br>
+We can solve this with sage:<br>
+<br>
+<div class="sage">
+<script type="text/x-sage">
+A=matrix(QQ, [[1,2,3],[1,0,-1],[-3,5,13]])
+print(A)
+print(' ')
+print(A.rref())
+</script></div>
+<br>
+	Giving us a=-1,b=2.<br><br>
+On the other hand, if we wanted to know if (1,1,1)^T were a linear combination of (1,1,-3)^T and (2, 0, 5)^T, we would have:<br>
+<br>
+1a+2b=1<br>
+1a+0b=1<br>
+-3a+5b=1<br>
+<br>
+We can solve this with sage:<br>
+<br>
+<div class="sage">
+<script type="text/x-sage">
+A=matrix(QQ, [[1,2,1],[1,0,1],[-3,5,1]])
+print(A)
+print(' ')
+print(A.rref())
+</script></div>
+<br>
+	  The last row suggests 0=1, which is impossible.  Thus (1,1,1)^T is not a linear combination of (1,1,-3)^T and (2, 0, 5)^T and consequently not in their span.
+<br>	  
+<br>	
+	  
+	  
+<span style="font-weight: bold; text-decoration: underline;">Linear Independence</span>:&nbsp; Is {(1,2,3)^T, (4,5,0)^T} linear independent?  To be linearly independent means that there is a unique linear combination of these vectors for any element in their span, in particular (0,0,0)^T.<br>
+<br>	  
+In other words, they are linearly independent if and only if a(1,2,3)^T+b(4,5,0)^T=(0,0,0)^T has a unique solution.  That is:
+	<br>
+1a+4b=0<br>
+2a+5b=0<br>
+3a+0b=0<br>
+<br>  
+Has a unique solution:	  
+
+<div class="sage">
+<script type="text/x-sage">
+A=matrix(QQ, [[1,4,0],[2,5,0],[3,0,0]])
+print(A)
+print(' ')
+print(A.rref())
+</script></div>
+<br>
+<br>
+Which it does, with a=b=0.<br>
+<br>
+On the other hand, to see if {(1,2)^T, (2,3)^T, (-1,1)^T}	  is linearly independent, we solve:
+	  
+
+<div class="sage">
+<script type="text/x-sage">
+A=matrix(QQ, [[1,2,-1,0],[2,3,1,0]])
+print(A)
+print(' ')
+print(A.rref())
+</script></div>
+<br>
+<br>	  
+We see that a=-5c, b=3c are valid solutions.  Thus 0(1,2)^T+0(2,3)^T+0(-1,1)^T=(0,0)^T is a valid solution, but -10(1,2)^T+6(2,3)^T+2(-1,1)^T=(0,0)^T is as well.  Thus there is not a unique solution and these vectors are linearly dependent.
+
+<br>
+<br>	  
+ 
+		  
+        
+		  
+	  
+		  
+		  
+		  
+      </div>
+    </section>
+
+  </main><!-- End #main -->
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer">
+    <div class="container">
+      <div class="copyright">
+        &copy; Copyright <strong><span>iPortfolio</span></strong>
+      </div>
+      <div class="credits">
+        <!-- All the links in the footer should remain intact. -->
+        <!-- You can delete the links only if you purchased the pro version. -->
+        <!-- Licensing information: https://bootstrapmade.com/license/ -->
+        <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/iportfolio-bootstrap-portfolio-websites-template/ -->
+        Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+      </div>
+    </div>
+  </footer><!-- End  Footer -->
+
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="assets/vendor/purecounter/purecounter.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/typed.js/typed.min.js"></script>
+  <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>

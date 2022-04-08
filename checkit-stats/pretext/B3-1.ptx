@@ -1,0 +1,41 @@
+<exercise checkit-seed="5770" checkit-slug="B3" checkit-title="Visualizing Data">
+  <statement>
+      
+      
+      
+      
+      
+      <p>
+          Fix and run the following code in the <c>R</c> cell to download the <c>arbuthnot.csv</c> data, and generate a scatter plot for the number of boys born in a year in London compared to the number of girls born in the same year, between 1629 and 1710, <c>boys</c> and <c>girls</c>.
+          
+      </p>
+      <p>
+          <c>arbuthnot = read.csv("https://github.com/TienChih/tbil-stats/raw/main/data/arbuthnot.csv")</c>
+      </p>
+      <p>
+          <c>plot(arbuthnot$FIXME1, arbuthnot$FIXME2)</c>
+      </p>
+      
+      <p>Indicate what you fixed, and upload the generated image.</p>
+     
+      
+          
+          
+          
+          
+      
+  </statement>
+  <answer>
+      <title>Partial Solution:</title>
+      
+      
+      
+      
+     <p>
+          <c>FIXME</c>'s: <c>boys</c> and <c>girls</c>.
+          
+      </p>
+          
+      
+  </answer>
+</exercise>

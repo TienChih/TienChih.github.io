@@ -1,0 +1,50 @@
+<exercise checkit-seed="7054" checkit-slug="B2" checkit-title="Sampling Techniques">
+  <statement>
+      
+      
+      
+      
+      
+      <p>
+          For each of the following, classify the sampling technique described as <em>Simple Random Sample</em>, <em>Stratified Random Sampling</em>, <em>Cluster Sampling</em> or <em>Multi-Stage Sampling</em>.  Be sure to justify your choices.
+          <ol>
+              <li>To test products for defects, a manufacturer randomly selects hours of the week and randomly tests products produced in those hours.</li>
+              <li>To measure the effects of a sewage malfunction in a town, the city divides homes by appraised value, and randomly selects a few homes from each value level to have their water tested.</li>
+              <li>To measure the effects of a new heart medication, random users of the medication are selected and tested.</li>
+              <li>To measure student response to a new general education policy, the administration divides the students by major and randomly selects students from each major to survey.</li>
+              <li>To measure student response to a new general education policy, the administration randomly selects students from the university to survey.</li>
+              <li>To test products for defects, a manufacturer seperates products by types, and randomly selects and tests products from each type.</li>
+          </ol>
+          
+      </p>
+      
+      
+     
+      
+          
+          
+          
+          
+      
+  </statement>
+  <answer>
+      <title>Partial Solution:</title>
+      
+      
+      
+      
+     <p>
+          <ol>
+              <li>Multi-Stage Sampling</li>
+              <li>Stratified Random Sample</li>
+              <li>Simple Random Sampling</li>
+              <li>Stratified Random Sample</li>
+              <li>Simple Random Sampling</li>
+              <li>Stratified Random Sample</li>
+          </ol>
+          
+      </p>
+          
+      
+  </answer>
+</exercise>

@@ -1,0 +1,81 @@
+<exercise checkit-seed="8832" checkit-slug="D5" checkit-title="Normal Approximation of Binomial Distribution">
+  <statement>
+      
+      
+      <p>
+          Suppose probability that a PC needs repairing over the course of a year is  <m>0.08</m>. A company uses  <m>505</m>  PCs.  Let <m>X</m> denote the  number of PCs that will need repair this year.  Find the following:
+          
+      </p>
+      
+      
+      
+      
+      <p>
+          <ol>
+              <li>
+                  <m>E(X)</m>, the expected  number of PCs that will need repair this year.
+              </li>
+              
+              <li>
+                  <p>
+                      <m>\sigma_A</m>, the standard deviation of the  number of PCs that will need repair this year.
+                  </p>
+                  <p>
+                      Then use the normal approximation of <m>X</m> to find the following:
+                  </p>
+                  
+              </li>
+             
+              <li>
+                  Find the probability that the number of PCs that will need repair is  between <m>42 </m> and <m>50</m>  PCs.
+              </li>
+              
+              
+              <li>
+                  Find <m>X^*</m> such that the probability that  number of PCs that will need repair this year  is at most  <m>X^*</m>  PCs is <m>0.8</m>.  (This value need not be a whole number.)
+              </li>
+              
+          </ol>
+          
+      </p>
+      
+      
+     
+      
+          
+          
+          
+          
+      
+  </statement>
+  <answer>
+      <title>Partial Solution:</title>
+      
+      
+      
+      
+     <p>
+          <ol>
+              <li>
+                  <m>E(X)=40.4</m>
+              </li>
+              <li>
+                  <m>\sigma_X=6.096556405053594</m>
+              </li>
+              
+              
+              <li>
+                  <m>P(42\leq\ X\leq\ 50)=0.3388223317725375</m>.
+              </li>
+              
+              <li>
+                  If <m>P(X\leq\ X^*)=0.8</m> then <m>X^*=45.530991322168056</m>  PCs.
+              </li>
+              
+          </ol>
+          
+      </p>
+          
+      
+  </answer>
+</exercise>

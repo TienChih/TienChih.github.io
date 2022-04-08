@@ -1,0 +1,152 @@
+<exercise checkit-seed="5475" checkit-slug="R3" checkit-title="Inference and Linear Regression">
+  <statement>
+      <p>
+          A study is done comparing patients Maximum Pain Tolerance (on a scale of 1-10) to their Rating of Pain Severity (also on a scale of 1-10).
+      </p>
+      
+      <p>
+          Consider this table of data collected comparing Maximum Pain Tolerance measured in points, and Rating of Pain Severity measured in points:
+          <me>
+               \begin{array}{|c|c|}
+              \hline
+              \text{ Maximum Pain Tolerance in points }
+              &amp;
+              \text{ Rating of Pain Severity in points }
+              \\
+              \hline
+               4
+              &amp; 5
+                  \\
+               8
+              &amp; 3
+                  \\
+               6
+              &amp; 4
+                  \\
+               5
+              &amp; 4
+                  \\
+               6
+              &amp; 3
+                  \\
+               6
+              &amp; 5
+                  \\
+               5
+              &amp; 4
+                  \\
+               4
+              &amp; 3
+                  \\
+               5
+              &amp; 5
+                  \\
+               6
+              &amp; 4
+                  \\
+               8
+              &amp; 3
+                  \\
+               6
+              &amp; 5
+                  \\
+               5
+              &amp; 5
+                  \\
+               6
+              &amp; 5
+                  \\
+               6
+              &amp; 4
+                  \\
+               5
+              &amp; 3
+                  \\
+               5
+              &amp; 4
+                  \\
+               5
+              &amp; 5
+                  \\
+               5
+              &amp; 6
+                  \\
+               6
+              &amp; 4
+                  \\
+              
+              \hline
+              \end{array}
+          </me>
+      </p>
+      <p>
+          Suppose a statistics software returns the following:
+          <ul>
+              <li>
+                  Point estimate for <m>\beta_1</m>: <m>-0.323886639646708</m>.
+              </li>
+              <li>
+                  Point estimate for <m>\beta_0</m>: <m>6.013765182021565</m>.
+              </li>
+              <li>
+                  Standard Error for <m>\beta_1</m>: <m>0.18802436765005612</m>.
+              </li>
+              <li>
+                  <m>t</m>-score for <m>\beta_1</m>: <m>-1.722578002493345</m>.
+              </li>
+              <li>
+                  95% Confidence Interval for <m>\beta_1</m>: <m>[-0.718911177745095, 0.0711378984516791]</m>.
+              </li>
+              <li>
+                  <m>p</m>-value for <m>H_0:\beta_1=0, H_A: \beta_1\neq 0</m>: <m>p</m>-value<m>=0.10210189751749343</m>.
+              </li>
+          </ul>
+      </p>
+      <p>
+          <ol>
+              <li>
+                  Interpret what this Confidence Interval means in the context of this problem.
+              </li>
+              <li>
+                  Interpret what <m>p</m>-value means in the context of this problem.
+              </li>
+              <li>
+                  What do we conclude from this hypothesis test?  Why?
+              </li>
+              
+              
+          </ol>
+      </p>
+      
+      
+      
+      
+     
+      
+          
+          
+          
+          
+      
+  </statement>
+  <answer>
+      
+      
+      
+      
+     <p>
+          <p>
+          <ol>
+              <li>
+              The slope of the regression line  has a <m>95\%</m> chance of of falling in <m>[-0.718911177745095, 0.0711378984516791]</m>.
+          </li>
+              
+              
+          </ol>
+      </p>
+          
+      </p>
+          
+      
+  </answer>
+</exercise>

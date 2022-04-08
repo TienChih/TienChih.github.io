@@ -1,0 +1,81 @@
+<exercise checkit-seed="5947" checkit-slug="D5" checkit-title="Normal Approximation of Binomial Distribution">
+  <statement>
+      
+      
+      <p>
+          Suppose there is a vaccine is developed to combat a novel virus.  The probability an eligible adult takes the vaccine is  <m>0.53</m>. The number of eligible adults in a town is  <m>45400</m>  adults.  Let <m>X</m> denote the  number of adults who take the vaccine.  Find the following:
+          
+      </p>
+      
+      
+      
+      
+      <p>
+          <ol>
+              <li>
+                  <m>E(X)</m>, the expected  number of adults who take the vaccine.
+              </li>
+              
+              <li>
+                  <p>
+                      <m>\sigma_A</m>, the standard deviation of the  number of adults who take the vaccine.
+                  </p>
+                  <p>
+                      Then use the normal approximation of <m>X</m> to find the following:
+                  </p>
+                  
+              </li>
+             
+              <li>
+                  Find the probability that the number of adults who take the vaccine is  between <m>23747 </m> and <m>24284</m>  adults.
+              </li>
+              
+              
+              <li>
+                  Find <m>X^*</m> such that the probability that  number of adults who take the vaccine  is at most  <m>X^*</m>  adults is <m>0.35</m>.  (This value need not be a whole number.)
+              </li>
+              
+          </ol>
+          
+      </p>
+      
+      
+     
+      
+          
+          
+          
+          
+      
+  </statement>
+  <answer>
+      <title>Partial Solution:</title>
+      
+      
+      
+      
+     <p>
+          <ol>
+              <li>
+                  <m>E(X)=24062.0</m>
+              </li>
+              <li>
+                  <m>\sigma_X=106.34444038124418</m>
+              </li>
+              
+              
+              <li>
+                  <m>P(23747\leq\ X\leq\ 24284)=0.9800531820892097</m>.
+              </li>
+              
+              <li>
+                  If <m>P(X\leq\ X^*)=0.35</m> then <m>X^*=24021.02331063245</m>  adults.
+              </li>
+              
+          </ol>
+          
+      </p>
+          
+      
+  </answer>
+</exercise>

@@ -1,0 +1,60 @@
+<exercise checkit-seed="8339" checkit-slug="P2" checkit-title="Conditional Probability">
+  <statement>
+      
+      <p>
+          A company advertises a spray that is meant to prevent insect infestations of crops.  We consider the events that a farmer has an insect i festation of their crops, and the event that they use the spray.
+      </p>
+      
+      <p>
+          Suppose that   the probability that   the farmer's crops have an infestation is <m>0.3</m>, the probability that   the farmer has an infestation of their crops given that they use the spray is <m>0.3</m>, and finally   the probability that    the farmer uses the spray is <m>0.39</m>.
+      </p>
+      
+      
+      <p>
+          <ol>
+              <li>
+                  Find the probability that    the farmer has an infestation of their crops and they use the spray.
+              </li>
+              <li>
+                  Find the probability that    the farmer uses the spray, given that they had an infestation of their crops.
+              </li>
+              <li>
+                  Are the events   the farmer's crops have an infestation, and    the farmer uses the spray independent?
+              </li>
+          </ol>
+          
+      </p>
+      
+      
+     
+      
+          
+          
+          
+          
+      
+  </statement>
+  <answer>
+      <title>Partial Solution:</title>
+      
+      
+      
+      
+     <p>
+          <ol>
+              <li>
+                   The probability that    the farmer has an infestation of their crops and they use the spray is <m>0.11699999999999999</m>.
+              </li>
+              <li>
+                   The  probability that    the farmer uses the spray, given that they had an infestation of their crops is <m>0.39</m>.
+              </li>
+              <li>
+                  The events   the farmer's crops have an infestation, and    the farmer uses the spray  are independent.
+              </li>
+          </ol>
+          
+      </p>
+          
+      
+  </answer>
+</exercise>

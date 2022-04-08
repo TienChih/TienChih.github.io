@@ -1,0 +1,60 @@
+<exercise checkit-seed="9168" checkit-slug="P2" checkit-title="Conditional Probability">
+  <statement>
+      
+      <p>
+          We randomly select a customer from a store and consider the events that they purchase over $100, and the event they use a credit card.
+      </p>
+      
+      <p>
+          Suppose that   the probability that   the customer purchases over $100 is <m>0.091</m>, the probability that   the customer purchases over $100 given that they use a credit card is <m>0.091</m>, and finally   the probability that    the customer uses a credit card is <m>0.68</m>.
+      </p>
+      
+      
+      <p>
+          <ol>
+              <li>
+                  Find the probability that    the customer purchases over $100 and uses a credit card.
+              </li>
+              <li>
+                  Find the probability that    the customer uses a credit card, given that they purchased over $100.
+              </li>
+              <li>
+                  Are the events   the customer purchases over $100, and    the customer uses a credit card independent?
+              </li>
+          </ol>
+          
+      </p>
+      
+      
+     
+      
+          
+          
+          
+          
+      
+  </statement>
+  <answer>
+      <title>Partial Solution:</title>
+      
+      
+      
+      
+     <p>
+          <ol>
+              <li>
+                   The probability that    the customer purchases over $100 and uses a credit card is <m>0.061880000000000004</m>.
+              </li>
+              <li>
+                   The  probability that    the customer uses a credit card, given that they purchased over $100 is <m>0.68</m>.
+              </li>
+              <li>
+                  The events   the customer purchases over $100, and    the customer uses a credit card  are independent.
+              </li>
+          </ol>
+          
+      </p>
+          
+      
+  </answer>
+</exercise>

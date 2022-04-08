@@ -1,0 +1,81 @@
+<exercise checkit-seed="8691" checkit-slug="D5" checkit-title="Normal Approximation of Binomial Distribution">
+  <statement>
+      
+      
+      <p>
+          Suppose the probability that a person clicks on a malicious link in a scam email is  <m>0.04</m>. A scammer sends scam emails to  <m>9900</m>  people.  Let <m>X</m> denote the  number of people who click the link.  Find the following:
+          
+      </p>
+      
+      
+      
+      
+      <p>
+          <ol>
+              <li>
+                  <m>E(X)</m>, the expected  number of people who click the link.
+              </li>
+              
+              <li>
+                  <p>
+                      <m>\sigma_A</m>, the standard deviation of the  number of people who click the link.
+                  </p>
+                  <p>
+                      Then use the normal approximation of <m>X</m> to find the following:
+                  </p>
+                  
+              </li>
+             
+              <li>
+                  Find the probability that the number of number of people who click the email is  between <m>360 </m> and <m>403</m>  people.
+              </li>
+              
+              
+              <li>
+                  Find <m>X^*</m> such that the probability that  number of people who click the link  is at least  <m>X^*</m>  people is <m>0.65</m>.  (This value need not be a whole number.)
+              </li>
+              
+          </ol>
+          
+      </p>
+      
+      
+     
+      
+          
+          
+          
+          
+      
+  </statement>
+  <answer>
+      <title>Partial Solution:</title>
+      
+      
+      
+      
+     <p>
+          <ol>
+              <li>
+                  <m>E(X)=396.0</m>
+              </li>
+              <li>
+                  <m>\sigma_X=19.497692171126303</m>
+              </li>
+              
+              
+              <li>
+                  <m>P(360\leq\ X\leq\ 403)=0.6077896790168695</m>.
+              </li>
+              
+              <li>
+                  If <m>P(X\geq\ X^*)=0.65</m> then <m>X^*=388.48714015875044</m>  people.
+              </li>
+              
+          </ol>
+          
+      </p>
+          
+      
+  </answer>
+</exercise>

@@ -1,0 +1,60 @@
+<exercise checkit-seed="4111" checkit-slug="C3" checkit-title="Chi^2 goodness of fit test">
+  <statement>
+     <p>
+         In a casino, there is a game of chance where a wheel is spun, and the chances of it landing on different colors are  <m>21</m>%  blue, <m>21</m>%  green, <m>33</m>%  orange, and <m>25</m>%  red.
+      </p>
+      <p>
+          In a sampling of spins one night, the colors that came up were   <m>44</m>  spins came up blue, <m>24</m>  spins came up green, <m>70</m>  spins came up orange, and <m>33</m>  spins came up red.
+      </p>
+      <p>
+          Use a <m>\chi^2</m> goodness of fit test to test whether or not the distributions of colors on this wheel match that of the game.
+      </p>
+      <ul>
+          <li>
+              State the null hypothesis for this test.
+          </li>
+          <li>
+              State the alternative hypothesis for this test.
+          </li>
+          <li>
+              Using complete sentences, state the meaning of the <m>p</m>-value in the context of this problem.
+          </li>
+          <li>
+              What do we conclude?  Why?
+          </li>
+      </ul>
+          
+          
+          
+          
+      
+  </statement>
+  <answer>
+      <title>Partial Solution:</title>
+      
+      
+      
+      
+     <ul>
+          <li>
+              The null hypothesis is <m>H_0:</m> The distribution of colors matches that of the game.
+          </li>
+         <li>
+              The alternative hypothesis is <m>H_A:</m> The distribution of colors do not match that of the game.
+          </li>
+          <li>
+              There are <m>3</m> degrees of freedom.
+          </li>
+         <li>
+              The <m>\chi^2</m> value is <m>11.2595883648515</m>.
+          </li>
+         <li>
+              The <m>p</m>-value is <m>0.010401892819863923</m>.
+          </li>
+         
+          
+      </ul>
+          
+      
+  </answer>
+</exercise>

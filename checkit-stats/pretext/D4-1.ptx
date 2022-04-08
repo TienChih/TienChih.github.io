@@ -1,0 +1,67 @@
+<exercise checkit-seed="7362" checkit-slug="D4" checkit-title="Binomial Distribution">
+  <statement>
+      
+      
+      <p>
+          Suppose a group of people are in a room for extended time with someone infected with a novel virus.  Each of the  <m>7</m>  people has a <m>0.33</m> chance of  contracting the virus.  Suppose that whether or not each  person  contract the virus is independent of the other  people.  Find the following:
+      </p>
+      
+      
+      <p>
+          <ol>
+              <li>
+                  What is the probability that <m>3</m>  people  contract the virus?
+              </li>
+             
+              <li>
+                  What is the probability that <m>2</m>  people  contract the virus?
+              </li>
+              
+              
+              <li>
+                  What is the probability that  at most  <m>2</m>  people  contract the virus?
+              </li>
+              
+              <li>
+                  What is the probability that between <m>2</m> and <m>6</m> (inclusive)  people  contract the virus?
+              </li>
+          </ol>
+          
+      </p>
+      
+      
+     
+      
+          
+          
+          
+          
+      
+  </statement>
+  <answer>
+      <title>Partial Solution:</title>
+      
+      
+      
+      
+     <p>
+          <ol>
+              <li>
+                  <m>0.25345979238194993</m>
+              </li>
+              <li>
+                  <m>0.30876011071982984</m>
+              </li>
+              <li>
+                  <m>0.5783260895834497</m>
+              </li>
+              <li>
+                  <m>0.7300078367066098</m>
+              </li>
+          </ol>
+          
+      </p>
+          
+      
+  </answer>
+</exercise>

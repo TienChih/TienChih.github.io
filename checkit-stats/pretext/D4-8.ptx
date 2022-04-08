@@ -1,0 +1,67 @@
+<exercise checkit-seed="2355" checkit-slug="D4" checkit-title="Binomial Distribution">
+  <statement>
+      
+      
+      <p>
+          Suppose a job candidiate applies for several jobs.  Each of the  <m>6</m>  employers has a <m>0.67</m> chance of  offering a job.  Suppose that whether or not each  employer  offers a job is independent of the other  employers.  Find the following:
+      </p>
+      
+      
+      <p>
+          <ol>
+              <li>
+                  What is the probability that <m>3</m>  employers  offers a job?
+              </li>
+             
+              <li>
+                  What is the probability that <m>5</m>  employers  offers a job?
+              </li>
+              
+              
+              <li>
+                  What is the probability that  at most  <m>4</m>  employers  offers a job?
+              </li>
+              
+              <li>
+                  What is the probability that between <m>3</m> and <m>4</m> (inclusive)  employers  offers a job?
+              </li>
+          </ol>
+          
+      </p>
+      
+      
+     
+      
+          
+          
+          
+          
+      
+  </statement>
+  <answer>
+      <title>Partial Solution:</title>
+      
+      
+      
+      
+     <p>
+          <ol>
+              <li>
+                  <m>0.21617039861999995</m>
+              </li>
+              <li>
+                  <m>0.26732477118600007</m>
+              </li>
+              <li>
+                  <m>0.642216846645</m>
+              </li>
+              <li>
+                  <m>0.5453389601549999</m>
+              </li>
+          </ol>
+          
+      </p>
+          
+      
+  </answer>
+</exercise>

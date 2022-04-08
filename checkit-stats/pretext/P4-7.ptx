@@ -1,0 +1,92 @@
+<exercise checkit-seed="6990" checkit-slug="P4" checkit-title="Random Variables">
+  <statement>
+      
+      <p>
+          Consider store that sells primarily PC's.  Each customer that comes in may buy one, none or several PC.  Let <m>X</m> denote   the number of PCs a customer who comes into the store purchases.  Consider the following probability distribution table for <m>X</m>.
+      </p>
+      
+      <p>
+          <me>
+              \begin{array}{|c
+              |c
+              |c
+              |c
+              |c
+              |
+              }
+              
+              \hline
+              X_i 
+              &amp; 0
+              &amp; 1
+              &amp; 2
+              &amp; 3
+              \\
+              \hline
+              P(X=X_i)
+              &amp; 0.544
+              &amp; 0.394
+              &amp; 0.055
+              &amp; ???
+              \\
+              \hline
+              \end{array}
+          </me>
+      </p>
+      
+      
+      <p>
+          <ol>
+              <li>
+                  What is the value of the missing entry?
+              </li>
+              <li>
+                  Find the expectation of <m>X</m>, <m>E(X)</m>,  and interpret what it means in context of this problem.
+              </li>
+              <li>
+                  Find variance of <m>X</m>, <m>Var(X)</m>.
+              </li>
+              <li>
+                  Find the standard deviation of <m>X</m>, <m>\sigma_X</m>.
+              </li>
+          </ol>
+          
+      </p>
+      
+      
+     
+      
+          
+          
+          
+          
+      
+  </statement>
+  <answer>
+      <title>Partial Solution:</title>
+      
+      
+      
+      
+     <p>
+         <ol>
+             <li>
+                 <m>P(X=3)=0.007</m>.
+             </li>
+             <li>
+                 <m>E(X)=0.525</m>.
+             </li>
+             <li>
+                 <m>Var(X)=0.40137500000000004</m>
+             </li>
+             <li>
+                 <m>\sigma_X=0.6335416324125827</m>
+             </li>
+         </ol>
+          
+          
+      </p>
+          
+      
+  </answer>
+</exercise>

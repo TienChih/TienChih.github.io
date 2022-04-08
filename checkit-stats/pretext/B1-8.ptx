@@ -1,0 +1,50 @@
+<exercise checkit-seed="5667" checkit-slug="B1" checkit-title="Types of Variables">
+  <statement>
+      
+      
+      
+      
+      
+      <p>
+          For each of the following, classify the type of variable described as <em>Numerical</em> or <em>Categorical</em>, as well as the subcategory <em>Continuous</em>, <em>Discrete</em>, <em>Nominal</em> or <em>Ordinal</em>.  Be sure to justify your choices.
+          <ol>
+              <li>A college graduate's major.</li>
+              <li>The total snowfall in a city over a year in feet.</li>
+              <li>How many alcoholic drinks an adult American consumes in a week.</li>
+              <li>The number of homicides in a city over a year.</li>
+              <li>The breed of a dog.</li>
+              <li>Whether a car is electric, hybrid or fossil fuel powered.</li>
+          </ol>
+          
+      </p>
+      
+      
+     
+      
+          
+          
+          
+          
+      
+  </statement>
+  <answer>
+      <title>Partial Solution:</title>
+      
+      
+      
+      
+     <p>
+          <ol>
+              <li>Categorical, Nominal</li>
+              <li>Numerical, Continuous</li>
+              <li>Numerical, Discrete</li>
+              <li>Numerical, Discrete</li>
+              <li>Categorical, Nominal</li>
+              <li>Categorical, Nominal</li>
+          </ol>
+          
+      </p>
+          
+      
+  </answer>
+</exercise>

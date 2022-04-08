@@ -1,0 +1,171 @@
+<exercise checkit-seed="6813" checkit-slug="N3" checkit-title="Inference for paired Numerical Variables">
+  <statement>
+      
+      <p>
+          A study is done comparing the effect of two diets on levels of cholestrol.  Subjects of the study spend 2 weeks on diet A, their cholestrol is measured, then they switch to diet B, and after 2 weeks their cholestrol is measured again. A total of <m>20</m>  subjects were sampled.  The following is a summary of cholestrol level after diet A and cholestrol level after diet B.
+      </p>
+      
+      <p>
+          <me>
+               \begin{array}{|c|c|c|}
+              \hline
+              \text{ Diet A in  mmol/L }
+              &amp;
+              \text{ Diet B in  mmol/L }
+              &amp;
+              \text{Difference in  mmol/L }
+              \\
+              \hline
+               4.7
+              &amp; 4.0
+              &amp; -0.7
+                  \\
+               5.0
+              &amp; 4.4
+              &amp; -0.6
+                  \\
+               6.2
+              &amp; 5.8
+              &amp; -0.4
+                  \\
+               3.3
+              &amp; 3.4
+              &amp; 0.1
+                  \\
+               4.1
+              &amp; 4.0
+              &amp; -0.1
+                  \\
+               2.2
+              &amp; 1.7
+              &amp; -0.5
+                  \\
+               4.3
+              &amp; 4.4
+              &amp; 0.1
+                  \\
+               3.4
+              &amp; 3.3
+              &amp; -0.1
+                  \\
+               3.5
+              &amp; 3.7
+              &amp; 0.2
+                  \\
+               4.0
+              &amp; 3.9
+              &amp; -0.1
+                  \\
+               4.3
+              &amp; 4.3
+              &amp; 0.0
+                  \\
+               4.8
+              &amp; 3.7
+              &amp; -1.1
+                  \\
+               3.9
+              &amp; 3.9
+              &amp; 0.0
+                  \\
+               4.5
+              &amp; 5.0
+              &amp; 0.5
+                  \\
+               4.2
+              &amp; 5.2
+              &amp; 1.0
+                  \\
+               4.0
+              &amp; 4.2
+              &amp; 0.2
+                  \\
+               4.4
+              &amp; 4.8
+              &amp; 0.4
+                  \\
+               4.2
+              &amp; 4.2
+              &amp; -0.0
+                  \\
+               4.9
+              &amp; 4.6
+              &amp; -0.3
+                  \\
+               3.4
+              &amp; 3.6
+              &amp; 0.2
+                  \\
+              
+              \hline
+              \end{array}
+          </me>
+          The sample average of these differences is <m>-0.059999999999999984</m>  mmol/L and the sample standard deviation is <m>0.4509988913511872</m>  mmol/L.
+      </p>
+      
+      <ul>
+          <li>  Test the hypothesis that  the average difference in cholestrol levels between diets A and B   is less than <m>  0</m>  mmol/L.
+              <ol>
+          <li>
+              State the null hypothesis.
+          </li>
+          <li>
+              State the alternative hypothesis.
+          </li>
+          <li>
+              What is the <m>p</m>-value?
+          </li>
+          <li>
+              Using complete sentences, state the meaning of the <m>p</m>-value in the context of this problem.
+          </li>
+          <li>
+              What do we conclude?  Why?
+          </li>
+          
+      </ol>
+          </li>
+          <li>
+              Find a <m>95</m>% confidence interval for the  the average difference in cholestrol levels between diets A and B .  Using complete sentences, explain what the confidence interval means in the context of this problem.
+          </li>
+      </ul>
+      
+      
+          
+          
+          
+          
+      
+  </statement>
+  <answer>
+      <title>Partial Solution:</title>
+      
+     <ul>
+          <li>
+              The null hypothesis is <m>H_0: \mu_d=0</m>.
+          </li>
+         <li>
+              The alternative hypothesis is <m>H_A: \mu_d\lneq0</m>.
+          </li>
+          <li>
+              The sampling distribution has mean <m>0</m> and standard error <m>SE=0.100846417883830</m>.
+          </li>
+         <li>
+              The sample mean is <m>\bar{d}=-0.059999999999999984</m> which has <m>t</m>-score <m>t=-0.5949641173087294</m>.
+          </li>
+         <li>
+              The <m>p</m>-value is <m>0.2794436882219141</m>.
+          </li>
+         
+         <li>
+              For a <m>95</m>% confidence interval,  <m>t^*=2.0930240544083096</m>.
+          </li>
+          <li>
+              The  the average difference in cholestrol levels between diets A and B   has a <m>95</m>% chance of of falling in <m>[-0.271073978431768, 0.151073978431768]</m>.
+          </li>
+         
+          
+      </ul>
+          
+      
+  </answer>
+</exercise>

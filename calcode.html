@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>ODEs</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="assets/css/style.css" rel="stylesheet">
+	
+  <!-- Other Scripts -->
+  <script id="MathJax-script" async
+          src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+  </script>
+  <script src="https://sagecell.sagemath.org/static/embedded_sagecell.js"></script>
+  
+  <script>sagecell.makeSagecell({"inputLocation": ".sage"});</script>
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-82736001-2"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-82736001-2');
+</script>	
+
+  <!-- =======================================================
+  * Template Name: iPortfolio - v3.3.0
+  * Template URL: https://bootstrapmade.com/iportfolio-bootstrap-portfolio-websites-template/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+</head>
+
+<body>
+
+  <!-- ======= Mobile nav toggle button ======= -->
+  <i class="bi bi-list mobile-nav-toggle d-xl-none"></i>
+
+  <!-- ======= Header ======= -->
+  <header id="header">
+    <div class="d-flex flex-column">
+
+      <div class="profile">
+        <img src="assets/img/TienProfile.jpeg" alt="" class="img-fluid rounded-circle">
+        <h1 class="text-light"><a href="index.html">Tien Chih</a></h1>
+        <div class="social-links mt-3 text-center">
+          <a href="https://twitter.com/TChihMath" target="_blank" class="twitter"><i class="bx bxl-twitter"></i></a>
+          <a href="https://youtube.com/channel/UCQGNt2_2eiwN_UMRtzLLYoA/videos" class="youtube" target="_blank"><i class="bx bxl-youtube"></i></a>
+        </div>
+      </div>
+
+      <nav id="navbar" class="nav-menu navbar">
+        <ul>
+          
+        </ul>
+      </nav><!-- .nav-menu -->
+    </div>
+  </header><!-- End Header -->
+
+  <main id="main">
+
+    <!-- ======= Breadcrumbs ======= -->
+    <section class="breadcrumbs">
+      <div class="container">
+
+        <div class="d-flex justify-content-between align-items-center">
+          <h2>Technology</h2>
+          <ol>
+            <li><a href="index.html">Home</a></li>
+			  <li><a href="technology.html">Technology Tools</a></li>
+			  <li><a href="calculus.html">Calculus</a></li>
+            <li>Ordinary Differential Equations</li>
+          </ol>
+        </div>
+
+      </div>
+    </section><!-- End Breadcrumbs -->
+
+    <section class="inner-page">
+	  <div class="section-title">
+          <h2>Ordinary Differential Equations</h2>
+          <p>"All The Mathematical Methods I Learned In My University Math Degree Became Obsolete In My Lifetime" - Keith Devlin</p>
+        </div>	
+      <div class="container">
+		  <span style="font-weight: bold; text-decoration: underline;"> Differential Equations</span> Enter the dy/dx expression into d(x,y)
+	  and let I represent your initial point.<br>  <br>
+	  
+<iframe scrolling="no" title="Slope Field and Solver" src="https://geogebra.org/material/iframe/id/txecwh3z/width/1200/height/627/border/888888/sfsb/true/smb/false/stb/false/stbh/false/ai/false/asb/false/sri/false/rc/false/ld/false/sdz/false/ctl/false" width="100%" height="600px" style="border:0px;"> </iframe>
+<br><br>
+	  
+<span style="font-weight: bold; text-decoration: underline;">Plotting Slope Fields and Solutions</span>:&nbsp; Type in the expression for dy/dx (once using f as y) and initial conditions, and the min/max values for the window of the plot.  Then a slope field will be plotted as well as a particular solution.<br>
+<br>
+<br>
+<div class="sage">
+<script type="text/x-sage">
+x = var('x'); f = function('f')(x); y=var('y')
+#dy/dx:, in second line replace y with f.
+dydx=x*y
+de=diff(f,x)==x*f
+#Initial values:
+x0=0; y0=1
+#parameters of plot
+xmin=-1; xmax=2; ymin=-5; ymax=10
+
+#Solutions:
+PlotSF = plot_slope_field( dydx, (x,xmin,xmax), (y,ymin,ymax))
+PS=desolve(de, f, ics=[x0, y0])
+PlotPS=plot(PS, x,xmin,xmax)
+FinalPlot=PlotSF+PlotPS
+show(FinalPlot)
+print(PS)
+</script></div> 
+<br>	  
+
+<span style="font-weight: bold; text-decoration: underline;">Euler's Method</span>:&nbsp; Enter an expression for dy/dx=f(x,y).  Use d_x as your delta x and enter the initial conditions in the first row of the table.  Then, as one increments k, write the point described by the next step into the table. (<a href="https://www.desmos.com/calculator/a4zsaszez8" target="_blank">https://www.desmos.com/calculator/a4zsaszez8</a>)<br>
+<br>
+<br>
+<iframe src="https://www.desmos.com/calculator/a4zsaszez8" style="min-height: 600px;" width="100%"></iframe><br>
+<br>
+<br>	  
+<span style="font-weight: bold; text-decoration: underline;">Euler's Method in Sage</span>:&nbsp; In thee argument for eulers_method: euler's_methodd(dy/dx, initial x, initial y, delta x, final x).<br>
+<br>
+<br>
+<div class="sage">
+<script type="text/x-sage">
+x = var('x'); y=var('y')
+eulers_method(x*y,0,1,.01,1)
+</script></div> 
+<br>		  
+        
+		  
+	  
+		  
+		  
+		  
+      </div>
+    </section>
+
+  </main><!-- End #main -->
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer">
+    <div class="container">
+      <div class="copyright">
+        &copy; Copyright <strong><span>iPortfolio</span></strong>
+      </div>
+      <div class="credits">
+        <!-- All the links in the footer should remain intact. -->
+        <!-- You can delete the links only if you purchased the pro version. -->
+        <!-- Licensing information: https://bootstrapmade.com/license/ -->
+        <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/iportfolio-bootstrap-portfolio-websites-template/ -->
+        Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+      </div>
+    </div>
+  </footer><!-- End  Footer -->
+
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="assets/vendor/purecounter/purecounter.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/typed.js/typed.min.js"></script>
+  <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>

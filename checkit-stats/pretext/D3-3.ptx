@@ -1,0 +1,47 @@
+<exercise checkit-seed="9341" checkit-slug="D3" checkit-title="Counting Principles">
+  <statement>
+      
+      
+      <p>
+          Suppose you had in a freezer  <m>10</m>  ice cream flavors.
+      </p>
+      
+      
+      <p>
+          <ol>
+              <li>How many ways are there to select <m>3</m>  ice cream flavors  and eat them one a day for the next few days?</li>
+              <li>How many ways are there to select <m>5</m>  ice cream flavors  to make into a milkshake?</li>
+              <li>How many ways are there to select <m>4</m>  ice cream flavors  and give one flavor each to different friends?</li>
+              <li>How many ways are there to select <m>6</m>  ice cream flavors  to throw out to make room in the freezer?</li>
+          </ol>
+          
+      </p>
+      
+      
+     
+      
+          
+          
+          
+          
+      
+  </statement>
+  <answer>
+      <title>Partial Solution:</title>
+      
+      
+      
+      
+     <p>
+          <ol>
+              <li>720 ways.</li>
+              <li>252 ways.</li>
+              <li>5040 ways.</li>
+              <li>210 ways.</li>
+          </ol>
+          
+      </p>
+          
+      
+  </answer>
+</exercise>

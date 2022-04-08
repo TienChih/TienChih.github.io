@@ -1,0 +1,46 @@
+<exercise checkit-seed="4664" checkit-slug="F1" checkit-title="Point Estimates">
+  <statement>
+      
+      
+      
+      
+      
+      <p>
+          For each of the following, identify the <em>parameter of interest</em>, and the <em>point estimate</em>.
+          <ol>
+              <li>To estimate the proportion of 4th graders who like math, 150 4th graders are polled about their affinity for math.</li>
+              <li>To estimate the proportion of restaurants with vegan options, 60 restaurants are randomly selected and their menus examined.</li>
+              <li>To estimate the proportion of households in a town who live in poverty, 100 households are surveyed.</li>
+              <li>To estimate the average weight of an adult female african elephant, 200 adult female african elephants are caught and weighed.</li>
+          </ol>
+          
+      </p>
+      
+      
+     
+      
+          
+          
+          
+          
+      
+  </statement>
+  <answer>
+      <title>Partial Solution:</title>
+      
+      
+      
+      
+     <p>
+          <ol>
+              <li><p>Parameter of Interest: The proportion of all 4th graders who like math.</p>  <p>Point Estimate: The proportion of the polled 4th graders who like math.</p> </li>
+              <li><p>Parameter of Interest: The proportion of all restaurants with vegan options.</p>  <p>Point Estimate: The proportion of the selected restaurants with vegan options.</p> </li>
+              <li><p>Parameter of Interest: The proportion of all households in a town who live in poverty.</p>  <p>Point Estimate: The proportion of the surveyed households in a town who live in poverty.</p> </li>
+              <li><p>Parameter of Interest: The average weight of an adult female african elephant.</p>  <p>Point Estimate: the average weight of the caught and weighed adult female african elephant.</p> </li>
+          </ol>
+          
+      </p>
+          
+      
+  </answer>
+</exercise>

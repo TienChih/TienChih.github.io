@@ -1,0 +1,73 @@
+<exercise checkit-seed="7972" checkit-slug="N2" checkit-title="Inference for single Numerical Variables">
+  <statement>
+      
+      <p>
+          A sociologist is studying the average amount of sleep residents get in a certain city.  They conduct a survey of the cities residents.  Out of  <m>50</m>  surveyed residents, the sample average amount of sleep was  <m>\bar{x}=7.888</m>  hours, with sample standard deviation <m>s=0.502</m>  hours.
+      </p>
+      
+      <ul>
+          <li>  Test the hypothesis that  the average amount of sleep amongst the city's residents  is less than <m>  8</m>  hours.
+              <ol>
+          <li>
+              State the null hypothesis.
+          </li>
+          <li>
+              State the alternative hypothesis.
+          </li>
+          <li>
+              What is the <m>p</m>-value?
+          </li>
+          <li>
+              Using complete sentences, state the meaning of the <m>p</m>-value in the context of this problem.
+          </li>
+          <li>
+              What do we conclude?  Why?
+          </li>
+          
+      </ol>
+          </li>
+          <li>
+              Find a <m>99</m>% confidence interval for the  the average amount of sleep amongst the city's residents.  Using complete sentences, explain what the confidence interval means in the context of this problem.
+          </li>
+      </ul>
+      
+      
+          
+          
+          
+          
+      
+  </statement>
+  <answer>
+      <title>Partial Solution:</title>
+      
+     <ul>
+          <li>
+              The null hypothesis is <m>H_0: \mu=8</m>.
+          </li>
+         <li>
+              The alternative hypothesis is <m>H_A: \mu\lneq8</m>.
+          </li>
+          <li>
+              The sampling distribution has mean <m>8</m> and standard error <m>SE=0.0709935208311294</m>.
+          </li>
+         <li>
+              The sample mean is <m>\bar{x}=7.888</m> which has <m>t</m>-score <m>t=-1.5776087548385136</m>.
+          </li>
+         <li>
+              The <m>p</m>-value is <m>0.0605451778636357</m>.
+          </li>
+         
+         <li>
+              For a <m>99</m>% confidence interval,  <m>t^*=2.6799519736315536</m>.
+          </li>
+          <li>
+              The  the average amount of sleep amongst the city's residents  has a <m>99</m>% chance of of falling in <m>[7.69774077373356, 8.07825922626644]</m>.
+          </li>
+         
+          
+      </ul>
+          
+      
+  </answer>
+</exercise>

@@ -1,0 +1,64 @@
+<exercise checkit-seed="2807" checkit-slug="F3" checkit-title="Hypothesis Testing">
+  <statement>
+      <p>
+          A CEO is curious if the proportion of employees that are satisfied with their job is not equal to <m>  32</m>%.  They conduct a survey of employees.
+      </p>
+      <p>
+Suppose that for   <m>n=231</m> surveyed employees, <m>58</m> were satisfied with their job. Test the hypothesis that  the proportion of all employees that are satisfied with their job is not equal to <m>  32</m>%. 
+      </p>
+      
+      <ol>
+          <li>
+              State the null hypothesis.
+          </li>
+          <li>
+              State the alternative hypothesis.
+          </li>
+          <li>
+              What is the <m>p</m>-value?
+          </li>
+          <li>
+              Using complete sentences, state the meaning of the <m>p</m>-value in the context of this problem.
+          </li>
+          <li>
+              What do we conclude?  Why?
+          </li>
+          
+      </ol>
+          
+          
+          
+          
+      
+  </statement>
+  <answer>
+      <title>Partial Solution:</title>
+      
+     <ul>
+          <li>
+              The null hypothesis is <m>H_0: p=0.32</m>.
+          </li>
+         <li>
+              The alternative hypothesis is <m>H_A: p\neq0.32</m>.
+          </li>
+          <li>
+              The sampling distribution has mean <m>0.32</m> and standard error <m>SE=0.0306918774595387</m>.
+          </li>
+         <li>
+              The sample proportion is <m>\hat{p}=0.2510822510822511</m> which has <m>z</m>-score <m>z=-2.24547191707655</m>.
+          </li>
+         <li>
+              The <m>p</m>-value is <m>0.024737853100490703</m>.
+          </li>
+         
+          <!--<li>
+              For a % confidence interval,  <m>z^*=</m>.
+          </li>
+          <li>
+              The proportion of all employees that are satisfied with their job has a % chance of of falling in <m>[, ]</m>.
+          </li>-->
+      </ul>
+          
+      
+  </answer>
+</exercise>

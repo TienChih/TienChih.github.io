@@ -1,0 +1,46 @@
+<exercise checkit-seed="2326" checkit-slug="F1" checkit-title="Point Estimates">
+  <statement>
+      
+      
+      
+      
+      
+      <p>
+          For each of the following, identify the <em>parameter of interest</em>, and the <em>point estimate</em>.
+          <ol>
+              <li>To estimate the proportion of adults who support a new legislation, 50 adults are polled.</li>
+              <li>To estimate the average spending on a city council race, 60 randomly chose candidiates of for city council across the country have their budgets examined.</li>
+              <li>To estimate the average income in a town, 100 selected residents have their income polled.</li>
+              <li>To estimate the average lifespan of a rat, 120 rats are born into captivity have their lifespans tracked.</li>
+          </ol>
+          
+      </p>
+      
+      
+     
+      
+          
+          
+          
+          
+      
+  </statement>
+  <answer>
+      <title>Partial Solution:</title>
+      
+      
+      
+      
+     <p>
+          <ol>
+              <li><p>Parameter of Interest: The proportion of all adults who support the legislation.</p>  <p>Point Estimate: The proportion of the polled adults who support the legislation.</p> </li>
+              <li><p>Parameter of Interest: The average cost of all city council candidiates.</p>  <p>Point Estimate: The average cost of the randomly chosen city council candidates.</p> </li>
+              <li><p>Parameter of Interest: The average income of all residents of the town.</p>  <p>Point Estimate: the average income of the polled  residents of the town.</p> </li>
+              <li><p>Parameter of Interest: The average lifespan of all rats.</p>  <p>Point Estimate: The average lifespan of the captive rats.</p> </li>
+          </ol>
+          
+      </p>
+          
+      
+  </answer>
+</exercise>

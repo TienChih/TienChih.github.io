@@ -1,0 +1,64 @@
+<exercise checkit-seed="6127" checkit-slug="F3" checkit-title="Hypothesis Testing">
+  <statement>
+      <p>
+          A marine biologist wonders if the proportion of turtles in a coral reef that were infected with a new parasite is not equal to <m>  62</m>%.  She gathers a sample of turtles.
+      </p>
+      <p>
+Suppose that for   <m>n=162</m> turtles found in the coral reef, <m>112</m> were infected. Test the hypothesis that  the proportion of turtles that are infected is not equal to <m>  62</m>%. 
+      </p>
+      
+      <ol>
+          <li>
+              State the null hypothesis.
+          </li>
+          <li>
+              State the alternative hypothesis.
+          </li>
+          <li>
+              What is the <m>p</m>-value?
+          </li>
+          <li>
+              Using complete sentences, state the meaning of the <m>p</m>-value in the context of this problem.
+          </li>
+          <li>
+              What do we conclude?  Why?
+          </li>
+          
+      </ol>
+          
+          
+          
+          
+      
+  </statement>
+  <answer>
+      <title>Partial Solution:</title>
+      
+     <ul>
+          <li>
+              The null hypothesis is <m>H_0: p=0.62</m>.
+          </li>
+         <li>
+              The alternative hypothesis is <m>H_A: p\neq0.62</m>.
+          </li>
+          <li>
+              The sampling distribution has mean <m>0.62</m> and standard error <m>SE=0.0381355606705123</m>.
+          </li>
+         <li>
+              The sample proportion is <m>\hat{p}=0.691358024691358</m> which has <m>z</m>-score <m>z=1.87116757789101</m>.
+          </li>
+         <li>
+              The <m>p</m>-value is <m>0.06132185717128147</m>.
+          </li>
+         
+          <!--<li>
+              For a % confidence interval,  <m>z^*=</m>.
+          </li>
+          <li>
+              The proportion of turtles that are infected has a % chance of of falling in <m>[, ]</m>.
+          </li>-->
+      </ul>
+          
+      
+  </answer>
+</exercise>

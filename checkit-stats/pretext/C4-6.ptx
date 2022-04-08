@@ -1,0 +1,78 @@
+<exercise checkit-seed="4356" checkit-slug="C4" checkit-title="Chi^2 independence test">
+  <statement>
+      
+      
+      <p>
+          A farmer tests two different pesticides on his crops during an insect infestation.  Sprays two sections of his field with the different pestisides, and records the resulting infestation levels:
+      </p>
+      
+      
+      <p>
+          <me>
+              \begin{array}{|c|c|c|c|}
+              \hline
+              &amp; \text{ No Infestation } &amp; \text{ Moderate Infestation } &amp; \text{ Severe Infestation }\\
+              \hline
+              \text{ Pesticide A } &amp; 66 &amp; 42 &amp; 16\\
+              \hline
+              \text{ Pesticide B } &amp; 88 &amp; 30 &amp; 15\\
+              \hline
+              \end{array}
+          </me>
+          
+      </p>
+      
+      
+     
+      <p>
+          Use a <m>\chi^2</m> independence test to test  whether the level of infestation is independent of the type of pesticide used.
+      </p>
+      <ul>
+          <li>
+              State the null hypothesis for this test.
+          </li>
+          <li>
+              State the alternative hypothesis for this test.
+          </li>
+          <li>
+              Using complete sentences, state the meaning of the <m>p</m>-value in the context of this problem.
+          </li>
+          <li>
+              What do we conclude?  Why?
+          </li>
+      </ul>
+          
+          
+          
+          
+      
+  </statement>
+  <answer>
+      <title>Partial Solution:</title>
+      
+      
+      
+      
+     <ul>
+          <li>
+              The null hypothesis is <m>H_0:\ </m>Infestation levels are independent of pesticide type.
+          </li>
+         <li>
+              The alternative hypothesis is <m>H_A:\ </m>Infestation levels are not independent of pesticide type.
+          </li>
+          <li>
+              There are <m>2</m> degrees of freedom.
+          </li>
+         <li>
+              The <m>\chi^2</m> value is <m>4.86590747531830</m>.
+          </li>
+         <li>
+              The <m>p</m>-value is <m>0.08777717853832656</m>.
+          </li>
+         
+          
+      </ul>
+          
+      
+  </answer>
+</exercise>

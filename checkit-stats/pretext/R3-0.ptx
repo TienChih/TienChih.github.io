@@ -1,0 +1,167 @@
+<exercise checkit-seed="2804" checkit-slug="R3" checkit-title="Inference and Linear Regression">
+  <statement>
+      <p>
+          A study is done comparing patients Maximum Pain Tolerance (on a scale of 1-10) to their Rating of Pain Severity (also on a scale of 1-10).
+      </p>
+      
+      <p>
+          Consider this table of data collected comparing Maximum Pain Tolerance measured in points, and Rating of Pain Severity measured in points:
+          <me>
+               \begin{array}{|c|c|}
+              \hline
+              \text{ Maximum Pain Tolerance in points }
+              &amp;
+              \text{ Rating of Pain Severity in points }
+              \\
+              \hline
+               6
+              &amp; 5
+                  \\
+               6
+              &amp; 3
+                  \\
+               7
+              &amp; 3
+                  \\
+               4
+              &amp; 6
+                  \\
+               7
+              &amp; 5
+                  \\
+               7
+              &amp; 5
+                  \\
+               6
+              &amp; 3
+                  \\
+               4
+              &amp; 5
+                  \\
+               5
+              &amp; 4
+                  \\
+               5
+              &amp; 4
+                  \\
+               7
+              &amp; 5
+                  \\
+               6
+              &amp; 2
+                  \\
+               6
+              &amp; 3
+                  \\
+               7
+              &amp; 4
+                  \\
+               4
+              &amp; 5
+                  \\
+               6
+              &amp; 3
+                  \\
+               4
+              &amp; 6
+                  \\
+               5
+              &amp; 6
+                  \\
+               6
+              &amp; 4
+                  \\
+               6
+              &amp; 6
+                  \\
+               6
+              &amp; 5
+                  \\
+               6
+              &amp; 5
+                  \\
+               7
+              &amp; 4
+                  \\
+               6
+              &amp; 4
+                  \\
+               5
+              &amp; 6
+                  \\
+              
+              \hline
+              \end{array}
+          </me>
+      </p>
+      <p>
+          Suppose a statistics software returns the following:
+          <ul>
+              <li>
+                  Point estimate for <m>\beta_1</m>: <m>-0.481813246465981</m>.
+              </li>
+              <li>
+                  Point estimate for <m>\beta_0</m>: <m>7.21524429964405</m>.
+              </li>
+              <li>
+                  Standard Error for <m>\beta_1</m>: <m>0.21828120773485774</m>.
+              </li>
+              <li>
+                  <m>t</m>-score for <m>\beta_1</m>: <m>-2.2073052071950734</m>.
+              </li>
+              <li>
+                  95% Confidence Interval for <m>\beta_1</m>: <m>[-0.933362328058156, -0.0302641648738063]</m>.
+              </li>
+              <li>
+                  <m>p</m>-value for <m>H_0:\beta_1=0, H_A: \beta_1\neq 0</m>: <m>p</m>-value<m>=0.037542096204052466</m>.
+              </li>
+          </ul>
+      </p>
+      <p>
+          <ol>
+              <li>
+                  Interpret what this Confidence Interval means in the context of this problem.
+              </li>
+              <li>
+                  Interpret what <m>p</m>-value means in the context of this problem.
+              </li>
+              <li>
+                  What do we conclude from this hypothesis test?  Why?
+              </li>
+              
+              
+          </ol>
+      </p>
+      
+      
+      
+      
+     
+      
+          
+          
+          
+          
+      
+  </statement>
+  <answer>
+      
+      
+      
+      
+     <p>
+          <p>
+          <ol>
+              <li>
+              The slope of the regression line  has a <m>95\%</m> chance of of falling in <m>[-0.933362328058156, -0.0302641648738063]</m>.
+          </li>
+              
+              
+          </ol>
+      </p>
+          
+      </p>
+          
+      
+  </answer>
+</exercise>

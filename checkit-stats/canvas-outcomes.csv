@@ -1,0 +1,32 @@
+vendor_guid,object_type,title,description,display_name,calculation_method,calculation_int,mastery_points,ratings
+checkit_stats-beta_00_B1_1649182442.2333004,outcome,00-B1: Types of Variables,,B1,n_mastery,2,3,4,Exceeds Mastery,3,Meets Mastery,2,Near Mastery,1,Well Below Mastery,0,Insufficient Work to Assess
+checkit_stats-beta_01_B2_1649182442.2333004,outcome,01-B2: Sampling Techniques,,B2,n_mastery,2,3,4,Exceeds Mastery,3,Meets Mastery,2,Near Mastery,1,Well Below Mastery,0,Insufficient Work to Assess
+checkit_stats-beta_02_B3_1649182442.2333004,outcome,02-B3: Visualizing Data,,B3,n_mastery,2,3,4,Exceeds Mastery,3,Meets Mastery,2,Near Mastery,1,Well Below Mastery,0,Insufficient Work to Assess
+checkit_stats-beta_03_B4_1649182442.2333004,outcome,03-B4: Centers of Data,,B4,n_mastery,2,3,4,Exceeds Mastery,3,Meets Mastery,2,Near Mastery,1,Well Below Mastery,0,Insufficient Work to Assess
+checkit_stats-beta_04_B5_1649182442.2333004,outcome,04-B5: Variation of Data,,B5,n_mastery,2,3,4,Exceeds Mastery,3,Meets Mastery,2,Near Mastery,1,Well Below Mastery,0,Insufficient Work to Assess
+checkit_stats-beta_05_P1_1649182442.2333004,outcome,05-P1: Introduction to Probability,,P1,n_mastery,2,3,4,Exceeds Mastery,3,Meets Mastery,2,Near Mastery,1,Well Below Mastery,0,Insufficient Work to Assess
+checkit_stats-beta_06_P2_1649182442.2333004,outcome,06-P2: Conditional Probability,,P2,n_mastery,2,3,4,Exceeds Mastery,3,Meets Mastery,2,Near Mastery,1,Well Below Mastery,0,Insufficient Work to Assess
+checkit_stats-beta_07_P3_1649182442.2333004,outcome,07-P3: Bayes Theorem,,P3,n_mastery,2,3,4,Exceeds Mastery,3,Meets Mastery,2,Near Mastery,1,Well Below Mastery,0,Insufficient Work to Assess
+checkit_stats-beta_08_P4_1649182442.2333004,outcome,08-P4: Random Variables,,P4,n_mastery,2,3,4,Exceeds Mastery,3,Meets Mastery,2,Near Mastery,1,Well Below Mastery,0,Insufficient Work to Assess
+checkit_stats-beta_09_P5_1649182442.2333004,outcome,09-P5: Linear Combinations of Random Variables,,P5,n_mastery,2,3,4,Exceeds Mastery,3,Meets Mastery,2,Near Mastery,1,Well Below Mastery,0,Insufficient Work to Assess
+checkit_stats-beta_10_D1_1649182442.2333004,outcome,10-D1: Standard Normal Distribution,,D1,n_mastery,2,3,4,Exceeds Mastery,3,Meets Mastery,2,Near Mastery,1,Well Below Mastery,0,Insufficient Work to Assess
+checkit_stats-beta_11_D2_1649182442.2333004,outcome,11-D2: General Normal Distribution,,D2,n_mastery,2,3,4,Exceeds Mastery,3,Meets Mastery,2,Near Mastery,1,Well Below Mastery,0,Insufficient Work to Assess
+checkit_stats-beta_12_D3_1649182442.2333004,outcome,12-D3: Counting Principles,,D3,n_mastery,2,3,4,Exceeds Mastery,3,Meets Mastery,2,Near Mastery,1,Well Below Mastery,0,Insufficient Work to Assess
+checkit_stats-beta_13_D4_1649182442.2333004,outcome,13-D4: Binomial Distribution,,D4,n_mastery,2,3,4,Exceeds Mastery,3,Meets Mastery,2,Near Mastery,1,Well Below Mastery,0,Insufficient Work to Assess
+checkit_stats-beta_14_D5_1649182442.2333004,outcome,14-D5: Normal Approximation of Binomial Distribution,,D5,n_mastery,2,3,4,Exceeds Mastery,3,Meets Mastery,2,Near Mastery,1,Well Below Mastery,0,Insufficient Work to Assess
+checkit_stats-beta_15_F1_1649182442.2333004,outcome,15-F1: Point Estimates,,F1,n_mastery,2,3,4,Exceeds Mastery,3,Meets Mastery,2,Near Mastery,1,Well Below Mastery,0,Insufficient Work to Assess
+checkit_stats-beta_16_F2_1649182442.2333004,outcome,16-F2: Confidence Intervals,,F2,n_mastery,2,3,4,Exceeds Mastery,3,Meets Mastery,2,Near Mastery,1,Well Below Mastery,0,Insufficient Work to Assess
+checkit_stats-beta_17_F3_1649182442.2333004,outcome,17-F3: Hypothesis Testing,,F3,n_mastery,2,3,4,Exceeds Mastery,3,Meets Mastery,2,Near Mastery,1,Well Below Mastery,0,Insufficient Work to Assess
+checkit_stats-beta_18_C1_1649182442.2333004,outcome,18-C1: Size of Sample: Proportion,,C1,n_mastery,2,3,4,Exceeds Mastery,3,Meets Mastery,2,Near Mastery,1,Well Below Mastery,0,Insufficient Work to Assess
+checkit_stats-beta_19_C2_1649182442.2333004,outcome,19-C2: Two Categorical Variable Inferences,,C2,n_mastery,2,3,4,Exceeds Mastery,3,Meets Mastery,2,Near Mastery,1,Well Below Mastery,0,Insufficient Work to Assess
+checkit_stats-beta_20_C3_1649182442.2333004,outcome,20-C3: Chi^2 goodness of fit test,,C3,n_mastery,2,3,4,Exceeds Mastery,3,Meets Mastery,2,Near Mastery,1,Well Below Mastery,0,Insufficient Work to Assess
+checkit_stats-beta_21_C4_1649182442.2333004,outcome,21-C4: Chi^2 independence test,,C4,n_mastery,2,3,4,Exceeds Mastery,3,Meets Mastery,2,Near Mastery,1,Well Below Mastery,0,Insufficient Work to Assess
+checkit_stats-beta_22_N1_1649182442.2333004,outcome,22-N1: t-distribution,,N1,n_mastery,2,3,4,Exceeds Mastery,3,Meets Mastery,2,Near Mastery,1,Well Below Mastery,0,Insufficient Work to Assess
+checkit_stats-beta_23_N2_1649182442.2333004,outcome,23-N2: Inference for single Numerical Variables,,N2,n_mastery,2,3,4,Exceeds Mastery,3,Meets Mastery,2,Near Mastery,1,Well Below Mastery,0,Insufficient Work to Assess
+checkit_stats-beta_24_N3_1649182442.2333004,outcome,24-N3: Inference for paired Numerical Variables,,N3,n_mastery,2,3,4,Exceeds Mastery,3,Meets Mastery,2,Near Mastery,1,Well Below Mastery,0,Insufficient Work to Assess
+checkit_stats-beta_25_N4_1649182442.2333004,outcome,25-N4: Inference for difference of means of Numerical Variables,,N4,n_mastery,2,3,4,Exceeds Mastery,3,Meets Mastery,2,Near Mastery,1,Well Below Mastery,0,Insufficient Work to Assess
+checkit_stats-beta_26_N5_1649182442.2333004,outcome,26-N5: Size of Sample: Means,,N5,n_mastery,2,3,4,Exceeds Mastery,3,Meets Mastery,2,Near Mastery,1,Well Below Mastery,0,Insufficient Work to Assess
+checkit_stats-beta_27_N6_1649182442.2333004,outcome,27-N6: ANOVA,,N6,n_mastery,2,3,4,Exceeds Mastery,3,Meets Mastery,2,Near Mastery,1,Well Below Mastery,0,Insufficient Work to Assess
+checkit_stats-beta_28_R1_1649182442.2333004,outcome,28-R1: Linear Correlation of Variables,,R1,n_mastery,2,3,4,Exceeds Mastery,3,Meets Mastery,2,Near Mastery,1,Well Below Mastery,0,Insufficient Work to Assess
+checkit_stats-beta_29_R2_1649182442.2333004,outcome,29-R2: Interpreting Linear Regression,,R2,n_mastery,2,3,4,Exceeds Mastery,3,Meets Mastery,2,Near Mastery,1,Well Below Mastery,0,Insufficient Work to Assess
+checkit_stats-beta_30_R3_1649182442.2333004,outcome,30-R3: Inference and Linear Regression,,R3,n_mastery,2,3,4,Exceeds Mastery,3,Meets Mastery,2,Near Mastery,1,Well Below Mastery,0,Insufficient Work to Assess

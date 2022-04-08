@@ -1,0 +1,66 @@
+<exercise checkit-seed="5702" checkit-slug="P1" checkit-title="Introduction to Probability">
+  <statement>
+      
+      <p>
+          We consider a randomly selected student at a university, and consider the events that they major in biology and that they major in psychology
+      </p>
+      
+      <p>
+          Suppose that   the probability that    the student is a psychology major is <m>0.0345</m>, the probability that   the student is both a biology and a pscyhology major is <m>0.0054</m>, and finally   the probability that    the student is a biology major or the student is a psychology major is <m>0.0761</m>.
+      </p>
+      
+      
+      <p>
+          <ol>
+              <li>
+                  <p>
+                      Find the probability that   the student is a biology major.
+                  </p>
+                  <p>
+                      (For the following, it is advisable to draw a venn diagram using the information above.)
+                  </p>
+                  
+              </li>
+              <li>
+                  Find the probability that  the student is not a biology major but is a psychology major.
+              </li>
+              <li>
+                  Find the probability that  the student is  a biology major or is not a psychology major.
+              </li>
+          </ol>
+          
+      </p>
+      
+      
+     
+      
+          
+          
+          
+          
+      
+  </statement>
+  <answer>
+      <title>Partial Solution:</title>
+      
+      
+      
+      
+     <p>
+          <ol>
+              <li>
+                   The probability that   the student is a biology major is <m>0.047</m>.
+              </li>
+              <li>
+                   The  probability that  the student is not a biology major but is a psychology major is <m>0.0291</m>.
+              </li>
+              <li>
+                    The probability that  the student is  a biology major or is not a psychology major is <m>0.9709</m>.
+              </li>
+          </ol>
+          
+      </p>
+          
+      
+  </answer>
+</exercise>

@@ -1,0 +1,70 @@
+<exercise checkit-seed="4702" checkit-slug="P3" checkit-title="Bayes Theorem">
+  <statement>
+      
+      <p>
+          Consider a radar detecting other aircraft while in flight.  It occasionally fails to detect other aircraft or gives a false indication that aircraft are close by when they are not.  We consider the events that it indicates other aircraft are close by, and the event other aircraft are close by.
+      </p>
+      
+      <p>
+          Suppose that   the probability that   it indicates other aircraft are close by given that other aircraft is close by is <m>0.94</m>, the probability that   it indicates other aircraft are close by given that other aircraft are not close by is <m>0.04</m>.
+      </p>
+      
+      
+      <p>
+          <ol>
+              <li>
+                  Suppose it were the case that the probability    other aircraft are close by was <m>0.19</m>.
+                  <ol>
+                      <li>
+                          Find the probability that   it indicates other aircraft are close by.
+                      </li>
+                      <li>
+                          Find the probability that    other aircraft are close by, given that the radar indicates they are.
+                      </li>
+                  </ol>
+              </li>
+              <li>
+                  Suppose instead that it was the case where the probability   it indicates other aircraft are close by was <m>0.61</m>.  Find the probability that    other aircraft are close by.
+              </li>
+              
+          </ol>
+          
+      </p>
+      
+      
+     
+      
+          
+          
+          
+          
+      
+  </statement>
+  <answer>
+      <title>Partial Solution:</title>
+      
+      
+      
+      
+     <p>
+          <ol>
+              <li>In the first scenario:
+                  <ol>
+                      <li>
+                          The probability that   it indicates other aircraft are close by is <m>0.211</m>
+                      </li>
+                      <li>
+                          The probability that    other aircraft are close by, given that the radar indicates they are is <m>0.8464454976303317</m>
+                      </li>
+                  </ol>
+              </li>
+              <li>
+                  In the second scenario, the probability that    other aircraft are close by is <m>0.6333333333333333</m>.
+              </li>
+          </ol>
+          
+      </p>
+          
+      
+  </answer>
+</exercise>

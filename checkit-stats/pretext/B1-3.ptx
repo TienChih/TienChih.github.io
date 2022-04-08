@@ -1,0 +1,50 @@
+<exercise checkit-seed="6733" checkit-slug="B1" checkit-title="Types of Variables">
+  <statement>
+      
+      
+      
+      
+      
+      <p>
+          For each of the following, classify the type of variable described as <em>Numerical</em> or <em>Categorical</em>, as well as the subcategory <em>Continuous</em>, <em>Discrete</em>, <em>Nominal</em> or <em>Ordinal</em>.  Be sure to justify your choices.
+          <ol>
+              <li>Different choices of insurance companies.</li>
+              <li>A rating of a politicians performance from Highly Approve to Highly Disapprove.</li>
+              <li>The color of a new shirt.</li>
+              <li>The frequency of wolf attacks on a rancher's herd in attacks/week.</li>
+              <li>A choice of streaming services.</li>
+              <li>Ranking an experience at a doctor's office from Very Pleasant to Very Unpleasant.</li>
+          </ol>
+          
+      </p>
+      
+      
+     
+      
+          
+          
+          
+          
+      
+  </statement>
+  <answer>
+      <title>Partial Solution:</title>
+      
+      
+      
+      
+     <p>
+          <ol>
+              <li>Categorical, Nominal</li>
+              <li>Categorical, Ordinal</li>
+              <li>Categorical, Nominal</li>
+              <li>Numerical, Continuous</li>
+              <li>Categorical, Nominal</li>
+              <li>Categorical, Ordinal</li>
+          </ol>
+          
+      </p>
+          
+      
+  </answer>
+</exercise>

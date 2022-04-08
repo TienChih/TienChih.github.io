@@ -1,0 +1,63 @@
+<exercise checkit-seed="5329" checkit-slug="P5" checkit-title="Linear Combinations of Random Variables">
+  <statement>
+      
+      <p>
+          Let <m>X_1, X_2, Y</m> be independent random variables where <m>E(X_i)=17, Var(X_i)=6</m> and <m>E(Y)=30, Var(Y)=6</m>.
+      </p>
+      
+      <p>
+          Let <m>Z</m> be the random variable defined by: <me>Z= 5X_1-4X_2+3Y.</me>
+      </p>
+      
+      
+      <p>
+          Find the following:
+          <ol>
+              <li>
+                  <m>E(Z).</m>
+              </li>
+              <li>
+                  <m>Var(Z).</m>
+              </li>
+              <li>
+                  <m>\sigma_Z.</m>
+              </li>
+              
+          </ol>
+          
+      </p>
+      
+      
+     
+      
+          
+          
+          
+          
+      
+  </statement>
+  <answer>
+      <title>Partial Solution:</title>
+      
+      
+      
+      
+     <p>
+          <ol>
+              <li>
+                  <m>E(Z)=107.</m>
+              </li>
+              <li>
+                  <m>Var(Z)=300.</m>
+              </li>
+              <li>
+                  <m>\sigma_Z=17.3205080756888.</m>
+              </li>
+              
+          </ol>
+          
+      </p>
+          
+      
+  </answer>
+</exercise>

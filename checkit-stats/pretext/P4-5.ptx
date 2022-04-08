@@ -1,0 +1,98 @@
+<exercise checkit-seed="3192" checkit-slug="P4" checkit-title="Random Variables">
+  <statement>
+      
+      <p>
+          A soccer team plays a match against the opposing team.  Let <m>X</m> denote   the number of goals they score.  Consider the following probability distribution table for <m>X</m>.
+      </p>
+      
+      <p>
+          <me>
+              \begin{array}{|c
+              |c
+              |c
+              |c
+              |c
+              |c
+              |c
+              |
+              }
+              
+              \hline
+              X_i 
+              &amp; 0
+              &amp; 1
+              &amp; 2
+              &amp; 3
+              &amp; 4
+              &amp; 5
+              \\
+              \hline
+              P(X=X_i)
+              &amp; 0.204
+              &amp; 0.299
+              &amp; 0.243
+              &amp; ???
+              &amp; 0.032
+              &amp; 0.151
+              \\
+              \hline
+              \end{array}
+          </me>
+      </p>
+      
+      
+      <p>
+          <ol>
+              <li>
+                  What is the value of the missing entry?
+              </li>
+              <li>
+                  Find the expectation of <m>X</m>, <m>E(X)</m>,  and interpret what it means in context of this problem.
+              </li>
+              <li>
+                  Find variance of <m>X</m>, <m>Var(X)</m>.
+              </li>
+              <li>
+                  Find the standard deviation of <m>X</m>, <m>\sigma_X</m>.
+              </li>
+          </ol>
+          
+      </p>
+      
+      
+     
+      
+          
+          
+          
+          
+      
+  </statement>
+  <answer>
+      <title>Partial Solution:</title>
+      
+      
+      
+      
+     <p>
+         <ol>
+             <li>
+                 <m>P(X=3)=0.071</m>.
+             </li>
+             <li>
+                 <m>E(X)=1.8809999999999998</m>.
+             </li>
+             <li>
+                 <m>Var(X)=2.658839</m>
+             </li>
+             <li>
+                 <m>\sigma_X=1.6305946767973947</m>
+             </li>
+         </ol>
+          
+          
+      </p>
+          
+      
+  </answer>
+</exercise>

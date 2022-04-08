@@ -1,0 +1,64 @@
+<exercise checkit-seed="5362" checkit-slug="F3" checkit-title="Hypothesis Testing">
+  <statement>
+      <p>
+          An engineer tests to see if the he proproportion of iron samples, when sprayed with a new compound, would rust when exposed to water is less than <m>  63</m>%.  He conducts an experiment.
+      </p>
+      <p>
+Suppose that for   <m>n=132</m> iron samples, <m>74</m> rusted. Test the hypothesis that  the proportion of iron samples that would rust is less than <m>  63</m>%. 
+      </p>
+      
+      <ol>
+          <li>
+              State the null hypothesis.
+          </li>
+          <li>
+              State the alternative hypothesis.
+          </li>
+          <li>
+              What is the <m>p</m>-value?
+          </li>
+          <li>
+              Using complete sentences, state the meaning of the <m>p</m>-value in the context of this problem.
+          </li>
+          <li>
+              What do we conclude?  Why?
+          </li>
+          
+      </ol>
+          
+          
+          
+          
+      
+  </statement>
+  <answer>
+      <title>Partial Solution:</title>
+      
+     <ul>
+          <li>
+              The null hypothesis is <m>H_0: p=0.63</m>.
+          </li>
+         <li>
+              The alternative hypothesis is <m>H_A: p\lneq0.63</m>.
+          </li>
+          <li>
+              The sampling distribution has mean <m>0.63</m> and standard error <m>SE=0.0420227211268986</m>.
+          </li>
+         <li>
+              The sample proportion is <m>\hat{p}=0.5606060606060606</m> which has <m>z</m>-score <m>z=-1.65134330983437</m>.
+          </li>
+         <li>
+              The <m>p</m>-value is <m>0.04933424672509416</m>.
+          </li>
+         
+          <!--<li>
+              For a % confidence interval,  <m>z^*=</m>.
+          </li>
+          <li>
+              The proportion of iron samples that would rust has a % chance of of falling in <m>[, ]</m>.
+          </li>-->
+      </ul>
+          
+      
+  </answer>
+</exercise>

@@ -1,0 +1,70 @@
+<exercise checkit-seed="6542" checkit-slug="P3" checkit-title="Bayes Theorem">
+  <statement>
+      
+      <p>
+          A governer is running for re-election.  We consider the events that a voter votes for them, and the event that they are from a rural part of the state.
+      </p>
+      
+      <p>
+          Suppose that   the probability that   a randomly selected voter votes for the governor, given that they are from a rural part of the state is <m>0.66</m>, the probability that   a randomly selected voter votes for the governor, given that they are not from a rural part of the state is <m>0.24</m>.
+      </p>
+      
+      
+      <p>
+          <ol>
+              <li>
+                  Suppose it were the case that the probability    a randomly selected voter is from a rural part of the state was <m>0.13</m>.
+                  <ol>
+                      <li>
+                          Find the probability that   a randomly selected voter votes for the governor.
+                      </li>
+                      <li>
+                          Find the probability that    a randomly selected voter is from a rural part of the state, given that they voted for the governor.
+                      </li>
+                  </ol>
+              </li>
+              <li>
+                  Suppose instead that it was the case where the probability   a randomly selected voter votes for the governor was <m>0.51</m>.  Find the probability that    a randomly selected voter is from a rural part of the state.
+              </li>
+              
+          </ol>
+          
+      </p>
+      
+      
+     
+      
+          
+          
+          
+          
+      
+  </statement>
+  <answer>
+      <title>Partial Solution:</title>
+      
+      
+      
+      
+     <p>
+          <ol>
+              <li>In the first scenario:
+                  <ol>
+                      <li>
+                          The probability that   a randomly selected voter votes for the governor is <m>0.2946</m>
+                      </li>
+                      <li>
+                          The probability that    a randomly selected voter is from a rural part of the state, given that they voted for the governor is <m>0.29124236252545826</m>
+                      </li>
+                  </ol>
+              </li>
+              <li>
+                  In the second scenario, the probability that    a randomly selected voter is from a rural part of the state is <m>0.6428571428571428</m>.
+              </li>
+          </ol>
+          
+      </p>
+          
+      
+  </answer>
+</exercise>

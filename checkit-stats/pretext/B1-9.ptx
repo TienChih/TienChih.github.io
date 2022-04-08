@@ -1,0 +1,50 @@
+<exercise checkit-seed="3655" checkit-slug="B1" checkit-title="Types of Variables">
+  <statement>
+      
+      
+      
+      
+      
+      <p>
+          For each of the following, classify the type of variable described as <em>Numerical</em> or <em>Categorical</em>, as well as the subcategory <em>Continuous</em>, <em>Discrete</em>, <em>Nominal</em> or <em>Ordinal</em>.  Be sure to justify your choices.
+          <ol>
+              <li>A magazine rating albums from 1 mic to 5 mics.</li>
+              <li>The depreciation of a cars value over a decade in dollars.</li>
+              <li>A patient's primary care physician.</li>
+              <li>Classifying a person's language fluency from Beginner to Fluent.</li>
+              <li>A review from a job candidiates performance from Exemplary to Unacceptable.</li>
+              <li>The number of salmon who survive the journey to their spawning area.</li>
+          </ol>
+          
+      </p>
+      
+      
+     
+      
+          
+          
+          
+          
+      
+  </statement>
+  <answer>
+      <title>Partial Solution:</title>
+      
+      
+      
+      
+     <p>
+          <ol>
+              <li>Categorical, Ordinal</li>
+              <li>Numerical, Continuous</li>
+              <li>Categorical, Nominal</li>
+              <li>Categorical, Ordinal</li>
+              <li>Categorical, Ordinal</li>
+              <li>Numerical, Discrete</li>
+          </ol>
+          
+      </p>
+          
+      
+  </answer>
+</exercise>

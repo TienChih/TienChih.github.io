@@ -1,0 +1,60 @@
+<exercise checkit-seed="9163" checkit-slug="C3" checkit-title="Chi^2 goodness of fit test">
+  <statement>
+     <p>
+         A non-profit printing t-shirts for their volunteers have historically needed sizes  <m>32</m>%  small, <m>22</m>%  medium, <m>21</m>%  large, and <m>25</m>%  x-large.
+      </p>
+      <p>
+          In a sampling of size requests at a new location,   <m>74</m>  volunteers requested a small, <m>35</m>  volunteers requested a medium, <m>26</m>  volunteers requested a large, and <m>45</m>  volunteers requested a x-large.
+      </p>
+      <p>
+          Use a <m>\chi^2</m> goodness of fit test to test whether or not the distribution of t-shirt sizes needed match that of previous locations.
+      </p>
+      <ul>
+          <li>
+              State the null hypothesis for this test.
+          </li>
+          <li>
+              State the alternative hypothesis for this test.
+          </li>
+          <li>
+              Using complete sentences, state the meaning of the <m>p</m>-value in the context of this problem.
+          </li>
+          <li>
+              What do we conclude?  Why?
+          </li>
+      </ul>
+          
+          
+          
+          
+      
+  </statement>
+  <answer>
+      <title>Partial Solution:</title>
+      
+      
+      
+      
+     <ul>
+          <li>
+              The null hypothesis is <m>H_0:</m> The distribution of t-shirt sizes matches that of previous locations.
+          </li>
+         <li>
+              The alternative hypothesis is <m>H_A:</m> The distribution of t-shirt sizes do not match that of previous locations.
+          </li>
+          <li>
+              There are <m>3</m> degrees of freedom.
+          </li>
+         <li>
+              The <m>\chi^2</m> value is <m>8.88738576238576</m>.
+          </li>
+         <li>
+              The <m>p</m>-value is <m>0.030826236546139474</m>.
+          </li>
+         
+          
+      </ul>
+          
+      
+  </answer>
+</exercise>

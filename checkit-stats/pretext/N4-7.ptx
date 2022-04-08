@@ -1,0 +1,73 @@
+<exercise checkit-seed="2676" checkit-slug="N4" checkit-title="Inference for difference of means of Numerical Variables">
+  <statement>
+      
+      <p>
+          A political scientist compares the amount of money donated to campaigns for poltitical parties A and B.  Out of  <m>24</m>  observed members of Party A, the average sample donation was  <m>\bar{x}_1=2132.239</m>  dollars, with sample standard deviation <m>s_1=693.769</m>  dollars.  Then out of <m>24</m>  observed members of Party B, the average sample donation was  <m>\bar{x}_2=2294.621</m>  dollars, with sample standard deviation <m>s_2=483.664</m>  dollars.
+      </p>
+      
+      <ul>
+          <li>  Test the hypothesis that  the difference in average donation between members of Party A and Party B, <m>\mu_1-\mu_2</m>, is not equal to <m>  150</m>  dollars.
+              <ol>
+          <li>
+              State the null hypothesis.
+          </li>
+          <li>
+              State the alternative hypothesis.
+          </li>
+          <li>
+              What is the <m>p</m>-value?
+          </li>
+          <li>
+              Using complete sentences, state the meaning of the <m>p</m>-value in the context of this problem.
+          </li>
+          <li>
+              What do we conclude?  Why?
+          </li>
+          
+      </ol>
+          </li>
+          <li>
+              Find a <m>95</m>% confidence interval for the  the difference in average donation between members of Party A and Party B.  Using complete sentences, explain what the confidence interval means in the context of this problem.
+          </li>
+      </ul>
+      
+      
+          
+          
+          
+          
+      
+  </statement>
+  <answer>
+      <title>Partial Solution:</title>
+      
+     <ul>
+          <li>
+              The null hypothesis is <m>H_0: \mu_1-\mu_2=150</m>.
+          </li>
+         <li>
+              The alternative hypothesis is <m>H_A: \mu_1-\mu_2\neq150</m>.
+          </li>
+          <li>
+              The sampling distribution has mean <m>150</m> and standard error <m>SE=172.632351431325</m>.
+          </li>
+         <li>
+              The observesd difference of sample means is <m>\bar{x_1}-\bar{x_2}=-162.382</m> which has <m>t</m>-score <m>t=-1.8095217808828248</m>.
+          </li>
+         <li>
+              The <m>p</m>-value is <m>0.08345909280895558</m>.
+          </li>
+         
+         <li>
+              For a <m>95</m>% confidence interval,  <m>t^*=2.068657610419048</m>.
+          </li>
+          <li>
+              The  the difference in average donation between members of Party A and Party B  has a <m>95</m>% chance of of falling in <m>[-519.499227592945, 194.735227592945]</m>.
+          </li>
+         
+          
+      </ul>
+          
+      
+  </answer>
+</exercise>

@@ -1,0 +1,78 @@
+<exercise checkit-seed="2674" checkit-slug="C4" checkit-title="Chi^2 independence test">
+  <statement>
+      
+      
+      <p>
+          A psychologist shows two different short videos to test subjects, ans asked them to rate their feelings after the video as Happiness, Anger or Sadness:
+      </p>
+      
+      
+      <p>
+          <me>
+              \begin{array}{|c|c|c|c|}
+              \hline
+              &amp; \text{ Happiness } &amp; \text{ Anger } &amp; \text{ Sadness }\\
+              \hline
+              \text{ Video 1 } &amp; 50 &amp; 67 &amp; 47\\
+              \hline
+              \text{ Video 2 } &amp; 27 &amp; 83 &amp; 51\\
+              \hline
+              \end{array}
+          </me>
+          
+      </p>
+      
+      
+     
+      <p>
+          Use a <m>\chi^2</m> independence test to test  whether emotional reactions are independent of the choice of video.
+      </p>
+      <ul>
+          <li>
+              State the null hypothesis for this test.
+          </li>
+          <li>
+              State the alternative hypothesis for this test.
+          </li>
+          <li>
+              Using complete sentences, state the meaning of the <m>p</m>-value in the context of this problem.
+          </li>
+          <li>
+              What do we conclude?  Why?
+          </li>
+      </ul>
+          
+          
+          
+          
+      
+  </statement>
+  <answer>
+      <title>Partial Solution:</title>
+      
+      
+      
+      
+     <ul>
+          <li>
+              The null hypothesis is <m>H_0:\ </m>Emotional reactions are independent of the choice of video.
+          </li>
+         <li>
+              The alternative hypothesis is <m>H_A:\ </m>Emotional reactions are not independent of the choice of video.
+          </li>
+          <li>
+              There are <m>2</m> degrees of freedom.
+          </li>
+         <li>
+              The <m>\chi^2</m> value is <m>8.71311195423343</m>.
+          </li>
+         <li>
+              The <m>p</m>-value is <m>0.012822472580191868</m>.
+          </li>
+         
+          
+      </ul>
+          
+      
+  </answer>
+</exercise>

@@ -1,0 +1,64 @@
+<exercise checkit-seed="4485" checkit-slug="F3" checkit-title="Hypothesis Testing">
+  <statement>
+      <p>
+          An political campaign wants to know if the proportion of voters who support their candidiate is greater than <m>  53</m>%.  They conduct a survey of potential voters.
+      </p>
+      <p>
+Suppose that for   <m>n=312</m> surveyed potential voters, <m>181</m> supported the candidiate. Test the hypothesis that  the proportion of all potential voters that support their candidiate is greater than <m>  53</m>%. 
+      </p>
+      
+      <ol>
+          <li>
+              State the null hypothesis.
+          </li>
+          <li>
+              State the alternative hypothesis.
+          </li>
+          <li>
+              What is the <m>p</m>-value?
+          </li>
+          <li>
+              Using complete sentences, state the meaning of the <m>p</m>-value in the context of this problem.
+          </li>
+          <li>
+              What do we conclude?  Why?
+          </li>
+          
+      </ol>
+          
+          
+          
+          
+      
+  </statement>
+  <answer>
+      <title>Partial Solution:</title>
+      
+     <ul>
+          <li>
+              The null hypothesis is <m>H_0: p=0.53</m>.
+          </li>
+         <li>
+              The alternative hypothesis is <m>H_A: p\gneq0.53</m>.
+          </li>
+          <li>
+              The sampling distribution has mean <m>0.53</m> and standard error <m>SE=0.0282559274471293</m>.
+          </li>
+         <li>
+              The sample proportion is <m>\hat{p}=0.5801282051282052</m> which has <m>z</m>-score <m>z=1.77407750009274</m>.
+          </li>
+         <li>
+              The <m>p</m>-value is <m>0.03802516595923022</m>.
+          </li>
+         
+          <!--<li>
+              For a % confidence interval,  <m>z^*=</m>.
+          </li>
+          <li>
+              The proportion of all potential voters that support their candidiate has a % chance of of falling in <m>[, ]</m>.
+          </li>-->
+      </ul>
+          
+      
+  </answer>
+</exercise>

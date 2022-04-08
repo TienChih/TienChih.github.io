@@ -1,0 +1,63 @@
+<exercise checkit-seed="1459" checkit-slug="P5" checkit-title="Linear Combinations of Random Variables">
+  <statement>
+      
+      <p>
+          Let <m>X_1, X_2, Y</m> be independent random variables where <m>E(X_i)=12, Var(X_i)=5</m> and <m>E(Y)=24, Var(Y)=10</m>.
+      </p>
+      
+      <p>
+          Let <m>Z</m> be the random variable defined by: <me>Z= 3X_1+2X_2-4Y.</me>
+      </p>
+      
+      
+      <p>
+          Find the following:
+          <ol>
+              <li>
+                  <m>E(Z).</m>
+              </li>
+              <li>
+                  <m>Var(Z).</m>
+              </li>
+              <li>
+                  <m>\sigma_Z.</m>
+              </li>
+              
+          </ol>
+          
+      </p>
+      
+      
+     
+      
+          
+          
+          
+          
+      
+  </statement>
+  <answer>
+      <title>Partial Solution:</title>
+      
+      
+      
+      
+     <p>
+          <ol>
+              <li>
+                  <m>E(Z)=-36.</m>
+              </li>
+              <li>
+                  <m>Var(Z)=225.</m>
+              </li>
+              <li>
+                  <m>\sigma_Z=15.0000000000000.</m>
+              </li>
+              
+          </ol>
+          
+      </p>
+          
+      
+  </answer>
+</exercise>

@@ -1,0 +1,50 @@
+<exercise checkit-seed="5509" checkit-slug="B1" checkit-title="Types of Variables">
+  <statement>
+      
+      
+      
+      
+      
+      <p>
+          For each of the following, classify the type of variable described as <em>Numerical</em> or <em>Categorical</em>, as well as the subcategory <em>Continuous</em>, <em>Discrete</em>, <em>Nominal</em> or <em>Ordinal</em>.  Be sure to justify your choices.
+          <ol>
+              <li>The species of termites infesting a house.</li>
+              <li>Classifying a person's language fluency from Beginner to Fluent.</li>
+              <li>A patient's primary care physician.</li>
+              <li>How many pounds of fish a fiserman sells in an afternoon.</li>
+              <li>A person's eye color.</li>
+              <li>The type of employment of a parent.</li>
+          </ol>
+          
+      </p>
+      
+      
+     
+      
+          
+          
+          
+          
+      
+  </statement>
+  <answer>
+      <title>Partial Solution:</title>
+      
+      
+      
+      
+     <p>
+          <ol>
+              <li>Categorical, Nominal</li>
+              <li>Categorical, Ordinal</li>
+              <li>Categorical, Nominal</li>
+              <li>Numerical, Continuous</li>
+              <li>Categorical, Nominal</li>
+              <li>Categorical, Nominal</li>
+          </ol>
+          
+      </p>
+          
+      
+  </answer>
+</exercise>

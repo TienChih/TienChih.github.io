@@ -1,0 +1,158 @@
+<exercise checkit-seed="3301" checkit-slug="B5" checkit-title="Variation of Data">
+  <statement>
+      
+      
+      
+      
+      
+      <p>
+          Consider the following list of data:
+          <me>
+              -35,
+              6,
+              9,
+              16,
+              16,
+              22,
+              23,
+              24,
+              24,
+              25,
+              27,
+              31,
+              31,
+              36,
+              39,
+              44,
+              44,
+              45,
+              46,
+              46,
+              47,
+              48,
+              48,
+              49,
+              52,
+              53,
+              59,
+              59,
+              63,
+              63,
+              69,
+              71,
+              72,
+              76,
+              79,
+          </me>
+          
+      
+          find the following measures variation for this data:
+          <ol>
+              <li>
+                  Sample standard deviation.
+              </li>
+              <li>
+                  Sample variance.
+              </li>
+              <li>
+                  Population standard deviation.
+              </li>
+              <li>
+                  Population variance.
+              </li>
+          </ol>
+          
+      
+      </p>
+      
+      <p>
+          Then find an alternative set of measures of variation:
+          <ol>
+              <li>
+                  Min.
+              </li>
+              <li>
+                  Q1.
+              </li>
+              <li>
+                  Median.
+              </li>
+              <li>
+                  Q3.
+              </li>
+              <li>
+                  Max.
+              </li>
+              <li>
+                  IQR.
+              </li>
+          </ol>
+          and use the IQR and the quartiles to identify any outliers
+      </p>
+     
+      
+          
+          
+          
+          
+      
+  </statement>
+  <answer>
+      <title>Partial Solution:</title>
+      
+      
+      
+      
+     <p>
+          Find the following measures of centrality for this data:
+          <ol>
+              <li>
+                  Sample standard deviation: <m>23.448423644854497</m>.
+              </li>
+              <li>
+                  Sample variance: <m>549.8285714285714</m>.
+              </li>
+              <li>
+                  Population standard deviation: <m>23.111018663690906</m>.
+              </li>
+              <li>
+                  Population variance: <m>534.1191836734694</m>.
+              </li>
+          </ol>
+          
+      
+      </p>
+      
+      <p>
+          <ol>
+              <li>
+                  Min: <m>-35</m>.
+              </li>
+              <li>
+                  Q1: <m>24.0</m>.
+              </li>
+              <li>
+                  Median: <m>45.0</m>.
+              </li>
+              <li>
+                  Q3: <m>59.0</m>.
+              </li>
+              <li>
+                  Max: <m>79</m>.
+              </li>
+              <li>
+                  IQR: <m>35.0</m>.
+              </li>
+          </ol>
+          Outliers:
+          
+          <m>
+              -35,
+          </m>
+          
+      
+      </p>
+          
+      
+  </answer>
+</exercise>

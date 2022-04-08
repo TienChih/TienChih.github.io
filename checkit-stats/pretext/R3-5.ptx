@@ -1,0 +1,140 @@
+<exercise checkit-seed="2745" checkit-slug="R3" checkit-title="Inference and Linear Regression">
+  <statement>
+      <p>
+          A study is done comparing the Annual Rainfall (in mm) and Max Daily Temperature (C) of different sites of a geographic region.
+      </p>
+      
+      <p>
+          Consider this table of data collected comparing Max Daily Temperature measured in C, and Annual Rainfall measured in mm:
+          <me>
+               \begin{array}{|c|c|}
+              \hline
+              \text{ Max Daily Temperature in C }
+              &amp;
+              \text{ Annual Rainfall in mm }
+              \\
+              \hline
+               5.5
+              &amp; 184.7
+                  \\
+               8.8
+              &amp; 145.7
+                  \\
+               11.5
+              &amp; 108.7
+                  \\
+               6.3
+              &amp; 204.6
+                  \\
+               9.3
+              &amp; 143.9
+                  \\
+               6.5
+              &amp; 200.1
+                  \\
+               10.1
+              &amp; 126.6
+                  \\
+               10.5
+              &amp; 97.9
+                  \\
+               6.0
+              &amp; 200.5
+                  \\
+               10.1
+              &amp; 125.1
+                  \\
+               6.5
+              &amp; 194.2
+                  \\
+               6.9
+              &amp; 166.8
+                  \\
+               6.1
+              &amp; 204.2
+                  \\
+               5.3
+              &amp; 198.4
+                  \\
+               7.3
+              &amp; 169.5
+                  \\
+               7.0
+              &amp; 184.0
+                  \\
+              
+              \hline
+              \end{array}
+          </me>
+      </p>
+      <p>
+          Suppose a statistics software returns the following:
+          <ul>
+              <li>
+                  Point estimate for <m>\beta_1</m>: <m>-18.58727630943563</m>.
+              </li>
+              <li>
+                  Point estimate for <m>\beta_0</m>: <m>309.63412996732416</m>.
+              </li>
+              <li>
+                  Standard Error for <m>\beta_1</m>: <m>1.4762720534344909</m>.
+              </li>
+              <li>
+                  <m>t</m>-score for <m>\beta_1</m>: <m>-12.590684939265115</m>.
+              </li>
+              <li>
+                  95% Confidence Interval for <m>\beta_1</m>: <m>[-21.7535649573870, -15.4209876614843]</m>.
+              </li>
+              <li>
+                  <m>p</m>-value for <m>H_0:\beta_1=0, H_A: \beta_1\neq 0</m>: <m>p</m>-value<m>=5.035716288404046 \times 10^{-09}</m>.
+              </li>
+          </ul>
+      </p>
+      <p>
+          <ol>
+              <li>
+                  Interpret what this Confidence Interval means in the context of this problem.
+              </li>
+              <li>
+                  Interpret what <m>p</m>-value means in the context of this problem.
+              </li>
+              <li>
+                  What do we conclude from this hypothesis test?  Why?
+              </li>
+              
+              
+          </ol>
+      </p>
+      
+      
+      
+      
+     
+      
+          
+          
+          
+          
+      
+  </statement>
+  <answer>
+      
+      
+      
+      
+     <p>
+          <p>
+          <ol>
+              <li>
+              The slope of the regression line  has a <m>95\%</m> chance of of falling in <m>[-21.7535649573870, -15.4209876614843]</m>.
+          </li>
+              
+              
+          </ol>
+      </p>
+          
+      </p>
+          
+      
+  </answer>
+</exercise>

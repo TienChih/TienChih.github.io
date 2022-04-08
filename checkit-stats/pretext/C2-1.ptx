@@ -1,0 +1,64 @@
+<exercise checkit-seed="8417" checkit-slug="C2" checkit-title="Two Categorical Variable Inferences">
+  <statement>
+      <p>
+          A University is comparing two course management systems, and looks to two other universities and their systems.  They want to know if the difference in approval rates between University A and University B<m>\, </m> is not equal to <m>\,  -0.01</m>.  They poll students from both universities.
+      </p>
+      <p>
+          Suppose that of   <m>n_1=328\, </m>polled students from University A, <m>x_1=226\, </m>approved their course management system and of <m>n_2=328\, </m>polled students from University B, <m>x_2=252\, </m>approved their course management system. Test the hypothesis that  the difference between the proportion of University A students who would approve of their course management system: <m>p_1</m>, and the proportion of University B students who would approve of their course management system: <m>p_2</m>,   is not equal to<m>\,  -0.01</m>.  That is <m>p_1-p_2\neq-0.01</m>.
+      </p>
+      
+      <ol>
+          <li>
+              State the null hypothesis.
+          </li>
+          <li>
+              State the alternative hypothesis.
+          </li>
+          <li>
+              What is the <m>p</m>-value?
+          </li>
+          <li>
+              Using complete sentences, state the meaning of the <m>p</m>-value in the context of this problem.
+          </li>
+          <li>
+              What do we conclude?  Why?
+          </li>
+          
+      </ol>
+          
+          
+          
+          
+      
+  </statement>
+  <answer>
+      <title>Partial Solution:</title>
+      
+     <ul>
+          <li>
+              The null hypothesis is <m>H_0: p_1-p_2=-0.01</m>.
+          </li>
+         <li>
+              The alternative hypothesis is <m>H_A: p_1-p_2\neq-0.01</m>.
+          </li>
+          <li>
+              The sampling distribution has mean <m>-0.01</m> and standard error <m>SE=0.0345832689079016</m>.
+          </li>
+         <li>
+              The difference in sample proportions is <m>\hat{p}=-0.0792682926829269</m> which has <m>z</m>-score <m>z=-2.00294231489206</m>.
+          </li>
+         <li>
+              The <m>p</m>-value is <m>0.04518348049516363</m>.
+          </li>
+         
+          <!--<li>
+              For a % confidence interval,  <m>z^*=</m>.
+          </li>
+          <li>
+              The proportion of  that would approve of their course management system has a % chance of of falling in <m>[, ]</m>.
+          </li>-->
+      </ul>
+          
+      
+  </answer>
+</exercise>
