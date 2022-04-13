@@ -1,81 +1,66 @@
-<exercise checkit-seed="9925" checkit-slug="R1" checkit-title="Linear Correlation of Variables">
+<exercise checkit-seed="3290" checkit-slug="R1" checkit-title="Linear Correlation of Variables">
   <statement>
       <p>
-          A study is done comparing windchill in a city (in F), compared to windspeed (in mph) on different days.
+          A business compares the amount it spends on advertising (thousands of dollars per month) to it's revenues (thousands of dollars per month) over it's last few months.
       </p>
       
       <p>
-          Consider this table of data collected comparing Windspeed measured in mph, and Windchill measured in F:
+          Consider this table of data collected comparing Advertising Expense measured in k dollars/month, and Revenue measured in k dollars/month:
           <me>
                \begin{array}{|c|c|}
               \hline
-              \text{ Windspeed in mph }
+              \text{ Advertising Expense in k dollars/month }
               &amp;
-              \text{ Windchill in F }
+              \text{ Revenue in k dollars/month }
               \\
               \hline
-               18.4
-              &amp; 0.5
+               2.2
+              &amp; 106.3
                   \\
-               15.9
-              &amp; -0.7
+               2.2
+              &amp; 167.1
                   \\
-               17.6
-              &amp; 2.0
+               3.1
+              &amp; 262.6
                   \\
-               8.3
-              &amp; 12.9
+               2.5
+              &amp; 217.9
                   \\
-               18.0
-              &amp; -1.0
+               3.6
+              &amp; 398.1
                   \\
-               6.3
-              &amp; 7.7
+               3.0
+              &amp; 130.5
                   \\
-               6.9
-              &amp; 12.5
+               2.2
+              &amp; 182.4
                   \\
-               9.2
-              &amp; 5.1
+               4.4
+              &amp; 351.0
                   \\
-               15.0
-              &amp; 7.2
+               3.7
+              &amp; 242.7
                   \\
-               10.8
-              &amp; 9.1
+               2.4
+              &amp; 100.3
                   \\
-               7.2
-              &amp; 12.3
+               4.7
+              &amp; 367.5
                   \\
-               6.3
-              &amp; 10.7
+               4.6
+              &amp; 406.5
                   \\
-               11.1
-              &amp; 9.4
+               2.6
+              &amp; 164.7
                   \\
-               18.2
-              &amp; -4.5
+               2.5
+              &amp; 153.7
                   \\
-               9.5
-              &amp; 8.2
+               3.3
+              &amp; 203.7
                   \\
-               11.9
-              &amp; 5.6
-                  \\
-               12.6
-              &amp; 3.1
-                  \\
-               16.2
-              &amp; 0.1
-                  \\
-               14.5
-              &amp; -1.9
-                  \\
-               5.7
-              &amp; 11.5
-                  \\
-               6.6
-              &amp; 12.4
+               4.1
+              &amp; 292.4
                   \\
               
               \hline
@@ -91,7 +76,7 @@
                   Compute the correlation coefficient <m>R</m>.
               </li>
               <li>
-                  What does <m>R</m> tell you about the relationship between Windspeed and Windchill?
+                  What does <m>R</m> tell you about the relationship between Advertising Expense and Revenue?
               </li>
               <li>
                   Compute the <m>R^2</m>.
@@ -122,16 +107,16 @@
      <p>
           <ul>
               <li>
-                  The exaplanatory variable is Windspeed in mph and the response variable is Windchill in F.
+                  The exaplanatory variable is Advertising Expense in k dollars/month and the response variable is Revenue in k dollars/month.
               </li>
               <li>
-                  <m>R=-0.925763073.</m>
+                  <m>R=0.8643419657.</m>
               </li>
               <li>
-                  <m>R^2=0.8570372673304034.</m>
+                  <m>R^2=0.74708703367014.</m>
               </li>
               <li>
-                  Windchill is <m>85.70372673304034\%</m> explainable by Windspeed.
+                  Revenue is <m>74.708703367014\%</m> explainable by Advertising Expense.
               </li>
               
               

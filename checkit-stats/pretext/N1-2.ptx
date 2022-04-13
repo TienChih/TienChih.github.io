@@ -1,29 +1,29 @@
-<exercise checkit-seed="1867" checkit-slug="N1" checkit-title="t-distribution">
+<exercise checkit-seed="3157" checkit-slug="N1" checkit-title="t-distribution">
   <statement>
       
       
       <p>
-          Let <m>t</m> be the standard <m>t</m>-variable with <m>43</m> degrees of freedom.  Find the following:
+          Let <m>t</m> be the standard <m>t</m>-variable with <m>27</m> degrees of freedom.  Find the following:
       </p>
       
       
       <p>
           <ol>
               <li>
-                  <m>P(t\leq -2.43)</m>.
+                  <m>P(t\leq -0.98)</m>.
               </li>
              
               <li>
-                  <m>P(-2.22&lt; t &lt; 0.38)</m>.
+                  <m>P(-1.21&lt; t &lt; -0.08)</m>.
               </li>
               
               
               <li>
-                  <m>t^*</m> such that <m>P(t\geq t^*)=0.6</m>.
+                  <m>t^*</m> such that <m>P(t\geq t^*)=0.97</m>.
               </li>
               
               <li>
-                  <m>t^*</m> such that <m>P(-t^*&lt; t&lt; t^*)=0.63</m>.
+                  <m>t^*</m> such that <m>P(-t^*&lt; t&lt; t^*)=0.57</m>.
               </li>
           </ol>
           
@@ -47,18 +47,18 @@
      <p>
           <ol>
               <li>
-                  <m>P(t\leq -2.43)=0.009673583316880926</m>.
+                  <m>P(t\leq -0.98)=0.16789314512679926</m>.
               </li>
               
               <li>
-                  <m>P(-2.22\lt t\lt 0.38)=0.6312212803457224</m>.
+                  <m>P(-1.21\lt t\lt -0.08)=0.35003047314599933</m>.
               </li>
               
               <li>
-                  <m>t^*</m> such that <m>P(t\geq t^*)=0.6, t^*=-0.25492025367775145</m>.
+                  <m>t^*</m> such that <m>P(t\geq t^*)=0.97, t^*=-1.9631998356961529</m>.
               </li>
               <li>
-                  <m>t^*</m> such that <m>P(-t^*\lt t\lt t^*)=0.63, t^*=0.9059709283582666</m>.
+                  <m>t^*</m> such that <m>P(-t^*\lt t\lt t^*)=0.57, t^*=0.8012186013105123</m>.
               </li>
           </ol>
           

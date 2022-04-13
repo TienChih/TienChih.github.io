@@ -1,29 +1,29 @@
-<exercise checkit-seed="9034" checkit-slug="D2" checkit-title="General Normal Distribution">
+<exercise checkit-seed="2694" checkit-slug="D2" checkit-title="General Normal Distribution">
   <statement>
       
       
       <p>
-          Suppose the average height of 5 year old girls is normally distributed with mean  <m>110.25</m>  cm and standard deviation <m>3.73</m>  cm.  Find the following:
+          Suppose the braking distance of cars of a certain model travelling at 60 mph is normally distributed with mean   <m>134.48</m>  feet and standard deviation <m>6.25</m>  feet.  Find the following:
       </p>
       
       
       <p>
           <ol>
               <li>
-                  Find the probability that a randomly selected 5 year old girl's height   is at most  <m>116.92 </m>  cm.
+                  Find the probability that a randomly selected car's braking distance   is at least  <m>135.53 </m>  feet.
               </li>
              
               <li>
-                  Find the probability that a randomly selected 5 year old girl's height  is between <m>110.59 </m> and <m>119.43</m>  cm.
+                  Find the probability that a randomly selected car's braking distance  is between <m>127.69 </m> and <m>139.28</m>  feet.
               </li>
               
               
               <li>
-                  Find <m>X^*</m> such that  the probability that a randomly selected 5 year old girl's height   is at least  <m>X^*</m>  cm is <m>23</m>%.
+                  Find <m>X^*</m> such that  the probability that a randomly selected car's braking distance   is at most  <m>X^*</m>  feet is <m>92</m>%.
               </li>
               
               <li>
-                  Find <m>k</m> such that  the probability that a randomly selected 5 year old girl's height  is between <m>110.25-k</m>  cm and <m>110.25+k</m>  cm is <m>40</m>%.
+                  Find <m>k</m> such that  the probability that a randomly selected car's braking distance  is between <m>134.48-k</m>  feet and <m>134.48+k</m>  feet is <m>31</m>%.
               </li>
           </ol>
           
@@ -47,18 +47,18 @@
      <p>
           <ol>
               <li>
-                  <m>P(X\leq 116.92)=0.963128429513416</m>.
+                  <m>P(X\geq 135.53)=0.43329163953941474</m>.
               </li>
               
               <li>
-                  <m>P(110.59\leq X\leq 119.43)=0.45676049780219363</m>.
+                  <m>P(127.69\leq X\leq 139.28)=0.6401053767663829</m>.
               </li>
               
               <li>
-                  If <m>P(X\geq\  X^*)=23</m>% then <m>X=113.00589874746085</m>  cm.
+                  If <m>P(X\leq\  X^*)=92</m>% then <m>X=143.2616972519352</m>  feet.
               </li>
               <li>
-                  If <m>P(110.25-k\leq\  X\leq\  110.25+k)=40</m>% then <m>k=1.9560139124009917</m>  cm.
+                  If <m>P(134.48-k\leq\  X\leq\  134.48+k)=31</m>% then <m>k=2.4928441602646054</m>  feet.
               </li>
           </ol>
           

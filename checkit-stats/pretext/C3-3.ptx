@@ -1,13 +1,13 @@
-<exercise checkit-seed="7111" checkit-slug="C3" checkit-title="Chi^2 goodness of fit test">
+<exercise checkit-seed="6870" checkit-slug="C3" checkit-title="Chi^2 goodness of fit test">
   <statement>
      <p>
-         In previous locations, a restaurants the main protein for dinner entrees ordered by customers have been  <m>16</m>%  beef, <m>25</m>%  chicken, <m>26</m>%  pork, and <m>33</m>%  vegan.
+         The distribution of moth species in a local forest has historically been  <m>22</m>%  species 1, <m>23</m>%  species 2, <m>27</m>%  species 3, and <m>28</m>%  species 4.
       </p>
       <p>
-          In a random sampling of dinner entrees ordered at their new location, the main proteins were  <m>21</m>  main proteins that were beef, <m>20</m>  main proteins that were chicken, <m>24</m>  main proteins that were pork, and <m>49</m>  main proteins that were vegan.
+          A year after an industrial accident, a sample of moths collected from this forest consisted of  <m>26</m>  moths of species 1, <m>16</m>  moths of species 2, <m>44</m>  moths of species 3, and <m>41</m>  moths of species 4.
       </p>
       <p>
-          Use a <m>\chi^2</m> goodness of fit test to test whether or not the distributions or ordered main proteins was the same at the new location as previous locations.
+          Use a <m>\chi^2</m> goodness of fit test to test whether or not the distributions of moths remain unchanged.
       </p>
       <ul>
           <li>
@@ -37,19 +37,19 @@
       
      <ul>
           <li>
-              The null hypothesis is <m>H_0:</m> The distribution of main proteins is the same as previous locations.
+              The null hypothesis is <m>H_0:</m> The distribution of moths remains unchanged after the accident.
           </li>
          <li>
-              The alternative hypothesis is <m>H_A:</m> The distribution of main proteins is different from previous locations.
+              The alternative hypothesis is <m>H_A:</m> The distribution of months has changed after the accident.
           </li>
           <li>
               There are <m>3</m> degrees of freedom.
           </li>
          <li>
-              The <m>\chi^2</m> value is <m>7.46835255387887</m>.
+              The <m>\chi^2</m> value is <m>9.69064999944836</m>.
           </li>
          <li>
-              The <m>p</m>-value is <m>0.05837721033543897</m>.
+              The <m>p</m>-value is <m>0.021387313556767373</m>.
           </li>
          
           

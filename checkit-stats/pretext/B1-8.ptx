@@ -1,4 +1,4 @@
-<exercise checkit-seed="5667" checkit-slug="B1" checkit-title="Types of Variables">
+<exercise checkit-seed="7651" checkit-slug="B1" checkit-title="Types of Variables">
   <statement>
       
       
@@ -8,12 +8,12 @@
       <p>
           For each of the following, classify the type of variable described as <em>Numerical</em> or <em>Categorical</em>, as well as the subcategory <em>Continuous</em>, <em>Discrete</em>, <em>Nominal</em> or <em>Ordinal</em>.  Be sure to justify your choices.
           <ol>
-              <li>A college graduate's major.</li>
-              <li>The total snowfall in a city over a year in feet.</li>
-              <li>How many alcoholic drinks an adult American consumes in a week.</li>
-              <li>The number of homicides in a city over a year.</li>
-              <li>The breed of a dog.</li>
-              <li>Whether a car is electric, hybrid or fossil fuel powered.</li>
+              <li>The number of foreclosures in a city in the next month.</li>
+              <li>Make and model of a new car.</li>
+              <li>The height of a corn stalk in feet.</li>
+              <li>A choice of streaming services.</li>
+              <li>The number of salmon who survive the journey to their spawning area.</li>
+              <li>A magazine rating albums from 1 mic to 5 mics.</li>
           </ol>
           
       </p>
@@ -35,12 +35,12 @@
       
      <p>
           <ol>
+              <li>Numerical, Discrete</li>
               <li>Categorical, Nominal</li>
               <li>Numerical, Continuous</li>
-              <li>Numerical, Discrete</li>
-              <li>Numerical, Discrete</li>
               <li>Categorical, Nominal</li>
-              <li>Categorical, Nominal</li>
+              <li>Numerical, Discrete</li>
+              <li>Categorical, Ordinal</li>
           </ol>
           
       </p>

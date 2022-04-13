@@ -1,10 +1,10 @@
-<exercise checkit-seed="7252" checkit-slug="F3" checkit-title="Hypothesis Testing">
+<exercise checkit-seed="5966" checkit-slug="F3" checkit-title="Hypothesis Testing">
   <statement>
       <p>
-          An education researcher wants to know of the proportion if college students who find a certain subject challenging is greater than <m>  46</m>%.  They conduct a survey of college students.
+          A CEO is curious if the proportion of employees that are satisfied with their job is not equal to <m>  59</m>%.  They conduct a survey of employees.
       </p>
       <p>
-Suppose that for   <m>n=353</m> surveyed students, <m>181</m> found the subject challenging. Test the hypothesis that  the proportion of all college students that find the subject challenging is greater than <m>  46</m>%. 
+Suppose that for   <m>n=144</m> surveyed employees, <m>72</m> were satisfied with their job. Test the hypothesis that  the proportion of all employees that are satisfied with their job is not equal to <m>  59</m>%. 
       </p>
       
       <ol>
@@ -36,26 +36,26 @@ Suppose that for   <m>n=353</m> surveyed students, <m>181</m> found the subject 
       
      <ul>
           <li>
-              The null hypothesis is <m>H_0: p=0.46</m>.
+              The null hypothesis is <m>H_0: p=0.59</m>.
           </li>
          <li>
-              The alternative hypothesis is <m>H_A: p\gneq0.46</m>.
+              The alternative hypothesis is <m>H_A: p\neq0.59</m>.
           </li>
           <li>
-              The sampling distribution has mean <m>0.46</m> and standard error <m>SE=0.0265270186705318</m>.
+              The sampling distribution has mean <m>0.59</m> and standard error <m>SE=0.0409861087578598</m>.
           </li>
          <li>
-              The sample proportion is <m>\hat{p}=0.5127478753541076</m> which has <m>z</m>-score <m>z=1.98845848488447</m>.
+              The sample proportion is <m>\hat{p}=0.5</m> which has <m>z</m>-score <m>z=-2.19586593427806</m>.
           </li>
          <li>
-              The <m>p</m>-value is <m>0.02338050303819572</m>.
+              The <m>p</m>-value is <m>0.028101540647963885</m>.
           </li>
          
           <!--<li>
               For a % confidence interval,  <m>z^*=</m>.
           </li>
           <li>
-              The proportion of all college students that find the subject challenging has a % chance of of falling in <m>[, ]</m>.
+              The proportion of all employees that are satisfied with their job has a % chance of of falling in <m>[, ]</m>.
           </li>-->
       </ul>
           

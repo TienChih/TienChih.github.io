@@ -1,4 +1,4 @@
-<exercise checkit-seed="4002" checkit-slug="B2" checkit-title="Sampling Techniques">
+<exercise checkit-seed="6858" checkit-slug="B2" checkit-title="Sampling Techniques">
   <statement>
       
       
@@ -8,12 +8,12 @@
       <p>
           For each of the following, classify the sampling technique described as <em>Simple Random Sample</em>, <em>Stratified Random Sampling</em>, <em>Cluster Sampling</em> or <em>Multi-Stage Sampling</em>.  Be sure to justify your choices.
           <ol>
-              <li>To test products for defects, a manufacturer randomly selects and tests products.</li>
+              <li>To test products for defects, a manufacturer seperates products by types, and randomly selects and tests products from each type.</li>
+              <li>To measure the cost of living in a city, the city is divided into square mile regions, and a few of these regions are randomly selected, and all the grocery stores within them have their prices analyzed.</li>
+              <li>To measure student satisfaction, students are randomly selected from the student body and surveyed.</li>
+              <li>To measure student response to a new general education policy, the administration randomly selects students from the university to survey.</li>
+              <li>To measure the effects of a new heart medication, users of the medication are divided by first letter of last name, and a few letters are selected and  users of the medication in those groups are  tested.</li>
               <li>To measure the support for the current mayor in comparison to income, constituents within a city are seperated into income classes, and random constituents from each class are randomly selected and surveyed.</li>
-              <li>To measure the effects of a sewage malfunction in a town, city randomly choses homes to have their water tested.</li>
-              <li>To measure the effects of a new heart medication, users of the medication are divided by first letter of last name, some letters are randomnly selected, and a few randomly selected users of the medication in each of those groups are tested.</li>
-              <li>To measure student satisfaction, students are grouped by major, and each students are randomly selected from each major to be surveyed.</li>
-              <li>To measure the spread of a species of bovine flea,  coes are seperated by breed and some from each breed are randomly selected and tested for fleas.</li>
           </ol>
           
       </p>
@@ -35,11 +35,11 @@
       
      <p>
           <ol>
-              <li>Simple Random Sampling</li>
               <li>Stratified Random Sample</li>
+              <li>Cluster Sampling</li>
               <li>Simple Random Sampling</li>
-              <li>Multi-Stage Sampling</li>
-              <li>Stratified Random Sample</li>
+              <li>Simple Random Sampling</li>
+              <li>Cluster Sampling</li>
               <li>Stratified Random Sample</li>
           </ol>
           

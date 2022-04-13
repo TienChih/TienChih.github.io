@@ -1,21 +1,21 @@
-<exercise checkit-seed="9266" checkit-slug="N6" checkit-title="ANOVA">
+<exercise checkit-seed="5663" checkit-slug="N6" checkit-title="ANOVA">
   <statement>
-      <p>A physician studies the daily calcium intake of test subjects under three different health regiments, in order to see if there is any difference. </p>
+      <p>A materials engineer tests the average electrical conductivity of three different experimental alloys so she can see if there was any difference.</p>
       
       <p>
-          The average daily calcium intake for test subjects under Regiment A was  <m>\bar{x}_1=949.691</m>  mg, with sample standard deviation <m>s_1=67.617</m> mg, and sample size <m>n_1=35</m> test subjects.
+          The average electrical conductivity for alloy samples of Alloy A was  <m>\bar{x}_1=71.885</m>  million Siemens/meter, with sample standard deviation <m>s_1=10.967</m> million Siemens/meter, and sample size <m>n_1=38</m> alloy samples.
       </p>
       
       <p>
-          The average daily calcium intake for test subjects under Regiment B was  <m>\bar{x}_2=930.559</m>  mg, with sample standard deviation <m>s_2=75.312</m> mg, and sample size <m>n_2=30</m> test subjects.
+          The average electrical conductivity for alloy samples of Alloy B was  <m>\bar{x}_2=69.794</m>  million Siemens/meter, with sample standard deviation <m>s_2=11.922</m> million Siemens/meter, and sample size <m>n_2=36</m> alloy samples.
       </p>
       
       <p>
-          The average daily calcium intake for test subjects under Regiment C was  <m>\bar{x}_3=975.513</m>  mg, with sample standard deviation <m>s_3=72.96</m> mg, and sample size <m>n_3=44</m> test subjects.
+          The average electrical conductivity for alloy samples of Alloy C was  <m>\bar{x}_3=75.161</m>  million Siemens/meter, with sample standard deviation <m>s_3=8.254</m> million Siemens/meter, and sample size <m>n_3=49</m> alloy samples.
       </p>
       
       <p>
-          The average daily calcium intake of all <m>n=109</m> test subjects was <m>\bar{x}=954.8489</m>  mg.
+          The average electrical conductivity of all <m>n=123</m> sample alloys was <m>\bar{x}=72.5781</m>  million Siemens/meter.
       </p>
       
       <ol>
@@ -36,12 +36,12 @@
      
       
       <!--<p>
-          A physician studies the daily calcium intake of test subjects under three different health regiments, in order to see if there is any difference. <m> </m>  mg.  <m> </m>  mg.
+          A materials engineer tests the average electrical conductivity of three different experimental alloys so she can see if there was any difference.<m> </m>  million Siemens/meter.  <m> </m>  million Siemens/meter.
       </p>
       
       <ol>
           <li>
-               <m>n=109</m>?
+               <m>n=123</m>?
           </li>
           <li>
               Explain what this power means in the context of this problem.
@@ -62,25 +62,25 @@
       <title>Partial Solution:</title>
       <ul>
           <li>
-              <m>H_0:\ </m> any differences in the average daily calcium intake of test subjects under different Regiments is explainable solely by the variation within the Regiments.
+              <m>H_0:\ </m> any differences in the average electrical conductivity for alloy samples of different Alloys is explainable solely by the variation within the Alloys.
           </li>
           <li>
-              <m>H_A:\ </m> any differences in the average daily calcium intake of test subjects under different Regiments is explainable solely by the variation within the Regiments.
+              <m>H_A:\ </m> any differences in the average electrical conductivity for alloy samples of different Alloys is explainable solely by the variation within the Alloys.
           </li>
           <li>
-              <m>p</m>-value=<m>0.030327943300579308</m>
+              <m>p</m>-value=<m>0.05614179262207919</m>
           </li>
       </ul>
       
      <!--<ul>
           <li>
-              The standard error if <m>n=109</m> would be <m>SE=</m>.  The cutoff for a statistically significant test is a difference of <m></m>  mg.  The power of the test is <m>P(X\leq )=\%</m> where <m>X</m> is a normal variable with mean <m></m> and standard error <m></m>.
+              The standard error if <m>n=123</m> would be <m>SE=</m>.  The cutoff for a statistically significant test is a difference of <m></m>  million Siemens/meter.  The power of the test is <m>P(X\leq )=\%</m> where <m>X</m> is a normal variable with mean <m></m> and standard error <m></m>.
          </li>
          <li>
-              <m></m> mg,  <m>n=109</m> would only have a <m>\%</m> chance of detecting it.
+              <m></m> million Siemens/meter,  <m>n=123</m> would only have a <m>\%</m> chance of detecting it.
          </li>
          <li>
-             The <m>z</m>-score for a left-tail of <m>\%</m> is <m></m>.  So for this <m>\%</m> tail to be detectable, <m>+SE\approx -1.96SE</m>, so <m>SE\approx  </m>, and for this to be true <m>n\geq 30</m>
+             The <m>z</m>-score for a left-tail of <m>\%</m> is <m></m>.  So for this <m>\%</m> tail to be detectable, <m>+SE\approx -1.96SE</m>, so <m>SE\approx  </m>, and for this to be true <m>n\geq 36</m>
          </li>
          
           

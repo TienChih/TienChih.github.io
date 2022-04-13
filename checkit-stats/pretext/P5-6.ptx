@@ -1,12 +1,12 @@
-<exercise checkit-seed="2856" checkit-slug="P5" checkit-title="Linear Combinations of Random Variables">
+<exercise checkit-seed="7412" checkit-slug="P5" checkit-title="Linear Combinations of Random Variables">
   <statement>
       
       <p>
-          Let <m>X_1, X_2, Y</m> be independent random variables where <m>E(X_i)=10, Var(X_i)=5</m> and <m>E(Y)=36, Var(Y)=11</m>.
+          Let <m>X_1, X_2, Y</m> be independent random variables where <m>E(X_i)=12, Var(X_i)=4</m> and <m>E(Y)=23, Var(Y)=10</m>.
       </p>
       
       <p>
-          Let <m>Z</m> be the random variable defined by: <me>Z= 4X_1-5X_2+2Y.</me>
+          Let <m>Z</m> be the random variable defined by: <me>Z= 2X_1+5X_2-2Y.</me>
       </p>
       
       
@@ -45,13 +45,13 @@
      <p>
           <ol>
               <li>
-                  <m>E(Z)=62.</m>
+                  <m>E(Z)=38.</m>
               </li>
               <li>
-                  <m>Var(Z)=249.</m>
+                  <m>Var(Z)=156.</m>
               </li>
               <li>
-                  <m>\sigma_Z=15.7797338380595.</m>
+                  <m>\sigma_Z=12.4899959967968.</m>
               </li>
               
           </ol>

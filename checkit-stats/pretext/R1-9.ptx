@@ -1,90 +1,63 @@
-<exercise checkit-seed="6035" checkit-slug="R1" checkit-title="Linear Correlation of Variables">
+<exercise checkit-seed="5325" checkit-slug="R1" checkit-title="Linear Correlation of Variables">
   <statement>
       <p>
-          A business compares the amount it spends on advertising (thousands of dollars per month) to it's revenues (thousands of dollars per month) over it's last few months.
+          A study is conducted comparing the age of children to their Forced Exhalation Volume (FEV) (in liters), in order to see the impact on age on lung function.  Children of different ages have their FEV tested by physicians.
       </p>
       
       <p>
-          Consider this table of data collected comparing Advertising Expense measured in k dollars/month, and Revenue measured in k dollars/month:
+          Consider this table of data collected comparing Age measured in years, and FEV measured in liters:
           <me>
                \begin{array}{|c|c|}
               \hline
-              \text{ Advertising Expense in k dollars/month }
+              \text{ Age in years }
               &amp;
-              \text{ Revenue in k dollars/month }
+              \text{ FEV in liters }
               \\
               \hline
-               3.3
-              &amp; 239.4
+               6
+              &amp; 1.84
                   \\
-               2.2
-              &amp; 183.5
+               7
+              &amp; 1.68
                   \\
-               4.9
-              &amp; 226.6
+               9
+              &amp; 2.34
                   \\
-               2.3
-              &amp; 115.8
+               9
+              &amp; 2.11
                   \\
-               3.6
-              &amp; 266.3
+               9
+              &amp; 2.26
                   \\
-               2.2
-              &amp; 207.4
+               6
+              &amp; 1.74
                   \\
-               2.2
-              &amp; 151.5
+               6
+              &amp; 1.3
                   \\
-               3.9
-              &amp; 183.8
+               9
+              &amp; 2.04
                   \\
-               4.5
-              &amp; 335.9
+               7
+              &amp; 1.75
                   \\
-               4.3
-              &amp; 266.5
+               7
+              &amp; 1.23
                   \\
-               4.6
-              &amp; 244.3
+               6
+              &amp; 1.72
                   \\
-               5.0
-              &amp; 403.0
+               8
+              &amp; 2.04
                   \\
-               4.5
-              &amp; 261.5
+               9
+              &amp; 2.63
                   \\
-               4.5
-              &amp; 367.5
+               8
+              &amp; 2.16
                   \\
-               2.1
-              &amp; 88.1
-                  \\
-               4.2
-              &amp; 330.5
-                  \\
-               2.9
-              &amp; 191.2
-                  \\
-               4.8
-              &amp; 269.4
-                  \\
-               4.8
-              &amp; 241.3
-                  \\
-               3.7
-              &amp; 231.6
-                  \\
-               4.6
-              &amp; 223.3
-                  \\
-               4.6
-              &amp; 287.9
-                  \\
-               2.8
-              &amp; 231.5
-                  \\
-               3.4
-              &amp; 209.7
+               8
+              &amp; 1.9
                   \\
               
               \hline
@@ -100,7 +73,7 @@
                   Compute the correlation coefficient <m>R</m>.
               </li>
               <li>
-                  What does <m>R</m> tell you about the relationship between Advertising Expense and Revenue?
+                  What does <m>R</m> tell you about the relationship between Age and FEV?
               </li>
               <li>
                   Compute the <m>R^2</m>.
@@ -131,16 +104,16 @@
      <p>
           <ul>
               <li>
-                  The exaplanatory variable is Advertising Expense in k dollars/month and the response variable is Revenue in k dollars/month.
+                  The exaplanatory variable is Age in years and the response variable is FEV in liters.
               </li>
               <li>
-                  <m>R=0.7642974919.</m>
+                  <m>R=0.773962606.</m>
               </li>
               <li>
-                  <m>R^2=0.5841506561246305.</m>
+                  <m>R^2=0.5990181154863112.</m>
               </li>
               <li>
-                  Revenue is <m>58.415065612463046\%</m> explainable by Advertising Expense.
+                  FEV is <m>59.90181154863112\%</m> explainable by Age.
               </li>
               
               

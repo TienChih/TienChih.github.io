@@ -1,9 +1,9 @@
-<exercise checkit-seed="8456" checkit-slug="D5" checkit-title="Normal Approximation of Binomial Distribution">
+<exercise checkit-seed="2407" checkit-slug="D5" checkit-title="Normal Approximation of Binomial Distribution">
   <statement>
       
       
       <p>
-          Suppose the probability that a person clicks on a malicious link in a scam email is  <m>0.05</m>. A scammer sends scam emails to  <m>9900</m>  people.  Let <m>X</m> denote the  number of people who click the link.  Find the following:
+          Suppose the probability that a person clicks on a malicious link in a scam email is  <m>0.04</m>. A scammer sends scam emails to  <m>9500</m>  people.  Let <m>X</m> denote the  number of people who click the link.  Find the following:
           
       </p>
       
@@ -27,12 +27,12 @@
               </li>
              
               <li>
-                  Find the probability that the number of number of people who click the email is  between <m>430 </m> and <m>516</m>  people.
+                  Find the probability that the number of number of people who click the email is  between <m>397 </m> and <m>408</m>  people.
               </li>
               
               
               <li>
-                  Find <m>X^*</m> such that the probability that  number of people who click the link  is at most  <m>X^*</m>  people is <m>0.28</m>.  (This value need not be a whole number.)
+                  Find <m>X^*</m> such that the probability that  number of people who click the link  is at least  <m>X^*</m>  people is <m>0.98</m>.  (This value need not be a whole number.)
               </li>
               
           </ol>
@@ -57,19 +57,19 @@
      <p>
           <ol>
               <li>
-                  <m>E(X)=495.0</m>
+                  <m>E(X)=380.0</m>
               </li>
               <li>
-                  <m>\sigma_X=21.68524844220144</m>
+                  <m>\sigma_X=19.099738218101315</m>
               </li>
               
               
               <li>
-                  <m>P(430\leq\ X\leq\ 516)=0.8322164076958373</m>.
+                  <m>P(397\leq\ X\leq\ 408)=0.1153899264082614</m>.
               </li>
               
               <li>
-                  If <m>P(X\leq\ X^*)=0.28</m> then <m>X^*=482.3609371123965</m>  people.
+                  If <m>P(X\geq\ X^*)=0.98</m> then <m>X^*=340.77393344122146</m>  people.
               </li>
               
           </ol>

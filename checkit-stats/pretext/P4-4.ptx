@@ -1,8 +1,8 @@
-<exercise checkit-seed="2024" checkit-slug="P4" checkit-title="Random Variables">
+<exercise checkit-seed="2982" checkit-slug="P4" checkit-title="Random Variables">
   <statement>
       
       <p>
-          Consider a simplified lottery ticket.  It costs $2 to purchase the ticket, and has three possible payouts.  Let <m>X</m> denote   the net possible winnings (accounting for the $2 expense).  Consider the following probability distribution table for <m>X</m>.
+          Consider store that sells primarily PC's.  Each customer that comes in may buy one, none or several PC.  Let <m>X</m> denote   the number of PCs a customer who comes into the store purchases.  Consider the following probability distribution table for <m>X</m>.
       </p>
       
       <p>
@@ -17,17 +17,17 @@
               
               \hline
               X_i 
-              &amp; -2
-              &amp; 8
-              &amp; 23
-              &amp; 98
+              &amp; 0
+              &amp; 1
+              &amp; 2
+              &amp; 3
               \\
               \hline
               P(X=X_i)
-              &amp; 0.854
+              &amp; 0.508
+              &amp; 0.396
+              &amp; 0.092
               &amp; ???
-              &amp; 0.0096
-              &amp; 0.0003
               \\
               \hline
               \end{array}
@@ -71,16 +71,16 @@
      <p>
          <ol>
              <li>
-                 <m>P(X=8)=0.1365</m>.
+                 <m>P(X=3)=0.004</m>.
              </li>
              <li>
-                 <m>E(X)=-0.3657999999999999</m>.
+                 <m>E(X)=0.5920000000000001</m>.
              </li>
              <li>
-                 <m>Var(X)=19.97779036</m>
+                 <m>Var(X)=0.44953599999999994</m>
              </li>
              <li>
-                 <m>\sigma_X=4.469652152013622</m>
+                 <m>\sigma_X=0.6704744588722228</m>
              </li>
          </ol>
           

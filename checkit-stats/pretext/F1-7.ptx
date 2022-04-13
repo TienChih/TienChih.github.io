@@ -1,4 +1,4 @@
-<exercise checkit-seed="8108" checkit-slug="F1" checkit-title="Point Estimates">
+<exercise checkit-seed="5242" checkit-slug="F1" checkit-title="Point Estimates">
   <statement>
       
       
@@ -8,10 +8,10 @@
       <p>
           For each of the following, identify the <em>parameter of interest</em>, and the <em>point estimate</em>.
           <ol>
+              <li>To estimate the average lifespan of a rat, 120 rats are born into captivity have their lifespans tracked.</li>
+              <li>To estimate the proportion of mice which may develop tumors, 90 captive rats are examined to see if they develop tumors over their lifetime.</li>
+              <li>To estimate the proportion of households in a town who live in poverty, 100 households are surveyed.</li>
               <li>To estimate the proportion of children who are homeschooled, 200 children are randomly selected and their schooling information is checked.</li>
-              <li>To estimate the proportion of adults in a city who smoke, 200 adults are surveyed.</li>
-              <li>To estimate the proportion of restaurants with vegan options, 60 restaurants are randomly selected and their menus examined.</li>
-              <li>To estimate the average daily time spend playing a mobile game by it's users 1000 users are polled as to their gaming time.</li>
           </ol>
           
       </p>
@@ -33,10 +33,10 @@
       
      <p>
           <ol>
+              <li><p>Parameter of Interest: The average lifespan of all rats.</p>  <p>Point Estimate: The average lifespan of the captive rats.</p> </li>
+              <li><p>Parameter of Interest: The proportion of all mice who develop tumors.</p>  <p>Point Estimate: The proportion of the captive mice who develop tumors.</p> </li>
+              <li><p>Parameter of Interest: The proportion of all households in a town who live in poverty.</p>  <p>Point Estimate: The proportion of the surveyed households in a town who live in poverty.</p> </li>
               <li><p>Parameter of Interest: The proportion of all children who are homeschooled.</p>  <p>Point Estimate: The proportion of the children selected children who are homeschooled.</p> </li>
-              <li><p>Parameter of Interest: The proportion of all adults in the city who smoke.</p>  <p>Point Estimate: The proportion of the surveyed adults in the city who smoke.</p> </li>
-              <li><p>Parameter of Interest: The proportion of all restaurants with vegan options.</p>  <p>Point Estimate: The proportion of the selected restaurants with vegan options.</p> </li>
-              <li><p>Parameter of Interest: The average daily time spend playing a mobile game by all it's users.</p>  <p>Point Estimate: the average daily time spend playing a mobile game by the selected users.</p> </li>
           </ol>
           
       </p>

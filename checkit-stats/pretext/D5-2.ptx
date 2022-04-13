@@ -1,9 +1,9 @@
-<exercise checkit-seed="8832" checkit-slug="D5" checkit-title="Normal Approximation of Binomial Distribution">
+<exercise checkit-seed="4728" checkit-slug="D5" checkit-title="Normal Approximation of Binomial Distribution">
   <statement>
       
       
       <p>
-          Suppose probability that a PC needs repairing over the course of a year is  <m>0.08</m>. A company uses  <m>505</m>  PCs.  Let <m>X</m> denote the  number of PCs that will need repair this year.  Find the following:
+          Suppose there is a mishap with the feed of a herd of cattle, and some of the cattle get sick.  When the ranchers test the cattle, the probability that each cow got sick is  <m>0.38</m>. A cattle herd has  <m>50</m>  cows.  Let <m>X</m> denote the  number of cattle that got sick.  Find the following:
           
       </p>
       
@@ -13,12 +13,12 @@
       <p>
           <ol>
               <li>
-                  <m>E(X)</m>, the expected  number of PCs that will need repair this year.
+                  <m>E(X)</m>, the expected  number of cattle that got sick.
               </li>
               
               <li>
                   <p>
-                      <m>\sigma_A</m>, the standard deviation of the  number of PCs that will need repair this year.
+                      <m>\sigma_A</m>, the standard deviation of the  number of cattle that got sick.
                   </p>
                   <p>
                       Then use the normal approximation of <m>X</m> to find the following:
@@ -27,12 +27,12 @@
               </li>
              
               <li>
-                  Find the probability that the number of PCs that will need repair is  between <m>42 </m> and <m>50</m>  PCs.
+                  Find the probability that the number of number of cattle who got sick is  between <m>20 </m> and <m>27</m>  cows.
               </li>
               
               
               <li>
-                  Find <m>X^*</m> such that the probability that  number of PCs that will need repair this year  is at most  <m>X^*</m>  PCs is <m>0.8</m>.  (This value need not be a whole number.)
+                  Find <m>X^*</m> such that the probability that  number of cattle that got sick  is at least  <m>X^*</m>  cows is <m>0.72</m>.  (This value need not be a whole number.)
               </li>
               
           </ol>
@@ -57,19 +57,19 @@
      <p>
           <ol>
               <li>
-                  <m>E(X)=40.4</m>
+                  <m>E(X)=19.0</m>
               </li>
               <li>
-                  <m>\sigma_X=6.096556405053594</m>
+                  <m>\sigma_X=3.4322004603461025</m>
               </li>
               
               
               <li>
-                  <m>P(42\leq\ X\leq\ 50)=0.3388223317725375</m>.
+                  <m>P(20\leq\ X\leq\ 27)=0.37550845355065365</m>.
               </li>
               
               <li>
-                  If <m>P(X\leq\ X^*)=0.8</m> then <m>X^*=45.530991322168056</m>  PCs.
+                  If <m>P(X\geq\ X^*)=0.72</m> then <m>X^*=16.999571110434914</m>  cows.
               </li>
               
           </ol>

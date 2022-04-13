@@ -1,13 +1,13 @@
-<exercise checkit-seed="9163" checkit-slug="C3" checkit-title="Chi^2 goodness of fit test">
+<exercise checkit-seed="9329" checkit-slug="C3" checkit-title="Chi^2 goodness of fit test">
   <statement>
      <p>
-         A non-profit printing t-shirts for their volunteers have historically needed sizes  <m>32</m>%  small, <m>22</m>%  medium, <m>21</m>%  large, and <m>25</m>%  x-large.
+         The distribution of moth species in a local forest has historically been  <m>26</m>%  species 1, <m>28</m>%  species 2, <m>29</m>%  species 3, and <m>17</m>%  species 4.
       </p>
       <p>
-          In a sampling of size requests at a new location,   <m>74</m>  volunteers requested a small, <m>35</m>  volunteers requested a medium, <m>26</m>  volunteers requested a large, and <m>45</m>  volunteers requested a x-large.
+          A year after an industrial accident, a sample of moths collected from this forest consisted of  <m>53</m>  moths of species 1, <m>36</m>  moths of species 2, <m>36</m>  moths of species 3, and <m>26</m>  moths of species 4.
       </p>
       <p>
-          Use a <m>\chi^2</m> goodness of fit test to test whether or not the distribution of t-shirt sizes needed match that of previous locations.
+          Use a <m>\chi^2</m> goodness of fit test to test whether or not the distributions of moths remain unchanged.
       </p>
       <ul>
           <li>
@@ -37,19 +37,19 @@
       
      <ul>
           <li>
-              The null hypothesis is <m>H_0:</m> The distribution of t-shirt sizes matches that of previous locations.
+              The null hypothesis is <m>H_0:</m> The distribution of moths remains unchanged after the accident.
           </li>
          <li>
-              The alternative hypothesis is <m>H_A:</m> The distribution of t-shirt sizes do not match that of previous locations.
+              The alternative hypothesis is <m>H_A:</m> The distribution of months has changed after the accident.
           </li>
           <li>
               There are <m>3</m> degrees of freedom.
           </li>
          <li>
-              The <m>\chi^2</m> value is <m>8.88738576238576</m>.
+              The <m>\chi^2</m> value is <m>7.13148137678315</m>.
           </li>
          <li>
-              The <m>p</m>-value is <m>0.030826236546139474</m>.
+              The <m>p</m>-value is <m>0.06782301693364956</m>.
           </li>
          
           

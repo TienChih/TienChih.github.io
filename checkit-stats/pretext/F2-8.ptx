@@ -1,21 +1,21 @@
-<exercise checkit-seed="6601" checkit-slug="F2" checkit-title="Confidence Intervals">
+<exercise checkit-seed="2860" checkit-slug="F2" checkit-title="Confidence Intervals">
   <statement>
       <p>
-          A county health department wants to know what proportion of their citizens are willing to take a vaccine for a novel virus.  They survey a random selection residents in the county.
+          A mayor wants to measure public support for their new proposal.  Their team conducts a survey of constituents.
       </p>
       <p>
-Suppose that for   <m>n=96</m> surveyed residents, <m>56</m> had or were willing to be vaccinated. 
+Suppose that for   <m>n=52</m> surveyed constituents, <m>28</m> approve the proposal. 
       </p>
       
       <ol>
           <li>
-              Find a <m>95</m>% confidence interval for the proportion of all residents in the county that had or would be willing to be vaccinated.
+              Find a <m>95</m>% confidence interval for the proportion of all constituents that approve the proposal.
           </li>
           <li>
               Using complete sentences, explain what the confidence interval means in the context of this problem.
           </li>
           <li>
-              Suppose the health department claims that   <m>22</m>% of all residents in the county  had or would be willing to be vaccinated.  Is this claim consistent with what we found?  Explain why or why not.
+              Suppose the mayor claims that   <m>77</m>% of all constituents  approve the proposal.  Is this claim consistent with what we found?  Explain why or why not.
           </li>
           
       </ol>
@@ -28,16 +28,16 @@ Suppose that for   <m>n=96</m> surveyed residents, <m>56</m> had or were willing
   <answer>
       <ul>
           <li>
-              The sample proportion is <m>\hat{p}=\frac{7}{12}</m>.
+              The sample proportion is <m>\hat{p}=\frac{7}{13}</m>.
           </li>
           <li>
-              The standard error is <m>SE=0.0503172803687133</m>.
+              The standard error is <m>SE=0.0691320795594552</m>.
           </li>
           <li>
               For a 95% confidence interval,  <m>z^*=1.9599639845400536</m>.
           </li>
           <li>
-              The proportion of all residents in the county that had or would be willing to be vaccinated has a 95% chance of of falling in <m>[0.484713276010651, 0.681953390656016]</m>.
+              The proportion of all constituents that approve the proposal has a 95% chance of of falling in <m>[0.402965152348649, 0.673957924574428]</m>.
           </li>
           <li>
               The claim is not consistent.

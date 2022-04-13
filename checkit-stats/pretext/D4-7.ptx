@@ -1,29 +1,29 @@
-<exercise checkit-seed="8192" checkit-slug="D4" checkit-title="Binomial Distribution">
+<exercise checkit-seed="1044" checkit-slug="D4" checkit-title="Binomial Distribution">
   <statement>
       
       
       <p>
-          Suppose a group of people are in a room for extended time with someone infected with a novel virus.  Each of the  <m>5</m>  people has a <m>0.36</m> chance of  contracting the virus.  Suppose that whether or not each  person  contract the virus is independent of the other  people.  Find the following:
+          Suppose a group of adults are selected as test subjects for a study.  Each of the  <m>7</m>  people has a <m>0.19</m> chance of  having some type of phobia.  Suppose that whether or not each  person  have some type of phobia is independent of the other  people.  Find the following:
       </p>
       
       
       <p>
           <ol>
               <li>
-                  What is the probability that <m>5</m>  people  contract the virus?
+                  What is the probability that <m>7</m>  people  have some type of phobia?
               </li>
              
               <li>
-                  What is the probability that <m>3</m>  people  contract the virus?
+                  What is the probability that <m>4</m>  people  have some type of phobia?
               </li>
               
               
               <li>
-                  What is the probability that  greater than  <m>2</m>  people  contract the virus?
+                  What is the probability that  less than  <m>2</m>  people  have some type of phobia?
               </li>
               
               <li>
-                  What is the probability that between <m>1</m> and <m>2</m> (inclusive)  people  contract the virus?
+                  What is the probability that between <m>2</m> and <m>3</m> (inclusive)  people  have some type of phobia?
               </li>
           </ol>
           
@@ -47,16 +47,16 @@
      <p>
           <ol>
               <li>
-                  <m>0.006046617599999999</m>
+                  <m>8.938717390000001 \times 10^{-06}</m>
               </li>
               <li>
-                  <m>0.191102976</m>
+                  <m>0.024240272896350005</m>
               </li>
               <li>
-                  <m>0.2508973056</m>
+                  <m>0.6043992080693403</m>
               </li>
               <li>
-                  <m>0.641728512</m>
+                  <m>0.36767323620846015</m>
               </li>
           </ol>
           

@@ -1,4 +1,4 @@
-<exercise checkit-seed="2935" checkit-slug="D1" checkit-title="Standard Normal Distribution">
+<exercise checkit-seed="9121" checkit-slug="D1" checkit-title="Standard Normal Distribution">
   <statement>
       
       
@@ -10,20 +10,20 @@
       <p>
           <ol>
               <li>
-                  <m>P(Z\leq 1.44)</m>.
+                  <m>P(Z\leq 1.16)</m>.
               </li>
              
               <li>
-                  <m>P(-0.56\leq Z\leq 2.1)</m>.
+                  <m>P(-2.73\leq Z\leq 2.27)</m>.
               </li>
               
               
               <li>
-                  <m>z^*</m> such that <m>P(Z\ \geq\ z^*)=0.96</m>.
+                  <m>z^*</m> such that <m>P(Z\ \geq\ z^*)=0.37</m>.
               </li>
               
               <li>
-                  <m>z^*</m> such that <m>P(-z^*\lt\ Z\lt\ z^*)=0.35</m>.
+                  <m>z^*</m> such that <m>P(-z^*\lt\ Z\lt\ z^*)=0.74</m>.
               </li>
           </ol>
           
@@ -47,18 +47,18 @@
      <p>
           <ol>
               <li>
-                  <m>P(Z\leq 1.44)=0.925066300465673</m>.
+                  <m>P(Z\leq 1.16)=0.8769755969486567</m>.
               </li>
               
               <li>
-                  <m>P(-0.56\leq Z\leq 2.1)=0.6943958605881564</m>.
+                  <m>P(-2.73\leq Z\leq 2.27)=0.9852294922007387</m>.
               </li>
               
               <li>
-                  <m>z^*</m> such that <m>P(Z\ \geq\ z^*)=0.96, t^*=-1.7506860712521695</m>.
+                  <m>z^*</m> such that <m>P(Z\ \geq\ z^*)=0.37, t^*=0.3318533464368166</m>.
               </li>
               <li>
-                  <m>z^*</m> such that <m>P(-z^*\leq\ Z\leq\ z^*)=0.35, z^*=0.4537621901698797</m>.
+                  <m>z^*</m> such that <m>P(-z^*\leq\ Z\leq\ z^*)=0.74, z^*=1.1263911290388005</m>.
               </li>
           </ol>
           

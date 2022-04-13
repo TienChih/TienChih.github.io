@@ -1,18 +1,18 @@
-<exercise checkit-seed="2436" checkit-slug="D3" checkit-title="Counting Principles">
+<exercise checkit-seed="5441" checkit-slug="D3" checkit-title="Counting Principles">
   <statement>
       
       
       <p>
-          Suppose a small business had  <m>10</m>  employees.
+          Suppose you had a collection of  <m>11</m>  books.
       </p>
       
       
       <p>
           <ol>
-              <li>How many ways are there to select <m>2</m>  employees  to assign to a special project?</li>
-              <li>How many ways are there to select <m>7</m>  employees  and schedule them one at a time for professional development training?</li>
-              <li>How many ways are there to select <m>3</m>  employees  to give a raise?</li>
-              <li>How many ways are there to select <m>5</m>  employees  and rank them for an internal promotion process?</li>
+              <li>How many ways are there to select <m>9</m>  books  and arrange them on a book shelf?</li>
+              <li>How many ways are there to select <m>8</m>  books  to donate to a library?</li>
+              <li>How many ways are there to select <m>7</m>  books  to put into storage?</li>
+              <li>How many ways are there to select <m>6</m>  books  and give one each to different friends of yours?</li>
           </ol>
           
       </p>
@@ -34,10 +34,10 @@
       
      <p>
           <ol>
-              <li>45 ways.</li>
-              <li>604800 ways.</li>
-              <li>120 ways.</li>
-              <li>30240 ways.</li>
+              <li>19958400 ways.</li>
+              <li>165 ways.</li>
+              <li>330 ways.</li>
+              <li>332640 ways.</li>
           </ol>
           
       </p>

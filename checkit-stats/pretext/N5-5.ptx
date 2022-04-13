@@ -1,21 +1,21 @@
-<exercise checkit-seed="3410" checkit-slug="N5" checkit-title="Size of Sample: Means">
+<exercise checkit-seed="9839" checkit-slug="N5" checkit-title="Size of Sample: Means">
   <statement>
       
      
       
       <p>
-          A sociologist is comparing the average cost of food expenditures of families with similar incomes, but in different neighborhoods.  They want to be able to detect a difference of  <m> -12.13</m>  dollars per month. Suppose they are aware that food expenditures for both neighborhoods have standard deviation  <m> 136.54</m>  dollars per month.
+          A psychologist is testing average reaction times when testing different stimuli.  He wants to be able to detect a difference of  <m> -0.09</m>  seconds. Suppose he is aware the reaction times for both stimuli has standard deviation  <m> 0.21</m>  seconds.
       </p>
       
       <ol>
           <li>
-              What is the power of a test if the number of families observed from each neighborhood was  <m>n=49</m>?
+              What is the power of a test if the number of reactions for each stimuli was  <m>n=48</m>?
           </li>
           <li>
               Explain what this power means in the context of this problem.
           </li>
           <li>
-              How many families observed from each neighborhood would be needed to detect this difference with power  <m>85</m>%?
+              How many reactions for each stimuli would have to observe to detect this difference with power  <m>60</m>%?
           </li>
       </ol>
       
@@ -31,13 +31,13 @@
       
      <ul>
           <li>
-              The standard error if <m>n=49</m> would be <m>SE=27.5852456866318</m>.  The cutoff for a statistically significant test is a difference of <m>-54.06608805048713</m>  dollars per month.  The power of the test is <m>P(X\leq -54.06608805048713)=6.422581584203391</m>% where <m>X</m> is a normal variable with mean <m>-12.13</m> and standard error <m>27.5852456866318</m>.
+              The standard error if <m>n=48</m> would be <m>SE=0.0428660704987056</m>.  The cutoff for a statistically significant test is a difference of <m>-0.0840159543362179</m>  seconds.  The power of the test is <m>P(X\leq -0.0840159543362179)=55.551144718139824</m>% where <m>X</m> is a normal variable with mean <m>-0.09</m> and standard error <m>0.0428660704987056</m>.
          </li>
          <li>
-             If there were actually a difference in average food expenditures of  <m>-12.13</m> dollars per month,  a study where the number of observed families was  <m>n=49</m> would only have a <m>6.422581584203391</m>% chance of detecting it.
+             If there were actually a difference in average reaction time of  <m>-0.09</m> seconds,  a study where the number of observed reactions was  <m>n=48</m> would only have a <m>55.551144718139824</m>% chance of detecting it.
          </li>
          <li>
-             The <m>z</m>-score for a left-tail of <m>85</m>% is <m>1.0364333894937894</m>.  So for this <m>85</m>% tail to be detectable, <m>-12.13+1.0364333894937894SE\approx -1.96SE</m>, so <m>SE\approx 4.048194710459988 </m>, and for this to be true <m>n\geq 2276</m>
+             The <m>z</m>-score for a left-tail of <m>60</m>% is <m>0.2533471031357997</m>.  So for this <m>60</m>% tail to be detectable, <m>-0.09+0.2533471031357997SE\approx -1.96SE</m>, so <m>SE\approx 0.04066305929660656 </m>, and for this to be true <m>n\geq 54</m>
          </li>
          
           

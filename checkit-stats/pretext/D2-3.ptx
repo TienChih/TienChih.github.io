@@ -1,29 +1,29 @@
-<exercise checkit-seed="8519" checkit-slug="D2" checkit-title="General Normal Distribution">
+<exercise checkit-seed="1408" checkit-slug="D2" checkit-title="General Normal Distribution">
   <statement>
       
       
       <p>
-          Suppose the retirement age of professional athletes in a certain league is normally distributed with mean   <m>30.87</m>  years and standard deviation <m>2.57</m>  years.  Find the following:
+          Suppose the braking distance of cars of a certain model travelling at 60 mph is normally distributed with mean   <m>134.25</m>  feet and standard deviation <m>5.7</m>  feet.  Find the following:
       </p>
       
       
       <p>
           <ol>
               <li>
-                  Find the probability that a randomly selected athlete's retirement age   is at least  <m>24.58 </m>  years.
+                  Find the probability that a randomly selected car's braking distance   is at least  <m>146.92 </m>  feet.
               </li>
              
               <li>
-                  Find the probability that a randomly selected athlete's retirement age  is between <m>29.26 </m> and <m>34.15</m>  years.
+                  Find the probability that a randomly selected car's braking distance  is between <m>135.37 </m> and <m>144.65</m>  feet.
               </li>
               
               
               <li>
-                  Find <m>X^*</m> such that  the probability that a randomly selected athlete's retirement age   is at most  <m>X^*</m>  years is <m>84</m>%.
+                  Find <m>X^*</m> such that  the probability that a randomly selected car's braking distance   is at most  <m>X^*</m>  feet is <m>45</m>%.
               </li>
               
               <li>
-                  Find <m>k</m> such that  the probability that a randomly selected athlete's retirement age  is between <m>30.87-k</m>  years and <m>30.87+k</m>  years is <m>60</m>%.
+                  Find <m>k</m> such that  the probability that a randomly selected car's braking distance  is between <m>134.25-k</m>  feet and <m>134.25+k</m>  feet is <m>79</m>%.
               </li>
           </ol>
           
@@ -47,18 +47,18 @@
      <p>
           <ol>
               <li>
-                  <m>P(X\geq 24.58)=0.9928068612535251</m>.
+                  <m>P(X\geq 146.92)=0.0131144078469142</m>.
               </li>
               
               <li>
-                  <m>P(29.26\leq X\leq 34.15)=0.6335620853477117</m>.
+                  <m>P(135.37\leq X\leq 144.65)=0.38807922776683523</m>.
               </li>
               
               <li>
-                  If <m>P(X\leq\  X^*)=84</m>% then <m>X=33.425756759849065</m>  years.
+                  If <m>P(X\leq\  X^*)=45</m>% then <m>X=133.5337303229261</m>  feet.
               </li>
               <li>
-                  If <m>P(30.87-k\leq\  X\leq\  30.87+k)=60</m>% then <m>k=2.1629665702823897</m>  years.
+                  If <m>P(134.25-k\leq\  X\leq\  134.25+k)=79</m>% then <m>k=7.1453229992815706</m>  feet.
               </li>
           </ol>
           

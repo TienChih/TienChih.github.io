@@ -1,29 +1,29 @@
-<exercise checkit-seed="3614" checkit-slug="D2" checkit-title="General Normal Distribution">
+<exercise checkit-seed="4772" checkit-slug="D2" checkit-title="General Normal Distribution">
   <statement>
       
       
       <p>
-          Suppose the weight of adult male moose in a certain forest is normally distributed with mean   <m>1140.74</m>  lbs and standard deviation <m>203.35</m>  lbs.  Find the following:
+          Suppose the weight of adult male moose in a certain forest is normally distributed with mean   <m>1156.29</m>  lbs and standard deviation <m>241.64</m>  lbs.  Find the following:
       </p>
       
       
       <p>
           <ol>
               <li>
-                  Find the probability that a randomly selected adult male moose's weight   is at most  <m>1330.4 </m>  lbs.
+                  Find the probability that a randomly selected adult male moose's weight   is at most  <m>1532.83 </m>  lbs.
               </li>
              
               <li>
-                  Find the probability that a randomly selected adult male moose's weight  is between <m>534.64 </m> and <m>1361.03</m>  lbs.
+                  Find the probability that a randomly selected adult male moose's weight  is between <m>1227.42 </m> and <m>1586.73</m>  lbs.
               </li>
               
               
               <li>
-                  Find <m>X^*</m> such that  the probability that a randomly selected adult male moose's weight   is at least  <m>X^*</m>  lbs is <m>39</m>%.
+                  Find <m>X^*</m> such that  the probability that a randomly selected adult male moose's weight   is at least  <m>X^*</m>  lbs is <m>64</m>%.
               </li>
               
               <li>
-                  Find <m>k</m> such that  the probability that a randomly selected adult male moose's weight  is between <m>1140.74-k</m>  lbs and <m>1140.74+k</m>  lbs is <m>78</m>%.
+                  Find <m>k</m> such that  the probability that a randomly selected adult male moose's weight  is between <m>1156.29-k</m>  lbs and <m>1156.29+k</m>  lbs is <m>79</m>%.
               </li>
           </ol>
           
@@ -47,18 +47,18 @@
      <p>
           <ol>
               <li>
-                  <m>P(X\leq 1330.4)=0.824506785880218</m>.
+                  <m>P(X\leq 1532.83)=0.9404151934233441</m>.
               </li>
               
               <li>
-                  <m>P(534.64\leq X\leq 1361.03)=0.8592248511821934</m>.
+                  <m>P(1227.42\leq X\leq 1586.73)=0.3468105967597154</m>.
               </li>
               
               <li>
-                  If <m>P(X\geq\  X^*)=39</m>% then <m>X=1197.5395256548898</m>  lbs.
+                  If <m>P(X\geq\  X^*)=64</m>% then <m>X=1069.6720171987815</m>  lbs.
               </li>
               <li>
-                  If <m>P(1140.74-k\leq\  X\leq\  1140.74+k)=78</m>% then <m>k=249.41449320944474</m>  lbs.
+                  If <m>P(1156.29-k\leq\  X\leq\  1156.29+k)=79</m>% then <m>k=302.9115525519997</m>  lbs.
               </li>
           </ol>
           

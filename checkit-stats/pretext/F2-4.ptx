@@ -1,21 +1,21 @@
-<exercise checkit-seed="3716" checkit-slug="F2" checkit-title="Confidence Intervals">
+<exercise checkit-seed="9783" checkit-slug="F2" checkit-title="Confidence Intervals">
   <statement>
       <p>
           A psychologist wants to know if a new mental exercise helps people retain short term memory.  Adult subjects were selected and their short term memory was tested.  After completing the exercise, their short term memory was tested again.
       </p>
       <p>
-Suppose that for   <m>n=68</m> test subjects, <m>34</m> showed improved short term memory. 
+Suppose that for   <m>n=80</m> test subjects, <m>59</m> showed improved short term memory. 
       </p>
       
       <ol>
           <li>
-              Find a <m>95</m>% confidence interval for the proportion of adults that would show improved memory doing this exercise.
+              Find a <m>99</m>% confidence interval for the proportion of adults that would show improved memory doing this exercise.
           </li>
           <li>
               Using complete sentences, explain what the confidence interval means in the context of this problem.
           </li>
           <li>
-              Suppose the psychologist claims that   <m>55</m>% of adults  would show improved memory doing this exercise.  Is this claim consistent with what we found?  Explain why or why not.
+              Suppose the psychologist claims that   <m>68</m>% of adults  would show improved memory doing this exercise.  Is this claim consistent with what we found?  Explain why or why not.
           </li>
           
       </ol>
@@ -28,16 +28,16 @@ Suppose that for   <m>n=68</m> test subjects, <m>34</m> showed improved short te
   <answer>
       <ul>
           <li>
-              The sample proportion is <m>\hat{p}=\frac{1}{2}</m>.
+              The sample proportion is <m>\hat{p}=\frac{59}{80}</m>.
           </li>
           <li>
-              The standard error is <m>SE=0.0606339062590832</m>.
+              The standard error is <m>SE=0.0491927014403560</m>.
           </li>
           <li>
-              For a 95% confidence interval,  <m>z^*=1.9599639845400536</m>.
+              For a 99% confidence interval,  <m>z^*=2.5758293035489</m>.
           </li>
           <li>
-              The proportion of adults that would show improved memory doing this exercise has a 95% chance of of falling in <m>[0.381159727490219, 0.618840272509781]</m>.
+              The proportion of adults that would show improved memory doing this exercise has a 99% chance of of falling in <m>[0.610787998109199, 0.864212001890801]</m>.
           </li>
           <li>
               The claim is consistent.

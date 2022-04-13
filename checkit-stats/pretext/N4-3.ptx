@@ -1,12 +1,12 @@
-<exercise checkit-seed="3114" checkit-slug="N4" checkit-title="Inference for difference of means of Numerical Variables">
+<exercise checkit-seed="9195" checkit-slug="N4" checkit-title="Inference for difference of means of Numerical Variables">
   <statement>
       
       <p>
-          A sociologist compares number of daily police stops in two different neighborhoods of the same city with similar size.  Out of  <m>33</m>  observed days, the daily number of stops for Neighborhood A was  <m>\bar{x}_1=51.053</m>  stops, with sample standard deviation <m>s_1=4.241</m>  stops.  Then out of <m>33</m>  observed days, the daily number of stops for Neighborhood A was  <m>\bar{x}_2=49.528999999999996</m>  stops, with sample standard deviation <m>s_2=3.912</m>  stops.
+          A political scientist compares the amount of money donated to campaigns for poltitical parties A and B.  Out of  <m>31</m>  observed members of Party A, the average sample donation was  <m>\bar{x}_1=2273.859</m>  dollars, with sample standard deviation <m>s_1=494.079</m>  dollars.  Then out of <m>31</m>  observed members of Party B, the average sample donation was  <m>\bar{x}_2=1900.033</m>  dollars, with sample standard deviation <m>s_2=658.403</m>  dollars.
       </p>
       
       <ul>
-          <li>  Test the hypothesis that  the difference in average daily police stops between  Neighborhood A and Neighborhood B, <m>\mu_1-\mu_2</m>, is not equal to <m>  0</m>  stops.
+          <li>  Test the hypothesis that  the difference in average donation between members of Party A and Party B, <m>\mu_1-\mu_2</m>, is not equal to <m>  100</m>  dollars.
               <ol>
           <li>
               State the null hypothesis.
@@ -27,7 +27,7 @@
       </ol>
           </li>
           <li>
-              Find a <m>95</m>% confidence interval for the  the difference in average daily police stops between  Neighborhood A and Neighborhood B.  Using complete sentences, explain what the confidence interval means in the context of this problem.
+              Find a <m>95</m>% confidence interval for the  the difference in average donation between members of Party A and Party B.  Using complete sentences, explain what the confidence interval means in the context of this problem.
           </li>
       </ul>
       
@@ -43,26 +43,26 @@
       
      <ul>
           <li>
-              The null hypothesis is <m>H_0: \mu_1-\mu_2=0</m>.
+              The null hypothesis is <m>H_0: \mu_1-\mu_2=100</m>.
           </li>
          <li>
-              The alternative hypothesis is <m>H_A: \mu_1-\mu_2\neq0</m>.
+              The alternative hypothesis is <m>H_A: \mu_1-\mu_2\neq100</m>.
           </li>
           <li>
-              The sampling distribution has mean <m>0</m> and standard error <m>SE=1.00438168828268</m>.
+              The sampling distribution has mean <m>100</m> and standard error <m>SE=147.845665895871</m>.
           </li>
          <li>
-              The observesd difference of sample means is <m>\bar{x_1}-\bar{x_2}=1.524</m> which has <m>t</m>-score <m>t=1.5173514389791107</m>.
+              The observesd difference of sample means is <m>\bar{x_1}-\bar{x_2}=373.826</m> which has <m>t</m>-score <m>t=1.8521070492039844</m>.
           </li>
          <li>
-              The <m>p</m>-value is <m>0.1389961656056944</m>.
+              The <m>p</m>-value is <m>0.07387402345834104</m>.
           </li>
          
          <li>
-              For a <m>95</m>% confidence interval,  <m>t^*=2.036933343460101</m>.
+              For a <m>95</m>% confidence interval,  <m>t^*=2.0422724563012378</m>.
           </li>
           <li>
-              The  the difference in average daily police stops between  Neighborhood A and Neighborhood B  has a <m>95</m>% chance of of falling in <m>[-0.521858550423750, 3.56985855042375]</m>.
+              The  the difference in average donation between members of Party A and Party B  has a <m>95</m>% chance of of falling in <m>[71.8848687573472, 675.767131242653]</m>.
           </li>
          
           

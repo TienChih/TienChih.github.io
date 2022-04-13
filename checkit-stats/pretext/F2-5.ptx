@@ -1,21 +1,21 @@
-<exercise checkit-seed="1641" checkit-slug="F2" checkit-title="Confidence Intervals">
+<exercise checkit-seed="1381" checkit-slug="F2" checkit-title="Confidence Intervals">
   <statement>
       <p>
-          A company wondered if people liked the user interface of their upgraded website.  They survey a random selection of their customers.
+          A county health department wants to know what proportion of their citizens are willing to take a vaccine for a novel virus.  They survey a random selection residents in the county.
       </p>
       <p>
-Suppose that for   <m>n=51</m> surveyed customers, <m>15</m> preferred the new user interface. 
+Suppose that for   <m>n=86</m> surveyed residents, <m>24</m> had or were willing to be vaccinated. 
       </p>
       
       <ol>
           <li>
-              Find a <m>95</m>% confidence interval for the proportion of all the company's customers that prefer the new interface.
+              Find a <m>95</m>% confidence interval for the proportion of all residents in the county that had or would be willing to be vaccinated.
           </li>
           <li>
               Using complete sentences, explain what the confidence interval means in the context of this problem.
           </li>
           <li>
-              Suppose the company claims that   <m>34</m>% of all the company's customers  prefer the new interface.  Is this claim consistent with what we found?  Explain why or why not.
+              Suppose the health department claims that   <m>59</m>% of all residents in the county  had or would be willing to be vaccinated.  Is this claim consistent with what we found?  Explain why or why not.
           </li>
           
       </ol>
@@ -28,19 +28,19 @@ Suppose that for   <m>n=51</m> surveyed customers, <m>15</m> preferred the new u
   <answer>
       <ul>
           <li>
-              The sample proportion is <m>\hat{p}=\frac{5}{17}</m>.
+              The sample proportion is <m>\hat{p}=\frac{12}{43}</m>.
           </li>
           <li>
-              The standard error is <m>SE=0.0638030758290165</m>.
+              The standard error is <m>SE=0.0483675165285265</m>.
           </li>
           <li>
               For a 95% confidence interval,  <m>z^*=1.9599639845400536</m>.
           </li>
           <li>
-              The proportion of all the company's customers that prefer the new interface has a 95% chance of of falling in <m>[0.169065916331073, 0.419169377786574]</m>.
+              The proportion of all residents in the county that had or would be willing to be vaccinated has a 95% chance of of falling in <m>[0.184271177024303, 0.373868357859418]</m>.
           </li>
           <li>
-              The claim is consistent.
+              The claim is not consistent.
           </li>
       </ul>
           

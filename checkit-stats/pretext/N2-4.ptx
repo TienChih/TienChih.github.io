@@ -1,12 +1,12 @@
-<exercise checkit-seed="6072" checkit-slug="N2" checkit-title="Inference for single Numerical Variables">
+<exercise checkit-seed="8978" checkit-slug="N2" checkit-title="Inference for single Numerical Variables">
   <statement>
       
       <p>
-          A sociologist is studying the average amount of sleep residents get in a certain city.  They conduct a survey of the cities residents.  Out of  <m>34</m>  surveyed residents, the sample average amount of sleep was  <m>\bar{x}=8.25</m>  hours, with sample standard deviation <m>s=0.951</m>  hours.
+          A farmer is curious about the effects of a new fertilizer on the height of her corn stalks.  She measures the heights of a random selection of her stalks.  Out of  <m>21</m>  measured corn stalks, the sample average height  <m>\bar{x}=2.437</m>  meters, with sample standard deviation <m>s=0.202</m>  meters.
       </p>
       
       <ul>
-          <li>  Test the hypothesis that  the average amount of sleep amongst the city's residents  is not equal to <m>  8</m>  hours.
+          <li>  Test the hypothesis that  the average height of her corn stalks  is less than <m>  2.5</m>  meters.
               <ol>
           <li>
               State the null hypothesis.
@@ -27,7 +27,7 @@
       </ol>
           </li>
           <li>
-              Find a <m>99</m>% confidence interval for the  the average amount of sleep amongst the city's residents.  Using complete sentences, explain what the confidence interval means in the context of this problem.
+              Find a <m>95</m>% confidence interval for the  the average height of her corn stalks.  Using complete sentences, explain what the confidence interval means in the context of this problem.
           </li>
       </ul>
       
@@ -43,26 +43,26 @@
       
      <ul>
           <li>
-              The null hypothesis is <m>H_0: \mu=8</m>.
+              The null hypothesis is <m>H_0: \mu=2.5</m>.
           </li>
          <li>
-              The alternative hypothesis is <m>H_A: \mu\neq8</m>.
+              The alternative hypothesis is <m>H_A: \mu\lneq2.5</m>.
           </li>
           <li>
-              The sampling distribution has mean <m>8</m> and standard error <m>SE=0.163095154470526</m>.
+              The sampling distribution has mean <m>2.5</m> and standard error <m>SE=0.0440800138276705</m>.
           </li>
          <li>
-              The sample mean is <m>\bar{x}=8.25</m> which has <m>t</m>-score <m>t=1.5328475012737384</m>.
+              The sample mean is <m>\bar{x}=2.437</m> which has <m>t</m>-score <m>t=-1.4292191523872213</m>.
           </li>
          <li>
-              The <m>p</m>-value is <m>0.13484547359451882</m>.
+              The <m>p</m>-value is <m>0.08418780899795181</m>.
           </li>
          
          <li>
-              For a <m>99</m>% confidence interval,  <m>t^*=2.7332766423508326</m>.
+              For a <m>95</m>% confidence interval,  <m>t^*=2.085963447265865</m>.
           </li>
           <li>
-              The  the average amount of sleep amongst the city's residents  has a <m>99</m>% chance of of falling in <m>[7.80421582380511, 8.69578417619489]</m>.
+              The  the average height of her corn stalks  has a <m>95</m>% chance of of falling in <m>[2.34505070240051, 2.52894929759949]</m>.
           </li>
          
           

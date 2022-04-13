@@ -1,14 +1,13 @@
-<exercise checkit-seed="8274" checkit-slug="P4" checkit-title="Random Variables">
+<exercise checkit-seed="8764" checkit-slug="P4" checkit-title="Random Variables">
   <statement>
       
       <p>
-          A math professor is compiling a section for their #PreTeXt book.  Let <m>X</m> denote   the number of errors currently in the code.  Consider the following probability distribution table for <m>X</m>.
+          A soccer team plays a match against the opposing team.  Let <m>X</m> denote   the number of goals they score.  Consider the following probability distribution table for <m>X</m>.
       </p>
       
       <p>
           <me>
               \begin{array}{|c
-              |c
               |c
               |c
               |c
@@ -26,17 +25,15 @@
               &amp; 3
               &amp; 4
               &amp; 5
-              &amp; 6
               \\
               \hline
               P(X=X_i)
-              &amp; 0.027
-              &amp; 0.397
-              &amp; 0.119
-              &amp; 0.125
+              &amp; 0.297
               &amp; ???
-              &amp; 0.116
-              &amp; 0.113
+              &amp; 0.206
+              &amp; 0.078
+              &amp; 0.065
+              &amp; 0.271
               \\
               \hline
               \end{array}
@@ -80,16 +77,16 @@
      <p>
          <ol>
              <li>
-                 <m>P(X=4)=0.103</m>.
+                 <m>P(X=1)=0.083</m>.
              </li>
              <li>
-                 <m>E(X)=2.6799999999999997</m>.
+                 <m>E(X)=2.344</m>.
              </li>
              <li>
-                 <m>Var(X)=3.431600000000002</m>
+                 <m>Var(X)=3.929664</m>
              </li>
              <li>
-                 <m>\sigma_X=1.8524578267804108</m>
+                 <m>\sigma_X=1.9823380135587372</m>
              </li>
          </ol>
           

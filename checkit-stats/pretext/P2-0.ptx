@@ -1,4 +1,4 @@
-<exercise checkit-seed="9168" checkit-slug="P2" checkit-title="Conditional Probability">
+<exercise checkit-seed="5102" checkit-slug="P2" checkit-title="Conditional Probability">
   <statement>
       
       <p>
@@ -6,7 +6,7 @@
       </p>
       
       <p>
-          Suppose that   the probability that   the customer purchases over $100 is <m>0.091</m>, the probability that   the customer purchases over $100 given that they use a credit card is <m>0.091</m>, and finally   the probability that    the customer uses a credit card is <m>0.68</m>.
+          Suppose that   the probability that   the customer purchases over $100 is <m>0.089</m>, the probability that   the customer purchases over $100 given that they use a credit card is <m>0.096</m>, and finally   the probability that    the customer uses a credit card is <m>0.695</m>.
       </p>
       
       
@@ -43,13 +43,13 @@
      <p>
           <ol>
               <li>
-                   The probability that    the customer purchases over $100 and uses a credit card is <m>0.061880000000000004</m>.
+                   The probability that    the customer purchases over $100 and uses a credit card is <m>0.06672</m>.
               </li>
               <li>
-                   The  probability that    the customer uses a credit card, given that they purchased over $100 is <m>0.68</m>.
+                   The  probability that    the customer uses a credit card, given that they purchased over $100 is <m>0.7496629213483147</m>.
               </li>
               <li>
-                  The events   the customer purchases over $100, and    the customer uses a credit card  are independent.
+                  The events   the customer purchases over $100, and    the customer uses a credit card  are not independent.
               </li>
           </ol>
           

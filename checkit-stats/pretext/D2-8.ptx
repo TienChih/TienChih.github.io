@@ -1,29 +1,29 @@
-<exercise checkit-seed="5847" checkit-slug="D2" checkit-title="General Normal Distribution">
+<exercise checkit-seed="5054" checkit-slug="D2" checkit-title="General Normal Distribution">
   <statement>
       
       
       <p>
-          Suppose the retirement age of professional athletes in a certain league is normally distributed with mean   <m>33.33</m>  years and standard deviation <m>2.1</m>  years.  Find the following:
+          Suppose the weekly profit of a food truck is normally distributed with mean   <m>940.15</m>  dollars and standard deviation <m>633.18</m>  dollars.  Find the following:
       </p>
       
       
       <p>
           <ol>
               <li>
-                  Find the probability that a randomly selected athlete's retirement age   is at most  <m>36.03 </m>  years.
+                  Find the probability that a randomly selected week's profit   is at most  <m>1603.06 </m>  dollars.
               </li>
              
               <li>
-                  Find the probability that a randomly selected athlete's retirement age  is between <m>31.51 </m> and <m>39.1</m>  years.
+                  Find the probability that a randomly selected week's profit  is between <m>890.3 </m> and <m>1623.27</m>  dollars.
               </li>
               
               
               <li>
-                  Find <m>X^*</m> such that  the probability that a randomly selected athlete's retirement age   is at least  <m>X^*</m>  years is <m>37</m>%.
+                  Find <m>X^*</m> such that  the probability that a randomly selected week's profit   is at least  <m>X^*</m>  dollars is <m>20</m>%.
               </li>
               
               <li>
-                  Find <m>k</m> such that  the probability that a randomly selected athlete's retirement age  is between <m>33.33-k</m>  years and <m>33.33+k</m>  years is <m>35</m>%.
+                  Find <m>k</m> such that  the probability that a randomly selected week's profit  is between <m>940.15-k</m>  dollars and <m>940.15+k</m>  dollars is <m>22</m>%.
               </li>
           </ol>
           
@@ -47,18 +47,18 @@
      <p>
           <ol>
               <li>
-                  <m>P(X\leq 36.03)=0.9007286031566692</m>.
+                  <m>P(X\leq 1603.06)=0.8524394812079451</m>.
               </li>
               
               <li>
-                  <m>P(31.51\leq X\leq 39.1)=0.8039361772669881</m>.
+                  <m>P(890.3\leq X\leq 1623.27)=0.3910536871976201</m>.
               </li>
               
               <li>
-                  If <m>P(X\geq\  X^*)=37</m>% then <m>X=34.02689202751731</m>  years.
+                  If <m>P(X\geq\  X^*)=20</m>% then <m>X=1473.0477326736977</m>  dollars.
               </li>
               <li>
-                  If <m>P(33.33-k\leq\  X\leq\  33.33+k)=35</m>% then <m>k=0.9529005993567473</m>  years.
+                  If <m>P(940.15-k\leq\  X\leq\  940.15+k)=22</m>% then <m>k=176.85922623143898</m>  dollars.
               </li>
           </ol>
           

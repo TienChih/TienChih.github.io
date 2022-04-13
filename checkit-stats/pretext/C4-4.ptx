@@ -1,9 +1,9 @@
-<exercise checkit-seed="3006" checkit-slug="C4" checkit-title="Chi^2 independence test">
+<exercise checkit-seed="5662" checkit-slug="C4" checkit-title="Chi^2 independence test">
   <statement>
       
       
       <p>
-          A psychologist shows two different short videos to test subjects, ans asked them to rate their feelings after the video as Happiness, Anger or Sadness:
+          A newspaper polls members of two political parties to measure their position on a newly proposed law.  The polled participants either Support, are Neutral, or Oppose the proposed law:
       </p>
       
       
@@ -11,11 +11,11 @@
           <me>
               \begin{array}{|c|c|c|c|}
               \hline
-              &amp; \text{ Happiness } &amp; \text{ Anger } &amp; \text{ Sadness }\\
+              &amp; \text{ Support } &amp; \text{ Neutral } &amp; \text{ Oppose }\\
               \hline
-              \text{ Video 1 } &amp; 74 &amp; 51 &amp; 30\\
+              \text{ Party A } &amp; 26 &amp; 78 &amp; 54\\
               \hline
-              \text{ Video 2 } &amp; 33 &amp; 42 &amp; 29\\
+              \text{ Party B } &amp; 47 &amp; 87 &amp; 50\\
               \hline
               \end{array}
           </me>
@@ -25,7 +25,7 @@
       
      
       <p>
-          Use a <m>\chi^2</m> independence test to test  whether emotional reactions are independent of the choice of video.
+          Use a <m>\chi^2</m> independence test to test  whether position on this law is independent of party affiliation.
       </p>
       <ul>
           <li>
@@ -55,19 +55,19 @@
       
      <ul>
           <li>
-              The null hypothesis is <m>H_0:\ </m>Emotional reactions are independent of the choice of video.
+              The null hypothesis is <m>H_0:\ </m>Position on the law is independent of party affiliation.
           </li>
          <li>
-              The alternative hypothesis is <m>H_A:\ </m>Emotional reactions are not independent of the choice of video.
+              The alternative hypothesis is <m>H_A:\ </m>Position on the law is independent of party affiliation.
           </li>
           <li>
               There are <m>2</m> degrees of freedom.
           </li>
          <li>
-              The <m>\chi^2</m> value is <m>6.82017169595965</m>.
+              The <m>\chi^2</m> value is <m>4.73661850039195</m>.
           </li>
          <li>
-              The <m>p</m>-value is <m>0.03303836397733495</m>.
+              The <m>p</m>-value is <m>0.09363891248666056</m>.
           </li>
          
           

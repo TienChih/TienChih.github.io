@@ -1,15 +1,15 @@
-<exercise checkit-seed="9252" checkit-slug="C1" checkit-title="Size of Sample: Proportion">
+<exercise checkit-seed="3516" checkit-slug="C1" checkit-title="Size of Sample: Proportion">
   <statement>
       <p>
-          An engineer wants to know the probability that a new anti-rust coat stays on when exposed to rain-like conditions.  She wants to find a <m> 95</m>% confidence interval with margin of error <m>ME=0.05</m>.
+          An engineer wants to know the probability that a new anti-rust coat stays on when exposed to rain-like conditions.  She wants to find a <m> 99</m>% confidence interval with margin of error <m>ME=0.05</m>.
       </p>
       <p>
-          A previous study showed that  of <m>65\ </m> tested samples exposed to rain-like conditions,  <m>43\ </m>had the coating stay on.  How many samples should she now test to obtain a <m>95</m>% confidence interval with margin of error <m>ME=0.05</m>?
+          A previous study showed that  of <m>56\ </m> tested samples exposed to rain-like conditions,  <m>41\ </m>had the coating stay on.  How many samples should she now test to obtain a <m>99</m>% confidence interval with margin of error <m>ME=0.05</m>?
       </p>
       
       <!--<ol>
           <li>
-              Find a <m>95</m>% confidence interval for the proportion of  that .
+              Find a <m>99</m>% confidence interval for the proportion of  that .
           </li>
           <li>
               Using complete sentences, explain what the confidence interval means in the context of this problem.
@@ -26,16 +26,16 @@
       <title>Partial Solution:</title>
       <ul>
           <li>
-              The sample proportion of the initial study is <m>\hat{p}=0.6615384615384615</m>.
+              The sample proportion of the initial study is <m>\hat{p}=0.7321428571428571</m>.
           </li>
           <li>
-              For a 95% confidence interval,  <m>z^*=1.9599639845400536</m>.
+              For a 99% confidence interval,  <m>z^*=2.5758293035489</m>.
           </li>
           <li>
               The margin of error is <m>ME=0.05</m>.
           </li>
           <li>
-              The number of samples should she now test is at least <m>345</m>.
+              The number of samples should she now test is at least <m>521</m>.
           </li>
       </ul>
           

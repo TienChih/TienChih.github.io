@@ -1,10 +1,10 @@
-<exercise checkit-seed="9883" checkit-slug="F3" checkit-title="Hypothesis Testing">
+<exercise checkit-seed="3567" checkit-slug="F3" checkit-title="Hypothesis Testing">
   <statement>
       <p>
-          An engineer tests to see if the he proproportion of iron samples, when sprayed with a new compound, would rust when exposed to water is greater than <m>  48</m>%.  He conducts an experiment.
+          A CEO is curious if the proportion of employees that are satisfied with their job is not equal to <m>  63</m>%.  They conduct a survey of employees.
       </p>
       <p>
-Suppose that for   <m>n=175</m> iron samples, <m>99</m> rusted. Test the hypothesis that  the proportion of iron samples that would rust is greater than <m>  48</m>%. 
+Suppose that for   <m>n=148</m> surveyed employees, <m>79</m> were satisfied with their job. Test the hypothesis that  the proportion of all employees that are satisfied with their job is not equal to <m>  63</m>%. 
       </p>
       
       <ol>
@@ -36,26 +36,26 @@ Suppose that for   <m>n=175</m> iron samples, <m>99</m> rusted. Test the hypothe
       
      <ul>
           <li>
-              The null hypothesis is <m>H_0: p=0.48</m>.
+              The null hypothesis is <m>H_0: p=0.63</m>.
           </li>
          <li>
-              The alternative hypothesis is <m>H_A: p\gneq0.48</m>.
+              The alternative hypothesis is <m>H_A: p\neq0.63</m>.
           </li>
           <li>
-              The sampling distribution has mean <m>0.48</m> and standard error <m>SE=0.0377661980385333</m>.
+              The sampling distribution has mean <m>0.63</m> and standard error <m>SE=0.0396862696659689</m>.
           </li>
          <li>
-              The sample proportion is <m>\hat{p}=0.5657142857142857</m> which has <m>z</m>-score <m>z=2.26960324750801</m>.
+              The sample proportion is <m>\hat{p}=0.5337837837837838</m> which has <m>z</m>-score <m>z=-2.42442076380694</m>.
           </li>
          <li>
-              The <m>p</m>-value is <m>0.01161583320748838</m>.
+              The <m>p</m>-value is <m>0.015332828897992812</m>.
           </li>
          
           <!--<li>
               For a % confidence interval,  <m>z^*=</m>.
           </li>
           <li>
-              The proportion of iron samples that would rust has a % chance of of falling in <m>[, ]</m>.
+              The proportion of all employees that are satisfied with their job has a % chance of of falling in <m>[, ]</m>.
           </li>-->
       </ul>
           

@@ -1,10 +1,10 @@
-<exercise checkit-seed="4457" checkit-slug="C2" checkit-title="Two Categorical Variable Inferences">
+<exercise checkit-seed="9279" checkit-slug="C2" checkit-title="Two Categorical Variable Inferences">
   <statement>
       <p>
-          A political scientist wonders about differences in support of a new federal mandate in his city.  He wants to know if the difference in rate of support for the mandate between people who voted for the current incumbent major and those who didnt<m>\, </m> is greater than <m>\,   0.00</m>.  He polls both people who voted for, and didn't vote for, the current mayor.
+          A restaurateur wants to know about the difference in percieved quality of service in her eastern and western locations.  She wants to know if the proportion of customers who liked the service<m>\, </m> is greater than <m>\,   0.01</m>.  She polls random diners at both the eastern and western locations.
       </p>
       <p>
-          Suppose that of   <m>n_1=247\, </m>polled adults who voted for the current mayor, <m>x_1=200\, </m>supported the new federal mandate and of <m>n_2=247\, </m>polled adults who didn't vote for the current mayor, <m>x_2=184\, </m>supported the new federal mandate. Test the hypothesis that  the difference between the proportion of people who voted for the mayor who support the new federal mandate: <m>p_1</m>, and the proportion of people who did not vote for the mayor who support the new federal mandate: <m>p_2</m>,   is greater than<m>\,   0.00</m>.  That is <m>p_1-p_2\gneq 0.00</m>.
+          Suppose that of   <m>n_1=246\, </m>polled diners from the eastern location, <m>x_1=69\, </m>liked the service and of <m>n_2=246\, </m>polled diners from the western location, <m>x_2=48\, </m>liked the service. Test the hypothesis that  the difference between the proportion of diners at the eastern location who like the service: <m>p_1</m>, and the proportion of diners at the western location who like the service: <m>p_2</m>,   is greater than<m>\,   0.01</m>.  That is <m>p_1-p_2\gneq 0.01</m>.
       </p>
       
       <ol>
@@ -36,26 +36,26 @@
       
      <ul>
           <li>
-              The null hypothesis is <m>H_0: p_1-p_2= 0.00</m>.
+              The null hypothesis is <m>H_0: p_1-p_2= 0.01</m>.
           </li>
          <li>
-              The alternative hypothesis is <m>H_A: p_1-p_2\gneq 0.00</m>.
+              The alternative hypothesis is <m>H_A: p_1-p_2\gneq 0.01</m>.
           </li>
           <li>
-              The sampling distribution has mean <m> 0.00</m> and standard error <m>SE=0.0374370420326566</m>.
+              The sampling distribution has mean <m> 0.01</m> and standard error <m>SE=0.0381941856748913</m>.
           </li>
          <li>
-              The difference in sample proportions is <m>\hat{p}=0.06477732793522262</m> which has <m>z</m>-score <m>z=1.73030037679571</m>.
+              The difference in sample proportions is <m>\hat{p}=0.0853658536585366</m> which has <m>z</m>-score <m>z=1.97322844634129</m>.
           </li>
          <li>
-              The <m>p</m>-value is <m>0.04178831113762016</m>.
+              The <m>p</m>-value is <m>0.024234770457799537</m>.
           </li>
          
           <!--<li>
               For a % confidence interval,  <m>z^*=</m>.
           </li>
           <li>
-              The proportion of  that support the new federal mandate has a % chance of of falling in <m>[, ]</m>.
+              The proportion of  that like the service has a % chance of of falling in <m>[, ]</m>.
           </li>-->
       </ul>
           

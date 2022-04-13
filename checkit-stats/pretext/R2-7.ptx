@@ -1,93 +1,78 @@
-<exercise checkit-seed="2473" checkit-slug="R2" checkit-title="Interpreting Linear Regression">
+<exercise checkit-seed="7639" checkit-slug="R2" checkit-title="Interpreting Linear Regression">
   <statement>
       <p>
-          A study is conducted examining how far a car has driven (in thousands of miles) compared to how expensive the annual maintenance costs are.
+          A survey is conducted comparing different homes electricity usage (in kilowatt hours), and their electric bills (dollars) within a city.
       </p>
       
       <p>
-          Consider this table of data collected comparing Distance Driven measured in thousand miles, and Maintenance Cost measured in dollars:
+          Consider this table of data collected comparing Electricity Usage measured in kilowatt hours, and Electric Bill measured in dollars:
           <me>
                \begin{array}{|c|c|}
               \hline
-              \text{ Distance Driven in thousand miles }
+              \text{ Electricity Usage in kilowatt hours }
               &amp;
-              \text{ Maintenance Cost in dollars }
+              \text{ Electric Bill in dollars }
               \\
               \hline
-               27.62
-              &amp; 709.41
+               225.97
+              &amp; 44.08
                   \\
-               19.6
-              &amp; 349.75
+               151.76
+              &amp; 27.92
                   \\
-               23.01
-              &amp; 820.18
+               243.04
+              &amp; 41.23
                   \\
-               21.75
-              &amp; 563.54
+               170.45
+              &amp; 37.03
                   \\
-               25.82
-              &amp; 708.09
+               178.68
+              &amp; 36.28
                   \\
-               25.79
-              &amp; 817.58
+               268.98
+              &amp; 50.14
                   \\
-               22.27
-              &amp; 718.77
+               185.95
+              &amp; 39.56
                   \\
-               18.39
-              &amp; 604.72
+               156.88
+              &amp; 34.21
                   \\
-               25.44
-              &amp; 550.05
+               265.66
+              &amp; 48.41
                   \\
-               27.63
-              &amp; 809.06
+               192.58
+              &amp; 38.23
                   \\
-               21.95
-              &amp; 608.01
+               249.95
+              &amp; 50.83
                   \\
-               23.86
-              &amp; 602.46
+               293.58
+              &amp; 48.5
                   \\
-               25.2
-              &amp; 517.48
+               193.26
+              &amp; 39.0
                   \\
-               19.02
-              &amp; 641.29
+               206.44
+              &amp; 37.94
                   \\
-               19.31
-              &amp; 808.74
+               157.26
+              &amp; 31.43
                   \\
-               21.02
-              &amp; 848.79
+               211.95
+              &amp; 40.32
                   \\
-               21.01
-              &amp; 528.29
+               292.32
+              &amp; 52.91
                   \\
-               29.66
-              &amp; 1130.55
+               232.63
+              &amp; 48.59
                   \\
-               15.89
-              &amp; 472.63
+               238.05
+              &amp; 45.26
                   \\
-               20.94
-              &amp; 606.74
-                  \\
-               15.07
-              &amp; 387.11
-                  \\
-               29.95
-              &amp; 702.1
-                  \\
-               22.74
-              &amp; 705.48
-                  \\
-               27.73
-              &amp; 932.98
-                  \\
-               23.64
-              &amp; 740.84
+               176.81
+              &amp; 33.18
                   \\
               
               \hline
@@ -103,13 +88,13 @@
                   Find the slope <m>\beta_1</m> and it's units.
               </li>
               <li>
-                  What does <m>\beta_1</m> tell you about the relationship between Distance Driven and Maintenance Cost?
+                  What does <m>\beta_1</m> tell you about the relationship between Electricity Usage and Electric Bill?
               </li>
               <li>
-                  For a car with Distance Driven <m>24.86</m> thousand miles, what is the estimated Maintenance Cost?
+                  For a household with Electricity Usage <m>224.24</m> kilowatt hours, what is the estimated Electric Bill?
               </li>
               <li>
-                  For a car with Maintenance Cost <m>613.35</m> dollars, what is the estimated Distance Driven?
+                  For a household with Electric Bill <m>45.07</m> dollars, what is the estimated Electricity Usage?
               </li>
               
           </ol>
@@ -134,19 +119,19 @@
           <p>
           <ol>
               <li>
-                  <m>\beta_0=33.94921797644531\ </m> dollars.
+                  <m>\beta_0=9.640826969108385\ </m> dollars.
               </li>
               <li>
-                  <m>\beta_1=27.922044802613332\ </m> dollars<m>/</m>thousand miles.
+                  <m>\beta_1=0.147298229490199\ </m> dollars<m>/</m>kilowatt hours.
               </li>
               <li>
-                 Whenever Distance Driven increases by 1 thousand miles, Maintenance Cost changes, on average, by <m>27.922044802613332\ </m> dollars.
+                 Whenever Electricity Usage increases by 1 kilowatt hours, Electric Bill changes, on average, by <m>0.147298229490199\ </m> dollars.
               </li>
               <li>
-                  For a car with Distance Driven <m>\ 24.86\ </m> thousand miles, the estimated Maintenance Cost is <m>728.0912517694127\ </m> dollars.
+                  For a household with Electricity Usage <m>\ 224.24\ </m> kilowatt hours, the estimated Electric Bill is <m>42.670981949990605\ </m> dollars.
               </li>
               <li>
-                  For a car with Maintenance Cost <m>\ 613.35\ </m> dollars, the estimated Distance Driven is <m>20.75065727168113\ </m> thousand miles.
+                  For a household with Electric Bill <m>\ 45.07\ </m> dollars, the estimated Electricity Usage is <m>240.5268084586789\ </m> kilowatt hours.
               </li>
               
           </ol>

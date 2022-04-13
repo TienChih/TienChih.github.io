@@ -1,9 +1,9 @@
-<exercise checkit-seed="7450" checkit-slug="C4" checkit-title="Chi^2 independence test">
+<exercise checkit-seed="7951" checkit-slug="C4" checkit-title="Chi^2 independence test">
   <statement>
       
       
       <p>
-          Two tech companies, Company A and B, recruit students from Universities 1, 2 and 3.  A sampling on recent hires show their Alma Mater:
+          A psychologist shows two different short videos to test subjects, ans asked them to rate their feelings after the video as Happiness, Anger or Sadness:
       </p>
       
       
@@ -11,11 +11,11 @@
           <me>
               \begin{array}{|c|c|c|c|}
               \hline
-              &amp; \text{ University 1 } &amp; \text{ University 2 } &amp; \text{ University 3 }\\
+              &amp; \text{ Happiness } &amp; \text{ Anger } &amp; \text{ Sadness }\\
               \hline
-              \text{ Company A } &amp; 54 &amp; 48 &amp; 20\\
+              \text{ Video 1 } &amp; 43 &amp; 32 &amp; 49\\
               \hline
-              \text{ Company B } &amp; 30 &amp; 37 &amp; 31\\
+              \text{ Video 2 } &amp; 54 &amp; 22 &amp; 35\\
               \hline
               \end{array}
           </me>
@@ -25,7 +25,7 @@
       
      
       <p>
-          Use a <m>\chi^2</m> independence test to test  whether hiring preferences of the companies are independent of the company.
+          Use a <m>\chi^2</m> independence test to test  whether emotional reactions are independent of the choice of video.
       </p>
       <ul>
           <li>
@@ -55,19 +55,19 @@
       
      <ul>
           <li>
-              The null hypothesis is <m>H_0:\ </m>Hiring preferences are independent of the company.
+              The null hypothesis is <m>H_0:\ </m>Emotional reactions are independent of the choice of video.
           </li>
          <li>
-              The alternative hypothesis is <m>H_A:\ </m>Hiring preferences are not independent of the company.
+              The alternative hypothesis is <m>H_A:\ </m>Emotional reactions are not independent of the choice of video.
           </li>
           <li>
               There are <m>2</m> degrees of freedom.
           </li>
          <li>
-              The <m>\chi^2</m> value is <m>8.13181478680465</m>.
+              The <m>\chi^2</m> value is <m>4.72792737172379</m>.
           </li>
          <li>
-              The <m>p</m>-value is <m>0.01714742275391834</m>.
+              The <m>p</m>-value is <m>0.09404671182243163</m>.
           </li>
          
           

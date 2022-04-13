@@ -1,4 +1,4 @@
-<exercise checkit-seed="7907" checkit-slug="P4" checkit-title="Random Variables">
+<exercise checkit-seed="6998" checkit-slug="P4" checkit-title="Random Variables">
   <statement>
       
       <p>
@@ -30,13 +30,13 @@
               \\
               \hline
               P(X=X_i)
-              &amp; 0.001
+              &amp; 0.047
+              &amp; 0.309
+              &amp; 0.145
+              &amp; 0.127
+              &amp; 0.117
+              &amp; 0.133
               &amp; ???
-              &amp; 0.103
-              &amp; 0.129
-              &amp; 0.124
-              &amp; 0.122
-              &amp; 0.11
               \\
               \hline
               \end{array}
@@ -80,16 +80,16 @@
      <p>
          <ol>
              <li>
-                 <m>P(X=1)=0.411</m>.
+                 <m>P(X=6)=0.122</m>.
              </li>
              <li>
-                 <m>E(X)=2.77</m>.
+                 <m>E(X)=2.8449999999999998</m>.
              </li>
              <li>
-                 <m>Var(X)=3.3050999999999995</m>
+                 <m>Var(X)=3.526975</m>
              </li>
              <li>
-                 <m>\sigma_X=1.8179933993279511</m>
+                 <m>\sigma_X=1.8780242277457446</m>
              </li>
          </ol>
           

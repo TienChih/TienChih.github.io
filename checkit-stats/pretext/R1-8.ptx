@@ -1,69 +1,90 @@
-<exercise checkit-seed="5066" checkit-slug="R1" checkit-title="Linear Correlation of Variables">
+<exercise checkit-seed="2659" checkit-slug="R1" checkit-title="Linear Correlation of Variables">
   <statement>
       <p>
-          A professor observes how many cups of coffee they drink in a day, compared to how many hours of sleep they get that night.
+          A business compares the amount it spends on advertising (thousands of dollars per month) to it's revenues (thousands of dollars per month) over it's last few months.
       </p>
       
       <p>
-          Consider this table of data collected comparing Coffee Consumption measured in cups, and Sleep measured in hours:
+          Consider this table of data collected comparing Advertising Expense measured in k dollars/month, and Revenue measured in k dollars/month:
           <me>
                \begin{array}{|c|c|}
               \hline
-              \text{ Coffee Consumption in cups }
+              \text{ Advertising Expense in k dollars/month }
               &amp;
-              \text{ Sleep in hours }
+              \text{ Revenue in k dollars/month }
               \\
               \hline
-               2
-              &amp; 7.4
+               4.6
+              &amp; 383.6
                   \\
-               4
-              &amp; 4.8
+               3.7
+              &amp; 212.9
                   \\
-               1
-              &amp; 6.2
+               3.6
+              &amp; 240.1
                   \\
-               3
-              &amp; 5.7
+               3.8
+              &amp; 289.3
                   \\
-               4
-              &amp; 4.6
+               2.9
+              &amp; 223.3
                   \\
-               3
-              &amp; 5.9
+               3.1
+              &amp; 234.2
                   \\
-               4
-              &amp; 4.3
+               4.6
+              &amp; 292.5
                   \\
-               0
-              &amp; 5.9
+               4.1
+              &amp; 296.4
                   \\
-               0
-              &amp; 6.5
+               2.7
+              &amp; 176.8
                   \\
-               4
-              &amp; 4.8
+               3.3
+              &amp; 270.3
                   \\
-               2
-              &amp; 5.3
+               4.4
+              &amp; 228.6
                   \\
-               1
-              &amp; 7.2
+               4.8
+              &amp; 304.7
                   \\
-               4
-              &amp; 4.0
+               5.0
+              &amp; 447.1
                   \\
-               2
-              &amp; 6.1
+               2.4
+              &amp; 158.9
                   \\
-               3
-              &amp; 5.9
+               2.3
+              &amp; 189.3
                   \\
-               4
-              &amp; 5.8
+               4.6
+              &amp; 399.6
                   \\
-               2
-              &amp; 6.5
+               4.4
+              &amp; 305.7
+                  \\
+               2.8
+              &amp; 227.2
+                  \\
+               3.1
+              &amp; 212.5
+                  \\
+               4.4
+              &amp; 241.5
+                  \\
+               4.3
+              &amp; 371.3
+                  \\
+               3.6
+              &amp; 236.7
+                  \\
+               4.4
+              &amp; 276.3
+                  \\
+               2.3
+              &amp; 227.7
                   \\
               
               \hline
@@ -79,7 +100,7 @@
                   Compute the correlation coefficient <m>R</m>.
               </li>
               <li>
-                  What does <m>R</m> tell you about the relationship between Coffee Consumption and Sleep?
+                  What does <m>R</m> tell you about the relationship between Advertising Expense and Revenue?
               </li>
               <li>
                   Compute the <m>R^2</m>.
@@ -110,16 +131,16 @@
      <p>
           <ul>
               <li>
-                  The exaplanatory variable is Coffee Consumption in cups and the response variable is Sleep in hours.
+                  The exaplanatory variable is Advertising Expense in k dollars/month and the response variable is Revenue in k dollars/month.
               </li>
               <li>
-                  <m>R=-0.7491227448.</m>
+                  <m>R=0.7786429776.</m>
               </li>
               <li>
-                  <m>R^2=0.5611848867766859.</m>
+                  <m>R^2=0.6062848865657942.</m>
               </li>
               <li>
-                  Sleep is <m>56.11848867766859\%</m> explainable by Coffee Consumption.
+                  Revenue is <m>60.628488656579414\%</m> explainable by Advertising Expense.
               </li>
               
               

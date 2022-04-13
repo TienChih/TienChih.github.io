@@ -1,10 +1,10 @@
-<exercise checkit-seed="1860" checkit-slug="C1" checkit-title="Size of Sample: Proportion">
+<exercise checkit-seed="5216" checkit-slug="C1" checkit-title="Size of Sample: Proportion">
   <statement>
       <p>
-          An engineer wants to know the probability that a new anti-rust coat stays on when exposed to rain-like conditions.  She wants to find a <m> 95</m>% confidence interval with margin of error <m>ME=0.03</m>.
+          A psychologist wants to know the probability that exposure to a certain simuli increases anxiety.  He wants to find a <m> 95</m>% confidence interval with margin of error <m>ME=0.05</m>.
       </p>
       <p>
-          A previous study showed that  of <m>60\ </m> tested samples exposed to rain-like conditions,  <m>31\ </m>had the coating stay on.  How many samples should she now test to obtain a <m>95</m>% confidence interval with margin of error <m>ME=0.03</m>?
+          A previous study showed that  of <m>69\ </m> test subjects,  <m>49\ </m>had increased anxiety after exposure to the stimuli.  How many subjects should now be tested to obtain a <m>95</m>% confidence interval with margin of error <m>ME=0.05</m>?
       </p>
       
       <!--<ol>
@@ -26,16 +26,16 @@
       <title>Partial Solution:</title>
       <ul>
           <li>
-              The sample proportion of the initial study is <m>\hat{p}=0.5166666666666667</m>.
+              The sample proportion of the initial study is <m>\hat{p}=0.7101449275362319</m>.
           </li>
           <li>
               For a 95% confidence interval,  <m>z^*=1.9599639845400536</m>.
           </li>
           <li>
-              The margin of error is <m>ME=0.03</m>.
+              The margin of error is <m>ME=0.05</m>.
           </li>
           <li>
-              The number of samples should she now test is at least <m>1066</m>.
+              The number of subjects should now be tested is at least <m>317</m>.
           </li>
       </ul>
           

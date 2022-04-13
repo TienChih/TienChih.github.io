@@ -1,12 +1,12 @@
-<exercise checkit-seed="3291" checkit-slug="N2" checkit-title="Inference for single Numerical Variables">
+<exercise checkit-seed="6199" checkit-slug="N2" checkit-title="Inference for single Numerical Variables">
   <statement>
       
       <p>
-          A sociologist is studying the average amount of sleep residents get in a certain city.  They conduct a survey of the cities residents.  Out of  <m>41</m>  surveyed residents, the sample average amount of sleep was  <m>\bar{x}=7.799</m>  hours, with sample standard deviation <m>s=0.851</m>  hours.
+          A financial consultant examines the rates of return of stocks in a portfolio.  He takes a random samples of stocks and analyzes them.  Out of  <m>21</m>  analyzed stocks, the average % rate of return  <m>\bar{x}=-12.314</m>  % return, with sample standard deviation <m>s=44.169</m>  % return.
       </p>
       
       <ul>
-          <li>  Test the hypothesis that  the average amount of sleep amongst the city's residents  is less than <m>  8</m>  hours.
+          <li>  Test the hypothesis that  the average % rate of return for the portfolio  is less than <m>  5</m>  % return.
               <ol>
           <li>
               State the null hypothesis.
@@ -27,7 +27,7 @@
       </ol>
           </li>
           <li>
-              Find a <m>95</m>% confidence interval for the  the average amount of sleep amongst the city's residents.  Using complete sentences, explain what the confidence interval means in the context of this problem.
+              Find a <m>95</m>% confidence interval for the  the average % rate of return for the portfolio.  Using complete sentences, explain what the confidence interval means in the context of this problem.
           </li>
       </ul>
       
@@ -43,26 +43,26 @@
       
      <ul>
           <li>
-              The null hypothesis is <m>H_0: \mu=8</m>.
+              The null hypothesis is <m>H_0: \mu=5</m>.
           </li>
          <li>
-              The alternative hypothesis is <m>H_A: \mu\lneq8</m>.
+              The alternative hypothesis is <m>H_A: \mu\lneq5</m>.
           </li>
           <li>
-              The sampling distribution has mean <m>8</m> and standard error <m>SE=0.132903871367204</m>.
+              The sampling distribution has mean <m>5</m> and standard error <m>SE=9.63846599383355</m>.
           </li>
          <li>
-              The sample mean is <m>\bar{x}=7.799</m> which has <m>t</m>-score <m>t=-1.5123712946227967</m>.
+              The sample mean is <m>\bar{x}=-12.314</m> which has <m>t</m>-score <m>t=-1.796343942187177</m>.
           </li>
          <li>
-              The <m>p</m>-value is <m>0.06915039432570853</m>.
+              The <m>p</m>-value is <m>0.04378097415808591</m>.
           </li>
          
          <li>
-              For a <m>95</m>% confidence interval,  <m>t^*=2.0210753903062737</m>.
+              For a <m>95</m>% confidence interval,  <m>t^*=2.085963447265865</m>.
           </li>
           <li>
-              The  the average amount of sleep amongst the city's residents  has a <m>95</m>% chance of of falling in <m>[7.53039125630331, 8.06760874369669]</m>.
+              The  the average % rate of return for the portfolio  has a <m>95</m>% chance of of falling in <m>[-32.4194877508518, 7.79148775085184]</m>.
           </li>
          
           

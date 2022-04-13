@@ -1,9 +1,9 @@
-<exercise checkit-seed="8691" checkit-slug="D5" checkit-title="Normal Approximation of Binomial Distribution">
+<exercise checkit-seed="9854" checkit-slug="D5" checkit-title="Normal Approximation of Binomial Distribution">
   <statement>
       
       
       <p>
-          Suppose the probability that a person clicks on a malicious link in a scam email is  <m>0.04</m>. A scammer sends scam emails to  <m>9900</m>  people.  Let <m>X</m> denote the  number of people who click the link.  Find the following:
+          Suppose probability that a eligible voter will vote in a local midterm election is  <m>0.5</m>. A voting district has  <m>5338</m>  potential voters.  Let <m>X</m> denote the  number of eligible voters who will vote.  Find the following:
           
       </p>
       
@@ -13,12 +13,12 @@
       <p>
           <ol>
               <li>
-                  <m>E(X)</m>, the expected  number of people who click the link.
+                  <m>E(X)</m>, the expected  number of eligible voters who will vote.
               </li>
               
               <li>
                   <p>
-                      <m>\sigma_A</m>, the standard deviation of the  number of people who click the link.
+                      <m>\sigma_A</m>, the standard deviation of the  number of eligible voters who will vote.
                   </p>
                   <p>
                       Then use the normal approximation of <m>X</m> to find the following:
@@ -27,12 +27,12 @@
               </li>
              
               <li>
-                  Find the probability that the number of number of people who click the email is  between <m>360 </m> and <m>403</m>  people.
+                  Find the probability that the number of eligible voters who will vote is  between <m>2703 </m> and <m>2742</m>  potential voters.
               </li>
               
               
               <li>
-                  Find <m>X^*</m> such that the probability that  number of people who click the link  is at least  <m>X^*</m>  people is <m>0.65</m>.  (This value need not be a whole number.)
+                  Find <m>X^*</m> such that the probability that  number of eligible voters who will vote  is at least  <m>X^*</m>  potential voters is <m>0.63</m>.  (This value need not be a whole number.)
               </li>
               
           </ol>
@@ -57,19 +57,19 @@
      <p>
           <ol>
               <li>
-                  <m>E(X)=396.0</m>
+                  <m>E(X)=2669.0</m>
               </li>
               <li>
-                  <m>\sigma_X=19.497692171126303</m>
+                  <m>\sigma_X=36.53080891521566</m>
               </li>
               
               
               <li>
-                  <m>P(360\leq\ X\leq\ 403)=0.6077896790168695</m>.
+                  <m>P(2703\leq\ X\leq\ 2742)=0.1531575340524043</m>.
               </li>
               
               <li>
-                  If <m>P(X\geq\ X^*)=0.65</m> then <m>X^*=388.48714015875044</m>  people.
+                  If <m>P(X\geq\ X^*)=0.63</m> then <m>X^*=2656.8771288134417</m>  potential voters.
               </li>
               
           </ol>

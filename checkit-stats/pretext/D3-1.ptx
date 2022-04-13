@@ -1,18 +1,18 @@
-<exercise checkit-seed="9135" checkit-slug="D3" checkit-title="Counting Principles">
+<exercise checkit-seed="3518" checkit-slug="D3" checkit-title="Counting Principles">
   <statement>
       
       
       <p>
-          Suppose a small business had  <m>19</m>  employees.
+          Suppose you had in a freezer  <m>7</m>  ice cream flavors.
       </p>
       
       
       <p>
           <ol>
-              <li>How many ways are there to select <m>15</m>  employees  and schedule them one at a time for professional development training?</li>
-              <li>How many ways are there to select <m>2</m>  employees  to give a raise?</li>
-              <li>How many ways are there to select <m>11</m>  employees  to assign to a special project?</li>
-              <li>How many ways are there to select <m>7</m>  employees  and rank them for an internal promotion process?</li>
+              <li>How many ways are there to select <m>4</m>  ice cream flavors  and eat them one a day for the next few days?</li>
+              <li>How many ways are there to select <m>5</m>  ice cream flavors  to throw out to make room in the freezer?</li>
+              <li>How many ways are there to select <m>3</m>  ice cream flavors  and give one flavor each to different friends?</li>
+              <li>How many ways are there to select <m>2</m>  ice cream flavors  to make into a milkshake?</li>
           </ol>
           
       </p>
@@ -34,10 +34,10 @@
       
      <p>
           <ol>
-              <li>5068545850368000 ways.</li>
-              <li>171 ways.</li>
-              <li>75582 ways.</li>
-              <li>253955520 ways.</li>
+              <li>840 ways.</li>
+              <li>21 ways.</li>
+              <li>210 ways.</li>
+              <li>21 ways.</li>
           </ol>
           
       </p>

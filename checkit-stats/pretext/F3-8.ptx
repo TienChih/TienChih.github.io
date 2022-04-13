@@ -1,10 +1,10 @@
-<exercise checkit-seed="4485" checkit-slug="F3" checkit-title="Hypothesis Testing">
+<exercise checkit-seed="9848" checkit-slug="F3" checkit-title="Hypothesis Testing">
   <statement>
       <p>
-          An political campaign wants to know if the proportion of voters who support their candidiate is greater than <m>  53</m>%.  They conduct a survey of potential voters.
+          A CEO is curious if the proportion of employees that are satisfied with their job is not equal to <m>  62</m>%.  They conduct a survey of employees.
       </p>
       <p>
-Suppose that for   <m>n=312</m> surveyed potential voters, <m>181</m> supported the candidiate. Test the hypothesis that  the proportion of all potential voters that support their candidiate is greater than <m>  53</m>%. 
+Suppose that for   <m>n=265</m> surveyed employees, <m>149</m> were satisfied with their job. Test the hypothesis that  the proportion of all employees that are satisfied with their job is not equal to <m>  62</m>%. 
       </p>
       
       <ol>
@@ -36,26 +36,26 @@ Suppose that for   <m>n=312</m> surveyed potential voters, <m>181</m> supported 
       
      <ul>
           <li>
-              The null hypothesis is <m>H_0: p=0.53</m>.
+              The null hypothesis is <m>H_0: p=0.62</m>.
           </li>
          <li>
-              The alternative hypothesis is <m>H_A: p\gneq0.53</m>.
+              The alternative hypothesis is <m>H_A: p\neq0.62</m>.
           </li>
           <li>
-              The sampling distribution has mean <m>0.53</m> and standard error <m>SE=0.0282559274471293</m>.
+              The sampling distribution has mean <m>0.62</m> and standard error <m>SE=0.0298170522314595</m>.
           </li>
          <li>
-              The sample proportion is <m>\hat{p}=0.5801282051282052</m> which has <m>z</m>-score <m>z=1.77407750009274</m>.
+              The sample proportion is <m>\hat{p}=0.5622641509433962</m> which has <m>z</m>-score <m>z=-1.93633658379173</m>.
           </li>
          <li>
-              The <m>p</m>-value is <m>0.03802516595923022</m>.
+              The <m>p</m>-value is <m>0.05282649092597702</m>.
           </li>
          
           <!--<li>
               For a % confidence interval,  <m>z^*=</m>.
           </li>
           <li>
-              The proportion of all potential voters that support their candidiate has a % chance of of falling in <m>[, ]</m>.
+              The proportion of all employees that are satisfied with their job has a % chance of of falling in <m>[, ]</m>.
           </li>-->
       </ul>
           

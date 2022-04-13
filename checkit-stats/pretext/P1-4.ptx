@@ -1,12 +1,12 @@
-<exercise checkit-seed="6159" checkit-slug="P1" checkit-title="Introduction to Probability">
+<exercise checkit-seed="6883" checkit-slug="P1" checkit-title="Introduction to Probability">
   <statement>
       
       <p>
-          We consider the event that there is an accident over the course of the day, and the event that it rains.
+          We consider the event that at a fast food resturaunt, a random customer orders burgers, and the event they order fries.  We consider an arbitrarily selected customer.
       </p>
       
       <p>
-          Suppose that   the probability that    it rains, or there is an accident, over the course of a day is <m>0.1076</m>, the probability that   there is an accident on a road and it rains over the course of a day is <m>0.0098</m>, and finally   the probability that    it rains over the course of a day is <m>0.099</m>.
+          Suppose that   the probability that   the customer orders both burger and fries is <m>0.5322</m>, the probability that    the customer orders either burger or fries is <m>0.6318</m>, and finally   the probability that   the customer orders a burger is <m>0.5428</m>.
       </p>
       
       
@@ -14,7 +14,7 @@
           <ol>
               <li>
                   <p>
-                      Find the probability that   there is an accident on a road over the course of a day.
+                      Find the probability that    the customer orders fries.
                   </p>
                   <p>
                       (For the following, it is advisable to draw a venn diagram using the information above.)
@@ -22,10 +22,10 @@
                   
               </li>
               <li>
-                  Find the probability that  there is no accident on the road but it rains over the course of a day.
+                  Find the probability that  the customer does not order a burger, but does order fries.
               </li>
               <li>
-                  Find the probability that  there is an accident on the road or it doesn't rain over the course of a day.
+                  Find the probability that  the customer  orders a burger, or does not order fries.
               </li>
           </ol>
           
@@ -49,13 +49,13 @@
      <p>
           <ol>
               <li>
-                   The probability that   there is an accident on a road over the course of a day is <m>0.0184</m>.
+                   The probability that    the customer orders fries is <m>0.6212</m>.
               </li>
               <li>
-                   The  probability that  there is no accident on the road but it rains over the course of a day is <m>0.0892</m>.
+                   The  probability that  the customer does not order a burger, but does order fries is <m>0.089</m>.
               </li>
               <li>
-                    The probability that  there is an accident on the road or it doesn't rain over the course of a day is <m>0.9108</m>.
+                    The probability that  the customer  orders a burger, or does not order fries is <m>0.911</m>.
               </li>
           </ol>
           

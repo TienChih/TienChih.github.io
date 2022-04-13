@@ -1,4 +1,4 @@
-<exercise checkit-seed="6796" checkit-slug="B1" checkit-title="Types of Variables">
+<exercise checkit-seed="9376" checkit-slug="B1" checkit-title="Types of Variables">
   <statement>
       
       
@@ -8,12 +8,12 @@
       <p>
           For each of the following, classify the type of variable described as <em>Numerical</em> or <em>Categorical</em>, as well as the subcategory <em>Continuous</em>, <em>Discrete</em>, <em>Nominal</em> or <em>Ordinal</em>.  Be sure to justify your choices.
           <ol>
-              <li>The species of termites infesting a house.</li>
               <li>The rating of a company's customer service from Awful to Superb.</li>
-              <li>The political candidiate supported by a voter.</li>
+              <li>The number of women nominated for a prestigious award.</li>
+              <li>The weight of a new born child in lb's.</li>
+              <li>A job reference's rating of a candidate's punctuality from 1-5.</li>
               <li>The number of respondents to an online poll.</li>
-              <li>A magazine rating albums from 1 mic to 5 mics.</li>
-              <li>The number of respondents to a survey indicating they suffer from anxiety.</li>
+              <li>Types of crops cultivated by a farmer.</li>
           </ol>
           
       </p>
@@ -35,12 +35,12 @@
       
      <p>
           <ol>
-              <li>Categorical, Nominal</li>
-              <li>Categorical, Ordinal</li>
-              <li>Categorical, Nominal</li>
-              <li>Numerical, Discrete</li>
               <li>Categorical, Ordinal</li>
               <li>Numerical, Discrete</li>
+              <li>Numerical, Continuous</li>
+              <li>Categorical, Ordinal</li>
+              <li>Numerical, Discrete</li>
+              <li>Categorical, Nominal</li>
           </ol>
           
       </p>

@@ -1,9 +1,9 @@
-<exercise checkit-seed="5707" checkit-slug="C4" checkit-title="Chi^2 independence test">
+<exercise checkit-seed="6770" checkit-slug="C4" checkit-title="Chi^2 independence test">
   <statement>
       
       
       <p>
-          A psychologist shows two different short videos to test subjects, ans asked them to rate their feelings after the video as Happiness, Anger or Sadness:
+          A farmer tests two different pesticides on his crops during an insect infestation.  Sprays two sections of his field with the different pestisides, and records the resulting infestation levels:
       </p>
       
       
@@ -11,11 +11,11 @@
           <me>
               \begin{array}{|c|c|c|c|}
               \hline
-              &amp; \text{ Happiness } &amp; \text{ Anger } &amp; \text{ Sadness }\\
+              &amp; \text{ No Infestation } &amp; \text{ Moderate Infestation } &amp; \text{ Severe Infestation }\\
               \hline
-              \text{ Video 1 } &amp; 32 &amp; 60 &amp; 102\\
+              \text{ Pesticide A } &amp; 36 &amp; 24 &amp; 39\\
               \hline
-              \text{ Video 2 } &amp; 28 &amp; 30 &amp; 46\\
+              \text{ Pesticide B } &amp; 52 &amp; 10 &amp; 35\\
               \hline
               \end{array}
           </me>
@@ -25,7 +25,7 @@
       
      
       <p>
-          Use a <m>\chi^2</m> independence test to test  whether emotional reactions are independent of the choice of video.
+          Use a <m>\chi^2</m> independence test to test  whether the level of infestation is independent of the type of pesticide used.
       </p>
       <ul>
           <li>
@@ -55,19 +55,19 @@
       
      <ul>
           <li>
-              The null hypothesis is <m>H_0:\ </m>Emotional reactions are independent of the choice of video.
+              The null hypothesis is <m>H_0:\ </m>Infestation levels are independent of pesticide type.
           </li>
          <li>
-              The alternative hypothesis is <m>H_A:\ </m>Emotional reactions are not independent of the choice of video.
+              The alternative hypothesis is <m>H_A:\ </m>Infestation levels are not independent of pesticide type.
           </li>
           <li>
               There are <m>2</m> degrees of freedom.
           </li>
          <li>
-              The <m>\chi^2</m> value is <m>4.70368040522680</m>.
+              The <m>\chi^2</m> value is <m>8.87052847293213</m>.
           </li>
          <li>
-              The <m>p</m>-value is <m>0.095193825011473</m>.
+              The <m>p</m>-value is <m>0.011851933780746893</m>.
           </li>
          
           

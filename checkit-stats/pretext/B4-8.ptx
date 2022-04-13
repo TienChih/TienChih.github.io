@@ -1,4 +1,4 @@
-<exercise checkit-seed="5222" checkit-slug="B4" checkit-title="Centers of Data">
+<exercise checkit-seed="1385" checkit-slug="B4" checkit-title="Centers of Data">
   <statement>
       
       
@@ -8,36 +8,32 @@
       <p>
           Consider the following list of data:
           <me>
-              60,
-              56,
-              50,
-              58,
-              63,
-              51,
-              60,
-              57,
-              59,
-              57,
-              62,
-              59,
-              63,
-              64,
-              60,
-              59,
-              71,
-              61,
-              61,
-              62,
-              57,
-              55,
-              62,
-              62,
+              94,
               69,
-              57,
+              41,
               63,
-              65,
-              54,
-              62,
+              118,
+              76,
+              123,
+              69,
+              109,
+              61,
+              64,
+              45,
+              123,
+              106,
+              121,
+              99,
+              100,
+              110,
+              68,
+              49,
+              135,
+              100,
+              100,
+              106,
+              53,
+              102,
           </me>
           
       
@@ -74,13 +70,13 @@
           Find the following measures of centrality for this data:
           <ol>
               <li>
-                  Mean: <m>59.96666666666667</m>
+                  Mean: <m>88.61538461538461</m>
               </li>
               <li>
-                  Median: <m>60.0</m>
+                  Median: <m>99.5</m>
               </li>
               <!--<li>
-                  Mode: <m>\text{\texttt{ModeResult(mode=array([62]),{ }count=array([5]))}}</m>
+                  Mode: <m>\text{\texttt{ModeResult(mode=array([100]),{ }count=array([3]))}}</m>
               </li>-->
           </ol>
           

@@ -1,110 +1,110 @@
-<exercise checkit-seed="4777" checkit-slug="N3" checkit-title="Inference for paired Numerical Variables">
+<exercise checkit-seed="5377" checkit-slug="N3" checkit-title="Inference for paired Numerical Variables">
   <statement>
       
       <p>
-          A study is done comparing the average frequency of sightings of an endangered bird species at different sites in a forest before and after a heavy rainstorm. A total of <m>20</m>  sites were sampled.  The following is a summary of rate of sightings before the storm and rate of sightings after the storm.
+          A study is conducted comparing the resting heart rate of test subjects before and after taking a trial medication. A total of <m>20</m>  test subjects were sampled.  The following is a summary of the heart rate of test subjects before taking medication and the heart rate of test subjects after taking medication.
       </p>
       
       <p>
           <me>
                \begin{array}{|c|c|c|}
               \hline
-              \text{ Rate of Sightings Before in  sightings/week }
+              \text{ Heart Rate Before in  bpm }
               &amp;
-              \text{ Rate of Sightings After in  sightings/week }
+              \text{ Heart Rate After in  bpm }
               &amp;
-              \text{Difference in  sightings/week }
+              \text{Difference in  bpm }
               \\
               \hline
-               20.4
-              &amp; 21.3
-              &amp; 0.9
+               69.2
+              &amp; 69.2
+              &amp; 0.0
                   \\
-               18.3
-              &amp; 18.9
-              &amp; 0.6
+               69.2
+              &amp; 71.2
+              &amp; 2.0
                   \\
-               17.0
-              &amp; 17.6
-              &amp; 0.6
+               63.9
+              &amp; 71.3
+              &amp; 7.4
                   \\
-               20.7
-              &amp; 22.5
-              &amp; 1.8
+               81.5
+              &amp; 79.6
+              &amp; -1.9
                   \\
-               20.8
-              &amp; 20.1
-              &amp; -0.7
+               68.9
+              &amp; 64.7
+              &amp; -4.2
                   \\
-               20.3
-              &amp; 19.9
-              &amp; -0.4
+               68.3
+              &amp; 68.1
+              &amp; -0.2
                   \\
-               17.8
-              &amp; 18.4
-              &amp; 0.6
+               76.5
+              &amp; 79.2
+              &amp; 2.7
                   \\
-               18.1
-              &amp; 15.9
-              &amp; -2.2
+               58.0
+              &amp; 47.8
+              &amp; -10.2
                   \\
-               18.0
-              &amp; 19.0
-              &amp; 1.0
+               66.6
+              &amp; 56.7
+              &amp; -9.9
                   \\
-               18.0
-              &amp; 17.5
-              &amp; -0.5
+               47.7
+              &amp; 49.3
+              &amp; 1.6
                   \\
-               18.1
-              &amp; 17.8
-              &amp; -0.3
+               67.3
+              &amp; 59.5
+              &amp; -7.8
                   \\
-               20.7
-              &amp; 19.5
+               76.9
+              &amp; 79.4
+              &amp; 2.5
+                  \\
+               72.7
+              &amp; 78.1
+              &amp; 5.4
+                  \\
+               58.9
+              &amp; 53.8
+              &amp; -5.1
+                  \\
+               57.6
+              &amp; 60.4
+              &amp; 2.8
+                  \\
+               75.8
+              &amp; 64.4
+              &amp; -11.4
+                  \\
+               64.7
+              &amp; 57.5
+              &amp; -7.2
+                  \\
+               75.0
+              &amp; 73.8
               &amp; -1.2
                   \\
-               18.3
-              &amp; 19.6
-              &amp; 1.3
+               66.1
+              &amp; 68.3
+              &amp; 2.2
                   \\
-               19.7
-              &amp; 20.6
-              &amp; 0.9
-                  \\
-               19.5
-              &amp; 20.9
-              &amp; 1.4
-                  \\
-               19.1
-              &amp; 20.2
-              &amp; 1.1
-                  \\
-               18.7
-              &amp; 19.1
-              &amp; 0.4
-                  \\
-               18.0
-              &amp; 17.4
-              &amp; -0.6
-                  \\
-               20.0
-              &amp; 20.2
-              &amp; 0.2
-                  \\
-               22.3
-              &amp; 21.0
-              &amp; -1.3
+               72.8
+              &amp; 74.6
+              &amp; 1.8
                   \\
               
               \hline
               \end{array}
           </me>
-          The sample average of these differences is <m>0.18000000000000008</m>  sightings/week and the sample standard deviation is <m>1.0166612021711068</m>  sightings/week.
+          The sample average of these differences is <m>-1.5350000000000004</m>  bpm and the sample standard deviation is <m>5.320928020561826</m>  bpm.
       </p>
       
       <ul>
-          <li>  Test the hypothesis that  the average difference in rates of sighting before and after the storm   is greater than <m>  0</m>  sightings/week.
+          <li>  Test the hypothesis that  the average difference in heart rate of patients before and after taking the medication   is less than <m>  0</m>  bpm.
               <ol>
           <li>
               State the null hypothesis.
@@ -125,7 +125,7 @@
       </ol>
           </li>
           <li>
-              Find a <m>99</m>% confidence interval for the  the average difference in rates of sighting before and after the storm .  Using complete sentences, explain what the confidence interval means in the context of this problem.
+              Find a <m>95</m>% confidence interval for the  the average difference in heart rate of patients before and after taking the medication .  Using complete sentences, explain what the confidence interval means in the context of this problem.
           </li>
       </ul>
       
@@ -144,23 +144,23 @@
               The null hypothesis is <m>H_0: \mu_d=0</m>.
           </li>
          <li>
-              The alternative hypothesis is <m>H_A: \mu_d\gneq0</m>.
+              The alternative hypothesis is <m>H_A: \mu_d\lneq0</m>.
           </li>
           <li>
-              The sampling distribution has mean <m>0</m> and standard error <m>SE=0.227332355814125</m>.
+              The sampling distribution has mean <m>0</m> and standard error <m>SE=1.18979567573596</m>.
           </li>
          <li>
-              The sample mean is <m>\bar{d}=0.18000000000000008</m> which has <m>t</m>-score <m>t=0.7917922609625103</m>.
+              The sample mean is <m>\bar{d}=-1.5350000000000004</m> which has <m>t</m>-score <m>t=-1.2901374843630231</m>.
           </li>
          <li>
-              The <m>p</m>-value is <m>0.2191279810376192</m>.
+              The <m>p</m>-value is <m>0.10624225053784203</m>.
           </li>
          
          <li>
-              For a <m>99</m>% confidence interval,  <m>t^*=2.860934606464972</m>.
+              For a <m>95</m>% confidence interval,  <m>t^*=2.0930240544083096</m>.
           </li>
           <li>
-              The  the average difference in rates of sighting before and after the storm   has a <m>99</m>% chance of of falling in <m>[-0.470383003917839, 0.830383003917839]</m>.
+              The  the average difference in heart rate of patients before and after taking the medication   has a <m>95</m>% chance of of falling in <m>[-4.02527096914636, 0.955270969146363]</m>.
           </li>
          
           

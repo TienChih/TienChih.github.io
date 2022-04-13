@@ -1,29 +1,29 @@
-<exercise checkit-seed="2689" checkit-slug="D2" checkit-title="General Normal Distribution">
+<exercise checkit-seed="4471" checkit-slug="D2" checkit-title="General Normal Distribution">
   <statement>
       
       
       <p>
-          Suppose the weight of adult male moose in a certain forest is normally distributed with mean   <m>1166.11</m>  lbs and standard deviation <m>231.86</m>  lbs.  Find the following:
+          Suppose the weekly profit of a food truck is normally distributed with mean   <m>726.64</m>  dollars and standard deviation <m>728.76</m>  dollars.  Find the following:
       </p>
       
       
       <p>
           <ol>
               <li>
-                  Find the probability that a randomly selected adult male moose's weight   is at least  <m>857.23 </m>  lbs.
+                  Find the probability that a randomly selected week's profit   is at most  <m>-752.5 </m>  dollars.
               </li>
              
               <li>
-                  Find the probability that a randomly selected adult male moose's weight  is between <m>676.2 </m> and <m>792.2</m>  lbs.
+                  Find the probability that a randomly selected week's profit  is between <m>985.29 </m> and <m>2575.12</m>  dollars.
               </li>
               
               
               <li>
-                  Find <m>X^*</m> such that  the probability that a randomly selected adult male moose's weight   is at most  <m>X^*</m>  lbs is <m>98</m>%.
+                  Find <m>X^*</m> such that  the probability that a randomly selected week's profit   is at least  <m>X^*</m>  dollars is <m>42</m>%.
               </li>
               
               <li>
-                  Find <m>k</m> such that  the probability that a randomly selected adult male moose's weight  is between <m>1166.11-k</m>  lbs and <m>1166.11+k</m>  lbs is <m>37</m>%.
+                  Find <m>k</m> such that  the probability that a randomly selected week's profit  is between <m>726.64-k</m>  dollars and <m>726.64+k</m>  dollars is <m>93</m>%.
               </li>
           </ol>
           
@@ -47,18 +47,18 @@
      <p>
           <ol>
               <li>
-                  <m>P(X\geq 857.23)=0.9086000044532214</m>.
+                  <m>P(X\leq -752.5)=0.02119520830146357</m>.
               </li>
               
               <li>
-                  <m>P(676.2\leq X\leq 792.2)=0.03610756636937647</m>.
+                  <m>P(985.29\leq X\leq 2575.12)=0.35572676276482984</m>.
               </li>
               
               <li>
-                  If <m>P(X\leq\  X^*)=98</m>% then <m>X=1642.2922224190943</m>  lbs.
+                  If <m>P(X\geq\  X^*)=42</m>% then <m>X=873.7718918594154</m>  dollars.
               </li>
               <li>
-                  If <m>P(1166.11-k\leq\  X\leq\  1166.11+k)=37</m>% then <m>k=111.69318734471558</m>  lbs.
+                  If <m>P(726.64-k\leq\  X\leq\  726.64+k)=93</m>% then <m>k=1320.4480220209357</m>  dollars.
               </li>
           </ol>
           

@@ -1,87 +1,63 @@
-<exercise checkit-seed="8643" checkit-slug="R2" checkit-title="Interpreting Linear Regression">
+<exercise checkit-seed="3438" checkit-slug="R2" checkit-title="Interpreting Linear Regression">
   <statement>
       <p>
-          A survey is conducted comparing different homes electricity usage (in kilowatt hours), and their electric bills (dollars) within a city.
+          A study is conducted comparing the age of adults to their glucose level (in mg/dL).
       </p>
       
       <p>
-          Consider this table of data collected comparing Electricity Usage measured in kilowatt hours, and Electric Bill measured in dollars:
+          Consider this table of data collected comparing Age measured in years, and Glucose Level measured in mg/dL:
           <me>
                \begin{array}{|c|c|}
               \hline
-              \text{ Electricity Usage in kilowatt hours }
+              \text{ Age in years }
               &amp;
-              \text{ Electric Bill in dollars }
+              \text{ Glucose Level in mg/dL }
               \\
               \hline
-               267.1
-              &amp; 51.04
+               50
+              &amp; 86.3
                   \\
-               254.18
-              &amp; 47.21
+               58
+              &amp; 87.0
                   \\
-               191.64
-              &amp; 42.49
+               43
+              &amp; 86.8
                   \\
-               298.34
-              &amp; 51.95
+               25
+              &amp; 73.3
                   \\
-               169.69
-              &amp; 32.16
+               31
+              &amp; 79.4
                   \\
-               177.76
-              &amp; 36.86
+               40
+              &amp; 83.9
                   \\
-               237.51
-              &amp; 48.65
+               61
+              &amp; 83.0
                   \\
-               216.88
-              &amp; 40.99
+               34
+              &amp; 74.8
                   \\
-               244.33
-              &amp; 45.08
+               31
+              &amp; 81.9
                   \\
-               282.96
-              &amp; 54.22
+               40
+              &amp; 79.3
                   \\
-               209.0
-              &amp; 37.82
+               58
+              &amp; 87.5
                   \\
-               245.36
-              &amp; 43.07
+               59
+              &amp; 83.1
                   \\
-               211.64
-              &amp; 40.79
+               38
+              &amp; 79.5
                   \\
-               274.6
-              &amp; 54.08
+               30
+              &amp; 74.7
                   \\
-               246.51
-              &amp; 51.59
-                  \\
-               277.11
-              &amp; 52.81
-                  \\
-               278.86
-              &amp; 52.57
-                  \\
-               202.27
-              &amp; 41.8
-                  \\
-               254.46
-              &amp; 49.04
-                  \\
-               215.08
-              &amp; 40.97
-                  \\
-               251.93
-              &amp; 46.29
-                  \\
-               296.3
-              &amp; 52.39
-                  \\
-               187.3
-              &amp; 37.95
+               20
+              &amp; 71.8
                   \\
               
               \hline
@@ -97,13 +73,13 @@
                   Find the slope <m>\beta_1</m> and it's units.
               </li>
               <li>
-                  What does <m>\beta_1</m> tell you about the relationship between Electricity Usage and Electric Bill?
+                  What does <m>\beta_1</m> tell you about the relationship between Age and Glucose Level?
               </li>
               <li>
-                  For a household with Electricity Usage <m>201.63</m> kilowatt hours, what is the estimated Electric Bill?
+                  For an adult with Age <m>51</m> years, what is the estimated Glucose Level?
               </li>
               <li>
-                  For a household with Electric Bill <m>43.71</m> dollars, what is the estimated Electricity Usage?
+                  For an adult with Glucose Level <m>77.9</m> mg/dL, what is the estimated Age?
               </li>
               
           </ol>
@@ -128,19 +104,19 @@
           <p>
           <ol>
               <li>
-                  <m>\beta_0=6.981595025304159\ </m> dollars.
+                  <m>\beta_0=67.62041876253866\ </m> mg/dL.
               </li>
               <li>
-                  <m>\beta_1=0.162315453351692\ </m> dollars<m>/</m>kilowatt hours.
+                  <m>\beta_1=0.320378185375275\ </m> mg/dL<m>/</m>years.
               </li>
               <li>
-                 Whenever Electricity Usage increases by 1 kilowatt hours, Electric Bill changes, on average, by <m>0.162315453351692\ </m> dollars.
+                 Whenever Age increases by 1 years, Glucose Level changes, on average, by <m>0.320378185375275\ </m> mg/dL.
               </li>
               <li>
-                  For a household with Electricity Usage <m>\ 201.63\ </m> kilowatt hours, the estimated Electric Bill is <m>39.70925988460582\ </m> dollars.
+                  For an adult with Age <m>\ 51\ </m> years, the estimated Glucose Level is <m>83.95970621667769\ </m> mg/dL.
               </li>
               <li>
-                  For a household with Electric Bill <m>\ 43.71\ </m> dollars, the estimated Electricity Usage is <m>226.2779311290571\ </m> kilowatt hours.
+                  For an adult with Glucose Level <m>\ 77.9\ </m> mg/dL, the estimated Age is <m>32.085771462312124\ </m> years.
               </li>
               
           </ol>

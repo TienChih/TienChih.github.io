@@ -1,25 +1,25 @@
-<exercise checkit-seed="8911" checkit-slug="P2" checkit-title="Conditional Probability">
+<exercise checkit-seed="4100" checkit-slug="P2" checkit-title="Conditional Probability">
   <statement>
       
       <p>
-          We randomly select a customer from a store and consider the events that they purchase over $100, and the event they use a credit card.
+          An interview coach promises employees of a company that going through their course will help applicants get a promotion.  We consider the events that an applicant is promoted and the event that they go through the course.
       </p>
       
       <p>
-          Suppose that   the probability that   the customer purchases over $100 is <m>0.056</m>, the probability that   the customer purchases over $100 given that they use a credit card is <m>0.056</m>, and finally   the probability that    the customer uses a credit card is <m>0.785</m>.
+          Suppose that   the probability that   the applicant gets a promotion is <m>0.32</m>, the probability that   the applicant gets a promotion given that they wen't through the course is <m>0.321</m>, and finally   the probability that    the applicant goes through the course is <m>0.13</m>.
       </p>
       
       
       <p>
           <ol>
               <li>
-                  Find the probability that    the customer purchases over $100 and uses a credit card.
+                  Find the probability that    the applicant both got a promotion and went through the course.
               </li>
               <li>
-                  Find the probability that    the customer uses a credit card, given that they purchased over $100.
+                  Find the probability that    the customer went through the course, given that they got a promotion.
               </li>
               <li>
-                  Are the events   the customer purchases over $100, and    the customer uses a credit card independent?
+                  Are the events   the applicant gets a promotion, and    the applicant goes through the course independent?
               </li>
           </ol>
           
@@ -43,13 +43,13 @@
      <p>
           <ol>
               <li>
-                   The probability that    the customer purchases over $100 and uses a credit card is <m>0.043960000000000006</m>.
+                   The probability that    the applicant both got a promotion and went through the course is <m>0.04173</m>.
               </li>
               <li>
-                   The  probability that    the customer uses a credit card, given that they purchased over $100 is <m>0.7850000000000001</m>.
+                   The  probability that    the customer went through the course, given that they got a promotion is <m>0.13040625</m>.
               </li>
               <li>
-                  The events   the customer purchases over $100, and    the customer uses a credit card  are independent.
+                  The events   the applicant gets a promotion, and    the applicant goes through the course  are not independent.
               </li>
           </ol>
           

@@ -1,4 +1,4 @@
-<exercise checkit-seed="1145" checkit-slug="B2" checkit-title="Sampling Techniques">
+<exercise checkit-seed="6545" checkit-slug="B2" checkit-title="Sampling Techniques">
   <statement>
       
       
@@ -8,12 +8,12 @@
       <p>
           For each of the following, classify the sampling technique described as <em>Simple Random Sample</em>, <em>Stratified Random Sampling</em>, <em>Cluster Sampling</em> or <em>Multi-Stage Sampling</em>.  Be sure to justify your choices.
           <ol>
-              <li>To measure the spread of a species of bovine flea at a ranch, random cows are selected and tested for fleas.</li>
-              <li>To test products for defects, a manufacturer randomly selects hours of the week and randomly tests products produced in those hours.</li>
-              <li>To measure student response to a new general education policy, the administration divides the students by first 2 digits of their id number, and randomly selects a few id numbers to survey.</li>
-              <li>To measure the support for the current mayor in comparison to income, constituents within a city are seperated into income classes, and random constituents from each class are randomly selected and surveyed.</li>
-              <li>To test products for defects, a manufacturer randomly selects hours of the week and tests all products produced in those hours.</li>
-              <li>To measure approval ratings of the incumbent governor, voters are seperated by income and race, and random people are selected from each group and surveyed.</li>
+              <li>To measure potential allergic reactions to a medication, users of the medication are seperated by gender and health conditions, and members within each group are randomly selected to be tested.</li>
+              <li>To measure potential allergic reactions to a medication,  users of the medication are seperated by age range, and after randomly selecting a few age ranges, subjects within those ranges are randomly selected to be tested.</li>
+              <li>To measure the support for the current mayor in comparison to income, random constituents within a city are surveyed.</li>
+              <li>To test products for defects, a manufacturer randomly selects and tests products.</li>
+              <li>To measure potential allergic reactions to a medication,  users of the medication are seperated by age range, and a few age ranges are randomly selected to be tested.</li>
+              <li>To measure student satisfaction, students are randomly selected from the student body and surveyed.</li>
           </ol>
           
       </p>
@@ -35,12 +35,12 @@
       
      <p>
           <ol>
-              <li>Simple Random Sampling</li>
+              <li>Stratified Random Sample</li>
               <li>Multi-Stage Sampling</li>
+              <li>Simple Random Sampling</li>
+              <li>Simple Random Sampling</li>
               <li>Cluster Sampling</li>
-              <li>Stratified Random Sample</li>
-              <li>Cluster Sampling</li>
-              <li>Stratified Random Sample</li>
+              <li>Simple Random Sampling</li>
           </ol>
           
       </p>

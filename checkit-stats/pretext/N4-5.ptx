@@ -1,12 +1,12 @@
-<exercise checkit-seed="6130" checkit-slug="N4" checkit-title="Inference for difference of means of Numerical Variables">
+<exercise checkit-seed="3753" checkit-slug="N4" checkit-title="Inference for difference of means of Numerical Variables">
   <statement>
       
       <p>
-          A manufacturer wants to compare the number of defects to types of machines produce.  For a month, machines of both type were observed.  Out of  <m>25</m>  Model A machines, the average number of defects was  <m>\bar{x}_1=1.156</m>  defects, with sample standard deviation <m>s_1=0.545</m>  defects.  Then out of <m>25</m>  Model B machines, the average number of defects was  <m>\bar{x}_2=1.383</m>  defects, with sample standard deviation <m>s_2=0.614</m>  defects.
+          A political scientist compares the amount of money donated to campaigns for poltitical parties A and B.  Out of  <m>48</m>  observed members of Party A, the average sample donation was  <m>\bar{x}_1=2774.349</m>  dollars, with sample standard deviation <m>s_1=361.875</m>  dollars.  Then out of <m>48</m>  observed members of Party B, the average sample donation was  <m>\bar{x}_2=2627.9500000000003</m>  dollars, with sample standard deviation <m>s_2=650.312</m>  dollars.
       </p>
       
       <ul>
-          <li>  Test the hypothesis that  the difference in average number of defects between Model A and Model B, <m>\mu_1-\mu_2</m>, is less than <m>  0</m>  defects.
+          <li>  Test the hypothesis that  the difference in average donation between members of Party A and Party B, <m>\mu_1-\mu_2</m>, is greater than <m>  0</m>  dollars.
               <ol>
           <li>
               State the null hypothesis.
@@ -27,7 +27,7 @@
       </ol>
           </li>
           <li>
-              Find a <m>95</m>% confidence interval for the  the difference in average number of defects between Model A and Model B.  Using complete sentences, explain what the confidence interval means in the context of this problem.
+              Find a <m>95</m>% confidence interval for the  the difference in average donation between members of Party A and Party B.  Using complete sentences, explain what the confidence interval means in the context of this problem.
           </li>
       </ul>
       
@@ -46,23 +46,23 @@
               The null hypothesis is <m>H_0: \mu_1-\mu_2=0</m>.
           </li>
          <li>
-              The alternative hypothesis is <m>H_A: \mu_1-\mu_2\lneq0</m>.
+              The alternative hypothesis is <m>H_A: \mu_1-\mu_2\gneq0</m>.
           </li>
           <li>
-              The sampling distribution has mean <m>0</m> and standard error <m>SE=0.164197563928336</m>.
+              The sampling distribution has mean <m>0</m> and standard error <m>SE=107.418497492382</m>.
           </li>
          <li>
-              The observesd difference of sample means is <m>\bar{x_1}-\bar{x_2}=-0.227</m> which has <m>t</m>-score <m>t=-1.382480924620015</m>.
+              The observesd difference of sample means is <m>\bar{x_1}-\bar{x_2}=146.399</m> which has <m>t</m>-score <m>t=1.362884451166176</m>.
           </li>
          <li>
-              The <m>p</m>-value is <m>0.08977741643252407</m>.
+              The <m>p</m>-value is <m>0.08970667724563264</m>.
           </li>
          
          <li>
-              For a <m>95</m>% confidence interval,  <m>t^*=2.063898561628025</m>.
+              For a <m>95</m>% confidence interval,  <m>t^*=2.011740513729766</m>.
           </li>
           <li>
-              The  the difference in average number of defects between Model A and Model B  has a <m>95</m>% chance of of falling in <m>[-0.565887116014518, 0.111887116014518]</m>.
+              The  the difference in average donation between members of Party A and Party B  has a <m>95</m>% chance of of falling in <m>[-69.6991433294037, 362.497143329404]</m>.
           </li>
          
           

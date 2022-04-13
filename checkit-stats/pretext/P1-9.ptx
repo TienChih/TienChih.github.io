@@ -1,12 +1,12 @@
-<exercise checkit-seed="1161" checkit-slug="P1" checkit-title="Introduction to Probability">
+<exercise checkit-seed="5122" checkit-slug="P1" checkit-title="Introduction to Probability">
   <statement>
       
       <p>
-          We consider a randomly selected student at a university, and consider the events that they major in biology and that they major in psychology
+          An employee has requested both a raise and a promotion.  We consider the event that they recieve a raise, and the event they recieve a promotion.
       </p>
       
       <p>
-          Suppose that   the probability that    the student is a psychology major is <m>0.022</m>, the probability that   the student is both a biology and a pscyhology major is <m>0.0086</m>, and finally   the probability that   the student is a biology major is <m>0.0354</m>.
+          Suppose that   the probability that   the employee gets a raise and a promotion is <m>0.3472</m>, the probability that    the employee gets a promotion is <m>0.4644</m>, and finally   the probability that   the employee gets a raise is <m>0.5363</m>.
       </p>
       
       
@@ -14,7 +14,7 @@
           <ol>
               <li>
                   <p>
-                      Find the probability that    the student is a biology major or the student is a psychology major.
+                      Find the probability that    the employee gets either a raise or a promotion.
                   </p>
                   <p>
                       (For the following, it is advisable to draw a venn diagram using the information above.)
@@ -22,10 +22,10 @@
                   
               </li>
               <li>
-                  Find the probability that  the student is not a biology major but is a psychology major.
+                  Find the probability that  the employee does not get a raise but they do get a promotion.
               </li>
               <li>
-                  Find the probability that  the student is  a biology major or is not a psychology major.
+                  Find the probability that  the employee gets a raise or they do not get a promotion.
               </li>
           </ol>
           
@@ -49,13 +49,13 @@
      <p>
           <ol>
               <li>
-                   The probability that    the student is a biology major or the student is a psychology major is <m>0.0488</m>.
+                   The probability that    the employee gets either a raise or a promotion is <m>0.6535</m>.
               </li>
               <li>
-                   The  probability that  the student is not a biology major but is a psychology major is <m>0.0134</m>.
+                   The  probability that  the employee does not get a raise but they do get a promotion is <m>0.1172</m>.
               </li>
               <li>
-                    The probability that  the student is  a biology major or is not a psychology major is <m>0.9866</m>.
+                    The probability that  the employee gets a raise or they do not get a promotion is <m>0.8828</m>.
               </li>
           </ol>
           

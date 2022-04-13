@@ -1,4 +1,4 @@
-<exercise checkit-seed="1278" checkit-slug="C4" checkit-title="Chi^2 independence test">
+<exercise checkit-seed="5358" checkit-slug="C4" checkit-title="Chi^2 independence test">
   <statement>
       
       
@@ -13,9 +13,9 @@
               \hline
               &amp; \text{ Low } &amp; \text{ Medium } &amp; \text{ High }\\
               \hline
-              \text{ Dr. Owens } &amp; 29 &amp; 23 &amp; 81\\
+              \text{ Dr. Jackson } &amp; 54 &amp; 74 &amp; 35\\
               \hline
-              \text{ Dr. Trahn } &amp; 36 &amp; 19 &amp; 42\\
+              \text{ Dr. Owens } &amp; 27 &amp; 63 &amp; 40\\
               \hline
               \end{array}
           </me>
@@ -64,10 +64,10 @@
               There are <m>2</m> degrees of freedom.
           </li>
          <li>
-              The <m>\chi^2</m> value is <m>8.06341564660545</m>.
+              The <m>\chi^2</m> value is <m>6.58333143876111</m>.
           </li>
          <li>
-              The <m>p</m>-value is <m>0.017744000444866903</m>.
+              The <m>p</m>-value is <m>0.03719184659124941</m>.
           </li>
          
           

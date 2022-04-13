@@ -1,12 +1,12 @@
-<exercise checkit-seed="2676" checkit-slug="N4" checkit-title="Inference for difference of means of Numerical Variables">
+<exercise checkit-seed="6573" checkit-slug="N4" checkit-title="Inference for difference of means of Numerical Variables">
   <statement>
       
       <p>
-          A political scientist compares the amount of money donated to campaigns for poltitical parties A and B.  Out of  <m>24</m>  observed members of Party A, the average sample donation was  <m>\bar{x}_1=2132.239</m>  dollars, with sample standard deviation <m>s_1=693.769</m>  dollars.  Then out of <m>24</m>  observed members of Party B, the average sample donation was  <m>\bar{x}_2=2294.621</m>  dollars, with sample standard deviation <m>s_2=483.664</m>  dollars.
+          A political scientist compares the amount of money donated to campaigns for poltitical parties A and B.  Out of  <m>28</m>  observed members of Party A, the average sample donation was  <m>\bar{x}_1=2203.185</m>  dollars, with sample standard deviation <m>s_1=792.574</m>  dollars.  Then out of <m>28</m>  observed members of Party B, the average sample donation was  <m>\bar{x}_2=2596.2039999999997</m>  dollars, with sample standard deviation <m>s_2=658.259</m>  dollars.
       </p>
       
       <ul>
-          <li>  Test the hypothesis that  the difference in average donation between members of Party A and Party B, <m>\mu_1-\mu_2</m>, is not equal to <m>  150</m>  dollars.
+          <li>  Test the hypothesis that  the difference in average donation between members of Party A and Party B, <m>\mu_1-\mu_2</m>, is less than <m>  0</m>  dollars.
               <ol>
           <li>
               State the null hypothesis.
@@ -43,26 +43,26 @@
       
      <ul>
           <li>
-              The null hypothesis is <m>H_0: \mu_1-\mu_2=150</m>.
+              The null hypothesis is <m>H_0: \mu_1-\mu_2=0</m>.
           </li>
          <li>
-              The alternative hypothesis is <m>H_A: \mu_1-\mu_2\neq150</m>.
+              The alternative hypothesis is <m>H_A: \mu_1-\mu_2\lneq0</m>.
           </li>
           <li>
-              The sampling distribution has mean <m>150</m> and standard error <m>SE=172.632351431325</m>.
+              The sampling distribution has mean <m>0</m> and standard error <m>SE=194.704763365039</m>.
           </li>
          <li>
-              The observesd difference of sample means is <m>\bar{x_1}-\bar{x_2}=-162.382</m> which has <m>t</m>-score <m>t=-1.8095217808828248</m>.
+              The observesd difference of sample means is <m>\bar{x_1}-\bar{x_2}=-393.019</m> which has <m>t</m>-score <m>t=-2.018538186778489</m>.
           </li>
          <li>
-              The <m>p</m>-value is <m>0.08345909280895558</m>.
+              The <m>p</m>-value is <m>0.026784573126894598</m>.
           </li>
          
          <li>
-              For a <m>95</m>% confidence interval,  <m>t^*=2.068657610419048</m>.
+              For a <m>95</m>% confidence interval,  <m>t^*=2.0518305164802855</m>.
           </li>
           <li>
-              The  the difference in average donation between members of Party A and Party B  has a <m>95</m>% chance of of falling in <m>[-519.499227592945, 194.735227592945]</m>.
+              The  the difference in average donation between members of Party A and Party B  has a <m>95</m>% chance of of falling in <m>[-792.520175176459, 6.48217517645912]</m>.
           </li>
          
           

@@ -1,4 +1,4 @@
-<exercise checkit-seed="9907" checkit-slug="B2" checkit-title="Sampling Techniques">
+<exercise checkit-seed="9768" checkit-slug="B2" checkit-title="Sampling Techniques">
   <statement>
       
       
@@ -8,12 +8,12 @@
       <p>
           For each of the following, classify the sampling technique described as <em>Simple Random Sample</em>, <em>Stratified Random Sampling</em>, <em>Cluster Sampling</em> or <em>Multi-Stage Sampling</em>.  Be sure to justify your choices.
           <ol>
-              <li>To measure student satisfaction, students are randomly selected from the student body and surveyed.</li>
-              <li>To measure student response to a new general education policy, the administration divides the students by first 2 digits of their id number,  randomly selects several 2 digit codes,  and then randomly selects a few students for each selected id numbers to survey.</li>
-              <li>To test products for defects, a manufacturer seperates products by types, and randomly selects and tests products from each type.</li>
-              <li>To test products for defects, a manufacturer randomly selects and tests products.</li>
-              <li>To measure potential allergic reactions to a medication,  users of the medication are seperated by age range, and after randomly selecting a few age ranges, subjects within those ranges are randomly selected to be tested.</li>
-              <li>To measure the spread of a species of bovine flea, cows are seperated into groups, some are randomly selected and within those groups, some cows are randomly tested for fleas.</li>
+              <li>To measure the effects of a new heart medication, users of the medication are seperated by physical activity level, and then random users of the medication of each level are selected and tested.</li>
+              <li>To measure the support for the current mayor in comparison to income, constituents within a city are seperated into income classes, and random constituents from each class are randomly selected and surveyed.</li>
+              <li>To measure the spread of a species of bovine flea,  coes are seperated by breed and some from each breed are randomly selected and tested for fleas.</li>
+              <li>To measure approval ratings of the incumbent governor, some counties were randomly selected, and voters within those counties were randomly selected and surveyed.</li>
+              <li>To measure the cost of living in a city, the city is divided into square mile regions, some regions are randomly selected, and a few grocery stores within each selected region are randomly selected to have their prices analyzed.</li>
+              <li>To measure the effects of a sewage malfunction in a town, the city divides homes by appraised value, and randomly selects a few homes from each value level to have their water tested.</li>
           </ol>
           
       </p>
@@ -35,12 +35,12 @@
       
      <p>
           <ol>
-              <li>Simple Random Sampling</li>
+              <li>Stratified Random Sample</li>
+              <li>Stratified Random Sample</li>
+              <li>Stratified Random Sample</li>
+              <li>Multi-Stage Sampling</li>
               <li>Multi-Stage Sampling</li>
               <li>Stratified Random Sample</li>
-              <li>Simple Random Sampling</li>
-              <li>Multi-Stage Sampling</li>
-              <li>Multi-Stage Sampling</li>
           </ol>
           
       </p>

@@ -1,4 +1,4 @@
-<exercise checkit-seed="5699" checkit-slug="B2" checkit-title="Sampling Techniques">
+<exercise checkit-seed="2829" checkit-slug="B2" checkit-title="Sampling Techniques">
   <statement>
       
       
@@ -8,12 +8,12 @@
       <p>
           For each of the following, classify the sampling technique described as <em>Simple Random Sample</em>, <em>Stratified Random Sampling</em>, <em>Cluster Sampling</em> or <em>Multi-Stage Sampling</em>.  Be sure to justify your choices.
           <ol>
-              <li>To measure potential allergic reactions to a medication, users of the medication are seperated by gender and health conditions, and members within each group are randomly selected to be tested.</li>
+              <li>To test the effects of a new fertilizer on apples, a farmer seperates the apples by species, and randomly selects apples from each species to test.</li>
+              <li>To measure customer satisfaction, a store randomly selects a few days and randomly surveys  shoppers on those days.</li>
+              <li>To measure the cost of living in a city, a few grocery stores are randomly selected, and their prices analyzed.</li>
               <li>To measure the spread of a species of bovine flea,  coes are seperated by breed and some from each breed are randomly selected and tested for fleas.</li>
-              <li>To measure potential allergic reactions to a medication, random users of the medication are selected to be given tested.</li>
-              <li>To measure the support for the current mayor in comparison to income, constituents within a city are seperated into income classes, and random constituents from each class are randomly selected and surveyed.</li>
+              <li>To measure potential allergic reactions to a medication,  users of the medication are seperated by age range, and after randomly selecting a few age ranges, subjects within those ranges are randomly selected to be tested.</li>
               <li>To test products for defects, a manufacturer randomly selects hours of the week and tests all products produced in those hours.</li>
-              <li>To measure the effects of a new heart medication, users of the medication are seperated by physical activity level, and then random users of the medication of each level are selected and tested.</li>
           </ol>
           
       </p>
@@ -36,11 +36,11 @@
      <p>
           <ol>
               <li>Stratified Random Sample</li>
-              <li>Stratified Random Sample</li>
+              <li>Multi-Stage Sampling</li>
               <li>Simple Random Sampling</li>
               <li>Stratified Random Sample</li>
+              <li>Multi-Stage Sampling</li>
               <li>Cluster Sampling</li>
-              <li>Stratified Random Sample</li>
           </ol>
           
       </p>

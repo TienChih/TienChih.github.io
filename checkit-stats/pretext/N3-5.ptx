@@ -1,122 +1,126 @@
-<exercise checkit-seed="3409" checkit-slug="N3" checkit-title="Inference for paired Numerical Variables">
+<exercise checkit-seed="6932" checkit-slug="N3" checkit-title="Inference for paired Numerical Variables">
   <statement>
       
       <p>
-          A study is conducted comparing the resting heart rate of test subjects before and after taking a trial medication. A total of <m>23</m>  test subjects were sampled.  The following is a summary of the heart rate of test subjects before taking medication and the heart rate of test subjects after taking medication.
+          A professor takes a sampling of their students and compares their scores between the first and second exams. A total of <m>24</m>  students were sampled.  The following is a summary of score on Exam A and score on Exam B.
       </p>
       
       <p>
           <me>
                \begin{array}{|c|c|c|}
               \hline
-              \text{ Heart Rate Before in  bpm }
+              \text{ Exam A in  points }
               &amp;
-              \text{ Heart Rate After in  bpm }
+              \text{ Exam B in  points }
               &amp;
-              \text{Difference in  bpm }
+              \text{Difference in  points }
               \\
               \hline
-               76.1
-              &amp; 78.9
-              &amp; 2.8
+               72.7
+              &amp; 64.7
+              &amp; -8.0
                   \\
-               73.2
-              &amp; 73.7
-              &amp; 0.5
+               85.5
+              &amp; 71.5
+              &amp; -14.0
                   \\
-               57.2
-              &amp; 59.8
-              &amp; 2.6
-                  \\
-               69.6
-              &amp; 82.7
-              &amp; 13.1
-                  \\
-               67.8
-              &amp; 70.6
-              &amp; 2.8
-                  \\
-               60.9
-              &amp; 73.6
-              &amp; 12.7
-                  \\
-               71.2
-              &amp; 69.4
-              &amp; -1.8
-                  \\
-               72.0
-              &amp; 69.9
-              &amp; -2.1
+               74.8
+              &amp; 73.2
+              &amp; -1.6
                   \\
                83.2
-              &amp; 96.3
-              &amp; 13.1
+              &amp; 83.2
+              &amp; -0.0
                   \\
-               80.8
-              &amp; 90.6
-              &amp; 9.8
+               80.0
+              &amp; 79.6
+              &amp; -0.4
                   \\
-               62.5
-              &amp; 66.8
-              &amp; 4.3
-                  \\
-               85.2
-              &amp; 83.3
-              &amp; -1.9
-                  \\
-               76.7
-              &amp; 96.5
-              &amp; 19.8
+               86.4
+              &amp; 89.9
+              &amp; 3.5
                   \\
                70.0
-              &amp; 72.0
-              &amp; 2.0
+              &amp; 65.6
+              &amp; -4.4
                   \\
-               66.3
-              &amp; 77.4
-              &amp; 11.1
-                  \\
-               70.2
-              &amp; 68.3
-              &amp; -1.9
-                  \\
-               68.3
-              &amp; 62.7
-              &amp; -5.6
-                  \\
-               69.6
-              &amp; 80.2
-              &amp; 10.6
-                  \\
-               72.0
-              &amp; 77.3
-              &amp; 5.3
-                  \\
-               75.4
-              &amp; 71.7
-              &amp; -3.7
-                  \\
-               64.0
-              &amp; 65.4
+               77.4
+              &amp; 78.8
               &amp; 1.4
                   \\
-               79.0
-              &amp; 81.4
-              &amp; 2.4
+               87.8
+              &amp; 86.6
+              &amp; -1.2
                   \\
-               65.0
-              &amp; 67.4
-              &amp; 2.4
+               73.0
+              &amp; 72.4
+              &amp; -0.6
+                  \\
+               76.6
+              &amp; 69.3
+              &amp; -7.3
+                  \\
+               82.0
+              &amp; 80.4
+              &amp; -1.6
+                  \\
+               73.5
+              &amp; 71.7
+              &amp; -1.8
+                  \\
+               77.7
+              &amp; 85.4
+              &amp; 7.7
+                  \\
+               83.0
+              &amp; 68.7
+              &amp; -14.3
+                  \\
+               66.7
+              &amp; 70.5
+              &amp; 3.8
+                  \\
+               75.7
+              &amp; 72.3
+              &amp; -3.4
+                  \\
+               79.6
+              &amp; 72.2
+              &amp; -7.4
+                  \\
+               77.2
+              &amp; 69.7
+              &amp; -7.5
+                  \\
+               77.2
+              &amp; 86.4
+              &amp; 9.2
+                  \\
+               85.8
+              &amp; 91.9
+              &amp; 6.1
+                  \\
+               75.3
+              &amp; 71.0
+              &amp; -4.3
+                  \\
+               78.7
+              &amp; 70.9
+              &amp; -7.8
+                  \\
+               71.8
+              &amp; 78.5
+              &amp; 6.7
                   \\
               
               \hline
               \end{array}
           </me>
-          The sample average of these differences is <m>4.334782608695653</m>  bpm and the sample standard deviation is <m>6.401943230508536</m>  bpm.
+          The sample average of these differences is <m>-1.9666666666666668</m>  points and the sample standard deviation is <m>6.161754800559839</m>  points.
       </p>
       
       <ul>
-          <li>  Test the hypothesis that  the average difference in heart rate of patients before and after taking the medication   is not equal to <m>  3.9</m>  bpm.
+          <li>  Test the hypothesis that  the average difference in scores between the Exams   is not equal to <m>  0.8</m>  points.
               <ol>
           <li>
               State the null hypothesis.
@@ -137,7 +141,7 @@
       </ol>
           </li>
           <li>
-              Find a <m>95</m>% confidence interval for the  the average difference in heart rate of patients before and after taking the medication .  Using complete sentences, explain what the confidence interval means in the context of this problem.
+              Find a <m>95</m>% confidence interval for the  the average difference in scores between the Exams .  Using complete sentences, explain what the confidence interval means in the context of this problem.
           </li>
       </ul>
       
@@ -153,26 +157,26 @@
       
      <ul>
           <li>
-              The null hypothesis is <m>H_0: \mu_d=3.9</m>.
+              The null hypothesis is <m>H_0: \mu_d=0.8</m>.
           </li>
          <li>
-              The alternative hypothesis is <m>H_A: \mu_d\neq3.9</m>.
+              The alternative hypothesis is <m>H_A: \mu_d\neq0.8</m>.
           </li>
           <li>
-              The sampling distribution has mean <m>3.9</m> and standard error <m>SE=1.33489744153614</m>.
+              The sampling distribution has mean <m>0.8</m> and standard error <m>SE=1.25776293179303</m>.
           </li>
          <li>
-              The sample mean is <m>\bar{d}=4.334782608695653</m> which has <m>t</m>-score <m>t=0.325704878267894</m>.
+              The sample mean is <m>\bar{d}=-1.9666666666666668</m> which has <m>t</m>-score <m>t=-2.199672606603689</m>.
           </li>
          <li>
-              The <m>p</m>-value is <m>0.747725285153225</m>.
+              The <m>p</m>-value is <m>0.03814705360414461</m>.
           </li>
          
          <li>
-              For a <m>95</m>% confidence interval,  <m>t^*=2.0738730679040245</m>.
+              For a <m>95</m>% confidence interval,  <m>t^*=2.068657610419048</m>.
           </li>
           <li>
-              The  the average difference in heart rate of patients before and after taking the medication   has a <m>95</m>% chance of of falling in <m>[1.56637475627986, 7.10319046111145]</m>.
+              The  the average difference in scores between the Exams   has a <m>95</m>% chance of of falling in <m>[-4.56854752762329, 0.635214194289954]</m>.
           </li>
          
           

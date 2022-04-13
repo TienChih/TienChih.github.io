@@ -1,4 +1,4 @@
-<exercise checkit-seed="6230" checkit-slug="B4" checkit-title="Centers of Data">
+<exercise checkit-seed="4426" checkit-slug="B4" checkit-title="Centers of Data">
   <statement>
       
       
@@ -8,37 +8,38 @@
       <p>
           Consider the following list of data:
           <me>
+              -21,
+              20,
+              19,
               -4,
-              37,
-              61,
-              2,
-              43,
-              50,
-              63,
-              63,
-              60,
-              41,
-              41,
-              10,
-              70,
-              57,
-              3,
-              43,
-              62,
-              17,
-              36,
-              57,
-              -5,
-              53,
-              65,
-              38,
-              59,
-              59,
-              90,
+              -8,
+              -26,
+              -8,
+              -21,
+              15,
+              -8,
               5,
-              62,
-              40,
-              -6,
+              2,
+              19,
+              17,
+              -8,
+              12,
+              10,
+              1,
+              -5,
+              1,
+              1,
+              10,
+              -7,
+              -25,
+              25,
+              12,
+              7,
+              11,
+              5,
+              -3,
+              -11,
+              -4,
           </me>
           
       
@@ -75,13 +76,13 @@
           Find the following measures of centrality for this data:
           <ol>
               <li>
-                  Mean: <m>41.03225806451613</m>
+                  Mean: <m>1.03125</m>
               </li>
               <li>
-                  Median: <m>43.0</m>
+                  Median: <m>1.0</m>
               </li>
               <!--<li>
-                  Mode: <m>\text{\texttt{ModeResult(mode=array([41]),{ }count=array([2]))}}</m>
+                  Mode: <m>\text{\texttt{ModeResult(mode=array([{-}8]),{ }count=array([4]))}}</m>
               </li>-->
           </ol>
           

@@ -1,13 +1,13 @@
-<exercise checkit-seed="8074" checkit-slug="C3" checkit-title="Chi^2 goodness of fit test">
+<exercise checkit-seed="6285" checkit-slug="C3" checkit-title="Chi^2 goodness of fit test">
   <statement>
      <p>
-         The distribution of majors at a University are  <m>31</m>%  Business majors, <m>23</m>%  Humanities majors, <m>30</m>%  Social Science majors, and <m>16</m>%  STEM majors.
+         In a casino, there is a game of chance where a wheel is spun, and the chances of it landing on different colors are  <m>28</m>%  blue, <m>20</m>%  green, <m>25</m>%  orange, and <m>27</m>%  red.
       </p>
       <p>
-          Professor Martinez's introductory lecture class consists of  <m>48</m>  students who are Business majors, <m>38</m>  students who are Humanities majors, <m>27</m>  students who are Social Science majors, and <m>20</m>  students who are STEM majors.
+          In a sampling of spins one night, the colors that came up were   <m>40</m>  spins came up blue, <m>37</m>  spins came up green, <m>24</m>  spins came up orange, and <m>40</m>  spins came up red.
       </p>
       <p>
-          Use a <m>\chi^2</m> goodness of fit test to test whether or not the distributions majors in Dr. Martinez's class is representative of the student body at the University.
+          Use a <m>\chi^2</m> goodness of fit test to test whether or not the distributions of colors on this wheel match that of the game.
       </p>
       <ul>
           <li>
@@ -37,19 +37,19 @@
       
      <ul>
           <li>
-              The null hypothesis is <m>H_0:</m> The distribution of students in Dr. Martinez's class is the same as the University's.
+              The null hypothesis is <m>H_0:</m> The distribution of colors matches that of the game.
           </li>
          <li>
-              The alternative hypothesis is <m>H_A:</m> The distribution of students in Dr. Martinez's class is different from the University's.
+              The alternative hypothesis is <m>H_A:</m> The distribution of colors do not match that of the game.
           </li>
           <li>
               There are <m>3</m> degrees of freedom.
           </li>
          <li>
-              The <m>\chi^2</m> value is <m>7.15427769985975</m>.
+              The <m>\chi^2</m> value is <m>6.44121730646553</m>.
           </li>
          <li>
-              The <m>p</m>-value is <m>0.06713964585546162</m>.
+              The <m>p</m>-value is <m>0.09200979926977448</m>.
           </li>
          
           

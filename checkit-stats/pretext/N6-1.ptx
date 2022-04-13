@@ -1,21 +1,21 @@
-<exercise checkit-seed="1191" checkit-slug="N6" checkit-title="ANOVA">
+<exercise checkit-seed="1982" checkit-slug="N6" checkit-title="ANOVA">
   <statement>
-      <p>A psychologist divides test subjects into different groups where they under a different digital interactive experience. Afterwards, she measures their resting heart rates to see if there was any difference.</p>
+      <p>An outside consultant audits the pay of company employees from three different divisions with identical performance in order to identity discrepency. </p>
       
       <p>
-          The average resting heart rate for test subjects in Group A was  <m>\bar{x}_1=79.313</m>  bpm, with sample standard deviation <m>s_1=8.865</m> bpm, and sample size <m>n_1=31</m> test subjects.
+          The average salary of employees in Division A was  <m>\bar{x}_1=45.865</m>  thousand dollars, with sample standard deviation <m>s_1=4.738</m> thousand dollars, and sample size <m>n_1=33</m> employees.
       </p>
       
       <p>
-          The average resting heart rate for test subjects in Group B was  <m>\bar{x}_2=83.989</m>  bpm, with sample standard deviation <m>s_2=8.18</m> bpm, and sample size <m>n_2=31</m> test subjects.
+          The average salary of employees in Division B was  <m>\bar{x}_2=47.149</m>  thousand dollars, with sample standard deviation <m>s_2=2.882</m> thousand dollars, and sample size <m>n_2=37</m> employees.
       </p>
       
       <p>
-          The average resting heart rate for test subjects in Group C was  <m>\bar{x}_3=80.632</m>  bpm, with sample standard deviation <m>s_3=8.594</m> bpm, and sample size <m>n_3=33</m> test subjects.
+          The average salary of employees in Division C was  <m>\bar{x}_3=44.792</m>  thousand dollars, with sample standard deviation <m>s_3=2.849</m> thousand dollars, and sample size <m>n_3=39</m> employees.
       </p>
       
       <p>
-          The average resting heart rate of all <m>n=95</m> test subjects was <m>\bar{x}=81.297</m>  bpm.
+          The mean salary of all <m>n=109</m> sampled employees was <m>\bar{x}=45.9169</m>  thousand dollars.
       </p>
       
       <ol>
@@ -36,12 +36,12 @@
      
       
       <!--<p>
-          A psychologist divides test subjects into different groups where they under a different digital interactive experience. Afterwards, she measures their resting heart rates to see if there was any difference.<m> </m>  bpm.  <m> </m>  bpm.
+          An outside consultant audits the pay of company employees from three different divisions with identical performance in order to identity discrepency. <m> </m>  thousand dollars.  <m> </m>  thousand dollars.
       </p>
       
       <ol>
           <li>
-               <m>n=95</m>?
+               <m>n=109</m>?
           </li>
           <li>
               Explain what this power means in the context of this problem.
@@ -62,25 +62,25 @@
       <title>Partial Solution:</title>
       <ul>
           <li>
-              <m>H_0:\ </m> any differences in the average resting heart rate of test subjects under different Groups is explainable solely by the variation within the Groups.
+              <m>H_0:\ </m> any difference in salaries between employees of different divisions is explainable solely by the variation within the Divisions.
           </li>
           <li>
-              <m>H_A:\ </m> any differences in the average resting heart rate of test subjects under different Groups is explainable solely by the variation within the Groups.
+              <m>H_A:\ </m> any difference in salaries between employees of different divisions is explainable solely by the variation within the Divisions.
           </li>
           <li>
-              <m>p</m>-value=<m>0.09018850980420856</m>
+              <m>p</m>-value=<m>0.017213991171136978</m>
           </li>
       </ul>
       
      <!--<ul>
           <li>
-              The standard error if <m>n=95</m> would be <m>SE=</m>.  The cutoff for a statistically significant test is a difference of <m></m>  bpm.  The power of the test is <m>P(X\leq )=\%</m> where <m>X</m> is a normal variable with mean <m></m> and standard error <m></m>.
+              The standard error if <m>n=109</m> would be <m>SE=</m>.  The cutoff for a statistically significant test is a difference of <m></m>  thousand dollars.  The power of the test is <m>P(X\leq )=\%</m> where <m>X</m> is a normal variable with mean <m></m> and standard error <m></m>.
          </li>
          <li>
-              <m></m> bpm,  <m>n=95</m> would only have a <m>\%</m> chance of detecting it.
+              <m></m> thousand dollars,  <m>n=109</m> would only have a <m>\%</m> chance of detecting it.
          </li>
          <li>
-             The <m>z</m>-score for a left-tail of <m>\%</m> is <m></m>.  So for this <m>\%</m> tail to be detectable, <m>+SE\approx -1.96SE</m>, so <m>SE\approx  </m>, and for this to be true <m>n\geq 31</m>
+             The <m>z</m>-score for a left-tail of <m>\%</m> is <m></m>.  So for this <m>\%</m> tail to be detectable, <m>+SE\approx -1.96SE</m>, so <m>SE\approx  </m>, and for this to be true <m>n\geq 37</m>
          </li>
          
           

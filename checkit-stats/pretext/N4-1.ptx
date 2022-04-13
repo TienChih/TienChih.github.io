@@ -1,12 +1,12 @@
-<exercise checkit-seed="6858" checkit-slug="N4" checkit-title="Inference for difference of means of Numerical Variables">
+<exercise checkit-seed="1156" checkit-slug="N4" checkit-title="Inference for difference of means of Numerical Variables">
   <statement>
       
       <p>
-          A retail chain advertises two different locations using different marketing campaigns, to compare the results.  Out of  <m>45</m>  observed days, the daily revenue for Store A was  <m>\bar{x}_1=880.325</m>  dollars, with sample standard deviation <m>s_1=123.509</m>  dollars.  Then out of <m>45</m>  observed days, the daily revenue for Store B was  <m>\bar{x}_2=907.9390000000001</m>  dollars, with sample standard deviation <m>s_2=36.567</m>  dollars.
+          A political scientist compares the amount of money donated to campaigns for poltitical parties A and B.  Out of  <m>38</m>  observed members of Party A, the average sample donation was  <m>\bar{x}_1=2921.841</m>  dollars, with sample standard deviation <m>s_1=466.852</m>  dollars.  Then out of <m>38</m>  observed members of Party B, the average sample donation was  <m>\bar{x}_2=3068.089</m>  dollars, with sample standard deviation <m>s_2=397.776</m>  dollars.
       </p>
       
       <ul>
-          <li>  Test the hypothesis that  the difference in average daily retail between  Store A and Store B, <m>\mu_1-\mu_2</m>, is less than <m>  0</m>  dollars.
+          <li>  Test the hypothesis that  the difference in average donation between members of Party A and Party B, <m>\mu_1-\mu_2</m>, is less than <m>  0</m>  dollars.
               <ol>
           <li>
               State the null hypothesis.
@@ -27,7 +27,7 @@
       </ol>
           </li>
           <li>
-              Find a <m>95</m>% confidence interval for the  the difference in average daily retail between  Store A and Store B.  Using complete sentences, explain what the confidence interval means in the context of this problem.
+              Find a <m>95</m>% confidence interval for the  the difference in average donation between members of Party A and Party B.  Using complete sentences, explain what the confidence interval means in the context of this problem.
           </li>
       </ul>
       
@@ -49,20 +49,20 @@
               The alternative hypothesis is <m>H_A: \mu_1-\mu_2\lneq0</m>.
           </li>
           <li>
-              The sampling distribution has mean <m>0</m> and standard error <m>SE=19.2016310476191</m>.
+              The sampling distribution has mean <m>0</m> and standard error <m>SE=99.4956407508442</m>.
           </li>
          <li>
-              The observesd difference of sample means is <m>\bar{x_1}-\bar{x_2}=-27.614</m> which has <m>t</m>-score <m>t=-1.4381069989064303</m>.
+              The observesd difference of sample means is <m>\bar{x_1}-\bar{x_2}=-146.248</m> which has <m>t</m>-score <m>t=-1.4698935440421201</m>.
           </li>
          <li>
-              The <m>p</m>-value is <m>0.07873934314362938</m>.
+              The <m>p</m>-value is <m>0.07502172313657138</m>.
           </li>
          
          <li>
-              For a <m>95</m>% confidence interval,  <m>t^*=2.015367574443763</m>.
+              For a <m>95</m>% confidence interval,  <m>t^*=2.02619246302911</m>.
           </li>
           <li>
-              The  the difference in average daily retail between  Store A and Store B  has a <m>95</m>% chance of of falling in <m>[-66.3123445898041, 11.0843445898041]</m>.
+              The  the difference in average donation between members of Party A and Party B  has a <m>95</m>% chance of of falling in <m>[-347.845317393613, 55.3493173936126]</m>.
           </li>
          
           

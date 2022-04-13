@@ -1,10 +1,10 @@
-<exercise checkit-seed="2153" checkit-slug="C2" checkit-title="Two Categorical Variable Inferences">
+<exercise checkit-seed="2790" checkit-slug="C2" checkit-title="Two Categorical Variable Inferences">
   <statement>
       <p>
-          A software engineer wonders about the levels of errors in two beta versions of a product.  They want to know if the rates of crashing between version A and version B<m>\, </m> is not equal to <m>\,   0.00</m>.  They test run each version a number of times.
+          A pharmacist is curious about the side effects of a trial drug between males and females.  She wants to know if the difference in rates of side effects between males and females is<m>\, </m> is less than <m>\,   0.00</m>.  She tested the drug on male and female rats.
       </p>
       <p>
-          Suppose that of   <m>n_1=277\, </m>test runs of version A, <m>x_1=51\, </m>times the product crashed and of <m>n_2=277\, </m>test runs of version B, <m>x_2=73\, </m>times the product crashed. Test the hypothesis that  the difference between the proportion of times running version A who will crash: <m>p_1</m>, and the proportion of times running version B who will crash: <m>p_2</m>,   is not equal to<m>\,   0.00</m>.  That is <m>p_1-p_2\neq 0.00</m>.
+          Suppose that of   <m>n_1=377\, </m>tested male rats, <m>x_1=205\, </m>developed side effects and of <m>n_2=377\, </m>tested female rats, <m>x_2=233\, </m>developed side effects. Test the hypothesis that  the difference between the proportion of male rats who would develop side effects: <m>p_1</m>, and the proportion of female rats who would develop side effects: <m>p_2</m>,   is less than<m>\,   0.00</m>.  That is <m>p_1-p_2\lneq 0.00</m>.
       </p>
       
       <ol>
@@ -39,23 +39,23 @@
               The null hypothesis is <m>H_0: p_1-p_2= 0.00</m>.
           </li>
          <li>
-              The alternative hypothesis is <m>H_A: p_1-p_2\neq 0.00</m>.
+              The alternative hypothesis is <m>H_A: p_1-p_2\lneq 0.00</m>.
           </li>
           <li>
-              The sampling distribution has mean <m> 0.00</m> and standard error <m>SE=0.0354168897013857</m>.
+              The sampling distribution has mean <m> 0.00</m> and standard error <m>SE=0.0359379726155263</m>.
           </li>
          <li>
-              The difference in sample proportions is <m>\hat{p}=-0.07942238267148016</m> which has <m>z</m>-score <m>z=-2.24250021221860</m>.
+              The difference in sample proportions is <m>\hat{p}=-0.07427055702917773</m> which has <m>z</m>-score <m>z=-2.06663179984423</m>.
           </li>
          <li>
-              The <m>p</m>-value is <m>0.02492906160827979</m>.
+              The <m>p</m>-value is <m>0.019384430999016364</m>.
           </li>
          
           <!--<li>
               For a % confidence interval,  <m>z^*=</m>.
           </li>
           <li>
-              The proportion of  that will crash has a % chance of of falling in <m>[, ]</m>.
+              The proportion of  that would develop side effects has a % chance of of falling in <m>[, ]</m>.
           </li>-->
       </ul>
           

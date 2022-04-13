@@ -1,78 +1,66 @@
-<exercise checkit-seed="5475" checkit-slug="R3" checkit-title="Inference and Linear Regression">
+<exercise checkit-seed="9218" checkit-slug="R3" checkit-title="Inference and Linear Regression">
   <statement>
       <p>
-          A study is done comparing patients Maximum Pain Tolerance (on a scale of 1-10) to their Rating of Pain Severity (also on a scale of 1-10).
+          In a town, a study is conducted comparing square footage of a home, to it's prince (in thousands of dollars).
       </p>
       
       <p>
-          Consider this table of data collected comparing Maximum Pain Tolerance measured in points, and Rating of Pain Severity measured in points:
+          Consider this table of data collected comparing Size of Home measured in square feet, and Price of Home measured in thousands of dollars:
           <me>
                \begin{array}{|c|c|}
               \hline
-              \text{ Maximum Pain Tolerance in points }
+              \text{ Size of Home in square feet }
               &amp;
-              \text{ Rating of Pain Severity in points }
+              \text{ Price of Home in thousands of dollars }
               \\
               \hline
-               4
-              &amp; 5
+               1678.0
+              &amp; 235
                   \\
-               8
-              &amp; 3
+               1927.0
+              &amp; 253
                   \\
-               6
-              &amp; 4
+               1870.0
+              &amp; 257
                   \\
-               5
-              &amp; 4
+               1778.0
+              &amp; 246
                   \\
-               6
-              &amp; 3
+               1552.0
+              &amp; 222
                   \\
-               6
-              &amp; 5
+               1873.0
+              &amp; 255
                   \\
-               5
-              &amp; 4
+               1933.0
+              &amp; 256
                   \\
-               4
-              &amp; 3
+               1584.0
+              &amp; 234
                   \\
-               5
-              &amp; 5
+               1919.0
+              &amp; 246
                   \\
-               6
-              &amp; 4
+               1504.0
+              &amp; 225
                   \\
-               8
-              &amp; 3
+               1569.0
+              &amp; 227
                   \\
-               6
-              &amp; 5
+               1719.0
+              &amp; 226
                   \\
-               5
-              &amp; 5
+               1826.0
+              &amp; 247
                   \\
-               6
-              &amp; 5
+               1745.0
+              &amp; 241
                   \\
-               6
-              &amp; 4
+               1877.0
+              &amp; 247
                   \\
-               5
-              &amp; 3
-                  \\
-               5
-              &amp; 4
-                  \\
-               5
-              &amp; 5
-                  \\
-               5
-              &amp; 6
-                  \\
-               6
-              &amp; 4
+               1799.0
+              &amp; 240
                   \\
               
               \hline
@@ -83,22 +71,22 @@
           Suppose a statistics software returns the following:
           <ul>
               <li>
-                  Point estimate for <m>\beta_1</m>: <m>-0.323886639646708</m>.
+                  Point estimate for <m>\beta_1</m>: <m>0.078263248594878</m>.
               </li>
               <li>
-                  Point estimate for <m>\beta_0</m>: <m>6.013765182021565</m>.
+                  Point estimate for <m>\beta_0</m>: <m>103.35342264427499</m>.
               </li>
               <li>
-                  Standard Error for <m>\beta_1</m>: <m>0.18802436765005612</m>.
+                  Standard Error for <m>\beta_1</m>: <m>0.00944755893448659</m>.
               </li>
               <li>
-                  <m>t</m>-score for <m>\beta_1</m>: <m>-1.722578002493345</m>.
+                  <m>t</m>-score for <m>\beta_1</m>: <m>8.283965110732709</m>.
               </li>
               <li>
-                  95% Confidence Interval for <m>\beta_1</m>: <m>[-0.718911177745095, 0.0711378984516791]</m>.
+                  95% Confidence Interval for <m>\beta_1</m>: <m>[0.0580002499588723, 0.0985262472308837]</m>.
               </li>
               <li>
-                  <m>p</m>-value for <m>H_0:\beta_1=0, H_A: \beta_1\neq 0</m>: <m>p</m>-value<m>=0.10210189751749343</m>.
+                  <m>p</m>-value for <m>H_0:\beta_1=0, H_A: \beta_1\neq 0</m>: <m>p</m>-value<m>=9.10333793679996 \times 10^{-07}</m>.
               </li>
           </ul>
       </p>
@@ -138,7 +126,7 @@
           <p>
           <ol>
               <li>
-              The slope of the regression line  has a <m>95\%</m> chance of of falling in <m>[-0.718911177745095, 0.0711378984516791]</m>.
+              The slope of the regression line  has a <m>95\%</m> chance of of falling in <m>[0.0580002499588723, 0.0985262472308837]</m>.
           </li>
               
               

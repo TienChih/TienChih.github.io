@@ -1,29 +1,29 @@
-<exercise checkit-seed="2991" checkit-slug="D4" checkit-title="Binomial Distribution">
+<exercise checkit-seed="9855" checkit-slug="D4" checkit-title="Binomial Distribution">
   <statement>
       
       
       <p>
-          Suppose a group of diners order dinner together.  Each of the  <m>6</m>  diners has a <m>0.4</m> chance of  ordering dessert.  Suppose that whether or not each  diner  orders dessert is independent of the other  diners.  Find the following:
+          Suppose a group of people are in a room for extended time with someone infected with a novel virus.  Each of the  <m>8</m>  people has a <m>0.27</m> chance of  contracting the virus.  Suppose that whether or not each  person  contract the virus is independent of the other  people.  Find the following:
       </p>
       
       
       <p>
           <ol>
               <li>
-                  What is the probability that <m>4</m>  diners  orders dessert?
+                  What is the probability that <m>8</m>  people  contract the virus?
               </li>
              
               <li>
-                  What is the probability that <m>3</m>  diners  orders dessert?
+                  What is the probability that <m>3</m>  people  contract the virus?
               </li>
               
               
               <li>
-                  What is the probability that  at most  <m>4</m>  diners  orders dessert?
+                  What is the probability that  at most  <m>5</m>  people  contract the virus?
               </li>
               
               <li>
-                  What is the probability that between <m>1</m> and <m>5</m> (inclusive)  diners  orders dessert?
+                  What is the probability that between <m>4</m> and <m>5</m> (inclusive)  people  contract the virus?
               </li>
           </ol>
           
@@ -47,16 +47,16 @@
      <p>
           <ol>
               <li>
-                  <m>0.13824000000000006</m>
+                  <m>2.824295364810001 \times 10^{-05}</m>
               </li>
               <li>
-                  <m>0.27648000000000006</m>
+                  <m>0.22850390172410634</m>
               </li>
               <li>
-                  <m>0.9590400000000001</m>
+                  <m>0.9935800938188296</m>
               </li>
               <li>
-                  <m>0.9492480000000002</m>
+                  <m>0.1369029521917134</m>
               </li>
           </ol>
           

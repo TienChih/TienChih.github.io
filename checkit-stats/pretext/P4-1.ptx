@@ -1,8 +1,8 @@
-<exercise checkit-seed="1392" checkit-slug="P4" checkit-title="Random Variables">
+<exercise checkit-seed="3626" checkit-slug="P4" checkit-title="Random Variables">
   <statement>
       
       <p>
-          A professor decides against using OER's in their statistics class and uses a publisher text instead.  The students have the option of purchase a hardcopy text for 150 dollars, access to a flash e-text for 95 dollars, of a bundle of both for 225 dollars.  Let <m>X</m> denote   the amount spent for this course by randomly selected a student in statistics.  Consider the following probability distribution table for <m>X</m>.
+          A soccer team plays a match against the opposing team.  Let <m>X</m> denote   the number of goals they score.  Consider the following probability distribution table for <m>X</m>.
       </p>
       
       <p>
@@ -11,20 +11,29 @@
               |c
               |c
               |c
+              |c
+              |c
+              |c
               |
               }
               
               \hline
               X_i 
-              &amp; 150
-              &amp; 95
-              &amp; 225
+              &amp; 0
+              &amp; 1
+              &amp; 2
+              &amp; 3
+              &amp; 4
+              &amp; 5
               \\
               \hline
               P(X=X_i)
+              &amp; 0.242
               &amp; ???
-              &amp; 0.307
-              &amp; 0.222
+              &amp; 0.265
+              &amp; 0.052
+              &amp; 0.095
+              &amp; 0.163
               \\
               \hline
               \end{array}
@@ -68,16 +77,16 @@
      <p>
          <ol>
              <li>
-                 <m>P(X=150)=0.471</m>.
+                 <m>P(X=1)=0.183</m>.
              </li>
              <li>
-                 <m>E(X)=149.765</m>.
+                 <m>E(X)=2.064</m>.
              </li>
              <li>
-                 <m>Var(X)=2177.369775000003</m>
+                 <m>Var(X)=3.045904</m>
              </li>
              <li>
-                 <m>\sigma_X=46.662295003567955</m>
+                 <m>\sigma_X=1.7452518442906744</m>
              </li>
          </ol>
           

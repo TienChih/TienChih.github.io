@@ -1,30 +1,30 @@
-<exercise checkit-seed="5538" checkit-slug="P3" checkit-title="Bayes Theorem">
+<exercise checkit-seed="3406" checkit-slug="P3" checkit-title="Bayes Theorem">
   <statement>
       
       <p>
-          A manufacturer has two facilities A and B, each of whome occasionally produce defects.  We consider the events that a product is defective, and the event the product was manufactured in facility A.
+          Consider a radar detecting other aircraft while in flight.  It occasionally fails to detect other aircraft or gives a false indication that aircraft are close by when they are not.  We consider the events that it indicates other aircraft are close by, and the event other aircraft are close by.
       </p>
       
       <p>
-          Suppose that   the probability that   a randomly selected product is defective given that it was manufactured in facility A is <m>0.0066</m>, the probability that   a randomly selected product is defective given that it was not manufactured in facility A is <m>0.002</m>.
+          Suppose that   the probability that   it indicates other aircraft are close by given that other aircraft is close by is <m>0.96</m>, the probability that   it indicates other aircraft are close by given that other aircraft are not close by is <m>0.06</m>.
       </p>
       
       
       <p>
           <ol>
               <li>
-                  Suppose it were the case that the probability    a randomly selected product was manufactured in facility A was <m>0.39</m>.
+                  Suppose it were the case that the probability    other aircraft are close by was <m>0.21</m>.
                   <ol>
                       <li>
-                          Find the probability that   a randomly selected product was defective.
+                          Find the probability that   it indicates other aircraft are close by.
                       </li>
                       <li>
-                          Find the probability that    a randomly selected subject was manufactured in facility A, given that it was defective.
+                          Find the probability that    other aircraft are close by, given that the radar indicates they are.
                       </li>
                   </ol>
               </li>
               <li>
-                  Suppose instead that it was the case where the probability   a randomly selected product was defective was <m>0.0038</m>.  Find the probability that    a randomly selected product was manufactured in facility A.
+                  Suppose instead that it was the case where the probability   it indicates other aircraft are close by was <m>0.71</m>.  Find the probability that    other aircraft are close by.
               </li>
               
           </ol>
@@ -51,15 +51,15 @@
               <li>In the first scenario:
                   <ol>
                       <li>
-                          The probability that   a randomly selected product was defective is <m>0.0037939999999999996</m>
+                          The probability that   it indicates other aircraft are close by is <m>0.24899999999999997</m>
                       </li>
                       <li>
-                          The probability that    a randomly selected subject was manufactured in facility A, given that it was defective is <m>0.6784396415392726</m>
+                          The probability that    other aircraft are close by, given that the radar indicates they are is <m>0.8096385542168675</m>
                       </li>
                   </ol>
               </li>
               <li>
-                  In the second scenario, the probability that    a randomly selected product was manufactured in facility A is <m>0.391304347826087</m>.
+                  In the second scenario, the probability that    other aircraft are close by is <m>0.7222222222222222</m>.
               </li>
           </ol>
           

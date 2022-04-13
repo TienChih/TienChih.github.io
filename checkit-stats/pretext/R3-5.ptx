@@ -1,66 +1,69 @@
-<exercise checkit-seed="2745" checkit-slug="R3" checkit-title="Inference and Linear Regression">
+<exercise checkit-seed="5625" checkit-slug="R3" checkit-title="Inference and Linear Regression">
   <statement>
       <p>
-          A study is done comparing the Annual Rainfall (in mm) and Max Daily Temperature (C) of different sites of a geographic region.
+          A study is conducted comparing the amount of Time since Injection of a drug, with the Quantity left in the Bloodstream.
       </p>
       
       <p>
-          Consider this table of data collected comparing Max Daily Temperature measured in C, and Annual Rainfall measured in mm:
+          Consider this table of data collected comparing Time since Injection measured in hours, and Drug Quantity in Body measured in mg/ml:
           <me>
                \begin{array}{|c|c|}
               \hline
-              \text{ Max Daily Temperature in C }
+              \text{ Time since Injection in hours }
               &amp;
-              \text{ Annual Rainfall in mm }
+              \text{ Drug Quantity in Body in mg/ml }
               \\
               \hline
-               5.5
-              &amp; 184.7
+               6
+              &amp; 1.55
                   \\
-               8.8
-              &amp; 145.7
+               6
+              &amp; 1.66
                   \\
-               11.5
-              &amp; 108.7
+               5
+              &amp; 1.89
                   \\
-               6.3
-              &amp; 204.6
+               1
+              &amp; 2.48
                   \\
-               9.3
-              &amp; 143.9
+               1
+              &amp; 2.82
                   \\
-               6.5
-              &amp; 200.1
+               4
+              &amp; 2.19
                   \\
-               10.1
-              &amp; 126.6
+               5
+              &amp; 1.93
                   \\
-               10.5
-              &amp; 97.9
+               5
+              &amp; 1.78
                   \\
-               6.0
-              &amp; 200.5
+               7
+              &amp; 1.75
                   \\
-               10.1
-              &amp; 125.1
+               1
+              &amp; 2.76
                   \\
-               6.5
-              &amp; 194.2
+               1
+              &amp; 2.73
                   \\
-               6.9
-              &amp; 166.8
+               7
+              &amp; 1.77
                   \\
-               6.1
-              &amp; 204.2
+               1
+              &amp; 2.5
                   \\
-               5.3
-              &amp; 198.4
+               3
+              &amp; 2.24
                   \\
-               7.3
-              &amp; 169.5
+               3
+              &amp; 2.14
                   \\
-               7.0
-              &amp; 184.0
+               5
+              &amp; 1.68
+                  \\
+               5
+              &amp; 1.77
                   \\
               
               \hline
@@ -71,22 +74,22 @@
           Suppose a statistics software returns the following:
           <ul>
               <li>
-                  Point estimate for <m>\beta_1</m>: <m>-18.58727630943563</m>.
+                  Point estimate for <m>\beta_1</m>: <m>-0.191651853257462</m>.
               </li>
               <li>
-                  Point estimate for <m>\beta_0</m>: <m>309.63412996732416</m>.
+                  Point estimate for <m>\beta_0</m>: <m>2.840530724411324</m>.
               </li>
               <li>
-                  Standard Error for <m>\beta_1</m>: <m>1.4762720534344909</m>.
+                  Standard Error for <m>\beta_1</m>: <m>0.017378684582935164</m>.
               </li>
               <li>
-                  <m>t</m>-score for <m>\beta_1</m>: <m>-12.590684939265115</m>.
+                  <m>t</m>-score for <m>\beta_1</m>: <m>-11.027983869714324</m>.
               </li>
               <li>
-                  95% Confidence Interval for <m>\beta_1</m>: <m>[-21.7535649573870, -15.4209876614843]</m>.
+                  95% Confidence Interval for <m>\beta_1</m>: <m>[-0.228693642614186, -0.154610063900738]</m>.
               </li>
               <li>
-                  <m>p</m>-value for <m>H_0:\beta_1=0, H_A: \beta_1\neq 0</m>: <m>p</m>-value<m>=5.035716288404046 \times 10^{-09}</m>.
+                  <m>p</m>-value for <m>H_0:\beta_1=0, H_A: \beta_1\neq 0</m>: <m>p</m>-value<m>=1.3590236935812072 \times 10^{-08}</m>.
               </li>
           </ul>
       </p>
@@ -126,7 +129,7 @@
           <p>
           <ol>
               <li>
-              The slope of the regression line  has a <m>95\%</m> chance of of falling in <m>[-21.7535649573870, -15.4209876614843]</m>.
+              The slope of the regression line  has a <m>95\%</m> chance of of falling in <m>[-0.228693642614186, -0.154610063900738]</m>.
           </li>
               
               

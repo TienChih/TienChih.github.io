@@ -1,21 +1,21 @@
-<exercise checkit-seed="5348" checkit-slug="N6" checkit-title="ANOVA">
+<exercise checkit-seed="7188" checkit-slug="N6" checkit-title="ANOVA">
   <statement>
-      <p>A physician studies the daily calcium intake of test subjects under three different health regiments, in order to see if there is any difference. </p>
+      <p>A psychologist divides test subjects into different groups where they under a different digital interactive experience. Afterwards, she measures their resting heart rates to see if there was any difference.</p>
       
       <p>
-          The average daily calcium intake for test subjects under Regiment A was  <m>\bar{x}_1=970.906</m>  mg, with sample standard deviation <m>s_1=75.974</m> mg, and sample size <m>n_1=49</m> test subjects.
+          The average resting heart rate for test subjects in Group A was  <m>\bar{x}_1=82.934</m>  bpm, with sample standard deviation <m>s_1=11.201</m> bpm, and sample size <m>n_1=49</m> test subjects.
       </p>
       
       <p>
-          The average daily calcium intake for test subjects under Regiment B was  <m>\bar{x}_2=936.705</m>  mg, with sample standard deviation <m>s_2=64.928</m> mg, and sample size <m>n_2=48</m> test subjects.
+          The average resting heart rate for test subjects in Group B was  <m>\bar{x}_2=76.851</m>  bpm, with sample standard deviation <m>s_2=10.029</m> bpm, and sample size <m>n_2=49</m> test subjects.
       </p>
       
       <p>
-          The average daily calcium intake for test subjects under Regiment C was  <m>\bar{x}_3=973.389</m>  mg, with sample standard deviation <m>s_3=58.249</m> mg, and sample size <m>n_3=49</m> test subjects.
+          The average resting heart rate for test subjects in Group C was  <m>\bar{x}_3=81.968</m>  bpm, with sample standard deviation <m>s_3=9.882</m> bpm, and sample size <m>n_3=40</m> test subjects.
       </p>
       
       <p>
-          The average daily calcium intake of all <m>n=146</m> test subjects was <m>\bar{x}=960.4952</m>  mg.
+          The average resting heart rate of all <m>n=138</m> test subjects was <m>\bar{x}=80.4941</m>  bpm.
       </p>
       
       <ol>
@@ -36,12 +36,12 @@
      
       
       <!--<p>
-          A physician studies the daily calcium intake of test subjects under three different health regiments, in order to see if there is any difference. <m> </m>  mg.  <m> </m>  mg.
+          A psychologist divides test subjects into different groups where they under a different digital interactive experience. Afterwards, she measures their resting heart rates to see if there was any difference.<m> </m>  bpm.  <m> </m>  bpm.
       </p>
       
       <ol>
           <li>
-               <m>n=146</m>?
+               <m>n=138</m>?
           </li>
           <li>
               Explain what this power means in the context of this problem.
@@ -62,25 +62,25 @@
       <title>Partial Solution:</title>
       <ul>
           <li>
-              <m>H_0:\ </m> any differences in the average daily calcium intake of test subjects under different Regiments is explainable solely by the variation within the Regiments.
+              <m>H_0:\ </m> any differences in the average resting heart rate of test subjects under different Groups is explainable solely by the variation within the Groups.
           </li>
           <li>
-              <m>H_A:\ </m> any differences in the average daily calcium intake of test subjects under different Regiments is explainable solely by the variation within the Regiments.
+              <m>H_A:\ </m> any differences in the average resting heart rate of test subjects under different Groups is explainable solely by the variation within the Groups.
           </li>
           <li>
-              <m>p</m>-value=<m>0.01211594815484962</m>
+              <m>p</m>-value=<m>0.01026357885768825</m>
           </li>
       </ul>
       
      <!--<ul>
           <li>
-              The standard error if <m>n=146</m> would be <m>SE=</m>.  The cutoff for a statistically significant test is a difference of <m></m>  mg.  The power of the test is <m>P(X\leq )=\%</m> where <m>X</m> is a normal variable with mean <m></m> and standard error <m></m>.
+              The standard error if <m>n=138</m> would be <m>SE=</m>.  The cutoff for a statistically significant test is a difference of <m></m>  bpm.  The power of the test is <m>P(X\leq )=\%</m> where <m>X</m> is a normal variable with mean <m></m> and standard error <m></m>.
          </li>
          <li>
-              <m></m> mg,  <m>n=146</m> would only have a <m>\%</m> chance of detecting it.
+              <m></m> bpm,  <m>n=138</m> would only have a <m>\%</m> chance of detecting it.
          </li>
          <li>
-             The <m>z</m>-score for a left-tail of <m>\%</m> is <m></m>.  So for this <m>\%</m> tail to be detectable, <m>+SE\approx -1.96SE</m>, so <m>SE\approx  </m>, and for this to be true <m>n\geq 48</m>
+             The <m>z</m>-score for a left-tail of <m>\%</m> is <m></m>.  So for this <m>\%</m> tail to be detectable, <m>+SE\approx -1.96SE</m>, so <m>SE\approx  </m>, and for this to be true <m>n\geq 49</m>
          </li>
          
           

@@ -1,10 +1,10 @@
-<exercise checkit-seed="6431" checkit-slug="C2" checkit-title="Two Categorical Variable Inferences">
+<exercise checkit-seed="2297" checkit-slug="C2" checkit-title="Two Categorical Variable Inferences">
   <statement>
       <p>
-          A University is comparing two course management systems, and looks to two other universities and their systems.  They want to know if the difference in approval rates between University A and University B<m>\, </m> is greater than <m>\,   0.00</m>.  They poll students from both universities.
+          A restaurateur wants to know about the difference in percieved quality of service in her eastern and western locations.  She wants to know if the proportion of customers who liked the service<m>\, </m> is greater than <m>\,   0.00</m>.  She polls random diners at both the eastern and western locations.
       </p>
       <p>
-          Suppose that of   <m>n_1=362\, </m>polled students from University A, <m>x_1=339\, </m>approved their course management system and of <m>n_2=362\, </m>polled students from University B, <m>x_2=323\, </m>approved their course management system. Test the hypothesis that  the difference between the proportion of University A students who would approve of their course management system: <m>p_1</m>, and the proportion of University B students who would approve of their course management system: <m>p_2</m>,   is greater than<m>\,   0.00</m>.  That is <m>p_1-p_2\gneq 0.00</m>.
+          Suppose that of   <m>n_1=196\, </m>polled diners from the eastern location, <m>x_1=88\, </m>liked the service and of <m>n_2=196\, </m>polled diners from the western location, <m>x_2=68\, </m>liked the service. Test the hypothesis that  the difference between the proportion of diners at the eastern location who like the service: <m>p_1</m>, and the proportion of diners at the western location who like the service: <m>p_2</m>,   is greater than<m>\,   0.00</m>.  That is <m>p_1-p_2\gneq 0.00</m>.
       </p>
       
       <ol>
@@ -42,20 +42,20 @@
               The alternative hypothesis is <m>H_A: p_1-p_2\gneq 0.00</m>.
           </li>
           <li>
-              The sampling distribution has mean <m> 0.00</m> and standard error <m>SE=0.0207992169934819</m>.
+              The sampling distribution has mean <m> 0.00</m> and standard error <m>SE=0.0494446373357045</m>.
           </li>
          <li>
-              The difference in sample proportions is <m>\hat{p}=0.04419889502762431</m> which has <m>z</m>-score <m>z=2.12502687199598</m>.
+              The difference in sample proportions is <m>\hat{p}=0.10204081632653061</m> which has <m>z</m>-score <m>z=2.06373879605435</m>.
           </li>
          <li>
-              The <m>p</m>-value is <m>0.016792185354310263</m>.
+              The <m>p</m>-value is <m>0.019521244413975514</m>.
           </li>
          
           <!--<li>
               For a % confidence interval,  <m>z^*=</m>.
           </li>
           <li>
-              The proportion of  that would approve of their course management system has a % chance of of falling in <m>[, ]</m>.
+              The proportion of  that like the service has a % chance of of falling in <m>[, ]</m>.
           </li>-->
       </ul>
           

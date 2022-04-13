@@ -1,12 +1,12 @@
-<exercise checkit-seed="4220" checkit-slug="P1" checkit-title="Introduction to Probability">
+<exercise checkit-seed="5692" checkit-slug="P1" checkit-title="Introduction to Probability">
   <statement>
       
       <p>
-          We consider the event that a restaurant in a large city accepts Visa credit cards, and the event that they accept Mastercard.  We consider a randomly selected restaurant.
+          We consider the event that there is an accident over the course of the day, and the event that it rains.
       </p>
       
       <p>
-          Suppose that   the probability that    the restaurant accepts at least one of Visa or  Mastercard (but possibly not both) is <m>0.8743</m>, the probability that    the restaurant accepts Mastercard is <m>0.7392</m>, and finally   the probability that   the restaurant accepts both Visa and Mastercard is <m>0.5538</m>.
+          Suppose that   the probability that    it rains, or there is an accident, over the course of a day is <m>0.1066</m>, the probability that   there is an accident on a road and it rains over the course of a day is <m>0.0086</m>, and finally   the probability that    it rains over the course of a day is <m>0.097</m>.
       </p>
       
       
@@ -14,7 +14,7 @@
           <ol>
               <li>
                   <p>
-                      Find the probability that   the restaurant accepts Visa.
+                      Find the probability that   there is an accident on a road over the course of a day.
                   </p>
                   <p>
                       (For the following, it is advisable to draw a venn diagram using the information above.)
@@ -22,10 +22,10 @@
                   
               </li>
               <li>
-                  Find the probability that  the  restaurant does not accept Visa but does accept Mastercard.
+                  Find the probability that  there is no accident on the road but it rains over the course of a day.
               </li>
               <li>
-                  Find the probability that  the  restaurant  accepts Visa or it does not accept Mastercard.
+                  Find the probability that  there is an accident on the road or it doesn't rain over the course of a day.
               </li>
           </ol>
           
@@ -49,13 +49,13 @@
      <p>
           <ol>
               <li>
-                   The probability that   the restaurant accepts Visa is <m>0.6889</m>.
+                   The probability that   there is an accident on a road over the course of a day is <m>0.0182</m>.
               </li>
               <li>
-                   The  probability that  the  restaurant does not accept Visa but does accept Mastercard is <m>0.1854</m>.
+                   The  probability that  there is no accident on the road but it rains over the course of a day is <m>0.0884</m>.
               </li>
               <li>
-                    The probability that  the  restaurant  accepts Visa or it does not accept Mastercard is <m>0.8146</m>.
+                    The probability that  there is an accident on the road or it doesn't rain over the course of a day is <m>0.9116</m>.
               </li>
           </ol>
           

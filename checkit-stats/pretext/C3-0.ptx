@@ -1,10 +1,10 @@
-<exercise checkit-seed="8367" checkit-slug="C3" checkit-title="Chi^2 goodness of fit test">
+<exercise checkit-seed="2733" checkit-slug="C3" checkit-title="Chi^2 goodness of fit test">
   <statement>
      <p>
-         In a casino, there is a game of chance where a wheel is spun, and the chances of it landing on different colors are  <m>25</m>%  blue, <m>27</m>%  green, <m>25</m>%  orange, and <m>23</m>%  red.
+         In a casino, there is a game of chance where a wheel is spun, and the chances of it landing on different colors are  <m>16</m>%  blue, <m>26</m>%  green, <m>21</m>%  orange, and <m>37</m>%  red.
       </p>
       <p>
-          In a sampling of spins one night, the colors that came up were   <m>40</m>  spins came up blue, <m>38</m>  spins came up green, <m>19</m>  spins came up orange, and <m>39</m>  spins came up red.
+          In a sampling of spins one night, the colors that came up were   <m>31</m>  spins came up blue, <m>28</m>  spins came up green, <m>36</m>  spins came up orange, and <m>40</m>  spins came up red.
       </p>
       <p>
           Use a <m>\chi^2</m> goodness of fit test to test whether or not the distributions of colors on this wheel match that of the game.
@@ -46,10 +46,10 @@
               There are <m>3</m> degrees of freedom.
           </li>
          <li>
-              The <m>\chi^2</m> value is <m>9.62640901771336</m>.
+              The <m>\chi^2</m> value is <m>9.57324082324082</m>.
           </li>
          <li>
-              The <m>p</m>-value is <m>0.022023917478351085</m>.
+              The <m>p</m>-value is <m>0.022564831357145487</m>.
           </li>
          
           

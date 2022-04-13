@@ -1,75 +1,63 @@
-<exercise checkit-seed="8384" checkit-slug="R2" checkit-title="Interpreting Linear Regression">
+<exercise checkit-seed="4299" checkit-slug="R2" checkit-title="Interpreting Linear Regression">
   <statement>
       <p>
-          A study is conducted examining how far a car has driven (in thousands of miles) compared to how expensive the annual maintenance costs are.
+          A survey is conducted comparing different homes electricity usage (in kilowatt hours), and their electric bills (dollars) within a city.
       </p>
       
       <p>
-          Consider this table of data collected comparing Distance Driven measured in thousand miles, and Maintenance Cost measured in dollars:
+          Consider this table of data collected comparing Electricity Usage measured in kilowatt hours, and Electric Bill measured in dollars:
           <me>
                \begin{array}{|c|c|}
               \hline
-              \text{ Distance Driven in thousand miles }
+              \text{ Electricity Usage in kilowatt hours }
               &amp;
-              \text{ Maintenance Cost in dollars }
+              \text{ Electric Bill in dollars }
               \\
               \hline
-               19.45
-              &amp; 607.57
+               218.27
+              &amp; 40.56
                   \\
-               27.39
-              &amp; 619.09
+               260.63
+              &amp; 49.01
                   \\
-               22.69
-              &amp; 720.66
+               269.42
+              &amp; 49.3
                   \\
-               20.38
-              &amp; 543.36
+               289.64
+              &amp; 51.59
                   \\
-               22.29
-              &amp; 797.54
+               166.06
+              &amp; 37.5
                   \\
-               20.39
-              &amp; 422.39
+               284.03
+              &amp; 50.97
                   \\
-               21.44
-              &amp; 710.71
+               200.69
+              &amp; 39.42
                   \\
-               19.28
-              &amp; 475.17
+               169.23
+              &amp; 34.8
                   \\
-               20.12
-              &amp; 516.94
+               227.26
+              &amp; 41.85
                   \\
-               25.26
-              &amp; 764.4
+               180.4
+              &amp; 34.08
                   \\
-               16.99
-              &amp; 344.44
+               244.12
+              &amp; 47.6
                   \\
-               29.48
-              &amp; 699.4
+               159.23
+              &amp; 32.19
                   \\
-               17.24
-              &amp; 270.16
+               298.72
+              &amp; 53.41
                   \\
-               28.12
-              &amp; 849.55
+               299.92
+              &amp; 54.05
                   \\
-               22.91
-              &amp; 463.98
-                  \\
-               18.97
-              &amp; 387.59
-                  \\
-               17.09
-              &amp; 662.58
-                  \\
-               26.59
-              &amp; 718.18
-                  \\
-               29.39
-              &amp; 702.87
+               256.07
+              &amp; 50.33
                   \\
               
               \hline
@@ -85,13 +73,13 @@
                   Find the slope <m>\beta_1</m> and it's units.
               </li>
               <li>
-                  What does <m>\beta_1</m> tell you about the relationship between Distance Driven and Maintenance Cost?
+                  What does <m>\beta_1</m> tell you about the relationship between Electricity Usage and Electric Bill?
               </li>
               <li>
-                  For a car with Distance Driven <m>15.51</m> thousand miles, what is the estimated Maintenance Cost?
+                  For a household with Electricity Usage <m>275.8</m> kilowatt hours, what is the estimated Electric Bill?
               </li>
               <li>
-                  For a car with Maintenance Cost <m>498.48</m> dollars, what is the estimated Distance Driven?
+                  For a household with Electric Bill <m>44.91</m> dollars, what is the estimated Electricity Usage?
               </li>
               
           </ol>
@@ -116,19 +104,19 @@
           <p>
           <ol>
               <li>
-                  <m>\beta_0=-33.55197076216348\ </m> dollars.
+                  <m>\beta_0=9.841461654196074\ </m> dollars.
               </li>
               <li>
-                  <m>\beta_1=28.002132804853716\ </m> dollars<m>/</m>thousand miles.
+                  <m>\beta_1=0.147299585147121\ </m> dollars<m>/</m>kilowatt hours.
               </li>
               <li>
-                 Whenever Distance Driven increases by 1 thousand miles, Maintenance Cost changes, on average, by <m>28.002132804853716\ </m> dollars.
+                 Whenever Electricity Usage increases by 1 kilowatt hours, Electric Bill changes, on average, by <m>0.147299585147121\ </m> dollars.
               </li>
               <li>
-                  For a car with Distance Driven <m>\ 15.51\ </m> thousand miles, the estimated Maintenance Cost is <m>400.76110904111766\ </m> dollars.
+                  For a household with Electricity Usage <m>\ 275.8\ </m> kilowatt hours, the estimated Electric Bill is <m>50.46668723777204\ </m> dollars.
               </li>
               <li>
-                  For a car with Maintenance Cost <m>\ 498.48\ </m> dollars, the estimated Distance Driven is <m>18.999694575762614\ </m> thousand miles.
+                  For a household with Electric Bill <m>\ 44.91\ </m> dollars, the estimated Electricity Usage is <m>238.07628725347666\ </m> kilowatt hours.
               </li>
               
           </ol>

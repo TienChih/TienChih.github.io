@@ -1,4 +1,4 @@
-<exercise checkit-seed="1530" checkit-slug="B1" checkit-title="Types of Variables">
+<exercise checkit-seed="4149" checkit-slug="B1" checkit-title="Types of Variables">
   <statement>
       
       
@@ -8,12 +8,12 @@
       <p>
           For each of the following, classify the type of variable described as <em>Numerical</em> or <em>Categorical</em>, as well as the subcategory <em>Continuous</em>, <em>Discrete</em>, <em>Nominal</em> or <em>Ordinal</em>.  Be sure to justify your choices.
           <ol>
-              <li>A review from a job candidiates performance from Exemplary to Unacceptable.</li>
-              <li>The rate per day at which people are infected by a novel virus over the past week.</li>
-              <li>The frequency of wolf attacks on a rancher's herd in attacks/week.</li>
-              <li>The number of voters that will turn out in the next mayoral election.</li>
-              <li>Make and model of a new car.</li>
-              <li>The population of deer in a national park.</li>
+              <li>A ranking of tasks priority from Urgent to Low Priority.</li>
+              <li>Someone's age group defined by 0-18, 19-34, 35-49, 50+.</li>
+              <li>How many items a party of four order in a restaurant.</li>
+              <li>The ranking of one's familiarity with programming languages from 1 through 5.</li>
+              <li>The quantity of tickets sold for a football game.</li>
+              <li>The ranking of a patient's anxiety from MILD to SEVERE.</li>
           </ol>
           
       </p>
@@ -36,11 +36,11 @@
      <p>
           <ol>
               <li>Categorical, Ordinal</li>
-              <li>Numerical, Continuous</li>
-              <li>Numerical, Continuous</li>
+              <li>Categorical, Ordinal</li>
               <li>Numerical, Discrete</li>
-              <li>Categorical, Nominal</li>
+              <li>Categorical, Ordinal</li>
               <li>Numerical, Discrete</li>
+              <li>Categorical, Ordinal</li>
           </ol>
           
       </p>

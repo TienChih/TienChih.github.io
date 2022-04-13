@@ -1,21 +1,21 @@
-<exercise checkit-seed="2537" checkit-slug="N6" checkit-title="ANOVA">
+<exercise checkit-seed="3795" checkit-slug="N6" checkit-title="ANOVA">
   <statement>
-      <p>A financial analyst examine the growth rate of different investments from three different investment portfolios over the last year, so they can see if there was any average difference.</p>
+      <p>A materials engineer tests the average electrical conductivity of three different experimental alloys so she can see if there was any difference.</p>
       
       <p>
-          The average rate of return for investments in Portfolio A was  <m>\bar{x}_1=10.75</m>  %, with sample standard deviation <m>s_1=12.139</m> %, and sample size <m>n_1=37</m> analyzed investment.
+          The average electrical conductivity for alloy samples of Alloy A was  <m>\bar{x}_1=76.789</m>  million Siemens/meter, with sample standard deviation <m>s_1=11.196</m> million Siemens/meter, and sample size <m>n_1=46</m> alloy samples.
       </p>
       
       <p>
-          The average rate of return for investments in Portfolio B was  <m>\bar{x}_2=16.072</m>  %, with sample standard deviation <m>s_2=10.748</m> %, and sample size <m>n_2=43</m> analyzed investment.
+          The average electrical conductivity for alloy samples of Alloy B was  <m>\bar{x}_2=83.062</m>  million Siemens/meter, with sample standard deviation <m>s_2=9.341</m> million Siemens/meter, and sample size <m>n_2=42</m> alloy samples.
       </p>
       
       <p>
-          The average rate of return for investments in Portfolio C was  <m>\bar{x}_3=9.892</m>  %, with sample standard deviation <m>s_3=6.1</m> %, and sample size <m>n_3=31</m> analyzed investment.
+          The average electrical conductivity for alloy samples of Alloy C was  <m>\bar{x}_3=80.852</m>  million Siemens/meter, with sample standard deviation <m>s_3=10.436</m> million Siemens/meter, and sample size <m>n_3=47</m> alloy samples.
       </p>
       
       <p>
-          The average rate of return for of all <m>n=111</m> analyzed investments was <m>\bar{x}=12.5721</m>  %.
+          The average electrical conductivity of all <m>n=135</m> sample alloys was <m>\bar{x}=80.1551</m>  million Siemens/meter.
       </p>
       
       <ol>
@@ -36,12 +36,12 @@
      
       
       <!--<p>
-          A financial analyst examine the growth rate of different investments from three different investment portfolios over the last year, so they can see if there was any average difference.<m> </m>  %.  <m> </m>  %.
+          A materials engineer tests the average electrical conductivity of three different experimental alloys so she can see if there was any difference.<m> </m>  million Siemens/meter.  <m> </m>  million Siemens/meter.
       </p>
       
       <ol>
           <li>
-               <m>n=111</m>?
+               <m>n=135</m>?
           </li>
           <li>
               Explain what this power means in the context of this problem.
@@ -62,25 +62,25 @@
       <title>Partial Solution:</title>
       <ul>
           <li>
-              <m>H_0:\ </m> any differences in the average  rate of return for investments in different Portolios is explainable solely by the variation within the Portfolios.
+              <m>H_0:\ </m> any differences in the average electrical conductivity for alloy samples of different Alloys is explainable solely by the variation within the Alloys.
           </li>
           <li>
-              <m>H_A:\ </m> any differences in the average  rate of return for investments in different Portolios is explainable solely by the variation within the Portfolios.
+              <m>H_A:\ </m> any differences in the average electrical conductivity for alloy samples of different Alloys is explainable solely by the variation within the Alloys.
           </li>
           <li>
-              <m>p</m>-value=<m>0.0178732962410455</m>
+              <m>p</m>-value=<m>0.01753611137861777</m>
           </li>
       </ul>
       
      <!--<ul>
           <li>
-              The standard error if <m>n=111</m> would be <m>SE=</m>.  The cutoff for a statistically significant test is a difference of <m></m>  %.  The power of the test is <m>P(X\leq )=\%</m> where <m>X</m> is a normal variable with mean <m></m> and standard error <m></m>.
+              The standard error if <m>n=135</m> would be <m>SE=</m>.  The cutoff for a statistically significant test is a difference of <m></m>  million Siemens/meter.  The power of the test is <m>P(X\leq )=\%</m> where <m>X</m> is a normal variable with mean <m></m> and standard error <m></m>.
          </li>
          <li>
-              <m></m> %,  <m>n=111</m> would only have a <m>\%</m> chance of detecting it.
+              <m></m> million Siemens/meter,  <m>n=135</m> would only have a <m>\%</m> chance of detecting it.
          </li>
          <li>
-             The <m>z</m>-score for a left-tail of <m>\%</m> is <m></m>.  So for this <m>\%</m> tail to be detectable, <m>+SE\approx -1.96SE</m>, so <m>SE\approx  </m>, and for this to be true <m>n\geq 43</m>
+             The <m>z</m>-score for a left-tail of <m>\%</m> is <m></m>.  So for this <m>\%</m> tail to be detectable, <m>+SE\approx -1.96SE</m>, so <m>SE\approx  </m>, and for this to be true <m>n\geq 42</m>
          </li>
          
           

@@ -1,29 +1,29 @@
-<exercise checkit-seed="6793" checkit-slug="D2" checkit-title="General Normal Distribution">
+<exercise checkit-seed="6994" checkit-slug="D2" checkit-title="General Normal Distribution">
   <statement>
       
       
       <p>
-          Suppose the weekly profit of a food truck is normally distributed with mean   <m>957.55</m>  dollars and standard deviation <m>878.15</m>  dollars.  Find the following:
+          Suppose the average height of 5 year old girls is normally distributed with mean  <m>110.32</m>  cm and standard deviation <m>5.53</m>  cm.  Find the following:
       </p>
       
       
       <p>
           <ol>
               <li>
-                  Find the probability that a randomly selected week's profit   is at least  <m>2162.1 </m>  dollars.
+                  Find the probability that a randomly selected 5 year old girl's height   is at most  <m>123.1 </m>  cm.
               </li>
              
               <li>
-                  Find the probability that a randomly selected week's profit  is between <m>-13.25 </m> and <m>2492.38</m>  dollars.
+                  Find the probability that a randomly selected 5 year old girl's height  is between <m>113.55 </m> and <m>121.89</m>  cm.
               </li>
               
               
               <li>
-                  Find <m>X^*</m> such that  the probability that a randomly selected week's profit   is at most  <m>X^*</m>  dollars is <m>37</m>%.
+                  Find <m>X^*</m> such that  the probability that a randomly selected 5 year old girl's height   is at least  <m>X^*</m>  cm is <m>69</m>%.
               </li>
               
               <li>
-                  Find <m>k</m> such that  the probability that a randomly selected week's profit  is between <m>957.55-k</m>  dollars and <m>957.55+k</m>  dollars is <m>56</m>%.
+                  Find <m>k</m> such that  the probability that a randomly selected 5 year old girl's height  is between <m>110.32-k</m>  cm and <m>110.32+k</m>  cm is <m>54</m>%.
               </li>
           </ol>
           
@@ -47,18 +47,18 @@
      <p>
           <ol>
               <li>
-                  <m>P(X\geq 2162.1)=0.0850799057556837</m>.
+                  <m>P(X\leq 123.1)=0.9895844215293496</m>.
               </li>
               
               <li>
-                  <m>P(-13.25\leq X\leq 2492.38)=0.8252803899644653</m>.
+                  <m>P(113.55\leq X\leq 121.89)=0.26137172691223576</m>.
               </li>
               
               <li>
-                  If <m>P(X\leq\  X^*)=37</m>% then <m>X=666.1329838265094</m>  dollars.
+                  If <m>P(X\geq\  X^*)=69</m>% then <m>X=107.57794757916858</m>  cm.
               </li>
               <li>
-                  If <m>P(957.55-k\leq\  X\leq\  957.55+k)=56</m>% then <m>k=678.1014710397936</m>  dollars.
+                  If <m>P(110.32-k\leq\  X\leq\  110.32+k)=54</m>% then <m>k=4.085823075994232</m>  cm.
               </li>
           </ol>
           

@@ -1,15 +1,15 @@
-<exercise checkit-seed="7064" checkit-slug="C1" checkit-title="Size of Sample: Proportion">
+<exercise checkit-seed="4744" checkit-slug="C1" checkit-title="Size of Sample: Proportion">
   <statement>
       <p>
-          A psychologist wants to know the probability that exposure to a certain simuli increases anxiety.  He wants to find a <m> 99</m>% confidence interval with margin of error <m>ME=0.04</m>.
+          An engineer wants to know the probability that a new anti-rust coat stays on when exposed to rain-like conditions.  She wants to find a <m> 95</m>% confidence interval with margin of error <m>ME=0.04</m>.
       </p>
       <p>
-          A previous study showed that  of <m>47\ </m> test subjects,  <m>23\ </m>had increased anxiety after exposure to the stimuli.  How many subjects should now be tested to obtain a <m>99</m>% confidence interval with margin of error <m>ME=0.04</m>?
+          A previous study showed that  of <m>45\ </m> tested samples exposed to rain-like conditions,  <m>22\ </m>had the coating stay on.  How many samples should she now test to obtain a <m>95</m>% confidence interval with margin of error <m>ME=0.04</m>?
       </p>
       
       <!--<ol>
           <li>
-              Find a <m>99</m>% confidence interval for the proportion of  that .
+              Find a <m>95</m>% confidence interval for the proportion of  that .
           </li>
           <li>
               Using complete sentences, explain what the confidence interval means in the context of this problem.
@@ -26,16 +26,16 @@
       <title>Partial Solution:</title>
       <ul>
           <li>
-              The sample proportion of the initial study is <m>\hat{p}=0.48936170212765956</m>.
+              The sample proportion of the initial study is <m>\hat{p}=0.4888888888888889</m>.
           </li>
           <li>
-              For a 99% confidence interval,  <m>z^*=2.5758293035489</m>.
+              For a 95% confidence interval,  <m>z^*=1.9599639845400536</m>.
           </li>
           <li>
               The margin of error is <m>ME=0.04</m>.
           </li>
           <li>
-              The number of subjects should now be tested is at least <m>1037</m>.
+              The number of samples should she now test is at least <m>600</m>.
           </li>
       </ul>
           

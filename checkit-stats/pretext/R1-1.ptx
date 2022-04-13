@@ -1,84 +1,84 @@
-<exercise checkit-seed="1411" checkit-slug="R1" checkit-title="Linear Correlation of Variables">
+<exercise checkit-seed="7825" checkit-slug="R1" checkit-title="Linear Correlation of Variables">
   <statement>
       <p>
-          A study is done comparing windchill in a city (in F), compared to windspeed (in mph) on different days.
+          A study is conducted comparing the age of children to their Forced Exhalation Volume (FEV) (in liters), in order to see the impact on age on lung function.  Children of different ages have their FEV tested by physicians.
       </p>
       
       <p>
-          Consider this table of data collected comparing Windspeed measured in mph, and Windchill measured in F:
+          Consider this table of data collected comparing Age measured in years, and FEV measured in liters:
           <me>
                \begin{array}{|c|c|}
               \hline
-              \text{ Windspeed in mph }
+              \text{ Age in years }
               &amp;
-              \text{ Windchill in F }
+              \text{ FEV in liters }
               \\
               \hline
-               9.3
-              &amp; 2.8
+               6
+              &amp; 1.79
                   \\
-               14.6
-              &amp; -2.6
+               8
+              &amp; 1.73
                   \\
-               6.4
-              &amp; 10.2
+               9
+              &amp; 2.46
                   \\
-               12.8
-              &amp; -0.5
+               9
+              &amp; 2.07
                   \\
-               12.6
-              &amp; 2.9
+               10
+              &amp; 2.84
                   \\
-               12.1
-              &amp; -1.3
+               6
+              &amp; 1.54
                   \\
-               13.0
-              &amp; 5.6
+               10
+              &amp; 2.37
                   \\
-               8.8
-              &amp; 7.1
+               7
+              &amp; 2.02
                   \\
-               8.4
-              &amp; 8.1
+               6
+              &amp; 1.66
                   \\
-               17.1
-              &amp; -6.3
+               10
+              &amp; 2.21
                   \\
-               15.0
-              &amp; -1.4
+               8
+              &amp; 2.44
                   \\
-               15.4
-              &amp; -5.8
+               6
+              &amp; 1.78
                   \\
-               8.7
-              &amp; 4.3
+               6
+              &amp; 1.76
                   \\
-               8.7
-              &amp; 12.8
+               7
+              &amp; 1.69
                   \\
-               10.8
-              &amp; -2.9
+               9
+              &amp; 2.3
                   \\
-               5.8
-              &amp; 13.7
+               10
+              &amp; 2.51
                   \\
-               15.8
-              &amp; -7.0
+               6
+              &amp; 1.32
                   \\
-               12.9
-              &amp; -3.3
+               6
+              &amp; 1.69
                   \\
-               10.7
-              &amp; 3.4
+               10
+              &amp; 2.52
                   \\
-               9.2
-              &amp; 5.7
+               10
+              &amp; 2.29
                   \\
-               9.3
-              &amp; -1.5
+               9
+              &amp; 2.31
                   \\
-               9.0
-              &amp; 7.0
+               9
+              &amp; 1.98
                   \\
               
               \hline
@@ -94,7 +94,7 @@
                   Compute the correlation coefficient <m>R</m>.
               </li>
               <li>
-                  What does <m>R</m> tell you about the relationship between Windspeed and Windchill?
+                  What does <m>R</m> tell you about the relationship between Age and FEV?
               </li>
               <li>
                   Compute the <m>R^2</m>.
@@ -125,16 +125,16 @@
      <p>
           <ul>
               <li>
-                  The exaplanatory variable is Windspeed in mph and the response variable is Windchill in F.
+                  The exaplanatory variable is Age in years and the response variable is FEV in liters.
               </li>
               <li>
-                  <m>R=-0.8873102229.</m>
+                  <m>R=0.851812848.</m>
               </li>
               <li>
-                  <m>R^2=0.7873194316628476.</m>
+                  <m>R^2=0.7255851280178711.</m>
               </li>
               <li>
-                  Windchill is <m>78.73194316628475\%</m> explainable by Windspeed.
+                  FEV is <m>72.55851280178712\%</m> explainable by Age.
               </li>
               
               

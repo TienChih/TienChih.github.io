@@ -1,75 +1,78 @@
-<exercise checkit-seed="8693" checkit-slug="R1" checkit-title="Linear Correlation of Variables">
+<exercise checkit-seed="1904" checkit-slug="R1" checkit-title="Linear Correlation of Variables">
   <statement>
       <p>
-          A study is conducted comparing the weight of a species of bird (in grams) to it's (in mm).  Birds of this species are captured, their dimensions recorded and released.
+          A study is conducted comparing the age of children to their Forced Exhalation Volume (FEV) (in liters), in order to see the impact on age on lung function.  Children of different ages have their FEV tested by physicians.
       </p>
       
       <p>
-          Consider this table of data collected comparing Weight measured in grams, and Wingspan measured in mm:
+          Consider this table of data collected comparing Age measured in years, and FEV measured in liters:
           <me>
                \begin{array}{|c|c|}
               \hline
-              \text{ Weight in grams }
+              \text{ Age in years }
               &amp;
-              \text{ Wingspan in mm }
+              \text{ FEV in liters }
               \\
               \hline
-               16.58
-              &amp; 7.91
+               6
+              &amp; 1.46
                   \\
-               13.22
-              &amp; 7.42
+               9
+              &amp; 2.44
                   \\
-               12.03
-              &amp; 6.11
+               8
+              &amp; 1.62
                   \\
-               10.17
-              &amp; 7.25
+               7
+              &amp; 1.56
                   \\
-               16.31
-              &amp; 8.71
+               6
+              &amp; 1.72
                   \\
-               11.13
-              &amp; 6.14
+               6
+              &amp; 1.62
                   \\
-               15.67
-              &amp; 6.78
+               7
+              &amp; 1.92
                   \\
-               17.72
-              &amp; 7.67
+               7
+              &amp; 1.88
                   \\
-               12.86
-              &amp; 6.55
+               8
+              &amp; 1.6
                   \\
-               8.91
-              &amp; 6.01
+               6
+              &amp; 1.46
                   \\
-               14.44
-              &amp; 7.63
+               7
+              &amp; 1.48
                   \\
-               8.79
-              &amp; 5.43
+               10
+              &amp; 2.54
                   \\
-               13.06
-              &amp; 7.77
+               9
+              &amp; 1.64
                   \\
-               11.48
-              &amp; 4.12
+               6
+              &amp; 1.68
                   \\
-               11.11
-              &amp; 6.77
+               10
+              &amp; 2.71
                   \\
-               15.43
-              &amp; 7.77
+               10
+              &amp; 1.77
                   \\
-               15.24
-              &amp; 8.1
+               8
+              &amp; 2.22
                   \\
-               15.66
-              &amp; 7.46
+               9
+              &amp; 2.25
                   \\
-               17.42
-              &amp; 7.46
+               10
+              &amp; 2.1
+                  \\
+               7
+              &amp; 1.49
                   \\
               
               \hline
@@ -85,7 +88,7 @@
                   Compute the correlation coefficient <m>R</m>.
               </li>
               <li>
-                  What does <m>R</m> tell you about the relationship between Weight and Wingspan?
+                  What does <m>R</m> tell you about the relationship between Age and FEV?
               </li>
               <li>
                   Compute the <m>R^2</m>.
@@ -116,16 +119,16 @@
      <p>
           <ul>
               <li>
-                  The exaplanatory variable is Weight in grams and the response variable is Wingspan in mm.
+                  The exaplanatory variable is Age in years and the response variable is FEV in liters.
               </li>
               <li>
-                  <m>R=0.7237017255.</m>
+                  <m>R=0.7025935919.</m>
               </li>
               <li>
-                  <m>R^2=0.5237441874916774.</m>
+                  <m>R^2=0.4936377553789438.</m>
               </li>
               <li>
-                  Wingspan is <m>52.37441874916774\%</m> explainable by Weight.
+                  FEV is <m>49.36377553789438\%</m> explainable by Age.
               </li>
               
               

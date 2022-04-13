@@ -1,4 +1,4 @@
-<exercise checkit-seed="7322" checkit-slug="P2" checkit-title="Conditional Probability">
+<exercise checkit-seed="1456" checkit-slug="P2" checkit-title="Conditional Probability">
   <statement>
       
       <p>
@@ -6,7 +6,7 @@
       </p>
       
       <p>
-          Suppose that   the probability that   the patient tests positive for the disease is <m>0.0628</m>, the probability that   the patient tests positive for the disease, given that they have it is <m>0.97</m>, and finally   the probability that    the patient has the disease is <m>0.0139</m>.
+          Suppose that   the probability that   the patient tests positive for the disease is <m>0.0633</m>, the probability that   the patient tests positive for the disease, given that they have it is <m>0.97</m>, and finally   the probability that    the patient has the disease is <m>0.0145</m>.
       </p>
       
       
@@ -43,10 +43,10 @@
      <p>
           <ol>
               <li>
-                   The probability that    the patient has the disase and tests positive for it is <m>0.013482999999999998</m>.
+                   The probability that    the patient has the disase and tests positive for it is <m>0.014065000000000001</m>.
               </li>
               <li>
-                   The  probability that    the patient has the disease, given that they've tested positive for it is <m>0.21469745222929937</m>.
+                   The  probability that    the patient has the disease, given that they've tested positive for it is <m>0.22219589257503952</m>.
               </li>
               <li>
                   The events   the patient tests positive for the disease, and    the patient has the disease  are not independent.

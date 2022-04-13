@@ -1,25 +1,25 @@
-<exercise checkit-seed="8339" checkit-slug="P2" checkit-title="Conditional Probability">
+<exercise checkit-seed="6334" checkit-slug="P2" checkit-title="Conditional Probability">
   <statement>
       
       <p>
-          A company advertises a spray that is meant to prevent insect infestations of crops.  We consider the events that a farmer has an insect i festation of their crops, and the event that they use the spray.
+          An interview coach promises employees of a company that going through their course will help applicants get a promotion.  We consider the events that an applicant is promoted and the event that they go through the course.
       </p>
       
       <p>
-          Suppose that   the probability that   the farmer's crops have an infestation is <m>0.3</m>, the probability that   the farmer has an infestation of their crops given that they use the spray is <m>0.3</m>, and finally   the probability that    the farmer uses the spray is <m>0.39</m>.
+          Suppose that   the probability that   the applicant gets a promotion is <m>0.31</m>, the probability that   the applicant gets a promotion given that they wen't through the course is <m>0.318</m>, and finally   the probability that    the applicant goes through the course is <m>0.17</m>.
       </p>
       
       
       <p>
           <ol>
               <li>
-                  Find the probability that    the farmer has an infestation of their crops and they use the spray.
+                  Find the probability that    the applicant both got a promotion and went through the course.
               </li>
               <li>
-                  Find the probability that    the farmer uses the spray, given that they had an infestation of their crops.
+                  Find the probability that    the customer went through the course, given that they got a promotion.
               </li>
               <li>
-                  Are the events   the farmer's crops have an infestation, and    the farmer uses the spray independent?
+                  Are the events   the applicant gets a promotion, and    the applicant goes through the course independent?
               </li>
           </ol>
           
@@ -43,13 +43,13 @@
      <p>
           <ol>
               <li>
-                   The probability that    the farmer has an infestation of their crops and they use the spray is <m>0.11699999999999999</m>.
+                   The probability that    the applicant both got a promotion and went through the course is <m>0.054060000000000004</m>.
               </li>
               <li>
-                   The  probability that    the farmer uses the spray, given that they had an infestation of their crops is <m>0.39</m>.
+                   The  probability that    the customer went through the course, given that they got a promotion is <m>0.17438709677419356</m>.
               </li>
               <li>
-                  The events   the farmer's crops have an infestation, and    the farmer uses the spray  are independent.
+                  The events   the applicant gets a promotion, and    the applicant goes through the course  are not independent.
               </li>
           </ol>
           

@@ -1,4 +1,4 @@
-<exercise checkit-seed="2495" checkit-slug="R1" checkit-title="Linear Correlation of Variables">
+<exercise checkit-seed="4768" checkit-slug="R1" checkit-title="Linear Correlation of Variables">
   <statement>
       <p>
           A study is done comparing windchill in a city (in F), compared to windspeed (in mph) on different days.
@@ -14,62 +14,56 @@
               \text{ Windchill in F }
               \\
               \hline
-               17.9
-              &amp; -2.9
+               9.9
+              &amp; 11.1
                   \\
-               12.9
-              &amp; 3.8
+               12.2
+              &amp; 4.6
                   \\
-               18.8
-              &amp; -10.2
-                  \\
-               7.5
-              &amp; 9.0
+               12.1
+              &amp; 1.0
                   \\
                8.1
-              &amp; 8.4
+              &amp; 7.0
                   \\
-               18.2
-              &amp; -2.1
+               12.2
+              &amp; 0.9
                   \\
-               13.3
-              &amp; 3.6
+               12.8
+              &amp; -1.0
                   \\
-               13.0
-              &amp; 10.2
+               10.1
+              &amp; 3.0
                   \\
-               9.0
-              &amp; 5.5
+               8.8
+              &amp; 6.2
                   \\
-               14.3
-              &amp; 3.6
-                  \\
-               12.4
-              &amp; 6.9
-                  \\
-               7.6
-              &amp; 13.0
+               18.3
+              &amp; 0.3
                   \\
                17.0
+              &amp; 0.7
+                  \\
+               16.3
               &amp; -3.1
                   \\
-               19.1
-              &amp; -8.2
+               13.0
+              &amp; 3.1
                   \\
-               12.0
-              &amp; -1.5
+               9.0
+              &amp; 4.9
                   \\
-               14.0
-              &amp; 3.9
+               16.1
+              &amp; -9.4
                   \\
-               10.3
-              &amp; 5.8
+               14.1
+              &amp; -0.2
                   \\
-               19.8
-              &amp; 2.0
+               5.4
+              &amp; 12.2
                   \\
                15.2
-              &amp; -1.8
+              &amp; -5.2
                   \\
               
               \hline
@@ -119,13 +113,13 @@
                   The exaplanatory variable is Windspeed in mph and the response variable is Windchill in F.
               </li>
               <li>
-                  <m>R=-0.8557781389.</m>
+                  <m>R=-0.796545771.</m>
               </li>
               <li>
-                  <m>R^2=0.7323562230191477.</m>
+                  <m>R^2=0.6344851652979845.</m>
               </li>
               <li>
-                  Windchill is <m>73.23562230191477\%</m> explainable by Windspeed.
+                  Windchill is <m>63.44851652979845\%</m> explainable by Windspeed.
               </li>
               
               

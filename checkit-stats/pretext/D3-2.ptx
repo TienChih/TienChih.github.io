@@ -1,18 +1,18 @@
-<exercise checkit-seed="9488" checkit-slug="D3" checkit-title="Counting Principles">
+<exercise checkit-seed="1814" checkit-slug="D3" checkit-title="Counting Principles">
   <statement>
       
       
       <p>
-          Suppose a butcher has wholesale orders from  <m>28</m>  clients.
+          Suppose you had a collection of  <m>7</m>  books.
       </p>
       
       
       <p>
           <ol>
-              <li>How many ways are there to select <m>12</m>  clients  to delay their order until a future date?</li>
-              <li>How many ways are there to select <m>25</m>  clients  and deliver order to them one at a time?</li>
-              <li>How many ways are there to select <m>14</m>  clients  and arrange them on a waitlist for a new order?</li>
-              <li>How many ways are there to select <m>9</m>  clients  to offer a special. discount to?</li>
+              <li>How many ways are there to select <m>4</m>  books  and arrange them on a book shelf?</li>
+              <li>How many ways are there to select <m>3</m>  books  to donate to a library?</li>
+              <li>How many ways are there to select <m>5</m>  books  to put into storage?</li>
+              <li>How many ways are there to select <m>2</m>  books  and give one each to different friends of yours?</li>
           </ol>
           
       </p>
@@ -34,10 +34,10 @@
       
      <p>
           <ol>
-              <li>30421755 ways.</li>
-              <li>50814724101952310083584000000 ways.</li>
-              <li>3497296636753920000 ways.</li>
-              <li>6906900 ways.</li>
+              <li>840 ways.</li>
+              <li>35 ways.</li>
+              <li>21 ways.</li>
+              <li>42 ways.</li>
           </ol>
           
       </p>

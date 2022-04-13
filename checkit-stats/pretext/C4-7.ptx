@@ -1,9 +1,9 @@
-<exercise checkit-seed="7825" checkit-slug="C4" checkit-title="Chi^2 independence test">
+<exercise checkit-seed="9936" checkit-slug="C4" checkit-title="Chi^2 independence test">
   <statement>
       
       
       <p>
-          Two tech companies, Company A and B, recruit students from Universities 1, 2 and 3.  A sampling on recent hires show their Alma Mater:
+          A newspaper polls members of two political parties to measure their position on a newly proposed law.  The polled participants either Support, are Neutral, or Oppose the proposed law:
       </p>
       
       
@@ -11,11 +11,11 @@
           <me>
               \begin{array}{|c|c|c|c|}
               \hline
-              &amp; \text{ University 1 } &amp; \text{ University 2 } &amp; \text{ University 3 }\\
+              &amp; \text{ Support } &amp; \text{ Neutral } &amp; \text{ Oppose }\\
               \hline
-              \text{ Company A } &amp; 21 &amp; 54 &amp; 61\\
+              \text{ Party A } &amp; 53 &amp; 55 &amp; 65\\
               \hline
-              \text{ Company B } &amp; 33 &amp; 63 &amp; 44\\
+              \text{ Party B } &amp; 24 &amp; 49 &amp; 43\\
               \hline
               \end{array}
           </me>
@@ -25,7 +25,7 @@
       
      
       <p>
-          Use a <m>\chi^2</m> independence test to test  whether hiring preferences of the companies are independent of the company.
+          Use a <m>\chi^2</m> independence test to test  whether position on this law is independent of party affiliation.
       </p>
       <ul>
           <li>
@@ -55,19 +55,19 @@
       
      <ul>
           <li>
-              The null hypothesis is <m>H_0:\ </m>Hiring preferences are independent of the company.
+              The null hypothesis is <m>H_0:\ </m>Position on the law is independent of party affiliation.
           </li>
          <li>
-              The alternative hypothesis is <m>H_A:\ </m>Hiring preferences are not independent of the company.
+              The alternative hypothesis is <m>H_A:\ </m>Position on the law is independent of party affiliation.
           </li>
           <li>
               There are <m>2</m> degrees of freedom.
           </li>
          <li>
-              The <m>\chi^2</m> value is <m>6.05465601625265</m>.
+              The <m>\chi^2</m> value is <m>4.68993921079954</m>.
           </li>
          <li>
-              The <m>p</m>-value is <m>0.048444909747961895</m>.
+              The <m>p</m>-value is <m>0.0958501154121646</m>.
           </li>
          
           

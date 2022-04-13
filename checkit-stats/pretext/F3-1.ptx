@@ -1,10 +1,10 @@
-<exercise checkit-seed="5362" checkit-slug="F3" checkit-title="Hypothesis Testing">
+<exercise checkit-seed="7380" checkit-slug="F3" checkit-title="Hypothesis Testing">
   <statement>
       <p>
-          An engineer tests to see if the he proproportion of iron samples, when sprayed with a new compound, would rust when exposed to water is less than <m>  63</m>%.  He conducts an experiment.
+          A marine biologist wonders if the proportion of turtles in a coral reef that were infected with a new parasite is greater than <m>  45</m>%.  She gathers a sample of turtles.
       </p>
       <p>
-Suppose that for   <m>n=132</m> iron samples, <m>74</m> rusted. Test the hypothesis that  the proportion of iron samples that would rust is less than <m>  63</m>%. 
+Suppose that for   <m>n=179</m> turtles found in the coral reef, <m>93</m> were infected. Test the hypothesis that  the proportion of turtles that are infected is greater than <m>  45</m>%. 
       </p>
       
       <ol>
@@ -36,26 +36,26 @@ Suppose that for   <m>n=132</m> iron samples, <m>74</m> rusted. Test the hypothe
       
      <ul>
           <li>
-              The null hypothesis is <m>H_0: p=0.63</m>.
+              The null hypothesis is <m>H_0: p=0.45</m>.
           </li>
          <li>
-              The alternative hypothesis is <m>H_A: p\lneq0.63</m>.
+              The alternative hypothesis is <m>H_A: p\gneq0.45</m>.
           </li>
           <li>
-              The sampling distribution has mean <m>0.63</m> and standard error <m>SE=0.0420227211268986</m>.
+              The sampling distribution has mean <m>0.45</m> and standard error <m>SE=0.0371844263670399</m>.
           </li>
          <li>
-              The sample proportion is <m>\hat{p}=0.5606060606060606</m> which has <m>z</m>-score <m>z=-1.65134330983437</m>.
+              The sample proportion is <m>\hat{p}=0.5195530726256983</m> which has <m>z</m>-score <m>z=1.87048932634200</m>.
           </li>
          <li>
-              The <m>p</m>-value is <m>0.04933424672509416</m>.
+              The <m>p</m>-value is <m>0.030707948922227057</m>.
           </li>
          
           <!--<li>
               For a % confidence interval,  <m>z^*=</m>.
           </li>
           <li>
-              The proportion of iron samples that would rust has a % chance of of falling in <m>[, ]</m>.
+              The proportion of turtles that are infected has a % chance of of falling in <m>[, ]</m>.
           </li>-->
       </ul>
           

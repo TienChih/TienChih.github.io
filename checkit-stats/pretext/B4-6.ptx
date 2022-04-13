@@ -1,4 +1,4 @@
-<exercise checkit-seed="6364" checkit-slug="B4" checkit-title="Centers of Data">
+<exercise checkit-seed="7626" checkit-slug="B4" checkit-title="Centers of Data">
   <statement>
       
       
@@ -8,38 +8,39 @@
       <p>
           Consider the following list of data:
           <me>
-              29,
-              30,
-              19,
-              57,
-              59,
-              33,
-              50,
-              29,
-              43,
-              47,
-              40,
-              62,
-              71,
-              43,
-              72,
-              49,
-              80,
-              32,
-              32,
-              42,
-              83,
-              37,
-              31,
-              44,
-              58,
-              70,
-              90,
-              55,
-              34,
-              28,
-              69,
+              85,
+              54,
               48,
+              29,
+              85,
+              -4,
+              55,
+              59,
+              26,
+              88,
+              0,
+              53,
+              43,
+              35,
+              49,
+              82,
+              35,
+              49,
+              55,
+              29,
+              27,
+              39,
+              69,
+              117,
+              49,
+              64,
+              60,
+              64,
+              7,
+              78,
+              74,
+              -41,
+              41,
           </me>
           
       
@@ -76,13 +77,13 @@
           Find the following measures of centrality for this data:
           <ol>
               <li>
-                  Mean: <m>48.9375</m>
+                  Mean: <m>48.57575757575758</m>
               </li>
               <li>
-                  Median: <m>45.5</m>
+                  Median: <m>49.0</m>
               </li>
               <!--<li>
-                  Mode: <m>\text{\texttt{ModeResult(mode=array([29]),{ }count=array([2]))}}</m>
+                  Mode: <m>\text{\texttt{ModeResult(mode=array([49]),{ }count=array([3]))}}</m>
               </li>-->
           </ol>
           

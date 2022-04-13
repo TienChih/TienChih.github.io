@@ -1,110 +1,118 @@
-<exercise checkit-seed="6353" checkit-slug="N3" checkit-title="Inference for paired Numerical Variables">
+<exercise checkit-seed="7080" checkit-slug="N3" checkit-title="Inference for paired Numerical Variables">
   <statement>
       
       <p>
-          A study is conducted comparing the resting heart rate of test subjects before and after taking a trial medication. A total of <m>20</m>  test subjects were sampled.  The following is a summary of the heart rate of test subjects before taking medication and the heart rate of test subjects after taking medication.
+          A company tests two different packagings for their product.  They ask members of a focus group to rate how appealing each packaging for the product is on a scale of 1-10. A total of <m>22</m>  focus group members were sampled.  The following is a summary of rating for packaging A and rating for packaging B.
       </p>
       
       <p>
           <me>
                \begin{array}{|c|c|c|}
               \hline
-              \text{ Heart Rate Before in  bpm }
+              \text{ Packaging A in  points }
               &amp;
-              \text{ Heart Rate After in  bpm }
+              \text{ Packaging B in  points }
               &amp;
-              \text{Difference in  bpm }
+              \text{Difference in  points }
               \\
               \hline
-               69.9
-              &amp; 75.2
-              &amp; 5.3
+               5.4
+              &amp; 5.5
+              &amp; 0.1
                   \\
-               57.0
-              &amp; 61.7
-              &amp; 4.7
-                  \\
-               63.2
-              &amp; 66.7
-              &amp; 3.5
-                  \\
-               72.1
-              &amp; 73.9
-              &amp; 1.8
-                  \\
-               80.1
-              &amp; 86.3
-              &amp; 6.2
-                  \\
-               65.4
-              &amp; 63.7
-              &amp; -1.7
-                  \\
-               78.6
-              &amp; 65.0
-              &amp; -13.6
-                  \\
-               68.9
-              &amp; 56.7
-              &amp; -12.2
-                  \\
-               73.4
-              &amp; 85.1
-              &amp; 11.7
-                  \\
-               74.8
-              &amp; 83.7
-              &amp; 8.9
-                  \\
-               77.8
-              &amp; 85.2
-              &amp; 7.4
-                  \\
-               80.2
-              &amp; 77.7
+               7.5
+              &amp; 5.0
               &amp; -2.5
                   \\
-               81.4
-              &amp; 77.4
-              &amp; -4.0
+               4.2
+              &amp; 4.0
+              &amp; -0.2
                   \\
-               52.5
-              &amp; 51.4
-              &amp; -1.1
-                  \\
-               80.1
-              &amp; 81.8
-              &amp; 1.7
-                  \\
-               59.0
-              &amp; 57.4
+               3.4
+              &amp; 1.8
               &amp; -1.6
                   \\
-               68.1
-              &amp; 75.2
-              &amp; 7.1
+               6.1
+              &amp; 7.0
+              &amp; 0.9
                   \\
-               71.5
-              &amp; 67.6
-              &amp; -3.9
+               3.6
+              &amp; 3.1
+              &amp; -0.5
                   \\
-               72.9
-              &amp; 73.4
+               2.4
+              &amp; -0.6
+              &amp; -3.0
+                  \\
+               4.6
+              &amp; 5.8
+              &amp; 1.2
+                  \\
+               5.8
+              &amp; 7.3
+              &amp; 1.5
+                  \\
+               4.5
+              &amp; 4.2
+              &amp; -0.3
+                  \\
+               6.1
+              &amp; 8.2
+              &amp; 2.1
+                  \\
+               5.3
+              &amp; 6.9
+              &amp; 1.6
+                  \\
+               4.6
+              &amp; 4.0
+              &amp; -0.6
+                  \\
+               1.9
+              &amp; 1.8
+              &amp; -0.1
+                  \\
+               3.4
+              &amp; 3.6
+              &amp; 0.2
+                  \\
+               4.8
+              &amp; 3.5
+              &amp; -1.3
+                  \\
+               4.6
+              &amp; 6.0
+              &amp; 1.4
+                  \\
+               5.3
+              &amp; 4.8
+              &amp; -0.5
+                  \\
+               4.9
+              &amp; 5.4
               &amp; 0.5
                   \\
-               69.4
-              &amp; 63.0
-              &amp; -6.4
+               4.4
+              &amp; 3.1
+              &amp; -1.3
+                  \\
+               4.9
+              &amp; 5.3
+              &amp; 0.4
+                  \\
+               4.9
+              &amp; 4.8
+              &amp; -0.1
                   \\
               
               \hline
               \end{array}
           </me>
-          The sample average of these differences is <m>0.5900000000000005</m>  bpm and the sample standard deviation is <m>6.4824300998930955</m>  bpm.
+          The sample average of these differences is <m>-0.09545454545454544</m>  points and the sample standard deviation is <m>1.2772403748733485</m>  points.
       </p>
       
       <ul>
-          <li>  Test the hypothesis that  the average difference in heart rate of patients before and after taking the medication   is greater than <m>  0</m>  bpm.
+          <li>  Test the hypothesis that  the average difference in rating between packaging A and B   is not equal to <m>  0.0</m>  points.
               <ol>
           <li>
               State the null hypothesis.
@@ -125,7 +133,7 @@
       </ol>
           </li>
           <li>
-              Find a <m>99</m>% confidence interval for the  the average difference in heart rate of patients before and after taking the medication .  Using complete sentences, explain what the confidence interval means in the context of this problem.
+              Find a <m>99</m>% confidence interval for the  the average difference in rating between packaging A and B .  Using complete sentences, explain what the confidence interval means in the context of this problem.
           </li>
       </ul>
       
@@ -141,26 +149,26 @@
       
      <ul>
           <li>
-              The null hypothesis is <m>H_0: \mu_d=0</m>.
+              The null hypothesis is <m>H_0: \mu_d=0.0</m>.
           </li>
          <li>
-              The alternative hypothesis is <m>H_A: \mu_d\gneq0</m>.
+              The alternative hypothesis is <m>H_A: \mu_d\neq0.0</m>.
           </li>
           <li>
-              The sampling distribution has mean <m>0</m> and standard error <m>SE=1.44951543627517</m>.
+              The sampling distribution has mean <m>0.0</m> and standard error <m>SE=0.272308562881306</m>.
           </li>
          <li>
-              The sample mean is <m>\bar{d}=0.5900000000000005</m> which has <m>t</m>-score <m>t=0.4070325746348221</m>.
+              The sample mean is <m>\bar{d}=-0.09545454545454544</m> which has <m>t</m>-score <m>t=-0.35053817053910313</m>.
           </li>
          <li>
-              The <m>p</m>-value is <m>0.34426649439865975</m>.
+              The <m>p</m>-value is <m>0.7294266379988685</m>.
           </li>
          
          <li>
-              For a <m>99</m>% confidence interval,  <m>t^*=2.860934606464972</m>.
+              For a <m>99</m>% confidence interval,  <m>t^*=2.831359558023049</m>.
           </li>
           <li>
-              The  the average difference in heart rate of patients before and after taking the medication   has a <m>99</m>% chance of of falling in <m>[-3.55696887424481, 4.73696887424481]</m>.
+              The  the average difference in rating between packaging A and B   has a <m>99</m>% chance of of falling in <m>[-0.866457997700053, 0.675548906790962]</m>.
           </li>
          
           

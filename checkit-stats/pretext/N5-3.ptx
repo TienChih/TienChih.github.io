@@ -1,21 +1,21 @@
-<exercise checkit-seed="7428" checkit-slug="N5" checkit-title="Size of Sample: Means">
+<exercise checkit-seed="3462" checkit-slug="N5" checkit-title="Size of Sample: Means">
   <statement>
       
      
       
       <p>
-          A farmer testing fertilizers wants to compare the average yield of tomato plants when using two different fertilizers.  They want to be able to detect a difference of  <m> -0.11</m>  pounds. Suppose they are aware the yield of tomato plants using either fertilizer has standard deviation  <m> 0.93</m>  pounds.
+          A kinesiologist wants to compare the average finishing speeds of the 100 meter dash using two training techniques.  She wants to be able to detect a difference of <m> -0.1</m>  seconds. Suppose she is aware the finishing times of both methods have standard deviation  <m> 0.6</m>  seconds.
       </p>
       
       <ol>
           <li>
-              What is the power of a test if the number of observed tomato plants for both fertilizers was  <m>n=47</m>?
+              What is the power of a test if the number of 100 meter dashes she observed of each training method was  <m>n=50</m>?
           </li>
           <li>
               Explain what this power means in the context of this problem.
           </li>
           <li>
-              How many tomato plants using each type of fertilizer would have to observe to detect this difference with power  <m>85</m>%?
+              How many 100 meter dashes of each training method would she have to observe to detect this difference with power  <m>55</m>%?
           </li>
       </ol>
       
@@ -31,13 +31,13 @@
       
      <ul>
           <li>
-              The standard error if <m>n=47</m> would be <m>SE=0.191844351804136</m>.  The cutoff for a statistically significant test is a difference of <m>-0.37600802017353746</m>  pounds.  The power of the test is <m>P(X\leq -0.37600802017353746)=8.278455441268239</m>% where <m>X</m> is a normal variable with mean <m>-0.11</m> and standard error <m>0.191844351804136</m>.
+              The standard error if <m>n=50</m> would be <m>SE=0.120000000000000</m>.  The cutoff for a statistically significant test is a difference of <m>-0.23519567814480646</m>  seconds.  The power of the test is <m>P(X\leq -0.23519567814480646)=12.994933709194061</m>% where <m>X</m> is a normal variable with mean <m>-0.1</m> and standard error <m>0.120000000000000</m>.
          </li>
          <li>
-             If there were actually a difference in average yield of  <m>-0.11</m> pounds,  a study where the number of observed plants was  <m>n=47</m> would only have a <m>8.278455441268239</m>% chance of detecting it.
+             If there were actually a difference in finishing times of  <m>-0.1</m> seconds,  a study where the number of observations was  <m>n=50</m> would only have a <m>12.994933709194061</m>% chance of detecting it.
          </li>
          <li>
-             The <m>z</m>-score for a left-tail of <m>85</m>% is <m>1.0364333894937894</m>.  So for this <m>85</m>% tail to be detectable, <m>-0.11+1.0364333894937894SE\approx -1.96SE</m>, so <m>SE\approx 0.03671075170244012 </m>, and for this to be true <m>n\geq 1284</m>
+             The <m>z</m>-score for a left-tail of <m>55</m>% is <m>0.1256613468550741</m>.  So for this <m>55</m>% tail to be detectable, <m>-0.1+0.1256613468550741SE\approx -1.96SE</m>, so <m>SE\approx 0.04794725039760974 </m>, and for this to be true <m>n\geq 314</m>
          </li>
          
           

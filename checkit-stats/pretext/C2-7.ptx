@@ -1,10 +1,10 @@
-<exercise checkit-seed="6099" checkit-slug="C2" checkit-title="Two Categorical Variable Inferences">
+<exercise checkit-seed="4993" checkit-slug="C2" checkit-title="Two Categorical Variable Inferences">
   <statement>
       <p>
-          A software engineer wonders about the levels of errors in two beta versions of a product.  They want to know if the rates of crashing between version A and version B<m>\, </m> is less than <m>\,  -0.05</m>.  They test run each version a number of times.
+          A restaurateur wants to know about the difference in percieved quality of service in her eastern and western locations.  She wants to know if the proportion of customers who liked the service<m>\, </m> is not equal to <m>\,   0.00</m>.  She polls random diners at both the eastern and western locations.
       </p>
       <p>
-          Suppose that of   <m>n_1=176\, </m>test runs of version A, <m>x_1=77\, </m>times the product crashed and of <m>n_2=176\, </m>test runs of version B, <m>x_2=105\, </m>times the product crashed. Test the hypothesis that  the difference between the proportion of times running version A who will crash: <m>p_1</m>, and the proportion of times running version B who will crash: <m>p_2</m>,   is less than<m>\,  -0.05</m>.  That is <m>p_1-p_2\lneq-0.05</m>.
+          Suppose that of   <m>n_1=357\, </m>polled diners from the eastern location, <m>x_1=156\, </m>liked the service and of <m>n_2=357\, </m>polled diners from the western location, <m>x_2=185\, </m>liked the service. Test the hypothesis that  the difference between the proportion of diners at the eastern location who like the service: <m>p_1</m>, and the proportion of diners at the western location who like the service: <m>p_2</m>,   is not equal to<m>\,   0.00</m>.  That is <m>p_1-p_2\neq 0.00</m>.
       </p>
       
       <ol>
@@ -36,26 +36,26 @@
       
      <ul>
           <li>
-              The null hypothesis is <m>H_0: p_1-p_2=-0.05</m>.
+              The null hypothesis is <m>H_0: p_1-p_2= 0.00</m>.
           </li>
          <li>
-              The alternative hypothesis is <m>H_A: p_1-p_2\lneq-0.05</m>.
+              The alternative hypothesis is <m>H_A: p_1-p_2\neq 0.00</m>.
           </li>
           <li>
-              The sampling distribution has mean <m>-0.05</m> and standard error <m>SE=0.0525899633032094</m>.
+              The sampling distribution has mean <m> 0.00</m> and standard error <m>SE=0.0373864546803140</m>.
           </li>
          <li>
-              The difference in sample proportions is <m>\hat{p}=-0.15909090909090906</m> which has <m>z</m>-score <m>z=-2.07436746935801</m>.
+              The difference in sample proportions is <m>\hat{p}=-0.08123249299719892</m> which has <m>z</m>-score <m>z=-2.17277871602980</m>.
           </li>
          <li>
-              The <m>p</m>-value is <m>0.019022598060473603</m>.
+              The <m>p</m>-value is <m>0.029796975964407224</m>.
           </li>
          
           <!--<li>
               For a % confidence interval,  <m>z^*=</m>.
           </li>
           <li>
-              The proportion of  that will crash has a % chance of of falling in <m>[, ]</m>.
+              The proportion of  that like the service has a % chance of of falling in <m>[, ]</m>.
           </li>-->
       </ul>
           

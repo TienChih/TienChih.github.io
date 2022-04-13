@@ -1,4 +1,4 @@
-<exercise checkit-seed="8991" checkit-slug="F1" checkit-title="Point Estimates">
+<exercise checkit-seed="3392" checkit-slug="F1" checkit-title="Point Estimates">
   <statement>
       
       
@@ -8,8 +8,8 @@
       <p>
           For each of the following, identify the <em>parameter of interest</em>, and the <em>point estimate</em>.
           <ol>
-              <li>To estimate the average weight of an adult female african elephant, 200 adult female african elephants are caught and weighed.</li>
-              <li>To estimate the proportion of restaurants with vegan options, 60 restaurants are randomly selected and their menus examined.</li>
+              <li>To estimate the proportion of wolf cubs who will survive to adulthood, 40 wolf cubs are tracked from birth.</li>
+              <li>To estimate the average income in a town, 100 selected residents have their income polled.</li>
               <li>To estimate the proportion of mice which may develop tumors, 90 captive rats are examined to see if they develop tumors over their lifetime.</li>
               <li>To estimate the average textbook costs of students of a university, 100 students are selected and their last semester textbook costs were recorded.</li>
           </ol>
@@ -33,8 +33,8 @@
       
      <p>
           <ol>
-              <li><p>Parameter of Interest: The average weight of an adult female african elephant.</p>  <p>Point Estimate: the average weight of the caught and weighed adult female african elephant.</p> </li>
-              <li><p>Parameter of Interest: The proportion of all restaurants with vegan options.</p>  <p>Point Estimate: The proportion of the selected restaurants with vegan options.</p> </li>
+              <li><p>Parameter of Interest: The proportion of all wolf cubs who survive to adulthood.</p>  <p>Point Estimate: The proportion of the tracked wolf cubs who survive to adulthood.</p> </li>
+              <li><p>Parameter of Interest: The average income of all residents of the town.</p>  <p>Point Estimate: the average income of the polled  residents of the town.</p> </li>
               <li><p>Parameter of Interest: The proportion of all mice who develop tumors.</p>  <p>Point Estimate: The proportion of the captive mice who develop tumors.</p> </li>
               <li><p>Parameter of Interest: The average textbook costs of all students attending this university.</p>  <p>Point Estimate: The average textbook costs of the selected students attending this university.</p> </li>
           </ol>

@@ -1,9 +1,9 @@
-<exercise checkit-seed="8144" checkit-slug="D5" checkit-title="Normal Approximation of Binomial Distribution">
+<exercise checkit-seed="5911" checkit-slug="D5" checkit-title="Normal Approximation of Binomial Distribution">
   <statement>
       
       
       <p>
-          Suppose there is a vaccine is developed to combat a novel virus.  The probability an eligible adult takes the vaccine is  <m>0.43</m>. The number of eligible adults in a town is  <m>13600</m>  adults.  Let <m>X</m> denote the  number of adults who take the vaccine.  Find the following:
+          Suppose probability that a PC needs repairing over the course of a year is  <m>0.08</m>. A company uses  <m>521</m>  PCs.  Let <m>X</m> denote the  number of PCs that will need repair this year.  Find the following:
           
       </p>
       
@@ -13,12 +13,12 @@
       <p>
           <ol>
               <li>
-                  <m>E(X)</m>, the expected  number of adults who take the vaccine.
+                  <m>E(X)</m>, the expected  number of PCs that will need repair this year.
               </li>
               
               <li>
                   <p>
-                      <m>\sigma_A</m>, the standard deviation of the  number of adults who take the vaccine.
+                      <m>\sigma_A</m>, the standard deviation of the  number of PCs that will need repair this year.
                   </p>
                   <p>
                       Then use the normal approximation of <m>X</m> to find the following:
@@ -27,12 +27,12 @@
               </li>
              
               <li>
-                  Find the probability that the number of adults who take the vaccine is  between <m>5820 </m> and <m>5916</m>  adults.
+                  Find the probability that the number of PCs that will need repair is  between <m>24 </m> and <m>54</m>  PCs.
               </li>
               
               
               <li>
-                  Find <m>X^*</m> such that the probability that  number of adults who take the vaccine  is at most  <m>X^*</m>  adults is <m>0.74</m>.  (This value need not be a whole number.)
+                  Find <m>X^*</m> such that the probability that  number of PCs that will need repair this year  is at most  <m>X^*</m>  PCs is <m>0.33</m>.  (This value need not be a whole number.)
               </li>
               
           </ol>
@@ -57,19 +57,19 @@
      <p>
           <ol>
               <li>
-                  <m>E(X)=5848.0</m>
+                  <m>E(X)=41.68</m>
               </li>
               <li>
-                  <m>\sigma_X=57.73525785860838</m>
+                  <m>\sigma_X=6.192382417131552</m>
               </li>
               
               
               <li>
-                  <m>P(5820\leq\ X\leq\ 5916)=0.5667117973365158</m>.
+                  <m>P(24\leq\ X\leq\ 54)=0.9745282280597054</m>.
               </li>
               
               <li>
-                  If <m>P(X\leq\ X^*)=0.74</m> then <m>X^*=5885.143712872511</m>  adults.
+                  If <m>P(X\leq\ X^*)=0.33</m> then <m>X^*=38.95588944782039</m>  PCs.
               </li>
               
           </ol>

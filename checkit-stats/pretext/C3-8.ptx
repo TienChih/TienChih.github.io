@@ -1,13 +1,13 @@
-<exercise checkit-seed="4225" checkit-slug="C3" checkit-title="Chi^2 goodness of fit test">
+<exercise checkit-seed="5144" checkit-slug="C3" checkit-title="Chi^2 goodness of fit test">
   <statement>
      <p>
-         The distribution of majors at a University are  <m>24</m>%  Business majors, <m>25</m>%  Humanities majors, <m>25</m>%  Social Science majors, and <m>26</m>%  STEM majors.
+         A non-profit printing t-shirts for their volunteers have historically needed sizes  <m>25</m>%  small, <m>20</m>%  medium, <m>25</m>%  large, and <m>30</m>%  x-large.
       </p>
       <p>
-          Professor Martinez's introductory lecture class consists of  <m>28</m>  students who are Business majors, <m>39</m>  students who are Humanities majors, <m>19</m>  students who are Social Science majors, and <m>42</m>  students who are STEM majors.
+          In a sampling of size requests at a new location,   <m>46</m>  volunteers requested a small, <m>19</m>  volunteers requested a medium, <m>45</m>  volunteers requested a large, and <m>65</m>  volunteers requested a x-large.
       </p>
       <p>
-          Use a <m>\chi^2</m> goodness of fit test to test whether or not the distributions majors in Dr. Martinez's class is representative of the student body at the University.
+          Use a <m>\chi^2</m> goodness of fit test to test whether or not the distribution of t-shirt sizes needed match that of previous locations.
       </p>
       <ul>
           <li>
@@ -37,19 +37,19 @@
       
      <ul>
           <li>
-              The null hypothesis is <m>H_0:</m> The distribution of students in Dr. Martinez's class is the same as the University's.
+              The null hypothesis is <m>H_0:</m> The distribution of t-shirt sizes matches that of previous locations.
           </li>
          <li>
-              The alternative hypothesis is <m>H_A:</m> The distribution of students in Dr. Martinez's class is different from the University's.
+              The alternative hypothesis is <m>H_A:</m> The distribution of t-shirt sizes do not match that of previous locations.
           </li>
           <li>
               There are <m>3</m> degrees of freedom.
           </li>
          <li>
-              The <m>\chi^2</m> value is <m>9.33814102564102</m>.
+              The <m>\chi^2</m> value is <m>10.4419047619048</m>.
           </li>
          <li>
-              The <m>p</m>-value is <m>0.025117098313630293</m>.
+              The <m>p</m>-value is <m>0.015160213856605265</m>.
           </li>
          
           

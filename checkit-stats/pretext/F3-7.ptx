@@ -1,10 +1,10 @@
-<exercise checkit-seed="1914" checkit-slug="F3" checkit-title="Hypothesis Testing">
+<exercise checkit-seed="7489" checkit-slug="F3" checkit-title="Hypothesis Testing">
   <statement>
       <p>
-          A marine biologist wonders if the proportion of turtles in a coral reef that were infected with a new parasite is not equal to <m>  45</m>%.  She gathers a sample of turtles.
+          A marine biologist wonders if the proportion of turtles in a coral reef that were infected with a new parasite is less than <m>  55</m>%.  She gathers a sample of turtles.
       </p>
       <p>
-Suppose that for   <m>n=242</m> turtles found in the coral reef, <m>94</m> were infected. Test the hypothesis that  the proportion of turtles that are infected is not equal to <m>  45</m>%. 
+Suppose that for   <m>n=396</m> turtles found in the coral reef, <m>198</m> were infected. Test the hypothesis that  the proportion of turtles that are infected is less than <m>  55</m>%. 
       </p>
       
       <ol>
@@ -36,19 +36,19 @@ Suppose that for   <m>n=242</m> turtles found in the coral reef, <m>94</m> were 
       
      <ul>
           <li>
-              The null hypothesis is <m>H_0: p=0.45</m>.
+              The null hypothesis is <m>H_0: p=0.55</m>.
           </li>
          <li>
-              The alternative hypothesis is <m>H_A: p\neq0.45</m>.
+              The alternative hypothesis is <m>H_A: p\lneq0.55</m>.
           </li>
           <li>
-              The sampling distribution has mean <m>0.45</m> and standard error <m>SE=0.0319801074533416</m>.
+              The sampling distribution has mean <m>0.55</m> and standard error <m>SE=0.0250000000000000</m>.
           </li>
          <li>
-              The sample proportion is <m>\hat{p}=0.3884297520661157</m> which has <m>z</m>-score <m>z=-1.92526707496885</m>.
+              The sample proportion is <m>\hat{p}=0.5</m> which has <m>z</m>-score <m>z=-2.00000000000000</m>.
           </li>
          <li>
-              The <m>p</m>-value is <m>0.05419595448264758</m>.
+              The <m>p</m>-value is <m>0.02275013194817911</m>.
           </li>
          
           <!--<li>

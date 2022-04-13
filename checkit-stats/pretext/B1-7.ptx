@@ -1,4 +1,4 @@
-<exercise checkit-seed="5043" checkit-slug="B1" checkit-title="Types of Variables">
+<exercise checkit-seed="8637" checkit-slug="B1" checkit-title="Types of Variables">
   <statement>
       
       
@@ -8,12 +8,12 @@
       <p>
           For each of the following, classify the type of variable described as <em>Numerical</em> or <em>Categorical</em>, as well as the subcategory <em>Continuous</em>, <em>Discrete</em>, <em>Nominal</em> or <em>Ordinal</em>.  Be sure to justify your choices.
           <ol>
-              <li>The ranking of a patient's anxiety from MILD to SEVERE.</li>
-              <li>A college graduate's major.</li>
-              <li>How many traffic accidents a city has over the next year.</li>
-              <li>The number of respondents to a survey indicating they suffer from anxiety.</li>
-              <li>The ranking of one's familiarity with programming languages from 1 through 5.</li>
-              <li>The color of a new shirt.</li>
+              <li>Ranking an experience at a doctor's office from Very Pleasant to Very Unpleasant.</li>
+              <li>A 5th graders favorite dessert.</li>
+              <li>How many pizzas a pizzeria will sell next week.</li>
+              <li>The frequency that a patient experiences nausea, with choice: None, Sometimes, Frequentlt, Constantly.</li>
+              <li>How many alcoholic drinks an adult American consumes in a week.</li>
+              <li>The rate at which polar icecaps have melted over the last year.</li>
           </ol>
           
       </p>
@@ -38,9 +38,9 @@
               <li>Categorical, Ordinal</li>
               <li>Categorical, Nominal</li>
               <li>Numerical, Discrete</li>
-              <li>Numerical, Discrete</li>
               <li>Categorical, Ordinal</li>
-              <li>Categorical, Nominal</li>
+              <li>Numerical, Discrete</li>
+              <li>Numerical, Continuous</li>
           </ol>
           
       </p>

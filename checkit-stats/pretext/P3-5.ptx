@@ -1,30 +1,30 @@
-<exercise checkit-seed="6542" checkit-slug="P3" checkit-title="Bayes Theorem">
+<exercise checkit-seed="3973" checkit-slug="P3" checkit-title="Bayes Theorem">
   <statement>
       
       <p>
-          A governer is running for re-election.  We consider the events that a voter votes for them, and the event that they are from a rural part of the state.
+          A manufacturer has two facilities A and B, each of whome occasionally produce defects.  We consider the events that a product is defective, and the event the product was manufactured in facility A.
       </p>
       
       <p>
-          Suppose that   the probability that   a randomly selected voter votes for the governor, given that they are from a rural part of the state is <m>0.66</m>, the probability that   a randomly selected voter votes for the governor, given that they are not from a rural part of the state is <m>0.24</m>.
+          Suppose that   the probability that   a randomly selected product is defective given that it was manufactured in facility A is <m>0.0084</m>, the probability that   a randomly selected product is defective given that it was not manufactured in facility A is <m>0.0013</m>.
       </p>
       
       
       <p>
           <ol>
               <li>
-                  Suppose it were the case that the probability    a randomly selected voter is from a rural part of the state was <m>0.13</m>.
+                  Suppose it were the case that the probability    a randomly selected product was manufactured in facility A was <m>0.64</m>.
                   <ol>
                       <li>
-                          Find the probability that   a randomly selected voter votes for the governor.
+                          Find the probability that   a randomly selected product was defective.
                       </li>
                       <li>
-                          Find the probability that    a randomly selected voter is from a rural part of the state, given that they voted for the governor.
+                          Find the probability that    a randomly selected subject was manufactured in facility A, given that it was defective.
                       </li>
                   </ol>
               </li>
               <li>
-                  Suppose instead that it was the case where the probability   a randomly selected voter votes for the governor was <m>0.51</m>.  Find the probability that    a randomly selected voter is from a rural part of the state.
+                  Suppose instead that it was the case where the probability   a randomly selected product was defective was <m>0.0028</m>.  Find the probability that    a randomly selected product was manufactured in facility A.
               </li>
               
           </ol>
@@ -51,15 +51,15 @@
               <li>In the first scenario:
                   <ol>
                       <li>
-                          The probability that   a randomly selected voter votes for the governor is <m>0.2946</m>
+                          The probability that   a randomly selected product was defective is <m>0.005843999999999999</m>
                       </li>
                       <li>
-                          The probability that    a randomly selected voter is from a rural part of the state, given that they voted for the governor is <m>0.29124236252545826</m>
+                          The probability that    a randomly selected subject was manufactured in facility A, given that it was defective is <m>0.9199178644763861</m>
                       </li>
                   </ol>
               </li>
               <li>
-                  In the second scenario, the probability that    a randomly selected voter is from a rural part of the state is <m>0.6428571428571428</m>.
+                  In the second scenario, the probability that    a randomly selected product was manufactured in facility A is <m>0.21126760563380284</m>.
               </li>
           </ol>
           

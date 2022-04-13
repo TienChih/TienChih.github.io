@@ -1,93 +1,63 @@
-<exercise checkit-seed="5614" checkit-slug="R2" checkit-title="Interpreting Linear Regression">
+<exercise checkit-seed="6038" checkit-slug="R2" checkit-title="Interpreting Linear Regression">
   <statement>
       <p>
-          A study is conducted examining how far a car has driven (in thousands of miles) compared to how expensive the annual maintenance costs are.
+          A study is conducted examining adult BMI (in kg/m^2) compared to HDL Cholesterol (in mg/DL).
       </p>
       
       <p>
-          Consider this table of data collected comparing Distance Driven measured in thousand miles, and Maintenance Cost measured in dollars:
+          Consider this table of data collected comparing BMI measured in kg/(m squared), and HDL Cholesterol measured in mg/DL:
           <me>
                \begin{array}{|c|c|}
               \hline
-              \text{ Distance Driven in thousand miles }
+              \text{ BMI in kg/(m squared) }
               &amp;
-              \text{ Maintenance Cost in dollars }
+              \text{ HDL Cholesterol in mg/DL }
               \\
               \hline
-               21.39
-              &amp; 508.53
+               31.75
+              &amp; 37.16
                   \\
-               26.42
-              &amp; 833.2
+               33.65
+              &amp; 33.91
                   \\
-               25.68
-              &amp; 832.44
+               31.14
+              &amp; 42.83
                   \\
-               22.86
-              &amp; 770.12
+               28.78
+              &amp; 47.31
                   \\
-               24.0
-              &amp; 451.15
+               20.27
+              &amp; 63.22
                   \\
-               18.64
-              &amp; 603.19
+               31.39
+              &amp; 34.59
                   \\
-               19.51
-              &amp; 683.75
+               28.97
+              &amp; 46.48
                   \\
-               29.52
-              &amp; 1079.35
+               24.72
+              &amp; 53.6
                   \\
-               20.99
-              &amp; 745.64
+               29.5
+              &amp; 37.2
                   \\
-               19.09
-              &amp; 565.23
+               26.95
+              &amp; 48.25
                   \\
-               22.39
-              &amp; 682.7
+               20.94
+              &amp; 65.41
                   \\
-               24.58
-              &amp; 591.05
+               24.03
+              &amp; 58.82
                   \\
-               27.0
-              &amp; 711.58
+               34.32
+              &amp; 35.39
                   \\
-               26.72
-              &amp; 644.61
+               32.67
+              &amp; 34.15
                   \\
-               23.86
-              &amp; 747.45
-                  \\
-               20.88
-              &amp; 571.22
-                  \\
-               21.16
-              &amp; 507.79
-                  \\
-               29.54
-              &amp; 798.15
-                  \\
-               17.65
-              &amp; 508.07
-                  \\
-               20.98
-              &amp; 513.01
-                  \\
-               21.29
-              &amp; 633.29
-                  \\
-               23.57
-              &amp; 615.87
-                  \\
-               28.5
-              &amp; 711.88
-                  \\
-               16.45
-              &amp; 283.14
-                  \\
-               18.4
-              &amp; 508.38
+               34.62
+              &amp; 30.84
                   \\
               
               \hline
@@ -103,13 +73,13 @@
                   Find the slope <m>\beta_1</m> and it's units.
               </li>
               <li>
-                  What does <m>\beta_1</m> tell you about the relationship between Distance Driven and Maintenance Cost?
+                  What does <m>\beta_1</m> tell you about the relationship between BMI and HDL Cholesterol?
               </li>
               <li>
-                  For a car with Distance Driven <m>26.62</m> thousand miles, what is the estimated Maintenance Cost?
+                  For an adult with BMI <m>34.23</m> kg/(m squared), what is the estimated HDL Cholesterol?
               </li>
               <li>
-                  For a car with Maintenance Cost <m>556.02</m> dollars, what is the estimated Distance Driven?
+                  For an adult with HDL Cholesterol <m>40.49</m> mg/DL, what is the estimated BMI?
               </li>
               
           </ol>
@@ -134,19 +104,19 @@
           <p>
           <ol>
               <li>
-                  <m>\beta_0=-90.44235173712889\ </m> dollars.
+                  <m>\beta_0=113.08700253275299\ </m> mg/DL.
               </li>
               <li>
-                  <m>\beta_1=32.153411654312464\ </m> dollars<m>/</m>thousand miles.
+                  <m>\beta_1=-2.368330730899919\ </m> mg/DL<m>/</m>kg/(m squared).
               </li>
               <li>
-                 Whenever Distance Driven increases by 1 thousand miles, Maintenance Cost changes, on average, by <m>32.153411654312464\ </m> dollars.
+                 Whenever BMI increases by 1 kg/(m squared), HDL Cholesterol changes, on average, by <m>-2.368330730899919\ </m> mg/DL.
               </li>
               <li>
-                  For a car with Distance Driven <m>\ 26.62\ </m> thousand miles, the estimated Maintenance Cost is <m>765.481466500669\ </m> dollars.
+                  For an adult with BMI <m>\ 34.23\ </m> kg/(m squared), the estimated HDL Cholesterol is <m>32.019041614048774\ </m> mg/DL.
               </li>
               <li>
-                  For a car with Maintenance Cost <m>\ 556.02\ </m> dollars, the estimated Distance Driven is <m>20.105560140471887\ </m> thousand miles.
+                  For an adult with HDL Cholesterol <m>\ 40.49\ </m> mg/DL, the estimated BMI is <m>30.653236723051577\ </m> kg/(m squared).
               </li>
               
           </ol>

@@ -1,4 +1,4 @@
-<exercise checkit-seed="8510" checkit-slug="P2" checkit-title="Conditional Probability">
+<exercise checkit-seed="1128" checkit-slug="P2" checkit-title="Conditional Probability">
   <statement>
       
       <p>
@@ -6,7 +6,7 @@
       </p>
       
       <p>
-          Suppose that   the probability that   the applicant gets a promotion is <m>0.32</m>, the probability that   the applicant gets a promotion given that they wen't through the course is <m>0.32</m>, and finally   the probability that    the applicant goes through the course is <m>0.19</m>.
+          Suppose that   the probability that   the applicant gets a promotion is <m>0.22</m>, the probability that   the applicant gets a promotion given that they wen't through the course is <m>0.22</m>, and finally   the probability that    the applicant goes through the course is <m>0.11</m>.
       </p>
       
       
@@ -43,10 +43,10 @@
      <p>
           <ol>
               <li>
-                   The probability that    the applicant both got a promotion and went through the course is <m>0.0608</m>.
+                   The probability that    the applicant both got a promotion and went through the course is <m>0.0242</m>.
               </li>
               <li>
-                   The  probability that    the customer went through the course, given that they got a promotion is <m>0.19</m>.
+                   The  probability that    the customer went through the course, given that they got a promotion is <m>0.11</m>.
               </li>
               <li>
                   The events   the applicant gets a promotion, and    the applicant goes through the course  are independent.

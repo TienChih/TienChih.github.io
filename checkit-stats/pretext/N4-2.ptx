@@ -1,12 +1,12 @@
-<exercise checkit-seed="7209" checkit-slug="N4" checkit-title="Inference for difference of means of Numerical Variables">
+<exercise checkit-seed="7518" checkit-slug="N4" checkit-title="Inference for difference of means of Numerical Variables">
   <statement>
       
       <p>
-          A wildlife biologist wants to study wild turkeys from two different forests.  Out of  <m>29</m>  captured turkeys from Forest A, the average weight was  <m>\bar{x}_1=17.047</m>  pounds, with sample standard deviation <m>s_1=1.192</m>  pounds.  Then out of <m>29</m>  captured turkeys from Forest B, the average weight was  <m>\bar{x}_2=18.699</m>  pounds, with sample standard deviation <m>s_2=4.97</m>  pounds.
+          A political scientist compares the amount of money donated to campaigns for poltitical parties A and B.  Out of  <m>39</m>  observed members of Party A, the average sample donation was  <m>\bar{x}_1=2101.654</m>  dollars, with sample standard deviation <m>s_1=342.438</m>  dollars.  Then out of <m>39</m>  observed members of Party B, the average sample donation was  <m>\bar{x}_2=1845.47</m>  dollars, with sample standard deviation <m>s_2=755.383</m>  dollars.
       </p>
       
       <ul>
-          <li>  Test the hypothesis that  the difference in average weight of turkeys between Forest A and Forest B, <m>\mu_1-\mu_2</m>, is less than <m>  -0.1</m>  pounds.
+          <li>  Test the hypothesis that  the difference in average donation between members of Party A and Party B, <m>\mu_1-\mu_2</m>, is greater than <m>  0</m>  dollars.
               <ol>
           <li>
               State the null hypothesis.
@@ -27,7 +27,7 @@
       </ol>
           </li>
           <li>
-              Find a <m>95</m>% confidence interval for the  the difference in average weight of turkeys between Forest A and Forest B.  Using complete sentences, explain what the confidence interval means in the context of this problem.
+              Find a <m>99</m>% confidence interval for the  the difference in average donation between members of Party A and Party B.  Using complete sentences, explain what the confidence interval means in the context of this problem.
           </li>
       </ul>
       
@@ -43,26 +43,26 @@
       
      <ul>
           <li>
-              The null hypothesis is <m>H_0: \mu_1-\mu_2=-0.1</m>.
+              The null hypothesis is <m>H_0: \mu_1-\mu_2=0</m>.
           </li>
          <li>
-              The alternative hypothesis is <m>H_A: \mu_1-\mu_2\lneq-0.1</m>.
+              The alternative hypothesis is <m>H_A: \mu_1-\mu_2\gneq0</m>.
           </li>
           <li>
-              The sampling distribution has mean <m>-0.1</m> and standard error <m>SE=0.949078754771500</m>.
+              The sampling distribution has mean <m>0</m> and standard error <m>SE=132.806709412396</m>.
           </li>
          <li>
-              The observesd difference of sample means is <m>\bar{x_1}-\bar{x_2}=-1.652</m> which has <m>t</m>-score <m>t=-1.6352699838630982</m>.
+              The observesd difference of sample means is <m>\bar{x_1}-\bar{x_2}=256.184</m> which has <m>t</m>-score <m>t=1.928998927339489</m>.
           </li>
          <li>
-              The <m>p</m>-value is <m>0.05659324519640774</m>.
+              The <m>p</m>-value is <m>0.03061225799156564</m>.
           </li>
          
          <li>
-              For a <m>95</m>% confidence interval,  <m>t^*=2.0484071417952463</m>.
+              For a <m>99</m>% confidence interval,  <m>t^*=2.71155760191308</m>.
           </li>
           <li>
-              The  the difference in average weight of turkeys between Forest A and Forest B  has a <m>95</m>% chance of of falling in <m>[-3.59609969940008, 0.292099699400080]</m>.
+              The  the difference in average donation between members of Party A and Party B  has a <m>99</m>% chance of of falling in <m>[-103.929042492245, 616.297042492245]</m>.
           </li>
          
           

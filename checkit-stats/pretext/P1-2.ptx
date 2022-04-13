@@ -1,12 +1,12 @@
-<exercise checkit-seed="2630" checkit-slug="P1" checkit-title="Introduction to Probability">
+<exercise checkit-seed="5884" checkit-slug="P1" checkit-title="Introduction to Probability">
   <statement>
       
       <p>
-          We consider a randomly selected student at a university, and consider the events that they major in biology and that they major in psychology
+          We consider the event that a restaurant in a large city accepts Visa credit cards, and the event that they accept Mastercard.  We consider a randomly selected restaurant.
       </p>
       
       <p>
-          Suppose that   the probability that   the student is both a biology and a pscyhology major is <m>0.0032</m>, the probability that    the student is a biology major or the student is a psychology major is <m>0.0578</m>, and finally   the probability that    the student is a psychology major is <m>0.0223</m>.
+          Suppose that   the probability that   the restaurant accepts Visa is <m>0.6536</m>, the probability that   the restaurant accepts both Visa and Mastercard is <m>0.5178</m>, and finally   the probability that    the restaurant accepts Mastercard is <m>0.7069</m>.
       </p>
       
       
@@ -14,7 +14,7 @@
           <ol>
               <li>
                   <p>
-                      Find the probability that   the student is a biology major.
+                      Find the probability that    the restaurant accepts at least one of Visa or  Mastercard (but possibly not both).
                   </p>
                   <p>
                       (For the following, it is advisable to draw a venn diagram using the information above.)
@@ -22,10 +22,10 @@
                   
               </li>
               <li>
-                  Find the probability that  the student is not a biology major but is a psychology major.
+                  Find the probability that  the  restaurant does not accept Visa but does accept Mastercard.
               </li>
               <li>
-                  Find the probability that  the student is  a biology major or is not a psychology major.
+                  Find the probability that  the  restaurant  accepts Visa or it does not accept Mastercard.
               </li>
           </ol>
           
@@ -49,13 +49,13 @@
      <p>
           <ol>
               <li>
-                   The probability that   the student is a biology major is <m>0.0387</m>.
+                   The probability that    the restaurant accepts at least one of Visa or  Mastercard (but possibly not both) is <m>0.8427</m>.
               </li>
               <li>
-                   The  probability that  the student is not a biology major but is a psychology major is <m>0.0191</m>.
+                   The  probability that  the  restaurant does not accept Visa but does accept Mastercard is <m>0.1891</m>.
               </li>
               <li>
-                    The probability that  the student is  a biology major or is not a psychology major is <m>0.9809</m>.
+                    The probability that  the  restaurant  accepts Visa or it does not accept Mastercard is <m>0.8109</m>.
               </li>
           </ol>
           

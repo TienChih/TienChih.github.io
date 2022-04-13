@@ -1,4 +1,4 @@
-<exercise checkit-seed="2851" checkit-slug="B3" checkit-title="Visualizing Data">
+<exercise checkit-seed="2318" checkit-slug="B3" checkit-title="Visualizing Data">
   <statement>
       
       
@@ -6,14 +6,14 @@
       
       
       <p>
-          Fix and run the following code in the <c>R</c> cell to download the <c>starbucks.csv</c> data, and generate a scatter plot for the level of protein in each starbucks menu item compared to amount of calories for that item, <c>protein</c> and <c>calories</c>.
+          Fix and run the following code in the <c>R</c> cell to download the <c>sulphinpyrazone.csv</c> data, and generate a mosaic plot for whether or not someone treated with sulphinpyrazone for a heart attack, versus the outcome, <c>group</c> and <c>outcome</c>.
           
       </p>
       <p>
-          <c>starbucks = read.csv("https://github.com/TienChih/tbil-stats/raw/main/data/starbucks.csv")</c>
+          <c>sulphinpyrazone = read.csv("https://github.com/TienChih/tbil-stats/raw/main/data/sulphinpyrazone.csv")</c>
       </p>
       <p>
-          <c>plot(starbucks$FIXME1, starbucks$FIXME2)</c>
+          <c>counts = table(sulphinpyrazone$FIXME1, sulphinpyrazone$FIXME2); mosaicplot(counts)</c>
       </p>
       
       <p>Indicate what you fixed, and upload the generated image.</p>
@@ -32,7 +32,7 @@
       
       
      <p>
-          <c>FIXME</c>'s: <c>protein</c> and <c>calories</c>.
+          <c>FIXME</c>'s: <c>group</c> and <c>outcome</c>.
           
       </p>
           

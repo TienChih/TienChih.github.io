@@ -1,4 +1,4 @@
-<exercise checkit-seed="3720" checkit-slug="B5" checkit-title="Variation of Data">
+<exercise checkit-seed="2492" checkit-slug="B5" checkit-title="Variation of Data">
   <statement>
       
       
@@ -8,32 +8,31 @@
       <p>
           Consider the following list of data:
           <me>
-              0,
-              12,
-              18,
-              19,
-              20,
-              24,
-              31,
-              34,
-              39,
-              41,
-              41,
-              52,
-              60,
-              60,
-              62,
-              66,
-              67,
-              68,
-              71,
+              74,
               79,
-              80,
-              86,
+              84,
+              85,
+              85,
+              87,
+              87,
+              88,
+              88,
+              89,
+              89,
               89,
               90,
-              113,
-              148,
+              90,
+              91,
+              91,
+              92,
+              93,
+              94,
+              94,
+              97,
+              97,
+              97,
+              101,
+              118,
           </me>
           
       
@@ -98,16 +97,16 @@
           Find the following measures of centrality for this data:
           <ol>
               <li>
-                  Sample standard deviation: <m>33.87179448358857</m>.
+                  Sample standard deviation: <m>8.104936767180853</m>.
               </li>
               <li>
-                  Sample variance: <m>1147.2984615384612</m>.
+                  Sample variance: <m>65.69</m>.
               </li>
               <li>
-                  Population standard deviation: <m>33.21402712158127</m>.
+                  Population standard deviation: <m>7.941183790846299</m>.
               </li>
               <li>
-                  Population variance: <m>1103.171597633136</m>.
+                  Population variance: <m>63.0624</m>.
               </li>
           </ol>
           
@@ -117,27 +116,29 @@
       <p>
           <ol>
               <li>
-                  Min: <m>0</m>.
+                  Min: <m>74</m>.
               </li>
               <li>
-                  Q1: <m>31.0</m>.
+                  Q1: <m>87.0</m>.
               </li>
               <li>
-                  Median: <m>60.0</m>.
+                  Median: <m>90.0</m>.
               </li>
               <li>
-                  Q3: <m>79.0</m>.
+                  Q3: <m>94.0</m>.
               </li>
               <li>
-                  Max: <m>148</m>.
+                  Max: <m>118</m>.
               </li>
               <li>
-                  IQR: <m>48.0</m>.
+                  IQR: <m>7.0</m>.
               </li>
           </ol>
           Outliers:
           
           <m>
+              74,
+              118,
           </m>
           
       

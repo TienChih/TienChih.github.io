@@ -1,4 +1,4 @@
-<exercise checkit-seed="8407" checkit-slug="B5" checkit-title="Variation of Data">
+<exercise checkit-seed="1739" checkit-slug="B5" checkit-title="Variation of Data">
   <statement>
       
       
@@ -8,37 +8,40 @@
       <p>
           Consider the following list of data:
           <me>
-              -52,
-              -22,
-              -1,
-              11,
-              12,
-              15,
-              17,
-              21,
-              25,
-              27,
-              27,
-              28,
-              31,
-              32,
-              32,
-              32,
-              32,
-              35,
-              35,
-              37,
-              40,
-              43,
-              44,
-              46,
-              49,
+              -30,
+              48,
               50,
-              53,
-              54,
-              55,
               57,
+              61,
               62,
+              63,
+              64,
+              68,
+              75,
+              80,
+              80,
+              81,
+              81,
+              83,
+              83,
+              87,
+              88,
+              89,
+              92,
+              98,
+              99,
+              105,
+              106,
+              106,
+              109,
+              114,
+              116,
+              119,
+              119,
+              126,
+              133,
+              135,
+              148,
           </me>
           
       
@@ -103,16 +106,16 @@
           Find the following measures of centrality for this data:
           <ol>
               <li>
-                  Sample standard deviation: <m>23.577326451076786</m>.
+                  Sample standard deviation: <m>32.871068283899405</m>.
               </li>
               <li>
-                  Sample variance: <m>555.8903225806451</m>.
+                  Sample variance: <m>1080.5071301247772</m>.
               </li>
               <li>
-                  Population standard deviation: <m>23.193929737992804</m>.
+                  Population standard deviation: <m>32.38406257174228</m>.
               </li>
               <li>
-                  Population variance: <m>537.9583766909469</m>.
+                  Population variance: <m>1048.727508650519</m>.
               </li>
           </ol>
           
@@ -122,29 +125,28 @@
       <p>
           <ol>
               <li>
-                  Min: <m>-52</m>.
+                  Min: <m>-30</m>.
               </li>
               <li>
-                  Q1: <m>21.0</m>.
+                  Q1: <m>68.0</m>.
               </li>
               <li>
-                  Median: <m>32.0</m>.
+                  Median: <m>87.5</m>.
               </li>
               <li>
-                  Q3: <m>46.0</m>.
+                  Q3: <m>109.0</m>.
               </li>
               <li>
-                  Max: <m>62</m>.
+                  Max: <m>148</m>.
               </li>
               <li>
-                  IQR: <m>25.0</m>.
+                  IQR: <m>41.0</m>.
               </li>
           </ol>
           Outliers:
           
           <m>
-              -52,
-              -22,
+              -30,
           </m>
           
       

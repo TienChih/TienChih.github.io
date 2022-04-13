@@ -1,4 +1,4 @@
-<exercise checkit-seed="4436" checkit-slug="B3" checkit-title="Visualizing Data">
+<exercise checkit-seed="4757" checkit-slug="B3" checkit-title="Visualizing Data">
   <statement>
       
       
@@ -6,14 +6,14 @@
       
       
       <p>
-          Fix and run the following code in the <c>R</c> cell to download the <c>studentscleaned.csv</c> data, and generate a scatter plot for the two exam scores for each student, <c>score1</c> and <c>score2</c>.
+          Fix and run the following code in the <c>R</c> cell to download the <c>resume.csv</c> data, and generate a mosaic plot for whether or not someone got a call back on their resume, and their race, <c>race</c> and <c>received_callback</c>.
           
       </p>
       <p>
-          <c>studentscleaned = read.csv("https://github.com/TienChih/tbil-stats/raw/main/data/studentscleaned.csv")</c>
+          <c>resume = read.csv("https://github.com/TienChih/tbil-stats/raw/main/data/resume.csv")</c>
       </p>
       <p>
-          <c>plot(studentscleaned$FIXME1, studentscleaned$FIXME2)</c>
+          <c>counts = table(resume$FIXME1, resume$FIXME2); mosaicplot(counts)</c>
       </p>
       
       <p>Indicate what you fixed, and upload the generated image.</p>
@@ -32,7 +32,7 @@
       
       
      <p>
-          <c>FIXME</c>'s: <c>score1</c> and <c>score2</c>.
+          <c>FIXME</c>'s: <c>race</c> and <c>received_callback</c>.
           
       </p>
           

@@ -1,29 +1,29 @@
-<exercise checkit-seed="9401" checkit-slug="D2" checkit-title="General Normal Distribution">
+<exercise checkit-seed="9884" checkit-slug="D2" checkit-title="General Normal Distribution">
   <statement>
       
       
       <p>
-          Suppose the average height of 5 year old girls is normally distributed with mean  <m>109.15</m>  cm and standard deviation <m>4.09</m>  cm.  Find the following:
+          Suppose the retirement age of professional athletes in a certain league is normally distributed with mean   <m>30.82</m>  years and standard deviation <m>3.87</m>  years.  Find the following:
       </p>
       
       
       <p>
           <ol>
               <li>
-                  Find the probability that a randomly selected 5 year old girl's height   is at most  <m>106.47 </m>  cm.
+                  Find the probability that a randomly selected athlete's retirement age   is at most  <m>29.48 </m>  years.
               </li>
              
               <li>
-                  Find the probability that a randomly selected 5 year old girl's height  is between <m>102.69 </m> and <m>109.0</m>  cm.
+                  Find the probability that a randomly selected athlete's retirement age  is between <m>24.08 </m> and <m>30.44</m>  years.
               </li>
               
               
               <li>
-                  Find <m>X^*</m> such that  the probability that a randomly selected 5 year old girl's height   is at least  <m>X^*</m>  cm is <m>69</m>%.
+                  Find <m>X^*</m> such that  the probability that a randomly selected athlete's retirement age   is at least  <m>X^*</m>  years is <m>23</m>%.
               </li>
               
               <li>
-                  Find <m>k</m> such that  the probability that a randomly selected 5 year old girl's height  is between <m>109.15-k</m>  cm and <m>109.15+k</m>  cm is <m>33</m>%.
+                  Find <m>k</m> such that  the probability that a randomly selected athlete's retirement age  is between <m>30.82-k</m>  years and <m>30.82+k</m>  years is <m>28</m>%.
               </li>
           </ol>
           
@@ -47,18 +47,18 @@
      <p>
           <ol>
               <li>
-                  <m>P(X\leq 106.47)=0.2561512393824829</m>.
+                  <m>P(X\leq 29.48)=0.36457620707201877</m>.
               </li>
               
               <li>
-                  <m>P(102.69\leq X\leq 109.0)=0.4282570930368562</m>.
+                  <m>P(24.08\leq X\leq 30.44)=0.4201011795965084</m>.
               </li>
               
               <li>
-                  If <m>P(X\geq\  X^*)=69</m>% then <m>X=107.12197207934892</m>  cm.
+                  If <m>P(X\geq\  X^*)=23</m>% then <m>X=33.67933730634678</m>  years.
               </li>
               <li>
-                  If <m>P(109.15-k\leq\  X\leq\  109.15+k)=33</m>% then <m>k=1.742945352070828</m>  cm.
+                  If <m>P(30.82-k\leq\  X\leq\  30.82+k)=28</m>% then <m>k=1.3872355298821197</m>  years.
               </li>
           </ol>
           

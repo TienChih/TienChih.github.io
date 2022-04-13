@@ -1,21 +1,21 @@
-<exercise checkit-seed="6690" checkit-slug="N5" checkit-title="Size of Sample: Means">
+<exercise checkit-seed="4870" checkit-slug="N5" checkit-title="Size of Sample: Means">
   <statement>
       
      
       
       <p>
-          A cybersecurity firm is testing two emergency shutdown systems.  They want to be able to detect a difference in response times of <m> -5.45</m>  milliseconds. Suppose the company is aware the shutdown times of both systems have standard deviation  <m> 36.64</m>  milliseconds.
+          A sociologist is comparing the average cost of food expenditures of families with similar incomes, but in different neighborhoods.  They want to be able to detect a difference of  <m> -32.89</m>  dollars per month. Suppose they are aware that food expenditures for both neighborhoods have standard deviation  <m> 146.9</m>  dollars per month.
       </p>
       
       <ol>
           <li>
-              What is the power of a test if the number of trials they ran of each was  <m>n=27</m>?
+              What is the power of a test if the number of families observed from each neighborhood was  <m>n=37</m>?
           </li>
           <li>
               Explain what this power means in the context of this problem.
           </li>
           <li>
-              How many trials of each system would the company have to run to detect this difference with power  <m>80</m>%?
+              How many families observed from each neighborhood would be needed to detect this difference with power  <m>55</m>%?
           </li>
       </ol>
       
@@ -31,13 +31,13 @@
       
      <ul>
           <li>
-              The standard error if <m>n=27</m> would be <m>SE=9.97214490839729</m>.  The cutoff for a statistically significant test is a difference of <m>-19.54504486907317</m>  milliseconds.  The power of the test is <m>P(X\leq -19.54504486907317)=7.876295452920629</m>% where <m>X</m> is a normal variable with mean <m>-5.45</m> and standard error <m>9.97214490839729</m>.
+              The standard error if <m>n=37</m> would be <m>SE=34.1535562629341</m>.  The cutoff for a statistically significant test is a difference of <m>-66.93974021931324</m>  dollars per month.  The power of the test is <m>P(X\leq -66.93974021931324)=15.939188651381956</m>% where <m>X</m> is a normal variable with mean <m>-32.89</m> and standard error <m>34.1535562629341</m>.
          </li>
          <li>
-             If there were actually a difference in shutdown times of  <m>-5.45</m> milliseconds,  a test where the number of trials was  <m>n=27</m> would only have a <m>7.876295452920629</m>% chance of detecting it.
+             If there were actually a difference in average food expenditures of  <m>-32.89</m> dollars per month,  a study where the number of observed families was  <m>n=37</m> would only have a <m>15.939188651381956</m>% chance of detecting it.
          </li>
          <li>
-             The <m>z</m>-score for a left-tail of <m>80</m>% is <m>0.8416212335729144</m>.  So for this <m>80</m>% tail to be detectable, <m>-5.45+0.8416212335729144SE\approx -1.96SE</m>, so <m>SE\approx 1.9453272257307577 </m>, and for this to be true <m>n\geq 710</m>
+             The <m>z</m>-score for a left-tail of <m>55</m>% is <m>0.1256613468550741</m>.  So for this <m>55</m>% tail to be detectable, <m>-32.89+0.1256613468550741SE\approx -1.96SE</m>, so <m>SE\approx 15.769850655773844 </m>, and for this to be true <m>n\geq 174</m>
          </li>
          
           

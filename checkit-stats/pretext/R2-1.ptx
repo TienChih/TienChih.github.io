@@ -1,4 +1,4 @@
-<exercise checkit-seed="4162" checkit-slug="R2" checkit-title="Interpreting Linear Regression">
+<exercise checkit-seed="2296" checkit-slug="R2" checkit-title="Interpreting Linear Regression">
   <statement>
       <p>
           A study is conducted comparing the age of adults to their glucose level (in mg/dL).
@@ -14,77 +14,68 @@
               \text{ Glucose Level in mg/dL }
               \\
               \hline
-               30
-              &amp; 72.3
+               61
+              &amp; 89.3
                   \\
-               29
-              &amp; 74.4
+               27
+              &amp; 69.6
                   \\
-               31
-              &amp; 73.2
+               36
+              &amp; 80.4
+                  \\
+               32
+              &amp; 78.4
+                  \\
+               60
+              &amp; 88.3
+                  \\
+               37
+              &amp; 83.7
+                  \\
+               47
+              &amp; 81.8
+                  \\
+               32
+              &amp; 73.5
                   \\
                49
-              &amp; 78.8
+              &amp; 81.4
                   \\
-               37
-              &amp; 83.4
+               58
+              &amp; 85.9
                   \\
-               52
-              &amp; 85.8
-                  \\
-               23
-              &amp; 74.4
-                  \\
-               56
-              &amp; 82.6
-                  \\
-               34
-              &amp; 75.6
-                  \\
-               37
-              &amp; 77.2
-                  \\
-               44
-              &amp; 82.8
-                  \\
-               36
-              &amp; 79.0
-                  \\
-               31
-              &amp; 79.7
-                  \\
-               64
-              &amp; 92.0
-                  \\
-               26
-              &amp; 71.9
-                  \\
-               45
-              &amp; 84.5
-                  \\
-               46
-              &amp; 81.7
-                  \\
-               37
-              &amp; 80.1
-                  \\
-               36
-              &amp; 78.0
-                  \\
-               23
-              &amp; 74.7
-                  \\
-               61
+               57
               &amp; 86.8
                   \\
                48
-              &amp; 83.5
+              &amp; 84.9
                   \\
-               64
-              &amp; 87.3
+               33
+              &amp; 77.1
                   \\
-               49
-              &amp; 82.8
+               51
+              &amp; 82.1
+                  \\
+               60
+              &amp; 87.1
+                  \\
+               55
+              &amp; 84.6
+                  \\
+               26
+              &amp; 76.5
+                  \\
+               36
+              &amp; 82.6
+                  \\
+               22
+              &amp; 75.0
+                  \\
+               47
+              &amp; 81.8
+                  \\
+               35
+              &amp; 77.8
                   \\
               
               \hline
@@ -103,10 +94,10 @@
                   What does <m>\beta_1</m> tell you about the relationship between Age and Glucose Level?
               </li>
               <li>
-                  For an adult with Age <m>65</m> years, what is the estimated Glucose Level?
+                  For an adult with Age <m>30</m> years, what is the estimated Glucose Level?
               </li>
               <li>
-                  For an adult with Glucose Level <m>75.9</m> mg/dL, what is the estimated Age?
+                  For an adult with Glucose Level <m>78.0</m> mg/dL, what is the estimated Age?
               </li>
               
           </ol>
@@ -131,19 +122,19 @@
           <p>
           <ol>
               <li>
-                  <m>\beta_0=63.75311248544913\ </m> mg/dL.
+                  <m>\beta_0=65.58593338695393\ </m> mg/dL.
               </li>
               <li>
-                  <m>\beta_1=0.397191599543746\ </m> mg/dL<m>/</m>years.
+                  <m>\beta_1=0.364461384899854\ </m> mg/dL<m>/</m>years.
               </li>
               <li>
-                 Whenever Age increases by 1 years, Glucose Level changes, on average, by <m>0.397191599543746\ </m> mg/dL.
+                 Whenever Age increases by 1 years, Glucose Level changes, on average, by <m>0.364461384899854\ </m> mg/dL.
               </li>
               <li>
-                  For an adult with Age <m>\ 65\ </m> years, the estimated Glucose Level is <m>89.57056645579262\ </m> mg/dL.
+                  For an adult with Age <m>\ 30\ </m> years, the estimated Glucose Level is <m>76.51977493394955\ </m> mg/dL.
               </li>
               <li>
-                  For an adult with Glucose Level <m>\ 75.9\ </m> mg/dL, the estimated Age is <m>30.581934583974096\ </m> years.
+                  For an adult with Glucose Level <m>\ 78.0\ </m> mg/dL, the estimated Age is <m>34.06140438295593\ </m> years.
               </li>
               
           </ol>

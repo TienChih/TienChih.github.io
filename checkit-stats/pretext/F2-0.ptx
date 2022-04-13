@@ -1,21 +1,21 @@
-<exercise checkit-seed="9811" checkit-slug="F2" checkit-title="Confidence Intervals">
+<exercise checkit-seed="6052" checkit-slug="F2" checkit-title="Confidence Intervals">
   <statement>
       <p>
-          A company wondered if people liked the user interface of their upgraded website.  They survey a random selection of their customers.
+          An oncologist wishes to test a new treatment.  She performs an experiment exposing cancer cells to the treatment.
       </p>
       <p>
-Suppose that for   <m>n=32</m> surveyed customers, <m>18</m> preferred the new user interface. 
+Suppose that for   <m>n=82</m> exposed cells, <m>54</m> were destroyed. 
       </p>
       
       <ol>
           <li>
-              Find a <m>99</m>% confidence interval for the proportion of all the company's customers that prefer the new interface.
+              Find a <m>95</m>% confidence interval for the proportion of cancer cells that would be destroyed.
           </li>
           <li>
               Using complete sentences, explain what the confidence interval means in the context of this problem.
           </li>
           <li>
-              Suppose the company claims that   <m>46</m>% of all the company's customers  prefer the new interface.  Is this claim consistent with what we found?  Explain why or why not.
+              Suppose the oncologist claims that   <m>59</m>% of cancer cells  would be destroyed.  Is this claim consistent with what we found?  Explain why or why not.
           </li>
           
       </ol>
@@ -28,16 +28,16 @@ Suppose that for   <m>n=32</m> surveyed customers, <m>18</m> preferred the new u
   <answer>
       <ul>
           <li>
-              The sample proportion is <m>\hat{p}=\frac{9}{16}</m>.
+              The sample proportion is <m>\hat{p}=\frac{27}{41}</m>.
           </li>
           <li>
-              The standard error is <m>SE=0.0876950950025143</m>.
+              The standard error is <m>SE=0.0523666891771132</m>.
           </li>
           <li>
-              For a 99% confidence interval,  <m>z^*=2.5758293035489</m>.
+              For a 95% confidence interval,  <m>z^*=1.9599639845400536</m>.
           </li>
           <li>
-              The proportion of all the company's customers that prefer the new interface has a 99% chance of of falling in <m>[0.336612404515019, 0.788387595484981]</m>.
+              The proportion of cancer cells that would be destroyed has a 95% chance of of falling in <m>[0.555899760589108, 0.761173410142599]</m>.
           </li>
           <li>
               The claim is consistent.

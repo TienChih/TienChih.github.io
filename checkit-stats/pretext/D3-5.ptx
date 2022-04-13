@@ -1,18 +1,18 @@
-<exercise checkit-seed="8288" checkit-slug="D3" checkit-title="Counting Principles">
+<exercise checkit-seed="5500" checkit-slug="D3" checkit-title="Counting Principles">
   <statement>
       
       
       <p>
-          Suppose you had a class of  <m>23</m>  children.
+          Suppose you had a class of  <m>29</m>  children.
       </p>
       
       
       <p>
           <ol>
-              <li>How many ways are there to select <m>6</m>  children  and put them in a line to wait their turn for an activity?</li>
-              <li>How many ways are there to select <m>8</m>  children  and arrange them so they can take turns giving a presentation?</li>
-              <li>How many ways are there to select <m>12</m>  children  to take on a field trip?</li>
-              <li>How many ways are there to select <m>10</m>  children  to give a special assignment?</li>
+              <li>How many ways are there to select <m>17</m>  children  and put them in a line to wait their turn for an activity?</li>
+              <li>How many ways are there to select <m>23</m>  children  to take on a field trip?</li>
+              <li>How many ways are there to select <m>16</m>  children  and arrange them so they can take turns giving a presentation?</li>
+              <li>How many ways are there to select <m>15</m>  children  to give a special assignment?</li>
           </ol>
           
       </p>
@@ -34,10 +34,10 @@
       
      <p>
           <ol>
-              <li>72681840 ways.</li>
-              <li>19769460480 ways.</li>
-              <li>1352078 ways.</li>
-              <li>1144066 ways.</li>
+              <li>18458731648787189760000 ways.</li>
+              <li>475020 ways.</li>
+              <li>1419902434522091520000 ways.</li>
+              <li>77558760 ways.</li>
           </ol>
           
       </p>

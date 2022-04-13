@@ -1,4 +1,4 @@
-<exercise checkit-seed="3144" checkit-slug="R2" checkit-title="Interpreting Linear Regression">
+<exercise checkit-seed="2801" checkit-slug="R2" checkit-title="Interpreting Linear Regression">
   <statement>
       <p>
           A survey is conducted comparing different homes electricity usage (in kilowatt hours), and their electric bills (dollars) within a city.
@@ -14,59 +14,71 @@
               \text{ Electric Bill in dollars }
               \\
               \hline
-               150.44
-              &amp; 32.58
+               293.92
+              &amp; 52.23
                   \\
-               290.76
-              &amp; 55.6
+               246.63
+              &amp; 43.3
                   \\
-               264.82
-              &amp; 48.7
+               201.83
+              &amp; 39.57
                   \\
-               256.32
-              &amp; 45.12
+               267.17
+              &amp; 49.5
                   \\
-               179.68
-              &amp; 37.62
+               150.58
+              &amp; 31.13
                   \\
-               237.94
-              &amp; 46.33
+               199.71
+              &amp; 39.14
                   \\
-               162.75
-              &amp; 34.45
+               257.18
+              &amp; 47.9
                   \\
-               208.89
-              &amp; 37.91
+               174.36
+              &amp; 33.29
                   \\
-               224.26
-              &amp; 45.3
+               287.28
+              &amp; 53.28
                   \\
-               231.14
-              &amp; 44.6
+               151.84
+              &amp; 32.13
                   \\
-               157.19
-              &amp; 33.45
+               201.51
+              &amp; 40.42
                   \\
-               256.03
-              &amp; 46.78
+               251.77
+              &amp; 41.76
                   \\
-               161.87
-              &amp; 35.63
+               188.43
+              &amp; 39.02
                   \\
-               236.18
-              &amp; 44.63
+               259.38
+              &amp; 45.89
                   \\
-               168.67
-              &amp; 34.4
+               220.11
+              &amp; 40.27
                   \\
-               188.2
-              &amp; 39.81
+               223.52
+              &amp; 43.55
                   \\
-               193.67
-              &amp; 35.69
+               276.65
+              &amp; 45.67
                   \\
-               240.46
-              &amp; 46.17
+               155.3
+              &amp; 31.88
+                  \\
+               228.5
+              &amp; 42.31
+                  \\
+               271.3
+              &amp; 48.81
+                  \\
+               249.28
+              &amp; 42.59
+                  \\
+               220.36
+              &amp; 44.22
                   \\
               
               \hline
@@ -85,10 +97,10 @@
                   What does <m>\beta_1</m> tell you about the relationship between Electricity Usage and Electric Bill?
               </li>
               <li>
-                  For a household with Electricity Usage <m>222.74</m> kilowatt hours, what is the estimated Electric Bill?
+                  For a household with Electricity Usage <m>153.42</m> kilowatt hours, what is the estimated Electric Bill?
               </li>
               <li>
-                  For a household with Electric Bill <m>36.18</m> dollars, what is the estimated Electricity Usage?
+                  For a household with Electric Bill <m>40.97</m> dollars, what is the estimated Electricity Usage?
               </li>
               
           </ol>
@@ -113,19 +125,19 @@
           <p>
           <ol>
               <li>
-                  <m>\beta_0=8.567388005310903\ </m> dollars.
+                  <m>\beta_0=11.361083550833744\ </m> dollars.
               </li>
               <li>
-                  <m>\beta_1=0.155031545651635\ </m> dollars<m>/</m>kilowatt hours.
+                  <m>\beta_1=0.136220471743146\ </m> dollars<m>/</m>kilowatt hours.
               </li>
               <li>
-                 Whenever Electricity Usage increases by 1 kilowatt hours, Electric Bill changes, on average, by <m>0.155031545651635\ </m> dollars.
+                 Whenever Electricity Usage increases by 1 kilowatt hours, Electric Bill changes, on average, by <m>0.136220471743146\ </m> dollars.
               </li>
               <li>
-                  For a household with Electricity Usage <m>\ 222.74\ </m> kilowatt hours, the estimated Electric Bill is <m>43.09911448375608\ </m> dollars.
+                  For a household with Electricity Usage <m>\ 153.42\ </m> kilowatt hours, the estimated Electric Bill is <m>32.2600283256672\ </m> dollars.
               </li>
               <li>
-                  For a household with Electric Bill <m>\ 36.18\ </m> dollars, the estimated Electricity Usage is <m>178.1096349044746\ </m> kilowatt hours.
+                  For a household with Electric Bill <m>\ 40.97\ </m> dollars, the estimated Electricity Usage is <m>217.360254815415\ </m> kilowatt hours.
               </li>
               
           </ol>

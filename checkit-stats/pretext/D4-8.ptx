@@ -1,29 +1,29 @@
-<exercise checkit-seed="2355" checkit-slug="D4" checkit-title="Binomial Distribution">
+<exercise checkit-seed="6600" checkit-slug="D4" checkit-title="Binomial Distribution">
   <statement>
       
       
       <p>
-          Suppose a job candidiate applies for several jobs.  Each of the  <m>6</m>  employers has a <m>0.67</m> chance of  offering a job.  Suppose that whether or not each  employer  offers a job is independent of the other  employers.  Find the following:
+          Suppose a group of diners order dinner together.  Each of the  <m>7</m>  diners has a <m>0.62</m> chance of  ordering dessert.  Suppose that whether or not each  diner  orders dessert is independent of the other  diners.  Find the following:
       </p>
       
       
       <p>
           <ol>
               <li>
-                  What is the probability that <m>3</m>  employers  offers a job?
+                  What is the probability that <m>7</m>  diners  orders dessert?
               </li>
              
               <li>
-                  What is the probability that <m>5</m>  employers  offers a job?
+                  What is the probability that <m>3</m>  diners  orders dessert?
               </li>
               
               
               <li>
-                  What is the probability that  at most  <m>4</m>  employers  offers a job?
+                  What is the probability that  less than  <m>6</m>  diners  orders dessert?
               </li>
               
               <li>
-                  What is the probability that between <m>3</m> and <m>4</m> (inclusive)  employers  offers a job?
+                  What is the probability that between <m>1</m> and <m>3</m> (inclusive)  diners  orders dessert?
               </li>
           </ol>
           
@@ -47,16 +47,16 @@
      <p>
           <ol>
               <li>
-                  <m>0.21617039861999995</m>
+                  <m>0.035216146062080005</m>
               </li>
               <li>
-                  <m>0.26732477118600007</m>
+                  <m>0.1739312024128</m>
               </li>
               <li>
-                  <m>0.642216846645</m>
+                  <m>0.8136952272844801</m>
               </li>
               <li>
-                  <m>0.5453389601549999</m>
+                  <m>0.25096046333568</m>
               </li>
           </ol>
           

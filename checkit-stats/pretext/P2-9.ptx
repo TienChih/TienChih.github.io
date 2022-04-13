@@ -1,25 +1,25 @@
-<exercise checkit-seed="4314" checkit-slug="P2" checkit-title="Conditional Probability">
+<exercise checkit-seed="2806" checkit-slug="P2" checkit-title="Conditional Probability">
   <statement>
       
       <p>
-          A delivery service operates in a city where it snows in the winter. Suppose it is now winter.  We consider the events that on a randomly selected day that they are late making deliveries, and the event that it snows that day.
+          We randomly select a customer from a store and consider the events that they purchase over $100, and the event they use a credit card.
       </p>
       
       <p>
-          Suppose that   the probability that   the service is late on this day is <m>0.17</m>, the probability that   the service is late given that it snows on this day is <m>0.79</m>, and finally   the probability that    it snows on this day is <m>0.16</m>.
+          Suppose that   the probability that   the customer purchases over $100 is <m>0.078</m>, the probability that   the customer purchases over $100 given that they use a credit card is <m>0.078</m>, and finally   the probability that    the customer uses a credit card is <m>0.695</m>.
       </p>
       
       
       <p>
           <ol>
               <li>
-                  Find the probability that    the service is late and it snows on this day.
+                  Find the probability that    the customer purchases over $100 and uses a credit card.
               </li>
               <li>
-                  Find the probability that    it snows, given that the service is late on this day.
+                  Find the probability that    the customer uses a credit card, given that they purchased over $100.
               </li>
               <li>
-                  Are the events   the service is late on this day, and    it snows on this day independent?
+                  Are the events   the customer purchases over $100, and    the customer uses a credit card independent?
               </li>
           </ol>
           
@@ -43,13 +43,13 @@
      <p>
           <ol>
               <li>
-                   The probability that    the service is late and it snows on this day is <m>0.1264</m>.
+                   The probability that    the customer purchases over $100 and uses a credit card is <m>0.054209999999999994</m>.
               </li>
               <li>
-                   The  probability that    it snows, given that the service is late on this day is <m>0.7435294117647059</m>.
+                   The  probability that    the customer uses a credit card, given that they purchased over $100 is <m>0.695</m>.
               </li>
               <li>
-                  The events   the service is late on this day, and    it snows on this day  are not independent.
+                  The events   the customer purchases over $100, and    the customer uses a credit card  are independent.
               </li>
           </ol>
           

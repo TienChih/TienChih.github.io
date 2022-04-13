@@ -1,10 +1,10 @@
-<exercise checkit-seed="1197" checkit-slug="C1" checkit-title="Size of Sample: Proportion">
+<exercise checkit-seed="8383" checkit-slug="C1" checkit-title="Size of Sample: Proportion">
   <statement>
       <p>
-          A psychologist wants to know the probability that exposure to a certain simuli increases anxiety.  He wants to find a <m> 95</m>% confidence interval with margin of error <m>ME=0.05</m>.
+          A sociologist wants to know what proportion of a town's residents feel like they trust their neighbors.  They want to find a <m> 95</m>% confidence interval with margin of error <m>ME=0.01</m>.
       </p>
       <p>
-          A previous study showed that  of <m>55\ </m> test subjects,  <m>33\ </m>had increased anxiety after exposure to the stimuli.  How many subjects should now be tested to obtain a <m>95</m>% confidence interval with margin of error <m>ME=0.05</m>?
+          A previous study showed that  of <m>55\ </m> surveyed residents ,  <m>40\ </m>trusted their neighbors.  How many residents should the sociologist survey now to obtain a <m>95</m>% confidence interval with margin of error <m>ME=0.01</m>?
       </p>
       
       <!--<ol>
@@ -26,16 +26,16 @@
       <title>Partial Solution:</title>
       <ul>
           <li>
-              The sample proportion of the initial study is <m>\hat{p}=0.6</m>.
+              The sample proportion of the initial study is <m>\hat{p}=0.7272727272727273</m>.
           </li>
           <li>
               For a 95% confidence interval,  <m>z^*=1.9599639845400536</m>.
           </li>
           <li>
-              The margin of error is <m>ME=0.05</m>.
+              The margin of error is <m>ME=0.01</m>.
           </li>
           <li>
-              The number of subjects should now be tested is at least <m>369</m>.
+              The number of residents should the sociologist survey now is at least <m>7620</m>.
           </li>
       </ul>
           

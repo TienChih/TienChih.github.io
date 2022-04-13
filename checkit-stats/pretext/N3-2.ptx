@@ -1,110 +1,126 @@
-<exercise checkit-seed="6813" checkit-slug="N3" checkit-title="Inference for paired Numerical Variables">
+<exercise checkit-seed="8346" checkit-slug="N3" checkit-title="Inference for paired Numerical Variables">
   <statement>
       
       <p>
-          A study is done comparing the effect of two diets on levels of cholestrol.  Subjects of the study spend 2 weeks on diet A, their cholestrol is measured, then they switch to diet B, and after 2 weeks their cholestrol is measured again. A total of <m>20</m>  subjects were sampled.  The following is a summary of cholestrol level after diet A and cholestrol level after diet B.
+          A study is conducted comparing the resting heart rate of test subjects before and after taking a trial medication. A total of <m>24</m>  test subjects were sampled.  The following is a summary of the heart rate of test subjects before taking medication and the heart rate of test subjects after taking medication.
       </p>
       
       <p>
           <me>
                \begin{array}{|c|c|c|}
               \hline
-              \text{ Diet A in  mmol/L }
+              \text{ Heart Rate Before in  bpm }
               &amp;
-              \text{ Diet B in  mmol/L }
+              \text{ Heart Rate After in  bpm }
               &amp;
-              \text{Difference in  mmol/L }
+              \text{Difference in  bpm }
               \\
               \hline
-               4.7
-              &amp; 4.0
-              &amp; -0.7
+               66.7
+              &amp; 82.7
+              &amp; 16.0
                   \\
-               5.0
+               64.5
+              &amp; 78.7
+              &amp; 14.2
+                  \\
+               74.6
+              &amp; 69.2
+              &amp; -5.4
+                  \\
+               70.6
+              &amp; 82.0
+              &amp; 11.4
+                  \\
+               79.0
+              &amp; 83.4
               &amp; 4.4
-              &amp; -0.6
                   \\
-               6.2
-              &amp; 5.8
-              &amp; -0.4
+               76.1
+              &amp; 81.8
+              &amp; 5.7
                   \\
-               3.3
-              &amp; 3.4
-              &amp; 0.1
+               65.0
+              &amp; 54.5
+              &amp; -10.5
                   \\
-               4.1
-              &amp; 4.0
-              &amp; -0.1
+               66.4
+              &amp; 73.2
+              &amp; 6.8
                   \\
-               2.2
-              &amp; 1.7
-              &amp; -0.5
+               67.1
+              &amp; 74.4
+              &amp; 7.3
                   \\
-               4.3
+               73.6
+              &amp; 80.4
+              &amp; 6.8
+                  \\
+               61.1
+              &amp; 70.4
+              &amp; 9.3
+                  \\
+               78.1
+              &amp; 82.5
               &amp; 4.4
-              &amp; 0.1
                   \\
-               3.4
-              &amp; 3.3
-              &amp; -0.1
+               79.1
+              &amp; 83.8
+              &amp; 4.7
                   \\
-               3.5
-              &amp; 3.7
-              &amp; 0.2
+               67.2
+              &amp; 61.3
+              &amp; -5.9
                   \\
-               4.0
-              &amp; 3.9
-              &amp; -0.1
+               73.4
+              &amp; 75.7
+              &amp; 2.3
                   \\
-               4.3
-              &amp; 4.3
-              &amp; 0.0
-                  \\
-               4.8
-              &amp; 3.7
-              &amp; -1.1
-                  \\
-               3.9
-              &amp; 3.9
-              &amp; 0.0
-                  \\
-               4.5
-              &amp; 5.0
-              &amp; 0.5
-                  \\
-               4.2
-              &amp; 5.2
-              &amp; 1.0
-                  \\
-               4.0
-              &amp; 4.2
-              &amp; 0.2
-                  \\
-               4.4
-              &amp; 4.8
+               59.8
+              &amp; 60.2
               &amp; 0.4
                   \\
-               4.2
-              &amp; 4.2
-              &amp; -0.0
+               70.8
+              &amp; 59.0
+              &amp; -11.8
                   \\
-               4.9
-              &amp; 4.6
-              &amp; -0.3
+               66.4
+              &amp; 61.4
+              &amp; -5.0
                   \\
-               3.4
-              &amp; 3.6
-              &amp; 0.2
+               72.4
+              &amp; 69.1
+              &amp; -3.3
+                  \\
+               67.7
+              &amp; 76.9
+              &amp; 9.2
+                  \\
+               61.7
+              &amp; 60.1
+              &amp; -1.6
+                  \\
+               70.3
+              &amp; 65.2
+              &amp; -5.1
+                  \\
+               81.0
+              &amp; 78.6
+              &amp; -2.4
+                  \\
+               71.4
+              &amp; 72.7
+              &amp; 1.3
                   \\
               
               \hline
               \end{array}
           </me>
-          The sample average of these differences is <m>-0.059999999999999984</m>  mmol/L and the sample standard deviation is <m>0.4509988913511872</m>  mmol/L.
+          The sample average of these differences is <m>2.216666666666667</m>  bpm and the sample standard deviation is <m>7.276369668698503</m>  bpm.
       </p>
       
       <ul>
-          <li>  Test the hypothesis that  the average difference in cholestrol levels between diets A and B   is less than <m>  0</m>  mmol/L.
+          <li>  Test the hypothesis that  the average difference in heart rate of patients before and after taking the medication   is greater than <m>  0</m>  bpm.
               <ol>
           <li>
               State the null hypothesis.
@@ -125,7 +141,7 @@
       </ol>
           </li>
           <li>
-              Find a <m>95</m>% confidence interval for the  the average difference in cholestrol levels between diets A and B .  Using complete sentences, explain what the confidence interval means in the context of this problem.
+              Find a <m>95</m>% confidence interval for the  the average difference in heart rate of patients before and after taking the medication .  Using complete sentences, explain what the confidence interval means in the context of this problem.
           </li>
       </ul>
       
@@ -144,23 +160,23 @@
               The null hypothesis is <m>H_0: \mu_d=0</m>.
           </li>
          <li>
-              The alternative hypothesis is <m>H_A: \mu_d\lneq0</m>.
+              The alternative hypothesis is <m>H_A: \mu_d\gneq0</m>.
           </li>
           <li>
-              The sampling distribution has mean <m>0</m> and standard error <m>SE=0.100846417883830</m>.
+              The sampling distribution has mean <m>0</m> and standard error <m>SE=1.48528273901463</m>.
           </li>
          <li>
-              The sample mean is <m>\bar{d}=-0.059999999999999984</m> which has <m>t</m>-score <m>t=-0.5949641173087294</m>.
+              The sample mean is <m>\bar{d}=2.216666666666667</m> which has <m>t</m>-score <m>t=1.492420674152079</m>.
           </li>
          <li>
-              The <m>p</m>-value is <m>0.2794436882219141</m>.
+              The <m>p</m>-value is <m>0.07458989742240818</m>.
           </li>
          
          <li>
-              For a <m>95</m>% confidence interval,  <m>t^*=2.0930240544083096</m>.
+              For a <m>95</m>% confidence interval,  <m>t^*=2.068657610419048</m>.
           </li>
           <li>
-              The  the average difference in cholestrol levels between diets A and B   has a <m>95</m>% chance of of falling in <m>[-0.271073978431768, 0.151073978431768]</m>.
+              The  the average difference in heart rate of patients before and after taking the medication   has a <m>95</m>% chance of of falling in <m>[-0.855874775020006, 5.28920810835334]</m>.
           </li>
          
           

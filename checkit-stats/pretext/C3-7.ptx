@@ -1,10 +1,10 @@
-<exercise checkit-seed="2483" checkit-slug="C3" checkit-title="Chi^2 goodness of fit test">
+<exercise checkit-seed="6345" checkit-slug="C3" checkit-title="Chi^2 goodness of fit test">
   <statement>
      <p>
-         The distribution of moth species in a local forest has historically been  <m>23</m>%  species 1, <m>32</m>%  species 2, <m>21</m>%  species 3, and <m>24</m>%  species 4.
+         The distribution of moth species in a local forest has historically been  <m>24</m>%  species 1, <m>33</m>%  species 2, <m>27</m>%  species 3, and <m>16</m>%  species 4.
       </p>
       <p>
-          A year after an industrial accident, a sample of moths collected from this forest consisted of  <m>45</m>  moths of species 1, <m>66</m>  moths of species 2, <m>27</m>  moths of species 3, and <m>56</m>  moths of species 4.
+          A year after an industrial accident, a sample of moths collected from this forest consisted of  <m>55</m>  moths of species 1, <m>45</m>  moths of species 2, <m>47</m>  moths of species 3, and <m>37</m>  moths of species 4.
       </p>
       <p>
           Use a <m>\chi^2</m> goodness of fit test to test whether or not the distributions of moths remain unchanged.
@@ -46,10 +46,10 @@
               There are <m>3</m> degrees of freedom.
           </li>
          <li>
-              The <m>\chi^2</m> value is <m>6.79867558856802</m>.
+              The <m>\chi^2</m> value is <m>8.81664013321623</m>.
           </li>
          <li>
-              The <m>p</m>-value is <m>0.07859915464991185</m>.
+              The <m>p</m>-value is <m>0.031830754603221156</m>.
           </li>
          
           

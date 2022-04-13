@@ -1,66 +1,78 @@
-<exercise checkit-seed="7592" checkit-slug="R1" checkit-title="Linear Correlation of Variables">
+<exercise checkit-seed="4850" checkit-slug="R1" checkit-title="Linear Correlation of Variables">
   <statement>
       <p>
-          A professor observes how many cups of coffee they drink in a day, compared to how many hours of sleep they get that night.
+          A study is conducted comparing the age of children to their Forced Exhalation Volume (FEV) (in liters), in order to see the impact on age on lung function.  Children of different ages have their FEV tested by physicians.
       </p>
       
       <p>
-          Consider this table of data collected comparing Coffee Consumption measured in cups, and Sleep measured in hours:
+          Consider this table of data collected comparing Age measured in years, and FEV measured in liters:
           <me>
                \begin{array}{|c|c|}
               \hline
-              \text{ Coffee Consumption in cups }
+              \text{ Age in years }
               &amp;
-              \text{ Sleep in hours }
+              \text{ FEV in liters }
               \\
               \hline
-               0
-              &amp; 8.5
+               6
+              &amp; 1.31
                   \\
-               4
-              &amp; 6.0
+               8
+              &amp; 2.18
                   \\
-               0
-              &amp; 9.5
+               10
+              &amp; 2.49
                   \\
-               3
-              &amp; 7.1
+               6
+              &amp; 1.9
                   \\
-               0
-              &amp; 9.6
+               8
+              &amp; 2.34
                   \\
-               3
-              &amp; 5.8
+               7
+              &amp; 1.64
                   \\
-               4
-              &amp; 6.1
+               6
+              &amp; 1.77
                   \\
-               2
-              &amp; 6.9
+               7
+              &amp; 1.76
                   \\
-               3
-              &amp; 6.7
+               7
+              &amp; 1.32
                   \\
-               1
-              &amp; 8.1
+               9
+              &amp; 2.15
                   \\
-               2
-              &amp; 6.9
+               7
+              &amp; 1.4
                   \\
-               4
-              &amp; 6.6
+               6
+              &amp; 1.61
                   \\
-               0
-              &amp; 7.3
+               10
+              &amp; 2.68
                   \\
-               3
-              &amp; 5.5
+               7
+              &amp; 1.67
                   \\
-               2
-              &amp; 5.8
+               9
+              &amp; 1.83
                   \\
-               3
-              &amp; 5.9
+               6
+              &amp; 1.7
+                  \\
+               10
+              &amp; 2.76
+                  \\
+               8
+              &amp; 2.35
+                  \\
+               7
+              &amp; 2.13
+                  \\
+               7
+              &amp; 1.64
                   \\
               
               \hline
@@ -76,7 +88,7 @@
                   Compute the correlation coefficient <m>R</m>.
               </li>
               <li>
-                  What does <m>R</m> tell you about the relationship between Coffee Consumption and Sleep?
+                  What does <m>R</m> tell you about the relationship between Age and FEV?
               </li>
               <li>
                   Compute the <m>R^2</m>.
@@ -107,16 +119,16 @@
      <p>
           <ul>
               <li>
-                  The exaplanatory variable is Coffee Consumption in cups and the response variable is Sleep in hours.
+                  The exaplanatory variable is Age in years and the response variable is FEV in liters.
               </li>
               <li>
-                  <m>R=-0.8646053592.</m>
+                  <m>R=0.7926321935.</m>
               </li>
               <li>
-                  <m>R^2=0.7475424271573611.</m>
+                  <m>R^2=0.6282657941726215.</m>
               </li>
               <li>
-                  Sleep is <m>74.75424271573611\%</m> explainable by Coffee Consumption.
+                  FEV is <m>62.82657941726215\%</m> explainable by Age.
               </li>
               
               

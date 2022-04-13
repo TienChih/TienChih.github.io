@@ -1,21 +1,21 @@
-<exercise checkit-seed="6183" checkit-slug="F2" checkit-title="Confidence Intervals">
+<exercise checkit-seed="1212" checkit-slug="F2" checkit-title="Confidence Intervals">
   <statement>
       <p>
-          A psychologist wants to know if a new mental exercise helps people retain short term memory.  Adult subjects were selected and their short term memory was tested.  After completing the exercise, their short term memory was tested again.
+          A county health department wants to know what proportion of their citizens are willing to take a vaccine for a novel virus.  They survey a random selection residents in the county.
       </p>
       <p>
-Suppose that for   <m>n=92</m> test subjects, <m>57</m> showed improved short term memory. 
+Suppose that for   <m>n=73</m> surveyed residents, <m>13</m> had or were willing to be vaccinated. 
       </p>
       
       <ol>
           <li>
-              Find a <m>99</m>% confidence interval for the proportion of adults that would show improved memory doing this exercise.
+              Find a <m>99</m>% confidence interval for the proportion of all residents in the county that had or would be willing to be vaccinated.
           </li>
           <li>
               Using complete sentences, explain what the confidence interval means in the context of this problem.
           </li>
           <li>
-              Suppose the psychologist claims that   <m>23</m>% of adults  would show improved memory doing this exercise.  Is this claim consistent with what we found?  Explain why or why not.
+              Suppose the health department claims that   <m>20</m>% of all residents in the county  had or would be willing to be vaccinated.  Is this claim consistent with what we found?  Explain why or why not.
           </li>
           
       </ol>
@@ -28,19 +28,19 @@ Suppose that for   <m>n=92</m> test subjects, <m>57</m> showed improved short te
   <answer>
       <ul>
           <li>
-              The sample proportion is <m>\hat{p}=\frac{57}{92}</m>.
+              The sample proportion is <m>\hat{p}=\frac{13}{73}</m>.
           </li>
           <li>
-              The standard error is <m>SE=0.0506162199890520</m>.
+              The standard error is <m>SE=0.0447778266971195</m>.
           </li>
           <li>
               For a 99% confidence interval,  <m>z^*=2.5758293035489</m>.
           </li>
           <li>
-              The proportion of adults that would show improved memory doing this exercise has a 99% chance of of falling in <m>[0.489186474708627, 0.749943960073982]</m>.
+              The proportion of all residents in the county that had or would be willing to be vaccinated has a 99% chance of of falling in <m>[0.0627421536251473, 0.293422229936497]</m>.
           </li>
           <li>
-              The claim is not consistent.
+              The claim is consistent.
           </li>
       </ul>
           

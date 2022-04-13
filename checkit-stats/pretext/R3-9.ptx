@@ -1,90 +1,90 @@
-<exercise checkit-seed="5376" checkit-slug="R3" checkit-title="Inference and Linear Regression">
+<exercise checkit-seed="1056" checkit-slug="R3" checkit-title="Inference and Linear Regression">
   <statement>
       <p>
-          A study is conducted comparing the amount of Time since Injection of a drug, with the Quantity left in the Bloodstream.
+          Two graders grade the same set of exams, to see how consistently points are awarded across individual graders.
       </p>
       
       <p>
-          Consider this table of data collected comparing Time since Injection measured in hours, and Drug Quantity in Body measured in mg/ml:
+          Consider this table of data collected comparing Score by Grader 1 measured in points, and Score by Grader 2 measured in points:
           <me>
                \begin{array}{|c|c|}
               \hline
-              \text{ Time since Injection in hours }
+              \text{ Score by Grader 1 in points }
               &amp;
-              \text{ Drug Quantity in Body in mg/ml }
+              \text{ Score by Grader 2 in points }
               \\
               \hline
-               4
-              &amp; 2.08
+               30
+              &amp; 54
                   \\
-               1
-              &amp; 2.27
+               25
+              &amp; 45
                   \\
-               7
-              &amp; 1.75
+               27
+              &amp; 44
                   \\
-               2
-              &amp; 2.66
+               71
+              &amp; 68
                   \\
-               6
-              &amp; 1.88
+               17
+              &amp; 22
                   \\
-               4
-              &amp; 2.09
+               100
+              &amp; 81
                   \\
-               7
-              &amp; 1.77
+               59
+              &amp; 40
                   \\
-               1
-              &amp; 2.61
+               100
+              &amp; 91
                   \\
-               6
-              &amp; 1.67
+               75
+              &amp; 99
                   \\
-               3
-              &amp; 2.47
+               11
+              &amp; -4
                   \\
-               4
-              &amp; 2.19
+               -72
+              &amp; -83
                   \\
-               1
-              &amp; 2.47
+               100
+              &amp; 89
                   \\
-               4
-              &amp; 2.01
+               53
+              &amp; 65
                   \\
-               3
-              &amp; 2.37
+               21
+              &amp; 41
                   \\
-               3
-              &amp; 2.39
+               81
+              &amp; 89
                   \\
-               4
-              &amp; 2.38
+               89
+              &amp; 95
                   \\
-               5
-              &amp; 1.79
+               100
+              &amp; 93
                   \\
-               3
-              &amp; 2.34
+               47
+              &amp; 65
                   \\
-               4
-              &amp; 2.0
+               85
+              &amp; 93
                   \\
-               7
-              &amp; 1.79
+               -5
+              &amp; -19
                   \\
-               2
-              &amp; 2.41
+               35
+              &amp; 20
                   \\
-               2
-              &amp; 2.71
+               100
+              &amp; 77
                   \\
-               7
-              &amp; 2.1
+               42
+              &amp; 65
                   \\
-               7
-              &amp; 1.9
+               100
+              &amp; 91
                   \\
               
               \hline
@@ -95,22 +95,22 @@
           Suppose a statistics software returns the following:
           <ul>
               <li>
-                  Point estimate for <m>\beta_1</m>: <m>-0.134858466766053</m>.
+                  Point estimate for <m>\beta_1</m>: <m>0.987757248865598</m>.
               </li>
               <li>
-                  Point estimate for <m>\beta_0</m>: <m>2.715886303179464</m>.
+                  Point estimate for <m>\beta_0</m>: <m>1.908557988104704</m>.
               </li>
               <li>
-                  Standard Error for <m>\beta_1</m>: <m>0.017108673414781075</m>.
+                  Standard Error for <m>\beta_1</m>: <m>0.07786155604388191</m>.
               </li>
               <li>
-                  <m>t</m>-score for <m>\beta_1</m>: <m>-7.8824619242273775</m>.
+                  <m>t</m>-score for <m>\beta_1</m>: <m>12.686071266144603</m>.
               </li>
               <li>
-                  95% Confidence Interval for <m>\beta_1</m>: <m>[-0.170339683788533, -0.0993772497435730]</m>.
+                  95% Confidence Interval for <m>\beta_1</m>: <m>[0.826282264761091, 1.14923223297010]</m>.
               </li>
               <li>
-                  <m>p</m>-value for <m>H_0:\beta_1=0, H_A: \beta_1\neq 0</m>: <m>p</m>-value<m>=7.540842128506142 \times 10^{-08}</m>.
+                  <m>p</m>-value for <m>H_0:\beta_1=0, H_A: \beta_1\neq 0</m>: <m>p</m>-value<m>=1.3568257628548963 \times 10^{-11}</m>.
               </li>
           </ul>
       </p>
@@ -150,7 +150,7 @@
           <p>
           <ol>
               <li>
-              The slope of the regression line  has a <m>95\%</m> chance of of falling in <m>[-0.170339683788533, -0.0993772497435730]</m>.
+              The slope of the regression line  has a <m>95\%</m> chance of of falling in <m>[0.826282264761091, 1.14923223297010]</m>.
           </li>
               
               

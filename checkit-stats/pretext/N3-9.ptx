@@ -1,126 +1,114 @@
-<exercise checkit-seed="6868" checkit-slug="N3" checkit-title="Inference for paired Numerical Variables">
+<exercise checkit-seed="3490" checkit-slug="N3" checkit-title="Inference for paired Numerical Variables">
   <statement>
       
       <p>
-          A study is done comparing the average frequency of sightings of an endangered bird species at different sites in a forest before and after a heavy rainstorm. A total of <m>24</m>  sites were sampled.  The following is a summary of rate of sightings before the storm and rate of sightings after the storm.
+          A study is conducted comparing the resting heart rate of test subjects before and after taking a trial medication. A total of <m>21</m>  test subjects were sampled.  The following is a summary of the heart rate of test subjects before taking medication and the heart rate of test subjects after taking medication.
       </p>
       
       <p>
           <me>
                \begin{array}{|c|c|c|}
               \hline
-              \text{ Rate of Sightings Before in  sightings/week }
+              \text{ Heart Rate Before in  bpm }
               &amp;
-              \text{ Rate of Sightings After in  sightings/week }
+              \text{ Heart Rate After in  bpm }
               &amp;
-              \text{Difference in  sightings/week }
+              \text{Difference in  bpm }
               \\
               \hline
-               17.1
-              &amp; 19.1
-              &amp; 2.0
+               58.7
+              &amp; 50.4
+              &amp; -8.3
                   \\
-               13.4
-              &amp; 14.5
-              &amp; 1.1
+               72.4
+              &amp; 59.7
+              &amp; -12.7
                   \\
-               16.2
-              &amp; 17.4
-              &amp; 1.2
+               46.4
+              &amp; 33.5
+              &amp; -12.9
                   \\
-               18.3
-              &amp; 20.3
-              &amp; 2.0
+               59.9
+              &amp; 51.5
+              &amp; -8.4
                   \\
-               17.4
-              &amp; 19.7
-              &amp; 2.3
+               52.7
+              &amp; 38.6
+              &amp; -14.1
                   \\
-               17.5
-              &amp; 19.3
-              &amp; 1.8
+               79.0
+              &amp; 87.4
+              &amp; 8.4
                   \\
-               13.3
-              &amp; 15.0
-              &amp; 1.7
-                  \\
-               17.8
-              &amp; 20.0
-              &amp; 2.2
-                  \\
-               17.3
-              &amp; 18.9
-              &amp; 1.6
-                  \\
-               18.0
-              &amp; 19.9
-              &amp; 1.9
-                  \\
-               18.5
-              &amp; 20.6
+               76.8
+              &amp; 78.9
               &amp; 2.1
                   \\
-               13.8
-              &amp; 15.3
-              &amp; 1.5
-                  \\
-               17.3
-              &amp; 19.2
-              &amp; 1.9
-                  \\
-               17.7
-              &amp; 19.7
-              &amp; 2.0
-                  \\
-               15.2
-              &amp; 17.1
-              &amp; 1.9
-                  \\
-               16.7
-              &amp; 19.3
+               50.1
+              &amp; 52.7
               &amp; 2.6
                   \\
-               19.7
-              &amp; 21.7
-              &amp; 2.0
+               70.5
+              &amp; 81.0
+              &amp; 10.5
                   \\
-               16.9
-              &amp; 18.7
-              &amp; 1.8
+               77.5
+              &amp; 84.8
+              &amp; 7.3
                   \\
-               19.4
-              &amp; 21.7
-              &amp; 2.3
+               68.6
+              &amp; 65.5
+              &amp; -3.1
                   \\
-               18.5
-              &amp; 20.5
-              &amp; 2.0
+               52.1
+              &amp; 53.7
+              &amp; 1.6
                   \\
-               15.0
-              &amp; 16.8
-              &amp; 1.8
+               70.7
+              &amp; 67.9
+              &amp; -2.8
                   \\
-               14.1
-              &amp; 16.4
-              &amp; 2.3
+               55.5
+              &amp; 49.3
+              &amp; -6.2
                   \\
-               13.6
-              &amp; 16.2
-              &amp; 2.6
+               58.0
+              &amp; 57.1
+              &amp; -0.9
                   \\
-               16.5
-              &amp; 18.4
-              &amp; 1.9
+               58.1
+              &amp; 58.8
+              &amp; 0.7
+                  \\
+               52.7
+              &amp; 44.4
+              &amp; -8.3
+                  \\
+               69.5
+              &amp; 73.7
+              &amp; 4.2
+                  \\
+               64.3
+              &amp; 63.2
+              &amp; -1.1
+                  \\
+               77.5
+              &amp; 86.5
+              &amp; 9.0
+                  \\
+               68.2
+              &amp; 65.6
+              &amp; -2.6
                   \\
               
               \hline
               \end{array}
           </me>
-          The sample average of these differences is <m>1.9375</m>  sightings/week and the sample standard deviation is <m>0.35685256059050496</m>  sightings/week.
+          The sample average of these differences is <m>-1.6666666666666667</m>  bpm and the sample standard deviation is <m>7.198368421837544</m>  bpm.
       </p>
       
       <ul>
-          <li>  Test the hypothesis that  the average difference in rates of sighting before and after the storm   is greater than <m>  1.9</m>  sightings/week.
+          <li>  Test the hypothesis that  the average difference in heart rate of patients before and after taking the medication   is less than <m>  -4.5</m>  bpm.
               <ol>
           <li>
               State the null hypothesis.
@@ -141,7 +129,7 @@
       </ol>
           </li>
           <li>
-              Find a <m>95</m>% confidence interval for the  the average difference in rates of sighting before and after the storm .  Using complete sentences, explain what the confidence interval means in the context of this problem.
+              Find a <m>95</m>% confidence interval for the  the average difference in heart rate of patients before and after taking the medication .  Using complete sentences, explain what the confidence interval means in the context of this problem.
           </li>
       </ul>
       
@@ -157,26 +145,26 @@
       
      <ul>
           <li>
-              The null hypothesis is <m>H_0: \mu_d=1.9</m>.
+              The null hypothesis is <m>H_0: \mu_d=-4.5</m>.
           </li>
          <li>
-              The alternative hypothesis is <m>H_A: \mu_d\gneq1.9</m>.
+              The alternative hypothesis is <m>H_A: \mu_d\lneq-4.5</m>.
           </li>
           <li>
-              The sampling distribution has mean <m>1.9</m> and standard error <m>SE=0.0728422239043629</m>.
+              The sampling distribution has mean <m>-4.5</m> and standard error <m>SE=1.57081277015478</m>.
           </li>
          <li>
-              The sample mean is <m>\bar{d}=1.9375</m> which has <m>t</m>-score <m>t=0.5148113002320627</m>.
+              The sample mean is <m>\bar{d}=-1.6666666666666667</m> which has <m>t</m>-score <m>t=1.8037371398846938</m>.
           </li>
          <li>
-              The <m>p</m>-value is <m>0.30579855482702756</m>.
+              The <m>p</m>-value is <m>0.9568210652908096</m>.
           </li>
          
          <li>
-              For a <m>95</m>% confidence interval,  <m>t^*=2.068657610419048</m>.
+              For a <m>95</m>% confidence interval,  <m>t^*=2.085963447265865</m>.
           </li>
           <li>
-              The  the average difference in rates of sighting before and after the storm   has a <m>95</m>% chance of of falling in <m>[1.78681437916039, 2.08818562083961]</m>.
+              The  the average difference in heart rate of patients before and after taking the medication   has a <m>95</m>% chance of of falling in <m>[-4.94332468770797, 1.60999135437464]</m>.
           </li>
          
           

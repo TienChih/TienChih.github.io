@@ -1,30 +1,30 @@
-<exercise checkit-seed="9058" checkit-slug="P3" checkit-title="Bayes Theorem">
+<exercise checkit-seed="9102" checkit-slug="P3" checkit-title="Bayes Theorem">
   <statement>
       
       <p>
-          Consider a radar detecting other aircraft while in flight.  It occasionally fails to detect other aircraft or gives a false indication that aircraft are close by when they are not.  We consider the events that it indicates other aircraft are close by, and the event other aircraft are close by.
+          Consider a town where sometimes it is cloudy, and sometimes it is raining.  We consider the events that it rains by the evening, and the event it is cloudy in the morning.
       </p>
       
       <p>
-          Suppose that   the probability that   it indicates other aircraft are close by given that other aircraft is close by is <m>0.96</m>, the probability that   it indicates other aircraft are close by given that other aircraft are not close by is <m>0.07</m>.
+          Suppose that   the probability that   it rains by evening, given that it was cloudy in the morning is <m>0.8</m>, the probability that   it rains by evening, given that it was not cloudy in the morning is <m>0.02</m>.
       </p>
       
       
       <p>
           <ol>
               <li>
-                  Suppose it were the case that the probability    other aircraft are close by was <m>0.24</m>.
+                  Suppose it were the case that the probability    it is cloudy in the morning was <m>0.54</m>.
                   <ol>
                       <li>
-                          Find the probability that   it indicates other aircraft are close by.
+                          Find the probability that   it rains by evening.
                       </li>
                       <li>
-                          Find the probability that    other aircraft are close by, given that the radar indicates they are.
+                          Find the probability that    it was cloudy in the morning, given that it rains by the evening.
                       </li>
                   </ol>
               </li>
               <li>
-                  Suppose instead that it was the case where the probability   it indicates other aircraft are close by was <m>0.75</m>.  Find the probability that    other aircraft are close by.
+                  Suppose instead that it was the case where the probability   it rains by evening was <m>0.24</m>.  Find the probability that    it is cloudy in the morning.
               </li>
               
           </ol>
@@ -51,15 +51,15 @@
               <li>In the first scenario:
                   <ol>
                       <li>
-                          The probability that   it indicates other aircraft are close by is <m>0.2836</m>
+                          The probability that   it rains by evening is <m>0.44120000000000004</m>
                       </li>
                       <li>
-                          The probability that    other aircraft are close by, given that the radar indicates they are is <m>0.8124118476727785</m>
+                          The probability that    it was cloudy in the morning, given that it rains by the evening is <m>0.9791477787851315</m>
                       </li>
                   </ol>
               </li>
               <li>
-                  In the second scenario, the probability that    other aircraft are close by is <m>0.7640449438202247</m>.
+                  In the second scenario, the probability that    it is cloudy in the morning is <m>0.28205128205128205</m>.
               </li>
           </ol>
           

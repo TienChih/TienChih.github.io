@@ -1,18 +1,18 @@
-<exercise checkit-seed="4786" checkit-slug="D3" checkit-title="Counting Principles">
+<exercise checkit-seed="3447" checkit-slug="D3" checkit-title="Counting Principles">
   <statement>
       
       
       <p>
-          Suppose you had a collection of  <m>11</m>  books.
+          Suppose you had a class of  <m>27</m>  children.
       </p>
       
       
       <p>
           <ol>
-              <li>How many ways are there to select <m>2</m>  books  to donate to a library?</li>
-              <li>How many ways are there to select <m>6</m>  books  and give one each to different friends of yours?</li>
-              <li>How many ways are there to select <m>4</m>  books  and arrange them on a book shelf?</li>
-              <li>How many ways are there to select <m>8</m>  books  to put into storage?</li>
+              <li>How many ways are there to select <m>4</m>  children  and arrange them so they can take turns giving a presentation?</li>
+              <li>How many ways are there to select <m>23</m>  children  and put them in a line to wait their turn for an activity?</li>
+              <li>How many ways are there to select <m>14</m>  children  to give a special assignment?</li>
+              <li>How many ways are there to select <m>15</m>  children  to take on a field trip?</li>
           </ol>
           
       </p>
@@ -34,10 +34,10 @@
       
      <p>
           <ol>
-              <li>55 ways.</li>
-              <li>332640 ways.</li>
-              <li>7920 ways.</li>
-              <li>165 ways.</li>
+              <li>421200 ways.</li>
+              <li>453702893767431340032000000 ways.</li>
+              <li>20058300 ways.</li>
+              <li>17383860 ways.</li>
           </ol>
           
       </p>

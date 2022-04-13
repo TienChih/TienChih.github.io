@@ -1,10 +1,10 @@
-<exercise checkit-seed="2474" checkit-slug="F3" checkit-title="Hypothesis Testing">
+<exercise checkit-seed="7286" checkit-slug="F3" checkit-title="Hypothesis Testing">
   <statement>
       <p>
-          A marine biologist wonders if the proportion of turtles in a coral reef that were infected with a new parasite is not equal to <m>  52</m>%.  She gathers a sample of turtles.
+          An political campaign wants to know if the proportion of voters who support their candidiate is not equal to <m>  34</m>%.  They conduct a survey of potential voters.
       </p>
       <p>
-Suppose that for   <m>n=214</m> turtles found in the coral reef, <m>96</m> were infected. Test the hypothesis that  the proportion of turtles that are infected is not equal to <m>  52</m>%. 
+Suppose that for   <m>n=178</m> surveyed potential voters, <m>48</m> supported the candidiate. Test the hypothesis that  the proportion of all potential voters that support their candidiate is not equal to <m>  34</m>%. 
       </p>
       
       <ol>
@@ -36,26 +36,26 @@ Suppose that for   <m>n=214</m> turtles found in the coral reef, <m>96</m> were 
       
      <ul>
           <li>
-              The null hypothesis is <m>H_0: p=0.52</m>.
+              The null hypothesis is <m>H_0: p=0.34</m>.
           </li>
          <li>
-              The alternative hypothesis is <m>H_A: p\neq0.52</m>.
+              The alternative hypothesis is <m>H_A: p\neq0.34</m>.
           </li>
           <li>
-              The sampling distribution has mean <m>0.52</m> and standard error <m>SE=0.0341519419680187</m>.
+              The sampling distribution has mean <m>0.34</m> and standard error <m>SE=0.0355059735439457</m>.
           </li>
          <li>
-              The sample proportion is <m>\hat{p}=0.4485981308411215</m> which has <m>z</m>-score <m>z=-2.09071183201653</m>.
+              The sample proportion is <m>\hat{p}=0.2696629213483146</m> which has <m>z</m>-score <m>z=-1.98099281983155</m>.
           </li>
          <li>
-              The <m>p</m>-value is <m>0.03655390370454348</m>.
+              The <m>p</m>-value is <m>0.04759207880541516</m>.
           </li>
          
           <!--<li>
               For a % confidence interval,  <m>z^*=</m>.
           </li>
           <li>
-              The proportion of turtles that are infected has a % chance of of falling in <m>[, ]</m>.
+              The proportion of all potential voters that support their candidiate has a % chance of of falling in <m>[, ]</m>.
           </li>-->
       </ul>
           

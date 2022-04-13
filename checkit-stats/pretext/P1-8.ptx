@@ -1,12 +1,12 @@
-<exercise checkit-seed="4519" checkit-slug="P1" checkit-title="Introduction to Probability">
+<exercise checkit-seed="2403" checkit-slug="P1" checkit-title="Introduction to Probability">
   <statement>
       
       <p>
-          An employee has requested both a raise and a promotion.  We consider the event that they recieve a raise, and the event they recieve a promotion.
+          We consider the event that at a fast food resturaunt, a random customer orders burgers, and the event they order fries.  We consider an arbitrarily selected customer.
       </p>
       
       <p>
-          Suppose that   the probability that   the employee gets a raise is <m>0.4604</m>, the probability that   the employee gets a raise and a promotion is <m>0.3004</m>, and finally   the probability that    the employee gets either a raise or a promotion is <m>0.5886</m>.
+          Suppose that   the probability that    the customer orders either burger or fries is <m>0.6256</m>, the probability that   the customer orders a burger is <m>0.5344</m>, and finally   the probability that    the customer orders fries is <m>0.6164</m>.
       </p>
       
       
@@ -14,7 +14,7 @@
           <ol>
               <li>
                   <p>
-                      Find the probability that    the employee gets a promotion.
+                      Find the probability that   the customer orders both burger and fries.
                   </p>
                   <p>
                       (For the following, it is advisable to draw a venn diagram using the information above.)
@@ -22,10 +22,10 @@
                   
               </li>
               <li>
-                  Find the probability that  the employee does not get a raise but they do get a promotion.
+                  Find the probability that  the customer does not order a burger, but does order fries.
               </li>
               <li>
-                  Find the probability that  the employee gets a raise or they do not get a promotion.
+                  Find the probability that  the customer  orders a burger, or does not order fries.
               </li>
           </ol>
           
@@ -49,13 +49,13 @@
      <p>
           <ol>
               <li>
-                   The probability that    the employee gets a promotion is <m>0.4286</m>.
+                   The probability that   the customer orders both burger and fries is <m>0.5252</m>.
               </li>
               <li>
-                   The  probability that  the employee does not get a raise but they do get a promotion is <m>0.1282</m>.
+                   The  probability that  the customer does not order a burger, but does order fries is <m>0.0912</m>.
               </li>
               <li>
-                    The probability that  the employee gets a raise or they do not get a promotion is <m>0.8718</m>.
+                    The probability that  the customer  orders a burger, or does not order fries is <m>0.9088</m>.
               </li>
           </ol>
           

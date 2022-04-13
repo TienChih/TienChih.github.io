@@ -1,4 +1,4 @@
-<exercise checkit-seed="2674" checkit-slug="C4" checkit-title="Chi^2 independence test">
+<exercise checkit-seed="6613" checkit-slug="C4" checkit-title="Chi^2 independence test">
   <statement>
       
       
@@ -13,9 +13,9 @@
               \hline
               &amp; \text{ Happiness } &amp; \text{ Anger } &amp; \text{ Sadness }\\
               \hline
-              \text{ Video 1 } &amp; 50 &amp; 67 &amp; 47\\
+              \text{ Video 1 } &amp; 48 &amp; 31 &amp; 89\\
               \hline
-              \text{ Video 2 } &amp; 27 &amp; 83 &amp; 51\\
+              \text{ Video 2 } &amp; 65 &amp; 29 &amp; 58\\
               \hline
               \end{array}
           </me>
@@ -64,10 +64,10 @@
               There are <m>2</m> degrees of freedom.
           </li>
          <li>
-              The <m>\chi^2</m> value is <m>8.71311195423343</m>.
+              The <m>\chi^2</m> value is <m>8.38256015693922</m>.
           </li>
          <li>
-              The <m>p</m>-value is <m>0.012822472580191868</m>.
+              The <m>p</m>-value is <m>0.01512690884395107</m>.
           </li>
          
           

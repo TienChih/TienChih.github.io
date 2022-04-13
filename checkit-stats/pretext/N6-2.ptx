@@ -1,21 +1,21 @@
-<exercise checkit-seed="7896" checkit-slug="N6" checkit-title="ANOVA">
+<exercise checkit-seed="6487" checkit-slug="N6" checkit-title="ANOVA">
   <statement>
-      <p>An outside consultant audits the pay of company employees from three different divisions with identical performance in order to identity discrepency. </p>
+      <p>A materials engineer tests the average electrical conductivity of three different experimental alloys so she can see if there was any difference.</p>
       
       <p>
-          The average salary of employees in Division A was  <m>\bar{x}_1=52.097</m>  thousand dollars, with sample standard deviation <m>s_1=4.227</m> thousand dollars, and sample size <m>n_1=44</m> employees.
+          The average electrical conductivity for alloy samples of Alloy A was  <m>\bar{x}_1=77.436</m>  million Siemens/meter, with sample standard deviation <m>s_1=9.409</m> million Siemens/meter, and sample size <m>n_1=49</m> alloy samples.
       </p>
       
       <p>
-          The average salary of employees in Division B was  <m>\bar{x}_2=54.389</m>  thousand dollars, with sample standard deviation <m>s_2=2.573</m> thousand dollars, and sample size <m>n_2=44</m> employees.
+          The average electrical conductivity for alloy samples of Alloy B was  <m>\bar{x}_2=77.225</m>  million Siemens/meter, with sample standard deviation <m>s_2=12.819</m> million Siemens/meter, and sample size <m>n_2=40</m> alloy samples.
       </p>
       
       <p>
-          The average salary of employees in Division C was  <m>\bar{x}_3=53.536</m>  thousand dollars, with sample standard deviation <m>s_3=3.874</m> thousand dollars, and sample size <m>n_3=41</m> employees.
+          The average electrical conductivity for alloy samples of Alloy C was  <m>\bar{x}_3=83.714</m>  million Siemens/meter, with sample standard deviation <m>s_3=12.788</m> million Siemens/meter, and sample size <m>n_3=34</m> alloy samples.
       </p>
       
       <p>
-          The mean salary of all <m>n=129</m> sampled employees was <m>\bar{x}=53.3361</m>  thousand dollars.
+          The average electrical conductivity of all <m>n=123</m> sample alloys was <m>\bar{x}=79.1028</m>  million Siemens/meter.
       </p>
       
       <ol>
@@ -36,12 +36,12 @@
      
       
       <!--<p>
-          An outside consultant audits the pay of company employees from three different divisions with identical performance in order to identity discrepency. <m> </m>  thousand dollars.  <m> </m>  thousand dollars.
+          A materials engineer tests the average electrical conductivity of three different experimental alloys so she can see if there was any difference.<m> </m>  million Siemens/meter.  <m> </m>  million Siemens/meter.
       </p>
       
       <ol>
           <li>
-               <m>n=129</m>?
+               <m>n=123</m>?
           </li>
           <li>
               Explain what this power means in the context of this problem.
@@ -62,25 +62,25 @@
       <title>Partial Solution:</title>
       <ul>
           <li>
-              <m>H_0:\ </m> any difference in salaries between employees of different divisions is explainable solely by the variation within the Divisions.
+              <m>H_0:\ </m> any differences in the average electrical conductivity for alloy samples of different Alloys is explainable solely by the variation within the Alloys.
           </li>
           <li>
-              <m>H_A:\ </m> any difference in salaries between employees of different divisions is explainable solely by the variation within the Divisions.
+              <m>H_A:\ </m> any differences in the average electrical conductivity for alloy samples of different Alloys is explainable solely by the variation within the Alloys.
           </li>
           <li>
-              <m>p</m>-value=<m>0.013006539239513781</m>
+              <m>p</m>-value=<m>0.026625503299675057</m>
           </li>
       </ul>
       
      <!--<ul>
           <li>
-              The standard error if <m>n=129</m> would be <m>SE=</m>.  The cutoff for a statistically significant test is a difference of <m></m>  thousand dollars.  The power of the test is <m>P(X\leq )=\%</m> where <m>X</m> is a normal variable with mean <m></m> and standard error <m></m>.
+              The standard error if <m>n=123</m> would be <m>SE=</m>.  The cutoff for a statistically significant test is a difference of <m></m>  million Siemens/meter.  The power of the test is <m>P(X\leq )=\%</m> where <m>X</m> is a normal variable with mean <m></m> and standard error <m></m>.
          </li>
          <li>
-              <m></m> thousand dollars,  <m>n=129</m> would only have a <m>\%</m> chance of detecting it.
+              <m></m> million Siemens/meter,  <m>n=123</m> would only have a <m>\%</m> chance of detecting it.
          </li>
          <li>
-             The <m>z</m>-score for a left-tail of <m>\%</m> is <m></m>.  So for this <m>\%</m> tail to be detectable, <m>+SE\approx -1.96SE</m>, so <m>SE\approx  </m>, and for this to be true <m>n\geq 44</m>
+             The <m>z</m>-score for a left-tail of <m>\%</m> is <m></m>.  So for this <m>\%</m> tail to be detectable, <m>+SE\approx -1.96SE</m>, so <m>SE\approx  </m>, and for this to be true <m>n\geq 40</m>
          </li>
          
           

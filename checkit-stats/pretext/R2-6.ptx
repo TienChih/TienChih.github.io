@@ -1,81 +1,66 @@
-<exercise checkit-seed="3661" checkit-slug="R2" checkit-title="Interpreting Linear Regression">
+<exercise checkit-seed="8514" checkit-slug="R2" checkit-title="Interpreting Linear Regression">
   <statement>
       <p>
-          A cafe compares the temperature during the day (in F) to the number of cups of coffee they sale.
+          A study is conducted examining adult BMI (in kg/m^2) compared to HDL Cholesterol (in mg/DL).
       </p>
       
       <p>
-          Consider this table of data collected comparing Temperature measured in F, and Coffee Sold measured in Cups:
+          Consider this table of data collected comparing BMI measured in kg/(m squared), and HDL Cholesterol measured in mg/DL:
           <me>
                \begin{array}{|c|c|}
               \hline
-              \text{ Temperature in F }
+              \text{ BMI in kg/(m squared) }
               &amp;
-              \text{ Coffee Sold in Cups }
+              \text{ HDL Cholesterol in mg/DL }
               \\
               \hline
-               24.0
-              &amp; 46
+               30.34
+              &amp; 39.89
                   \\
-               58.0
-              &amp; 23
+               34.18
+              &amp; 28.87
                   \\
-               72.0
-              &amp; 17
+               30.12
+              &amp; 38.64
                   \\
-               77.0
-              &amp; 14
+               22.59
+              &amp; 55.52
                   \\
-               75.0
-              &amp; 15
+               24.3
+              &amp; 54.58
                   \\
-               89.0
-              &amp; 14
+               21.28
+              &amp; 56.65
                   \\
-               35.0
-              &amp; 36
+               23.34
+              &amp; 55.86
                   \\
-               41.0
-              &amp; 26
+               31.05
+              &amp; 40.24
                   \\
-               82.0
-              &amp; 16
+               20.05
+              &amp; 59.17
                   \\
-               59.0
-              &amp; 43
+               28.07
+              &amp; 45.08
                   \\
-               69.0
-              &amp; 26
+               28.58
+              &amp; 41.4
                   \\
-               30.0
-              &amp; 49
+               20.04
+              &amp; 62.56
                   \\
-               86.0
-              &amp; 14
+               29.05
+              &amp; 43.68
                   \\
-               64.0
-              &amp; 24
+               26.08
+              &amp; 54.68
                   \\
-               35.0
-              &amp; 37
+               29.72
+              &amp; 43.71
                   \\
-               61.0
-              &amp; 25
-                  \\
-               32.0
-              &amp; 32
-                  \\
-               87.0
-              &amp; 20
-                  \\
-               63.0
-              &amp; 28
-                  \\
-               27.0
-              &amp; 44
-                  \\
-               36.0
-              &amp; 40
+               34.87
+              &amp; 28.93
                   \\
               
               \hline
@@ -91,13 +76,13 @@
                   Find the slope <m>\beta_1</m> and it's units.
               </li>
               <li>
-                  What does <m>\beta_1</m> tell you about the relationship between Temperature and Coffee Sold?
+                  What does <m>\beta_1</m> tell you about the relationship between BMI and HDL Cholesterol?
               </li>
               <li>
-                  For a day with Temperature <m>84.0</m> F, what is the estimated Coffee Sold?
+                  For an adult with BMI <m>32.16</m> kg/(m squared), what is the estimated HDL Cholesterol?
               </li>
               <li>
-                  For a day with Coffee Sold <m>31</m> Cups, what is the estimated Temperature?
+                  For an adult with HDL Cholesterol <m>59.93</m> mg/DL, what is the estimated BMI?
               </li>
               
           </ol>
@@ -122,19 +107,19 @@
           <p>
           <ol>
               <li>
-                  <m>\beta_0=55.90134090925817\ </m> Cups.
+                  <m>\beta_0=104.99851063882252\ </m> mg/DL.
               </li>
               <li>
-                  <m>\beta_1=-0.486629084105176\ </m> Cups<m>/</m>F.
+                  <m>\beta_1=-2.145727459809898\ </m> mg/DL<m>/</m>kg/(m squared).
               </li>
               <li>
-                 Whenever Temperature increases by 1 F, Coffee Sold changes, on average, by <m>-0.486629084105176\ </m> Cups.
+                 Whenever BMI increases by 1 kg/(m squared), HDL Cholesterol changes, on average, by <m>-2.145727459809898\ </m> mg/DL.
               </li>
               <li>
-                  For a day with Temperature <m>\ 84.0\ </m> F, the estimated Coffee Sold is <m>15.02449784442338\ </m> Cups.
+                  For an adult with BMI <m>\ 32.16\ </m> kg/(m squared), the estimated HDL Cholesterol is <m>35.991915531336204\ </m> mg/DL.
               </li>
               <li>
-                  For a day with Coffee Sold <m>\ 31\ </m> Cups, the estimated Temperature is <m>51.17109051352178\ </m> F.
+                  For an adult with HDL Cholesterol <m>\ 59.93\ </m> mg/DL, the estimated BMI is <m>21.003837385207994\ </m> kg/(m squared).
               </li>
               
           </ol>

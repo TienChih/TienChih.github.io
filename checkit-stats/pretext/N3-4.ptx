@@ -1,126 +1,110 @@
-<exercise checkit-seed="6833" checkit-slug="N3" checkit-title="Inference for paired Numerical Variables">
+<exercise checkit-seed="9934" checkit-slug="N3" checkit-title="Inference for paired Numerical Variables">
   <statement>
       
       <p>
-          A study is done comparing the effect of two diets on levels of cholestrol.  Subjects of the study spend 2 weeks on diet A, their cholestrol is measured, then they switch to diet B, and after 2 weeks their cholestrol is measured again. A total of <m>24</m>  subjects were sampled.  The following is a summary of cholestrol level after diet A and cholestrol level after diet B.
+          A professor takes a sampling of their students and compares their scores between the first and second exams. A total of <m>20</m>  students were sampled.  The following is a summary of score on Exam A and score on Exam B.
       </p>
       
       <p>
           <me>
                \begin{array}{|c|c|c|}
               \hline
-              \text{ Diet A in  mmol/L }
+              \text{ Exam A in  points }
               &amp;
-              \text{ Diet B in  mmol/L }
+              \text{ Exam B in  points }
               &amp;
-              \text{Difference in  mmol/L }
+              \text{Difference in  points }
               \\
               \hline
-               4.6
-              &amp; 5.0
+               73.4
+              &amp; 73.8
               &amp; 0.4
                   \\
-               3.0
-              &amp; 2.5
-              &amp; -0.5
-                  \\
-               7.1
-              &amp; 6.7
-              &amp; -0.4
-                  \\
-               4.1
-              &amp; 4.1
-              &amp; -0.0
-                  \\
-               5.1
-              &amp; 5.1
-              &amp; -0.0
-                  \\
-               4.8
-              &amp; 4.7
-              &amp; -0.1
-                  \\
-               4.7
-              &amp; 5.6
-              &amp; 0.9
-                  \\
-               4.9
-              &amp; 5.2
-              &amp; 0.3
-                  \\
-               3.7
-              &amp; 4.2
-              &amp; 0.5
-                  \\
-               2.0
-              &amp; 2.2
-              &amp; 0.2
-                  \\
-               3.9
-              &amp; 3.5
-              &amp; -0.4
-                  \\
-               3.7
-              &amp; 3.1
-              &amp; -0.6
-                  \\
-               3.1
-              &amp; 3.2
-              &amp; 0.1
-                  \\
-               4.9
-              &amp; 4.8
-              &amp; -0.1
-                  \\
-               4.1
-              &amp; 4.1
-              &amp; -0.0
-                  \\
-               4.4
-              &amp; 3.8
-              &amp; -0.6
-                  \\
-               3.6
-              &amp; 3.4
-              &amp; -0.2
-                  \\
-               4.1
-              &amp; 4.0
-              &amp; -0.1
-                  \\
-               4.8
-              &amp; 3.8
+               72.5
+              &amp; 71.5
               &amp; -1.0
                   \\
-               4.5
-              &amp; 4.6
-              &amp; 0.1
+               79.8
+              &amp; 75.4
+              &amp; -4.4
                   \\
-               5.0
-              &amp; 4.7
-              &amp; -0.3
+               63.1
+              &amp; 62.9
+              &amp; -0.2
                   \\
-               3.4
-              &amp; 3.3
-              &amp; -0.1
+               67.4
+              &amp; 73.1
+              &amp; 5.7
                   \\
-               3.6
-              &amp; 3.3
-              &amp; -0.3
+               74.2
+              &amp; 76.2
+              &amp; 2.0
                   \\
-               3.0
-              &amp; 2.6
-              &amp; -0.4
+               75.9
+              &amp; 82.4
+              &amp; 6.5
+                  \\
+               72.5
+              &amp; 75.3
+              &amp; 2.8
+                  \\
+               75.1
+              &amp; 75.9
+              &amp; 0.8
+                  \\
+               77.9
+              &amp; 81.4
+              &amp; 3.5
+                  \\
+               72.3
+              &amp; 74.2
+              &amp; 1.9
+                  \\
+               75.4
+              &amp; 74.6
+              &amp; -0.8
+                  \\
+               83.1
+              &amp; 76.7
+              &amp; -6.4
+                  \\
+               79.2
+              &amp; 84.3
+              &amp; 5.1
+                  \\
+               76.7
+              &amp; 80.8
+              &amp; 4.1
+                  \\
+               70.6
+              &amp; 72.1
+              &amp; 1.5
+                  \\
+               93.1
+              &amp; 89.2
+              &amp; -3.9
+                  \\
+               70.7
+              &amp; 68.9
+              &amp; -1.8
+                  \\
+               81.3
+              &amp; 79.0
+              &amp; -2.3
+                  \\
+               76.7
+              &amp; 75.6
+              &amp; -1.1
                   \\
               
               \hline
               \end{array}
           </me>
-          The sample average of these differences is <m>-0.10833333333333332</m>  mmol/L and the sample standard deviation is <m>0.39782394207600036</m>  mmol/L.
+          The sample average of these differences is <m>0.6199999999999999</m>  points and the sample standard deviation is <m>3.373218048095913</m>  points.
       </p>
       
       <ul>
-          <li>  Test the hypothesis that  the average difference in cholestrol levels between diets A and B   is not equal to <m>  0.0</m>  mmol/L.
+          <li>  Test the hypothesis that  the average difference in scores between the Exams   is not equal to <m>  0</m>  points.
               <ol>
           <li>
               State the null hypothesis.
@@ -141,7 +125,7 @@
       </ol>
           </li>
           <li>
-              Find a <m>95</m>% confidence interval for the  the average difference in cholestrol levels between diets A and B .  Using complete sentences, explain what the confidence interval means in the context of this problem.
+              Find a <m>95</m>% confidence interval for the  the average difference in scores between the Exams .  Using complete sentences, explain what the confidence interval means in the context of this problem.
           </li>
       </ul>
       
@@ -157,26 +141,26 @@
       
      <ul>
           <li>
-              The null hypothesis is <m>H_0: \mu_d=0.0</m>.
+              The null hypothesis is <m>H_0: \mu_d=0</m>.
           </li>
          <li>
-              The alternative hypothesis is <m>H_A: \mu_d\neq0.0</m>.
+              The alternative hypothesis is <m>H_A: \mu_d\neq0</m>.
           </li>
           <li>
-              The sampling distribution has mean <m>0.0</m> and standard error <m>SE=0.0812054721290610</m>.
+              The sampling distribution has mean <m>0</m> and standard error <m>SE=0.754274485847162</m>.
           </li>
          <li>
-              The sample mean is <m>\bar{d}=-0.10833333333333332</m> which has <m>t</m>-score <m>t=-1.3340644477894006</m>.
+              The sample mean is <m>\bar{d}=0.6199999999999999</m> which has <m>t</m>-score <m>t=0.8219819331468545</m>.
           </li>
          <li>
-              The <m>p</m>-value is <m>0.1952426435333563</m>.
+              The <m>p</m>-value is <m>0.42128303172694404</m>.
           </li>
          
          <li>
-              For a <m>95</m>% confidence interval,  <m>t^*=2.068657610419048</m>.
+              For a <m>95</m>% confidence interval,  <m>t^*=2.0930240544083096</m>.
           </li>
           <li>
-              The  the average difference in cholestrol levels between diets A and B   has a <m>95</m>% chance of of falling in <m>[-0.276319651260787, 0.0596529845941206]</m>.
+              The  the average difference in scores between the Exams   has a <m>95</m>% chance of of falling in <m>[-0.958714642504570, 2.19871464250457]</m>.
           </li>
          
           

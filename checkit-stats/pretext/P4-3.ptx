@@ -1,16 +1,13 @@
-<exercise checkit-seed="3985" checkit-slug="P4" checkit-title="Random Variables">
+<exercise checkit-seed="2012" checkit-slug="P4" checkit-title="Random Variables">
   <statement>
       
       <p>
-          A math professor is compiling a section for their #PreTeXt book.  Let <m>X</m> denote   the number of errors currently in the code.  Consider the following probability distribution table for <m>X</m>.
+          Consider store that sells primarily PC's.  Each customer that comes in may buy one, none or several PC.  Let <m>X</m> denote   the number of PCs a customer who comes into the store purchases.  Consider the following probability distribution table for <m>X</m>.
       </p>
       
       <p>
           <me>
               \begin{array}{|c
-              |c
-              |c
-              |c
               |c
               |c
               |c
@@ -24,19 +21,13 @@
               &amp; 1
               &amp; 2
               &amp; 3
-              &amp; 4
-              &amp; 5
-              &amp; 6
               \\
               \hline
               P(X=X_i)
-              &amp; 0.027
-              &amp; 0.285
-              &amp; 0.149
               &amp; ???
-              &amp; 0.145
-              &amp; 0.135
-              &amp; 0.145
+              &amp; 0.366
+              &amp; 0.055
+              &amp; 0.005
               \\
               \hline
               \end{array}
@@ -80,16 +71,16 @@
      <p>
          <ol>
              <li>
-                 <m>P(X=3)=0.114</m>.
+                 <m>P(X=0)=0.574</m>.
              </li>
              <li>
-                 <m>E(X)=3.05</m>.
+                 <m>E(X)=0.491</m>.
              </li>
              <li>
-                 <m>Var(X)=3.5195000000000007</m>
+                 <m>Var(X)=0.389919</m>
              </li>
              <li>
-                 <m>\sigma_X=1.8760330487494086</m>
+                 <m>\sigma_X=0.6244349445698887</m>
              </li>
          </ol>
           
