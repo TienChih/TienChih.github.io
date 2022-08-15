@@ -1,0 +1,598 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>reveal.js</title>
+
+		<link rel="stylesheet" href="dist/reset.css">
+		<link rel="stylesheet" href="dist/reveal.css">
+		<link rel="stylesheet" href="dist/theme/white.css">
+		<link rel="stylesheet" href="plugin/chalkboard/style.css">
+		<link rel="stylesheet" href="plugin/customcontrols/style.css">
+
+
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+
+
+
+		<!-- Theme used for syntax highlighted code -->
+		<link rel="stylesheet" href="plugin/highlight/monokai.css">
+		<style>
+			.container{
+   				 display: flex;
+			}
+			.col{
+    			flex: 1;
+			}
+		</style>
+			<script async defer src="https://buttons.github.io/buttons.js"></script>
+
+		<script src="plugin/menu/menu.js"></script>
+
+
+
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				
+				<section>
+					<h2>An ant walks along...an \(n\)-dimensional chessboard?</h2>
+					<h4>M 211</h4>
+					
+					<h4>
+						Oxford College of Emory University <a href="https://app.oxford.emory.edu/WebApps/Directory/index.cfm/view/9984" target="_blank">Tien Chih</a>
+					</h4>
+				</section>
+
+
+				
+
+				<section data-auto-animate>
+					
+						<div class="r-frame" >
+							<p style="font-size: 30px;" >
+								Consider a function from Calculus:
+								<iframe src="https://www.desmos.com/calculator/w53xd0xqbq?embed" width="80%" height="300" style="border: 1px solid #ccc" frameborder=0></iframe>
+
+							</p>
+						</div>		
+						
+
+						
+
+						<div class="fragment">		
+							<p style="font-size: 32px;"> 
+								What dimensions are the inputs/outputs of this function?
+							</p> 
+
+						</div>
+
+					
+				</section>
+
+				
+
+				<section data-auto-animate>
+					
+						<div class="r-frame" >
+							<p style="font-size: 30px;" >
+								Consider this plot of a function:<br>
+								<iframe src="https://c3d.libretexts.org/CalcPlot3D/index.html?type=z;z=7xy/e^(x^2+y^2);visible=true;umin=-2;umax=2;vmin=-2;vmax=2;grid=30;format=normal;alpha=-1;hidemyedges=false;constcol=rgb(255,0,0);view=0;contourcolor=red;fixdomain=false;contourplot=true;showcontourplot=false;firstvalue=-1;stepsize=0.2;numlevels=11;list=;uselist=false;xnum=46;ynum=46;show2d=false;hidesurface=false;hidelabels=true;showprojections=false;surfacecontours=true;projectioncolor=rgba(255,0,0,1);showxygrid=false;showxygridonbox=false;showconstraint=false&type=window;hsrmode=3;nomidpts=true;anaglyph=-1;center=9.143019733711597,0.33843340187415166,4.036168106193737,1;focus=0,0,0,1;up=-0.4039391820501793,0.14938285830915357,0.902506453632338,1;transparent=false;alpha=140;twoviews=false;unlinkviews=false;axisextension=0.7;shownormals=false;shownormalsatpts=false;xaxislabel=x;yaxislabel=y;zaxislabel=z;edgeson=true;faceson=true;showbox=true;showaxes=true;showticks=true;perspective=true;centerxpercent=0.5;centerypercent=0.5;rotationsteps=30;autospin=true;xygrid=false;yzgrid=false;xzgrid=false;gridsonbox=true;gridplanes=false;gridcolor=rgb(128,128,128);xmin=-2;xmax=2;ymin=-2;ymax=2;zmin=-2;zmax=2;xscale=1;yscale=1;zscale=1;zcmin=-4;zcmax=4;xscalefactor=1;yscalefactor=1;zscalefactor=1;tracemode=0;keep2d=false;zoom=0.998667" width="80%" height="500" style="border: 1px solid #ccc" frameborder=0></iframe>
+
+							</p>
+						</div>		
+						
+
+						
+
+						<div class="fragment">		
+							<p style="font-size: 32px;"> 
+								What dimensions are the inputs/outputs of this function?
+							</p> 
+
+						</div>
+
+					
+				</section>
+
+				<section>
+
+					<section data-auto-animate>
+					
+						<div class="r-frame" >
+							<p style="font-size: 30px;" >
+								Consider the tangent line from Calculus:
+								<iframe src="https://www.desmos.com/calculator/itvok7fe16?embed" width="80%" height="300" style="border: 1px solid #ccc" frameborder=0></iframe>
+
+							</p>
+						</div>		
+						
+
+					</section>	
+
+					<section data-auto-animate>
+
+						
+
+						<div class="r-frame" >
+							<p style="font-size: 30px;" >
+								
+								<iframe src="https://c3d.libretexts.org/CalcPlot3D/index.html?type=z;z=7xy/e^(x^2+y^2);visible=true;umin=-2;umax=2;vmin=-2;vmax=2;grid=30;format=normal;alpha=-1;hidemyedges=false;constcol=rgb(255,0,0);view=0;contourcolor=red;fixdomain=false;contourplot=true;showcontourplot=false;firstvalue=-1;stepsize=0.2;numlevels=11;list=;uselist=false;xnum=46;ynum=46;show2d=false;hidesurface=false;hidelabels=true;showprojections=false;surfacecontours=true;projectioncolor=rgba(255,0,0,1);showxygrid=false;showxygridonbox=false;showconstraint=false&type=window;hsrmode=3;nomidpts=true;anaglyph=-1;center=9.143019733711597,0.33843340187415166,4.036168106193737,1;focus=0,0,0,1;up=-0.4039391820501793,0.14938285830915357,0.902506453632338,1;transparent=false;alpha=140;twoviews=false;unlinkviews=false;axisextension=0.7;shownormals=false;shownormalsatpts=false;xaxislabel=x;yaxislabel=y;zaxislabel=z;edgeson=true;faceson=true;showbox=true;showaxes=true;showticks=true;perspective=true;centerxpercent=0.5;centerypercent=0.5;rotationsteps=30;autospin=true;xygrid=false;yzgrid=false;xzgrid=false;gridsonbox=true;gridplanes=false;gridcolor=rgb(128,128,128);xmin=-2;xmax=2;ymin=-2;ymax=2;zmin=-2;zmax=2;xscale=1;yscale=1;zscale=1;zcmin=-4;zcmax=4;xscalefactor=1;yscalefactor=1;zscalefactor=1;tracemode=0;keep2d=false;zoom=0.998667" width="80%" height="500" style="border: 1px solid #ccc" frameborder=0></iframe>
+
+							</p>
+						</div>		
+						
+
+						
+
+						<div>		
+							<p style="font-size: 32px;"> 
+								What is the corresponding notion in 3-dimensions?
+							</p> 
+
+						</div>
+					</section>	
+					
+				</section>
+
+				<section data-auto-animate>
+
+						
+
+						<div class="r-frame" >
+							<p style="font-size: 30px;" >
+								
+								<iframe src="https://c3d.libretexts.org/CalcPlot3D/index.html?type=z;z=7xy/e^(x^2+y^2);visible=true;umin=-2;umax=2;vmin=-2;vmax=2;grid=30;format=normal;alpha=-1;hidemyedges=false;constcol=rgb(255,0,0);view=0;contourcolor=red;fixdomain=false;contourplot=true;showcontourplot=false;firstvalue=-1;stepsize=0.2;numlevels=11;list=;uselist=false;xnum=46;ynum=46;show2d=false;hidesurface=false;hidelabels=true;showprojections=false;surfacecontours=true;projectioncolor=rgba(255,0,0,1);showxygrid=false;showxygridonbox=false;showconstraint=false&type=z;z=7/e^2-7/e^2(x-1)-7/e^2(y-1);visible=true;umin=-2;umax=2;vmin=-2;vmax=2;grid=30;format=normal;alpha=255;hidemyedges=false;constcol=rgb(153,153,153);view=0;contourcolor=red;fixdomain=false;contourplot=true;showcontourplot=false;firstvalue=-1;stepsize=0.2;numlevels=11;list=;uselist=false;xnum=46;ynum=46;show2d=false;hidesurface=false;hidelabels=true;showprojections=false;surfacecontours=true;projectioncolor=rgba(255,0,0,1);showxygrid=false;showxygridonbox=false;showconstraint=false&type=window;hsrmode=3;nomidpts=true;anaglyph=-1;center=-8.767201627423464,4.406155804105725,1.9292399161424523,1;focus=0,0,0,1;up=0.0271889048717735,-0.35505108586556755,0.9344514379450413,1;transparent=false;alpha=140;twoviews=false;unlinkviews=false;axisextension=0.7;shownormals=false;shownormalsatpts=false;xaxislabel=x;yaxislabel=y;zaxislabel=z;edgeson=true;faceson=true;showbox=true;showaxes=true;showticks=true;perspective=true;centerxpercent=0.5;centerypercent=0.5;rotationsteps=30;autospin=true;xygrid=false;yzgrid=false;xzgrid=false;gridsonbox=true;gridplanes=false;gridcolor=rgb(128,128,128);xmin=-2;xmax=2;ymin=-2;ymax=2;zmin=-2;zmax=2;xscale=1;yscale=1;zscale=1;zcmin=-4;zcmax=4;xscalefactor=1;yscalefactor=1;zscalefactor=1;tracemode=0;keep2d=false;zoom=0.578667" width="80%" height="500" style="border: 1px solid #ccc" frameborder=0></iframe>
+
+							</p>
+						</div>		
+						
+
+						
+
+					</section>	
+					
+				</section>
+
+				<section>
+					<div class="r-frame">
+						<p>
+							A vector in \(\mathbb{R}^n\), usually denoted \(\vec{x}\) or \(\mathbf{x}\) is a \(n\)-tuple \((x_1, \ldots, x_n)\) or \(\langle x_1, \ldots \rangle x_n\), where \(x_i\in \mathbb{R}\).
+						</p>
+					</div>
+
+					<div class="fragment">
+						<p style="font-size: 25px;">
+							Where do the following vectors live? (Which \(\mathbb{R}^n\)?)
+						</p>	
+
+						<ul>
+							<li>\((2,3)\) <br></li>
+							<li>\(\langle1,4, -2\rangle\) <br></li>
+							<li>\((a)\) <br></li>
+							<li>\(\langle a,2b, -2a, a+b^3\rangle\) <br></li>
+						</ul>
+					</div>		
+					
+
+				</section>
+
+				<section>
+					<div class="r-frame">
+						<p>
+							A vector in \(\mathbb{R}^n\), usually denoted \(\vec{x}\) or \(\mathbf{x}\) is a \(n\)-tuple \((x_1, \ldots, x_n)\) or \(\langle x_1, \ldots \rangle x_n\), where \(x_i\in \mathbb{R}\).
+						</p>
+					</div>
+
+					<div class="fragment">
+						<p style="font-size: 25px;">
+							Where do the following vectors live? (Which \(\mathbb{R}^n\)?)
+						</p>	
+
+						<ul>
+							<li>\((2,3)\) <br></li>
+							<li>\(\langle1,4, -2\rangle\) <br></li>
+							<li>\((a)\) <br></li>
+							<li>\(\langle a,2b, -2a, a+b^3\rangle\) <br></li>
+						</ul>
+					</div>		
+					
+
+				</section>
+
+				<section>
+					<section data-auto-animate>
+					
+						<div class="r-frame" >
+							<p style="font-size: 30px;" >
+								Below we depict \(\mathbf{a}+\mathbf{b}\) where \(\mathbf{a}=(1,1), \mathbf{b}=(1,-2)\):
+								<iframe src="https://www.desmos.com/calculator/nhvjakr2t4?embed" width="60%" height="300" style="border: 1px solid #ccc" frameborder=0></iframe>
+
+							</p>
+						</div>	
+
+							
+
+						
+
+					</section>
+
+					<section data-auto-animate>
+					
+						<div class="r-frame" >
+							<p style="font-size: 30px;" >
+								Below we depict \(\mathbf{a}+\mathbf{b}\) where \(\mathbf{a}=(1,1), \mathbf{b}=(1,-2)\):
+								<iframe src="https://www.desmos.com/calculator/xbmuwybowg?embed" width="60%" height="300" style="border: 1px solid #ccc" frameborder=0></iframe>
+
+							</p>
+						</div>	
+
+						<div >
+							<p style="font-size: 25px;">
+								What is \(\mathbf{a}+\mathbf{b}\)?
+							</p>
+						</div>		
+
+						
+
+					</section>
+				</section>	
+
+
+
+				<section>
+					<section data-auto-animate>
+
+						<div class="r-frame" >
+							<p style="font-size: 30px;" >
+								Draw \((3,1)+(-2,2)\) and \((-2,2)+(3,1)\)
+								<iframe src="https://www.desmos.com/calculator/qyyic399oc" width="80%" height="500" style="border: 1px solid #ccc" frameborder=0></iframe>
+								
+
+							</p>
+						</div>	
+
+						<div >
+							<p style="font-size: 25px;">
+								(The pictures won't be the same, but some similarities may arise!)
+							</p>
+						</div>
+
+							
+
+						
+
+					</section>
+
+					<section data-auto-animate>
+					
+						<div class="r-frame" >
+							<p style="font-size: 30px;" >
+								 \((3,1)+(-2,2)\) and \((-2,2)+(3,1)\)
+								<iframe src="https://www.desmos.com/calculator/ndmy768pq1" width="80%" height="500" style="border: 1px solid #ccc" frameborder=0></iframe>
+								
+
+							</p>
+						</div>	
+
+						<div >
+							<p style="font-size: 25px;">
+								What shape is depicted above?
+							</p>
+						</div>		
+
+						
+
+					</section>
+				</section>
+
+				<section data-auto-animate>
+					
+						<div class="r-frame" >
+							<p style="font-size: 30px;" >
+								 \(k(x_1, \ldots, x_n):=(kx_1, \ldots kx_n)\)
+								<iframe src="https://www.desmos.com/calculator/5qjaogbyt9" width="80%" height="500" style="border: 1px solid #ccc" frameborder=0></iframe>
+								
+
+							</p>
+						</div>	
+
+							
+
+						
+
+				</section>
+
+
+				<section>
+
+					<section data-auto-animate>
+					
+						<div class="r-frame" >
+							<p style="font-size: 30px;" >
+								 
+								 Find \(2(1,3)+-1.5(2,-1)\).
+
+								<iframe src="https://www.desmos.com/calculator/eauhndn89m" width="80%" height="500" style="border: 1px solid #ccc" frameborder=0></iframe>
+								
+
+							</p>
+						</div>	
+
+							
+
+						
+
+					</section>
+
+					<section data-auto-animate>
+					
+						<div class="r-frame" >
+							<p style="font-size: 30px;" >
+								 
+								 For what value of \(k_2\) is \(3(1,-1)+k_2(1,2)=(c,0)\) for some \(c\)?
+
+								<iframe src="https://www.desmos.com/calculator/eauhndn89m" width="80%" height="500" style="border: 1px solid #ccc" frameborder=0></iframe>
+								
+
+							</p>
+						</div>	
+
+							
+
+						
+
+					</section>
+
+
+
+				</section>
+
+
+				<section>
+					<div class="r-frame">
+						<p style="font-size: 30px;">
+							Given a vector \(\mathbf{a}=\langle a_1, a_2\rangle\) and scalars \(k, l\), we have \((k+l)\mathbf{a} = k\mathbf{a}+l\mathbf{a}\).
+
+
+					</div>	
+					<div class="fragment">
+						<p style="font-size: 25px;">
+							Note that by the definition of scalar products:
+							\[(k+l)\mathbf{a} = (k+l)\langle a_1, a_2\rangle=\langle(k+1)a_1, (k+l)a_2\rangle.\]
+						</p>
+					</div>
+					<div class="fragment">
+						<p style="font-size: 25px;">		
+							Then by distributivity of real-number products and sums:
+							\[\langle (k+1)a_1, (k+l)a_2\rangle=\langle ka_1+la_1, ka_2+la_2\rangle.\]
+						</p>
+					</div>
+					<div class="fragment">
+						<p style="font-size: 25px;">		
+							Then, by the definition of vector addition:
+							\[\langle ka_1+la_1, ka_2+la_2\rangle=\langle ka_1, ka_2\rangle+\langle la_1, la_2 \rangle.\]
+						</p>
+					</div>
+					<div class="fragment">
+						<p style="font-size: 25px;">		
+							Finally, by definition of scalar products:
+							\[\langle ka_1, ka_2\rangle + \langle la_1, la_2\rangle =k\langle a_1, a_2\rangle+l\langle a_1,a_2\rangle=k\mathbf{a}+l\mathbf{a}.\]
+						</p>	
+					</div>	
+
+
+				</section>
+
+				<section>
+					<div class="r-frame">
+						<p style="font-size: 30px;">
+							Given a vectors \(\mathbf{a}=\langle a_1, a_2\rangle, \mathbf{b}=\langle b_1, b_2\rangle\) and scalar \(k\), <strong>prove</strong> that \(k(\mathbf{a}+\mathbf{b}) = k\mathbf{a}+k\mathbf{b}\).
+
+
+					</div>	
+
+
+				</section>
+					
+
+
+				<section>
+					<h4>Some vector arithmetic facts!</h4>
+					<div class="r-frame">
+
+						<ul>
+							<li style="font-size: 25px;">\(\mathbf{a}+\mathbf{b}=\mathbf{b}+\mathbf{a}\).
+							</li>
+							<li style="font-size: 25px;">\((\mathbf{a}+\mathbf{b})+\mathbf{c}=\mathbf{a}+(\mathbf{b}+\mathbf{c})\).</li>
+							<li style="font-size: 25px;">\(\mathbf{a}+\mathbf{0}=\mathbf{a}\).
+							</li>
+							<li style="font-size: 25px;">\(k(\mathbf{a}+\mathbf{b})=k\mathbf{a}+k\mathbf{b}\).</li>
+
+							<li style="font-size: 25px;">\((k+l)\mathbf{a}=k\mathbf{a}+l\mathbf{a}\).</li>
+							<li style="font-size: 25px;">\((kl)\mathbf{a}=(lk)\mathbf{a}\).</li>
+						</ul>	
+					</div>
+				</section>
+
+				<section>
+					<div class="r-frame">
+
+						<p>
+							What about products of vectors?
+						</p>	
+					</div>
+
+					<div class="fragment">
+						<img src="img/puppet-awkward.gif" width="50%">
+
+					</div>
+				</section>
+
+
+				<section>
+
+					<div class="r-frame">
+
+						<p style="font-size: 25px;">
+							Given points \(P=(p_1, \ldots, p_n), Q=(q_1, \ldots, q_n)\), the <strong>displacement vector</strong> is the vector \[\vec{PQ}:=(q_1-p_1, \ldots, q_n-p_n).\]
+						</p>	
+					</div>
+
+					<br>
+
+					<div class="r-frame">
+
+						<p style="font-size: 25px;">
+							Given \(P=(-2,3), Q=(1,-1)\), what is \(\vec{PQ}\)?
+
+							<iframe src="https://www.desmos.com/calculator/vrjwapg4sh?embed" width="60%" height="300" style="border: 1px solid #ccc" frameborder=0></iframe>
+						</p>	
+					</div>
+
+				</section>	
+
+
+				<section>
+
+					<div class="r-frame">
+
+						<p style="font-size: 25px;">
+							A system is in <strong>equilibrium</strong> if the <strong>net</strong> force, or sum of all forces is 0.
+						</p>	
+					</div>
+
+					<br>
+
+					<div class="r-frame">
+
+						<p style="font-size: 25px;">
+							Suppose there is a 5 pound weight attached to \(R=(0,0)\), which is attached by taut ropes to points \(A=(-1,2), B=(3,1)\).  Find \(k_1, k_2\) so that \(k_1\vec{CA}+k_2\vec{CB}+\langle 0,-5\rangle=0.\)
+
+							<iframe src="https://www.desmos.com/calculator/wzzrfkxdzs?embed" width="60%" height="300" style="border: 1px solid #ccc" frameborder=0></iframe>
+						</p>	
+					</div>
+
+				</section>	
+
+
+				
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+					
+				
+			</div>
+		</div>
+
+		<script src="dist/reveal.js"></script>
+		<script src="plugin/notes/notes.js"></script>
+		<script src="plugin/markdown/markdown.js"></script>
+		<script src="plugin/highlight/highlight.js"></script>
+		<script>
+			// More info about initialization & config:
+			// - https://revealjs.com/initialization/
+			// - https://revealjs.com/config/
+			Reveal.initialize({
+				hash: true,
+
+				// Learn about plugins: https://revealjs.com/plugins/
+				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
+			});
+		</script>
+		<script src="plugin/math/math.js"></script>
+		<script src="plugin/chalkboard/plugin.js"></script>
+		<script src="plugin/customcontrols/plugin.js"></script>
+
+
+
+	<script>
+  	Reveal.initialize({
+		math: {
+			mathjax: 'https://cdn.jsdelivr.net/gh/mathjax/mathjax@2.7.8/MathJax.js',
+			config: 'TeX-AMS_HTML-full',
+			// pass other options into `MathJax.Hub.Config()`
+			TeX: { Macros: { RR: "{\\bf R}" } }
+		},
+
+		chalkboard: {
+        boardmarkerWidth: 3,
+        chalkWidth: 7,
+        chalkEffect: 1.0,
+        storage: null,
+        src: null,
+        readOnly: undefined,
+        transition: 800,
+        theme: "chalkboard",
+        background: [ 'rgba(127,127,127,.1)' , path + 'img/blackboard.png' ],
+        grid: { color: 'rgb(50,50,10,0.5)', distance: 80, width: 2},
+        eraser: { src: path + 'img/sponge.png', radius: 20},
+        boardmarkers : [
+                { color: 'rgba(100,100,100,1)', cursor: 'url(' + path + 'img/boardmarker-black.png), auto'},
+                { color: 'rgba(30,144,255, 1)', cursor: 'url(' + path + 'img/boardmarker-blue.png), auto'},
+                { color: 'rgba(220,20,60,1)', cursor: 'url(' + path + 'img/boardmarker-red.png), auto'},
+                { color: 'rgba(50,205,50,1)', cursor: 'url(' + path + 'img/boardmarker-green.png), auto'},
+                { color: 'rgba(255,140,0,1)', cursor: 'url(' + path + 'img/boardmarker-orange.png), auto'},
+                { color: 'rgba(150,0,20150,1)', cursor: 'url(' + path + 'img/boardmarker-purple.png), auto'},
+                { color: 'rgba(255,220,0,1)', cursor: 'url(' + path + 'img/boardmarker-yellow.png), auto'}
+        ],
+        chalks: [
+                { color: 'rgba(255,255,255,0.5)', cursor: 'url(' + path + 'img/chalk-white.png), auto'},
+                { color: 'rgba(96, 154, 244, 0.5)', cursor: 'url(' + path + 'img/chalk-blue.png), auto'},
+                { color: 'rgba(237, 20, 28, 0.5)', cursor: 'url(' + path + 'img/chalk-red.png), auto'},
+                { color: 'rgba(20, 237, 28, 0.5)', cursor: 'url(' + path + 'img/chalk-green.png), auto'},
+                { color: 'rgba(220, 133, 41, 0.5)', cursor: 'url(' + path + 'img/chalk-orange.png), auto'},
+                { color: 'rgba(220,0,220,0.5)', cursor: 'url(' + path + 'img/chalk-purple.png), auto'},
+                { color: 'rgba(255,220,0,0.5)', cursor: 'url(' + path + 'img/chalk-yellow.png), auto'}
+        ]
+    },
+    customcontrols: {
+  		controls: [
+  			{ icon: '<i class="fa fa-pen-square"></i>',
+  			  title: 'Toggle chalkboard (B)',
+  			  action: 'RevealChalkboard.toggleChalkboard();'
+  			},
+  			{ icon: '<i class="fa fa-pen"></i>',
+  			  title: 'Toggle notes canvas (C)',
+  			  action: 'RevealChalkboard.toggleNotesCanvas();'
+  			}
+  		]
+    },
+
+		plugins: [ RevealMath, RevealChalkboard, RevealCustomControls, RevealMenu  ]
+		});
+	</script>
+
+	</body>
+</html>
