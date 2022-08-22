@@ -1,0 +1,742 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>reveal.js</title>
+
+		<link rel="stylesheet" href="dist/reset.css">
+		<link rel="stylesheet" href="dist/reveal.css">
+		<link rel="stylesheet" href="dist/theme/white.css">
+		<link rel="stylesheet" href="plugin/chalkboard/style.css">
+		<link rel="stylesheet" href="plugin/customcontrols/style.css">
+
+
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+
+
+
+		<!-- Theme used for syntax highlighted code -->
+		<link rel="stylesheet" href="plugin/highlight/monokai.css">
+		<style>
+			.container{
+   				 display: flex;
+			}
+			.col{
+    			flex: 1;
+			}
+		</style>
+			<script async defer src="https://buttons.github.io/buttons.js"></script>
+
+		<script src="plugin/menu/menu.js"></script>
+
+
+
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				
+				<section>
+					<h2>Vectors, Lines and Dots.</h2>
+					<h4>M 211</h4>
+					
+					<h4>
+						Oxford College of Emory University <a href="https://app.oxford.emory.edu/WebApps/Directory/index.cfm/view/9984" target="_blank">Tien Chih</a>
+					</h4>
+				</section>
+
+
+				
+
+				<section data-auto-animate>
+					
+						<div class="r-frame" >
+							<p style="font-size: 30px;" >
+								We use \[\mathbf{i} = (1,0,0), \mathbf{j} = (0,1,0), \mathbf{k} = (0,0,1)\]
+								to denote the standard basis of \(\mathbf{R}^3\).
+
+							</p>
+						</div>		
+						
+
+						
+
+						<div class="fragment">		
+							<p style="font-size: 32px;"> 
+								So \[(2,1,-5) = 2\mathbf{i}+\mathbf{j}-5\mathbf{k}.\]
+							</p> 
+
+						</div>
+
+						<div class="fragment">		
+							<p style="font-size: 32px;"> 
+								What is \[(1,-2,2) + 3\mathbf{i}+\mathbf{j}?\]
+							</p> 
+
+						</div>
+
+					
+				</section>
+
+				<section>				
+
+					<section data-auto-animate>
+					
+						<div class="r-frame" >
+							<p style="font-size: 30px;" >
+								Consider the line y=x:<br>
+								<iframe src="https://www.desmos.com/calculator/fzuuzgucxe?embed" width="50%" height="300" style="border: 1px solid #ccc" frameborder=0></iframe>
+
+							</p>
+						</div>		
+						
+
+						
+
+						<div data-id="list">		
+							<p style="font-size: 25px;"> 
+								Consider these points \((x,y,z)\) in \(\mathbf{R}^3\), which of them satisfy \(y=x\)?
+								<ol>
+									<li style="font-size: 20px;">\((1,1,2)\).</li>
+									<li style="font-size: 20px;">\((1,2,1)\).</li>
+									<li style="font-size: 20px;">\((-3,1,-3)\).</li>
+									<li style="font-size: 20px;">\((-3,-3,2)\).</li>
+									<li style="font-size: 20px;">\((1,1,0)\).</li>
+								</ol>
+							</p> 
+
+						</div>
+
+					
+					</section>
+
+					<section data-auto-animate>
+					
+						
+
+						<div  data-id="list">		
+							
+							<p style="font-size: 25px;">
+								What shape does \(y=x\) describe in \(\mathbf{R}^3\)?
+							</p> 
+
+
+
+						</div>
+
+						<div class="r-frame" >
+							<p style="font-size: 30px;" >
+								<iframe src="https://www.geogebra.org/calculator/bf7utzuw" width="80%" height="500" style="border: 1px solid #ccc" frameborder=0></iframe>
+
+							</p>
+						</div>	
+
+					
+					</section>
+
+			</section>
+
+			<section>
+				<div class="r-frame">
+					<p style="font-size: 30px;" >
+						A <strong>parametric curve</strong> is a curve defined by \[(x(t), y(t), g(t))\] where \(x, y, z:\mathbb{R}\to \mathbb{R}\).
+					</p>	
+				</div>	
+
+				<div>
+							<p style="font-size: 30px;" >
+								<iframe src="https://www.geogebra.org/calculator/qkamjvtx" width="80%" height="500" style="border: 1px solid #ccc" frameborder=0></iframe>
+
+							</p>
+				</div>	
+			</section>	
+
+			<section>
+				<section data-auto-animate>
+					<div data-id="prose">
+					<p style="font-size: 25px;"> 
+								Which of the following parametric curves describe lines?
+								<ol>
+									<li style="font-size: 20px;">\((t,t/2,t/3)\).</li>
+									<li style="font-size: 20px;">\((t,-t,0)\).</li>
+									<li style="font-size: 20px;">\((-t,\cos(t),3)\).</li>
+									<li style="font-size: 20px;">\((\cos(t),\sin(t),3)\).</li>
+									<li style="font-size: 20px;">\((6t+6,3t+3,2t+2)\).</li>
+								</ol>
+							</p> 
+					</div>
+					
+					<div data-id="plot">
+							<p style="font-size: 30px;" >
+								<iframe src="https://www.geogebra.org/calculator/tmehyaaa" width="80%" height="400" style="border: 1px solid #ccc" frameborder=0></iframe>
+
+							</p>
+				</div>			
+				</section>	
+
+				<section data-auto-animate>
+					<div data-id="prose">
+					<p style="font-size: 25px;"> 
+								Which of the following parametric curves describes the <strong>same</strong> line?
+								<ol>
+									<li style="font-size: 20px;">\((t,t/2,t/3)\).</li>
+									<li style="font-size: 20px;">\((t,-t,0)\).</li>
+									<li style="font-size: 20px;">\((-t,\cos(t),3)\).</li>
+									<li style="font-size: 20px;">\((\cos(t),\sin(t),t)\).</li>
+									<li style="font-size: 20px;">\((6t+6,3t+3,2t+2)\).</li>
+								</ol>
+							</p> 
+					</div>
+					
+					<div data-id="plot">
+							<p style="font-size: 30px;" >
+								<iframe src="https://www.geogebra.org/calculator/tmehyaaa" width="80%" height="400" style="border: 1px solid #ccc" frameborder=0></iframe>
+
+							</p>
+					</div>			
+				</section>	
+
+
+				<section data-auto-animate>
+					<div data-id="prose">
+					<p style="font-size: 25px;"> 
+								Write \(t_2\) in terms of \(t_1\) so that 
+								\[t_1=6t_2+6, t_1/2 = 3t_2+3, t_1/3 = 3t_3+3.\]
+
+							</p>
+				</div>			
+				</section>	
+
+
+			</section>	
+
+			<section>
+				<div class="r-frame">
+					<p>
+						Any line \(\mathcal{L}\) can be written as \[\mathbf{r}(t)=\mathbf{v}(t-t_0)+p_0\]
+						where \(\mathcal{L}\) is parallel to \(\mathbf{v}\) and passes through \(p_0\) when \(t=t_0\).
+
+
+					</p>
+				</div>
+
+			</section>	
+
+			<section>
+				<section data-auto-animate>
+					<div data-id="question">
+						<p style="font-size: 25px;">
+							Let \(\mathcal{L}\) be the line passing through \(p_0=(1,1,2)\) parallel to \(\mathbf{v}=\langle 3, 1, -2\rangle \).
+
+
+						</p>
+					</div>
+					<div data-id="prompt">
+						<p style="font-size: 25px;">
+							Find a parameterization of \(\mathcal{L}, \mathbf{r}_1(t)\) so that \(\mathbf{r}(0)=p_0\).
+
+
+						</p>
+					</div>
+					<div data-id="plot">
+							<p style="font-size: 30px;" >
+								<iframe src="https://www.geogebra.org/calculator/dsa7s5m5" width="80%" height="400" style="border: 1px solid #ccc" frameborder=0></iframe>
+
+							</p>
+					</div>	
+				</section>
+				
+				<section data-auto-animate>
+					<div data-id="question">
+						<p style="font-size: 25px;">
+							Let \(\mathcal{L}\) be the line passing through \(p_0=(1,1,2)\) parallel to \(\mathbf{v}=\langle 3, 1, -2\rangle \).
+
+
+						</p>
+					</div>
+					<div data-id="prompt">
+						<p style="font-size: 25px;">
+							Find a parameterization of \(\mathcal{L}, \mathbf{r}_2(t)\) so that \(\mathbf{r}(5)=p_0\).
+
+
+						</p>
+					</div>
+					<div data-id="plot">
+							<p style="font-size: 30px;" >
+								<iframe src="https://www.geogebra.org/calculator/dsa7s5m5" width="80%" height="400" style="border: 1px solid #ccc" frameborder=0></iframe>
+
+							</p>
+					</div>	
+				</section>	
+
+				<section data-auto-animate>
+					<div data-id="question">
+						<p style="font-size: 25px;">
+							Let \(\mathcal{L}\) be the line passing through \(p_0=(1,1,2)\) parallel to \(\mathbf{v}=\langle 3, 1, -2\rangle \).
+
+
+						</p>
+					</div>
+					<div data-id="prompt">
+						<p style="font-size: 25px;">
+							Does \(\mathbf{r}_3(t)=\langle-6t-11, -2t-3, 4t+10 \rangle\) parameterize \(\mathcal{L}\)?
+
+
+						</p>
+					</div>
+					<div data-id="plot">
+							<p style="font-size: 30px;" >
+								<iframe src="https://www.geogebra.org/calculator/dsa7s5m5" width="80%" height="400" style="border: 1px solid #ccc" frameborder=0></iframe>
+
+							</p>
+					</div>	
+				</section>	
+
+			</section>	
+
+
+
+
+			<section>
+				<div class="r-frame">
+					<p style="font-size: 25px;">
+							Lines can intersect, be parallel, or be <strong>skew</strong>.  Two lines parameterized by \(\mathbf{r}(t), \mathbf{s}(t)\) if there are \(t_, t_1\) so that \(\mathbf{r}(t_0)=\mathbf{s}(t_1)\).
+					</p>
+				</div>	
+				<div data-id="plot">
+							<p style="font-size: 30px;" >
+								<iframe src="https://www.geogebra.org/calculator/kpzz2c5x" width="80%" height="400" style="border: 1px solid #ccc" frameborder=0></iframe>
+
+							</p>
+				</div>	
+			</section>	
+
+			<section>
+				<div class="r-frame">
+					<p style="font-size: 25px;">
+							Given \(\mathbf{u}=(u_1, \ldots u_n), \mathbf{v}=(\mathbf{v}_1, \ldots \mathbf{v}_n)\), The <strong>dot product</strong> of \(\mathbf{u}, \mathbf{v}\) is defined as: \[\mathbf{u}\cdot \mathbf{v}=\sum_{i=1}^n u_iv_i.\]
+					</p>
+				</div>	
+				<div data-id="plot">
+					<div data-id="prose">
+					<p style="font-size: 25px;"> 
+								Find the following:
+								<ol>
+									<li style="font-size: 25px;">\((1,2,2)\cdot(-1,1,0)\).</li>
+									<li style="font-size: 25px;">\((2,0,-1)\cdot(2,0, -1)\).</li>
+									<li style="font-size: 25px;">t so that \((-t,t, 5)\cdot(2,5,4)=0\).</li>
+								</ol>
+							</p> 
+					</div>
+				</div>	
+			</section>	
+
+			<section>
+				<div class="r-frame">
+					<p style="font-size: 35px;">
+							The distance from the end of a vector \(\mathbf{u}=(u_1, \ldots u_n)\) and the origin is \[|\mathbf{u}|:=\sqrt{\sum_{i=1}^n u_i^2}.\]
+					</p>
+				</div>
+
+				<div class="fragment">
+					<p style="font-size: 25px;">
+							Show that \[\mathbf{u}\cdot \mathbf{u}=|\mathbf{u}|^2.\]
+					</p>
+				</div>	
+			</section>	
+
+			<section>
+				<section data-auto-animate>
+				<div>
+					<p style="font-size: 35px;" class="r-frame">
+							Let \[\mathbf{u}=(u_1, u_2, u_3), \mathbf{v}=(v_1, v_2, v_3), \mathbf{w}=(w_1, w_2, w_3).\]
+					</p>
+				</div>
+
+				<div>
+					<p style="font-size: 25px;">
+							For any real number \(c\) let \(c\mathbf{u}=(cu_1, cu_2, cu_3)\).  Show that \[\mathbf{u}\cdot (c\mathbf{v})=c(\mathbf{u}\cdot \mathbf{v})=(c\mathbf{v})\cdot \mathbf{u}.\]
+					</p>
+				</div>	
+				</section>
+
+				<section data-auto-animate>
+				<div>
+					<p style="font-size: 35px;" class="r-frame">
+							Let \[\mathbf{u}=(u_1, u_2, u_3), \mathbf{v}=(v_1, v_2, v_3), \mathbf{w}=(w_1, w_2, w_3).\]
+					</p>
+				</div>
+
+				<div>
+					<p style="font-size: 25px;">
+							For any real number \(c\) let \(c\mathbf{u}=(cu_1, cu_2, cu_3)\).  Show that \[\mathbf{u}\cdot (c\mathbf{v})=c(\mathbf{u}\cdot \mathbf{v})=(c\mathbf{v})\cdot \mathbf{u}.\]
+					</p>
+				</div>	
+
+				<div>
+					<p style="font-size: 25px;">
+							 Show that \[\mathbf{u}\cdot (c\mathbf{v}+\mathbf{w})=\mathbf{u}\cdot\mathbf{v}+\mathbf{u}\cdot\mathbf{w}.\]
+					</p>
+				</div>	
+				</section>
+			</section>	
+
+			<section>
+				<section data-auto-animate>
+					<div data-id="plot">
+						
+							<p style="font-size: 30px;" >
+								Let \(\mathbf{u}, \mathbf{v}\) be vectors, and let \(\mathbf{w}=\mathbf{u}-\mathbf{v}\).
+								<iframe src="https://www.geogebra.org/calculator/q9jwbbxs" width="80%" height="450" style="border: 1px solid #ccc" frameborder=0></iframe>
+
+							</p>
+						<p style="font-size: 30px;">
+							Notice \(\mathbf{u}, \mathbf{v}\) and \(\mathbf{w}\) form a triangle.
+						</p>	
+					</div>	
+
+				</section>
+
+				<section data-auto-animate>
+					<div data-id="plot">
+						
+							<p style="font-size: 25px;" >
+								
+								<iframe src="https://www.geogebra.org/calculator/q9jwbbxs" width="80%" height="450" style="border: 1px solid #ccc" frameborder=0></iframe>
+
+							</p>
+						<p style="font-size: 30px;">
+							Notice \(\mathbf{u}, \mathbf{v}\) and \(\mathbf{w}\) form a triangle.
+						</p>	
+					</div>	
+
+					<div data-id="prose">
+						<p style="font-size: 25px;">
+							By the laws of cosine, we have:
+							\[|\mathbf{w}|^2=|\mathbf{u}|^2 + |\mathbf{v}|^2-2|\mathbf{u}||\mathbf{v}|\cos(\theta)\]
+							where \(\theta\) is the angle between \(\mathbf{u}, \mathbf{v}\).
+						</p>
+					</div>
+
+				</section>
+
+				<section data-auto-animate>
+					<div data-id="plot">
+						
+							<p style="font-size: 25px;" >
+								
+								<iframe src="https://www.geogebra.org/calculator/q9jwbbxs" width="80%" height="450" style="border: 1px solid #ccc" frameborder=0></iframe>
+
+							</p>
+						
+					</div>	
+
+					<div data-id="prose">
+						<p style="font-size: 25px;">
+							
+							\[\mathbf{w}\cdot\mathbf{w}=\mathbf{u}\cdot\mathbf{u} + \mathbf{v}\cdot \mathbf{v}-2|\mathbf{u}||\mathbf{v}|\cos(\theta)\]
+							
+						</p>
+					</div>
+
+				</section>
+
+				<section data-auto-animate>
+					
+
+					<div data-id="prose">
+						<p style="font-size: 35px;">
+							
+							\[(\mathbf{u}-\mathbf{v})\cdot (\mathbf{u}-\mathbf{v}) = \mathbf{u}\cdot\mathbf{u} + \mathbf{v}\cdot \mathbf{v}-2|\mathbf{u}||\mathbf{v}|\cos(\theta).\]
+							Expand the left hand side and find \(\mathbf{u}\cdot\mathbf{v}\)
+						</p>
+					</div>
+
+				</section>
+
+				<section data-auto-animate>
+					
+
+					<div data-id="prose">
+						<p style="font-size: 35px;">
+							
+							\[(\mathbf{u}-\mathbf{v})\cdot (\mathbf{u}-\mathbf{v}) = \mathbf{u}\cdot\mathbf{u} + \mathbf{v}\cdot \mathbf{v}-2|\mathbf{u}||\mathbf{v}|\cos(\theta).\]
+							Expand the left hand side and find \(\mathbf{u}\cdot\mathbf{v}\)
+						</p>
+					</div>
+
+					<div >
+						<p style="font-size: 35px;">
+							
+							If \((\mathbf{u}, \mathbf{v})\neq \mathbf{0}\) but \(\mathbf{u}\cdot\mathbf{v} = 0\), what does that mean?
+						</p>
+					</div>
+
+				</section>
+
+
+			</section>	
+
+			<section>
+				<section data-auto-animate>
+					<div>
+						<p style="font-size: 25px;">
+							Let \(\mathbf{u}=(2,1,4), \mathbf{v}=(1,-1, t_0) \) Find \(t_0\) so that the angle \(\theta\) between \(\mathbf{u}, \mathbf{v}\) is \(\pi/6\).
+						</p>
+					</div>
+				</section>
+
+				<section data-auto-animate>
+					<div>
+						<p style="font-size: 20px;">
+							Let \(\mathbf{u}=(2,1,4), \mathbf{v}=(1,-1, t_0) \) Find \(t_0\) so that the angle \(\theta\) between \(\mathbf{u}, \mathbf{v}\) is \(\pi/6\).
+						</p>
+					</div>
+					<div data-id="plot">
+						
+							<p style="font-size: 25px;" >
+								Set \(k=t_0\).<br>
+								<iframe src="https://www.geogebra.org/calculator/zvnkmyzb" width="80%" height="500" style="border: 1px solid #ccc" frameborder=0></iframe>
+
+							</p>
+						
+					</div>	
+				</section>
+			</section>	
+
+			<section>
+				<section data-auto-animate>
+					<div>
+						<p style="font-size: 25px;">
+						Consider the vectors \(\mathbf{v}\) and \(\mathbf{u}\).  Consider the orthogonal projection of \(\mathbf{v}\) onto \(\mathbf{u}\), denoted \(\mathbf{v}_{\mathbf{u}}\).
+						</p>
+					</div>
+					<div data-id="plot">
+						
+						<p style="font-size: 25px;" >
+							Set \(k=t_0\).<br>
+								<iframe src="https://www.geogebra.org/calculator/t36xdmty" width="90%" height="500" style="border: 1px solid #ccc" frameborder=0></iframe>
+
+						</p>
+						
+					</div>	
+				</section>	
+
+				<section data-auto-animate>
+					<div>
+						<p style="font-size: 25px;">
+						Let \(\theta\) denote the angle between \(\mathbf{u}, \mathbf{v}\).  How might we use \(\theta\) to compute the maginitude of \(\mathbf{v}_{\mathbf{u}}\)?
+						</p>
+					</div>
+					<div data-id="plot">
+						
+						<p style="font-size: 25px;" >
+							Set \(k=t_0\).<br>
+								<iframe src="https://www.geogebra.org/calculator/t36xdmty" width="90%" height="500" style="border: 1px solid #ccc" frameborder=0></iframe>
+
+						</p>
+						
+					</div>	
+				</section>		
+			</section>
+
+			<section>
+				<section data-auto-animate>
+					
+					<div data-id="plot">
+						
+						<p style="font-size: 25px;" >
+							Set \(k=t_0\).<br>
+								<iframe src="https://www.geogebra.org/calculator/t36xdmty" width="90%" height="500" style="border: 1px solid #ccc" frameborder=0></iframe>
+
+						</p>
+						
+					</div>	
+
+					<div>
+						<p style="font-size: 25px;">
+						\[\mathbf{v}_{\mathbf{u}} = \cos(\theta)\|\mathbf{v}\|\frac{\mathbf{u}}{\|\mathbf{u}\|}\]
+						</p>
+					</div>
+				</section>	
+
+				<section data-auto-animate>
+					
+					<div data-id="plot">
+						
+						<p style="font-size: 25px;" >
+							Set \(k=t_0\).<br>
+								<iframe src="https://www.geogebra.org/calculator/t36xdmty" width="90%" height="500" style="border: 1px solid #ccc" frameborder=0></iframe>
+
+						</p>
+						
+					</div>	
+
+					<div>
+						<p style="font-size: 25px;">
+						\[\mathbf{v}_{\mathbf{u}} = \cos(\theta)\frac{\|\mathbf{u}\|}{\|\mathbf{u}\|}\|\mathbf{v}\|\frac{\mathbf{u}}{\|\mathbf{u}\|}\]
+						</p>
+					</div>
+				</section>	
+
+				<section data-auto-animate>
+					
+					<div data-id="plot">
+						
+						<p style="font-size: 25px;" >
+							Set \(k=t_0\).<br>
+								<iframe src="https://www.geogebra.org/calculator/t36xdmty" width="90%" height="500" style="border: 1px solid #ccc" frameborder=0></iframe>
+
+						</p>
+						
+					</div>	
+
+					<div>
+						<p style="font-size: 25px;">
+						\[\mathbf{v}_{\mathbf{u}} = \frac{\mathbf{u}\cdot \mathbf{v}}{\|\mathbf{u}\|}\frac{\mathbf{u}}{\|\mathbf{u}\|}\]
+						</p>
+					</div>
+				</section>	
+
+				<section data-auto-animate>
+					
+					<div data-id="plot">
+						
+						<p style="font-size: 25px;" >
+							Set \(k=t_0\).<br>
+								<iframe src="https://www.geogebra.org/calculator/t36xdmty" width="90%" height="500" style="border: 1px solid #ccc" frameborder=0></iframe>
+
+						</p>
+						
+					</div>	
+
+					<div>
+						<p style="font-size: 25px;">
+						\[\mathbf{v}_{\mathbf{u}} = \frac{\mathbf{u}\cdot \mathbf{v}}{\mathbf{u}\cdot \mathbf{u}}\mathbf{u}.\]
+						</p>
+					</div>
+				</section>	
+			</section>	
+
+
+
+
+				
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+					
+				
+			</div>
+		</div>
+
+		<script src="dist/reveal.js"></script>
+		<script src="plugin/notes/notes.js"></script>
+		<script src="plugin/markdown/markdown.js"></script>
+		<script src="plugin/highlight/highlight.js"></script>
+		<script>
+			// More info about initialization & config:
+			// - https://revealjs.com/initialization/
+			// - https://revealjs.com/config/
+			Reveal.initialize({
+				hash: true,
+
+				// Learn about plugins: https://revealjs.com/plugins/
+				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
+			});
+		</script>
+		<script src="plugin/math/math.js"></script>
+		<script src="plugin/chalkboard/plugin.js"></script>
+		<script src="plugin/customcontrols/plugin.js"></script>
+
+
+
+	<script>
+  	Reveal.initialize({
+		math: {
+			mathjax: 'https://cdn.jsdelivr.net/gh/mathjax/mathjax@2.7.8/MathJax.js',
+			config: 'TeX-AMS_HTML-full',
+			// pass other options into `MathJax.Hub.Config()`
+			TeX: { Macros: { RR: "{\\bf R}" } }
+		},
+
+		chalkboard: {
+        boardmarkerWidth: 3,
+        chalkWidth: 7,
+        chalkEffect: 1.0,
+        storage: null,
+        src: null,
+        readOnly: undefined,
+        transition: 800,
+        theme: "chalkboard",
+        background: [ 'rgba(127,127,127,.1)' , path + 'img/blackboard.png' ],
+        grid: { color: 'rgb(50,50,10,0.5)', distance: 80, width: 2},
+        eraser: { src: path + 'img/sponge.png', radius: 20},
+        boardmarkers : [
+                { color: 'rgba(100,100,100,1)', cursor: 'url(' + path + 'img/boardmarker-black.png), auto'},
+                { color: 'rgba(30,144,255, 1)', cursor: 'url(' + path + 'img/boardmarker-blue.png), auto'},
+                { color: 'rgba(220,20,60,1)', cursor: 'url(' + path + 'img/boardmarker-red.png), auto'},
+                { color: 'rgba(50,205,50,1)', cursor: 'url(' + path + 'img/boardmarker-green.png), auto'},
+                { color: 'rgba(255,140,0,1)', cursor: 'url(' + path + 'img/boardmarker-orange.png), auto'},
+                { color: 'rgba(150,0,20150,1)', cursor: 'url(' + path + 'img/boardmarker-purple.png), auto'},
+                { color: 'rgba(255,220,0,1)', cursor: 'url(' + path + 'img/boardmarker-yellow.png), auto'}
+        ],
+        chalks: [
+                { color: 'rgba(255,255,255,0.5)', cursor: 'url(' + path + 'img/chalk-white.png), auto'},
+                { color: 'rgba(96, 154, 244, 0.5)', cursor: 'url(' + path + 'img/chalk-blue.png), auto'},
+                { color: 'rgba(237, 20, 28, 0.5)', cursor: 'url(' + path + 'img/chalk-red.png), auto'},
+                { color: 'rgba(20, 237, 28, 0.5)', cursor: 'url(' + path + 'img/chalk-green.png), auto'},
+                { color: 'rgba(220, 133, 41, 0.5)', cursor: 'url(' + path + 'img/chalk-orange.png), auto'},
+                { color: 'rgba(220,0,220,0.5)', cursor: 'url(' + path + 'img/chalk-purple.png), auto'},
+                { color: 'rgba(255,220,0,0.5)', cursor: 'url(' + path + 'img/chalk-yellow.png), auto'}
+        ]
+    },
+    customcontrols: {
+  		controls: [
+  			{ icon: '<i class="fa fa-pen-square"></i>',
+  			  title: 'Toggle chalkboard (B)',
+  			  action: 'RevealChalkboard.toggleChalkboard();'
+  			},
+  			{ icon: '<i class="fa fa-pen"></i>',
+  			  title: 'Toggle notes canvas (C)',
+  			  action: 'RevealChalkboard.toggleNotesCanvas();'
+  			}
+  		]
+    },
+
+		plugins: [ RevealMath, RevealChalkboard, RevealCustomControls, RevealMenu  ]
+		});
+	</script>
+
+	</body>
+</html>
