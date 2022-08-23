@@ -1,0 +1,410 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>reveal.js</title>
+
+		<link rel="stylesheet" href="dist/reset.css">
+		<link rel="stylesheet" href="dist/reveal.css">
+		<link rel="stylesheet" href="dist/theme/white.css">
+		<link rel="stylesheet" href="plugin/chalkboard/style.css">
+		<link rel="stylesheet" href="plugin/customcontrols/style.css">
+
+
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+
+
+
+		<!-- Theme used for syntax highlighted code -->
+		<link rel="stylesheet" href="plugin/highlight/monokai.css">
+		<style>
+			.container{
+   				 display: flex;
+			}
+			.col{
+    			flex: 1;
+			}
+		</style>
+			<script async defer src="https://buttons.github.io/buttons.js"></script>
+
+		<script src="plugin/menu/menu.js"></script>
+
+
+
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				
+				<section>
+					<h2>Rules of limits, limits of rules.</h2>
+					<h4>M 111</h4>
+					
+					
+					<h4>
+						Oxford College of Emory University <a href="https://app.oxford.emory.edu/WebApps/Directory/index.cfm/view/9984" target="_blank">Tien Chih</a>
+					</h4>
+				</section>
+
+				<section data-auto-animate>
+					
+					<div class="r-frame" >
+						<p style="font-size: 30px;" >
+							Give functions \(f(x), g(x)\) and real number \(a\) such that \(\displaystyle\lim_{x\to a}f(x), \lim_{x\to a}g(x)\) exist:
+							<ul>
+							<li  style="font-size: 25px;">\(\displaystyle \lim_{x\to a}[f(x)+g(x)]=\lim_{x\to a}f(x) + \lim_{x\to a} g(x).\)<br></li>
+
+							<li  style="font-size: 25px;">\(\displaystyle \lim_{x\to a}[c(f(x))]=c\lim_{x\to a}f(x).\)<br></li>
+
+							<li  style="font-size: 25px;">\(\displaystyle \lim_{x\to a}[f(x)g(x)]=\left(\lim_{x\to a}f(x)\right)\left(\lim_{x\to a}g(x)\right).\)<br></li>
+
+							<li  style="font-size: 25px;">\(\displaystyle \lim_{x\to a}[\frac{f(x)}{g(x)}]=\frac{\lim_{x\to a}f(x)}{\lim_{x\to a}g(x)}\) so long as \(\lim_{x\to a} g(x)\neq 0\).<br></li>
+
+							
+							
+					</ul>
+
+
+						</p>
+					</div>		
+
+					<div class="fragment">
+						<p style="font-size: 25px;" >
+							<ul>
+							<li  style="font-size: 25px;">Use the first two bullets to show: \(\displaystyle \lim_{x\to a}[f(x)-g(x)]=\lim_{x\to a}f(x) - \lim_{x\to a} g(x).\)<br></li>
+
+							<li  style="font-size: 25px;">Use the third bullet to show: \(\displaystyle \lim_{x\to a}(f(x))^n=\left(\lim_{x\to a}f(x)\right)^n.\)<br></li>
+
+							
+							
+					</ul>
+							
+						</p>
+					</div>
+						
+					
+
+					
+				</section>
+
+				<section data-auto-animate>
+					
+					<div >
+						<p style="font-size: 30px;" >
+							Suppose \[\displaystyle \lim_{x\to -1}f(x)=2,  \lim_{x\to -1}g(x)=-3,  \lim_{x\to 2}f(x)=4, \lim_{x\to 2}g(x)=-1.\]  Find the following:
+							<ul>
+							<li  style="font-size: 25px;">\(\displaystyle \lim_{x\to -1}[3f(x)-2g(x)].\)<br></li>
+
+							<li  style="font-size: 25px;">\(\displaystyle \lim_{x\to 2}[\frac{4g(x)}{2f(x)}].\)<br></li>
+
+							<li  style="font-size: 25px;">\(\displaystyle \lim_{x\to -1}[2f(x)g(x)].\)<br></li>
+
+							<li  style="font-size: 25px;">\(k\) so that \(\displaystyle \lim_{x\to 2}[kg(x)-5f(x)]=0.\)<br></li>
+
+							
+
+							
+							
+					</ul>
+
+
+						</p>
+					</div>		
+
+					
+						
+					
+
+					
+				</section>
+
+				<section data-auto-animate>
+					
+					<div class="r-frame" >
+						<p style="font-size: 30px;" >
+							
+							<ul>
+							<li  style="font-size: 25px;">\(\displaystyle \lim_{x\to a}x^n=a^n.\)<br></li>
+
+							<li  style="font-size: 25px;">\(\displaystyle \lim_{x\to a}[\sqrt[n]{x}]=\sqrt[n]{\lim_{x\to a}f(x)}.\)<br></li>
+
+							<li  style="font-size: 25px;">\(\displaystyle \lim_{x\to a}c=c\) where \(c\) is a constant.<br></li>
+
+							
+							
+					</ul>
+
+
+						</p>
+					</div>		
+
+					<div class="fragment">
+						<p style="font-size: 25px;" >
+							Find \[\lim_{x\to 2}\frac{x^3-2x+1}{x+5}.\]
+
+							
+							
+							
+						</p>
+					</div>
+						
+					
+
+					
+				</section>
+
+				<section>
+					<div class="r-frame">
+						<p style="font-size: 25px;">
+							Consider \(f(x)=\frac{x-a}{x-a}\).<br>
+							<iframe src="https://www.desmos.com/calculator/wtxyfen4qp" width="90%" height="500" style="border: 1px solid #ccc" frameborder=0></iframe>
+
+						</p>
+					</div>
+					<div>
+						<ul>
+							<li  style="font-size: 25px;">Explain why \(f(x)\neq 1\).<br></li>
+
+							<li  style="font-size: 25px;">Explain why \(\displaystyle\lim_{x\to a}f(x)= 1\).<br></li>
+
+							
+
+							
+							
+						</ul>
+					</div>	
+
+				</section>
+
+				<section>
+					<section data-auto-animate>
+					<div class="r-frame">
+						<p style="font-size: 25px;">
+						Consider \[\lim_{h\to 0} \frac{(2+h)^2-2^2}{h}.\]
+					</p>
+					</div>
+					</section>
+
+					<section data-auto-animate>
+					<div class="r-frame">
+						<p style="font-size: 25px;">
+						Consider \[\lim_{h\to 0} \frac{(2+h)^2-2^2}{h}.\]
+						</p>
+					</div>
+					<div>
+						<p style="font-size: 25px;">
+						\[\lim_{h\to 0} \frac{(2+h)^2-2^2}{h} = \lim_{h\to 0}\frac{4+4h+h^2-4}{h}.\]
+						</p>
+					</div>
+					</section>
+
+					<section data-auto-animate>
+					<div class="r-frame">
+						<p style="font-size: 25px;">
+						Consider \[\lim_{h\to 0} \frac{(2+h)^2-2^2}{h}.\]
+						</p>
+					</div>
+					<div>
+						<p style="font-size: 25px;">
+						\[\lim_{h\to 0} \frac{(2+h)^2-2^2}{h} = \lim_{h\to 0}\frac{4h+h^2}{h}.\]
+						</p>
+					</div>
+					</section>
+
+					<section data-auto-animate>
+					<div class="r-frame">
+						<p style="font-size: 25px;">
+						Consider \[\lim_{h\to 0} \frac{(2+h)^2-2^2}{h}.\]
+						</p>
+					</div>
+					<div>
+						<p style="font-size: 25px;">
+						\[\lim_{h\to 0} \frac{(2+h)^2-2^2}{h} = \lim_{h\to 0}\frac{h(4+h)}{h}.\]:
+						</p>
+					</div>
+					</section>
+
+					<section data-auto-animate>
+					<div class="r-frame">
+						<p style="font-size: 25px;">
+						Consider \[\lim_{h\to 0} \frac{(2+h)^2-2^2}{h}.\]
+						</p>
+					</div>
+					<div>
+						<p style="font-size: 25px;">
+						\[\lim_{h\to 0} \frac{(2+h)^2-2^2}{h} = \lim_{h\to 0}\frac{h}{h}(4+h)=\left(\lim_{h\to 0}\frac{h}{h}\right)\left( \lim_{h\to 0} 4+h\right)=1\cdot 4=4.\]
+						</p>
+					</div>
+					</section>
+
+
+
+				</section>
+
+				<section>
+					<section data-auto-animate>
+					<div class="r-frame">
+						<p style="font-size: 25px;">
+						\(\displaystyle \lim_{x\to a} f(x)=L\)  if and only if \(\displaystyle \lim_{x\to a^-} f(x) = L =\lim_{x\to a^+} f(x) \).
+						</p>
+					</div>
+
+					<div class="fragment">
+						<p style="font-size: 25px;">
+							Consider \[g(x) = \begin{cases} x+3 &amp; x<-2 \\ -x-1 &amp; -2\leq x \leq 3 \\  5 &amp; x>3 \end{cases}.\]  Find each of the following if they exist: \(\displaystyle \lim_{x\to -2^-}g(x), \lim_{x\to -2^+}g(x), \lim_{x\to -2}g(x), \lim_{x\to 3^-}g(x), \lim_{x\to 3^+}g(x), \lim_{x\to 3}g(x)\).
+						</p>
+					</div>
+					</section>
+
+					<section data-auto-animate>
+					<div class="r-frame">
+						<p style="font-size: 25px;">
+						<iframe src="https://www.desmos.com/calculator/t6fkopkqym" width="90%" height="500" style="border: 1px solid #ccc" frameborder=0></iframe>
+						</p>
+					</div>
+
+					
+					</section>
+
+
+				</section>
+
+				<section>
+					<div class="r-frame">
+						<p style="font-size: 25px;">
+							If \(a(x)\leq f(x)\leq b(x) \), what can we say about \(\displaystyle \lim_{x\to c} f(x)\)?
+						</p>
+					</div>
+
+					<div>
+						<p style="font-size: 25px;">
+							<ul>
+							<li  style="font-size: 25px;">Nothing can be concluded.<br></li>
+
+							<li  style="font-size: 25px;"> \(\displaystyle \lim_{x\to c} f(x)\leq \lim_{x\to a} b(x)\).<br></li>
+
+							<li  style="font-size: 25px;">\(\displaystyle \lim_{x\to c} a(x)\leq \lim_{x\to a} f(x)\).<br></li>
+
+							<li  style="font-size: 25px;">\(\displaystyle  \lim_{x\to c} a(x) \leq \lim_{x\to a} f(x)\leq \lim_{x\to a} b(x)\).<br></li>
+
+							
+
+							
+							
+					</ul>
+						</p>
+					</div>
+
+
+				</section>
+
+				<section>
+					<div class="r-frame">
+						<p style="font-size: 25px;">
+						<iframe src="https://www.desmos.com/calculator/53doxfirre" width="90%" height="500" style="border: 1px solid #ccc" frameborder=0></iframe>
+						</p>
+					</div>
+
+
+				</section>
+
+				<section>
+					<h4>The Squeeze Theorem</h4>
+					<div class="r-frame">
+						<p style="font-size: 25px;">
+						If \(a(x)\leq f(x)\leq b(x)\) and \[\lim_{x\to c} a(x)=L=\lim_{x\to c} b(x)\] then \[\lim_{x\to c} f(x)=L.\]
+						</p>
+					</div>
+				</section>
+
+
+									
+
+
+
+				
+			</div>
+		</div>
+
+		<script src="dist/reveal.js"></script>
+		<script src="plugin/notes/notes.js"></script>
+		<script src="plugin/markdown/markdown.js"></script>
+		<script src="plugin/highlight/highlight.js"></script>
+		<script>
+			// More info about initialization & config:
+			// - https://revealjs.com/initialization/
+			// - https://revealjs.com/config/
+			Reveal.initialize({
+				hash: true,
+
+				// Learn about plugins: https://revealjs.com/plugins/
+				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
+			});
+		</script>
+		<script src="plugin/math/math.js"></script>
+		<script src="plugin/chalkboard/plugin.js"></script>
+		<script src="plugin/customcontrols/plugin.js"></script>
+
+
+
+	<script>
+  	Reveal.initialize({
+		math: {
+			mathjax: 'https://cdn.jsdelivr.net/gh/mathjax/mathjax@2.7.8/MathJax.js',
+			config: 'TeX-AMS_HTML-full',
+			// pass other options into `MathJax.Hub.Config()`
+			TeX: { Macros: { RR: "{\\bf R}" } }
+		},
+
+		chalkboard: {
+        boardmarkerWidth: 3,
+        chalkWidth: 7,
+        chalkEffect: 1.0,
+        storage: null,
+        src: null,
+        readOnly: undefined,
+        transition: 800,
+        theme: "chalkboard",
+        background: [ 'rgba(127,127,127,.1)' , path + 'img/blackboard.png' ],
+        grid: { color: 'rgb(50,50,10,0.5)', distance: 80, width: 2},
+        eraser: { src: path + 'img/sponge.png', radius: 20},
+        boardmarkers : [
+                { color: 'rgba(100,100,100,1)', cursor: 'url(' + path + 'img/boardmarker-black.png), auto'},
+                { color: 'rgba(30,144,255, 1)', cursor: 'url(' + path + 'img/boardmarker-blue.png), auto'},
+                { color: 'rgba(220,20,60,1)', cursor: 'url(' + path + 'img/boardmarker-red.png), auto'},
+                { color: 'rgba(50,205,50,1)', cursor: 'url(' + path + 'img/boardmarker-green.png), auto'},
+                { color: 'rgba(255,140,0,1)', cursor: 'url(' + path + 'img/boardmarker-orange.png), auto'},
+                { color: 'rgba(150,0,20150,1)', cursor: 'url(' + path + 'img/boardmarker-purple.png), auto'},
+                { color: 'rgba(255,220,0,1)', cursor: 'url(' + path + 'img/boardmarker-yellow.png), auto'}
+        ],
+        chalks: [
+                { color: 'rgba(255,255,255,0.5)', cursor: 'url(' + path + 'img/chalk-white.png), auto'},
+                { color: 'rgba(96, 154, 244, 0.5)', cursor: 'url(' + path + 'img/chalk-blue.png), auto'},
+                { color: 'rgba(237, 20, 28, 0.5)', cursor: 'url(' + path + 'img/chalk-red.png), auto'},
+                { color: 'rgba(20, 237, 28, 0.5)', cursor: 'url(' + path + 'img/chalk-green.png), auto'},
+                { color: 'rgba(220, 133, 41, 0.5)', cursor: 'url(' + path + 'img/chalk-orange.png), auto'},
+                { color: 'rgba(220,0,220,0.5)', cursor: 'url(' + path + 'img/chalk-purple.png), auto'},
+                { color: 'rgba(255,220,0,0.5)', cursor: 'url(' + path + 'img/chalk-yellow.png), auto'}
+        ]
+    },
+    customcontrols: {
+  		controls: [
+  			{ icon: '<i class="fa fa-pen-square"></i>',
+  			  title: 'Toggle chalkboard (B)',
+  			  action: 'RevealChalkboard.toggleChalkboard();'
+  			},
+  			{ icon: '<i class="fa fa-pen"></i>',
+  			  title: 'Toggle notes canvas (C)',
+  			  action: 'RevealChalkboard.toggleNotesCanvas();'
+  			}
+  		]
+    },
+
+		plugins: [ RevealMath, RevealChalkboard, RevealCustomControls, RevealMenu  ]
+		});
+	</script>
+
+	</body>
+</html>
