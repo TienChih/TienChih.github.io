@@ -1,0 +1,563 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>reveal.js</title>
+
+		<link rel="stylesheet" href="dist/reset.css">
+		<link rel="stylesheet" href="dist/reveal.css">
+		<link rel="stylesheet" href="dist/theme/white.css">
+		<link rel="stylesheet" href="plugin/chalkboard/style.css">
+		<link rel="stylesheet" href="plugin/customcontrols/style.css">
+
+
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+
+
+
+		<!-- Theme used for syntax highlighted code -->
+		<link rel="stylesheet" href="plugin/highlight/monokai.css">
+		<style>
+			.container{
+   				 display: flex;
+			}
+			.col{
+    			flex: 1;
+			}
+		</style>
+			<script async defer src="https://buttons.github.io/buttons.js"></script>
+
+		<script src="plugin/menu/menu.js"></script>
+
+		<script src="https://sagecell.sagemath.org/static/embedded_sagecell.js"></script>
+  
+ 	 <script>sagecell.makeSagecell({"inputLocation": ".sage"});</script>
+
+
+
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				
+				<section>
+					<h2>Crosses and Parallels.</h2>
+					<h4>M 211</h4>
+					
+					<h4>
+						Oxford College of Emory University <a href="https://app.oxford.emory.edu/WebApps/Directory/index.cfm/view/9984" target="_blank">Tien Chih</a>
+					</h4>
+				</section>
+
+				<section>
+					<div class="r-frame" >
+							<p style="font-size: 25px;" >
+								Given vectors \(\mathbf{u}, \mathbf{v}\), if the angle between them is \(\theta\), what is the area of the parallelogram they span in terms of \(|\mathbf{u}|, |\mathbf{v}|, \theta\)?<br>
+
+								<iframe src="https://www.desmos.com/calculator/l0erqlvnoi?embed" width="80%" height="500" style="border: 1px solid #ccc" frameborder=0></iframe>
+
+							</p>
+						</div>	
+
+				</section>
+
+
+				
+
+				<section data-auto-animate>
+					<h4> The Cross product \(\times\)</h4>
+						<div class="r-frame" >
+							<p style="font-size: 25px;" >
+								Given \(\mathbf{u}, \mathbf{v}\in \mathbb{R}^3\) then \(\mathbf{u}\times \mathbf{v}\) the vector whose magnitude is the area of the parallelogram formed by \(\mathbf{u}, \mathbf{v}\) (\(\|\mathbf{u}\|\|\mathbf{v}\|\sin(\theta)\) where \(\theta\) is the angle between \(\mathbf{u}, \mathbf{v}\) ), and whose direction is determined by the "right-hand rule".<br>
+
+								<iframe src="https://www.geogebra.org/calculator/gvmwkxnr" width="80%" height="500" style="border: 1px solid #ccc" frameborder=0></iframe>
+
+							</p>
+						</div>		
+						
+
+						
+
+					
+				</section>
+
+				<section>
+					<h4>Products of Basis Vectors</h4>
+					<div>
+						<p style="font-size: 25px;">
+							\[\mathbf{i}\times \mathbf{j} = \mathbf{k}, \mathbf{j}\times \mathbf{k} = \mathbf{i}, \mathbf{k}\times \mathbf{i} = \mathbf{j}.\]
+						</p>
+					</div>
+
+					<div class="fragment">
+						<p style="font-size: 25px;">
+							Can you see why
+							\[\mathbf{j}\times \mathbf{i} = -\mathbf{k}, \mathbf{k}\times \mathbf{j} = -\mathbf{i}, \mathbf{i}\times \mathbf{k} = -\mathbf{j}?\]
+						</p>
+					</div>
+					
+				</section>
+
+
+
+				<section data-auto-animate>
+					
+						<div >
+							<p style="font-size: 25px;" >
+								Given \(\mathbf{u}, \mathbf{v}\in \mathbb{R}^3, c\in \mathbb{R}\).  Use geometric reasoning to show:
+								<ul>
+									<li style="font-size: 25px;">\((c\mathbf{u})\times \mathbf{v} = c(\mathbf{u}\times \mathbf{v}).\)</li>
+
+									<li style="font-size: 25px;">\(\mathbf{0} \times \mathbf{u} = \mathbf{0}.\)</li>
+
+									<li style="font-size: 25px;">\(\mathbf{u} \times \mathbf{u} = \mathbf{0}.\)</li>
+								</ul>
+								
+								<br>
+
+								<iframe src="https://www.geogebra.org/calculator/gvmwkxnr" width="80%" height="450" style="border: 1px solid #ccc" frameborder=0></iframe>
+
+							</p>
+							<p style="font-size: 25px;" >
+								(What are the areas of the parallelograms?)
+							</p>
+						</div>		
+						
+						
+
+						
+
+					
+				</section>
+
+				<section data-auto-animate>
+					
+						<div >
+							<p style="font-size: 25px;" >
+								Given \(\mathbf{u}, \mathbf{v}\in \mathbb{R}^3, c\in \mathbb{R}\).  Use geometric reasoning to show:
+								\[(\mathbf{u} \times \mathbf{v})\cdot \mathbf{u}=\mathbf{0}=(\mathbf{u} \times \mathbf{v})\cdot \mathbf{v}.\]
+								
+								<br>
+
+								<iframe src="https://www.geogebra.org/calculator/gvmwkxnr" width="80%" height="450" style="border: 1px solid #ccc" frameborder=0></iframe>
+
+							</p>
+							<p style="font-size: 25px;" >
+								(What is the angle between \(\mathbf{u} \times \mathbf{v}\) and \(\mathbf{u}, \mathbf{v}\)?)
+							</p>
+						</div>		
+						
+						
+
+						
+
+					
+				</section>
+
+				<section>
+					<h4>Basic Rules</h4>
+					<div>
+						<p style="font-size: 25px;">
+							Given \(\mathbf{u}, \mathbf{v}, \mathbf{w}\in \mathbb{R}^3, c\in \mathbf{R}.\)
+							<ul>
+									<li style="font-size: 25px;">\(\mathbf{u}\times \mathbf{v} = -(\mathbf{v}\times \mathbf{u}) .\)</li>
+
+									<li style="font-size: 25px;">\( \mathbf{u}\times (\mathbf{v}+\mathbf{w}) = \mathbf{u}\times \mathbf{v}+\mathbf{u}\times \mathbf{w}.\)</li>
+
+									<li style="font-size: 25px;">\((\mathbf{u} + \mathbf{v})\times\mathbf{w} = \mathbf{u}\times \mathbf{w} + \mathbf{v}\times \mathbf{w}.\)</li>
+									<li style="font-size: 25px;">\((c\mathbf{u})\times \mathbf{v} = c(\mathbf{u}\times \mathbf{v}) = \mathbf{u}\times (c\mathbf{v}).\)</li>
+								</ul>
+						</p>
+					</div>
+					
+				</section>
+
+
+				<section>
+					<section data-auto-animate>
+					<div>
+						<p style="font-size: 25px;">
+							Use \[\mathbf{i}\times \mathbf{j} = \mathbf{k}, \mathbf{j}\times \mathbf{k} = \mathbf{i}, \mathbf{k}\times \mathbf{i} = \mathbf{j}, \mathbf{j}\times \mathbf{i} = -\mathbf{k}, \mathbf{k}\times \mathbf{j} = -\mathbf{i}, \mathbf{i}\times \mathbf{k} = -\mathbf{j}\] to compute:
+
+							<ul>
+									<li style="font-size: 25px;">\((3\mathbf{i}-2\mathbf{k})\times(-4\mathbf{j}+3\mathbf{k}).\)</li>
+
+									<li style="font-size: 25px;">\((-4\mathbf{i}+\mathbf{j})\times(2\mathbf{i}+%\mathbf{k}).\)</li>
+
+									<li style="font-size: 25px;">\((\mathbf{i}+2\mathbf{j})\times(2\mathbf{i}-6\mathbf{j}).\)</li>
+
+									
+								</ul>
+						</p>		
+
+					</div>
+					</section>
+
+					<section data-auto-animate>
+					<div>
+						<p style="font-size: 25px;">
+							Use \[\mathbf{i}\times \mathbf{j} = \mathbf{k}, \mathbf{j}\times \mathbf{k} = \mathbf{i}, \mathbf{k}\times \mathbf{i} = \mathbf{j}, \mathbf{j}\times \mathbf{i} = -\mathbf{k}, \mathbf{k}\times \mathbf{j} = -\mathbf{i}, \mathbf{i}\times \mathbf{k} = -\mathbf{j}\] to compute:
+
+							<ul>
+									<li style="font-size: 25px;">\((\mathbf{i}\times \mathbf{j})\times \mathbf{j}\).</li>
+
+									<li style="font-size: 25px;">\(\mathbf{i}\times (\mathbf{j}\times \mathbf{j})\).</li>
+
+									
+								</ul>
+						</p>		
+
+					</div>
+					</section>
+
+					<section data-auto-animate>
+					<div>
+						<p style="font-size: 25px;">
+							Use \[\mathbf{i}\times \mathbf{j} = \mathbf{k}, \mathbf{j}\times \mathbf{k} = \mathbf{i}, \mathbf{k}\times \mathbf{i} = \mathbf{j}, \mathbf{j}\times \mathbf{i} = -\mathbf{k}, \mathbf{k}\times \mathbf{j} = -\mathbf{i}, \mathbf{i}\times \mathbf{k} = -\mathbf{j}\] to compute:
+
+							<ul>
+									<li style="font-size: 25px;">\((\mathbf{i}\times \mathbf{j})\times \mathbf{j}\).</li>
+
+									<li style="font-size: 25px;">\(\mathbf{i}\times (\mathbf{j}\times \mathbf{j})\).</li>
+
+									
+								</ul>
+						</p>		
+
+					</div>
+					<div>
+						<p style="font-size: 25px;">
+							The cross product \(\times\) is <strong>non-associative</strong> :(
+						</p>
+					</div>
+					</section>
+
+				</section>
+
+				<section>
+
+					<section data-auto-animate>
+						<h4>Determinants</h4>
+						<div >
+							<p style="font-size: 25px;">
+								If \(A = \left[ \begin{array}{cc}  a  &amp; b \\  c  &amp; d \end{array} \right]\)
+								then 
+								 \[\begin{array}{rcl} |A| &amp; = &amp; ad-bc\end{array}.\]
+							</p>
+						</div>
+					</section>
+
+					<section data-auto-animate>
+						<h4>Determinants</h4>
+						<div >
+							<p style="font-size: 25px;">
+								If \(A = \left[ \begin{array}{ccc}  a  &amp; b&amp; c \\  d  &amp; e&amp; f \\  g  &amp; h&amp; i  \end{array} \right]\)
+								then 
+								 \[\begin{array}{rcl} |A| &amp; = &amp; \left| \begin{array}{ccc}  a  &amp; b&amp; c \\  d  &amp; e&amp; f \\  g  &amp; h&amp; i  \end{array} \right| \\ &amp; = &amp; a\left|\begin{array}{cc} e &amp; f  \\ h &amp; i\end{array} \right|
+								 -b\left|\begin{array}{cc} d &amp; f  \\ g &amp; i\end{array} \right|
+								 +c\left|\begin{array}{cc} d &amp; e  \\ g &amp; h\end{array} \right|\end{array}.\]
+							</p>
+						</div>
+					</section>
+
+					<section data-auto-animate>
+						<h4>Determinants</h4>
+						<div >
+							<p style="font-size: 25px;">
+								If \(A = \left[ \begin{array}{ccc}  a  &amp; b&amp; c \\  d  &amp; e&amp; f \\  g  &amp; h&amp; i  \end{array} \right]\)
+								then 
+								 \[\begin{array}{rcl} |A| &amp; = &amp; \left| \begin{array}{ccc}  a  &amp; b&amp; c \\  d  &amp; e&amp; f \\  g  &amp; h&amp; i  \end{array} \right| \\ &amp; = &amp; a\left|\begin{array}{cc} e &amp; f  \\ h &amp; i\end{array} \right|
+								 -b\left|\begin{array}{cc} d &amp; f  \\ g &amp; i\end{array} \right|
+								 +c\left|\begin{array}{cc} d &amp; e  \\ g &amp; h\end{array} \right|\\
+								 &amp;=&amp; a(ei-fh)-b(di-fg)+c(eh-ge).\end{array}\]
+							</p>
+						</div>
+					</section>
+
+				</section>
+
+				<section>
+
+					
+
+					<section data-auto-animate>
+						<h4>Cross Products as Determinants</h4>
+						<div data-id="det">
+							<p style="font-size: 25px;">
+								If \(\mathbf{u}=\langle u_1, u_2. u_3\rangle, \mathbf{v}=\langle v_1, v_2, v_3\rangle\), then another way to compute \(\mathbf{u}\times\mathbf{v}\) is:
+								 \[\begin{array}{rcl} \mathbf{u}\times\mathbf{v} &amp; = &amp; \left| \begin{array}{ccc}  \mathbf{i}  &amp; \mathbf{j}&amp; \mathbf{k} \\  u_1  &amp; u_2&amp; u_3 \\  v_1  &amp; v_2&amp; v_3  \end{array} \right| \\ &amp; = &amp; \mathbf{i}\left|\begin{array}{cc} u_2 &amp; u_3  \\ v_2 &amp; v_3\end{array} \right|
+								 -\mathbf{j}\left|\begin{array}{cc} u_1 &amp; u_3  \\ v_1 &amp; v_3\end{array} \right|
+								 +\mathbf{k}\left|\begin{array}{cc} u_1 &amp; u_2  \\ v_1 &amp; v_2\end{array} \right|\end{array}\]
+							</p>
+						</div>
+					</section>
+
+					<section data-auto-animate>
+						<h4>Cross Products as Determinants</h4>
+						<div data-id="det">
+							<p style="font-size: 25px;">
+								If \(\mathbf{u}=\langle u_1, u_2. u_3\rangle, \mathbf{v}=\langle v_1, v_2, v_3\rangle\), then another way to compute \(\mathbf{u}\times\mathbf{v}\) is:
+								 \[\begin{array}{rcl} \mathbf{u}\times\mathbf{v} &amp; = &amp; \left| \begin{array}{ccc}  \mathbf{i}  &amp; \mathbf{j}&amp; \mathbf{k} \\  u_1  &amp; u_2&amp; u_3 \\  v_1  &amp; v_2&amp; v_3  \end{array} \right| \\ &amp; = &amp; \mathbf{i}\left|\begin{array}{cc} u_2 &amp; u_3  \\ v_2 &amp; v_3\end{array} \right|
+								 -\mathbf{j}\left|\begin{array}{cc} u_1 &amp; u_3  \\ v_1 &amp; v_3\end{array} \right|
+								 +\mathbf{k}\left|\begin{array}{cc} u_1 &amp; u_2  \\ v_1 &amp; v_2\end{array} \right|\\
+								  &amp;=&amp; (u_2v_3-u_3v_2)\mathbf{i}-(u_1v_3-u_3v_1)\mathbf{j}+(u_1v_2-u_2v_1)\mathbf{k}.\end{array}\]
+							</p>
+						</div>
+					</section>
+
+					<section data-auto-animate>
+						<h4>Cross Products as Determinants</h4>
+						<div data-id="det">
+							<p style="font-size: 25px;">
+								If \(\mathbf{u}=\langle u_1, u_2. u_3\rangle, \mathbf{v}=\langle v_1, v_2, v_3\rangle\), then another way to compute \(\mathbf{u}\times\mathbf{v}\) is:
+								 \[\begin{array}{rcl} \mathbf{u}\times\mathbf{v} 
+								  &amp;=&amp; (u_2v_3-u_3v_2)\mathbf{i}-(u_1v_3-u_3v_1)\mathbf{j}+(u_1v_2-u_2v_1)\mathbf{k}.\end{array}\]
+							</p>
+						</div>
+						<div class="r-frame">
+							<p style="font-size: 25px;">
+								Compute \(\langle 1,3,1 \rangle\times \langle -2,0,1\rangle.\)
+							</p>
+						</div>
+					</section>
+
+
+
+				</section>
+
+				<section>
+					<section data-auto-animate>
+						<h4>Other ways to compute Cross Products</h4>
+						<div class="r-frame">
+							<p style="font-size: 35px;">
+								Compute \(\langle 1,3,1 \rangle\times \langle -2,0,1\rangle.\)
+							</p>
+						</div>
+						<div>
+							<p>
+								<iframe src="https://www.geogebra.org/calculator/gvmwkxnr" width="80%" height="450" style="border: 1px solid #ccc" frameborder=0></iframe>
+							</p>
+						</div>
+
+
+					</section>
+
+					<section data-auto-animate>
+						<h4>Other ways to compute Cross Products</h4>
+						<div class="r-frame">
+							<p style="font-size: 35px;">
+								Compute \(\langle 1,3,1 \rangle\times \langle -2,0,1\rangle.\)
+							</p>
+						</div>
+						<div>
+							<p style="font-size: 25px;">
+							<iframe src="sagecellcrossproduct.html" width="80%" height="500"></iframe>
+						</p>
+						</div>
+
+						
+
+
+					</section>
+
+				</section>
+
+
+				<section>
+					<section data-auto-animate>
+						
+						<div>
+							<p style="font-size: 35px;">
+								Compute \(\langle 0,2,3 \rangle\times \langle -2,4,b\rangle.\)
+							</p>
+						</div>
+						
+
+
+					</section>
+
+					<section data-auto-animate>
+
+						<div>
+							<p style="font-size: 35px;">
+								Compute \(\langle 0,2,3 \rangle\times \langle -2,4,b\rangle.\)
+							</p>
+						</div>
+						
+						<div>
+							<p style="font-size: 35px;">
+								Find the norms of \(\langle 0,2,3 \rangle, \langle -2,4,b\rangle.\)
+							</p>
+						</div>
+						
+
+
+					</section>
+
+					<section data-auto-animate>
+						<div>
+							<p style="font-size: 35px;">
+								Compute \(\langle 0,2,3 \rangle\times \langle -2,4,b\rangle.\)
+							</p>
+						</div>
+						
+						<div>
+							<p style="font-size: 35px;">
+								Find the norms of \(\langle 0,2,3 \rangle, \langle -2,4,b\rangle.\)
+							</p>
+						</div>
+
+						<div >
+							<p style="font-size: 35px;">
+								Find \(b\) so that the parallelogram spanned by \(\langle 0,2,3 \rangle, \langle -2,4,b\rangle\) has area \(10\).
+							</p>
+						</div>
+
+
+					</section>
+
+					<section data-auto-animate>
+						
+
+						<div >
+							<p style="font-size: 25px;">
+								Find \(b\) so that the parallelogram spanned by \(\langle 0,2,3 \rangle, \langle -2,4,b\rangle\) has area \(100\).
+							</p>
+						</div>
+
+						<div>
+							<p>
+								<iframe src="https://www.geogebra.org/calculator/ghv9ytef" width="80%" height="500" style="border: 1px solid #ccc" frameborder=0></iframe>
+							</p>
+						</div>
+
+
+					</section>
+
+				</section>
+
+
+				
+
+
+
+
+				
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+					
+				
+			</div>
+		</div>
+
+		<script src="dist/reveal.js"></script>
+		<script src="plugin/notes/notes.js"></script>
+		<script src="plugin/markdown/markdown.js"></script>
+		<script src="plugin/highlight/highlight.js"></script>
+		<script>
+			// More info about initialization & config:
+			// - https://revealjs.com/initialization/
+			// - https://revealjs.com/config/
+			Reveal.initialize({
+				hash: true,
+
+				// Learn about plugins: https://revealjs.com/plugins/
+				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
+			});
+		</script>
+		<script src="plugin/math/math.js"></script>
+		<script src="plugin/chalkboard/plugin.js"></script>
+		<script src="plugin/customcontrols/plugin.js"></script>
+
+
+
+	<script>
+  	Reveal.initialize({
+		math: {
+			mathjax: 'https://cdn.jsdelivr.net/gh/mathjax/mathjax@2.7.8/MathJax.js',
+			config: 'TeX-AMS_HTML-full',
+			// pass other options into `MathJax.Hub.Config()`
+			TeX: { Macros: { RR: "{\\bf R}" } }
+		},
+
+		chalkboard: {
+        boardmarkerWidth: 3,
+        chalkWidth: 7,
+        chalkEffect: 1.0,
+        storage: null,
+        src: null,
+        readOnly: undefined,
+        transition: 800,
+        theme: "chalkboard",
+        background: [ 'rgba(127,127,127,.1)' , path + 'img/blackboard.png' ],
+        grid: { color: 'rgb(50,50,10,0.5)', distance: 80, width: 2},
+        eraser: { src: path + 'img/sponge.png', radius: 20},
+        boardmarkers : [
+                { color: 'rgba(100,100,100,1)', cursor: 'url(' + path + 'img/boardmarker-black.png), auto'},
+                { color: 'rgba(30,144,255, 1)', cursor: 'url(' + path + 'img/boardmarker-blue.png), auto'},
+                { color: 'rgba(220,20,60,1)', cursor: 'url(' + path + 'img/boardmarker-red.png), auto'},
+                { color: 'rgba(50,205,50,1)', cursor: 'url(' + path + 'img/boardmarker-green.png), auto'},
+                { color: 'rgba(255,140,0,1)', cursor: 'url(' + path + 'img/boardmarker-orange.png), auto'},
+                { color: 'rgba(150,0,20150,1)', cursor: 'url(' + path + 'img/boardmarker-purple.png), auto'},
+                { color: 'rgba(255,220,0,1)', cursor: 'url(' + path + 'img/boardmarker-yellow.png), auto'}
+        ],
+        chalks: [
+                { color: 'rgba(255,255,255,0.5)', cursor: 'url(' + path + 'img/chalk-white.png), auto'},
+                { color: 'rgba(96, 154, 244, 0.5)', cursor: 'url(' + path + 'img/chalk-blue.png), auto'},
+                { color: 'rgba(237, 20, 28, 0.5)', cursor: 'url(' + path + 'img/chalk-red.png), auto'},
+                { color: 'rgba(20, 237, 28, 0.5)', cursor: 'url(' + path + 'img/chalk-green.png), auto'},
+                { color: 'rgba(220, 133, 41, 0.5)', cursor: 'url(' + path + 'img/chalk-orange.png), auto'},
+                { color: 'rgba(220,0,220,0.5)', cursor: 'url(' + path + 'img/chalk-purple.png), auto'},
+                { color: 'rgba(255,220,0,0.5)', cursor: 'url(' + path + 'img/chalk-yellow.png), auto'}
+        ]
+    },
+    customcontrols: {
+  		controls: [
+  			{ icon: '<i class="fa fa-pen-square"></i>',
+  			  title: 'Toggle chalkboard (B)',
+  			  action: 'RevealChalkboard.toggleChalkboard();'
+  			},
+  			{ icon: '<i class="fa fa-pen"></i>',
+  			  title: 'Toggle notes canvas (C)',
+  			  action: 'RevealChalkboard.toggleNotesCanvas();'
+  			}
+  		]
+    },
+
+		plugins: [ RevealMath, RevealChalkboard, RevealCustomControls, RevealMenu  ]
+		});
+	</script>
+
+	</body>
+</html>
