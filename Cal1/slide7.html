@@ -39,7 +39,7 @@
 			<div class="slides">
 				
 				<section>
-					<h2>Deriving Derivatives.</h2>
+					<h2>The function of the derivative function of a function.</h2>
 					<h4>M 111</h4>
 					
 					
@@ -48,110 +48,63 @@
 					</h4>
 				</section>
 
-				<section data-auto-animate>
-						<div class="r-frame" >
-							<p style="font-size: 25px;" >
-								Given a  function \(f(x)\), the <strong>instantaneous rate of change</strong> or <strong>derivative</strong> of \(f(x)\) at \(a\) is the limit as \(h\) approaches 0 of the average rate of change of \(f(x)\) over \([a, a+h]\), or:
-								\[f'(a):=\lim_{h\to 0} \frac{f(a+h)-f(a)}{(a+h)-a}=\lim_{h\to 0} \frac{f(a+h)-f(a)}{h}\]
-
-							</p>
-						</div>		
-						
-						
-						<div data-id="def">
-						<p style="font-size: 30px;" >
-							<iframe src="https://www.desmos.com/calculator/mxmr4mf0fj" width="90%" height="350" style="border: 1px solid #ccc" frameborder=0></iframe>
-
-
-						</p>
-						</div>	
-					</section>
-
-					
-				</section>
+				
 
 				<section>
 					<section data-auto-animate>
 						<div data-id="problem" class="r-frame">
 							<p style="font-size: 30px;" >
-								We want to find \(f'(1)\) for \(f(x)=x^2-3x+2\) using the limit definition of the derivative.
+								Consider \(f(x)=x^2-3x+2\).
 							</p>
 						</div>
 						<div class="fragment">
 							<p style="font-size: 25px;" >
-								Find \(f(1)\).
+								For \(a=0,1,2,3\), compute \(f'(a)\).
 							</p>
 						</div>
 
 						<div class="fragment">
 							<p style="font-size: 25px;" >
-								Find \(f(1+h)\) and fully expand it.
+								For \(a=0,1,2,3\), plot \((a,f'(a))\).<br>
+								<iframe src="https://www.desmos.com/calculator/ul3twt3aby" width="90%" height="350" style="border: 1px solid #ccc" frameborder=0></iframe>
+
 							</p>
 						</div>
 
 						<div class="fragment">
 							<p style="font-size: 25px;" >
-								Simplify \(f(1+h)-f(1)\) so that it is a multiple of \(h\).
+								What do you notice?
 							</p>
 						</div>
 
-						<div class="fragment">
-							<p style="font-size: 25px;" >
-								Simplify \(\frac{f(1+h)-f(1)}{h}\) so that it has no \(h\) in the denominator.
-							</p>
-						</div>
-						<div class="fragment">
-							<p style="font-size: 25px;" >
-								Compute \(\displaystyle\lim_{h\to 0}\frac{f(1+h)-f(1)}{h}\).
-							</p>
-						</div>
-						<div class="fragment">
-							<p style="font-size: 25px;" >
-								What's \(f'(1)\)?
-							</p>
-						</div>
+						
 
 					</section>
 
 					<section data-auto-animate>
 						<div data-id="problem" class="r-frame">
 							<p style="font-size: 30px;" >
-								We want to find \(f'(1)\) for \(f(x)=x^2-3x+2\) using the limit definition of the derivative.
+								Consider \(f(x)=x^2-3x+2\).
 							</p>
 						</div>
-						<div data-id="def">
-						<p style="font-size: 30px;" >
-							<iframe src="https://www.desmos.com/calculator/22075bxi50" width="90%" height="350" style="border: 1px solid #ccc" frameborder=0></iframe>
-
-
-						</p>
-						</div>	
-
-					</section>
-
-					<section data-auto-animate>
-						<div data-id="problem" class="r-frame">
-							<p style="font-size: 30px;" >
-								Let \(f(x)=x^2-3x+2\).
+						<div>
+							<p style="font-size: 25px;" >
+								Evaluate and expand \(f(x+h)\).
 							</p>
 						</div>
-						<div data-id="def">
-						<p style="font-size: 25px;" >
-							Use the limit definition of the derivative to find:
-							<ul>
-								<li style="font-size: 25px;">\(f'(-2)\).</li>
 
-								<li style="font-size: 25px;">\(f'(0)\).</li>
+						<div class="fragment">
+							<p style="font-size: 25px;" >
+								Compute \(f(x+h)-f(x)\).
+							</p>
+						</div>
 
-								<li style="font-size: 25px;">\(f'(1.5)\).</li>
-
-
-								<li style="font-size: 25px;">\(f'(2)\).</li>
-							</ul>	
-
-
-						</p>
-						</div>	
+						<div class="fragment">
+							<p style="font-size: 25px;" >
+								Compute \(\displaystyle\lim_{h\to 0}\frac{f(x+h)-f(x)}{h}.\)  The result should be an \(x\) expression.
+							</p>
+						</div>
+						
 
 					</section>
 					
@@ -161,35 +114,19 @@
 				<section>
 					<section data-auto-animate>
 						<div class="r-frame">
-							<p style="font-size: 30px;" >
-								Consider \(h(t)=|t|\).
+							<p style="font-size: 35px;" >
+								For any  function \(f(x)\), the <strong>derivative</strong>  of \(f\) with respect to \(x\) is denoted:
+								\[\frac{d}{dx}f(x)=f'(x):=\lim_{h\to 0}\frac{f(x+h)-f(x)}{h}.\]
 							</p>
 						</div>
 
 						<div class="fragment">
-							<p style="font-size: 25px;" >
-								What is \(g(t)\) if \(t>0\)? \(t&lt;0\)?  \(t=0\)?
+							<p style="font-size: 35px;" >
+								For a constant \(a\) we say \(f(x)\) is <strong>differentiable</strong> at \(a\) if \(f'(a)\) exists.  For an interval \(I\), \(f(x)\) is differentianle over \(I\) if \(f'(a)\) exists for each \(a\) in I.
 							</p>
 						</div>
 
-						<div class="fragment">
-							<p style="font-size: 25px;" >
-								Find \(\displaystyle \lim_{h\to 0^+}\frac{g(0+h)-g(0)}{h}\).
-							</p>
-						</div>
-
-						<div class="fragment">
-							<p style="font-size: 25px;" >
-								Find \(\displaystyle \lim_{h\to 0^-}\frac{g(0+h)-g(0)}{h}\).
-							</p>
-						</div>
-
-						<div class="fragment">
-							<p style="font-size: 25px;" >
-								Find \(\displaystyle \lim_{h\to 0}\frac{g(0+h)-g(0)}{h}\).
-							</p>
-						</div>
-
+						
 					</section>
 
 
@@ -197,105 +134,252 @@
 
 
 				<section>
+					<section data-auto-animate>
 					<div class="r-frame">
 						<p style="font-size: 35px;" >
-							Let \(f(x)\) be a function, then \(f'(a)\) measure the <strong>instantaneous rate of change</strong> of \(f\) when \(x=a\).
+							Consider \(g(x)=|x|\).
 						</p>
 
 
 					</div>
-				</section>
 
-				<section>
-					<section data-auto-animate>
-						<div class="r-frame">
-						<p style="font-size: 30px;" >
-							Suppose the population of rare bird species in a national park, \(t\) days since January 1st 2022 is \(P(t)\) birds.
-						</p>
-						<p style="font-size: 30px;" >
-							Suppose that when \(t=30\), there are 572 birds of this species in the park, and \(P'(30)=25\).
-						</p>
-
-
-					</div>
 					<div class="fragment">
 						<p style="font-size: 25px;" >
-							What is \(P(30)\) and what does that mean?  Include units of any numerical value.
+							Is \(g(x)\) dfferentiable when \(x>0\)?
 						</p>
 					</div>
 
 					<div class="fragment">
 						<p style="font-size: 25px;" >
-							What does \(P'(30)=25\) mean?  Include units of any numerical value.
+							Is \(g(x)\) dfferentiable when \(x&lt;0\)?
 						</p>
 					</div>
-
 					<div class="fragment">
 						<p style="font-size: 25px;" >
-							On January 31st, is the number of birds increasing or decreasing (or not)?  By how much?
+							Is \(g(x)\) dfferentiable when \(x=0\)?
+						</p>
+					</div>
+					<div class="fragment">
+						<p style="font-size: 25px;" >
+							Describe \(g'(x)\).  (Probably a piecewise function, maybe not defined everywhere).
 						</p>
 					</div>
 
 					</section>
-
-					<section data-auto-animate>
-						<div class="r-frame">
-						<p style="font-size: 30px;" >
-							Suppose the population of rare bird species in a national park, \(t\) days since January 1st 2022 is \(P(t)\) birds.
-						</p>
-						
-
-
-					</div>
-					<div >
-						<p style="font-size: 30px;" >
-							Suppose \(P(45)=722, P'(45)=0\).  Explain what these equations mean, every numerical value should have units.
-						</p>
-					</div>
-
-					
-
-					</section>
-
-					<section data-auto-animate>
-						<div class="r-frame">
-						<p style="font-size: 30px;" >
-							Suppose the population of rare bird species in a national park, \(t\) days since January 1st 2022 is \(P(t)\) birds.
-						</p>
-						
-
-
-					</div>
-					<div >
-						<p style="font-size: 30px;" >
-							Suppose \(P(224)=1077, P'(224)=-12.2\).  Explain what these equations mean, every numerical value should have units.
-						</p>
-					</div>
-
-					
-
-					</section>
-
-				</section>
-
+				</section>	
 
 
 				<section>
 					<section data-auto-animate>
-					<div  class="r-frame" data-id="def">
+					<div class="r-frame">
 						<p style="font-size: 30px;" >
-							Consider the plot of \(y=f(x)\):<br>
-							<img src="img/piecewise.svg" width="80%">
-
+							Consider \(h(t)=\begin{cases}  -1 & t\leq 0 \\ 1 & t>0\end{cases}\).
+							
 						</p>
-					</div>	
-					<div class=fragment>
+
+
+					</div>
+
+					<div class="fragment">
 						<p style="font-size: 25px;" >
-							For each \(a=-3,-2,-1,0,1,2,3\) determine \(f(a)\) and \(f'(a)\), if they exist.
+							Find \(\displaystyle \lim_{c\to 0^-} \frac{h(0+c)-h(0)}{c}\).
+						</p>
+					</div>
+
+					<div class="fragment">
+						<p style="font-size: 25px;" >
+							Find \(\displaystyle \lim_{c\to 0^+} \frac{h(0+c)-h(0)}{c}\).
+						</p>
+					</div>
+					<div class="fragment">
+						<p style="font-size: 25px;" >
+							What is \(h'(0)\)?
+						</p>
+					</div>
+					<div class="fragment">
+						<p style="font-size: 25px;" >
+							Describe \(h'(t)\).  (Probably a piecewise function, maybe not defined everywhere).
+						</p>
+					</div>
+
+					</section>
+					<section>
+						<div class="r-frame">
+						<p style="font-size: 30px;" >
+							Consider \(h(t)=\begin{cases}  -1 & t\leq 0 \\ 1 & t>0\end{cases}\).
+							
+						</p>
+
+
+					</div>
+					<div>
+						<p>
+						<iframe src="https://www.desmos.com/calculator/htwlvovrcc" width="90%" height="350" style="border: 1px solid #ccc" frameborder=0></iframe>
 						</p>
 					</div>
 					</section>
 				</section>
+
+				<section>
+					<div>
+						<p style="font-size: 30px;" >
+							Which of the the following are reasons \(f'(a)\) is not defined?
+							<ul>
+								<li style="font-size: 30px;">\(y=f(x)\) has a "corner" when \(x=a\).</li>
+
+								<li style="font-size: 30px;">\(f(x), x&lt;a\) and \(f(x), x>a\) have different signs.</li>
+								<li style="font-size: 30px;">\(f(x)\) is not continuous when \(x=a\).</li>
+								<li style="font-size: 30px;">\(y=f(x)\) has a vertical tangent line at \(x=a\).</li>
+								<li style="font-size: 30px;">\(f(a)=0\) but \(f'(a)\neq0\).</li>
+							</ul>
+
+						</p>
+					</div>
+				</section>	
+
+				<section>
+					<div>
+						<p style="font-size: 30px;" >
+							Consider the graph \(y=\alpha(t)\).
+							<br>
+							<img src="img/notdiff.svg" width="80%">
+
+						</p>
+					</div>
+					<div>
+						<p style="font-size: 30px;">
+							Where is \(\alpha(t)\) differentiable?
+						</p>
+					</div>
+
+
+
+				</section>
+
+				<section>
+					<section data-auto-animate>
+					<div>
+						<p style="font-size: 30px;" >
+							Consider the graph \(y=f(x)\).
+							<br>
+							<img src="img/cubic.svg" width="80%">
+
+						</p>
+					</div>
+					<div>
+						<p style="font-size: 25px;">
+							Where is \(f'(x)>0\)?  
+						</p>
+					</div>
+					</section>
+
+					<section data-auto-animate>
+					<div>
+						<p style="font-size: 30px;" >
+							Consider the graph \(y=f(x)\).
+							<br>
+							<img src="img/cubic.svg" width="80%">
+
+						</p>
+					</div>
+					<div>
+						<p style="font-size: 25px;">
+							Where is \(f'(x)>0\)?  
+						</p>
+					</div>
+					<div>
+						<p style="font-size: 25px;">
+							Where is \(f'(x)&lt;0\)?  
+						</p>
+					</div>
+					</section>
+
+					<section data-auto-animate>
+					<div>
+						<p style="font-size: 30px;" >
+							Consider the graph \(y=f(x)\).
+							<br>
+							<img src="img/cubic.svg" width="80%">
+
+						</p>
+					</div>
+					<div>
+						<p style="font-size: 25px;">
+							Where is \(f'(x)>0\)?  
+						</p>
+					</div>
+					<div>
+						<p style="font-size: 25px;">
+							Where is \(f'(x)&lt;0\)?  
+						</p>
+					</div>
+					<div>
+						<p style="font-size: 25px;">
+							Where is \(f'(x)=0\)?  
+						</p>
+					</div>
+					</section>
+
+					<section data-auto-animate>
+					<div>
+						<p style="font-size: 30px;" >
+							Consider the graph \(y=f(x)\).
+							<br>
+							<img src="img/cubic.svg" width="80%">
+
+						</p>
+					</div>
+					
+					<div>
+						<p style="font-size: 25px;">
+							Sketch \(y=f'(x)\).
+						</p>
+					</div>
+					</section>
+
+
+
+				</section>
+
+				<section>
+					
+					<section data-auto-animate>
+						<div class="r-frame">
+							<p style="font-size: 30px;" >
+								Let \(g(z)=\frac{2}{3z+1}\), compute \(g'(z)\) using the limit definition.
+							</p>
+						</div>
+
+						<div class="fragment">
+							<p style="font-size: 25px;" >
+								(Both \(g(z+h), g(z)\) are rational expressions.  Put them under a common denominator when you take the difference.)
+							</p>
+						</div>
+
+					</section>
+
+				</section>
+
+				<section>
+					
+					<section data-auto-animate>
+						<div class="r-frame">
+							<p style="font-size: 30px;" >
+								Let \(k(x)=\sqrt{3-x}\), compute \(k'(x)\) using the limit definition.
+							</p>
+						</div>
+
+						<div class="fragment">
+							<p style="font-size: 25px;" >
+								\(\left(\frac{\sqrt{a}-\sqrt{b}}{c}=\frac{\sqrt{a}-\sqrt{b}}{c}\cdot \frac{\sqrt{a}+\sqrt{b}}{\sqrt{a}+\sqrt{b}}=\frac{a-b}{c(\sqrt{a}+\sqrt{b})}.\right)\)
+							</p>
+						</div>
+
+					</section>
+
+				</section>
+
+				
 
 
 
