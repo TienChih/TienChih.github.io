@@ -1,0 +1,399 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>reveal.js</title>
+
+		<link rel="stylesheet" href="dist/reset.css">
+		<link rel="stylesheet" href="dist/reveal.css">
+		<link rel="stylesheet" href="dist/theme/white.css">
+		<link rel="stylesheet" href="plugin/chalkboard/style.css">
+		<link rel="stylesheet" href="plugin/customcontrols/style.css">
+
+
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+
+
+
+		<!-- Theme used for syntax highlighted code -->
+		<link rel="stylesheet" href="plugin/highlight/monokai.css">
+		<style>
+			.container{
+   				 display: flex;
+			}
+			.col{
+    			flex: 1;
+			}
+		</style>
+			<script async defer src="https://buttons.github.io/buttons.js"></script>
+
+		<script src="plugin/menu/menu.js"></script>
+
+
+
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				
+				<section>
+					<h2>Deriving Derivatives.</h2>
+					<h4>M 111</h4>
+					
+					
+					<h4>
+						Oxford College of Emory University <a href="https://app.oxford.emory.edu/WebApps/Directory/index.cfm/view/9984" target="_blank">Tien Chih</a>
+					</h4>
+				</section>
+
+				<section data-auto-animate>
+						<div class="r-frame" >
+							<p style="font-size: 25px;" >
+								Given a <strong>continuous</strong> function \(f(x)\), the <strong>instantaneous rate of change</strong> or <strong>derivative</strong> of \(f(x)\) at \(a\) is the limit as \(h\) approaches 0 of the average rate of change of \(f(x)\) over \([a, a+h]\), or:
+								\[f'(a):=\lim_{h\to 0} \frac{f(a+h)-f(a)}{(a+h)-a}=\lim_{h\to 0} \frac{f(a+h)-f(a)}{h}\]
+
+							</p>
+						</div>		
+						
+						
+						<div data-id="def">
+						<p style="font-size: 30px;" >
+							<iframe src="https://www.desmos.com/calculator/mxmr4mf0fj" width="90%" height="350" style="border: 1px solid #ccc" frameborder=0></iframe>
+
+
+						</p>
+						</div>	
+					</section>
+
+					
+				</section>
+
+				<section>
+					<section data-auto-animate>
+						<div data-id="problem" class="r-frame">
+							<p style="font-size: 30px;" >
+								We want to find \(f'(1)\) for \(f(x)=x^2-3x+2\) using the limit definition of the derivative.
+							</p>
+						</div>
+						<div class="fragment">
+							<p style="font-size: 25px;" >
+								Find \(f(1)\).
+							</p>
+						</div>
+
+						<div class="fragment">
+							<p style="font-size: 25px;" >
+								Find \(f(1+h)\) and fully expand it.
+							</p>
+						</div>
+
+						<div class="fragment">
+							<p style="font-size: 25px;" >
+								Simplify \(f(1+h)-f(1)\) so that it is a multiple of \(h\).
+							</p>
+						</div>
+
+						<div class="fragment">
+							<p style="font-size: 25px;" >
+								Simplify \(\frac{f(1+h)-f(1)}{h}\) so that it has no \(h\) in the denominator.
+							</p>
+						</div>
+						<div class="fragment">
+							<p style="font-size: 25px;" >
+								Compute \(\displaystyle\lim_{h\to 0}\frac{f(1+h)-f(1)}{h}\).
+							</p>
+						</div>
+						<div class="fragment">
+							<p style="font-size: 25px;" >
+								What's \(f'(1)\)?
+							</p>
+						</div>
+
+					</section>
+
+					<section data-auto-animate>
+						<div data-id="problem" class="r-frame">
+							<p style="font-size: 30px;" >
+								We want to find \(f'(1)\) for \(f(x)=x^2-3x+2\) using the limit definition of the derivative.
+							</p>
+						</div>
+						<div data-id="def">
+						<p style="font-size: 30px;" >
+							<iframe src="https://www.desmos.com/calculator/22075bxi50" width="90%" height="350" style="border: 1px solid #ccc" frameborder=0></iframe>
+
+
+						</p>
+						</div>	
+
+					</section>
+
+					<section data-auto-animate>
+						<div data-id="problem" class="r-frame">
+							<p style="font-size: 30px;" >
+								Let \(f(x)=x^2-3x+2\).
+							</p>
+						</div>
+						<div data-id="def">
+						<p style="font-size: 25px;" >
+							Use the limit definition of the derivative to find:
+							<ul>
+								<li style="font-size: 25px;">\(f'(-2)\).</li>
+
+								<li style="font-size: 25px;">\(f'(0)\).</li>
+
+								<li style="font-size: 25px;">\(f'(1.5)\).</li>
+
+
+								<li style="font-size: 25px;">\(f'(2)\).</li>
+							</ul>	
+
+
+						</p>
+						</div>	
+
+					</section>
+					
+				</section>
+
+
+				<section>
+					<section data-auto-animate>
+						<div class="r-frame">
+							<p style="font-size: 30px;" >
+								Consider \(h(t)=|t|\).
+							</p>
+						</div>
+
+						<div class="fragment">
+							<p style="font-size: 25px;" >
+								What is \(g(t)\) if \(t>0\)? \(t&lt;0\)?  \(t=0\)?
+							</p>
+						</div>
+
+						<div class="fragment">
+							<p style="font-size: 25px;" >
+								Find \(\displaystyle \lim_{h\to 0^+}\frac{g(0+h)-g(0)}{h}\).
+							</p>
+						</div>
+
+						<div class="fragment">
+							<p style="font-size: 25px;" >
+								Find \(\displaystyle \lim_{h\to 0^-}\frac{g(0+h)-g(0)}{h}\).
+							</p>
+						</div>
+
+						<div class="fragment">
+							<p style="font-size: 25px;" >
+								Find \(\displaystyle \lim_{h\to 0}\frac{g(0+h)-g(0)}{h}\).
+							</p>
+						</div>
+
+					</section>
+
+
+				</section>
+
+
+				<section>
+					<div class="r-frame">
+						<p style="font-size: 35px;" >
+							Let \(f(x)\) be a function, then \(f'(a)\) measure the <strong>instantaneous rate of change</strong> of \(f\) when \(x=a\).
+						</p>
+
+
+					</div>
+				</section>
+
+				<section>
+					<section data-auto-animate>
+						<div class="r-frame">
+						<p style="font-size: 30px;" >
+							Suppose the population of rare bird species in a national park, \(t\) days since January 1st 2022 is \(P(t)\) birds.
+						</p>
+						<p style="font-size: 30px;" >
+							Suppose that when \(t=30\), there are 572 birds of this species in the park, and \(P'(30)=25\).
+						</p>
+
+
+					</div>
+					<div class="fragment">
+						<p style="font-size: 25px;" >
+							What is \(P(30)\) and what does that mean?  Include units of any numerical value.
+						</p>
+					</div>
+
+					<div class="fragment">
+						<p style="font-size: 25px;" >
+							What does \(P'(30)=25\) mean?  Include units of any numerical value.
+						</p>
+					</div>
+
+					<div class="fragment">
+						<p style="font-size: 25px;" >
+							On January 31st, is the number of birds increasing or decreasing (or not)?  By how much?
+						</p>
+					</div>
+
+					</section>
+
+					<section data-auto-animate>
+						<div class="r-frame">
+						<p style="font-size: 30px;" >
+							Suppose the population of rare bird species in a national park, \(t\) days since January 1st 2022 is \(P(t)\) birds.
+						</p>
+						
+
+
+					</div>
+					<div >
+						<p style="font-size: 30px;" >
+							Suppose \(P(45)=722, P'(45)=0\).  Explain what these equations mean, every numerical value should have units.
+						</p>
+					</div>
+
+					
+
+					</section>
+
+					<section data-auto-animate>
+						<div class="r-frame">
+						<p style="font-size: 30px;" >
+							Suppose the population of rare bird species in a national park, \(t\) days since January 1st 2022 is \(P(t)\) birds.
+						</p>
+						
+
+
+					</div>
+					<div >
+						<p style="font-size: 30px;" >
+							Suppose \(P(224)=1077, P'(224)=-12.2\).  Explain what these equations mean, every numerical value should have units.
+						</p>
+					</div>
+
+					
+
+					</section>
+
+				</section>
+
+
+
+				<section>
+					<section data-auto-animate>
+					<div  class="r-frame" data-id="def">
+						<p style="font-size: 30px;" >
+							Consider the plot of \(y=f(x)\):<br>
+							<img src="img/piecewise.svg" width="80%">
+
+						</p>
+					</div>	
+					<div class=fragment>
+						<p style="font-size: 25px;" >
+							For each \(a=-3,-2,-1,0,1,2,3\) determine \(f(a)\) and \(f'(a)\), if they exist.
+						</p>
+					</div>
+					</section>
+				</section>
+
+
+
+				
+
+					
+						
+					
+
+					
+				
+
+
+									
+
+
+
+				
+			</div>
+		</div>
+
+		<script src="dist/reveal.js"></script>
+		<script src="plugin/notes/notes.js"></script>
+		<script src="plugin/markdown/markdown.js"></script>
+		<script src="plugin/highlight/highlight.js"></script>
+		<script>
+			// More info about initialization & config:
+			// - https://revealjs.com/initialization/
+			// - https://revealjs.com/config/
+			Reveal.initialize({
+				hash: true,
+
+				// Learn about plugins: https://revealjs.com/plugins/
+				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
+			});
+		</script>
+		<script src="plugin/math/math.js"></script>
+		<script src="plugin/chalkboard/plugin.js"></script>
+		<script src="plugin/customcontrols/plugin.js"></script>
+
+
+
+	<script>
+  	Reveal.initialize({
+		math: {
+			mathjax: 'https://cdn.jsdelivr.net/gh/mathjax/mathjax@2.7.8/MathJax.js',
+			config: 'TeX-AMS_HTML-full',
+			// pass other options into `MathJax.Hub.Config()`
+			TeX: { Macros: { RR: "{\\bf R}" } }
+		},
+
+		chalkboard: {
+        boardmarkerWidth: 3,
+        chalkWidth: 7,
+        chalkEffect: 1.0,
+        storage: null,
+        src: null,
+        readOnly: undefined,
+        transition: 800,
+        theme: "chalkboard",
+        background: [ 'rgba(127,127,127,.1)' , path + 'img/blackboard.png' ],
+        grid: { color: 'rgb(50,50,10,0.5)', distance: 80, width: 2},
+        eraser: { src: path + 'img/sponge.png', radius: 20},
+        boardmarkers : [
+                { color: 'rgba(100,100,100,1)', cursor: 'url(' + path + 'img/boardmarker-black.png), auto'},
+                { color: 'rgba(30,144,255, 1)', cursor: 'url(' + path + 'img/boardmarker-blue.png), auto'},
+                { color: 'rgba(220,20,60,1)', cursor: 'url(' + path + 'img/boardmarker-red.png), auto'},
+                { color: 'rgba(50,205,50,1)', cursor: 'url(' + path + 'img/boardmarker-green.png), auto'},
+                { color: 'rgba(255,140,0,1)', cursor: 'url(' + path + 'img/boardmarker-orange.png), auto'},
+                { color: 'rgba(150,0,20150,1)', cursor: 'url(' + path + 'img/boardmarker-purple.png), auto'},
+                { color: 'rgba(255,220,0,1)', cursor: 'url(' + path + 'img/boardmarker-yellow.png), auto'}
+        ],
+        chalks: [
+                { color: 'rgba(255,255,255,0.5)', cursor: 'url(' + path + 'img/chalk-white.png), auto'},
+                { color: 'rgba(96, 154, 244, 0.5)', cursor: 'url(' + path + 'img/chalk-blue.png), auto'},
+                { color: 'rgba(237, 20, 28, 0.5)', cursor: 'url(' + path + 'img/chalk-red.png), auto'},
+                { color: 'rgba(20, 237, 28, 0.5)', cursor: 'url(' + path + 'img/chalk-green.png), auto'},
+                { color: 'rgba(220, 133, 41, 0.5)', cursor: 'url(' + path + 'img/chalk-orange.png), auto'},
+                { color: 'rgba(220,0,220,0.5)', cursor: 'url(' + path + 'img/chalk-purple.png), auto'},
+                { color: 'rgba(255,220,0,0.5)', cursor: 'url(' + path + 'img/chalk-yellow.png), auto'}
+        ]
+    },
+    customcontrols: {
+  		controls: [
+  			{ icon: '<i class="fa fa-pen-square"></i>',
+  			  title: 'Toggle chalkboard (B)',
+  			  action: 'RevealChalkboard.toggleChalkboard();'
+  			},
+  			{ icon: '<i class="fa fa-pen"></i>',
+  			  title: 'Toggle notes canvas (C)',
+  			  action: 'RevealChalkboard.toggleNotesCanvas();'
+  			}
+  		]
+    },
+
+		plugins: [ RevealMath, RevealChalkboard, RevealCustomControls, RevealMenu  ]
+		});
+	</script>
+
+	</body>
+</html>
