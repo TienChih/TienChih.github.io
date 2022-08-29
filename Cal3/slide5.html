@@ -1,0 +1,404 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>reveal.js</title>
+
+		<link rel="stylesheet" href="dist/reset.css">
+		<link rel="stylesheet" href="dist/reveal.css">
+		<link rel="stylesheet" href="dist/theme/white.css">
+		<link rel="stylesheet" href="plugin/chalkboard/style.css">
+		<link rel="stylesheet" href="plugin/customcontrols/style.css">
+
+
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+
+
+
+		<!-- Theme used for syntax highlighted code -->
+		<link rel="stylesheet" href="plugin/highlight/monokai.css">
+		<style>
+			.container{
+   				 display: flex;
+			}
+			.col{
+    			flex: 1;
+			}
+		</style>
+			<script async defer src="https://buttons.github.io/buttons.js"></script>
+
+		<script src="plugin/menu/menu.js"></script>
+
+		<script src="https://sagecell.sagemath.org/static/embedded_sagecell.js"></script>
+  
+ 	 <script>sagecell.makeSagecell({"inputLocation": ".sage"});</script>
+
+
+
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				
+				<section>
+					<h2>Multi-Functional.</h2>
+					<h4>M 211</h4>
+					
+					<h4>
+						Oxford College of Emory University <a href="https://app.oxford.emory.edu/WebApps/Directory/index.cfm/view/9984" target="_blank">Tien Chih</a>
+					</h4>
+				</section>
+
+				
+
+
+				
+				<section>
+				<section data-auto-animate>
+					<h4> Review of Functions</h4>
+						<div class="r-frame" >
+							<p style="font-size: 25px;" >
+								Given sets \(X, Y\) a <strong>function</strong> \(f:X\to Y\) is a rule or assignment that associates each element of \(X\) with an element of \(Y\).
+
+							</p>
+						</div>	
+
+						<div class="fragment" >
+							<p style="font-size: 25px;" >
+								If whenever \(x_1\neq x_2\) we have \(f(x_1)\neq f(x_2)\), \(f\) is <strong>injective</strong>.
+
+							</p>
+						</div>
+
+						<div class="fragment" >
+							<p style="font-size: 25px;" >
+								The <strong>range</strong> or <strong>image</strong> of \(f\) is every element of \(Y\) that is achieved by \(f\): \[\text{Im}(f):=\{y:y=f(x)\ \text{for some $x$ in }X\}.\]
+
+							</p>
+						</div>
+
+						<div class="fragment" >
+							<p style="font-size: 25px;" >
+								If \(\text{Im}(f)=Y\) we say \(f\) is <strong>surjective</strong>.
+
+							</p>
+						</div>
+						
+					
+				</section>
+				</section>
+
+				
+				<section>
+					<section data-auto-animate>
+						<div data-id="prose">
+							<p style="font-size: 25px;" >
+								In previous classes, we primarily study functions \(f:\mathbb{R}^1\to\mathbb{R}^1\).
+							</p>
+						</div>
+						<iframe src="https://www.desmos.com/calculator/r8gvzmunic" width="90%" height="500" style="border: 1px solid #ccc" frameborder=0></iframe>
+					</section>
+					<section data-auto-animate>
+						<div data-id="prose">
+							<p style="font-size: 25px;" >
+								In this class, we primarily study functions \(f:\mathbb{R}^n\to\mathbb{R}^m\).
+							</p>
+						</div>
+						<iframe src="https://www.geogebra.org/calculator/ffktd7zc" width="90%" height="500" style="border: 1px solid #ccc" frameborder=0></iframe>
+					</section>
+
+					<section data-auto-animate>
+						<div data-id="prose">
+							<p style="font-size: 25px;" >
+								Consider \(f:\mathbb{R}^2\to\mathbb{R}^1\) defined by \(f(x,y)=\frac{y^3}{12}-y-\frac{x^2}{4}+\frac{7}{2}\).  Find \(f(0,0), f(1, -2), f(3,1)\).
+							</p>
+						</div>
+						<iframe src="https://www.geogebra.org/calculator/ffktd7zc" width="50%" height="300" style="border: 1px solid #ccc" frameborder=0></iframe>
+					</section>
+				</section>
+
+				<section>
+					<section data-auto-animate>
+						<h4>Contour plot</h4>
+						<div class="r-frame">
+							<p style="font-size: 25px;" >
+								Given a function \(f:\mathbb{R}^2\to \mathbb{R}\) the <strong>level curve</strong> at height \(k\) is the collection of points  \((x,y)\in \mathbb{R}^2\) such that \(f(x,y)=k\). \[\{(x,y)\in \mathbb{R}^2 : f(x,y)=k\}.\]	
+							</p>
+
+							<p style="font-size: 25px;" >
+								The  <strong>contour curve</strong> at height \(k\) is the collection of points  \((x,y, z)\in \mathbb{R}^2\) such that \(f(x,y)=k\) and \(z=k\). \[\{(x,y,z)\in \mathbb{R}^2 : z=f(x,y)=k\}.\]	
+							</p>
+						</div>
+					</section>
+					<section data-auto-animate>
+						<h4>Contour plot</h4>
+						<div class="r-frame">
+							<p style="font-size: 25px;" >
+								Given a function \(f:\mathbb{R}^2\to \mathbb{R}\) the <strong>level curve</strong> is \(\{(x,y)\in \mathbb{R}^2 : f(x,y)=k\}.\)	
+							
+								The  <strong>contour curve</strong> is \(\{(x,y,z)\in \mathbb{R}^2 : z=f(x,y)=k\}.\)	
+							</p>
+						</div>
+						<iframe src="https://www.geogebra.org/calculator/pypcuzfx" width="90%" height="500" style="border: 1px solid #ccc" frameborder=0></iframe>
+					</section>
+
+					<section data-auto-animate>
+						<h4>Contour plot</h4>
+						
+						<iframe src="https://www.geogebra.org/calculator/pypcuzfx" width="50%" height="350" style="border: 1px solid #ccc" frameborder=0></iframe>
+						<iframe src="sagecellcontourplot.html" width="80%" height="250" style="border: 1px solid #ccc" frameborder=0></iframe>
+					</section>
+				</section>
+
+				<section>
+					<div>
+						<p style="font-size: 25px;" >
+							Match the contour plots to the functions
+						</p>
+						<ul>
+							<li style="font-size: 25px;"> \(f(x,y)=3x^2-\frac{y^2}{3}.\)</li>
+							<li style="font-size: 25px;"> \(f(x,y)=3x^2-\frac{y}{3}.\)</li>
+							<li style="font-size: 25px;"> \(f(x,y)=\frac{x^2}{3}-3y.\)</li>
+							<li style="font-size: 25px;"> \(f(x,y)=\frac{x^2}{3}+3y.\)</li>
+						</ul>
+					</div>
+					<img src="img/plot1.png" height="200"><img src="img/plot2.png" height="200">
+					<img src="img/plot3.png" height="200"><img src="img/plot4.png" height="200">
+				</section>
+
+
+				<section>
+					<section data-auto-animate>
+						<h4>Section</h4>
+						<div class="r-frame">
+							<p style="font-size: 25px;" >
+								Given a function \(f:\mathbb{R}^2\to \mathbb{R}\) the <strong>section of the graph of \(f\) by the plane \(x=k\) or \(y=k\)</strong> is:\[\{(x,y,z)\in \mathbb{R}^2 : z=f(x,y), x=k\} \text{ or } \{(x,y,z)\in \mathbb{R}^2 : z=f(x,y), y=k\}.\]	
+							</p>
+						</div>
+						<iframe src="https://www.geogebra.org/calculator/zmy44nra" width="90%" height="450" style="border: 1px solid #ccc" frameborder=0></iframe>
+					</section>
+				</section>
+
+
+				<section>
+					<section data-auto-animate>
+						<h4>Families of surfaces</h4>
+						<div class="r-frame">
+							<p style="font-size: 25px;" >
+								A <strong>sphere</strong> centered at \(\mathbf{x}_0(x_0, y_0, z_0)\) with radius \(a\) is the collection of points satisfying \(\|\mathbf{x}-\mathbf{x}_0\|=a\):
+								\[(x-x_0)^2+(y-y_0)^2+(z-z_0)^2=a^2.\]
+							</p>
+						</div>
+						<iframe src="https://www.geogebra.org/calculator/xmwfm3gt" width="90%" height="450" style="border: 1px solid #ccc" frameborder=0></iframe>
+					</section>
+
+					<section data-auto-animate>
+						<h4>Families of surfaces</h4>
+						<div class="r-frame">
+							<p style="font-size: 25px;" >
+								A <strong>quadratic surface</strong> is a surface described by:
+								\[Ax^2+Bxy+Cxz+DY2+Eyz+Fz^2+Gx+Hy+Iz+J=0\] for real coefficients \(A,B,C,D,E,F,G,H,I,J\).
+							</p>
+						</div>
+						
+					</section>
+					<section data-auto-animate>
+						<h4>Families of surfaces</h4>
+						<div class="r-frame">
+							<p style="font-size: 25px;" >
+								A <strong>Ellipsoid</strong> is a quadratic surface of the form:
+								\[\frac{x^2}{a^2}+\frac{y^2}{b^2}+\frac{z^2}{c^2}=1.\]  What do \(a,b,c\) correspond to?
+							</p>
+						</div>
+						<iframe src="https://www.geogebra.org/calculator/ns7pdfsz" width="90%" height="450" style="border: 1px solid #ccc" frameborder=0></iframe>
+					</section>
+					<section data-auto-animate>
+						<h4>Families of surfaces</h4>
+						<div class="r-frame">
+							<p style="font-size: 25px;" >
+								A <strong>Elliptic Paraboloid</strong> is a quadratic surface of the form:
+								\[\frac{z}{c}=\frac{x^2}{a^2}+\frac{y^2}{b^2}.\]  What do \(a,b,c\) correspond to?
+							</p>
+						</div>
+						<iframe src="https://www.geogebra.org/calculator/vvfywtnz" width="90%" height="450" style="border: 1px solid #ccc" frameborder=0></iframe>
+					</section>
+
+					<section data-auto-animate>
+						<h4>Families of surfaces</h4>
+						<div class="r-frame">
+							<p style="font-size: 25px;" >
+								A <strong>Hyperbolic Paraboloid</strong> is a quadratic surface of the form:
+								\[\frac{z}{c}=\frac{y^2}{b^2}-\frac{x^2}{a^2}.\] 
+							</p>
+						</div>
+						<iframe src="https://www.geogebra.org/calculator/ruygzwfk" width="90%" height="450" style="border: 1px solid #ccc" frameborder=0></iframe>
+					</section>
+
+					<section data-auto-animate>
+						<h4>Families of surfaces</h4>
+						<div class="r-frame">
+							<p style="font-size: 25px;" >
+								A <strong>Elliptic Cone</strong> is a quadratic surface of the form:
+								\[\frac{z^2}{c^2}=\frac{x^2}{a^2}+\frac{y^2}{b^2}.\] What do \(a,b,c\) correspond to?
+							</p>
+						</div>
+						<iframe src="https://www.geogebra.org/calculator/yhmc6d5p" width="90%" height="450" style="border: 1px solid #ccc" frameborder=0></iframe>
+					</section>
+
+					<section data-auto-animate>
+						<h4>Families of surfaces</h4>
+						<div class="r-frame">
+							<p style="font-size: 25px;" >
+								A <strong>Hyperboloid of one sheet</strong> is a quadratic surface of the form:
+								\[\frac{x^2}{a^2}+\frac{y^2}{b^2}-\frac{z^2}{c^2}=1.\] What do \(a,b,c\) correspond to?
+							</p>
+						</div>
+						<iframe src="https://www.geogebra.org/calculator/mg39k3fq" width="90%" height="450" style="border: 1px solid #ccc" frameborder=0></iframe>
+					</section>
+
+					<section data-auto-animate>
+						<h4>Families of surfaces</h4>
+						<div class="r-frame">
+							<p style="font-size: 25px;" >
+								A <strong>Hyperboloid of two sheets</strong> is a quadratic surface of the form:
+								\[\frac{z^2}{c^2}-\frac{x^2}{a^2}-\frac{y^2}{b^2}=1.\] What do \(a,b,c\) correspond to?
+							</p>
+						</div>
+						<iframe src="https://www.geogebra.org/calculator/yb4rkbv6" width="90%" height="450" style="border: 1px solid #ccc" frameborder=0></iframe>
+					</section>
+				</section>
+
+
+
+				
+
+
+
+
+				
+
+
+				
+
+
+
+
+				
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+					
+				
+			</div>
+		</div>
+
+		<script src="dist/reveal.js"></script>
+		<script src="plugin/notes/notes.js"></script>
+		<script src="plugin/markdown/markdown.js"></script>
+		<script src="plugin/highlight/highlight.js"></script>
+		<script>
+			// More info about initialization & config:
+			// - https://revealjs.com/initialization/
+			// - https://revealjs.com/config/
+			Reveal.initialize({
+				hash: true,
+
+				// Learn about plugins: https://revealjs.com/plugins/
+				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
+			});
+		</script>
+		<script src="plugin/math/math.js"></script>
+		<script src="plugin/chalkboard/plugin.js"></script>
+		<script src="plugin/customcontrols/plugin.js"></script>
+
+
+
+	<script>
+  	Reveal.initialize({
+		math: {
+			mathjax: 'https://cdn.jsdelivr.net/gh/mathjax/mathjax@2.7.8/MathJax.js',
+			config: 'TeX-AMS_HTML-full',
+			// pass other options into `MathJax.Hub.Config()`
+			TeX: { Macros: { RR: "{\\bf R}" } }
+		},
+
+		chalkboard: {
+        boardmarkerWidth: 3,
+        chalkWidth: 7,
+        chalkEffect: 1.0,
+        storage: null,
+        src: null,
+        readOnly: undefined,
+        transition: 800,
+        theme: "chalkboard",
+        background: [ 'rgba(127,127,127,.1)' , path + 'img/blackboard.png' ],
+        grid: { color: 'rgb(50,50,10,0.5)', distance: 80, width: 2},
+        eraser: { src: path + 'img/sponge.png', radius: 20},
+        boardmarkers : [
+                { color: 'rgba(100,100,100,1)', cursor: 'url(' + path + 'img/boardmarker-black.png), auto'},
+                { color: 'rgba(30,144,255, 1)', cursor: 'url(' + path + 'img/boardmarker-blue.png), auto'},
+                { color: 'rgba(220,20,60,1)', cursor: 'url(' + path + 'img/boardmarker-red.png), auto'},
+                { color: 'rgba(50,205,50,1)', cursor: 'url(' + path + 'img/boardmarker-green.png), auto'},
+                { color: 'rgba(255,140,0,1)', cursor: 'url(' + path + 'img/boardmarker-orange.png), auto'},
+                { color: 'rgba(150,0,20150,1)', cursor: 'url(' + path + 'img/boardmarker-purple.png), auto'},
+                { color: 'rgba(255,220,0,1)', cursor: 'url(' + path + 'img/boardmarker-yellow.png), auto'}
+        ],
+        chalks: [
+                { color: 'rgba(255,255,255,0.5)', cursor: 'url(' + path + 'img/chalk-white.png), auto'},
+                { color: 'rgba(96, 154, 244, 0.5)', cursor: 'url(' + path + 'img/chalk-blue.png), auto'},
+                { color: 'rgba(237, 20, 28, 0.5)', cursor: 'url(' + path + 'img/chalk-red.png), auto'},
+                { color: 'rgba(20, 237, 28, 0.5)', cursor: 'url(' + path + 'img/chalk-green.png), auto'},
+                { color: 'rgba(220, 133, 41, 0.5)', cursor: 'url(' + path + 'img/chalk-orange.png), auto'},
+                { color: 'rgba(220,0,220,0.5)', cursor: 'url(' + path + 'img/chalk-purple.png), auto'},
+                { color: 'rgba(255,220,0,0.5)', cursor: 'url(' + path + 'img/chalk-yellow.png), auto'}
+        ]
+    },
+    customcontrols: {
+  		controls: [
+  			{ icon: '<i class="fa fa-pen-square"></i>',
+  			  title: 'Toggle chalkboard (B)',
+  			  action: 'RevealChalkboard.toggleChalkboard();'
+  			},
+  			{ icon: '<i class="fa fa-pen"></i>',
+  			  title: 'Toggle notes canvas (C)',
+  			  action: 'RevealChalkboard.toggleNotesCanvas();'
+  			}
+  		]
+    },
+
+		plugins: [ RevealMath, RevealChalkboard, RevealCustomControls, RevealMenu  ]
+		});
+	</script>
+
+	</body>
+</html>
