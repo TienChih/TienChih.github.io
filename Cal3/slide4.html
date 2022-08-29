@@ -43,7 +43,7 @@
 			<div class="slides">
 				
 				<section>
-					<h2>Crosses and Parallels.</h2>
+					<h2>Plainly normal.</h2>
 					<h4>M 211</h4>
 					
 					<h4>
@@ -52,14 +52,36 @@
 				</section>
 
 				<section>
-					<div class="r-frame" >
+					<section data-auto-animate>
+						<div  >
 							<p style="font-size: 25px;" >
-								Given vectors \(\mathbf{u}, \mathbf{v}\), if the angle between them is \(\theta\), what is the area of the parallelogram they span in terms of \(|\mathbf{u}|, |\mathbf{v}|, \theta\)?<br>
+								Let \(\mathbf{v}=(1,-3,2)\).  Which of the following are normal to \(\mathbf{v}\)?
+								<ul>
+									<li style="font-size: 25px;">\((1,1,1)\).</li>
+									<li style="font-size: 25px;">\((2,2,3)\).</li>
 
-								<iframe src="https://www.desmos.com/calculator/l0erqlvnoi?embed" width="80%" height="500" style="border: 1px solid #ccc" frameborder=0></iframe>
+									<li style="font-size: 25px;">\((2,-2,-4)\).</li>
+									<li style="font-size: 25px;">\((1,3,-1)\).</li>
+									<li style="font-size: 25px;">\((0,2,3)\).</li>
+									<li style="font-size: 25px;">\((3,1,0)\).</li>
+									<li style="font-size: 25px;">\((3,0,1)\).</li>
+									<li style="font-size: 25px;">\((-4,0,2)\).</li>
+								</ul>
 
 							</p>
 						</div>	
+					</section>
+
+					<section data-auto-animate>
+						<div  >
+							<p style="font-size: 25px;" >
+								Plot the vectors normal to \(\mathbf{v}\).  What do we notice?
+								
+
+							</p>
+						</div>	
+						<iframe src="https://www.geogebra.org/calculator/bqkhzhha" width="90%" height="500" style="border: 1px solid #ccc" frameborder=0></iframe>
+					</section>
 
 				</section>
 
@@ -67,376 +89,319 @@
 				
 
 				<section data-auto-animate>
-					<h4> The Cross product \(\times\)</h4>
+					<h4> A Plane</h4>
 						<div class="r-frame" >
 							<p style="font-size: 25px;" >
-								Given \(\mathbf{u}, \mathbf{v}\in \mathbb{R}^3\) then \(\mathbf{u}\times \mathbf{v}\) the vector whose magnitude is the area of the parallelogram formed by \(\mathbf{u}, \mathbf{v}\) (\(\|\mathbf{u}\|\|\mathbf{v}\|\sin(\theta)\) where \(\theta\) is the angle between \(\mathbf{u}, \mathbf{v}\) ), and whose direction is determined by the "right-hand rule".<br>
+								Given a point \(P=(x_0, y_0, z_0)\), and a normal vector \(\mathbf{v}=\langle A, B, C\rangle\), the plane passing through \(P\) normal to \(\mathbf{v}\) is the collection of all points \((x,y,z)\) so that the displacement vector \(\langle x-x_0, y-y_0, z-z_0\rangle\) is normal to \(\mathbf{v}\).
 
-								<iframe src="https://www.geogebra.org/calculator/gvmwkxnr" width="80%" height="500" style="border: 1px solid #ccc" frameborder=0></iframe>
+							</p>
+						</div>	
+
+						<div class="fragment" >
+							<p style="font-size: 25px;" >
+								For an \((x,y,z)\) above, what is the value of \(\langle x-x_0, y-y_0, z-z_0\rangle\cdot \langle A,B,C\rangle\)?
+
+							</p>
+						</div>
+
+						<div  class="fragment" >
+							<p style="font-size: 25px;" >
+								The <strong>standard form</strong> of a plane is \[Ax+By+Cz=D\] where \(A,B,C,D\in \mathbb{R}\).
 
 							</p>
 						</div>		
 						
-
-						
-
 					
 				</section>
 
 				<section>
-					<h4>Products of Basis Vectors</h4>
-					<div>
-						<p style="font-size: 25px;">
-							\[\mathbf{i}\times \mathbf{j} = \mathbf{k}, \mathbf{j}\times \mathbf{k} = \mathbf{i}, \mathbf{k}\times \mathbf{i} = \mathbf{j}.\]
-						</p>
-					</div>
+					<section data-auto-animate>
+						<div class="r-frame">
+							<p style="font-size: 30px;" >
+								Find the plane containing points \(P=(2,1,2), Q=(-1,0,1), R=(0,2,3).\)
+							</p>
 
-					<div class="fragment">
-						<p style="font-size: 25px;">
-							Can you see why
-							\[\mathbf{j}\times \mathbf{i} = -\mathbf{k}, \mathbf{k}\times \mathbf{j} = -\mathbf{i}, \mathbf{i}\times \mathbf{k} = -\mathbf{j}?\]
-						</p>
-					</div>
+						</div>
+						<div class="fragment">
+							<p style="font-size: 30px;" >
+								Compute \(\vec{PQ}, \vec{PR}\).
+							</p>
+
+						</div>
+
+						<div class="fragment">
+							<p style="font-size: 30px;" >
+								Can we find a vector normal to this plane?
+							</p>
+
+						</div>
+						<div class="fragment">
+							<p style="font-size: 30px;" >
+								Use either \(P, Q, R\) to find an equation for this plane.
+							</p>
+
+						</div>
+					</section>
+
+					<section data-auto-animate>
+						<div class="r-frame">
+							<p style="font-size: 30px;" >
+								Find the plane containing points \(P=(2,1,2), Q=(-1,0,1), R=(0,2,3).\)
+							</p>
+
+						</div>
+						<iframe src="https://www.geogebra.org/calculator/wf4fs87s" width="90%" height="500" style="border: 1px solid #ccc" frameborder=0></iframe>
+					</section>
+
 					
+
+
+				</section>
+
+				<section>
+					<section data-auto-animate>
+						<div class="r-frame">
+							<p style="font-size: 30px;" >
+								Find the plane containing the point \(P=(1,0,-1)\) and the line \(\mathcal{L}\) parameterized by \(f(t)=(t+2, 3-t, 2t)\)
+							</p>
+
+						</div>
+						<div class="fragment">
+							<p style="font-size: 30px;" >
+								Can we find two more points on this plane?
+							</p>
+
+						</div>
+
+						
+					</section>
+
+					<section data-auto-animate>
+						<div class="r-frame">
+							<p style="font-size: 30px;" >
+								Find the plane containing the point \(P=(1,0,-1)\) and the line \(\mathcal{L}\) parameterized by \(f(t)=(t+2, 3-t, 2t)\)
+							</p>
+
+						</div>
+						<iframe src="https://www.geogebra.org/calculator/kmd9fg7r" width="90%" height="500" style="border: 1px solid #ccc" frameborder=0></iframe>
+					</section>
+
+					
+
+
+				</section>
+
+				<section>
+					<section data-auto-animate>
+						<div class="r-frame">
+							<p style="font-size: 30px;" >
+								Find the point where the line \(f(t)=(t-3, 2, 5-2t)\) intersects the plane \(2x-y+3z=3\).
+							</p>
+
+						</div>
+					</section>
+
+					<section data-auto-animate>
+						<div class="r-frame">
+							<p style="font-size: 30px;" >
+								Find the point where the line \(f(t)=(t-3, 2, 5-2t)\) intersects the plane \(2x-y+3z=3\).
+							</p>
+
+						</div>
+						<iframe src="https://www.geogebra.org/calculator/znc7jndn" width="90%" height="500" style="border: 1px solid #ccc" frameborder=0></iframe>
+					</section>
 				</section>
 
 
+				<section>
+					<section data-auto-animate>
+						<div class="r-frame">
+							<p style="font-size: 30px;" >
+								Find the line that is the intersection of planes \(x+2y-z=4\) and \(2x-y+z=2\).
+							</p>
 
-				<section data-auto-animate>
-					
-						<div >
+						</div>
+					</section>
+
+					<section data-auto-animate>
+						<div class="r-frame">
+							<p style="font-size: 30px;" >
+								Find the line that is the intersection of planes \(x+2y-z=4\) and \(2x-y+z=2\).
+							</p>
+
+						</div>
+						<div class="fragment">
 							<p style="font-size: 25px;" >
-								Given \(\mathbf{u}, \mathbf{v}\in \mathbb{R}^3, c\in \mathbb{R}\).  Use geometric reasoning to show:
-								<ul>
-									<li style="font-size: 25px;">\((c\mathbf{u})\times \mathbf{v} = c(\mathbf{u}\times \mathbf{v}).\)</li>
-
-									<li style="font-size: 25px;">\(\mathbf{0} \times \mathbf{u} = \mathbf{0}.\)</li>
-
-									<li style="font-size: 25px;">\(\mathbf{u} \times \mathbf{u} = \mathbf{0}.\)</li>
-								</ul>
-								
-								<br>
-
-								<iframe src="https://www.geogebra.org/calculator/gvmwkxnr" width="80%" height="450" style="border: 1px solid #ccc" frameborder=0></iframe>
-
+								Find two points on both planes.
 							</p>
+
+						</div>
+					</section>
+
+
+					<section data-auto-animate>
+						<div class="r-frame">
+							<p style="font-size: 30px;" >
+								Find the line that is the intersection of planes \(x+2y-z=4\) and \(2x-y+z=2\).
+							</p>
+
+						</div>
+						<div class="fragment">
 							<p style="font-size: 25px;" >
-								(What are the areas of the parallelograms?)
+								Find two points on both planes.
 							</p>
-						</div>		
-						
-						
 
-						
+						</div>
+						<div class="fragment">
+							<p style="font-size: 25px;" >
+								Compute the line passing through those points.
+							</p>
 
-					
+						</div>
+					</section>
+
+					<section data-auto-animate>
+						<div class="r-frame">
+							<p style="font-size: 30px;" >
+								Find the line that is the intersection of planes \(x+2y-z=4\) and \(2x-y+z=2\).
+							</p>
+
+						</div>
+						<iframe src="https://www.geogebra.org/calculator/xsfvckte" width="90%" height="500" style="border: 1px solid #ccc" frameborder=0></iframe>
+					</section>
 				</section>
 
-				<section data-auto-animate>
-					
-						<div >
-							<p style="font-size: 25px;" >
-								Given \(\mathbf{u}, \mathbf{v}\in \mathbb{R}^3, c\in \mathbb{R}\).  Use geometric reasoning to show:
-								\[(\mathbf{u} \times \mathbf{v})\cdot \mathbf{u}=\mathbf{0}=(\mathbf{u} \times \mathbf{v})\cdot \mathbf{v}.\]
-								
-								<br>
-
-								<iframe src="https://www.geogebra.org/calculator/gvmwkxnr" width="80%" height="450" style="border: 1px solid #ccc" frameborder=0></iframe>
-
-							</p>
-							<p style="font-size: 25px;" >
-								(What is the angle between \(\mathbf{u} \times \mathbf{v}\) and \(\mathbf{u}, \mathbf{v}\)?)
-							</p>
-						</div>		
-						
-						
-
-						
-
-					
-				</section>
 
 				<section>
-					<h4>Basic Rules</h4>
-					<div>
-						<p style="font-size: 25px;">
-							Given \(\mathbf{u}, \mathbf{v}, \mathbf{w}\in \mathbb{R}^3, c\in \mathbf{R}.\)
-							<ul>
-									<li style="font-size: 25px;">\(\mathbf{u}\times \mathbf{v} = -(\mathbf{v}\times \mathbf{u}) .\)</li>
+					<section data-auto-animate>
+						<div class="r-frame">
+							<p style="font-size: 30px;" >
+								Find the plane parallel to \(3x-y+2z=5\) passing through \((1,-2,2)\).  (What vector is normal to this new plane?)
+							</p>
 
-									<li style="font-size: 25px;">\( \mathbf{u}\times (\mathbf{v}+\mathbf{w}) = \mathbf{u}\times \mathbf{v}+\mathbf{u}\times \mathbf{w}.\)</li>
+						</div>
+					</section>
 
-									<li style="font-size: 25px;">\((\mathbf{u} + \mathbf{v})\times\mathbf{w} = \mathbf{u}\times \mathbf{w} + \mathbf{v}\times \mathbf{w}.\)</li>
-									<li style="font-size: 25px;">\((c\mathbf{u})\times \mathbf{v} = c(\mathbf{u}\times \mathbf{v}) = \mathbf{u}\times (c\mathbf{v}).\)</li>
-								</ul>
+					<section data-auto-animate>
+						<div class="r-frame">
+							<p style="font-size: 30px;" >
+								Find the plane parallel to \(3x-y+2z=5\) passing through \((-2,2,-1)\).  (What vector is normal to this new plane?)
+							</p>
+
+						</div>
+						<iframe src="https://www.geogebra.org/calculator/ub8unxuw" width="90%" height="500" style="border: 1px solid #ccc" frameborder=0></iframe>
+					</section>
+				</section>
+
+
+
+				<section>
+					<h4>New Coordinate Systems</h4>
+					<div class="r-frame">
+						<p style="font-size: 30px;" >
+							Recall that in \(\mathbb{R}^2\) that one converts from cartesian to polar via: 
+							\[r^2=x^2+y^2, \tan\theta = y/x\]
+							and from polar to cartesian via:
+							\[x=r\cos(\theta), y=r\sin(\theta).\]
 						</p>
+
 					</div>
-					
 				</section>
 
 
 				<section>
 					<section data-auto-animate>
-					<div>
-						<p style="font-size: 25px;">
-							Use \[\mathbf{i}\times \mathbf{j} = \mathbf{k}, \mathbf{j}\times \mathbf{k} = \mathbf{i}, \mathbf{k}\times \mathbf{i} = \mathbf{j}, \mathbf{j}\times \mathbf{i} = -\mathbf{k}, \mathbf{k}\times \mathbf{j} = -\mathbf{i}, \mathbf{i}\times \mathbf{k} = -\mathbf{j}\] to compute:
-
-							<ul>
-									<li style="font-size: 25px;">\((3\mathbf{i}-2\mathbf{k})\times(-4\mathbf{j}+3\mathbf{k}).\)</li>
-
-									<li style="font-size: 25px;">\((-4\mathbf{i}+\mathbf{j})\times(2\mathbf{i}+%\mathbf{k}).\)</li>
-
-									<li style="font-size: 25px;">\((\mathbf{i}+2\mathbf{j})\times(2\mathbf{i}-6\mathbf{j}).\)</li>
-
-									
-								</ul>
-						</p>		
-
-					</div>
-					</section>
-
-					<section data-auto-animate>
-					<div>
-						<p style="font-size: 25px;">
-							Use \[\mathbf{i}\times \mathbf{j} = \mathbf{k}, \mathbf{j}\times \mathbf{k} = \mathbf{i}, \mathbf{k}\times \mathbf{i} = \mathbf{j}, \mathbf{j}\times \mathbf{i} = -\mathbf{k}, \mathbf{k}\times \mathbf{j} = -\mathbf{i}, \mathbf{i}\times \mathbf{k} = -\mathbf{j}\] to compute:
-
-							<ul>
-									<li style="font-size: 25px;">\((\mathbf{i}\times \mathbf{j})\times \mathbf{j}\).</li>
-
-									<li style="font-size: 25px;">\(\mathbf{i}\times (\mathbf{j}\times \mathbf{j})\).</li>
-
-									
-								</ul>
-						</p>		
-
-					</div>
-					</section>
-
-					<section data-auto-animate>
-					<div>
-						<p style="font-size: 25px;">
-							Use \[\mathbf{i}\times \mathbf{j} = \mathbf{k}, \mathbf{j}\times \mathbf{k} = \mathbf{i}, \mathbf{k}\times \mathbf{i} = \mathbf{j}, \mathbf{j}\times \mathbf{i} = -\mathbf{k}, \mathbf{k}\times \mathbf{j} = -\mathbf{i}, \mathbf{i}\times \mathbf{k} = -\mathbf{j}\] to compute:
-
-							<ul>
-									<li style="font-size: 25px;">\((\mathbf{i}\times \mathbf{j})\times \mathbf{j}\).</li>
-
-									<li style="font-size: 25px;">\(\mathbf{i}\times (\mathbf{j}\times \mathbf{j})\).</li>
-
-									
-								</ul>
-						</p>		
-
-					</div>
-					<div>
-						<p style="font-size: 25px;">
-							The cross product \(\times\) is <strong>non-associative</strong> :(
-						</p>
-					</div>
-					</section>
-
-				</section>
-
-				<section>
-
-					<section data-auto-animate>
-						<h4>Determinants</h4>
-						<div >
-							<p style="font-size: 25px;">
-								If \(A = \left[ \begin{array}{cc}  a  &amp; b \\  c  &amp; d \end{array} \right]\)
-								then 
-								 \[\begin{array}{rcl} |A| &amp; = &amp; ad-bc\end{array}.\]
-							</p>
+						<h4>Cylindrical coordinates</h4>
+						<div data-id="plot">
+							<img src="img/cylindricalcoords.jpg" width="50%">
 						</div>
 					</section>
 
 					<section data-auto-animate>
-						<h4>Determinants</h4>
-						<div >
-							<p style="font-size: 25px;">
-								If \(A = \left[ \begin{array}{ccc}  a  &amp; b&amp; c \\  d  &amp; e&amp; f \\  g  &amp; h&amp; i  \end{array} \right]\)
-								then 
-								 \[\begin{array}{rcl} |A| &amp; = &amp; \left| \begin{array}{ccc}  a  &amp; b&amp; c \\  d  &amp; e&amp; f \\  g  &amp; h&amp; i  \end{array} \right| \\ &amp; = &amp; a\left|\begin{array}{cc} e &amp; f  \\ h &amp; i\end{array} \right|
-								 -b\left|\begin{array}{cc} d &amp; f  \\ g &amp; i\end{array} \right|
-								 +c\left|\begin{array}{cc} d &amp; e  \\ g &amp; h\end{array} \right|\end{array}.\]
-							</p>
-						</div>
-					</section>
-
-					<section data-auto-animate>
-						<h4>Determinants</h4>
-						<div >
-							<p style="font-size: 25px;">
-								If \(A = \left[ \begin{array}{ccc}  a  &amp; b&amp; c \\  d  &amp; e&amp; f \\  g  &amp; h&amp; i  \end{array} \right]\)
-								then 
-								 \[\begin{array}{rcl} |A| &amp; = &amp; \left| \begin{array}{ccc}  a  &amp; b&amp; c \\  d  &amp; e&amp; f \\  g  &amp; h&amp; i  \end{array} \right| \\ &amp; = &amp; a\left|\begin{array}{cc} e &amp; f  \\ h &amp; i\end{array} \right|
-								 -b\left|\begin{array}{cc} d &amp; f  \\ g &amp; i\end{array} \right|
-								 +c\left|\begin{array}{cc} d &amp; e  \\ g &amp; h\end{array} \right|\\
-								 &amp;=&amp; a(ei-fh)-b(di-fg)+c(eh-ge).\end{array}\]
-							</p>
-						</div>
-					</section>
-
-				</section>
-
-				<section>
-
-					
-
-					<section data-auto-animate>
-						<h4>Cross Products as Determinants</h4>
-						<div data-id="det">
-							<p style="font-size: 25px;">
-								If \(\mathbf{u}=\langle u_1, u_2. u_3\rangle, \mathbf{v}=\langle v_1, v_2, v_3\rangle\), then another way to compute \(\mathbf{u}\times\mathbf{v}\) is:
-								 \[\begin{array}{rcl} \mathbf{u}\times\mathbf{v} &amp; = &amp; \left| \begin{array}{ccc}  \mathbf{i}  &amp; \mathbf{j}&amp; \mathbf{k} \\  u_1  &amp; u_2&amp; u_3 \\  v_1  &amp; v_2&amp; v_3  \end{array} \right| \\ &amp; = &amp; \mathbf{i}\left|\begin{array}{cc} u_2 &amp; u_3  \\ v_2 &amp; v_3\end{array} \right|
-								 -\mathbf{j}\left|\begin{array}{cc} u_1 &amp; u_3  \\ v_1 &amp; v_3\end{array} \right|
-								 +\mathbf{k}\left|\begin{array}{cc} u_1 &amp; u_2  \\ v_1 &amp; v_2\end{array} \right|\end{array}\]
-							</p>
-						</div>
-					</section>
-
-					<section data-auto-animate>
-						<h4>Cross Products as Determinants</h4>
-						<div data-id="det">
-							<p style="font-size: 25px;">
-								If \(\mathbf{u}=\langle u_1, u_2. u_3\rangle, \mathbf{v}=\langle v_1, v_2, v_3\rangle\), then another way to compute \(\mathbf{u}\times\mathbf{v}\) is:
-								 \[\begin{array}{rcl} \mathbf{u}\times\mathbf{v} &amp; = &amp; \left| \begin{array}{ccc}  \mathbf{i}  &amp; \mathbf{j}&amp; \mathbf{k} \\  u_1  &amp; u_2&amp; u_3 \\  v_1  &amp; v_2&amp; v_3  \end{array} \right| \\ &amp; = &amp; \mathbf{i}\left|\begin{array}{cc} u_2 &amp; u_3  \\ v_2 &amp; v_3\end{array} \right|
-								 -\mathbf{j}\left|\begin{array}{cc} u_1 &amp; u_3  \\ v_1 &amp; v_3\end{array} \right|
-								 +\mathbf{k}\left|\begin{array}{cc} u_1 &amp; u_2  \\ v_1 &amp; v_2\end{array} \right|\\
-								  &amp;=&amp; (u_2v_3-u_3v_2)\mathbf{i}-(u_1v_3-u_3v_1)\mathbf{j}+(u_1v_2-u_2v_1)\mathbf{k}.\end{array}\]
-							</p>
-						</div>
-					</section>
-
-					<section data-auto-animate>
-						<h4>Cross Products as Determinants</h4>
-						<div data-id="det">
-							<p style="font-size: 25px;">
-								If \(\mathbf{u}=\langle u_1, u_2. u_3\rangle, \mathbf{v}=\langle v_1, v_2, v_3\rangle\), then another way to compute \(\mathbf{u}\times\mathbf{v}\) is:
-								 \[\begin{array}{rcl} \mathbf{u}\times\mathbf{v} 
-								  &amp;=&amp; (u_2v_3-u_3v_2)\mathbf{i}-(u_1v_3-u_3v_1)\mathbf{j}+(u_1v_2-u_2v_1)\mathbf{k}.\end{array}\]
-							</p>
+						<h4>Cylindrical coordinates</h4>
+						<div data-id="plot">
+							<img src="img/cylindricalcoords.jpg" width="30%">
 						</div>
 						<div class="r-frame">
-							<p style="font-size: 25px;">
-								Compute \(\langle 1,3,1 \rangle\times \langle -2,0,1\rangle.\)
+							<p style="font-size: 25px;" >
+								In \(\mathbb{R}^3\)  one converts from cartesian to <strong>cylindrical</strong> via: 
+							\[r=x^2+y^2, \tan\theta = y/x, z=z\]
+							and from <strong>cylindrical</strong> to cartesian via:
+							\[x=r\cos(\theta), y=r\sin(\theta), z=z.\]
 							</p>
+
 						</div>
 					</section>
-
-
-
 				</section>
+
 
 				<section>
 					<section data-auto-animate>
-						<h4>Other ways to compute Cross Products</h4>
-						<div class="r-frame">
-							<p style="font-size: 35px;">
-								Compute \(\langle 1,3,1 \rangle\times \langle -2,0,1\rangle.\)
-							</p>
+						<h4>Cylindrical coordinates</h4>
+						<div data-id="plot">
+							<img src="img/sphericalcoords.png" width="50%">
 						</div>
-						<div>
-							<p>
-								<iframe src="https://www.geogebra.org/calculator/gvmwkxnr" width="80%" height="450" style="border: 1px solid #ccc" frameborder=0></iframe>
-							</p>
-						</div>
-
-
 					</section>
 
 					<section data-auto-animate>
-						<h4>Other ways to compute Cross Products</h4>
-						<div class="r-frame">
-							<p style="font-size: 35px;">
-								Compute \(\langle 1,3,1 \rangle\times \langle -2,0,1\rangle.\)
-							</p>
+						<h4>Spherical coordinates</h4>
+						<div data-id="plot">
+							<img src="img/sphericalcoords.png" width="30%">
 						</div>
-						<div>
-							<p style="font-size: 25px;">
-							<iframe src="sagecellcrossproduct.html" width="80%" height="500"></iframe>
+						<div class="r-frame">
+							<p style="font-size: 25px;" >
+								In \(\mathbb{R}^3\)  one converts from cartesian to <strong>spherical</strong> via: 
+							\[\rho^2=x^2+y^2+z^2, \tan\theta = y/x, \tan\phi=\frac{\sqrt{x^2+y^2}}{z}\]
+							and from <strong>spherical</strong> to cartesian via:
+							\[x=\rho\sin(\pi)\cos(\theta), y=\rho\sin(\phi)\sin(\theta), z=\rho\cos(\phi).\]
+							</p>
+
+						</div>
+					</section>
+
+					<section data-auto-animate>
+						<h4>Spherical coordinates</h4>
+						<div data-id="plot">
+							<img src="img/sphericalcoords.png" width="30%">
+						</div>
+						<div class="r-frame">
+							<p style="font-size: 25px;" >
+								In \(\mathbb{R}^3\)  one converts from cylindrical to <strong>spherical</strong> via: 
+							\[\rho^2=r^2+z^2, \theta = \theta, \tan\phi=r/z\]
+							and from <strong>spherical</strong> to cylindrical via:
+							\[r=\rho\sin(\pi), \theta=\theta, z=\rho\cos(\phi).\]
+							</p>
+
+						</div>
+					</section>
+				</section>
+
+				<section><div data-id="plot">
+							<img src="img/cylindricalcoords.jpg" height="250"><img src="img/sphericalcoords.png" height="250">
+						</div>
+					<div>
+						<p style="font-size: 25px;" >
+							For each of the following points, convert it from the given coordinate system to the other coordinate systems
 						</p>
-						</div>
+						<ul>
+							<li style="font-size: 25px;"> \(x=3, y=6, z=-1\) in cartesian.</li>
 
-						
+							<li style="font-size: 25px;"> \(r=4, \theta=\frac{\pi}{3}, z=2\) in cylindrical.</li>
 
+							<li style="font-size: 25px;"> \(\rho=5, \theta=5\frac{\pi}{4}, \phi=\frac{\pi}{6}\) in spherical.</li>
+						</ul>
 
-					</section>
-
+					</div>
 				</section>
 
 
-				<section>
-					<section data-auto-animate>
-						
-						<div>
-							<p style="font-size: 35px;">
-								Compute \(\langle 0,2,3 \rangle\times \langle -2,4,b\rangle.\)
-							</p>
-						</div>
-						
+
+				
 
 
-					</section>
-
-					<section data-auto-animate>
-
-						<div>
-							<p style="font-size: 35px;">
-								Compute \(\langle 0,2,3 \rangle\times \langle -2,4,b\rangle.\)
-							</p>
-						</div>
-						
-						<div>
-							<p style="font-size: 35px;">
-								Find the norms of \(\langle 0,2,3 \rangle, \langle -2,4,b\rangle.\)
-							</p>
-						</div>
-						
 
 
-					</section>
-
-					<section data-auto-animate>
-						<div>
-							<p style="font-size: 35px;">
-								Compute \(\langle 0,2,3 \rangle\times \langle -2,4,b\rangle.\)
-							</p>
-						</div>
-						
-						<div>
-							<p style="font-size: 35px;">
-								Find the norms of \(\langle 0,2,3 \rangle, \langle -2,4,b\rangle.\)
-							</p>
-						</div>
-
-						<div >
-							<p style="font-size: 35px;">
-								Find \(b\) so that the parallelogram spanned by \(\langle 0,2,3 \rangle, \langle -2,4,b\rangle\) has area \(10\).
-							</p>
-						</div>
-
-
-					</section>
-
-					<section data-auto-animate>
-						
-
-						<div >
-							<p style="font-size: 25px;">
-								Find \(b\) so that the parallelogram spanned by \(\langle 0,2,3 \rangle, \langle -2,4,b\rangle\) has area \(100\).
-							</p>
-						</div>
-
-						<div>
-							<p>
-								<iframe src="https://www.geogebra.org/calculator/ghv9ytef" width="80%" height="500" style="border: 1px solid #ccc" frameborder=0></iframe>
-							</p>
-						</div>
-
-
-					</section>
-
-				</section>
+				
 
 
 				
