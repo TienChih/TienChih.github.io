@@ -93,184 +93,296 @@
 				
 				<section>
 					<section data-auto-animate>
-						<div data-id="prose">
-							<p style="font-size: 25px;" >
-								In previous classes, we primarily study functions \(f:\mathbb{R}^1\to\mathbb{R}^1\).
-							</p>
-						</div>
-						<iframe src="https://www.desmos.com/calculator/yejvkdvaic" width="90%" height="500" style="border: 1px solid #ccc" frameborder=0></iframe>
-					</section>
-					<section data-auto-animate>
-						<div data-id="prose">
-							<p style="font-size: 25px;" >
-								In this class, we primarily study functions \(f:\mathbb{R}^n\to\mathbb{R}^m\).
-							</p>
-						</div>
-						<iframe src="https://www.geogebra.org/calculator/ffktd7zc" width="90%" height="500" style="border: 1px solid #ccc" frameborder=0></iframe>
-					</section>
-
-					<section data-auto-animate>
-						<div data-id="prose">
-							<p style="font-size: 25px;" >
-								Consider \(f:\mathbb{R}^2\to\mathbb{R}^1\) defined by \(f(x,y)=\frac{y^3}{12}-y-\frac{x^2}{4}+\frac{7}{2}\).  Find \(f(0,0), f(1, -2), f(3,1)\).
-							</p>
-						</div>
-						<iframe src="https://www.geogebra.org/calculator/ffktd7zc" width="50%" height="300" style="border: 1px solid #ccc" frameborder=0></iframe>
-					</section>
-				</section>
-
-				<section>
-					<section data-auto-animate>
-						<h4>Contour plot</h4>
+						<h4>Definition of limit, Calc 1</h4>
 						<div class="r-frame">
 							<p style="font-size: 25px;" >
-								Given a function \(f:\mathbb{R}^2\to \mathbb{R}\) the <strong>level curve</strong> at height \(k\) is the collection of points  \((x,y)\in \mathbb{R}^2\) such that \(f(x,y)=k\). \[\{(x,y)\in \mathbb{R}^2 : f(x,y)=k\}.\]	
-							</p>
-
-							<p style="font-size: 25px;" >
-								The  <strong>contour curve</strong> at height \(k\) is the collection of points  \((x,y, z)\in \mathbb{R}^2\) such that \(f(x,y)=k\) and \(z=k\). \[\{(x,y,z)\in \mathbb{R}^2 : z=f(x,y)=k\}.\]	
+								We say "the limit of \(f(x)\) as \(x\) approaches \(a\) is \(L\) if for any \(\epsilon>0\), there is a \(\delta>0\) so that whenever \(|x-a|<\delta\) we have \(|f(x)-L|<\epsilon\) "
 							</p>
 						</div>
 					</section>
+
 					<section data-auto-animate>
-						<h4>Contour plot</h4>
+						<h4>Definition of limit, Calc 1</h4>
 						<div class="r-frame">
 							<p style="font-size: 25px;" >
-								Given a function \(f:\mathbb{R}^2\to \mathbb{R}\) the <strong>level curve</strong> is \(\{(x,y)\in \mathbb{R}^2 : f(x,y)=k\}.\)	
-							
-								The  <strong>contour curve</strong> is \(\{(x,y,z)\in \mathbb{R}^2 : z=f(x,y)=k\}.\)	
+								We say "the limit of \(f(x)\) as \(x\) approaches \(a\) is \(L\) if for any \(\epsilon>0\), there is a \(\delta>0\) so that whenever \(|x-a|<\delta\) we have \(|f(x)-L|<\epsilon\) "
 							</p>
 						</div>
-						<iframe src="https://www.geogebra.org/calculator/pypcuzfx" width="90%" height="500" style="border: 1px solid #ccc" frameborder=0></iframe>
+						<iframe src="https://www.desmos.com/calculator/3qzl2swlim" width="90%" height="500" style="border: 1px solid #ccc" frameborder=0></iframe>
 					</section>
 
+					
+
 					<section data-auto-animate>
-						<h4>Contour plot</h4>
+						<h4>Definition of limit, General</h4>
+						<div class="r-frame">
+							<p style="font-size: 25px;" >
+								 We say "the limit of <strong>\(f:\mathbb{R}^n\to\mathbb{R}^m\) as \(\mathbf{x}\) approaches \(\mathbf{a}\) is \(\mathbf{L}\)</strong> if for any \(\epsilon>0\), there is a \(\delta>0\) so that whenever <strong> \(\|\mathbf{x}-\mathbf{a}\|<\delta\) we have \(\|f(\mathbf{x})-\mathbf{L}\|<\epsilon\)</strong> "
+							</p>
+						</div>
 						
-						<iframe src="https://www.geogebra.org/calculator/pypcuzfx" width="50%" height="350" style="border: 1px solid #ccc" frameborder=0></iframe>
-						<iframe src="sagecellcontourplot.html" width="80%" height="250" style="border: 1px solid #ccc" frameborder=0></iframe>
+					</section>
+
+					<section data-auto-animate>
+						<h4>Definition of limit, General</h4>
+						<div class="r-frame">
+							<p style="font-size: 25px;" >
+								 We say "the limit of <strong>\(f:\mathbb{R}^n\to\mathbb{R}^m\) as \(\mathbf{x}\) approaches \(\mathbf{a}\) is \(\mathbf{L}\)</strong> if for any \(\epsilon>0\), there is a \(\delta>0\) so that whenever <strong> \(\|\mathbf{x}-\mathbf{a}\|<\delta\) we have \(\|f(\mathbf{x})-\mathbf{L}\|<\epsilon\)</strong> "
+							</p>
+						</div>
+						<iframe src="https://www.geogebra.org/calculator/hy3bqqvc" width="90%" height="500" style="border: 1px solid #ccc" frameborder=0></iframe>
+						
+					</section>
+
+				</section>
+
+				<section>
+					<section data-auto-animate>
+						<div>
+							<p style="font-size: 25px;" >
+								In Calculus 1, the limit \(L\) exists if the limit approaching \(a\) from the left and the right agree.  That is \[\lim_{x\to a^-}f(x)=L=\lim_{x\to a^+} f(x).\]
+							</p>
+						</div>
+						<iframe src="https://www.desmos.com/calculator/3qzl2swlim" width="90%" height="500" style="border: 1px solid #ccc" frameborder=0></iframe>
+					</section>
+
+					<section data-auto-animate>
+						<div>
+							<p style="font-size: 25px;" >
+								What is the corresponding idea if the domain is \(\mathbb{R}^2\)?
+							</p>
+						</div>
+						<iframe src="https://www.geogebra.org/calculator/hy3bqqvc" width="90%" height="500" style="border: 1px solid #ccc" frameborder=0></iframe>
 					</section>
 				</section>
 
 				<section>
-					<div>
-						<p style="font-size: 25px;" >
-							Match the contour plots to the functions
+					<div class="r-frame">
+						<p style="font-size: 30px;" >
+							In order for the limit \(\displaystyle \lim_{\mathbf{x}\to \mathbf{a}} f(\mathbf{x}) \) to exist, the limit must agree on all possible approaches to \(\mathbf{x}\)!
 						</p>
-						<ul>
-							<li style="font-size: 25px;"> \(f(x,y)=3x^2-\frac{y^2}{3}.\)</li>
-							<li style="font-size: 25px;"> \(f(x,y)=3x^2-\frac{y}{3}.\)</li>
-							<li style="font-size: 25px;"> \(f(x,y)=\frac{x^2}{3}-3y.\)</li>
-							<li style="font-size: 25px;"> \(f(x,y)=\frac{x^2}{3}+3y.\)</li>
-						</ul>
 					</div>
-					<img src="img/plot1.png" height="200"><img src="img/plot2.png" height="200">
-					<img src="img/plot3.png" height="200"><img src="img/plot4.png" height="200">
+					<iframe src="https://www.desmos.com/calculator/mchbis97sa?embed" width="90%" height="500" style="border: 1px solid #ccc" frameborder=0></iframe>
+
+				</section>
+
+				<section>
+					<section data-auto-animate>
+						<div class="r-frame" data-id=prompt>
+							<p style="font-size: 30px;" >
+								Consider the function: \[f(x)=\frac{3x^2y^2+xy^3}{x^4+y^4}.\]
+							</p>
+						</div>
+						<ul>
+							<li style="font-size: 25px;">
+								What is \(f(x,0), x\neq 0\)?
+							</li>
+							<li style="font-size: 25px;">
+								Use this to find \(\displaystyle \lim_{(x,y)\to (0,0)} \frac{3x^2y^2+xy^3}{x^4+y^4}\) along the line \(y=0\).
+							</li>
+						</ul>
+					</section>
+
+					<section data-auto-animate>
+						<div class="r-frame" data-id=prompt>
+							<p style="font-size: 30px;" >
+								Consider the function: \[f(x)=\frac{3x^2y^2+xy^3}{x^4+y^4}.\]
+							</p>
+						</div>
+						<ul>
+							<li style="font-size: 25px;">
+								What is \(f(0,y), y\neq 0\)?
+							</li>
+							<li style="font-size: 25px;">
+								Use this to find \(\displaystyle \lim_{(x,y)\to (0,0)} \frac{3x^2y^2+xy^3}{x^4+y^4}\) along the line \(x=0\).
+							</li>
+						</ul>
+					</section>
+
+					<section data-auto-animate>
+						<div class="r-frame" data-id=prompt>
+							<p style="font-size: 30px;" >
+								Consider the function: \[f(x)=\frac{3x^2y^2+xy^3}{x^4+y^4}.\]
+							</p>
+						</div>
+						<ul>
+							<li style="font-size: 25px;">
+								What is \(f(x,x), x\neq 0\)?
+							</li>
+							<li style="font-size: 25px;">
+								Use this to find \(\displaystyle \lim_{(x,y)\to (0,0)} \frac{3x^2y^2+xy^3}{x^4+y^4}\) along the line \(y=x\).
+							</li>
+						</ul>
+					</section>
+
+					<section data-auto-animate>
+						<div class="r-frame" data-id=prompt>
+							<p style="font-size: 30px;" >
+								Consider the function: \[f(x)=\frac{3x^2y^2+xy^3}{x^4+y^4}.\]
+							</p>
+						</div>
+						<div>
+							<p style="font-size: 30px;" >
+								What is \(\displaystyle \lim_{(x,y)\to (0,0)} \frac{3x^2y^2+xy^3}{x^4+y^4}\)?
+							</p>
+						</div>
+					</section>
+
+					<section data-auto-animate>
+						<div class="r-frame" data-id=prompt>
+							<p style="font-size: 30px;" >
+								Consider the function: \[f(x)=\frac{3x^2y^2+xy^3}{x^4+y^4}.\]
+							</p>
+						</div>
+						<iframe src="https://www.geogebra.org/calculator/mespsf6z" width="90%" height="500" style="border: 1px solid #ccc" frameborder=0></iframe>
+					</section>
+
+
+					
 				</section>
 
 
 				<section>
 					<section data-auto-animate>
-						<h4>Section</h4>
-						<div class="r-frame">
-							<p style="font-size: 25px;" >
-								Given a function \(f:\mathbb{R}^2\to \mathbb{R}\) the <strong>section of the graph of \(f\) by the plane \(x=k\) or \(y=k\)</strong> is:\[\{(x,y,z)\in \mathbb{R}^2 : z=f(x,y), x=k\} \text{ or } \{(x,y,z)\in \mathbb{R}^2 : z=f(x,y), y=k\}.\]	
+						<div class="r-frame" data-id=prompt>
+							<p style="font-size: 30px;" >
+								Consider the function: \[f(x)=\frac{3x^3+3xy^2}{x^2+y^2}.\]
 							</p>
 						</div>
-						<iframe src="https://www.geogebra.org/calculator/zmy44nra" width="90%" height="450" style="border: 1px solid #ccc" frameborder=0></iframe>
+						<ul>
+							<li style="font-size: 25px;">
+								What is \(f(x,0), x\neq 0\)?
+							</li>
+							<li style="font-size: 25px;">
+								Use this to find \(\displaystyle \lim_{(x,y)\to (0,0)} \frac{3x^3+3xy^2}{x^2+y^2}\) along the line \(y=0\).
+							</li>
+						</ul>
 					</section>
+
+					<section data-auto-animate>
+						<div class="r-frame" data-id=prompt>
+							<p style="font-size: 30px;" >
+								Consider the function: \[f(x)=\frac{3x^3+3xy^2}{x^2+y^2}.\]
+							</p>
+						</div>
+						<ul>
+							<li style="font-size: 25px;">
+								What is \(f(0,y), y\neq 0\)?
+							</li>
+							<li style="font-size: 25px;">
+								Use this to find \(\displaystyle \lim_{(x,y)\to (0,0)} \frac{3x^3+3xy^2}{x^2+y^2}\) along the line \(x=0\).
+							</li>
+						</ul>
+					</section>
+
+					<section data-auto-animate>
+						<div class="r-frame" data-id=prompt>
+							<p style="font-size: 30px;" >
+								Consider the function: \[f(x)=\frac{3x^3+3xy^2}{x^2+y^2}.\]
+							</p>
+						</div>
+						<ul>
+							<li style="font-size: 25px;">
+								What is \(f(x,x), x\neq 0\)?
+							</li>
+							<li style="font-size: 25px;">
+								Use this to find \(\displaystyle \lim_{(x,y)\to (0,0)} \frac{3x^3+3xy^2}{x^2+y^2}\) along the line \(y=x\).
+							</li>
+						</ul>
+					</section>
+
+					<section data-auto-animate>
+						<div class="r-frame" data-id=prompt>
+							<p style="font-size: 30px;" >
+								Consider the function: \[f(x)=\frac{3x^3+3xy^2}{x^2+y^2}.\]
+							</p>
+						</div>
+						<div>
+							<p style="font-size: 30px;" >
+								How many more lines do we need to check?
+							</p>
+						</div>
+					</section>
+
+					<section data-auto-animate>
+						<div class="r-frame" data-id=prompt>
+							<p style="font-size: 30px;" >
+								Consider the function: \[f(x)=\frac{3x^3+3xy^2}{x^2+y^2}.\]
+							</p>
+						</div>
+						<iframe src="https://www.geogebra.org/calculator/mespsf6z" width="90%" height="500" style="border: 1px solid #ccc" frameborder=0></iframe>
+					</section>
+
+
+					
 				</section>
 
+				<section>
+					<h4>Limit Algebraic Properties</h4>
+
+					<div>
+						<p style="font-size: 30px;" >
+							Let \(F, G:X\subseteq \mathbb{R}^n\to \mathbb{R}^m, f,g,:X\subseteq \mathbb{R}^n\to \mathbb{R}, k\in \mathbb{R}\).
+						</p>
+					</div>
+					<ul>
+						<li style="font-size: 30px;">
+							 \(\displaystyle \lim_{\mathbf{x}\to\mathbf{a} } F(\mathbf{x}) + \lim_{\mathbf{x}\to\mathbf{a} } G(\mathbf{x}) = \lim_{\mathbf{x}\to\mathbf{a} } (F+G)(\mathbf{x})\)
+
+						</li>
+						<li style="font-size: 30px;">
+							 \(\displaystyle \lim_{\mathbf{x}\to\mathbf{a} } kF(\mathbf{x}) = k\lim_{\mathbf{x}\to\mathbf{a} } F(\mathbf{x})\)
+
+						</li>
+						<li style="font-size: 30px;">
+							 \(\displaystyle \left(\lim_{\mathbf{x}\to\mathbf{a} } f(\mathbf{x})\right)\left(\lim_{\mathbf{x}\to\mathbf{a} } g(\mathbf{x})\right) = \lim_{\mathbf{x}\to\mathbf{a} } (fg)(\mathbf{x})\)
+
+						</li>
+						<li style="font-size: 30px;">
+							 \(\displaystyle \frac{\lim_{\mathbf{x}\to\mathbf{a} } f(\mathbf{x})}{\lim_{\mathbf{x}\to\mathbf{a} } g(\mathbf{x})} = k\lim_{\mathbf{x}\to\mathbf{a} } \frac{f}{g}(\mathbf{x})\) so long as \(\lim_{\mathbf{x}\to\mathbf{a} } g(\mathbf{x})\neq 0\).
+
+						</li>
+					</ul>
+				</section>
 
 				<section>
 					<section data-auto-animate>
-						<h4>Families of surfaces</h4>
-						<div class="r-frame">
-							<p style="font-size: 25px;" >
-								A <strong>sphere</strong> centered at \(\mathbf{x}_0(x_0, y_0, z_0)\) with radius \(a\) is the collection of points satisfying \(\|\mathbf{x}-\mathbf{x}_0\|=a\):
-								\[(x-x_0)^2+(y-y_0)^2+(z-z_0)^2=a^2.\]
+						<div class="r-frame" data-id=prompt>
+							<p style="font-size: 30px;" >
+								Consider the function: \[f(x)=\frac{3x^3+3xy^2}{x^2+y^2}.\]
 							</p>
 						</div>
-						<iframe src="https://www.geogebra.org/calculator/xmwfm3gt" width="90%" height="450" style="border: 1px solid #ccc" frameborder=0></iframe>
-					</section>
-
-					<section data-auto-animate>
-						<h4>Families of surfaces</h4>
-						<div class="r-frame">
-							<p style="font-size: 25px;" >
-								A <strong>quadratic surface</strong> is a surface described by:
-								\[Ax^2+Bxy+Cxz+DY2+Eyz+Fz^2+Gx+Hy+Iz+J=0\] for real coefficients \(A,B,C,D,E,F,G,H,I,J\).
+						<div>
+							<p style="font-size: 30px;" >
+								Use the algebraic properties of limits to find \[\lim_{(x,y)\to (0,0)}\frac{3x^3+3xy^2}{x^2+y^2}.\] (which exists!)
 							</p>
 						</div>
-						
-					</section>
-					<section data-auto-animate>
-						<h4>Families of surfaces</h4>
-						<div class="r-frame">
-							<p style="font-size: 25px;" >
-								A <strong>Ellipsoid</strong> is a quadratic surface of the form:
-								\[\frac{x^2}{a^2}+\frac{y^2}{b^2}+\frac{z^2}{c^2}=1.\]  What do \(a,b,c\) correspond to?
-							</p>
-						</div>
-						<iframe src="https://www.geogebra.org/calculator/ns7pdfsz" width="90%" height="450" style="border: 1px solid #ccc" frameborder=0></iframe>
-					</section>
-					<section data-auto-animate>
-						<h4>Families of surfaces</h4>
-						<div class="r-frame">
-							<p style="font-size: 25px;" >
-								A <strong>Elliptic Paraboloid</strong> is a quadratic surface of the form:
-								\[\frac{z}{c}=\frac{x^2}{a^2}+\frac{y^2}{b^2}.\]  What do \(a,b,c\) correspond to?
-							</p>
-						</div>
-						<iframe src="https://www.geogebra.org/calculator/vvfywtnz" width="90%" height="450" style="border: 1px solid #ccc" frameborder=0></iframe>
-					</section>
-
-					<section data-auto-animate>
-						<h4>Families of surfaces</h4>
-						<div class="r-frame">
-							<p style="font-size: 25px;" >
-								A <strong>Hyperbolic Paraboloid</strong> is a quadratic surface of the form:
-								\[\frac{z}{c}=\frac{y^2}{b^2}-\frac{x^2}{a^2}.\] 
-							</p>
-						</div>
-						<iframe src="https://www.geogebra.org/calculator/ruygzwfk" width="90%" height="450" style="border: 1px solid #ccc" frameborder=0></iframe>
-					</section>
-
-					<section data-auto-animate>
-						<h4>Families of surfaces</h4>
-						<div class="r-frame">
-							<p style="font-size: 25px;" >
-								A <strong>Elliptic Cone</strong> is a quadratic surface of the form:
-								\[\frac{z^2}{c^2}=\frac{x^2}{a^2}+\frac{y^2}{b^2}.\] What do \(a,b,c\) correspond to?
-							</p>
-						</div>
-						<iframe src="https://www.geogebra.org/calculator/yhmc6d5p" width="90%" height="450" style="border: 1px solid #ccc" frameborder=0></iframe>
-					</section>
-
-					<section data-auto-animate>
-						<h4>Families of surfaces</h4>
-						<div class="r-frame">
-							<p style="font-size: 25px;" >
-								A <strong>Hyperboloid of one sheet</strong> is a quadratic surface of the form:
-								\[\frac{x^2}{a^2}+\frac{y^2}{b^2}-\frac{z^2}{c^2}=1.\] What do \(a,b,c\) correspond to?
-							</p>
-						</div>
-						<iframe src="https://www.geogebra.org/calculator/mg39k3fq" width="90%" height="450" style="border: 1px solid #ccc" frameborder=0></iframe>
-					</section>
-
-					<section data-auto-animate>
-						<h4>Families of surfaces</h4>
-						<div class="r-frame">
-							<p style="font-size: 25px;" >
-								A <strong>Hyperboloid of two sheets</strong> is a quadratic surface of the form:
-								\[\frac{z^2}{c^2}-\frac{x^2}{a^2}-\frac{y^2}{b^2}=1.\] What do \(a,b,c\) correspond to?
-							</p>
-						</div>
-						<iframe src="https://www.geogebra.org/calculator/yb4rkbv6" width="90%" height="450" style="border: 1px solid #ccc" frameborder=0></iframe>
 					</section>
 				</section>
 
+				<section>
+					<section data-auto-animate>
+						<div class="r-frame" data-id=prompt>
+							<p style="font-size: 30px;" >
+								Consider the function: \[f(x)=\frac{2x^2y-3x^3}{x^2+y^2}.\]
+							</p>
+						</div>
+						<iframe src="https://www.geogebra.org/calculator/vgedw9kz" width="90%" height="500" style="border: 1px solid #ccc" frameborder=0></iframe>
+					</section>
 
+					<section data-auto-animate>
+						<div class="r-frame" data-id=prompt>
+							<p style="font-size: 30px;" >
+								Consider the function: \[f(x)=\frac{2x^2y-3x^3}{x^2+y^2}.\]
+							</p>
+						</div>
+						<div>
+							<p style="font-size: 30px;" >
+								Switch to polar coordinates to find the limit.
+							</p>
+						</div>
+					</section>
+				</section>
 
 				
 
