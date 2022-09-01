@@ -1,0 +1,634 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>reveal.js</title>
+
+		<link rel="stylesheet" href="dist/reset.css">
+		<link rel="stylesheet" href="dist/reveal.css">
+		<link rel="stylesheet" href="dist/theme/white.css">
+		<link rel="stylesheet" href="plugin/chalkboard/style.css">
+		<link rel="stylesheet" href="plugin/customcontrols/style.css">
+
+
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+
+
+
+		<!-- Theme used for syntax highlighted code -->
+		<link rel="stylesheet" href="plugin/highlight/monokai.css">
+		<style>
+			.container{
+   				 display: flex;
+			}
+			.col{
+    			flex: 1;
+			}
+		</style>
+			<script async defer src="https://buttons.github.io/buttons.js"></script>
+
+		<script src="plugin/menu/menu.js"></script>
+
+		<script src="https://sagecell.sagemath.org/static/embedded_sagecell.js"></script>
+  
+ 	 <script>sagecell.makeSagecell({"inputLocation": ".sage"});</script>
+
+
+
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				
+				<section>
+					<h2>A partial treatment of derivatives.</h2>
+					<h4>M 211</h4>
+					
+					<h4>
+						Oxford College of Emory University <a href="https://app.oxford.emory.edu/WebApps/Directory/index.cfm/view/9984" target="_blank">Tien Chih</a>
+					</h4>
+				</section>
+
+				
+
+
+				
+				<section>
+				<section data-auto-animate>
+					<h4> A partial function</h4>
+						<div class="r-frame" >
+							<p style="font-size: 35px;" >
+								Let \(f:\mathbb{R}^n\to \mathbb{R},\) and let \(\mathbf{x}=(x_1, x_2, \ldots x_n)\) represent a generic point in \(\mathbb{R}^n\).  Then the <strong>partial function</strong> \(F(x_i):\mathbb{R}\to\mathbb{R}\) is a function obtained by fixing all the entries of \(f\) at constants except \(x_i\):
+								\[F(x_i):=f(a_1,\ldots,x_i, \ldots a_n).\]
+
+							</p>
+						</div>	
+
+						
+					
+				</section>
+				<section data-auto-animate>
+					<h4> A partial function</h4>
+						<div class="r-frame" >
+							<p style="font-size: 25px;" >
+								Consider \[f(x,y)=\begin{cases} \frac{2x^2y-3x^3}{x^2+y^2} &amp; (x,y)\neq (0,0) \\ 0 &amp; (x,y)=(0,0) \end{cases}.\]  Find the partial function \(F(x)=f(x,a)\) for \(a=0,1,2,-1\).
+
+							</p>
+						</div>	
+						<iframe src="https://www.geogebra.org/calculator/hebra36m" width="60%" height="350" style="border: 1px solid #ccc" frameborder=0></iframe>
+
+						
+					
+				</section>
+				<section data-auto-animate>
+					<h4> A partial function</h4>
+						<div class="r-frame" >
+							<p style="font-size: 20px;" >
+								Consider \[f(x,y)=\begin{cases} \frac{2x^2y-3x^3}{x^2+y^2} &amp; (x,y)\neq (0,0) \\ 0 &amp; (x,y)=(0,0) \end{cases}.\]  Find the partial function \(F(x)=f(x,a)\) for \(a=0,1,2,-1\).
+
+							</p>
+						</div>	
+						<iframe src="https://www.geogebra.org/calculator/hebra36m" width="60%" height="350" style="border: 1px solid #ccc" frameborder=0></iframe>
+
+						<p style="font-size: 25px;" >
+								What are the derivatives of these functions?
+
+							</p>
+
+						
+					
+				</section>
+				</section>
+
+				<section>
+					<h4> A partial derivative</h4>
+						<div class="r-frame" >
+							<p style="font-size: 25px;" >
+								The <strong>partial derivative of \(f\) with respect to \(x_i\)</strong> denotes the single variable derivative of \(F(x_i)\).
+
+							</p>
+							<p style="font-size: 25px;" >
+								Some common notations are: \[\frac{\partial f}{\partial x_i}, D_{x_i}f(x_1, \ldots, x_n), f_{x_i}(x_1, \ldots, x_n).\]
+
+							</p>
+
+							<p style="font-size: 25px;">
+								Formally, we have: \[\frac{\partial f}{\partial x_i} = \lim_{h\to 0}\frac{f(x_1, \ldots ,x_i+h,\ldots , x_n) - f(x_ 1, \ldots, x_i,\ldots , x_n) }{h}.\]
+							</p>
+
+						</div>	
+						
+				</section>
+
+				<section>
+					<section data-auto-animate>
+						
+
+						<div class="r-frame" >
+							<p style="font-size: 35px;" >
+								Consider \[f(x,y)=\begin{cases} \frac{2x^2y-3x^3}{x^2+y^2} &amp; (x,y)\neq (0,0) \\ 0 &amp; (x,y)=(0,0) \end{cases}.\]  Find \(f_x(2,3), f_x(1,-1), f_y(2,3), f_y(1,-1).\)
+							</p>
+
+						</div>	
+					</section>
+
+					<section data-auto-animate>
+						
+
+						<div class="r-frame" >
+							<p style="font-size: 25px;" >
+								Consider \[f(x,y)=\begin{cases} \frac{2x^2y-3x^3}{x^2+y^2} &amp; (x,y)\neq (0,0) \\ 0 &amp; (x,y)=(0,0) \end{cases}.\]  Find \(f_x(2,3), f_x(1,-1), f_y(2,3), f_y(1,-1).\)
+							</p>
+
+						</div>	
+						<div>
+							<p style="font-size: 25px;" >
+								Compute \(f_x(x,y), f_y(x,y)\) for \((x,y)\neq (0,0)\).  (Why did we exclude (0,0)?)
+							</p>
+						</div>
+
+					</section>
+
+					<section data-auto-animate>
+						
+
+						<div class="r-frame" >
+							<p style="font-size: 25px;" >
+								Consider \[f(x,y)=\begin{cases} \frac{2x^2y-3x^3}{x^2+y^2} &amp; (x,y)\neq (0,0) \\ 0 &amp; (x,y)=(0,0) \end{cases}.\]  Find \(f_x(2,3), f_x(1,-1), f_y(2,3), f_y(1,-1).\)
+							</p>
+
+						</div>	
+						<div>
+							<p style="font-size: 25px;" >
+								Compute \(f_x(x,y), f_y(x,y)\) for \((x,y)\neq (0,0)\).  (Why did we exclude (0,0)?)
+							</p>
+						</div>
+						<div>
+							<p style="font-size: 25px;" >
+								Use the limit definition of the derivative to compute \(f_x(0,0), f_y(0,0).\)
+							</p>
+						</div>
+					</section>
+
+
+				</section>
+
+				<section>
+					<h4>Differentiability in Calc 1</h4>
+					<div>
+						<p style="font-size: 35px;" >
+							Explain all the reasons you can think of why \(y=|x|\) doesn't have a tangent line when x=0.
+						</p>
+						<iframe src="https://www.desmos.com/calculator/vauteydwka?embed" width="60%" height="350" style="border: 1px solid #ccc" frameborder=0></iframe>
+
+					</div>
+				</section>
+
+
+				<section>
+					<section data-auto-animate>
+						<div class="r-frame">
+							<p style="font-size: 25px;" >
+							Let \(f(x,y)=3x^2y-2y^3\), consider \(P=(1,1,f(1,1))\) on the surface of the plot of this function.
+							</p>
+						</div>
+						<div>
+							<p style="font-size: 25px;" >
+								Find \(f_x(1,1), f_y(1,1)\)
+							</p>
+						</div>
+					</section>
+
+					<section data-auto-animate>
+						<div class="r-frame">
+							<p style="font-size: 25px;" >
+							Let \(f(x,y)=3x^2y-2y^3\), consider \(P=(1,1,f(1,1))\) on the surface of the plot of this function.
+							</p>
+						</div>
+						<div>
+							<p style="font-size: 25px;" >
+								Find \(f_x(1,1), f_y(1,1)\)
+							</p>
+						</div>
+						<div>
+							<p style="font-size: 25px;" >
+								Find \(m_x, m_y\) so that \((1,0,m_x), (0,1,m_y)\) are tangent to \(z=f(x,y)\) at \(P\). (Hint: Consider the tangent line in the \(x, y\) directions.)
+							</p>
+						</div>
+					</section>
+
+					<section data-auto-animate>
+						<div class="r-frame">
+							<p style="font-size: 25px;" >
+							Let \(f(x,y)=3x^2y-2y^3\), consider \(P=(1,1,f(1,1))\) on the surface of the plot of this function.
+							</p>
+						</div>
+						<div>
+							<p style="font-size: 25px;" >
+								Find \(f_x(1,1), f_y(1,1)\)
+							</p>
+						</div>
+						<div>
+							<p style="font-size: 25px;" >
+								Find \(m_x, m_y\) so that \((1,0,m_x), (0,1,m_y)\) are tangent to \(z=f(x,y)\) at \(P\).
+							</p>
+						</div>
+						<div>
+							<p style="font-size: 25px;" >
+								Find the plane parallel to the vectors you found before, that passes through \(P\).
+							</p>
+						</div>
+					</section>
+
+					<section data-auto-animate>
+						<div class="r-frame">
+							<p style="font-size: 25px;" >
+							Let \(f(x,y)=3x^2y-2y^3\), consider \(P=(1,1,f(1,1))\) on the surface of the plot of this function.
+							</p>
+						</div>
+						
+						<div>
+							<p style="font-size: 25px;" >
+								Find the plane parallel to the vectors you found before, that passes through \(P\).
+							</p>
+						</div>
+						<iframe src="https://www.geogebra.org/calculator/jatxzgww" width="60%" height="350" style="border: 1px solid #ccc" frameborder=0></iframe>
+					</section>
+
+				</section>
+
+				<section>
+					<h4>Tangent Plane</h4>
+					<div class="r-frame">
+						<p style="font-size: 35px;" >
+							<strong>If</strong> the graph of \(z=f(x,y)\) has a tangent plane at \((x_0, y_0, f(x_0,y_0))\),  then that tangent plane has equation \[z=f(a,b)+f_x(x_0,y_0)(x-x_0)+f_y(x_0,y_0)(y-y_0).\]
+						</p>
+					</div>
+					<p style="font-size: 25px;" >
+						(Note that \(f_x(x_0, y_0), f_y(x_0,y_0)\) can exist, and a tangent plane may not.)
+
+				</section>
+
+
+				<section>
+					<section data-auto-animate>
+					<h4>Differentiability</h4>
+					<div class="r-frame">
+						<p style="font-size: 35px;" >
+							Let \(X\) be open in \(\mathbb{R}^2\) and  \(f(x,y):X\subseteq \mathbb{R}^2\to \mathbb{R}\) so that \(f_x(x_0,y_0), f_y(x_0,y_0)\) exist for some \((x_0,y_0)\).
+						</p>
+
+						<p style="font-size: 35px;" >
+							Then \(f\) is <strong> differentiable</strong> at \((x_0,y_0)\) if the tangent plane at \((x_0,y_0)\) is a "good" local approximation for \(f\).
+						</p>
+					</div>
+					</section>
+
+					<section data-auto-animate>
+					<h4>Differentiability</h4>
+					<div class="r-frame">
+						<p style="font-size: 35px;" >
+							Let \(X\) be open in \(\mathbb{R}^2\) and  \(f(x,y):X\subseteq \mathbb{R}^2\to \mathbb{R}\) so that \(f_x(x_0,y_0), f_y(x_0,y_0)\) exist for some \((x_0,y_0)\).
+						</p>
+
+						<p style="font-size: 30px;" >
+							Let \[h(x,y)=f(x_0,y_0)+f_x(x_0,y_0)(x-x_0)+f_y(x_0,y_0)(y-y_0).\] Then \(f\) is <strong> differentiable</strong> at \((x_0,y_0)\) if 
+							\[\lim_{(x,y)\to(x_0,y_0)} \frac{f(x,y)-h(x,y)}{\|(x,y)-(x_0,y_0)\|}=0.\]
+						</p>
+					</div>
+					</section>
+				</section>
+
+				<section>
+					<section data-auto-animate>
+						<h4>Proving differentiability.</h4>
+						<div class="r-frame">
+							<p style="font-size: 35px;" >
+								Show that \[f(x,y)=\begin{cases} \frac{x^4+y^4}{x^2+y^2} &amp (x,y)\neq (0,0) \\ 0 &amp; (x,y)=(0,0) \end{cases}\] is differentiable at the origin.
+							</p>
+						</div>
+					</section>
+
+					<section data-auto-animate>
+						<h4>Proving differentiability.</h4>
+						<div class="r-frame">
+							<p style="font-size: 35px;" >
+								Show that \[f(x,y)=\begin{cases} \frac{x^4+y^4}{x^2+y^2} &amp (x,y)\neq (0,0) \\ 0 &amp; (x,y)=(0,0) \end{cases}\] is differentiable at the origin.
+							</p>
+						</div>
+						<div>
+							<p style="font-size: 25px;" >
+								Use the limit definition to verify that \(f_x(0,0), f_y(0,0)=0.\)
+							</p>
+						</div>
+					</section>
+					<section data-auto-animate>
+						<h4>Proving differentiability.</h4>
+						<div class="r-frame">
+							<p style="font-size: 35px;" >
+								Show that \[f(x,y)=\begin{cases} \frac{x^4+y^4}{x^2+y^2} &amp (x,y)\neq (0,0) \\ 0 &amp; (x,y)=(0,0) \end{cases}\] is differentiable at the origin.
+							</p>
+						</div>
+						<div>
+							<p style="font-size: 25px;" >
+								Use the limit definition to verify that \(f_x(0,0), f_y(0,0)=0.\)
+							</p>
+						</div>
+						<div>
+							<p style="font-size: 25px;" >
+								 Note \(h(x,y)=0+0(x-0)+0(y-0)=0.\)
+							</p>
+						</div>
+						
+					</section>
+
+					<section data-auto-animate>
+						<h4>Proving differentiability.</h4>
+						<div class="r-frame">
+							<p style="font-size: 35px;" >
+								Show that \[f(x,y)=\begin{cases} \frac{x^4+y^4}{x^2+y^2} &amp (x,y)\neq (0,0) \\ 0 &amp; (x,y)=(0,0) \end{cases}\] is differentiable at the origin.
+							</p>
+						</div>
+						
+						<div>
+							<p style="font-size: 20px;" >
+								Show that \[\lim_{(x,y)\to (0,0)}\frac{\frac{x^4+y^4}{x^2+y^2}-0}{\|(x,y)-(0,0)\|}=0.\]  
+								Hint:
+								\[\frac{x^4+y^4}{(x^2+y^2)\sqrt{x^2+y^2}} = \frac{x^4}{(x^2+y^2)\sqrt{x^2+y^2}} + \frac{y^4}{(x^2+y^2)\sqrt{x^2+y^2}} \leq \frac{x^4}{(x^2)\sqrt{x^2}} + \frac{y^4}{(y^2)\sqrt{y^2}}\]
+							</p>
+						</div>
+					</section>
+
+					
+				</section>
+
+				<section>
+					<section data-auto-animate>
+						<h4>Proving non-differentiability.</h4>
+						<div class="r-frame">
+							<p style="font-size: 35px;" >
+								Show that \[g(x,y)=\begin{cases} \frac{2x^2y-3x^3}{x^2+y^2} &amp; (x,y)\neq (0,0) \\ 0 &amp; (x,y)=(0,0) \end{cases}\] is <strong>not</strong> differentiable at the origin.
+							</p>
+						</div>
+					</section>
+
+					<section data-auto-animate>
+						<h4>Proving non-differentiability.</h4>
+						<div class="r-frame">
+							<p style="font-size: 35px;" >
+								Show that \[g(x,y)=\begin{cases} \frac{2x^2y-3x^3}{x^2+y^2} &amp; (x,y)\neq (0,0) \\ 0 &amp; (x,y)=(0,0) \end{cases}\] is <strong>not</strong> differentiable at the origin.
+							</p>
+						</div>
+						<div>
+							<p style="font-size: 25px;" >
+								Recall that we have shown \(g_x(0,0)=g_y(0,0)=0\), and so \(h(x,y)=0\).
+							</p>
+						</div>
+					</section>
+
+					<section data-auto-animate>
+						<h4>Proving non-differentiability.</h4>
+						<div class="r-frame">
+							<p style="font-size: 35px;" >
+								Show that \[g(x,y)=\begin{cases} \frac{2x^2y-3x^3}{x^2+y^2} &amp; (x,y)\neq (0,0) \\ 0 &amp; (x,y)=(0,0) \end{cases}\] is <strong>not</strong> differentiable at the origin.
+							</p>
+						</div>
+						<div>
+							<p style="font-size: 25px;" >
+								Recall that we have shown \(g_x(0,0)=g_y(0,0)=0\), and so \(h(x,y)=0\).
+							</p>
+						</div>
+						<div>
+							<p style="font-size: 25px;" >
+								Consider the limit \[\lim_{(x,y)\to(a,b)}\frac{\frac{2x^2y-3x^3}{x^2+y^2}-0}{\|(x,y)-(0,0)\|}\]
+								along the \(x=0, y=0, x=y\) lines.
+							</p>
+						</div>
+					</section>
+					
+
+					
+				</section>
+
+				<section>
+					<h4>Gradient</h4>
+					<div class="r-frame">
+						<p style="font-size: 35px;" >
+							Given \(f:\mathbb{R}^n\to \mathbb{R}\) the <strong>gradient</strong> of \(f\) is defined as \[\nabla f(\mathbf{x}) =\langle f_{x_1}(\mathbf{x}), \ldots, f_{x_n}(\mathbf{x})\rangle.\]
+						</p>
+
+						<p style="font-size: 35px;" >
+							We define \(Df(\mathbf{a})=[f_{x_1}(\mathbf{a}), \ldots, f_{x_n}(\mathbf{a})].\)
+						</p>
+					</div>
+					<p style="font-size: 35px;" >
+						Note if \(\mathbf{f}:\mathbb{R}^n\to \mathbb{R}^m\) we would define:
+						\[Df(\mathbf{x})
+						=
+						\left[
+						\begin{array}{ccc}
+						\frac{\partial f_1}{\partial x_1} &amp; \ldots &amp; \frac{\partial f_1}{\partial x_n} \\
+						\vdots &amp; \vdots &amp; \vdots \\
+						\frac{\partial f_m}{\partial x_1} &amp; \ldots &amp; \frac{\partial f_m}{\partial x_n}
+						\end{array}
+						\right]
+						.\]
+
+
+				</section>
+
+				<section>
+					<h4>Differentiability: General</h4>
+					<div class="r-frame">
+						<p style="font-size: 35px;" >
+							Let \(X\) be open in \(\mathbb{R}^n\) and  \(f:X\subseteq \mathbb{R}^n\to \mathbb{R}\) so that \(f_{x_i}(\mathbf{a})\) exists for some \(\mathbf{a}\).
+						</p>
+
+						<p style="font-size: 35px;" >
+							Let \[h(\mathbf{x})=f(\mathbf{a})+\sum_{i=1}^n f_{x_i}(\mathbf{a})(x_i-a_i).\] Then \(f\) is <strong> differentiable</strong> at \(\mathbf{a}\) if 
+							\[\lim_{\mathbf{x}\to \mathbf{a}} \frac{f(\mathbf{x})-h(\mathbf{x})}{\|\mathbf{x}-\mathbf{a}\|}=0.\]
+						</p>
+					</div>
+				</section>
+
+				<section>
+					<h4>Differentiability: Super General</h4>
+					<div class="r-frame">
+						<p style="font-size: 35px;" >
+							Let \(X\) be open in \(\mathbb{R}^n\) and  \(f:X\subseteq \mathbb{R}^n\to \mathbb{R}^m\) so that \(Df(\mathbf{a})\) exists for some \(\mathbf{a}\).
+						</p>
+
+						<p style="font-size: 35px;" >
+							Let \[h(\mathbf{x})=f(\mathbf{a})+Df(\mathbf{a})(\mathbf{x}-\mathbf{a}).\] Then \(f\) is <strong> differentiable</strong> at \(\mathbf{a}\) if 
+							\[\lim_{\mathbf{x}\to \mathbf{a}} \frac{\|f(\mathbf{x})-h(\mathbf{x})\|}{\|\mathbf{x}-\mathbf{a}\|}=0.\]
+						</p>
+					</div>
+				</section>
+
+				<section>
+					<h4>Derivative rules still work</h4>
+					<div class="r-frame">
+						<p style="font-size: 35px;" >
+							Let \(X\) be open in \(\mathbb{R}^n\) and  \(f, g:X\subseteq \mathbb{R}^n\to \mathbb{R}^m\) so that \(Df(\mathbf{a}), Dg(\mathbf{a})\) exists for some \(\mathbf{a}\).  Let \(k\in \mathbb{R}\).
+						</p>
+
+						<ul>
+							<li style="font-size: 35px;"> \(D(f+g)(\mathbf{a})=Df(\mathbf{a})+ Dg(\mathbf{a})\)</li>
+
+							<li style="font-size: 35px;"> \(D(kf)(\mathbf{a})=kDf(\mathbf{a})\).</li>
+						</ul>	
+
+						<p style="font-size: 35px;" >
+							If \(m=1\):
+						</p>
+						<ul>
+							<li style="font-size: 35px;"> \(D(fg)(\mathbf{a})=Df(\mathbf{a})\cdot g+ f\cdot Dg(\mathbf{a})\)</li>
+
+							<li style="font-size: 35px;"> \(D\left(\frac{f}{g}\right)(\mathbf{a})=\frac{g\cdot Df(\mathbf{a})-f\cdot Dg(\mathbf{a})}{(Dg(\mathbf{a}))^2}\).</li>
+						</ul>
+					</div>
+				</section>
+
+
+
+
+
+
+				
+				
+
+
+				
+
+				
+
+
+
+
+				
+
+
+				
+
+
+
+
+				
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+					
+				
+			</div>
+		</div>
+
+		<script src="dist/reveal.js"></script>
+		<script src="plugin/notes/notes.js"></script>
+		<script src="plugin/markdown/markdown.js"></script>
+		<script src="plugin/highlight/highlight.js"></script>
+		<script>
+			// More info about initialization & config:
+			// - https://revealjs.com/initialization/
+			// - https://revealjs.com/config/
+			Reveal.initialize({
+				hash: true,
+
+				// Learn about plugins: https://revealjs.com/plugins/
+				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
+			});
+		</script>
+		<script src="plugin/math/math.js"></script>
+		<script src="plugin/chalkboard/plugin.js"></script>
+		<script src="plugin/customcontrols/plugin.js"></script>
+
+
+
+	<script>
+  	Reveal.initialize({
+		math: {
+			mathjax: 'https://cdn.jsdelivr.net/gh/mathjax/mathjax@2.7.8/MathJax.js',
+			config: 'TeX-AMS_HTML-full',
+			// pass other options into `MathJax.Hub.Config()`
+			TeX: { Macros: { RR: "{\\bf R}" } }
+		},
+
+		chalkboard: {
+        boardmarkerWidth: 3,
+        chalkWidth: 7,
+        chalkEffect: 1.0,
+        storage: null,
+        src: null,
+        readOnly: undefined,
+        transition: 800,
+        theme: "chalkboard",
+        background: [ 'rgba(127,127,127,.1)' , path + 'img/blackboard.png' ],
+        grid: { color: 'rgb(50,50,10,0.5)', distance: 80, width: 2},
+        eraser: { src: path + 'img/sponge.png', radius: 20},
+        boardmarkers : [
+                { color: 'rgba(100,100,100,1)', cursor: 'url(' + path + 'img/boardmarker-black.png), auto'},
+                { color: 'rgba(30,144,255, 1)', cursor: 'url(' + path + 'img/boardmarker-blue.png), auto'},
+                { color: 'rgba(220,20,60,1)', cursor: 'url(' + path + 'img/boardmarker-red.png), auto'},
+                { color: 'rgba(50,205,50,1)', cursor: 'url(' + path + 'img/boardmarker-green.png), auto'},
+                { color: 'rgba(255,140,0,1)', cursor: 'url(' + path + 'img/boardmarker-orange.png), auto'},
+                { color: 'rgba(150,0,20150,1)', cursor: 'url(' + path + 'img/boardmarker-purple.png), auto'},
+                { color: 'rgba(255,220,0,1)', cursor: 'url(' + path + 'img/boardmarker-yellow.png), auto'}
+        ],
+        chalks: [
+                { color: 'rgba(255,255,255,0.5)', cursor: 'url(' + path + 'img/chalk-white.png), auto'},
+                { color: 'rgba(96, 154, 244, 0.5)', cursor: 'url(' + path + 'img/chalk-blue.png), auto'},
+                { color: 'rgba(237, 20, 28, 0.5)', cursor: 'url(' + path + 'img/chalk-red.png), auto'},
+                { color: 'rgba(20, 237, 28, 0.5)', cursor: 'url(' + path + 'img/chalk-green.png), auto'},
+                { color: 'rgba(220, 133, 41, 0.5)', cursor: 'url(' + path + 'img/chalk-orange.png), auto'},
+                { color: 'rgba(220,0,220,0.5)', cursor: 'url(' + path + 'img/chalk-purple.png), auto'},
+                { color: 'rgba(255,220,0,0.5)', cursor: 'url(' + path + 'img/chalk-yellow.png), auto'}
+        ]
+    },
+    customcontrols: {
+  		controls: [
+  			{ icon: '<i class="fa fa-pen-square"></i>',
+  			  title: 'Toggle chalkboard (B)',
+  			  action: 'RevealChalkboard.toggleChalkboard();'
+  			},
+  			{ icon: '<i class="fa fa-pen"></i>',
+  			  title: 'Toggle notes canvas (C)',
+  			  action: 'RevealChalkboard.toggleNotesCanvas();'
+  			}
+  		]
+    },
+
+		plugins: [ RevealMath, RevealChalkboard, RevealCustomControls, RevealMenu  ]
+		});
+	</script>
+
+	</body>
+</html>
