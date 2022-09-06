@@ -1,0 +1,472 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>reveal.js</title>
+
+		<link rel="stylesheet" href="dist/reset.css">
+		<link rel="stylesheet" href="dist/reveal.css">
+		<link rel="stylesheet" href="dist/theme/white.css">
+		<link rel="stylesheet" href="plugin/chalkboard/style.css">
+		<link rel="stylesheet" href="plugin/customcontrols/style.css">
+
+
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+
+
+
+		<!-- Theme used for syntax highlighted code -->
+		<link rel="stylesheet" href="plugin/highlight/monokai.css">
+		<style>
+			.container{
+   				 display: flex;
+			}
+			.col{
+    			flex: 1;
+			}
+		</style>
+			<script async defer src="https://buttons.github.io/buttons.js"></script>
+
+		<script src="plugin/menu/menu.js"></script>
+
+
+
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				
+				<section>
+					<h2>Deriving rules of derivation.</h2>
+					<h4>M 111</h4>
+					
+					
+					<h4>
+						Oxford College of Emory University <a href="https://app.oxford.emory.edu/WebApps/Directory/index.cfm/view/9984" target="_blank">Tien Chih</a>
+					</h4>
+				</section>
+
+				
+
+				<section>
+					<section data-auto-animate>
+						<div data-id="problem">
+							<ul>
+								<li style="font-size: 35px;" > Compute \((c-x)(c^2+cx+x^2)\).</li>
+								<li style="font-size: 35px;" > Compute \((c-x)(c^3+c^2x+cx^2+x^3)\).</li>
+							</ul>
+						</div>
+						<div class="fragment">
+							
+							<p style="font-size: 35px;" > What do you think \[(c-x)(c^{n-1}+c^{n-2}x+c^{n-3}x^2+\cdots c^2x^{n-3}+cx^{n-2}+x^{n-1})\] is?</p>
+								
+							
+						</div>
+
+						
+
+						
+
+					</section>
+
+					
+					
+				</section>
+
+					
+
+
+					<section data-auto-animate>
+						
+						<div data-id="problem" class="r-frame">
+							<p style="font-size: 30px;" >
+								Consider \(f(x)=x^n\).  Let \(c=x+h\).
+							</p>
+						</div>
+
+						<div >
+							
+							<p style="font-size: 25px;" >
+								\[\begin{array}{rcl}
+								f'(x) &amp; = &amp; \displaystyle \lim_{h\to 0} \frac{(x+h)^n-x^n}{h}\\
+								 \end{array}\]
+							</p>
+						</div>
+
+						
+
+					</section>
+
+					<section data-auto-animate>
+						
+						<div data-id="problem" class="r-frame">
+							<p style="font-size: 30px;" >
+								Consider \(f(x)=x^n\).  Let \(c=x+h\).
+							</p>
+						</div>
+
+						<div >
+							
+							<p style="font-size: 25px;" >
+								\[\begin{array}{rcl}
+								f'(x) &amp; = &amp; \displaystyle \lim_{h\to 0} \frac{(x+h)^n-x^n}{h}\\
+								 
+								 &amp; = &amp; \displaystyle \lim_{c\to x} \frac{c^n-x^n}{c-x}\\
+								 \end{array}\]
+							</p>
+						</div>
+
+						
+
+					</section>
+
+					<section data-auto-animate>
+						
+						<div data-id="problem" class="r-frame">
+							<p style="font-size: 30px;" >
+								Consider \(f(x)=x^n\).  Let \(c=x+h\).
+							</p>
+						</div>
+
+						<div >
+							
+							<p style="font-size: 25px;" >
+								\[\begin{array}{rcl}
+								f'(x) &amp; = &amp; \displaystyle \lim_{h\to 0} \frac{(x+h)^n-x^n}{h}\\
+								 
+								 &amp; = &amp; \displaystyle \lim_{c\to x} \frac{c^n-x^n}{c-x}\\
+
+								 &amp; = &amp; \displaystyle \lim_{c\to x} \frac{(c-x)(c^{n-1}+c^{n-2}x+c^{n-3}x^2+\cdots c^2x^{n-3}+cx^{n-2}+x^{n-1})}{c-x}\\
+
+								 
+
+								 \end{array}\]
+							</p>
+						</div>
+
+						
+
+					</section>
+
+					<section data-auto-animate>
+						<div data-id="problem" class="r-frame">
+							<p style="font-size: 30px;" >
+								Consider \(f(x)=x^n\).  Let \(c=x+h\).
+							</p>
+						</div>
+						<div >
+							
+							<p style="font-size: 25px;" >
+								\[\begin{array}{rcl}
+								f'(x) &amp; = &amp; \displaystyle \lim_{h\to 0} \frac{(x+h)^n-x^n}{h}\\
+								 
+								  &amp; = &amp; \displaystyle \lim_{c\to x} \frac{c^n-x^n}{c-x}\\
+
+								 &amp; = &amp; \displaystyle \lim_{c\to x} \frac{(c-x)(c^{n-1}+c^{n-2}x+c^{n-3}x^2+\cdots c^2x^{n-3}+cx^{n-2}+x^{n-1})}{c-x}\\
+
+								 &amp; = &amp; \displaystyle \lim_{c\to x} c^{n-1}+c^{n-2}x+c^{n-3}x^2+\cdots c^2x^{n-3}+cx^{n-2}+x^{n-1}\\
+
+								 
+
+								 \end{array}\]
+							</p>
+						</div>
+
+						
+
+					</section>
+
+					<section data-auto-animate>
+						<div data-id="problem" class="r-frame">
+							<p style="font-size: 30px;" >
+								Consider \(f(x)=x^n\).  Let \(c=x+h\).
+							</p>
+						</div>
+						<div >
+							
+							<p style="font-size: 25px;" >
+								\[\begin{array}{rcl}
+								f'(x) &amp; = &amp; \displaystyle \lim_{h\to 0} \frac{(x+h)^n-x^n}{h}\\
+								 
+								 &amp; = &amp; \displaystyle \lim_{c\to x} \frac{c^n-x^n}{c-x}\\
+
+								 &amp; = &amp; \displaystyle \lim_{c\to x} \frac{(c-x)(c^{n-1}+c^{n-2}x+c^{n-3}x^2+\cdots c^2x^{n-3}+cx^{n-2}+x^{n-1})}{c-x}\\
+
+								 &amp; = &amp; \displaystyle \lim_{c\to x} c^{n-1}+c^{n-2}x+c^{n-3}x^2+\cdots c^2x^{n-3}+cx^{n-2}+x^{n-1}\\
+
+								 &amp; = &amp;x^{n-1}+x^{n-2}x+x^{n-3}x^2+\cdots x^2x^{n-3}+xx^{n-2}+x^{n-1}\\
+								
+
+								 \end{array}\]
+							</p>
+						</div>
+						
+
+					</section>
+
+					<section data-auto-animate>
+						<div data-id="problem" class="r-frame">
+							<p style="font-size: 30px;" >
+								Consider \(f(x)=x^n\).  Let \(c=x+h\).
+							</p>
+						</div>
+						<div >
+							
+							<p style="font-size: 25px;" >
+								\[\begin{array}{rcl}
+								f'(x) &amp; = &amp; \displaystyle \lim_{h\to 0} \frac{(x+h)^n-x^n}{h}\\
+								 
+								 &amp; = &amp; \displaystyle \lim_{c\to x} \frac{c^n-x^n}{c-x}\\
+
+								 &amp; = &amp; \displaystyle \lim_{c\to x} \frac{(c-x)(c^{n-1}+c^{n-2}x+c^{n-3}x^2+\cdots c^2x^{n-3}+cx^{n-2}+x^{n-1})}{c-x}\\
+
+								 &amp; = &amp; \displaystyle \lim_{c\to x} c^{n-1}+c^{n-2}x+c^{n-3}x^2+\cdots c^2x^{n-3}+cx^{n-2}+x^{n-1}\\
+
+								 &amp; = &amp;x^{n-1}+x^{n-2}x+x^{n-3}x^2+\cdots x^2x^{n-3}+xx^{n-2}+x^{n-1}\\
+								 &amp; = &amp; nx^{n-1}.\\
+
+								 \end{array}\]
+							</p>
+						</div>
+						
+
+					</section>
+
+					
+					
+				</section>
+
+				<section>
+					<h4> Power Rule</h4>
+					<section data-auto-animate>
+						<div data-id="problem" class="r-frame">
+							<p style="font-size: 30px;" >
+								Consider \(f(x)=x^n, f'(x)=nx^{n-1}\).
+							</p>
+						</div>
+						<div class="fragment">
+							<p style="font-size: 25px;" >
+								Find \[\frac{d}{dx}[x^4],\ \  g'(x), \text{ if } g(x)=\sqrt{x}, \ \ \frac{d}{dt}\left[\frac{1}{t^3} \right].\]
+							</p>
+						</div>
+					</section>
+
+
+				</section>
+
+				<section>
+					<h4> Linearity  Rule</h4>
+					<section data-auto-animate>
+						<div data-id="problem" class="r-frame">
+							<p style="font-size: 30px;" >
+								 \[\frac{d}{dx}[f(x)+g(x)]=f'(x)+g'(x).\]
+
+								 \[\frac{d}{dx}[cf(x)]=cf'(x).\]
+							</p>
+						</div>
+						
+					</section>
+
+					
+
+
+				<section>
+					<div data-id="problem" >
+						<p style="font-size: 30px;" >
+							Find the following:
+							<ul>
+								<li style="font-size: 25px;"> \(f'(x)\) if \(f(x)=3x^2-x+1\).</li><br>
+
+								<li style="font-size: 25px;"> \(\frac{d}{dx}[2x^2-x^4]\).</li><br>
+
+								<li style="font-size: 25px;"> \(h'(t)\) if \(h(t)=\frac{1+t}{t^2}-\sqrt{t}\) (rewrite as a bunch of \(ct^n\) things!).</li><br>
+
+								<li style="font-size: 25px;"> \(g'(4)\) if \(g(x)=-\frac{x^2}{2}+\frac{1}{\sqrt{x}}\).</li><br>
+							</ul>
+
+						</p>
+					</div>
+				</section>
+
+			</section>
+
+			<section>
+					<div data-id="problem" class="r-frame">
+							<p style="font-size: 30px;" >
+								Consider \[f(x)=x^3, g(x)=x^2, h(x)=f(x)g(x)=x^5.\]
+							</p>
+					</div>
+					<ul>
+						<li style="font-size: 30px;"> Compute \(f'(x), g'(x), h'(x)\).</li><br>
+
+						<li style="font-size: 30px;"> Is \(h'(x)=f'(x)\cdot g'(x)\)?</li>
+					</ul>
+
+			</section>
+
+			<section>
+				<h4>Product Rule</h4>
+				<div class="r-frame">
+					<p style="font-size: 30px;" >
+						\[\frac{d}{dx}[f(x)g(x)]=f(x)g'(x)+f'(x)g(x). \]
+					</p>
+				</div>
+
+				<img src="img/productrule.png" width=70%>
+
+			</section>
+
+			<section>
+				<h4>Quotient Rule Rule</h4>
+				<div class="r-frame">
+					<p style="font-size: 30px;" >
+						\[\frac{d}{dx}[\frac{f(x)}{g(x)}]=\frac{g(x)f'(x)-f(x)g'(x)}{g(x)^2}. \]
+					</p>
+				</div>
+
+				<p style="font-size: 25px;" >
+					Let \(Q(x)=f(x)/g(x)\)
+					\[\begin{array}{rcl}
+					
+					Q(x)g(x) &amp; =&amp; f(x)\\
+					\frac{d}{dx}[Q(x)g(x)] &amp; =&amp; f'(x)\\
+					Q'(x)g(x)+Q(x)g'(x) &amp; =&amp; f'(x)\\
+					Q'(x) &amp; =&amp; \frac{f'(x)-Q(x)g'(x)}{g(x)}\\
+					\frac{d}{dx}\left[ \frac{f(x)}{g(x)} \right]&amp; =&amp; \frac{f'(x)-\frac{f(x)}{g(x)}g'(x)}{g(x)}\\
+					&amp; =&amp; \frac{f'(x)\frac{g(x)}{g(x)}-\frac{f(x)}{g(x)}g'(x)}{g(x)}\\
+					&amp; =&amp; \frac{g(x)f'(x)-f(x)g'(x)}{g(x)^2}.
+					\end{array}\]
+				</p>
+
+				
+
+			</section>
+
+
+
+			<section>
+				<div data-id="problem" >
+					<p style="font-size: 30px;" >
+						Find the following:
+						<ul>
+								<li style="font-size: 25px;"> \(f'(x)\) if \(f(x)=\frac{3x^3-1}{x^2}\).</li><br>
+
+								<li style="font-size: 25px;"> \(\frac{d}{dx}[x^{100}(1-2x)]\).</li><br>
+
+								<li style="font-size: 25px;"> \(h'(t)\) if \(h(t)=(\sqrt{t}+1)(t^3)\).</li><br>
+
+								<li style="font-size: 25px;"> \(g'(2)\) if \(g(x)=\frac{t^2}{x^2+1}\).</li><br>
+							</ul>
+
+						</p>
+					</div>
+			</section>
+
+
+
+				
+
+				
+
+
+
+				
+
+					
+						
+					
+
+					
+				
+
+
+									
+
+
+
+				
+			</div>
+		</div>
+
+		<script src="dist/reveal.js"></script>
+		<script src="plugin/notes/notes.js"></script>
+		<script src="plugin/markdown/markdown.js"></script>
+		<script src="plugin/highlight/highlight.js"></script>
+		<script>
+			// More info about initialization & config:
+			// - https://revealjs.com/initialization/
+			// - https://revealjs.com/config/
+			Reveal.initialize({
+				hash: true,
+
+				// Learn about plugins: https://revealjs.com/plugins/
+				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
+			});
+		</script>
+		<script src="plugin/math/math.js"></script>
+		<script src="plugin/chalkboard/plugin.js"></script>
+		<script src="plugin/customcontrols/plugin.js"></script>
+
+
+
+	<script>
+  	Reveal.initialize({
+		math: {
+			mathjax: 'https://cdn.jsdelivr.net/gh/mathjax/mathjax@2.7.8/MathJax.js',
+			config: 'TeX-AMS_HTML-full',
+			// pass other options into `MathJax.Hub.Config()`
+			TeX: { Macros: { RR: "{\\bf R}" } }
+		},
+
+		chalkboard: {
+        boardmarkerWidth: 3,
+        chalkWidth: 7,
+        chalkEffect: 1.0,
+        storage: null,
+        src: null,
+        readOnly: undefined,
+        transition: 800,
+        theme: "chalkboard",
+        background: [ 'rgba(127,127,127,.1)' , path + 'img/blackboard.png' ],
+        grid: { color: 'rgb(50,50,10,0.5)', distance: 80, width: 2},
+        eraser: { src: path + 'img/sponge.png', radius: 20},
+        boardmarkers : [
+                { color: 'rgba(100,100,100,1)', cursor: 'url(' + path + 'img/boardmarker-black.png), auto'},
+                { color: 'rgba(30,144,255, 1)', cursor: 'url(' + path + 'img/boardmarker-blue.png), auto'},
+                { color: 'rgba(220,20,60,1)', cursor: 'url(' + path + 'img/boardmarker-red.png), auto'},
+                { color: 'rgba(50,205,50,1)', cursor: 'url(' + path + 'img/boardmarker-green.png), auto'},
+                { color: 'rgba(255,140,0,1)', cursor: 'url(' + path + 'img/boardmarker-orange.png), auto'},
+                { color: 'rgba(150,0,20150,1)', cursor: 'url(' + path + 'img/boardmarker-purple.png), auto'},
+                { color: 'rgba(255,220,0,1)', cursor: 'url(' + path + 'img/boardmarker-yellow.png), auto'}
+        ],
+        chalks: [
+                { color: 'rgba(255,255,255,0.5)', cursor: 'url(' + path + 'img/chalk-white.png), auto'},
+                { color: 'rgba(96, 154, 244, 0.5)', cursor: 'url(' + path + 'img/chalk-blue.png), auto'},
+                { color: 'rgba(237, 20, 28, 0.5)', cursor: 'url(' + path + 'img/chalk-red.png), auto'},
+                { color: 'rgba(20, 237, 28, 0.5)', cursor: 'url(' + path + 'img/chalk-green.png), auto'},
+                { color: 'rgba(220, 133, 41, 0.5)', cursor: 'url(' + path + 'img/chalk-orange.png), auto'},
+                { color: 'rgba(220,0,220,0.5)', cursor: 'url(' + path + 'img/chalk-purple.png), auto'},
+                { color: 'rgba(255,220,0,0.5)', cursor: 'url(' + path + 'img/chalk-yellow.png), auto'}
+        ]
+    },
+    customcontrols: {
+  		controls: [
+  			{ icon: '<i class="fa fa-pen-square"></i>',
+  			  title: 'Toggle chalkboard (B)',
+  			  action: 'RevealChalkboard.toggleChalkboard();'
+  			},
+  			{ icon: '<i class="fa fa-pen"></i>',
+  			  title: 'Toggle notes canvas (C)',
+  			  action: 'RevealChalkboard.toggleNotesCanvas();'
+  			}
+  		]
+    },
+
+		plugins: [ RevealMath, RevealChalkboard, RevealCustomControls, RevealMenu  ]
+		});
+	</script>
+
+	</body>
+</html>

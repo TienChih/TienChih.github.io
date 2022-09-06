@@ -1,0 +1,591 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>reveal.js</title>
+
+		<link rel="stylesheet" href="dist/reset.css">
+		<link rel="stylesheet" href="dist/reveal.css">
+		<link rel="stylesheet" href="dist/theme/white.css">
+		<link rel="stylesheet" href="plugin/chalkboard/style.css">
+		<link rel="stylesheet" href="plugin/customcontrols/style.css">
+
+
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+
+
+
+		<!-- Theme used for syntax highlighted code -->
+		<link rel="stylesheet" href="plugin/highlight/monokai.css">
+		<style>
+			.container{
+   				 display: flex;
+			}
+			.col{
+    			flex: 1;
+			}
+		</style>
+			<script async defer src="https://buttons.github.io/buttons.js"></script>
+
+		<script src="plugin/menu/menu.js"></script>
+
+		<script src="https://sagecell.sagemath.org/static/embedded_sagecell.js"></script>
+  
+ 	 <script>sagecell.makeSagecell({"inputLocation": ".sage"});</script>
+
+
+
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				
+				<section>
+					<h2>Chains and Change.</h2>
+					<h4>M 211</h4>
+					
+					<h4>
+						Oxford College of Emory University <a href="https://app.oxford.emory.edu/WebApps/Directory/index.cfm/view/9984" target="_blank">Tien Chih</a>
+					</h4>
+				</section>
+
+				
+
+
+				
+				<section>
+					<h4> Calc 1 Review!</h4>
+					<section data-auto-animate>
+						<div class="r-frame" >
+							<p style="font-size: 35px;" >
+								A car 30 miles north of a town drives north at  70mph, another car 50 miles west of the same town drives east at 60mph.  At what rate is their distance changing?
+
+							</p>
+							
+							
+							
+						</div>	
+					</section>	
+
+					<section data-auto-animate>
+						<div class="r-frame" >
+							<p style="font-size: 35px;" >
+								A \(20\times 30\) inch rectangle has it's width (20 inches) increasing by 3 inches per second (at a given moment) and it's height (30 inches) is increasing by 5 inches per second.  How is it's area changing?
+
+							</p>
+							
+							
+							
+						</div>	
+					</section>
+
+						
+					
+				</section>
+
+				<section data-auto-animate>
+					<h4> Calc 1 Review! (ish)</h4>
+					<div class="r-frame" >
+							<p style="font-size: 35px;" >
+								An an ant sits on the sphere \(x^2+y^2+z^2=34\) at \((2,3,5)\).  the radius shrinks at a rate of 2 units/second, and the ant is moving in such a way that it's change in \(x\)-coordinate is 1 unit/second, but change in \(y\) is -3 units/second.  How is it's \(z\) coordinate changing?
+
+							</p>
+							
+							
+							
+					</div>	
+				</section>
+				
+
+				<section>
+					<h4>The Chain Rule</h4>
+
+					<section data-auto-animate>
+						<div class="r-frame" >
+							<p style="font-size: 35px;" >
+								Suppose \(\mathbf{x}:T\subseteq \mathbb{R}\to\mathbb{R}^2\) is differentiable at \(t_0\in T\) and \(f:X\subseteq \mathbb{R}^2\to\mathbb{R}\) is differentiable at \(\mathbf{x}_0=\mathbf{x}(t_0)=(x_0, y_0)\in X\), where \(T, X\) are open in their respective spaces and \(Im(\mathbf{x})\subseteq X\).
+
+
+							</p>
+							<p class="fragment" style="font-size: 35px;">
+								Then, if \(f\) is \(C^1\), then \(f\circ \mathbf{x}:T\to \mathbb{R}\) is differentiable at \(t_0\) and \[\frac{df}{dt}(t_0)=\frac{\partial f}{\partial x}(\mathbf{x}_0)\frac{dx}{dt}(t_0)+\frac{\partial f}{\partial y}(\mathbf{x}_0)\frac{dy}{dt}(t_0).\]
+							</p>
+
+														
+						</div>	
+					</section>
+
+					<section data-auto-animate>
+						<div>
+							<p style="font-size: 35px;" >
+								Let \(z=f\circ\mathbf{x}\).
+
+
+							</p>
+							<p class="fragment" style="font-size: 30px;">
+								\(\frac{dz}{dt}(t_0)=\displaystyle \lim_{t\to t_0}\frac{z(t)-z(t_0)}{t-t_0}\)
+							</p>
+							<p class="fragment" style="font-size: 30px;">
+								\(\frac{dz}{dt}(t_0)=\displaystyle \lim_{t\to t_0} \frac{f(x(t), y(t))-f(x(t_0), y(t_0))}{t-t_0}\)
+							</p>
+
+							<p class="fragment" style="font-size: 30px;">
+								\(\frac{dz}{dt}(t_0)=\displaystyle \lim_{t\to t_0} \frac{f(x,y)-f(x_0,y)+f(x_0,y)-f(x_0,y_0) }{t-t_0}\)
+							</p>
+
+							<p class="fragment" style="font-size: 30px;">
+								\(\frac{dz}{dt}(t_0)=\displaystyle \lim_{t\to t_0} \frac{f(x,y)-f(x_0,y) }{t-t_0} + \displaystyle \lim_{t\to t_0} \frac{f(x_0,y)-f(x_0,y_0) }{t-t_0}\)
+							</p>
+							<p class="fragment" style="font-size: 30px;">
+								\(\frac{dz}{dt}(t_0)=\displaystyle \lim_{t\to t_0} \frac{f_x(c,y)(x-x_0) }{t-t_0} + \displaystyle \lim_{t\to t_0} \frac{f_y(x_0,d)(y-y_0)}{t-t_0}\)
+							</p>
+
+							<p class="fragment" style="font-size: 30px;">
+								\(\frac{dz}{dt}(t_0)=\displaystyle \lim_{t\to t_0} f_x(x_0, y_0)\frac{dx}{dt}(t_0) + f_y(x_0, y_0)\frac{dy}{dt}(t_0).\)
+							</p>
+
+														
+						</div>	
+					</section>
+
+
+
+				</section>
+
+
+				<section data-auto-animate>
+						<div class="r-frame" >
+							<p style="font-size: 35px;" >
+								Suppose \(\mathbf{x}:T\subseteq \mathbb{R}\to\mathbb{R}^n\) is differentiable at \(t_0\in T\) and \(f:X\subseteq \mathbb{R}^n\to\mathbb{R}\) is differentiable at \(\mathbf{x}_0=\mathbf{x}(t_0)\in X\), where \(T, X\) are open in their respective spaces and \(Im(\mathbf{x})\subseteq X\).
+
+
+							</p>
+
+							<p style="font-size: 35px;" >
+								Then, if \(f\) is \(C^1\), then \(f\circ \mathbf{x}:T\to \mathbb{R}\) is differentiable at \(t_0\) and 
+
+
+							</p>
+							<p style="font-size: 25px;">
+								\[\frac{df}{dt}(t_0)=\frac{\partial f}{\partial x_1}(\mathbf{x}_0)\frac{dx_1}{dt}(t_0)+\frac{\partial f}{\partial x_2}(\mathbf{x}_0)\frac{dx_2}{dt}(t_0)+\cdots + \frac{\partial f}{\partial x_n}(\mathbf{x_n}_0)\frac{dx_n}{dt}(t_0).\]
+							</p>
+
+														
+						</div>	
+				</section>
+
+
+				<section>
+
+					<div class="r-frame" >
+							<p style="font-size: 35px;" >
+								Suppose
+								\[f(x,y,z)=x^2+y^2+z^2, \mathbf{x}(s,t)=(s\sin(t), te^s, s^2-t^3).\]
+
+
+							</p>
+
+							
+
+														
+					</div>	
+
+					<p style="font-size: 35px;">
+						Find \(\frac{\partial f}{\partial s}, \frac{\partial f}{\partial s}.\)
+					</p>
+
+				</section>
+
+
+				<section>
+
+					<div class="r-frame" >
+							<p style="font-size: 35px;" >
+								Recall
+								\[x=r\cos(\theta), y=r\sin(\theta).\]
+
+							</p>
+
+							<p style="font-size: 35px;" >
+								Then suppose
+								\[r(t)=t^2+1, \theta(t)=\frac{\pi}{6}t.\]
+
+							</p>
+
+							
+
+														
+					</div>	
+
+					<p style="font-size: 35px;">
+						Find \(\frac{\partial x}{\partial t}, \frac{\partial y}{\partial t}\) when \(t=2\).
+					</p>
+
+				</section>
+
+
+				<section>
+					<h4>Maximizing local ascent</h4>
+				<section data-auto-animate>
+					
+
+					<div class="r-frame" >
+							<p style="font-size: 35px;" >
+								Suppose
+								\[f(0, 0)=0, f_x(0,0)=2, f_y(0,0)=4.\]
+
+							</p>
+					</div>			
+
+					<p style="font-size: 35px;" class="fragment">
+						Estimate: \[f(1,0), f(0.8, 0.6), f(0.6, 0.8), f(0,1)\] using local linear approximation.
+					</p>
+
+					<p style="font-size: 35px;" class="fragment">
+						For what \(\theta\) is \((\cos(\theta), \sin(\theta))\cdot (2,4)\) maximized?
+					</p>
+								
+					
+				</section>
+
+				<section data-auto-animate>
+					
+
+					<div class="r-frame" >
+							<p style="font-size: 35px;" >
+								<img src="img/gradient.svg" width=40%/>
+
+							</p>
+							
+					</div>	
+					<p style="font-size: 30px;" >
+								Which of our vectors from the previous slide result in the greatest increase in \(f\)?  The least? How do they compare to the red vector \((\cos(\theta), \sin(\theta))\)?
+							</p>		
+
+					
+								
+					
+				</section>
+
+				</section>
+
+				<section>
+					<h4>Directional Derivative</h4>
+					<section data-auto-animate>
+						<div class="r-frame" >
+							<p style="font-size: 35px;" >
+								Let \(X\subseteq \mathbb{R}^n\) be open, and \(f:X\to \mathbb{R}, \mathbf{a}\in \mathbb{X}\).  If \(\mathbf{v}\in \mathbb{R}^n\) is any <strong>unit</strong> vector, then the <strong>directional derivative of \(f\) at \(\mathbf{a}\) in the direction of \(\mathbf{v}\) is </strong>\[D_{\mathbf{v}}f(\mathbf{a})=\lim_{h\to 0}\frac{f(\mathbf{a}+h\mathbf{v})-f(\mathbf{a})}{h}.\]
+
+							</p>
+						</div>	
+					</section>
+					<section data-auto-animate>
+						<div >
+							<p style="font-size: 35px;" >
+								Let \(F(t)=f(\mathbf{a}+t\mathbf{v}).\)
+
+							</p>
+						</div>	
+						
+						<div>
+							<p style="font-size: 30px;" class="fragment">
+							\(D_{\mathbf{v}}f(\mathbf{a})=\displaystyle \lim_{t\to 0}\frac{F(t)-F(0)}{t-0} =F'(0).\)<br><br>
+
+							\(D_{\mathbf{v}}f(\mathbf{a})=\frac{d}{dt}f(\mathbf{a}+t\mathbf{v})|_{t=0}.\)
+
+							</p>
+
+							<p style="font-size: 30px;" class="fragment">
+							
+
+							\(D_{\mathbf{v}}f(\mathbf{a})=\displaystyle \sum_{i=1}^n \frac{\partial f}{\partial x_i}(\mathbf{a})\cdot v_i\) by the chain rule.
+
+							</p>
+						</div>
+
+					</section>
+
+
+				</section>
+
+				<section>
+					<h4>The Gradient</h4>
+					<section data-auto-animate>
+						
+						<div class="r-frame">
+							<p style="font-size: 35px;" >
+								Given a function \(f:X\subseteq \mathbb{R}^n\to \mathbb{R}\) that is \(C^1\), the <strong>gradient</strong> of \(f\) at \(\mathbf{a}\in X\) is:
+								\[\nabla f(\mathbf{a})=(f_{x_1}(\mathbf{a}), \ldots, f_{x_n}(\mathbf{a})).)\]
+							</p>
+							
+						</div>
+					
+
+					<p style="font-size: 35px;" class="fragment">
+						If \(f:X\subseteq \mathbb{R}^n\to \mathbb{R}\)  is \(C^1\), then \(D_{\mathbf{v}}f(\mathbf{a})\) exists for each \(\mathbf{a}\in X\), and is computed by \[\nabla f(\mathbf{a})\cdot \mathbf{v}.\]
+					</p>
+
+					<p style="font-size: 35px;" class="fragment" >
+						For what \(\mathbf{v}\) is this dot product maximized?  (When in general are dot products maximized?)
+					</p>
+					</section>
+
+					<section data-auto-animate>
+						<div class="r-frame">
+							<p style="font-size: 35px;" >
+								\(D_{\mathbf{u}}f(\mathbf{a})\) is maximized when \(\mathbf{u}\) points in the same direction as \(\nabla f(\mathbf{a})\) and is minimized when it points in the opposite direction.  The maximum and minimum values are \(\|\nabla f(\mathbf{a})\|\) and \(-\|\nabla f(\mathbf{a})\|\) respectively.
+							</p>
+
+							
+						</div>
+					
+
+					
+					</section>
+				</section>
+
+				<section>
+					<section data-auto-animate>
+						<div class="r-frame">
+							<p style="font-size: 35px;" >
+								Consider the function \(f(x,y)=2xy^2-4y^2\), and the point \( (1,1) \).
+							</p>
+
+							
+						</div>
+
+						<p style="font-size: 30px;" >
+							Find the directional derivatives in the directions \(\langle -2, 4\rangle, \langle 1, 0\rangle, \langle 0, 1\rangle, \langle 4, 2\rangle\).  Then find the direction in which the directional derivative would be the greatest.
+						</p>
+					</section>
+
+					<section data-auto-animate>
+						<div class="r-frame">
+							<p style="font-size: 35px;" >
+								<iframe src="https://www.geogebra.org/calculator/e4fbrxd4" width="80%" height="500" style="border: 1px solid #ccc" frameborder=0></iframe>
+							</p>
+
+							
+						</div>
+
+						
+					</section>
+				</section>
+
+				<section>
+					<h4>Gradients and level surfaces</h4>
+					<section data-auto-animate>
+						<div class="r-frame">
+							<p style="font-size: 35px;" >
+								<iframe src="https://www.geogebra.org/calculator/cdrex7p3" width="80%" height="500" style="border: 1px solid #ccc" frameborder=0></iframe>
+							</p>
+
+							
+
+							
+						</div>
+						<p style="font-size: 30px;" >
+								Consider \(f(x,y,z)\) and it's gradient.  For any level surface \(f(x,y,z)=k\) and a point on that surface, what do we notice about the gradient vector?
+							</p>
+
+						
+					</section>
+
+					<section data-auto-animate>
+						<div class="r-frame">
+							<p style="font-size: 35px;" >
+								Let \(f:X\subseteq \mathbb{R}^n\to \mathbb{R}\) be \(C_1\).  Let \(\mathbf{x}_0\) be a point on the level set \(S=\{\mathbf{X}\in X: f(\mathbf{x}=c\}\) for some \(c\).
+							</p>
+
+							
+
+							
+						</div>
+
+						<p style="font-size: 30px;" class="fragment">
+							Let \(\mathbf{v}\) be a vector tangent to \(S\) at \(\mathbf{x}_0\).  Let \(\mathbf{x}(t)=(x_1(t),\ldots, x_n(t))\) be a path on \(S\) such that \(\mathbf{x}(t_0)=\mathbf{x}_0\) and \(\mathbf{x}'(t_0)=\mathbf{v}\).
+						</p>
+
+						<p style="font-size: 30px;" class="fragment">
+							Use the fact that \(f(\mathbf{x}(t))=c\) to compute \(\frac{d}{dt}[f(\mathbf{x}(t))]\).
+						</p>
+
+						<p style="font-size: 30px;" class="fragment">
+							The chain rule gives us \(\frac{d}{dt}[f(\mathbf{x}(t))] = \nabla f(\mathbf{x}_0)\cdot \mathbf{v}\).  What can we conclude about \(\nabla f(\mathbf{x}_0)\cdot \mathbf{v}\)?
+						</p>
+
+						
+					</section>
+
+					<section data-auto-animate>
+						<div class="r-frame">
+							<p style="font-size: 35px;" >
+								Let \(f:X\subseteq \mathbb{R}^n\to \mathbb{R}\) be \(C_1\).  Let \(\mathbf{x}_0\) be a point on the level set \(S=\{\mathbf{X}\in X: f(\mathbf{x}=c\}\) for some \(c\).
+							</p>
+
+							<p style="font-size: 35px;" >
+								Then the gradient vector \(\nabla f(\mathbf{x}_0)\) is normal to \(S\).
+							</p>
+
+							
+
+							
+						</div>
+
+						
+
+						
+					</section>
+
+
+				</section>
+
+
+
+
+
+
+				
+
+
+
+
+
+				
+				
+
+
+				
+
+				
+
+
+
+
+				
+
+
+				
+
+
+
+
+				
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+					
+				
+			</div>
+		</div>
+
+		<script src="dist/reveal.js"></script>
+		<script src="plugin/notes/notes.js"></script>
+		<script src="plugin/markdown/markdown.js"></script>
+		<script src="plugin/highlight/highlight.js"></script>
+		<script>
+			// More info about initialization & config:
+			// - https://revealjs.com/initialization/
+			// - https://revealjs.com/config/
+			Reveal.initialize({
+				hash: true,
+
+				// Learn about plugins: https://revealjs.com/plugins/
+				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
+			});
+		</script>
+		<script src="plugin/math/math.js"></script>
+		<script src="plugin/chalkboard/plugin.js"></script>
+		<script src="plugin/customcontrols/plugin.js"></script>
+
+
+
+	<script>
+  	Reveal.initialize({
+		math: {
+			mathjax: 'https://cdn.jsdelivr.net/gh/mathjax/mathjax@2.7.8/MathJax.js',
+			config: 'TeX-AMS_HTML-full',
+			// pass other options into `MathJax.Hub.Config()`
+			TeX: { Macros: { RR: "{\\bf R}" } }
+		},
+
+		chalkboard: {
+        boardmarkerWidth: 3,
+        chalkWidth: 7,
+        chalkEffect: 1.0,
+        storage: null,
+        src: null,
+        readOnly: undefined,
+        transition: 800,
+        theme: "chalkboard",
+        background: [ 'rgba(127,127,127,.1)' , path + 'img/blackboard.png' ],
+        grid: { color: 'rgb(50,50,10,0.5)', distance: 80, width: 2},
+        eraser: { src: path + 'img/sponge.png', radius: 20},
+        boardmarkers : [
+                { color: 'rgba(100,100,100,1)', cursor: 'url(' + path + 'img/boardmarker-black.png), auto'},
+                { color: 'rgba(30,144,255, 1)', cursor: 'url(' + path + 'img/boardmarker-blue.png), auto'},
+                { color: 'rgba(220,20,60,1)', cursor: 'url(' + path + 'img/boardmarker-red.png), auto'},
+                { color: 'rgba(50,205,50,1)', cursor: 'url(' + path + 'img/boardmarker-green.png), auto'},
+                { color: 'rgba(255,140,0,1)', cursor: 'url(' + path + 'img/boardmarker-orange.png), auto'},
+                { color: 'rgba(150,0,20150,1)', cursor: 'url(' + path + 'img/boardmarker-purple.png), auto'},
+                { color: 'rgba(255,220,0,1)', cursor: 'url(' + path + 'img/boardmarker-yellow.png), auto'}
+        ],
+        chalks: [
+                { color: 'rgba(255,255,255,0.5)', cursor: 'url(' + path + 'img/chalk-white.png), auto'},
+                { color: 'rgba(96, 154, 244, 0.5)', cursor: 'url(' + path + 'img/chalk-blue.png), auto'},
+                { color: 'rgba(237, 20, 28, 0.5)', cursor: 'url(' + path + 'img/chalk-red.png), auto'},
+                { color: 'rgba(20, 237, 28, 0.5)', cursor: 'url(' + path + 'img/chalk-green.png), auto'},
+                { color: 'rgba(220, 133, 41, 0.5)', cursor: 'url(' + path + 'img/chalk-orange.png), auto'},
+                { color: 'rgba(220,0,220,0.5)', cursor: 'url(' + path + 'img/chalk-purple.png), auto'},
+                { color: 'rgba(255,220,0,0.5)', cursor: 'url(' + path + 'img/chalk-yellow.png), auto'}
+        ]
+    },
+    customcontrols: {
+  		controls: [
+  			{ icon: '<i class="fa fa-pen-square"></i>',
+  			  title: 'Toggle chalkboard (B)',
+  			  action: 'RevealChalkboard.toggleChalkboard();'
+  			},
+  			{ icon: '<i class="fa fa-pen"></i>',
+  			  title: 'Toggle notes canvas (C)',
+  			  action: 'RevealChalkboard.toggleNotesCanvas();'
+  			}
+  		]
+    },
+
+		plugins: [ RevealMath, RevealChalkboard, RevealCustomControls, RevealMenu  ]
+		});
+	</script>
+
+	</body>
+</html>
