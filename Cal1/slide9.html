@@ -1,0 +1,352 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>reveal.js</title>
+
+		<link rel="stylesheet" href="dist/reset.css">
+		<link rel="stylesheet" href="dist/reveal.css">
+		<link rel="stylesheet" href="dist/theme/white.css">
+		<link rel="stylesheet" href="plugin/chalkboard/style.css">
+		<link rel="stylesheet" href="plugin/customcontrols/style.css">
+
+
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+
+
+
+		<!-- Theme used for syntax highlighted code -->
+		<link rel="stylesheet" href="plugin/highlight/monokai.css">
+		<style>
+			.container{
+   				 display: flex;
+			}
+			.col{
+    			flex: 1;
+			}
+		</style>
+			<script async defer src="https://buttons.github.io/buttons.js"></script>
+
+		<script src="plugin/menu/menu.js"></script>
+
+
+
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				
+				<section>
+					<h2>Going around in circles.</h2>
+					<h4>M 111</h4>
+					
+					
+					<h4>
+						Oxford College of Emory University <a href="https://app.oxford.emory.edu/WebApps/Directory/index.cfm/view/9984" target="_blank">Tien Chih</a>
+					</h4>
+				</section>
+
+				
+
+				<section>
+					<h4>Ferris Wheel</h4>
+
+					<div data-id="problem" class="r-frame">
+						<p style="font-size: 30px;" >
+							Consider a Ferris Wheel turning at a steady rate counter-clockwise.
+						</p>
+						<img src="img/ferriswheel.svg" width="30%"/>
+						<p style="font-size: 30px;" >
+							Suppose there are people sitting at buckets at points \(A,B,C,D,E\).  Who is rising the fastest?  Who is rising the slowest?
+						</p>
+					</div>
+
+
+					
+					
+				</section>
+
+				<section>
+					<div data-id="problem" class="r-frame">
+						<p style="font-size: 30px;" >
+							Let \(f(x)=\frac{\sin(x)}{x}\)
+						</p>
+						<iframe src="https://www.desmos.com/calculator/jxsvmnj0wl" width="80%" height="400" style="border: 1px solid #ccc" frameborder=0></iframe>
+						
+					</div>
+					<p style="font-size: 30px;" >
+							Compute \(f(1), f(0.1), f(0.01), f(0.001)\) and estimate \(\displaystyle \lim_{x\to 0}\frac{\sin(x)}{x}.\)
+						</p>
+
+				</section>
+
+				<section>
+					<div data-id="problem" class="r-frame">
+						<p style="font-size: 30px;" >
+							Let \(g(x)=\frac{\cos(x)-1}{x}\)
+						</p>
+						<iframe src="https://www.desmos.com/calculator/r2kn9erypi" width="80%" height="400" style="border: 1px solid #ccc" frameborder=0></iframe>
+						
+					</div>
+					<p style="font-size: 30px;" >
+						Compute \(g(1), g(0.1), g(0.01), g(0.001)\) and estimate \(\displaystyle \lim_{x\to 0}\frac{\cos(x)-1}{x}.\)
+					</p>
+
+				</section>
+
+				<section>
+					<div data-id="problem" class="r-frame">
+						<p style="font-size: 30px;" >
+							Consider \(y=\sin(x)\)
+						</p>
+						<iframe src="https://www.desmos.com/calculator/4e9zgfk2vt?embed" width="80%" height="400" style="border: 1px solid #ccc" frameborder=0></iframe>
+						
+					</div>
+					<p style="font-size: 30px;" >
+						Look at when \(\sin(x)\) is increasing and decreasing, or neither, and sketch \(\frac{dy}{dx}\).  What function does it look like?
+					</p>
+
+				</section>
+
+				<section>
+					<h4>Derivative of \(\sin(x)\)</h4>
+					<section data-auto-animate>
+						<p style="font-size: 30px;" >
+						\[
+						\begin{array}{rcl}
+						\frac{d}{dx}[\sin(x)]&amp;=&amp;\displaystyle\lim_{h\to 0}\frac{\sin(x+h)-\sin(x)}{h}\\
+						
+						\end{array}
+						
+						\]
+						</p>
+					</section>
+					<section data-auto-animate>
+						<p style="font-size: 30px;" >
+						\[
+						\begin{array}{rcl}
+						\frac{d}{dx}[\sin(x)]&amp;=&amp;\displaystyle\lim_{h\to 0}\frac{\sin(x+h)-\sin(x)}{h}\\
+						&amp;=&amp;\displaystyle\lim_{h\to 0}\frac{\sin(x)\cos(h)+\cos(x)\sin(h)-\sin(x)}{h}\\
+
+						\end{array}
+						
+						\]
+						</p>
+					</section>
+					<section data-auto-animate>
+						<p style="font-size: 30px;" >
+						\[
+						\begin{array}{rcl}
+						\frac{d}{dx}[\sin(x)]&amp;=&amp;\displaystyle\lim_{h\to 0}\frac{\sin(x+h)-\sin(x)}{h}\\
+						&amp;=&amp;\displaystyle\lim_{h\to 0}\frac{\sin(x)\cos(h)+\cos(x)\sin(h)-\sin(x)}{h}\\
+						&amp;=&amp;\displaystyle\lim_{h\to 0}\frac{\sin(x)\cos(h)-\sin(x)}{h}+\lim_{h\to 0}\frac{\cos(x)\sin(h)}{h}\\
+
+						
+						\end{array}
+						\]
+						</p>
+					</section>
+					<section data-auto-animate>
+						<p style="font-size: 30px;" >
+						\[
+						\begin{array}{rcl}
+						\frac{d}{dx}[\sin(x)]&amp;=&amp;\displaystyle\lim_{h\to 0}\frac{\sin(x+h)-\sin(x)}{h}\\
+						&amp;=&amp;\displaystyle\lim_{h\to 0}\frac{\sin(x)\cos(h)+\cos(x)\sin(h)-\sin(x)}{h}\\
+						&amp;=&amp;\displaystyle\lim_{h\to 0}\frac{\sin(x)\cos(h)-\sin(x)}{h}+\lim_{h\to 0}\frac{\cos(x)\sin(h)}{h}\\
+
+						&amp;=&amp;\sin(x)\displaystyle\lim_{h\to 0}\frac{\cos(h)-1}{h}+\cos(x)\lim_{h\to 0}\frac{\sin(h)}{h}\\
+						\end{array}
+						\]
+						</p>
+					</section>
+					<section data-auto-animate>
+						<p style="font-size: 30px;" >
+						\[
+						\begin{array}{rcl}
+						\frac{d}{dx}[\sin(x)]&amp;=&amp;\displaystyle\lim_{h\to 0}\frac{\sin(x+h)-\sin(x)}{h}\\
+						&amp;=&amp;\displaystyle\lim_{h\to 0}\frac{\sin(x)\cos(h)+\cos(x)\sin(h)-\sin(x)}{h}\\
+						&amp;=&amp;\displaystyle\lim_{h\to 0}\frac{\sin(x)\cos(h)-\sin(x)}{h}+\lim_{h\to 0}\frac{\cos(x)\sin(h)}{h}\\
+
+						&amp;=&amp;\sin(x)\displaystyle\lim_{h\to 0}\frac{\cos(h)-1}{h}+\cos(x)\lim_{h\to 0}\frac{\sin(h)}{h}\\
+						&amp;=&amp;\sin(x)\cdot 0+\cos(x)\cdot 1=\cos(x).\\
+						\end{array}
+						\]
+						</p>
+					</section>
+				</section>
+
+				<section>
+					<div data-id="problem" class="r-frame">
+						<p style="font-size: 30px;" >
+							Consider \(y=\cos(x)\)
+						</p>
+						<iframe src="https://www.desmos.com/calculator/bsfzupjbwl?embed" width="80%" height="400" style="border: 1px solid #ccc" frameborder=0></iframe>
+						
+					</div>
+					<p style="font-size: 30px;" >
+						Look at when \(\cos(x)\) is increasing and decreasing, or neither, and sketch \(\frac{dy}{dx}\).  What function does it look like?
+					</p>
+
+				</section>
+
+				<section>
+					<h4>Derivative of \(\cos(x)\)</h4>
+					
+					<section data-auto-animate>
+						<p style="font-size: 30px;" >
+						\[
+						\begin{array}{rcl}
+						\frac{d}{dx}[\sin(x)]&amp;=&amp;\displaystyle\lim_{h\to 0}\frac{\cos(x+h)-\cos(x)}{h}\\
+						&amp;=&amp;\displaystyle\lim_{h\to 0}\frac{\cos(x)\cos(h)-\sin(x)\sin(h)-\cos(x)}{h}\\
+						&amp;=&amp;\displaystyle\lim_{h\to 0}\frac{\cos(x)\cos(h)-\cos(x)}{h}-\lim_{h\to 0}\frac{\sin(x)\sin(h)}{h}\\
+
+						&amp;=&amp;\cos(x)\displaystyle\lim_{h\to 0}\frac{\cos(h)-1}{h}-\sin(x)\lim_{h\to 0}\frac{\sin(h)}{h}\\
+						&amp;=&amp;\cos(x)\cdot 0-\sin(x)\cdot 1=-\sin(x).\\
+						\end{array}
+						\]
+						</p>
+					</section>
+				</section>
+
+				<section>
+					<h4>Derivative of \(\tan(x)\)</h4>
+
+					<div class="r-frame">
+						<p style="font-size: 30px;" >
+							Using the fact \[\frac{d}{dx}[\sin(x)]=\cos(x), \frac{d}{dx}[\cos(x)]=-\sin(x)\] and the quotient rule, find \(\frac{d}{dx}[\tan(x)].\)
+						</p>
+					</div>
+
+				</section>
+
+				<section>
+					<p style="font-size: 30px;" >
+							Compute the following:
+
+					</p>
+					<ul>
+						<li style="font-size: 30px;"> \(\frac{d}{dx}[x^2\sin(x)]\).</li>
+
+						<li style="font-size: 30px;"> \(\frac{d}{dt}[\frac{\cos(t)}{\sqrt{t}+2e^x}]\).</li>
+
+						<li style="font-size: 30px;"> \(f'\left(\frac{\pi}{6}\right), f(x)=e^x\cos(x)+x\).</li>
+
+						<li style="font-size: 30px;"> \(g'\left(\frac{\pi}{4}\right), g(t)=\frac{\tan(t)}{t}\).</li>
+					</ul>
+
+				</section>
+
+
+
+					
+
+
+					
+
+
+				
+
+				
+
+
+
+				
+
+					
+						
+					
+
+					
+				
+
+
+									
+
+
+
+				
+			</div>
+		</div>
+
+		<script src="dist/reveal.js"></script>
+		<script src="plugin/notes/notes.js"></script>
+		<script src="plugin/markdown/markdown.js"></script>
+		<script src="plugin/highlight/highlight.js"></script>
+		<script>
+			// More info about initialization & config:
+			// - https://revealjs.com/initialization/
+			// - https://revealjs.com/config/
+			Reveal.initialize({
+				hash: true,
+
+				// Learn about plugins: https://revealjs.com/plugins/
+				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
+			});
+		</script>
+		<script src="plugin/math/math.js"></script>
+		<script src="plugin/chalkboard/plugin.js"></script>
+		<script src="plugin/customcontrols/plugin.js"></script>
+
+
+
+	<script>
+  	Reveal.initialize({
+		math: {
+			mathjax: 'https://cdn.jsdelivr.net/gh/mathjax/mathjax@2.7.8/MathJax.js',
+			config: 'TeX-AMS_HTML-full',
+			// pass other options into `MathJax.Hub.Config()`
+			TeX: { Macros: { RR: "{\\bf R}" } }
+		},
+
+		chalkboard: {
+        boardmarkerWidth: 3,
+        chalkWidth: 7,
+        chalkEffect: 1.0,
+        storage: null,
+        src: null,
+        readOnly: undefined,
+        transition: 800,
+        theme: "chalkboard",
+        background: [ 'rgba(127,127,127,.1)' , path + 'img/blackboard.png' ],
+        grid: { color: 'rgb(50,50,10,0.5)', distance: 80, width: 2},
+        eraser: { src: path + 'img/sponge.png', radius: 20},
+        boardmarkers : [
+                { color: 'rgba(100,100,100,1)', cursor: 'url(' + path + 'img/boardmarker-black.png), auto'},
+                { color: 'rgba(30,144,255, 1)', cursor: 'url(' + path + 'img/boardmarker-blue.png), auto'},
+                { color: 'rgba(220,20,60,1)', cursor: 'url(' + path + 'img/boardmarker-red.png), auto'},
+                { color: 'rgba(50,205,50,1)', cursor: 'url(' + path + 'img/boardmarker-green.png), auto'},
+                { color: 'rgba(255,140,0,1)', cursor: 'url(' + path + 'img/boardmarker-orange.png), auto'},
+                { color: 'rgba(150,0,20150,1)', cursor: 'url(' + path + 'img/boardmarker-purple.png), auto'},
+                { color: 'rgba(255,220,0,1)', cursor: 'url(' + path + 'img/boardmarker-yellow.png), auto'}
+        ],
+        chalks: [
+                { color: 'rgba(255,255,255,0.5)', cursor: 'url(' + path + 'img/chalk-white.png), auto'},
+                { color: 'rgba(96, 154, 244, 0.5)', cursor: 'url(' + path + 'img/chalk-blue.png), auto'},
+                { color: 'rgba(237, 20, 28, 0.5)', cursor: 'url(' + path + 'img/chalk-red.png), auto'},
+                { color: 'rgba(20, 237, 28, 0.5)', cursor: 'url(' + path + 'img/chalk-green.png), auto'},
+                { color: 'rgba(220, 133, 41, 0.5)', cursor: 'url(' + path + 'img/chalk-orange.png), auto'},
+                { color: 'rgba(220,0,220,0.5)', cursor: 'url(' + path + 'img/chalk-purple.png), auto'},
+                { color: 'rgba(255,220,0,0.5)', cursor: 'url(' + path + 'img/chalk-yellow.png), auto'}
+        ]
+    },
+    customcontrols: {
+  		controls: [
+  			{ icon: '<i class="fa fa-pen-square"></i>',
+  			  title: 'Toggle chalkboard (B)',
+  			  action: 'RevealChalkboard.toggleChalkboard();'
+  			},
+  			{ icon: '<i class="fa fa-pen"></i>',
+  			  title: 'Toggle notes canvas (C)',
+  			  action: 'RevealChalkboard.toggleNotesCanvas();'
+  			}
+  		]
+    },
+
+		plugins: [ RevealMath, RevealChalkboard, RevealCustomControls, RevealMenu  ]
+		});
+	</script>
+
+	</body>
+</html>

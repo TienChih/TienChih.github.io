@@ -1,0 +1,313 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>reveal.js</title>
+
+		<link rel="stylesheet" href="dist/reset.css">
+		<link rel="stylesheet" href="dist/reveal.css">
+		<link rel="stylesheet" href="dist/theme/white.css">
+		<link rel="stylesheet" href="plugin/chalkboard/style.css">
+		<link rel="stylesheet" href="plugin/customcontrols/style.css">
+
+
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+
+
+
+		<!-- Theme used for syntax highlighted code -->
+		<link rel="stylesheet" href="plugin/highlight/monokai.css">
+		<style>
+			.container{
+   				 display: flex;
+			}
+			.col{
+    			flex: 1;
+			}
+		</style>
+			<script async defer src="https://buttons.github.io/buttons.js"></script>
+
+		<script src="plugin/menu/menu.js"></script>
+
+
+
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				
+				<section>
+					<h2>Change within change.</h2>
+					<h4>M 111</h4>
+					
+					
+					<h4>
+						Oxford College of Emory University <a href="https://app.oxford.emory.edu/WebApps/Directory/index.cfm/view/9984" target="_blank">Tien Chih</a>
+					</h4>
+				</section>
+
+				
+
+				<section>
+					<section data-auto-animate>
+					<h4>Squirrels</h4>
+
+					<div data-id="problem" class="r-frame">
+						<p style="font-size: 30px;" >
+							Squirrels are invading your neighborhood!  Suppose that squirrel population grows proportionally to the number of acorns at 2 squirrels per bushel of acorns, and acorn supply is increasing by 100 bushels per week.
+						</p>
+						<p style="font-size: 30px;" >
+							  Let \(t\) denote time measured in weeks, \(a\) acorns measured in bushels and \(s\) squirrels measured in squirrels.
+						</p>
+					</div>
+
+					<p style="font-size: 30px;", class="fragment">
+						Describe and interpret \(\frac{ds}{da}, \frac{da}{dt}\).
+					</p>
+
+					<p style="font-size: 30px;", class="fragment">
+						How fast is the squirrel population increasing?
+					</p>
+
+					<p style="font-size: 30px;", class="fragment">
+						What is the relationship between \(\frac{ds}{dt}\) and \(\frac{ds}{da}, \frac{da}{dt}\)?
+					</p>
+					</section>
+
+					
+					
+				</section>
+
+				<section>
+					<section data-auto-animate>
+					<h4>The Chain Rule</h4>
+					<div data-id="problem" class="r-frame">
+						<p style="font-size: 30px;" >
+							If \(g(x)\) is differentiable, and \(f(x)\) is differentiable at \(g(x)\), then:
+							\[\frac{d}{dx}[f(g(x))]=f'(g(x))g'(x).\]
+							Alternatively, if \(y=f(u), y=g(x)\) both differentiable, then \[\frac{dy}{dx}=\frac{dy}{du}\frac{du}{dx}.\]
+						</p>
+					</div>
+					</section>
+
+					<section data-auto-animate>
+					<h4>Naieve "proof" of The Chain Rule</h4>
+					<div data-id="problem">
+						<p style="font-size: 30px;" >
+							\[\begin{array}{rcl}
+							\frac{d}{dx}[f(g(x))]&amp;=&amp;\displaystyle\lim_{h\to 0}\frac{f(g(x+h))-f(g(x))}{h}\\
+
+
+							&amp;=&amp;\displaystyle\lim_{h\to 0}\frac{f(g(x+h))-f(g(x))}{h}\frac{g(x+h)-g(x)}{g(x+h)-g(x)}\\
+							&amp;=&amp;\displaystyle\lim_{h\to 0}\frac{f(g(x+h))-f(g(x))}{g(x+h)-g(x)}\frac{g(x+h)-g(x)}{h}\\
+							&amp;=&amp;\left(\displaystyle\lim_{\Delta g\to 0}\frac{f(g(x)+\Delta g)-f(g(x))}{\Delta g} \right)\left(\displaystyle\lim_{h\to 0}\frac{g(x+h)-g(x)}{h}\right)\\
+
+							&amp;=&amp;f'(g(x))g'(x)\\
+
+
+							\end{array}\]
+						</p>
+					</div>
+					</section>	
+						
+
+				</section>
+
+
+
+				<section>
+					<section data-auto-animate>
+					<div data-id="problem" class="r-frame">
+						<p style="font-size: 30px;" >
+							Let \(f(x)=e^x, g(x)=3x^2, h(x)=f(g(x))\).  Then \(h(x)=e^{3x^2}\).
+						</p>
+					</div>
+					<p style="font-size: 30px;" class="fragment">
+						What is \(f'(x), g'(x)\)?
+					</p>
+
+					<p style="font-size: 30px;" class="fragment">
+						What is \(f'(g(x))\)?
+					</p>
+
+					<p style="font-size: 30px;" class="fragment">
+						What is \(h'(x)\)?
+					</p>
+					</section>
+						
+
+				</section>
+
+
+				<section>
+					<section data-auto-animate>
+					<div data-id="problem" class="r-frame">
+						<p style="font-size: 30px;" >
+							Let \(\alpha(t)=\sqrt{e^t+2t}\).
+						</p>
+					</div>
+					<p style="font-size: 30px;" class="fragment">
+						What are ("nice") choices of  \(g(t), h(t)\) so that \(\alpha(t)=g(h(t))\)?
+					</p>
+
+					<p style="font-size: 30px;" class="fragment">
+						Use the chain rule to find \(\alpha'(t)\).
+					</p>
+					</section>
+						
+
+				</section>
+
+				<section>
+					<div data-id="problem" class="r-frame">
+						<p style="font-size: 30px;" >
+							Find \[\frac{d}{dx}[(x+1)^2], \frac{d}{dx}[(x+1)^{500}].\]
+						</p>
+						
+
+				</section>
+
+
+				<section>
+					<div data-id="problem" class="r-frame">
+						<p style="font-size: 30px;" >
+							Using the fact that \(a^x=e^{\ln(a)x}\) for \(a>0\) find \(\frac{d}{dx}[a^x]\).
+						</p>
+						
+
+				</section>
+
+
+
+
+				<section>
+					<p style="font-size: 30px;" >
+							Compute the following, these invoke multiple rules:
+
+					</p>
+					<ul>
+						<li style="font-size: 30px;"> \(\frac{d}{dx}[x\sin(e^x)]\).</li>
+
+						<li style="font-size: 30px;"> \(\frac{d}{dt}[\frac{\cos(t)}{\sqrt{t+1}}]\).</li>
+
+						<li style="font-size: 30px;"> \(f'\left(\frac{\pi}{6}\right), f(x)=2^x\cos(2x)\).</li>
+
+						<li style="font-size: 30px;"> \(g'\left(0\right), g(t)=e^{t\cos(t)}\).</li>
+					</ul>
+
+				</section>
+
+
+
+					
+
+
+					
+
+
+				
+
+				
+
+
+
+				
+
+					
+						
+					
+
+					
+				
+
+
+									
+
+
+
+				
+			</div>
+		</div>
+
+		<script src="dist/reveal.js"></script>
+		<script src="plugin/notes/notes.js"></script>
+		<script src="plugin/markdown/markdown.js"></script>
+		<script src="plugin/highlight/highlight.js"></script>
+		<script>
+			// More info about initialization & config:
+			// - https://revealjs.com/initialization/
+			// - https://revealjs.com/config/
+			Reveal.initialize({
+				hash: true,
+
+				// Learn about plugins: https://revealjs.com/plugins/
+				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
+			});
+		</script>
+		<script src="plugin/math/math.js"></script>
+		<script src="plugin/chalkboard/plugin.js"></script>
+		<script src="plugin/customcontrols/plugin.js"></script>
+
+
+
+	<script>
+  	Reveal.initialize({
+		math: {
+			mathjax: 'https://cdn.jsdelivr.net/gh/mathjax/mathjax@2.7.8/MathJax.js',
+			config: 'TeX-AMS_HTML-full',
+			// pass other options into `MathJax.Hub.Config()`
+			TeX: { Macros: { RR: "{\\bf R}" } }
+		},
+
+		chalkboard: {
+        boardmarkerWidth: 3,
+        chalkWidth: 7,
+        chalkEffect: 1.0,
+        storage: null,
+        src: null,
+        readOnly: undefined,
+        transition: 800,
+        theme: "chalkboard",
+        background: [ 'rgba(127,127,127,.1)' , path + 'img/blackboard.png' ],
+        grid: { color: 'rgb(50,50,10,0.5)', distance: 80, width: 2},
+        eraser: { src: path + 'img/sponge.png', radius: 20},
+        boardmarkers : [
+                { color: 'rgba(100,100,100,1)', cursor: 'url(' + path + 'img/boardmarker-black.png), auto'},
+                { color: 'rgba(30,144,255, 1)', cursor: 'url(' + path + 'img/boardmarker-blue.png), auto'},
+                { color: 'rgba(220,20,60,1)', cursor: 'url(' + path + 'img/boardmarker-red.png), auto'},
+                { color: 'rgba(50,205,50,1)', cursor: 'url(' + path + 'img/boardmarker-green.png), auto'},
+                { color: 'rgba(255,140,0,1)', cursor: 'url(' + path + 'img/boardmarker-orange.png), auto'},
+                { color: 'rgba(150,0,20150,1)', cursor: 'url(' + path + 'img/boardmarker-purple.png), auto'},
+                { color: 'rgba(255,220,0,1)', cursor: 'url(' + path + 'img/boardmarker-yellow.png), auto'}
+        ],
+        chalks: [
+                { color: 'rgba(255,255,255,0.5)', cursor: 'url(' + path + 'img/chalk-white.png), auto'},
+                { color: 'rgba(96, 154, 244, 0.5)', cursor: 'url(' + path + 'img/chalk-blue.png), auto'},
+                { color: 'rgba(237, 20, 28, 0.5)', cursor: 'url(' + path + 'img/chalk-red.png), auto'},
+                { color: 'rgba(20, 237, 28, 0.5)', cursor: 'url(' + path + 'img/chalk-green.png), auto'},
+                { color: 'rgba(220, 133, 41, 0.5)', cursor: 'url(' + path + 'img/chalk-orange.png), auto'},
+                { color: 'rgba(220,0,220,0.5)', cursor: 'url(' + path + 'img/chalk-purple.png), auto'},
+                { color: 'rgba(255,220,0,0.5)', cursor: 'url(' + path + 'img/chalk-yellow.png), auto'}
+        ]
+    },
+    customcontrols: {
+  		controls: [
+  			{ icon: '<i class="fa fa-pen-square"></i>',
+  			  title: 'Toggle chalkboard (B)',
+  			  action: 'RevealChalkboard.toggleChalkboard();'
+  			},
+  			{ icon: '<i class="fa fa-pen"></i>',
+  			  title: 'Toggle notes canvas (C)',
+  			  action: 'RevealChalkboard.toggleNotesCanvas();'
+  			}
+  		]
+    },
+
+		plugins: [ RevealMath, RevealChalkboard, RevealCustomControls, RevealMenu  ]
+		});
+	</script>
+
+	</body>
+</html>

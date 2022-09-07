@@ -1,0 +1,442 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>reveal.js</title>
+
+		<link rel="stylesheet" href="dist/reset.css">
+		<link rel="stylesheet" href="dist/reveal.css">
+		<link rel="stylesheet" href="dist/theme/white.css">
+		<link rel="stylesheet" href="plugin/chalkboard/style.css">
+		<link rel="stylesheet" href="plugin/customcontrols/style.css">
+
+
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+
+
+
+		<!-- Theme used for syntax highlighted code -->
+		<link rel="stylesheet" href="plugin/highlight/monokai.css">
+		<style>
+			.container{
+   				 display: flex;
+			}
+			.col{
+    			flex: 1;
+			}
+		</style>
+			<script async defer src="https://buttons.github.io/buttons.js"></script>
+
+		<script src="plugin/menu/menu.js"></script>
+
+
+
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				
+				<section>
+					<h2>Off on another tangent.</h2>
+					<h4>M 111</h4>
+					
+					
+					<h4>
+						Oxford College of Emory University <a href="https://app.oxford.emory.edu/WebApps/Directory/index.cfm/view/9984" target="_blank">Tien Chih</a>
+					</h4>
+				</section>
+
+				
+
+				<section>
+					<section data-auto-animate>
+					<h4>Squirrels</h4>
+
+					<div data-id="problem" class="r-frame">
+						<p style="font-size: 30px;" >
+							Consider the circle \[x^2+y^2=4^2\]
+						</p>
+						<iframe src="https://www.desmos.com/calculator/ntngdlcdsq?embed" width="80%" height="350" style="border: 1px solid #ccc" frameborder=0></iframe>
+					</div>
+
+					<p style="font-size: 30px;", class="fragment">
+						Sketch the tangent lines of both points on the circle where \(x=2\).
+					</p>
+
+					
+					</section>
+
+					
+					
+				</section>
+
+				<section>
+					<h4>Implict differentiation</h4>
+
+					<section data-auto-animate>
+					<div >
+						<p style="font-size: 30px;" >
+							\[\begin{array}{rcl}
+							x^2+y^2&amp;=&amp;16\\
+
+
+
+
+
+
+							\end{array}\]
+						</p>
+					</div>
+					</section>	
+
+					<section data-auto-animate>
+					<div >
+						<p style="font-size: 30px;" >
+							\[\begin{array}{rcl}
+							x^2+y^2&amp;=&amp;16\\
+
+							\frac{d}{dx}[x^2+y^2]&amp;=&amp;\frac{d}{dx}[16]\\
+
+
+
+
+
+							\end{array}\]
+						</p>
+					</div>
+					</section>	
+
+					<section data-auto-animate>
+					<div >
+						<p style="font-size: 30px;" >
+							\[\begin{array}{rcl}
+							x^2+y^2&amp;=&amp;16\\
+
+							\frac{d}{dx}[x^2+y^2]&amp;=&amp;\frac{d}{dx}[16]\\
+
+							\frac{d}{dx}[x^2]+\frac{d}{dx}[y^2]&amp;=&amp;\frac{d}{dx}[16]\\
+
+
+
+
+							\end{array}\]
+						</p>
+					</div>
+					</section>	
+
+					<section data-auto-animate>
+					<div >
+						<p style="font-size: 30px;" >
+							\[\begin{array}{rcl}
+							x^2+y^2&amp;=&amp;16\\
+
+							\frac{d}{dx}[x^2+y^2]&amp;=&amp;\frac{d}{dx}[16]\\
+
+							\frac{d}{dx}[x^2]+\frac{d}{dx}[y^2]&amp;=&amp;\frac{d}{dx}[16]\\
+
+							2x\frac{d}{dx}[x]+2y\frac{d}{dx}[y]&amp;=&amp;0\\
+
+
+
+							\end{array}\]
+						</p>
+					</div>
+					</section>	
+					
+					<section data-auto-animate>
+					<div >
+						<p style="font-size: 30px;" >
+							\[\begin{array}{rcl}
+							x^2+y^2&amp;=&amp;16\\
+
+							\frac{d}{dx}[x^2+y^2]&amp;=&amp;\frac{d}{dx}[16]\\
+
+							\frac{d}{dx}[x^2]+\frac{d}{dx}[y^2]&amp;=&amp;\frac{d}{dx}[16]\\
+
+							2x\frac{d}{dx}[x]+2y\frac{d}{dx}[y]&amp;=&amp;0\\
+
+							2x+2yy'&amp;=&amp;0\\
+
+
+							\end{array}\]
+						</p>
+					</div>
+					</section>	
+
+
+
+					<section data-auto-animate>
+					<div >
+						<p style="font-size: 30px;" >
+							\[\begin{array}{rcl}
+							x^2+y^2&amp;=&amp;16\\
+
+							\frac{d}{dx}[x^2+y^2]&amp;=&amp;\frac{d}{dx}[16]\\
+
+							\frac{d}{dx}[x^2]+\frac{d}{dx}[y^2]&amp;=&amp;\frac{d}{dx}[16]\\
+
+							2x\frac{d}{dx}[x]+2y\frac{d}{dx}[y]&amp;=&amp;0\\
+
+							2x+2yy'&amp;=&amp;0\\
+
+							y'&amp;=&amp;-\frac{x}{y}.\\
+
+							\end{array}\]
+						</p>
+					</div>
+					</section>	
+
+				</section>
+
+
+
+
+				<section>		
+					
+
+					<div data-id="problem" class="r-frame">
+						<p style="font-size: 30px;" >
+							Consider the circle \(x^2+y^2=4^2\) where \(y'=-\frac{x}{y}\).
+						</p>
+						<iframe src="https://www.desmos.com/calculator/e54ynlmrwe?embed" width="80%" height="350" style="border: 1px solid #ccc" frameborder=0></iframe>
+					</div>
+
+					<p style="font-size: 30px;">
+						Where are \(y, x\) both positive?  Both negative?  One positive one negative?  What do the tangent slopes look like in these regions?
+					</p>
+
+					
+					</section>
+
+					<section data-auto-animate>
+					
+
+					<div data-id="problem" class="r-frame">
+						<p style="font-size: 30px;" >
+							Consider the circle \(x^2+y^2=4^2\) where \(y'=-\frac{x}{y}\).
+						</p>
+						
+					</div>
+
+					<p style="font-size: 30px;">
+						Find the \(y\) values of the points on the circle where \(x=2\).
+					</p>
+
+					<p style="font-size: 30px;" class="fragment">
+						Find \(y'\) at these points.
+					</p>
+
+					<p style="font-size: 30px;" class="fragment">
+						Find the lines tangent to the circle at these points.
+					</p>
+
+					
+					</section>
+						
+
+				</section>
+
+
+				<section>
+					<div data-id="problem" class="r-frame">
+						<p style="font-size: 30px;" >
+							Consider the Folium of Descartes \(x^3+y^3=6xy\).
+						</p>
+						<iframe src="https://www.desmos.com/calculator/s5g9jkacpn?embed" width="80%" height="350" style="border: 1px solid #ccc" frameborder=0></iframe>
+					</div>
+
+					<p style="font-size: 30px;">
+						What is \(y'\)?
+					</p>
+
+					<p style="font-size: 30px;">
+						What is the tangent line at \((3,3)\)?
+					</p>
+
+					<p style="font-size: 30px;">
+						Where is the tangent slope 0?
+					</p>
+				</section>
+
+
+				<section>
+					<section data-auto-animate>
+					<div data-id="problem" class="r-frame">
+						<p style="font-size: 30px;" >
+							Suppose \(y=\arcsin(x).\)
+						</p>
+						
+					</div>
+
+					<p style="font-size: 30px;">
+						Solve for \(x\) in terms of \(y\)
+					</p>
+
+					<p style="font-size: 30px;">
+						Find \(y'\) using implict differentiation.
+					</p>
+
+					<p style="font-size: 30px;" class="fragment">
+						Use the fact that \(\cos^2(y)+\sin^2(y)=1\) and \(\sin(y)=x\) to find \(y'\) in terms of \(x\).
+					</p>
+					</section>
+				</section>
+
+				<section>
+					<section data-auto-animate>
+					<div data-id="problem" class="r-frame">
+						<p style="font-size: 30px;" >
+							Suppose \(y=\arccos(x).\)
+						</p>
+						
+					</div>
+
+					
+
+					<p style="font-size: 30px;">
+						Find \(y'\) in terms of \(x\).
+					</p>
+					</section>
+				</section>
+
+				<section>
+					<section data-auto-animate>
+					<div data-id="problem" class="r-frame">
+						<p style="font-size: 30px;" >
+							Suppose \(y=\ln(x).\)
+						</p>
+						
+					</div>
+
+					<p style="font-size: 30px;">
+						Solve for \(x\) in terms of \(y\)
+					</p>
+
+					<p style="font-size: 30px;">
+						Find \(y'\) using implict differentiation.
+					</p>
+
+					<p style="font-size: 30px;" class="fragment">
+						Use the fact that \(y=\ln(x)\) to find \(y'\) in terms of \(x\).
+					</p>
+					</section>
+				</section>
+
+
+
+				
+
+
+
+					
+
+
+					
+
+
+				
+
+				
+
+
+
+				
+
+					
+						
+					
+
+					
+				
+
+
+									
+
+
+
+				
+			</div>
+		</div>
+
+		<script src="dist/reveal.js"></script>
+		<script src="plugin/notes/notes.js"></script>
+		<script src="plugin/markdown/markdown.js"></script>
+		<script src="plugin/highlight/highlight.js"></script>
+		<script>
+			// More info about initialization & config:
+			// - https://revealjs.com/initialization/
+			// - https://revealjs.com/config/
+			Reveal.initialize({
+				hash: true,
+
+				// Learn about plugins: https://revealjs.com/plugins/
+				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
+			});
+		</script>
+		<script src="plugin/math/math.js"></script>
+		<script src="plugin/chalkboard/plugin.js"></script>
+		<script src="plugin/customcontrols/plugin.js"></script>
+
+
+
+	<script>
+  	Reveal.initialize({
+		math: {
+			mathjax: 'https://cdn.jsdelivr.net/gh/mathjax/mathjax@2.7.8/MathJax.js',
+			config: 'TeX-AMS_HTML-full',
+			// pass other options into `MathJax.Hub.Config()`
+			TeX: { Macros: { RR: "{\\bf R}" } }
+		},
+
+		chalkboard: {
+        boardmarkerWidth: 3,
+        chalkWidth: 7,
+        chalkEffect: 1.0,
+        storage: null,
+        src: null,
+        readOnly: undefined,
+        transition: 800,
+        theme: "chalkboard",
+        background: [ 'rgba(127,127,127,.1)' , path + 'img/blackboard.png' ],
+        grid: { color: 'rgb(50,50,10,0.5)', distance: 80, width: 2},
+        eraser: { src: path + 'img/sponge.png', radius: 20},
+        boardmarkers : [
+                { color: 'rgba(100,100,100,1)', cursor: 'url(' + path + 'img/boardmarker-black.png), auto'},
+                { color: 'rgba(30,144,255, 1)', cursor: 'url(' + path + 'img/boardmarker-blue.png), auto'},
+                { color: 'rgba(220,20,60,1)', cursor: 'url(' + path + 'img/boardmarker-red.png), auto'},
+                { color: 'rgba(50,205,50,1)', cursor: 'url(' + path + 'img/boardmarker-green.png), auto'},
+                { color: 'rgba(255,140,0,1)', cursor: 'url(' + path + 'img/boardmarker-orange.png), auto'},
+                { color: 'rgba(150,0,20150,1)', cursor: 'url(' + path + 'img/boardmarker-purple.png), auto'},
+                { color: 'rgba(255,220,0,1)', cursor: 'url(' + path + 'img/boardmarker-yellow.png), auto'}
+        ],
+        chalks: [
+                { color: 'rgba(255,255,255,0.5)', cursor: 'url(' + path + 'img/chalk-white.png), auto'},
+                { color: 'rgba(96, 154, 244, 0.5)', cursor: 'url(' + path + 'img/chalk-blue.png), auto'},
+                { color: 'rgba(237, 20, 28, 0.5)', cursor: 'url(' + path + 'img/chalk-red.png), auto'},
+                { color: 'rgba(20, 237, 28, 0.5)', cursor: 'url(' + path + 'img/chalk-green.png), auto'},
+                { color: 'rgba(220, 133, 41, 0.5)', cursor: 'url(' + path + 'img/chalk-orange.png), auto'},
+                { color: 'rgba(220,0,220,0.5)', cursor: 'url(' + path + 'img/chalk-purple.png), auto'},
+                { color: 'rgba(255,220,0,0.5)', cursor: 'url(' + path + 'img/chalk-yellow.png), auto'}
+        ]
+    },
+    customcontrols: {
+  		controls: [
+  			{ icon: '<i class="fa fa-pen-square"></i>',
+  			  title: 'Toggle chalkboard (B)',
+  			  action: 'RevealChalkboard.toggleChalkboard();'
+  			},
+  			{ icon: '<i class="fa fa-pen"></i>',
+  			  title: 'Toggle notes canvas (C)',
+  			  action: 'RevealChalkboard.toggleNotesCanvas();'
+  			}
+  		]
+    },
+
+		plugins: [ RevealMath, RevealChalkboard, RevealCustomControls, RevealMenu  ]
+		});
+	</script>
+
+	</body>
+</html>

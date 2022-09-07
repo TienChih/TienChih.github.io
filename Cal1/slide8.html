@@ -256,6 +256,49 @@
 
 				</section>
 
+
+				<section>
+					<h4> Exponential Rule</h4>
+					<section data-auto-animate>
+						<div data-id="problem" class="r-frame">
+						<p style="font-size: 30px;" >
+							Let \(g(x)=\frac{e^x-1}{x}\)
+						</p>
+						<iframe src="https://www.desmos.com/calculator/8kc0dafai2" width="80%" height="400" style="border: 1px solid #ccc" frameborder=0></iframe>
+						
+					</div>
+					<p style="font-size: 30px;" >
+						Compute \(g(1), g(0.1), g(0.01), g(0.001)\) and estimate \(\displaystyle \lim_{x\to 0}\frac{e^x-1}{x}.\)
+					</p>
+					</section>
+
+					<section data-auto-animate>
+						<div data-id="problem" class="r-frame">
+							<p style="font-size: 30px;" >
+								Consider \(f(x)=e^x\).  Let \(c=x+h\).
+							</p>
+						</div>
+						<div >
+							
+							<p style="font-size: 25px;" >
+								\[\begin{array}{rcl}
+								f'(x) &amp; = &amp; \displaystyle \lim_{h\to 0} \frac{e^{x+h}-e^x}{h}\\
+								 
+								 &amp; = &amp; \displaystyle \lim_{h\to 0} \frac{e^{x}e^h-e^x}{h}\\
+
+								 &amp; = &amp; e^x\displaystyle \lim_{h\to 0} \frac{e^h-1}{h}\\
+
+								 &amp; = &amp; e^x\cdot 1=e^x\\
+
+								 \end{array}\]
+							</p>
+						</div>
+						
+
+					</section>
+					
+				</section>
+
 				<section>
 					<h4> Linearity  Rule</h4>
 					<section data-auto-animate>
@@ -279,9 +322,9 @@
 							<ul>
 								<li style="font-size: 25px;"> \(f'(x)\) if \(f(x)=3x^2-x+1\).</li><br>
 
-								<li style="font-size: 25px;"> \(\frac{d}{dx}[2x^2-x^4]\).</li><br>
+								<li style="font-size: 25px;"> \(\frac{d}{dx}[2x^2-x^4+3e^x]\).</li><br>
 
-								<li style="font-size: 25px;"> \(h'(t)\) if \(h(t)=\frac{1+t}{t^2}-\sqrt{t}\) (rewrite as a bunch of \(ct^n\) things!).</li><br>
+								<li style="font-size: 25px;"> \(h'(t)\) if \(h(t)=\frac{1+t}{t^2}-\sqrt{t}+2e^x\) (rewrite as a bunch of \(ct^n\) things!).</li><br>
 
 								<li style="font-size: 25px;"> \(g'(4)\) if \(g(x)=-\frac{x^2}{2}+\frac{1}{\sqrt{x}}\).</li><br>
 							</ul>
@@ -351,13 +394,13 @@
 					<p style="font-size: 30px;" >
 						Find the following:
 						<ul>
-								<li style="font-size: 25px;"> \(f'(x)\) if \(f(x)=\frac{3x^3-1}{x^2}\).</li><br>
+								<li style="font-size: 25px;"> \(f'(x)\) if \(f(x)=\frac{3x^3-1}{3e^x}\).</li><br>
 
 								<li style="font-size: 25px;"> \(\frac{d}{dx}[x^{100}(1-2x)]\).</li><br>
 
-								<li style="font-size: 25px;"> \(h'(t)\) if \(h(t)=(\sqrt{t}+1)(t^3)\).</li><br>
+								<li style="font-size: 25px;"> \(h'(t)\) if \(h(t)=(\sqrt{t}+1)e^x\).</li><br>
 
-								<li style="font-size: 25px;"> \(g'(2)\) if \(g(x)=\frac{t^2}{x^2+1}\).</li><br>
+								<li style="font-size: 25px;"> \(g'(2)\) if \(g(x)=x^2e^x\).</li><br>
 							</ul>
 
 						</p>
