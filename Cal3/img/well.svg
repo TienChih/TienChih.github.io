@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="170.876pt" height="14.262pt" viewBox="0 0 170.876 14.262">
+<g enable-background="new">
+<path transform="matrix(1,0,0,-1,85.438,2.191)" stroke-width=".79701" stroke-linecap="butt" stroke-miterlimit="10" stroke-linejoin="miter" fill="none" stroke="#000000" d="M -85.04042 0 L 85.04042 0 "/>
+<path transform="matrix(1,0,0,-1,85.438,2.191)" d="M 1.99255 0 C 1.99255 1.10046 1.10046 1.99255 0 1.99255 C -1.10046 1.99255 -1.99255 1.10046 -1.99255 0 C -1.99255 -1.10046 -1.10046 -1.99255 0 -1.99255 C 1.10046 -1.99255 1.99255 -1.10046 1.99255 0 Z M 0 0 "/>
+<path transform="matrix(1,0,0,-1,85.438,2.191)" stroke-width=".3985" stroke-linecap="butt" stroke-miterlimit="10" stroke-linejoin="miter" fill="none" stroke="#000000" d="M 1.99255 0 C 1.99255 1.10046 1.10046 1.99255 0 1.99255 C -1.10046 1.99255 -1.99255 1.10046 -1.99255 0 C -1.99255 -1.10046 -1.10046 -1.99255 0 -1.99255 C 1.10046 -1.99255 1.99255 -1.10046 1.99255 0 Z M 0 0 "/>
+<text xml:space="preserve" transform="matrix(1 0 -0 1 .0000076293949 14.262001)" font-size="4.9813" font-family="CMR5"><tspan y="-4.815" x="73.307">(</tspan></text>
+<text xml:space="preserve" transform="matrix(1 0 -0 1 .0000076293949 14.262001)" font-size="4.9813" font-family="CMMI5" font-style="italic"><tspan y="-4.815" x="76.005">x</tspan></text>
+<text xml:space="preserve" transform="matrix(1 0 -0 1 .0000076293949 14.262001)" font-size="4.9813" font-family="CMR5"><tspan y="-3.321" x="79.949">0</tspan></text>
+<text xml:space="preserve" transform="matrix(1 0 -0 1 .0000076293949 14.262001)" font-size="4.9813" font-family="CMMI5" font-style="italic"><tspan y="-4.815" x="83.837 87.33885">,y</tspan></text>
+<text xml:space="preserve" transform="matrix(1 0 -0 1 .0000076293949 14.262001)" font-size="4.9813" font-family="CMR5"><tspan y="-3.321" x="90.981998">0</tspan><tspan y="-4.815" x="94.869998">)</tspan></text>
+<path transform="matrix(1,0,0,-1,85.438,2.191)" stroke-width="1.59404" stroke-linecap="butt" stroke-miterlimit="10" stroke-linejoin="miter" fill="none" stroke="#0000ff" d="M 5.66927 0 L 55.48811 0 "/>
+<path transform="matrix(1,0,0,-1,140.92612,2.191)" stroke-width="1.27522" stroke-linecap="round" stroke-linejoin="round" fill="none" stroke="#0000ff" d="M -2.27148 3.02866 C -2.0822 1.8929 0 .18927 .56786 0 C 0 -.18927 -2.0822 -1.8929 -2.27148 -3.02866 "/>
+<path transform="matrix(1,0,0,-1,85.438,2.191)" stroke-width="1.59404" stroke-linecap="butt" stroke-miterlimit="10" stroke-linejoin="miter" fill="none" stroke="#ff0000" d="M -5.66927 0 L -55.48811 0 "/>
+<path transform="matrix(-1,-0,0,1,29.949894,2.191)" stroke-width="1.27522" stroke-linecap="round" stroke-linejoin="round" fill="none" stroke="#ff0000" d="M -2.27148 3.02866 C -2.0822 1.8929 0 .18927 .56786 0 C 0 -.18927 -2.0822 -1.8929 -2.27148 -3.02866 "/>
+</g>
+</svg>

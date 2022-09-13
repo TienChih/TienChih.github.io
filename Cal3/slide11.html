@@ -1,0 +1,598 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>reveal.js</title>
+
+		<link rel="stylesheet" href="dist/reset.css">
+		<link rel="stylesheet" href="dist/reveal.css">
+		<link rel="stylesheet" href="dist/theme/white.css">
+		<link rel="stylesheet" href="plugin/chalkboard/style.css">
+		<link rel="stylesheet" href="plugin/customcontrols/style.css">
+
+
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+
+
+
+		<!-- Theme used for syntax highlighted code -->
+		<link rel="stylesheet" href="plugin/highlight/monokai.css">
+		<style>
+			.container{
+   				 display: flex;
+			}
+			.col{
+    			flex: 1;
+			}
+		</style>
+			<script async defer src="https://buttons.github.io/buttons.js"></script>
+
+		<script src="plugin/menu/menu.js"></script>
+
+		<script src="https://sagecell.sagemath.org/static/embedded_sagecell.js"></script>
+  
+ 	 <script>sagecell.makeSagecell({"inputLocation": ".sage"});</script>
+
+
+
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				
+				<section>
+					<h2>Walking through a field.</h2>
+					<h4>M 211</h4>
+					
+					<h4>
+						Oxford College of Emory University <a href="https://app.oxford.emory.edu/WebApps/Directory/index.cfm/view/9984" target="_blank">Tien Chih</a>
+					</h4>
+				</section>
+
+				
+
+
+				
+				<section>
+					<h4>Paths in a field</h4>
+					<div class="r-frame" >
+						<p style="font-size: 25px;" >
+							Use the arrows and follow the trajectory of each dot.
+						</p>
+
+					</div>
+
+					<img src="img/VF1.png" width="25%"><img src="img/VF2.png" width="25%"><br>
+					<img src="img/VF3.png" width="25%"><img src="img/VF4.png" width="25%">
+
+						
+					
+				</section>
+
+				<section>
+					
+					<section data-auto-animate>
+						<h4>Vector Field</h4>
+					<div class="r-frame" data-id="def">
+						<p style="font-size: 35px;" >
+							A <strong>vector field</strong> is a function \(F:\mathbb{R}^n\to \mathbb{R}^n\).
+						</p>
+
+						
+							
+					</div>
+
+					<p style="font-size: 35px;" data-id="prose">
+							It associates  each point in \(\mathbb{R}^n\) with an arrow (vector).
+					</p>
+					</section>
+
+					<section data-auto-animate>
+					<div class="r-frame" data-id="def">
+						<p style="font-size: 35px;" >
+							A <strong>vector field</strong> is a function \(F:\mathbb{R}^n\to \mathbb{R}^n\).
+						</p>
+
+						
+							
+					</div>
+
+					<p style="font-size: 35px;" data-id="prose">
+							Plot the vector fields \(F(x,y)=(-1,1), (x,y), (y,x), (y,-x), (-y,-x)\).
+					</p>
+
+					<iframe src="sagecellvectorfield.html" width="80%" height="500" style="border: 1px solid #ccc" frameborder=0></iframe>
+
+
+					</section>
+
+
+
+					
+
+						
+					
+				</section>
+
+
+				<section>
+
+					<p style="font-size: 35px;" data-id="prose">
+						Consider function \(f(x,y)=10-2x^2-3y^2\) and vector field \(F(x,y)=(f_x(x,y), f_y(x,y))\).  Compare the contour plot and the vector field.  What is the vector field measuring?
+					</p>
+
+					<img src="img/contourVF.png" width="45%"><img src="img/VFcontour.png" width="45%">
+
+				</section>
+
+				<section>
+					<h4>Potential Function</h4>
+					<div class="r-frame" data-id="def">
+						<p style="font-size: 35px;" >
+							Given a vector field \(F\), if there is a function \(f:\mathbb{R}^n\to \mathbb{R}\) such that \(F=\nabla f\), we say that \(f\) is the <strong>potential function </strong> of \(F\), and \(F\) is the <strong>gradient field</strong> of \(f\).
+						</p>
+
+						
+							
+					</div>
+				</section>
+
+
+				<section>
+					<div class="r-frame" >
+						<p style="font-size: 25px;" >
+							Consider the trajectories \(\mathbf{r}(t)\) you found earlier.  What can be said about \(\mathbf{r}'(t)\) in relation to the vector field?
+
+						</p>
+
+					</div>
+
+					<img src="img/VF1.png" width="45%">
+					<img src="img/VF3.png" width="45%">
+						
+					
+				</section>
+
+
+				<section>
+					<div class="r-frame" >
+						<p style="font-size: 25px;" >
+							A <strong>flow line</strong> of a vector field \(F:\mathbb{R}^n\to \mathbb{R}^n\) is a differentiable path \(\mathbf{r}:I\to \mathbb{R}^n\) such that \[\mathbf{r}'(t)=F(\mathbf{r}(t)).\]
+
+						</p>
+
+					</div>
+
+					
+						
+					
+				</section>
+
+
+				<section>
+					<div class="r-frame" >
+						<p style="font-size: 25px;" >
+							Verify that \(\mathbf{r}(t)=(r\cos(t+\theta_0)), r\sin(t+\theta_0))\) is a flow line for \(F(x,y)=(-y,x)\)
+
+						</p>
+
+					</div>
+
+					<img src="img/VF1.png" width="60%">
+						
+					
+				</section>
+
+				<section>
+
+					<div class="r-frame" >
+						<p style="font-size: 25px;" >
+							If \(F=\nabla f\) is a gradient vector field, and \(\mathbf{r}\) is a flow line for \(F\), explain why \(f(\mathbf{r}(t))\) is an increasing function.
+
+						</p>
+
+					</div>
+
+					<img src="img/contourVF.png" width="45%"><img src="img/VFcontour.png" width="45%">
+
+				</section>
+
+
+				<section>
+					<h4>Divergence</h4>
+					<section data-auto-animate>
+						<div class="r-frame" data-id="prompt">
+						<p style="font-size: 35px;" >
+							Suppose a well pours water out in both directions at \(x_0\).  Let \(F\) represent the (one dimensional) vector field that results.
+
+							<img src="img/well.svg" width="80%">
+
+						</p>
+
+					</div>
+					<p style="font-size: 35px;" data-id="question">
+						Would we say \(\frac{\partial F}{\partial x}(x_0, y_0)>0?, &lt;0?, =0?\) or is this unknowable?
+					</p>
+
+					</section>
+
+					<section data-auto-animate>
+						<div class="r-frame" data-id="prompt">
+						<p style="font-size: 35px;" >
+							Suppose a sinkhole drains water in from both directions at \(x_0\).  Let \(F\) represent the (one dimensional) vector field that results.
+
+							<img src="img/sink.svg" width="80%">
+
+						</p>
+
+					</div>
+					<p style="font-size: 35px;" data-id="question">
+						Would we say \(\frac{\partial F}{\partial x}(x_0, y_0)>0?, &lt;0?, =0?\) or is this unknowable?
+					</p>
+
+					</section>
+
+					<section data-auto-animate>
+						<div class="r-frame" data-id="prompt">
+						<p style="font-size: 35px;" >
+							Let \(F:\mathbf{R}^2\to \mathbf{R}^2, F=(F_1, F_2)\) be a vector field.  In order for \((x_0, y_0)\) to be a "source" (rather than a sink or neutral), what must be true?
+
+						</p>
+
+					</div>
+					<ul>
+						<li style="font-size: 35px;"> \(\frac{\partial F_1}{\partial x}(x_0, y_0)+\frac{\partial F_2}{\partial y}(x_0, y_0)>0\).</li>
+						<li style="font-size: 35px;"> \(-\frac{\partial F_1}{\partial x}(x_0, y_0)+\frac{\partial F_2}{\partial y}(x_0, y_0)>0\).</li>
+						<li style="font-size: 35px;"> \(\frac{\partial F_1}{\partial x}(x_0, y_0)-\frac{\partial F_2}{\partial y}(x_0, y_0)>0\).</li>
+						<li style="font-size: 35px;"> \(-\frac{\partial F_1}{\partial x}(x_0, y_0)-\frac{\partial F_2}{\partial y}(x_0, y_0)>0\).</li>
+					</ul>
+
+
+					</section>
+
+
+					<section data-auto-animate>
+						<div class="r-frame" data-id="prompt">
+						<p style="font-size: 35px;" >
+							Given a vector field \(F:\mathbb{R}^n\to\mathbb{R}^n\), the <strong>divergence</strong> of \(F\) is denoted and defined to be:
+
+							\[\text{div}(F)=\nabla\cdot F =\sum_{i=1}^n \frac{\partial F_i}{\partial x_i}\]
+
+							which is a function \(\nabla\cdot F:\mathbb{R}^n\to \mathbb{R}\)
+
+						</p>
+
+					</div>
+
+					<p style="font-size: 35px;" >
+						This measure the "net mass flow" of each point.
+					</p>
+					
+
+
+					</section>
+
+
+
+
+					<section data-auto-animate>
+						<div class="r-frame" data-id="prompt">
+						<p style="font-size: 35px;" >
+							Are there any points that visually have clearly positive/negative divergence?  
+
+						</p>
+
+					</div>
+					<img src="img/div.png" width="45%"><img src="img/circ.png" width="45%">
+
+
+					</section>
+
+					<section data-auto-animate>
+						<div class="r-frame" data-id="prompt">
+						<p style="font-size: 35px;" >
+							Are there any points that visually have clearly positive/negative divergence?  
+
+						</p>
+
+					</div>
+					<img src="img/div.png" width="40%"><img src="img/circ.png" width="40%">
+
+						<p style="font-size: 35px;" >
+							\[F(x,y)=(x^3-4x, y^3-4y), G(x,y)=(-y, x).\]
+						</p>
+
+
+					</section>
+
+				</section>
+
+
+				<section>
+					<h4>Curl</h4>
+
+					<section data-auto-animate>
+						<div class="r-frame" data-id="prompt">
+						<p style="font-size: 25px;" >
+							Imagine a pinwheel exposed to winds as depicted.  Let \(F=(F_1, F_2)\).
+
+							
+
+						</p>
+
+						<img src="img/windmillx.svg" width="25%">
+
+
+
+					</div>
+					<p style="font-size: 25px;" data-id="question">
+						Which of the following is depicted here?
+						<ul>
+						<li style="font-size: 25px;"> \(\frac{\partial F_1}{\partial x}(x_0, y_0)>0\).</li>
+						<li style="font-size: 25px;"> \(\frac{\partial F_2}{\partial x}(x_0, y_0)>0\).</li>
+						<li style="font-size: 25px;"> \(\frac{\partial F_1}{\partial x}(x_0, y_0)&lt;0\).</li>
+						<li style="font-size: 25px;"> \(\frac{\partial F_2}{\partial x}(x_0, y_0)&lt;0\).</li>
+					</ul>
+					</p>
+
+					<p style="font-size: 25px;" class="fragment">
+						Does the windmill turn clockwise, counter-clockwise, or not turn?
+					</p>
+
+					</section>
+
+					<section data-auto-animate>
+						<div class="r-frame" data-id="prompt">
+						<p style="font-size: 25px;" >
+							Imagine a pinwheel exposed to winds as depicted.  Let \(F=(F_1, F_2)\).
+
+							
+
+						</p>
+						<img src="img/windmilly.svg" width="25%">
+
+					</div>
+					<p style="font-size: 25px;" data-id="question">
+						Which of the following is depicted here?
+						<ul>
+						<li style="font-size: 25px;"> \(\frac{\partial F_1}{\partial y}(x_0, y_0)>0\).</li>
+						<li style="font-size: 25px;"> \(\frac{\partial F_2}{\partial y}(x_0, y_0)>0\).</li>
+						<li style="font-size: 25px;"> \(\frac{\partial F_1}{\partial y}(x_0, y_0)&lt;0\).</li>
+						<li style="font-size: 25px;"> \(\frac{\partial F_2}{\partial y}(x_0, y_0)&lt;0\).</li>
+					</ul>
+					</p>
+
+					<p style="font-size: 25px;" class="fragment">
+						Does the windmill turn clockwise, counter-clockwise, or not turn?
+					</p>
+
+					</section>
+
+					<section data-auto-animate>
+						<div class="r-frame" data-id="prompt">
+						<p style="font-size: 35px;" >
+							Let \(F:\mathbf{R}^2\to \mathbf{R}^2, F=(F_1, F_2)\) be a vector field.  In order for a pinwheel at \((x_0, y_0)\) to rotate counterclockwise, which of the following must be true?
+
+						</p>
+
+					</div>
+					<ul>
+						<li style="font-size: 35px;"> \(\frac{\partial F_1}{\partial y}(x_0, y_0)+\frac{\partial F_2}{\partial x}(x_0, y_0)>0\).</li>
+						<li style="font-size: 35px;"> \(-\frac{\partial F_1}{\partial y}(x_0, y_0)+\frac{\partial F_2}{\partial x}(x_0, y_0)>0\).</li>
+						<li style="font-size: 35px;"> \(\frac{\partial F_1}{\partial y}(x_0, y_0)-\frac{\partial F_2}{\partial x}(x_0, y_0)>0\).</li>
+						<li style="font-size: 35px;"> \(-\frac{\partial F_1}{\partial y}(x_0, y_0)-\frac{\partial F_2}{\partial x}(x_0, y_0)>0\).</li>
+
+
+					</ul>
+
+
+					</section>
+
+					<section data-auto-animate>
+						<div class="r-frame" data-id="prompt">
+						<p style="font-size: 35px;" >
+							Given a vector field \(F:\mathbb{R}^2\to\mathbb{R}^2\), the <strong>circulation density</strong> of \(F\) is denoted and defined to be:
+
+							\[\frac{\partial F_2}{\partial x}-\frac{\partial F_1}{\partial y}.\]
+
+
+						</p>
+
+					</div>
+
+					<p style="font-size: 35px;" >
+						This measure the "counter-clockwise rotation" of each point.
+					</p>
+					
+
+
+					</section>
+
+
+
+
+					<section data-auto-animate>
+						<div class="r-frame" data-id="prompt">
+						<p style="font-size: 35px;" >
+							Are there any points that visually have clearly positive/negative circulation density?  
+
+						</p>
+
+					</div>
+					<img src="img/div.png" width="45%"><img src="img/circ.png" width="45%">
+
+
+					</section>
+
+					<section data-auto-animate>
+						<div class="r-frame" data-id="prompt">
+						<p style="font-size: 35px;" >
+							Are there any points that visually have clearly positive/negative divergence?  
+
+						</p>
+
+					</div>
+					<img src="img/div.png" width="40%"><img src="img/circ.png" width="40%">
+
+						<p style="font-size: 35px;" >
+							\[F(x,y)=(x^3-4x, y^3-4y), G(x,y)=(-y, x).\]
+						</p>
+
+
+					</section>
+
+				</section>
+
+
+
+
+				
+
+
+
+
+
+				
+
+
+
+
+
+				
+				
+
+
+				
+
+				
+
+
+
+
+				
+
+
+				
+
+
+
+
+				
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+					
+				
+			</div>
+		</div>
+
+		<script src="dist/reveal.js"></script>
+		<script src="plugin/notes/notes.js"></script>
+		<script src="plugin/markdown/markdown.js"></script>
+		<script src="plugin/highlight/highlight.js"></script>
+		<script>
+			// More info about initialization & config:
+			// - https://revealjs.com/initialization/
+			// - https://revealjs.com/config/
+			Reveal.initialize({
+				hash: true,
+
+				// Learn about plugins: https://revealjs.com/plugins/
+				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
+			});
+		</script>
+		<script src="plugin/math/math.js"></script>
+		<script src="plugin/chalkboard/plugin.js"></script>
+		<script src="plugin/customcontrols/plugin.js"></script>
+
+
+
+	<script>
+  	Reveal.initialize({
+		math: {
+			mathjax: 'https://cdn.jsdelivr.net/gh/mathjax/mathjax@2.7.8/MathJax.js',
+			config: 'TeX-AMS_HTML-full',
+			// pass other options into `MathJax.Hub.Config()`
+			TeX: { Macros: { RR: "{\\bf R}" } }
+		},
+
+		chalkboard: {
+        boardmarkerWidth: 3,
+        chalkWidth: 7,
+        chalkEffect: 1.0,
+        storage: null,
+        src: null,
+        readOnly: undefined,
+        transition: 800,
+        theme: "chalkboard",
+        background: [ 'rgba(127,127,127,.1)' , path + 'img/blackboard.png' ],
+        grid: { color: 'rgb(50,50,10,0.5)', distance: 80, width: 2},
+        eraser: { src: path + 'img/sponge.png', radius: 20},
+        boardmarkers : [
+                { color: 'rgba(100,100,100,1)', cursor: 'url(' + path + 'img/boardmarker-black.png), auto'},
+                { color: 'rgba(30,144,255, 1)', cursor: 'url(' + path + 'img/boardmarker-blue.png), auto'},
+                { color: 'rgba(220,20,60,1)', cursor: 'url(' + path + 'img/boardmarker-red.png), auto'},
+                { color: 'rgba(50,205,50,1)', cursor: 'url(' + path + 'img/boardmarker-green.png), auto'},
+                { color: 'rgba(255,140,0,1)', cursor: 'url(' + path + 'img/boardmarker-orange.png), auto'},
+                { color: 'rgba(150,0,20150,1)', cursor: 'url(' + path + 'img/boardmarker-purple.png), auto'},
+                { color: 'rgba(255,220,0,1)', cursor: 'url(' + path + 'img/boardmarker-yellow.png), auto'}
+        ],
+        chalks: [
+                { color: 'rgba(255,255,255,0.5)', cursor: 'url(' + path + 'img/chalk-white.png), auto'},
+                { color: 'rgba(96, 154, 244, 0.5)', cursor: 'url(' + path + 'img/chalk-blue.png), auto'},
+                { color: 'rgba(237, 20, 28, 0.5)', cursor: 'url(' + path + 'img/chalk-red.png), auto'},
+                { color: 'rgba(20, 237, 28, 0.5)', cursor: 'url(' + path + 'img/chalk-green.png), auto'},
+                { color: 'rgba(220, 133, 41, 0.5)', cursor: 'url(' + path + 'img/chalk-orange.png), auto'},
+                { color: 'rgba(220,0,220,0.5)', cursor: 'url(' + path + 'img/chalk-purple.png), auto'},
+                { color: 'rgba(255,220,0,0.5)', cursor: 'url(' + path + 'img/chalk-yellow.png), auto'}
+        ]
+    },
+    customcontrols: {
+  		controls: [
+  			{ icon: '<i class="fa fa-pen-square"></i>',
+  			  title: 'Toggle chalkboard (B)',
+  			  action: 'RevealChalkboard.toggleChalkboard();'
+  			},
+  			{ icon: '<i class="fa fa-pen"></i>',
+  			  title: 'Toggle notes canvas (C)',
+  			  action: 'RevealChalkboard.toggleNotesCanvas();'
+  			}
+  		]
+    },
+
+		plugins: [ RevealMath, RevealChalkboard, RevealCustomControls, RevealMenu  ]
+		});
+	</script>
+
+	</body>
+</html>
