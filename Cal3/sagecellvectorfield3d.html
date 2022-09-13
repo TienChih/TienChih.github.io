@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang=en>
+<head>
+<meta charset=utf-8>
+<title>blah</title>
+<script src="https://sagecell.sagemath.org/static/embedded_sagecell.js"></script>
+  
+ 	 <script>sagecell.makeSagecell({"inputLocation": ".sage"});</script>
+</head>
+<body>
+<p>
+<font size="+2">
+<div class="sage">
+<script type="text/x-sage">
+var('x y z')
+plot_vector_field3d((x*cos(z),-y*cos(z),sin(z)), (x,0,pi), (y,0,pi), (z,0,pi))+point3d([pi/4,pi/4,pi/4],color='black', size=50)
+</script></div>
+</font>
+</p>
+</body>
+</html>

@@ -311,7 +311,7 @@
 
 
 				<section>
-					<h4>Curl</h4>
+					<h4>Circulation Density</h4>
 
 					<section data-auto-animate>
 						<div class="r-frame" data-id="prompt">
@@ -403,7 +403,7 @@
 					</div>
 
 					<p style="font-size: 35px;" >
-						This measure the "counter-clockwise rotation" of each point.
+						This measure the "counter-clockwise rotation" of each point <strong>at that point</strong>.
 					</p>
 					
 
@@ -429,7 +429,7 @@
 					<section data-auto-animate>
 						<div class="r-frame" data-id="prompt">
 						<p style="font-size: 35px;" >
-							Are there any points that visually have clearly positive/negative divergence?  
+							Are there any points that visually have clearly positive/negative circulation density?  
 
 						</p>
 
@@ -443,7 +443,181 @@
 
 					</section>
 
+
+					<section>
+						<div class="r-frame" data-id="prompt">
+						<p style="font-size: 35px;" >
+							Sketch or imagine a vector field so that a stick floating in this field would rotate counter-clockwise about the origin, but has negative circulation density everywhere.
+						</p>
+
+					</div>
+
+					</section>
+
 				</section>
+
+
+				<section>
+					<h4>Curl</h4>
+
+					<section data-auto-animate>
+					<div class="r-frame" data-id="def">
+						<p style="font-size: 35px;" >
+							What about 3 dimensions?
+						</p>
+
+						
+							
+					</div>
+
+					
+
+					<iframe src="sagecellvectorfield3d.html" width="80%" height="500" style="border: 1px solid #ccc" frameborder=0></iframe>
+
+
+					</section>
+
+
+					<section data-auto-animate>
+					<div class="r-frame" data-id="def">
+						<p style="font-size: 35px;" >
+							Let \(F=(F_1, F_2, F_3)\).
+						</p>
+
+						
+							
+					</div>
+
+					<div class="fragment">
+						<p style="font-size: 35px;" >
+							Circulation density about \(\mathbf{k}\) is \(\frac{\partial F_2}{\partial x}-\frac{\partial F_1}{\partial y}\).
+						</p>		
+					</div>
+
+					<div class="fragment">
+						<p style="font-size: 35px;" >
+							Circulation density about \(\mathbf{i}\) is \(\frac{\partial F_3}{\partial y}-\frac{\partial F_2}{\partial z}\).
+						</p>		
+					</div>
+
+					<div class="fragment">
+						<p style="font-size: 35px;" >
+							Circulation density about \(\mathbf{j}\) is \(\frac{\partial F_1}{\partial z}-\frac{\partial F_3}{\partial x}\).
+						</p>		
+					</div>
+
+					
+
+					
+
+
+					</section>
+
+
+					<section data-auto-animate>
+					<div class="r-frame" data-id="def">
+						<p style="font-size: 35px;" >
+							The <strong>curl</strong> of \(F\) is a function which measures the vector around which \(F\) "swirls counter-clockwise" at each point.
+						</p>
+
+						
+							
+					</div>
+
+					<p style="font-size: 25px;">
+						\[
+						\begin{array}{rcl}
+						\text{curl}(F) =\nabla\times F &amp;=&amp; (\frac{\partial}{\partial x}\mathbf{i} + \frac{\partial}{\partial j}\mathbf{j} + \frac{\partial}{\partial z}\mathbf{k}) \times(F_1\mathbf{i} + F_2\mathbf{j} + F_3\mathbf{k}).\\
+						
+
+						&amp;=&amp; \left|
+						\begin{array}{ccc}
+							\mathbf{i}  &amp; \mathbf{j} &amp; \mathbf{j}\\
+							\frac{\partial}{\partial x}  &amp; \frac{\partial}{\partial y} &amp; \frac{\partial}{\partial z}\\
+
+							F_1 &amp; F_2 &amp;F_3\\
+
+
+
+
+						\end{array} \right|\\
+
+						&amp;=&amp; (\frac{\partial F_3}{\partial y}-\frac{\partial F_2}{\partial z})\mathbf{i} + (\frac{\partial F_1}{\partial z}-\frac{\partial F_3}{\partial x})\mathbf{j} + (\frac{\partial F_2}{\partial x}-\frac{\partial F_1}{\partial y})\mathbf{k}.
+
+
+						\end{array}
+						\]
+					</p>
+
+					
+
+					
+
+
+					</section>
+
+
+
+
+				</section>
+
+				<section>
+					<section data-auto-animate>
+					<div class="r-frame" data-id="def">
+						<p style="font-size: 35px;" >
+							Compute \(\nabla\times F\) for \(F=(x^2y, -2xz, x+y-z)\)
+						</p>
+
+					</div>
+					</section>
+
+					<section data-auto-animate>
+						<div class="r-frame" data-id="def">
+						<p style="font-size: 35px;" >
+							Compute \(\nabla\times F\) for \(F=(x^2y, -2xz, x+y-z)\)
+						</p>
+
+					</div>
+					
+					<iframe src="sagecellvectorfield3d.html" width="80%" height="500" style="border: 1px solid #ccc" frameborder=0></iframe>
+
+
+					</section>
+				</section>
+
+
+
+				<section>
+					<p style="font-size: 35px;" >
+						\[\nabla\times F  = (\frac{\partial F_3}{\partial y}-\frac{\partial F_2}{\partial z})\mathbf{i} + (\frac{\partial F_1}{\partial z}-\frac{\partial F_3}{\partial x})\mathbf{j} + (\frac{\partial F_2}{\partial x}-\frac{\partial F_1}{\partial y})\mathbf{k}.\]
+					</p>
+					<section data-auto-animate>
+					<div class="r-frame" data-id="def">
+						<p style="font-size: 35px;" >
+							If  \(F=\nabla(f)\) explain why \(\nabla\times F=0\).
+						</p>
+
+						<img src="img/VFcontour.png" width="30%">
+
+					</div>
+					</section>
+
+					<section>
+					<div class="r-frame" data-id="def">
+						<p style="font-size: 35px;" >
+							Explain why   \(\text{div}(\nabla\times F)=0\).
+						</p>
+
+					</div>
+					</section>
+				</section>
+
+				
+
+
+
+
+
 
 
 
