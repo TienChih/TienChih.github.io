@@ -1,0 +1,777 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>reveal.js</title>
+
+		<link rel="stylesheet" href="dist/reset.css">
+		<link rel="stylesheet" href="dist/reveal.css">
+		<link rel="stylesheet" href="dist/theme/white.css">
+		<link rel="stylesheet" href="plugin/chalkboard/style.css">
+		<link rel="stylesheet" href="plugin/customcontrols/style.css">
+
+
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+
+
+
+		<!-- Theme used for syntax highlighted code -->
+		<link rel="stylesheet" href="plugin/highlight/monokai.css">
+		<style>
+			.container{
+   				 display: flex;
+			}
+			.col{
+    			flex: 1;
+			}
+		</style>
+			<script async defer src="https://buttons.github.io/buttons.js"></script>
+
+		<script src="plugin/menu/menu.js"></script>
+
+		<script src="https://sagecell.sagemath.org/static/embedded_sagecell.js"></script>
+  
+ 	 <script>sagecell.makeSagecell({"inputLocation": ".sage"});</script>
+
+
+
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				
+				<section>
+					<h2>Functions: Extreme Edition</h2>
+					<h4>M 211</h4>
+					
+					<h4>
+						Oxford College of Emory University <a href="https://app.oxford.emory.edu/WebApps/Directory/index.cfm/view/9984" target="_blank">Tien Chih</a>
+					</h4>
+				</section>
+
+				
+
+
+				
+				<section>
+					<h4>An example</h4>
+
+					<section data-auto-animate>
+					<div class="r-frame" >
+						<p style="font-size: 35px;" data-id="thm">
+							Consider \[f_1(x,y)=x^2+y^2, f_2(x,y)=-(x+y)^2,\]\[ f_3(x,y)=y^2-x^2, f_4(x,y)=x^2+y^2-5xy.\]
+						</p>
+
+					</div>
+
+					<div class="fragment">
+						<p style="font-size: 25px;" >
+							For each \(f_i(x,y)\), find all 1st and second derivatives at the origin.
+						</p>
+					</div>
+
+					<div class="fragment">
+						<p style="font-size: 25px;" >
+							For each \(f_i(0,0)\), describe if it is a local max, min or neither.
+						</p>
+					</div>
+
+
+					
+
+					</section>
+
+					<section data-auto-animate>
+					
+
+					<div >
+						<p style="font-size: 35px;" >
+							If \(f_{xx}(0,0)<0\) which of the following is true?
+							<ul>
+								<li style="font-size: 35px;">The origin must be a local min.</li>
+								<li style="font-size: 35px;">The origin must be a local max.</li>
+								<li style="font-size: 35px;">The origin cannot be a local min.</li>
+								<li style="font-size: 35px;">The origin cannot be a local max.</li>
+							</ul>
+						</p>
+					</div>
+
+					
+
+					</section>
+
+
+					
+
+						
+					
+				</section>
+
+				<section>
+					<section data-auto-animate>
+					<div class="r-frame" >
+						<p style="font-size: 25px;" data-id="thm">
+							Suppose \(f:\mathbb{R}^2\to \mathbb{R}\) has a critical point at the origin.
+						</p>
+
+					</div>
+
+					<div class="fragment">
+						<p style="font-size: 25px;" >
+							\(f(x,y)\approx p_2(x,y)=f(0,0)+f_x(0,0)x+f_y(0,0)y +\frac{1}{2}\left(f_{xx}(0,0)x^2+2f_{xy}(0,0)xy+f_{yy}(0,0)y^2 \right) \).
+						</p>
+					</div>
+					<div class="fragment">
+						<p style="font-size: 25px;" >
+							So
+							\[ 
+							\begin{array}{rcl}
+							\Delta(f) &\approx& \frac{1}{2}\left(f_{xx}(0,0)(\Delta x)^2+2f_{xy}(0,0)(\Delta x \Delta y)+f_{yy}(0,0)(\Delta y)^2 \right)\\
+							&=& [\Delta x, \Delta y]
+							\left[
+							\begin{array}{cc}
+							f_{xx}(0,0) & f_{xy}(0,0)\\
+							f_{yx}(0,0) & f_{yy}(0,0)
+							\end{array}
+							\right]
+							\left[
+							\begin{array}{cc}
+							\Delta x\\
+							\Delta y\\
+							\end{array}
+							\right]
+							\end{array}
+							 \]
+						</p>
+
+					</div>
+
+					
+
+					</section>
+
+					<section data-auto-animate>
+					<div class="r-frame" >
+						<p style="font-size: 25px;" data-id="thm">
+							Let \(\mathbf{h}=\mathbf{x}-\mathbf{a}\). The Hessian \(Hf(\mathbf{a})\) is <strong>positive definite</strong> if for any \(\mathbf{a}\):
+
+							\[ \mathbf{h}^THf(\mathbf{a})\mathbf{h}>0. \]
+						</p>
+
+					</div>
+
+					
+
+					<div >
+							
+
+							<ul>
+								<li style="font-size: 25px;">\(f\) has a local minimum at \(\mathbf{a}\) if \(Hf(\mathbf{a})\) is positive definite.</li>
+								<li style="font-size: 25px;">\(f\) has a local maximum at \(\mathbf{a}\) if \(Hf(\mathbf{a})\) is negative definite.</li>
+
+								<li style="font-size: 25px;">Otherwise, \(f\) has a saddle point at \(\mathbf{a}\).</li>
+							</ul>
+					</div>
+
+					</section>
+
+
+					<section data-auto-animate>
+					
+
+					<div class="r-frame" >
+						<p style="font-size: 25px;">
+							Given a Hessian \(Hf(\mathbf{a})\) the <strong>sequence of principal minors</strong> is:
+							\[
+							\begin{array}{rcl}
+							d_1 &=& f_{x_1x_1}(\mathbf{a})\\
+
+							d_2 &=& 
+							\left|
+							\begin{array}{cc}
+							f_{x_1x_1}(\mathbf{a}) & f_{x_1x_2}(\mathbf{a})\\
+							f_{x_2x_1}(\mathbf{a}) & f_{x_2x_2}(\mathbf{a})\\
+							\end{array}
+							\right| \\
+
+							d_3 &=& 
+							\left|
+							\begin{array}{ccc}
+							f_{x_1x_1}(\mathbf{a}) & f_{x_1x_2}(\mathbf{a}) & f_{x_1x_3}(\mathbf{a})\\
+							f_{x_2x_1}(\mathbf{a}) & f_{x_2x_2}(\mathbf{a}) & f_{x_2x_3}(\mathbf{a})\\
+							f_{x_3x_1}(\mathbf{a}) & f_{x_3x_2}(\mathbf{a}) & f_{x_3x_3}(\mathbf{a})\\
+							\end{array}
+							\right| \\
+
+							\vdots & \vdots & \vdots
+
+
+							\end{array}
+							\]
+						</p>
+
+					</div>
+
+					<div class="fragment" >
+						<ul>
+							<li style="font-size: 25px;">If \(Hf(\mathbf{a})=0\), \(\mathbf{a}\) is <strong>degenerate</strong>.</li>
+							<li style="font-size: 25px;">If \(d_k>0\) for each \(k\), \(Hf(\mathbf{a})\) is positive definite (\(\mathbf{a}\) is a local min).</li>
+							<li style="font-size: 25px;">If \(d_k&lt;0\) when \(k\) is odd but \(d_k>0\) when \(k\) is even, \(Hf(\mathbf{a})\) is positive negative (\(\mathbf{a}\) is a local max).</li>
+
+
+							<li style="font-size: 25px;">Otherwise, \(f\) has a saddle point at \(\mathbf{a}\).</li>
+						</ul>
+
+					</div>
+
+					
+
+					
+
+					</section>
+
+				</section>
+
+
+				<section>
+					<section data-auto-animate>
+						<div class="r-frame" >
+						<p style="font-size: 25px;" data-id="prob">
+							Consider:
+							\[
+							f(x,y)=x^2+xy+y^2+2x-2y+5.
+							\]
+						</p>
+
+						</div>
+
+						<p style="font-size: 25px;">
+							Find \(f_x(x,y), f_y(x,y)\) and solve for the critical points.
+						</p>
+
+
+
+
+					
+
+						<p style="font-size: 25px;" class="fragment">
+							Find \(f_{xx}(a,b), f_{xy}(a,b), f_{xy}(a,b)\)  for each critical point \((a,b)\).
+						</p>
+
+						<p style="font-size: 25px;" class="fragment">
+							Classify each critical point using:
+
+							\[
+							\left|
+							\begin{array}{cc}
+							f_{xx}(a,b) & f_{xy}(a,b)\\
+							f_{xy}(a,b) & f_{yy}(a,b)\\
+							\end{array}
+							\right| 
+							\]
+						</p>
+
+
+
+
+					</section>
+
+				</section>
+
+				<section>
+					<p style="font-size: 25px;" data-id="prob">
+							Consider:
+							\[
+							f(x,y, z)=x^3+xy^2+x^2+y^2+3z^2.
+							\]
+							Find all local extrema of \(f\).
+						</p>
+				</section>
+
+
+				
+
+
+				<section>
+					<h4>Extreme Value Theorem</h4>
+
+					<section data-auto-animate>
+						<iframe src="https://www.desmos.com/calculator/pzklsqm4zd" width="100%" height="500" style="border: 1px solid #ccc" frameborder=0></iframe>
+
+						<div class="r-frame" >
+						<p style="font-size: 25px;" data-id="prob">
+							If \(f:[a,b]\to\mathbb{R}\) is continuous, then \(f\) achieves a global maximum and  minimum.
+						</p>
+
+						</div>
+
+					</section>
+
+					<section data-auto-animate>
+						
+
+						<div>
+						<p style="font-size: 25px;" data-id="prob">
+							If \(X\subseteq \mathbb{R}^n\) is closed and bounded, then it is <strong>compact</strong>.
+						</p>
+
+						</div>
+
+						<div class="r-frame">
+						<p style="font-size: 25px;" data-id="prob">
+							If \(X\) is compact and \(f:X\to \mathbb{R}\) is continuous, then \(f\) achieves a global maximum and  minimum.
+						</p>
+
+						</div>
+
+						
+
+					</section>
+
+					<section data-auto-animate>
+						<iframe src="https://www.desmos.com/calculator/pzklsqm4zd" width="100%" height="500" style="border: 1px solid #ccc" frameborder=0></iframe>
+
+						<div class="r-frame" >
+						<p style="font-size: 25px;" data-id="prob">
+							If \(X=[a,b]\), candidiates for extrema are critical points and endpoints.
+						</p>
+
+						</div>
+
+					</section>
+
+					<section data-auto-animate>
+						<iframe src="https://www.desmos.com/calculator/pzklsqm4zd" width="100%" height="500" style="border: 1px solid #ccc" frameborder=0></iframe>
+
+						<div class="r-frame" >
+						<p style="font-size: 25px;" data-id="prob">
+							If \(X=[a,b]\), candidiates for extrema are critical points and endpoints.
+						</p>
+
+						</div>
+
+					</section>
+
+					<section data-auto-animate>
+						<iframe src="https://www.desmos.com/calculator/c8y2ncm2xa" width="100%" height="500" style="border: 1px solid #ccc" frameborder=0></iframe>
+
+						<div class="r-frame" >
+						<p style="font-size: 25px;" data-id="prob">
+							If \(X\subseteq \mathbb{R}^n\), what are the candidiates for extrema?
+						</p>
+
+						</div>
+
+					</section>
+
+				</section>
+
+
+
+				<section>
+				<section data-auto-animate>
+					<div class="r-frame">
+						<p style="font-size: 25px;" data-id="prob">
+							Let \(f(x,y)=x^3-6x^2+y^2\) on \([-2,2]\times[-2,2]\).
+						</p>
+
+					</div>
+
+					<div class="fragment">
+						<p style="font-size: 25px;" data-id="prob">
+							What are the critical points of \(f\) (in the domain)?
+						</p>
+
+					</div>
+
+					<div class="fragment">
+						<p style="font-size: 25px;" data-id="prob">
+							What are the candidiates for extrema on the line segment from \((-2,-2)\) to \((-2,2)\)?
+						</p>
+
+					</div>
+
+					<div class="fragment">
+						<p style="font-size: 25px;" data-id="prob">
+							What are the candidiates for extrema on the line segment from \((-2,2)\) to \((2,2)\)?
+						</p>
+
+					</div>
+
+					<div class="fragment">
+						<p style="font-size: 25px;" data-id="prob">
+							What are the candidiates for extrema on the line segment from \((-2,-2)\) to \((2,-2)\)?
+						</p>
+
+					</div>
+
+					<div class="fragment">
+						<p style="font-size: 25px;" data-id="prob">
+							What are the candidiates for extrema on the line segment from \((2,-2)\) to \((2,2)\)?
+						</p>
+
+					</div>
+
+				</section>
+
+				<section data-auto-animate>
+					<img src="img/evt.svg" width="60%">
+
+
+					<div class="r-frame">
+						<p style="font-size: 25px;" data-id="prob">
+							What are the global maximum and minimum of \(f(x,y)\) and where do they occur?
+						</p>
+
+					</div>
+
+
+				</section>
+
+
+
+
+				</section>
+
+				<section>
+					<div class="r-frame">
+						<p style="font-size: 25px;" data-id="prob">
+							Consider \(g(x,y)=e^{-2x^2-y^2}\) defined on \(r\leq 1\).  Find the global minimum and maximum of \(g\) and where they occur.
+						</p>
+
+					</div>
+
+					<p style="font-size: 25px;" data-id="prob">
+						Hint: we can parameterize the boundary with \(\{(\cos(t), \sin(t)): t\in [0, 2\pi]\}.\)
+					</p>
+
+				</section>
+
+
+				<section>
+					<h4>LaGrange Multipliers (intro)</h4>
+					<section data-auto-animate>
+					<div class="r-frame">
+						<p style="font-size: 25px;" data-id="prob">
+							Consider \(f(x,y)=x^{1/3}y^{2/3} \) defined on \(x+y=25, x,y>0\).<br>
+							<iframe src="https://www.desmos.com/calculator/tjnvsnwiyz" width="70%" height="375" style="border: 1px solid #ccc" frameborder=0></iframe>
+						</p>
+
+					</div>
+
+					<p style="font-size: 25px;" >
+						Let \(k=f(x,y)\)  for \(k=10, 11, 12, 13, 14, 15\), when does \(f\) have feasible solutions?
+					</p>
+					</section>
+
+					<section data-auto-animate>
+					<div class="r-frame">
+						<p style="font-size: 25px;" data-id="prob">
+							Consider \(f(x,y)=x^{1/3}y^{2/3} \) defined on \(x+y=25, x,y>0\).<br>
+							<iframe src="https://www.desmos.com/calculator/tjnvsnwiyz" width="70%" height="375" style="border: 1px solid #ccc" frameborder=0></iframe>
+						</p>
+
+					</div>
+
+					<p style="font-size: 25px;" >
+						Try to estimate graphically the largest value of \(k\) so that \(f\) has a feasible solution.
+					</p>
+					</section>
+
+					
+
+					<section data-auto-animate>
+					<div class="r-frame">
+						<p style="font-size: 25px;" data-id="prob">
+							Consider \(f(x,y)=x^{1/3}y^{2/3} \) defined on \(x+y=25, x,y>0\).<br>
+							<iframe src="https://www.desmos.com/calculator/icetk6dbqk?embed" width="70%" height="375" style="border: 1px solid #ccc" frameborder=0></iframe>
+							
+
+						</p>
+
+					</div>
+
+					<p style="font-size: 25px;" >
+						What do we notice about the point where the optimal solution occurs?  How do the function curve and constraint curve interact here?
+					</p>
+					</section>
+
+				</section>
+
+				<section>
+					<iframe src="https://www.desmos.com/calculator/icetk6dbqk?embed" width="50%" height="300" style="border: 1px solid #ccc" frameborder=0></iframe>
+					<div class="r-frame">
+						<p style="font-size: 25px;" data-id="prob">
+							Let \(f, g:\mathbb{R}^2\to\mathbb{R}\) and consider the level curves \(f(x,y)=k, g(x,y)=l\).  If these curves were tangent at \((x_0,y_0)\)  What could we say about \(\nabla f(x_0,y_0)\) and \(\nabla g(x_0,y_0)\)?
+						</p>
+
+						<ul>
+							<li style="font-size: 25px;">\(\nabla f(x_0,y_0)=\nabla g(x_0,y_0)\).</li>
+							<li style="font-size: 25px;">\(\nabla f(x_0,y_0)=-\nabla g(x_0,y_0)\).</li>
+							<li style="font-size: 25px;">\(\nabla f(x_0,y_0),\nabla g(x_0,y_0)\) are multiples of each other.</li>
+							<li style="font-size: 25px;">\(\nabla f(x_0,y_0)\cdot\nabla g(x_0,y_0)=0\).</li>
+						</ul>
+
+					</div>
+
+					<p style="font-size: 25px;" >
+						(Recall that \(\nabla f\) is orthogonal to the level surface/curve \(f=k\).)
+
+					</p>
+
+				</section>
+
+
+				<section>
+					<h4>LaGrange Multipliers</h4>
+					<div class="r-frame">
+						<p style="font-size: 25px;" data-id="prob">
+							Let \(f, g:X\subseteq \mathbb{R}^n\to\mathbb{R}\) be \(C^1\) and let \(S\) be the level surface of \(g(\mathbf{x})=k\).  Then if \(f|_S\) has an extremum at \(\mathbf{x}_0\) such that \(\nabla g(\mathbf{x})\neq0\) then there is a scalar \(\lambda\) such that
+							\[\nabla f(\mathbf{x})=\lambda \nabla g(\mathbf{x}).\]
+						</p>
+
+						<ul>
+							<li style="font-size: 25px;">\(\nabla f(x_0,y_0)=\nabla g(x_0,y_0)\).</li>
+							<li style="font-size: 25px;">\(\nabla f(x_0,y_0)=-\nabla g(x_0,y_0)\).</li>
+							<li style="font-size: 25px;">\(\nabla f(x_0,y_0),\nabla g(x_0,y_0)\) are multiples of each other.</li>
+							<li style="font-size: 25px;">\(\nabla f(x_0,y_0)\cdot\nabla g(x_0,y_0)=0\).</li>
+						</ul>
+
+					</div>
+
+					<p style="font-size: 25px;" >
+						(Recall that \(\nabla f\) is orthogonal to the level surface/curve \(f=k\).)
+
+					</p>
+
+				</section>
+
+				<section>
+					<iframe src="https://www.desmos.com/calculator/icetk6dbqk?embed" width="50%" height="300" style="border: 1px solid #ccc" frameborder=0></iframe>
+					<div class="r-frame">
+						<p style="font-size: 25px;" data-id="prob">
+							Recall our example where \(f(x,y)=x^{2/3}y^{1/3}\).  Let \(g(x,y)=x+y\).  We also have the constraint \(g(x,y)=25\).
+						</p>
+
+						
+
+					</div>
+
+					<p style="font-size: 25px;">
+						Find \(\nabla f(x,y), \nabla g(x,y)\)
+					</p>
+
+					<p style="font-size: 25px;" class="fragment">
+						Find the solution(s) (\(x, y, \lambda\)) to the system:
+						\[
+						\begin{array}{rcl}
+						f_x(x,y) &=& \lambda g_x(x,y)\\
+						f_y(x,y) &=& \lambda g_y(x,y)\\
+						x+y&=&25.
+						\end{array}
+						\]
+					</p>
+
+				</section>
+
+
+				<section>
+					
+					<div class="r-frame">
+						<p style="font-size: 25px;" data-id="prob">
+							Find the smallest \(k\) so that the ellipsoid \(x^2+3y^2+2z^2=k\) contains the sphere \(x^2+y^2+(z-1)^2=1\).
+						</p>
+
+						<p style="font-size: 25px;">
+						Note that for such a \(k\) , the ellipsoid and the sphere would be tangent.
+						</p>
+
+						
+
+					</div>
+
+					
+
+
+					<p style="font-size: 25px;" class="fragment">
+						Decide what \(f, g\) are, then find \(\nabla f(x,y), \nabla g(x,y)\)
+					</p>
+
+					<p style="font-size: 25px;" class="fragment">
+						Find the solution(s) (\(x, y, z, \lambda\)) to the system:
+						\[
+						\begin{array}{rcl}
+						f_x(x,y,z) &=& \lambda g_x(x,y,z)\\
+						f_y(x,y,z) &=& \lambda g_y(x,y,z)\\
+						f_z(x,y,z) &=& \lambda g_z(x,y,z)\\
+						x^2+y^2+(z-1)^2&=&1.
+						\end{array}
+						\]
+					</p>
+
+				</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+				
+
+
+
+
+
+				
+
+
+
+
+
+				
+				
+
+
+				
+
+				
+
+
+
+
+				
+
+
+				
+
+
+
+
+				
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+					
+				
+			</div>
+		</div>
+
+		<script src="dist/reveal.js"></script>
+		<script src="plugin/notes/notes.js"></script>
+		<script src="plugin/markdown/markdown.js"></script>
+		<script src="plugin/highlight/highlight.js"></script>
+		<script>
+			// More info about initialization & config:
+			// - https://revealjs.com/initialization/
+			// - https://revealjs.com/config/
+			Reveal.initialize({
+				hash: true,
+
+				// Learn about plugins: https://revealjs.com/plugins/
+				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
+			});
+		</script>
+		<script src="plugin/math/math.js"></script>
+		<script src="plugin/chalkboard/plugin.js"></script>
+		<script src="plugin/customcontrols/plugin.js"></script>
+
+
+
+	<script>
+  	Reveal.initialize({
+		math: {
+			mathjax: 'https://cdn.jsdelivr.net/gh/mathjax/mathjax@2.7.8/MathJax.js',
+			config: 'TeX-AMS_HTML-full',
+			// pass other options into `MathJax.Hub.Config()`
+			TeX: { Macros: { RR: "{\\bf R}" } }
+		},
+
+		chalkboard: {
+        boardmarkerWidth: 3,
+        chalkWidth: 7,
+        chalkEffect: 1.0,
+        storage: null,
+        src: null,
+        readOnly: undefined,
+        transition: 800,
+        theme: "chalkboard",
+        background: [ 'rgba(127,127,127,.1)' , path + 'img/blackboard.png' ],
+        grid: { color: 'rgb(50,50,10,0.5)', distance: 80, width: 2},
+        eraser: { src: path + 'img/sponge.png', radius: 20},
+        boardmarkers : [
+                { color: 'rgba(100,100,100,1)', cursor: 'url(' + path + 'img/boardmarker-black.png), auto'},
+                { color: 'rgba(30,144,255, 1)', cursor: 'url(' + path + 'img/boardmarker-blue.png), auto'},
+                { color: 'rgba(220,20,60,1)', cursor: 'url(' + path + 'img/boardmarker-red.png), auto'},
+                { color: 'rgba(50,205,50,1)', cursor: 'url(' + path + 'img/boardmarker-green.png), auto'},
+                { color: 'rgba(255,140,0,1)', cursor: 'url(' + path + 'img/boardmarker-orange.png), auto'},
+                { color: 'rgba(150,0,20150,1)', cursor: 'url(' + path + 'img/boardmarker-purple.png), auto'},
+                { color: 'rgba(255,220,0,1)', cursor: 'url(' + path + 'img/boardmarker-yellow.png), auto'}
+        ],
+        chalks: [
+                { color: 'rgba(255,255,255,0.5)', cursor: 'url(' + path + 'img/chalk-white.png), auto'},
+                { color: 'rgba(96, 154, 244, 0.5)', cursor: 'url(' + path + 'img/chalk-blue.png), auto'},
+                { color: 'rgba(237, 20, 28, 0.5)', cursor: 'url(' + path + 'img/chalk-red.png), auto'},
+                { color: 'rgba(20, 237, 28, 0.5)', cursor: 'url(' + path + 'img/chalk-green.png), auto'},
+                { color: 'rgba(220, 133, 41, 0.5)', cursor: 'url(' + path + 'img/chalk-orange.png), auto'},
+                { color: 'rgba(220,0,220,0.5)', cursor: 'url(' + path + 'img/chalk-purple.png), auto'},
+                { color: 'rgba(255,220,0,0.5)', cursor: 'url(' + path + 'img/chalk-yellow.png), auto'}
+        ]
+    },
+    customcontrols: {
+  		controls: [
+  			{ icon: '<i class="fa fa-pen-square"></i>',
+  			  title: 'Toggle chalkboard (B)',
+  			  action: 'RevealChalkboard.toggleChalkboard();'
+  			},
+  			{ icon: '<i class="fa fa-pen"></i>',
+  			  title: 'Toggle notes canvas (C)',
+  			  action: 'RevealChalkboard.toggleNotesCanvas();'
+  			}
+  		]
+    },
+
+		plugins: [ RevealMath, RevealChalkboard, RevealCustomControls, RevealMenu  ]
+		});
+	</script>
+
+	</body>
+</html>

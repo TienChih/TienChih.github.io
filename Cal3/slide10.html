@@ -273,13 +273,13 @@
 					<div class="r-frame" >
 						<p style="font-size: 25px;" >
 							\[\begin{array}{rcl}
-							L &amp; = &amp;  \displaystyle \sum_{i=1}^n \sqrt{(\Delta x_i)^2+(\Delta y_i)^2} \\
+							L &amp; \approx &amp;  \displaystyle \sum_{i=1}^n \sqrt{(\Delta x_i)^2+(\Delta y_i)^2} \\
 
-							&amp;\approx &amp; \displaystyle \sum_{i=1}^n \sqrt{(x(t_{i})-x(t_{i-1}))^2+(y(t_i)-y(t_{i-1}))^2} \\
+							&amp;= &amp; \displaystyle \sum_{i=1}^n \sqrt{(x(t_{i})-x(t_{i-1}))^2+(y(t_i)-y(t_{i-1}))^2} \\
 
-							&amp;\approx &amp; \displaystyle \sum_{i=1}^n \sqrt{(x'(t_i^*)\Delta t)^2+(y'(t_i^{**})\Delta t)^2} \\
+							&amp;= &amp; \displaystyle \sum_{i=1}^n \sqrt{(x'(t_i^*)\Delta t)^2+(y'(t_i^{**})\Delta t)^2} \\
 
-							&amp;\approx &amp; \displaystyle \sum_{i=1}^n \sqrt{(x'(t_i^*))^2+(y'(t_i^{**}))^2} \Delta t \\
+							&amp;= &amp; \displaystyle \sum_{i=1}^n \sqrt{(x'(t_i^*))^2+(y'(t_i^{**}))^2} \Delta t \\
 
 
 							
@@ -303,13 +303,13 @@
 					<div class="r-frame" >
 						<p style="font-size: 25px;" >
 							\[\begin{array}{rcl}
-							L &amp; = &amp;  \displaystyle \sum_{i=1}^n \sqrt{(\Delta x_i)^2+(\Delta y_i)^2} \\
+							L &amp; \approx &amp;  \displaystyle \sum_{i=1}^n \sqrt{(\Delta x_i)^2+(\Delta y_i)^2} \\
 
-							&amp;\approx &amp; \displaystyle \sum_{i=1}^n \sqrt{(x(t_{i})-x(t_{i-1}))^2+(y(t_i)-y(t_{i-1}))^2} \\
+							&amp;= &amp; \displaystyle \sum_{i=1}^n \sqrt{(x(t_{i})-x(t_{i-1}))^2+(y(t_i)-y(t_{i-1}))^2} \\
 
-							&amp;\approx &amp; \displaystyle \sum_{i=1}^n \sqrt{(x'(t_i^*)\Delta t)^2+(y'(t_i^{**})\Delta t)^2} \\
+							&amp;= &amp; \displaystyle \sum_{i=1}^n \sqrt{(x'(t_i^*)\Delta t)^2+(y'(t_i^{**})\Delta t)^2} \\
 
-							&amp;\approx &amp; \displaystyle \sum_{i=1}^n \sqrt{(x'(t_i^*))^2+(y'(t_i^{**}))^2} \Delta t \\
+							&amp;= &amp; \displaystyle \sum_{i=1}^n \sqrt{(x'(t_i^*))^2+(y'(t_i^{**}))^2} \Delta t \\
 
 							L&amp;= &amp; \displaystyle\lim_{\Delta t\to 0} \left(\displaystyle \sum_{i=1}^n \sqrt{(x'(t_i^*))^2+(y'(t_i^{**}))^2} \Delta t \right)\\
 
@@ -394,7 +394,7 @@
 				<section>
 					<div class="r-frame" >
 						<p style="font-size: 35px;" >
-							\[s(t)=\int_a^t\|\mathbf{r}(t)\| dt.\]
+							\[s(t)=\int_a^t\|\mathbf{r}'(\tau)\| d\tau.\]
 						</p>
 					</div>
 
@@ -403,7 +403,7 @@
 						<p style="font-size: 35px;" >
 							\[
 							\begin{array}{rcl}
-							\frac{ds}{dt}&amp;=&amp;\frac{d}{dt} \left[ \int_a^t\|\mathbf{r}(t)\| dt\right]=\|\mathbf{r}'(t)\|.\\
+							\frac{ds}{dt}&amp;=&amp;\frac{d}{dt} \left[ \int_a^t\|\mathbf{r}'(\tau)\| d\tau\right]=\|\mathbf{r}'(t)\|.\\
 
 							\mathbf{r}'(t)&amp;=&amp;\mathbf{r}'(s)\frac{ds}{dt}\\
 
@@ -423,6 +423,8 @@
 
 				</section>
 
+	<!--				
+
 				<section>
 					<h4>Unit Tangent Vector</h4>
 
@@ -439,7 +441,7 @@
 						</p>
 
 						<p style="font-size: 35px;" >
-							If \(\frac{\mathbf{T}}{ft}\neq 0\), what is changing?
+							If \(\frac{d\mathbf{T}}{dt}\neq 0\), what is changing?
 						</p>
 
 
@@ -473,17 +475,30 @@
 
 					<section data-auto-animate>
 						<div class="r-frame" >
+							<p>
 							\(\|\frac{d\mathbf{T}}{dt}\|\) measures \(\frac{d\theta}{dt}\).
 							</p>
 						</div>
 
+
+						<div class="fragment" >
+							<p>
+							Suppose two cars make a \(\pi/2\) clockwise turn over 3 seconds.  The first car does so at 40 mph, the second at 90 mph.  Consider the 
+							</p>
+						</div>
+
 						
 
 						
 
 
 					</section>
-				</section>
+				</section>-->
+
+
+
+
+
 
 
 
@@ -494,366 +509,7 @@
 
 				
 
-				<section>
-					<h4>The Chain Rule</h4>
-
-					<section data-auto-animate>
-						<div class="r-frame" >
-							<p style="font-size: 35px;" >
-								Suppose \(\mathbf{x}:T\subseteq \mathbb{R}\to\mathbb{R}^2\) is differentiable at \(t_0\in T\) and \(f:X\subseteq \mathbb{R}^2\to\mathbb{R}\) is differentiable at \(\mathbf{x}_0=\mathbf{x}(t_0)=(x_0, y_0)\in X\), where \(T, X\) are open in their respective spaces and \(Im(\mathbf{x})\subseteq X\).
-
-
-							</p>
-							<p class="fragment" style="font-size: 35px;">
-								Then, if \(f\) is \(C^1\), then \(f\circ \mathbf{x}:T\to \mathbb{R}\) is differentiable at \(t_0\) and \[\frac{df}{dt}(t_0)=\frac{\partial f}{\partial x}(\mathbf{x}_0)\frac{dx}{dt}(t_0)+\frac{\partial f}{\partial y}(\mathbf{x}_0)\frac{dy}{dt}(t_0)=\int_a^b \|\mathbf{x}(t)\|dt.\]
-							</p>
-
-														
-						</div>	
-					</section>
-
-					<section data-auto-animate>
-						<div>
-							<p style="font-size: 35px;" >
-								Let \(z=f\circ\mathbf{x}\).
-
-
-							</p>
-							<p class="fragment" style="font-size: 30px;">
-								\(\frac{dz}{dt}(t_0)=\displaystyle \lim_{t\to t_0}\frac{z(t)-z(t_0)}{t-t_0}\)
-							</p>
-							<p class="fragment" style="font-size: 30px;">
-								\(\frac{dz}{dt}(t_0)=\displaystyle \lim_{t\to t_0} \frac{f(x(t), y(t))-f(x(t_0), y(t_0))}{t-t_0}\)
-							</p>
-
-							<p class="fragment" style="font-size: 30px;">
-								\(\frac{dz}{dt}(t_0)=\displaystyle \lim_{t\to t_0} \frac{f(x,y)-f(x_0,y)+f(x_0,y)-f(x_0,y_0) }{t-t_0}\)
-							</p>
-
-							<p class="fragment" style="font-size: 30px;">
-								\(\frac{dz}{dt}(t_0)=\displaystyle \lim_{t\to t_0} \frac{f(x,y)-f(x_0,y) }{t-t_0} + \displaystyle \lim_{t\to t_0} \frac{f(x_0,y)-f(x_0,y_0) }{t-t_0}\)
-							</p>
-							<p class="fragment" style="font-size: 30px;">
-								\(\frac{dz}{dt}(t_0)=\displaystyle \lim_{t\to t_0} \frac{f_x(c,y)(x-x_0) }{t-t_0} + \displaystyle \lim_{t\to t_0} \frac{f_y(x_0,d)(y-y_0)}{t-t_0}\)
-							</p>
-
-							<p class="fragment" style="font-size: 30px;">
-								\(\frac{dz}{dt}(t_0)=\displaystyle \lim_{t\to t_0} f_x(x_0, y_0)\frac{dx}{dt}(t_0) + f_y(x_0, y_0)\frac{dy}{dt}(t_0).\)
-							</p>
-
-														
-						</div>	
-					</section>
-
-
-
-				</section>
-
-
-				<section data-auto-animate>
-						<div class="r-frame" >
-							<p style="font-size: 35px;" >
-								Suppose \(\mathbf{x}:T\subseteq \mathbb{R}\to\mathbb{R}^n\) is differentiable at \(t_0\in T\) and \(f:X\subseteq \mathbb{R}^n\to\mathbb{R}\) is differentiable at \(\mathbf{x}_0=\mathbf{x}(t_0)\in X\), where \(T, X\) are open in their respective spaces and \(Im(\mathbf{x})\subseteq X\).
-
-
-							</p>
-
-							<p style="font-size: 35px;" >
-								Then, if \(f\) is \(C^1\), then \(f\circ \mathbf{x}:T\to \mathbb{R}\) is differentiable at \(t_0\) and 
-
-
-							</p>
-							<p style="font-size: 25px;">
-								\[\frac{df}{dt}(t_0)=\frac{\partial f}{\partial x_1}(\mathbf{x}_0)\frac{dx_1}{dt}(t_0)+\frac{\partial f}{\partial x_2}(\mathbf{x}_0)\frac{dx_2}{dt}(t_0)+\cdots + \frac{\partial f}{\partial x_n}(\mathbf{x_n}_0)\frac{dx_n}{dt}(t_0).\]
-							</p>
-
-														
-						</div>	
-				</section>
-
-
-				<section>
-
-					<div class="r-frame" >
-							<p style="font-size: 35px;" >
-								Suppose
-								\[f(x,y,z)=x^2+y^2+z^2, \mathbf{x}(s,t)=(s\sin(t), te^s, s^2-t^3).\]
-
-
-							</p>
-
-							
-
-														
-					</div>	
-
-					<p style="font-size: 35px;">
-						Find \(\frac{\partial f}{\partial s}, \frac{\partial f}{\partial s}.\)
-					</p>
-
-				</section>
-
-
-				<section>
-
-					<div class="r-frame" >
-							<p style="font-size: 35px;" >
-								Recall
-								\[x=r\cos(\theta), y=r\sin(\theta).\]
-
-							</p>
-
-							<p style="font-size: 35px;" >
-								Then suppose
-								\[r(t)=t^2+1, \theta(t)=\frac{\pi}{6}t.\]
-
-							</p>
-
-							
-
-														
-					</div>	
-
-					<p style="font-size: 35px;">
-						Find \(\frac{\partial x}{\partial t}, \frac{\partial y}{\partial t}\) when \(t=2\).
-					</p>
-
-				</section>
-
-
-				<section>
-					<h4>Maximizing local ascent</h4>
-				<section data-auto-animate>
-					
-
-					<div class="r-frame" >
-							<p style="font-size: 35px;" >
-								Suppose
-								\[f(0, 0)=0, f_x(0,0)=2, f_y(0,0)=4.\]
-
-							</p>
-					</div>			
-
-					<p style="font-size: 35px;" class="fragment">
-						Estimate: \[f(1,0), f(0.8, 0.6), f(0.6, 0.8), f(0,1)\] using local linear approximation.
-					</p>
-
-					<p style="font-size: 35px;" class="fragment">
-						For what \(\theta\) is \((\cos(\theta), \sin(\theta))\cdot (2,4)\) maximized?
-					</p>
-								
-					
-				</section>
-
-				<section data-auto-animate>
-					
-
-					<div class="r-frame" >
-							<p style="font-size: 35px;" >
-								<img src="img/gradient.svg" width=40%/>
-
-							</p>
-							
-					</div>	
-					<p style="font-size: 30px;" >
-								Which of our vectors from the previous slide result in the greatest increase in \(f\)?  The least? How do they compare to the red vector \((\cos(\theta), \sin(\theta))\)?
-							</p>		
-
-					
-								
-					
-				</section>
-
-				</section>
-
-				<section>
-					<h4>Directional Derivative</h4>
-					<section data-auto-animate>
-						<div class="r-frame" >
-							<p style="font-size: 35px;" >
-								Let \(X\subseteq \mathbb{R}^n\) be open, and \(f:X\to \mathbb{R}, \mathbf{a}\in \mathbb{X}\).  If \(\mathbf{v}\in \mathbb{R}^n\) is any <strong>unit</strong> vector, then the <strong>directional derivative of \(f\) at \(\mathbf{a}\) in the direction of \(\mathbf{v}\) is </strong>\[D_{\mathbf{v}}f(\mathbf{a})=\lim_{h\to 0}\frac{f(\mathbf{a}+h\mathbf{v})-f(\mathbf{a})}{h}.\]
-
-							</p>
-						</div>	
-					</section>
-					<section data-auto-animate>
-						<div >
-							<p style="font-size: 35px;" >
-								Let \(F(t)=f(\mathbf{a}+t\mathbf{v}).\)
-
-							</p>
-						</div>	
-						
-						<div>
-							<p style="font-size: 30px;" class="fragment">
-							\(D_{\mathbf{v}}f(\mathbf{a})=\displaystyle \lim_{t\to 0}\frac{F(t)-F(0)}{t-0} =F'(0).\)<br><br>
-
-							\(D_{\mathbf{v}}f(\mathbf{a})=\frac{d}{dt}f(\mathbf{a}+t\mathbf{v})|_{t=0}.\)
-
-							</p>
-
-							<p style="font-size: 30px;" class="fragment">
-							
-
-							\(D_{\mathbf{v}}f(\mathbf{a})=\displaystyle \sum_{i=1}^n \frac{\partial f}{\partial x_i}(\mathbf{a})\cdot v_i\) by the chain rule.
-
-							</p>
-						</div>
-
-					</section>
-
-
-				</section>
-
-				<section>
-					<h4>The Gradient</h4>
-					<section data-auto-animate>
-						
-						<div class="r-frame">
-							<p style="font-size: 35px;" >
-								Given a function \(f:X\subseteq \mathbb{R}^n\to \mathbb{R}\) that is \(C^1\), the <strong>gradient</strong> of \(f\) at \(\mathbf{a}\in X\) is:
-								\[\nabla f(\mathbf{a})=(f_{x_1}(\mathbf{a}), \ldots, f_{x_n}(\mathbf{a})).)\]
-							</p>
-							
-						</div>
-					
-
-					<p style="font-size: 35px;" class="fragment">
-						If \(f:X\subseteq \mathbb{R}^n\to \mathbb{R}\)  is \(C^1\), then \(D_{\mathbf{v}}f(\mathbf{a})\) exists for each \(\mathbf{a}\in X\), and is computed by \[\nabla f(\mathbf{a})\cdot \mathbf{v}.\]
-					</p>
-
-					<p style="font-size: 35px;" class="fragment" >
-						For what \(\mathbf{v}\) is this dot product maximized?  (When in general are dot products maximized?)
-					</p>
-					</section>
-
-					<section data-auto-animate>
-						<div class="r-frame">
-							<p style="font-size: 35px;" >
-								\(D_{\mathbf{u}}f(\mathbf{a})\) is maximized when \(\mathbf{u}\) points in the same direction as \(\nabla f(\mathbf{a})\) and is minimized when it points in the opposite direction.  The maximum and minimum values are \(\|\nabla f(\mathbf{a})\|\) and \(-\|\nabla f(\mathbf{a})\|\) respectively.
-							</p>
-
-							
-						</div>
-					
-
-					
-					</section>
-				</section>
-
-				<section>
-					<section data-auto-animate>
-						<div class="r-frame">
-							<p style="font-size: 35px;" >
-								Consider the function \(f(x,y)=2xy^2-4y^2\), and the point \( (1,1) \).
-							</p>
-
-							
-						</div>
-
-						<p style="font-size: 30px;" >
-							Find the directional derivatives in the directions \(\langle -2, 4\rangle, \langle 1, 0\rangle, \langle 0, 1\rangle, \langle 4, 2\rangle\).  Then find the direction in which the directional derivative would be the greatest.
-						</p>
-					</section>
-
-					<section data-auto-animate>
-						<div class="r-frame">
-							<p style="font-size: 35px;" >
-								<iframe src="https://www.geogebra.org/calculator/e4fbrxd4" width="80%" height="500" style="border: 1px solid #ccc" frameborder=0></iframe>
-							</p>
-
-							
-						</div>
-
-						
-					</section>
-				</section>
-
-				<section>
-					<h4>Gradients and level surfaces</h4>
-					<section data-auto-animate>
-						<div class="r-frame">
-							<p style="font-size: 35px;" >
-								<iframe src="https://www.geogebra.org/calculator/cdrex7p3" width="80%" height="500" style="border: 1px solid #ccc" frameborder=0></iframe>
-							</p>
-
-							
-
-							
-						</div>
-						<p style="font-size: 30px;" >
-								Consider \(f(x,y,z)\) and it's gradient.  For any level surface \(f(x,y,z)=k\) and a point on that surface, what do we notice about the gradient vector?
-							</p>
-
-						
-					</section>
-
-					<section data-auto-animate>
-						<div class="r-frame">
-							<p style="font-size: 35px;" >
-								Let \(f:X\subseteq \mathbb{R}^n\to \mathbb{R}\) be \(C_1\).  Let \(\mathbf{x}_0\) be a point on the level set \(S=\{\mathbf{X}\in X: f(\mathbf{x}=c\}\) for some \(c\).
-							</p>
-
-							
-
-							
-						</div>
-
-						<p style="font-size: 30px;" class="fragment">
-							Let \(\mathbf{v}\) be a vector tangent to \(S\) at \(\mathbf{x}_0\).  Let \(\mathbf{x}(t)=(x_1(t),\ldots, x_n(t))\) be a path on \(S\) such that \(\mathbf{x}(t_0)=\mathbf{x}_0\) and \(\mathbf{x}'(t_0)=\mathbf{v}\).
-						</p>
-
-						<p style="font-size: 30px;" class="fragment">
-							Use the fact that \(f(\mathbf{x}(t))=c\) to compute \(\frac{d}{dt}[f(\mathbf{x}(t))]\).
-						</p>
-
-						<p style="font-size: 30px;" class="fragment">
-							The chain rule gives us \(\frac{d}{dt}[f(\mathbf{x}(t))] = \nabla f(\mathbf{x}_0)\cdot \mathbf{v}\).  What can we conclude about \(\nabla f(\mathbf{x}_0)\cdot \mathbf{v}\)?
-						</p>
-
-						
-					</section>
-
-					<section data-auto-animate>
-						<div class="r-frame">
-							<p style="font-size: 35px;" >
-								Let \(f:X\subseteq \mathbb{R}^n\to \mathbb{R}\) be \(C_1\).  Let \(\mathbf{x}_0\) be a point on the level set \(S=\{\mathbf{X}\in X: f(\mathbf{x}=c\}\) for some \(c\).
-							</p>
-
-							<p style="font-size: 35px;" >
-								Then the gradient vector \(\nabla f(\mathbf{x}_0)\) is normal to \(S\).
-							</p>
-
-							
-
-							
-						</div>
-
-						
-
-						
-					</section>
-
-
-				</section>
-
-
-
-
-
-
 				
-
-
-
-
-
-				
-				
-
-
-				
-
 				
 
 

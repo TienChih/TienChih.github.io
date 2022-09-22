@@ -1,0 +1,486 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>reveal.js</title>
+
+		<link rel="stylesheet" href="dist/reset.css">
+		<link rel="stylesheet" href="dist/reveal.css">
+		<link rel="stylesheet" href="dist/theme/white.css">
+		<link rel="stylesheet" href="plugin/chalkboard/style.css">
+		<link rel="stylesheet" href="plugin/customcontrols/style.css">
+
+
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+
+
+
+		<!-- Theme used for syntax highlighted code -->
+		<link rel="stylesheet" href="plugin/highlight/monokai.css">
+		<style>
+			.container{
+   				 display: flex;
+			}
+			.col{
+    			flex: 1;
+			}
+		</style>
+			<script async defer src="https://buttons.github.io/buttons.js"></script>
+
+		<script src="plugin/menu/menu.js"></script>
+
+
+
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				
+				<section>
+					<h2>Functions: Extreme Edition.</h2>
+					<h4>M 111</h4>
+					
+					
+					<h4>
+						Oxford College of Emory University <a href="https://app.oxford.emory.edu/WebApps/Directory/index.cfm/view/9984" target="_blank">Tien Chih</a>
+					</h4>
+				</section>
+
+				
+
+				<section>
+					<section data-auto-animate>
+					<h4>Max/Min</h4>
+
+					<div data-id="problem" class="r-frame">
+						<p style="font-size: 30px;" >
+							Given a function \(f(x)\) we say \(a\) is a <strong>global maximum</strong> if \(f(x)\) is \(f(a)\geq f(c)\) for every \(c\) in the domain of \(x\).
+						</p>
+
+						<p style="font-size: 30px;" class="fragment">
+							Given a function \(f(x)\) we say \(a\) is a <strong>local maximum</strong> if in a neighborhood of \(a\) we have \(f(x)\) is \(f(a)\geq f(c)\) for every \(c\) in the neighborhood.
+						</p>
+						
+					</div>
+
+					
+
+					
+					</section>
+
+
+					<section data-auto-animate>
+					<h4>Max/Min</h4>
+
+					<div data-id="problem" class="r-frame">
+						<p style="font-size: 30px;" >
+							Find the local and global maximums/minimums of \(f(x)\).
+						</p>
+
+						
+						
+					</div>
+
+					<iframe src="https://www.desmos.com/calculator/lfiahzcahx?embed" width="100%" height="500" style="border: 1px solid #ccc" frameborder=0></iframe>
+
+					
+
+					
+					</section>
+
+					<section data-auto-animate>
+					<h4>Max/Min</h4>
+
+					<div data-id="problem" class="r-frame">
+						<p style="font-size: 30px;" >
+							Find the local and global maximums/minimums of \(g(x)\).
+						</p>
+
+						
+						
+					</div>
+
+					<iframe src="https://www.desmos.com/calculator/x8t1nyitac?embed" width="100%" height="500" style="border: 1px solid #ccc" frameborder=0></iframe>
+
+					
+
+					
+					</section>
+
+
+					<section data-auto-animate>
+					<h4>Max/Min</h4>
+
+					<div data-id="problem" class="r-frame">
+						<p style="font-size: 30px;" >
+							Find the local and global maximums/minimums of \(h(x)\).
+						</p>
+
+						
+						
+					</div>
+
+					<iframe src="https://www.desmos.com/calculator/zmvesy7iuz?embed" width="100%" height="500" style="border: 1px solid #ccc" frameborder=0></iframe>
+
+					
+
+					
+					</section>
+
+
+					<section data-auto-animate>
+					<h4>Max/Min</h4>
+
+					<div data-id="problem" class="r-frame">
+						<p style="font-size: 30px;" >
+							What did all of these local and global maximums/minimums have in common?
+						</p>
+
+						
+						
+					</div>
+
+					
+
+					
+
+					
+					</section>
+
+					<section data-auto-animate>
+					<h4>Max/Min</h4>
+
+					<div data-id="problem" class="r-frame">
+						<p style="font-size: 30px;" >
+							If \(f\) has a local maximum or minimum at \(c\) and \(f'(c)\) exists, then \(f'(0)=0\).
+						</p>
+
+						
+						
+					</div>
+
+					
+
+					
+
+					
+					</section>
+
+					
+					
+				</section>
+
+				<section>
+					<h4>Criteria</h4>
+					<section data-auto-animate>
+					
+
+					<div data-id="problem" class="r-frame">
+						<p style="font-size: 30px;" >
+							Let \(f(x)\) be a differentiable function.  Suppose \(f(x)\) has a local maximum when \(x=a\).
+						</p>
+						
+					</div>
+					<iframe src="https://www.desmos.com/calculator/g2pbjpfw7m?embed" width="350%" height="350" style="border: 1px solid #ccc" frameborder=0></iframe>
+
+					<ul>
+						<li style="font-size: 30px;">What can be said about \(f'(a)\)?</li>
+
+						<li style="font-size: 30px;">What can be said about \(f'(c)\) when \(c\) is just below \(a\)?</li>
+
+						<li style="font-size: 30px;">What can be said about \(f'(c)\) when \(c\) is just above \(a\)?</li>
+					</ul>
+
+					
+
+					
+					</section>
+
+
+					<section data-auto-animate>
+					
+
+					<div data-id="problem" class="r-frame">
+						<p style="font-size: 30px;" >
+							Let \(f(x)\) be a differentiable function.  Suppose \(f(x)\) has a local minimum when \(x=a\).
+						</p>
+						
+					</div>
+
+					<iframe src="https://www.desmos.com/calculator/tjqsob4v5c?embed" width="350%" height="350" style="border: 1px solid #ccc" frameborder=0></iframe>
+
+					<ul>
+						<li style="font-size: 30px;">What can be said about \(f'(a)\)?</li>
+
+						<li style="font-size: 30px;">What can be said about \(f'(c)\) when \(c\) is just below \(a\)?</li>
+
+						<li style="font-size: 30px;">What can be said about \(f'(c)\) when \(c\) is just above \(a\)?</li>
+					</ul>
+
+					
+
+					
+					</section>
+
+					
+					
+				</section>
+
+
+
+				<section>
+					
+
+					<div data-id="problem" class="r-frame">
+						<p style="font-size: 30px;" >
+							Given a function \(f(x)\), a critical number \(c\) is a value where \(f'(c)\) is zero or undefined.
+						</p>
+						
+					</div>
+
+					<p style="font-size: 30px;" >
+						Given a \(f(x)\) defined on \(\mathbb{R}\), if \(f(c)\) is a maximum or minimum number, then \(c\) is a critical number of \(f\).
+					</p>
+
+					
+
+					
+				</section>
+
+
+				<section>
+					
+
+					<div data-id="problem" class="r-frame">
+						<p style="font-size: 30px;" >
+							Let \(f(x)=x^3-12x\).  Find all the critical numbers of \(f(x)\).
+						</p>
+						
+					</div>
+
+					<p style="font-size: 30px;" >
+						Which, if any of these, are local extrema?
+					</p>
+
+					
+
+					
+				</section>
+
+				<section>
+					
+
+					<div data-id="problem" class="r-frame">
+						<p style="font-size: 30px;" >
+							Let \(g(x)=x^3+3x^2+12x\).  Find all the critical numbers of \(g(x)\).
+						</p>
+						
+					</div>
+
+					<p style="font-size: 30px;" >
+						Which, if any of these, are local extrema?
+					</p>
+
+					
+
+					
+				</section>
+				
+
+
+				
+
+
+
+				<section>
+					<h4>Extreme Value Theorem</h4>
+					<section data-auto-animate>
+					
+					<div data-id="problem" class="r-frame">
+						<p style="font-size: 25px;" >
+							If \(f(x)\) is defined on \([a,b]\) and is continuous, then \(f\) achieves a global maximum and minimum on \([a,b]\).
+						</p>
+						
+					</div>
+
+					<iframe src="https://www.desmos.com/calculator/1h10iggbbm" width="100%" height="450" style="border: 1px solid #ccc" frameborder=0></iframe>
+					</section>
+
+					<section data-auto-animate>
+						<div data-id="problem" class="r-frame">
+						<p style="font-size: 30px;" >
+							Find where the global extrema are for each function.
+						</p>
+
+						
+					</div>
+					<img src="img/evt_int.png" width="23%">
+					<img src="img/evt_mixed.png" width="23%">
+					<img src="img/evt_mixed2.png" width="23%">
+					<img src="img/evt_endpts.png" width="23%">
+
+					</section>
+
+
+					<section data-auto-animate>
+					
+					<div data-id="problem" class="r-frame">
+						<p style="font-size: 30px;" >
+							If \(f(x)\) is defined on \([a,b]\) and is continuous, then \(f\) achieves a global maximum and minimum on \([a,b]\).
+						</p>
+						
+					</div>
+
+					<p style="font-size: 30px;" >
+						Strategy for finding extrema:
+						<ul>
+							<li style="font-size: 30px;">Evaluate \(f(x\)) at the critical numbers <strong>in</strong> \([a,b]\).</li>
+							<li style="font-size: 30px;">Evaluate \(f(x\)) at the endpoints\(a, b\).</li>
+							<li style="font-size: 30px;">See which is(are) the biggest/smallest.</li>
+						</ul>
+
+					</p>
+					</section>
+
+					
+
+
+				</section>
+
+
+				<section>
+					
+					<section data-auto-animate>
+					
+					<div data-id="problem" class="r-frame">
+						<p style="font-size: 25px;" >
+							The the global maximums and minimums of \(g(x)=-x^3+6x^2-2\) on \([-1,3]\).
+						</p>
+						
+					</div>
+
+					<div class="fragment">
+						<iframe src="https://www.desmos.com/calculator/1h10iggbbm" width="100%" height="450" style="border: 1px solid #ccc" frameborder=0></iframe>
+					</div>
+
+
+					</section>
+
+
+					<section data-auto-animate>
+					
+					<div data-id="problem" class="r-frame">
+						<p style="font-size: 25px;" >
+							The the global maximums and minimums of \(h(\theta)=x+2\sin(\theta)\) on \([0,3\pi]\).
+						</p>
+						
+					</div>
+
+					<div class="fragment">
+						<iframe src="https://www.desmos.com/calculator/1h10iggbbm" width="100%" height="450" style="border: 1px solid #ccc" frameborder=0></iframe>
+					</div>
+
+
+					</section>
+
+					
+
+					
+
+
+				</section>
+
+
+
+
+
+									
+
+
+
+				
+			</div>
+		</div>
+
+		<script src="dist/reveal.js"></script>
+		<script src="plugin/notes/notes.js"></script>
+		<script src="plugin/markdown/markdown.js"></script>
+		<script src="plugin/highlight/highlight.js"></script>
+		<script>
+			// More info about initialization & config:
+			// - https://revealjs.com/initialization/
+			// - https://revealjs.com/config/
+			Reveal.initialize({
+				hash: true,
+
+				// Learn about plugins: https://revealjs.com/plugins/
+				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
+			});
+		</script>
+		<script src="plugin/math/math.js"></script>
+		<script src="plugin/chalkboard/plugin.js"></script>
+		<script src="plugin/customcontrols/plugin.js"></script>
+
+
+
+	<script>
+  	Reveal.initialize({
+		math: {
+			mathjax: 'https://cdn.jsdelivr.net/gh/mathjax/mathjax@2.7.8/MathJax.js',
+			config: 'TeX-AMS_HTML-full',
+			// pass other options into `MathJax.Hub.Config()`
+			TeX: { Macros: { RR: "{\\bf R}" } }
+		},
+
+		chalkboard: {
+        boardmarkerWidth: 3,
+        chalkWidth: 7,
+        chalkEffect: 1.0,
+        storage: null,
+        src: null,
+        readOnly: undefined,
+        transition: 800,
+        theme: "chalkboard",
+        background: [ 'rgba(127,127,127,.1)' , path + 'img/blackboard.png' ],
+        grid: { color: 'rgb(50,50,10,0.5)', distance: 80, width: 2},
+        eraser: { src: path + 'img/sponge.png', radius: 20},
+        boardmarkers : [
+                { color: 'rgba(100,100,100,1)', cursor: 'url(' + path + 'img/boardmarker-black.png), auto'},
+                { color: 'rgba(30,144,255, 1)', cursor: 'url(' + path + 'img/boardmarker-blue.png), auto'},
+                { color: 'rgba(220,20,60,1)', cursor: 'url(' + path + 'img/boardmarker-red.png), auto'},
+                { color: 'rgba(50,205,50,1)', cursor: 'url(' + path + 'img/boardmarker-green.png), auto'},
+                { color: 'rgba(255,140,0,1)', cursor: 'url(' + path + 'img/boardmarker-orange.png), auto'},
+                { color: 'rgba(150,0,20150,1)', cursor: 'url(' + path + 'img/boardmarker-purple.png), auto'},
+                { color: 'rgba(255,220,0,1)', cursor: 'url(' + path + 'img/boardmarker-yellow.png), auto'}
+        ],
+        chalks: [
+                { color: 'rgba(255,255,255,0.5)', cursor: 'url(' + path + 'img/chalk-white.png), auto'},
+                { color: 'rgba(96, 154, 244, 0.5)', cursor: 'url(' + path + 'img/chalk-blue.png), auto'},
+                { color: 'rgba(237, 20, 28, 0.5)', cursor: 'url(' + path + 'img/chalk-red.png), auto'},
+                { color: 'rgba(20, 237, 28, 0.5)', cursor: 'url(' + path + 'img/chalk-green.png), auto'},
+                { color: 'rgba(220, 133, 41, 0.5)', cursor: 'url(' + path + 'img/chalk-orange.png), auto'},
+                { color: 'rgba(220,0,220,0.5)', cursor: 'url(' + path + 'img/chalk-purple.png), auto'},
+                { color: 'rgba(255,220,0,0.5)', cursor: 'url(' + path + 'img/chalk-yellow.png), auto'}
+        ]
+    },
+    customcontrols: {
+  		controls: [
+  			{ icon: '<i class="fa fa-pen-square"></i>',
+  			  title: 'Toggle chalkboard (B)',
+  			  action: 'RevealChalkboard.toggleChalkboard();'
+  			},
+  			{ icon: '<i class="fa fa-pen"></i>',
+  			  title: 'Toggle notes canvas (C)',
+  			  action: 'RevealChalkboard.toggleNotesCanvas();'
+  			}
+  		]
+    },
+
+		plugins: [ RevealMath, RevealChalkboard, RevealCustomControls, RevealMenu  ]
+		});
+	</script>
+
+	</body>
+</html>
