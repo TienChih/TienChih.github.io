@@ -162,7 +162,7 @@
 				<section data-auto-animate>
 					
 
-					<div data-id="problem" >
+					
 						
 						<iframe scrolling="no" title="Copy of Fubini's theorem: Rectangular regions" src="https://www.geogebra.org/material/iframe/id/pkcqbzhy/width/637/height/472/border/888888/sfsb/true/smb/false/stb/false/stbh/false/ai/false/asb/false/sri/false/rc/false/ld/false/sdz/false/ctl/false" width="80%" height="500" style="border:0px;"> </iframe>
 					</p>
@@ -197,10 +197,101 @@
 				</section>
 
 
-				
 
 
 
+
+
+
+				</section>
+
+
+
+				<section>
+					<h4>The Integral</h4>
+					<section data-auto-animate>
+
+						<div class="r-frame">
+							<p style="font-size: 25px;">
+								Let \(f\) be defined on the rectangle \(R=[a,b]\times [c,d]\).  Let \(c_{i,j}\) be any point inside of the subrectangle \[R_{i,j}=[x_i, x_{i+1}]\times[y_j, y_{j+1}], i,j=1,\ldots,n.\]  Then the quantity \[S=\sum_{i,j=1}^n f(x_{i,j})\Delta A_{i,j}\] ( where \(\Delta A_{i,j}=\Delta x_i \Delta y_j=\text{area}(R_{i,j})\) ) is called a <strong>Riemann Sum</strong> of \(f\) on \(R\).
+							</p>
+
+						</div>
+
+					</section>
+
+					<section data-auto-animate>
+
+						<div class="r-frame">
+							<iframe src="https://www.desmos.com/calculator/vqbbjlyzmp" width="100%" height="500" style="border: 1px solid #ccc" frameborder=0></iframe>
+
+						</div>
+
+					</section>
+
+					<section data-auto-animate>
+
+						<div class="r-frame">
+							<p style="font-size: 25px;">
+								The <strong>double integral </strong> of \(f\) over \(R\) denoted \(\iint_R f dA\) is defined to be the limit of the Riemann sum over \(R\) as \(\Delta x, \Delta y\to 0\):
+
+								 \[\iint_R f dA:=\lim_{\Delta x, \Delta y\to 0}\left(\sum_{i,j=1}^n f(x_{i,j})\Delta A_{i,j}\right).\]
+							</p>
+
+						</div>
+
+					</section>
+
+					<section data-auto-animate>
+
+						<div class="r-frame">
+							<p style="font-size: 25px;">
+								The <strong>double integral </strong> of \(f\) over \(R\) denoted \(\iint_R f dA\) is defined to be the limit of the Riemann sum over \(R\) as \(\Delta x, \Delta y\to 0\):
+
+								 \[\iint_R f dA:=\lim_{\Delta x, \Delta y\to 0}\left(\sum_{i,j=1}^n f(x_{i,j})\Delta A_{i,j}\right).\]
+							</p>
+
+						</div>
+
+					</section>
+
+					<section data-auto-animate>
+
+						<div class="r-frame">
+							<p style="font-size: 25px;">
+								If \(f\) is continuous, or the set of discontinuities of \(f\) on \(R\) has 0 area, the integral exists.
+							</p>
+
+						</div>
+
+					</section>
+
+
+					<section data-auto-animate>
+						<h5>Fubini's Theorem</h5>
+						<div class="r-frame">
+							<p style="font-size: 25px;">
+
+								If \(f\) is continuous, or the set of discontinuities of \(f\) on \(R\) has 0 area, and each horizontal or vertical line has at most finitely many discontinuities, then:
+								
+
+								 \[\iint_R f dA=\int_a^b\int_c^df(x,y)dydx=\int_c^d\int_a^b f(x,y)dxdy.\]
+							</p>
+
+						</div>
+
+					</section>
+				</section>
+
+
+				<section>
+
+					<div class="r-frame">
+							<p style="font-size: 25px;">
+								Find \(\iint_R x^2+e^{-y}\) if \(R\) is the rectangle bound by \(x=-2, 3, y=-1, 1\).
+							</p>
+
+						</div>
 
 
 				</section>
