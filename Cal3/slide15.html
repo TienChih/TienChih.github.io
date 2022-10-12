@@ -1,0 +1,792 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>reveal.js</title>
+
+		<link rel="stylesheet" href="dist/reset.css">
+		<link rel="stylesheet" href="dist/reveal.css">
+		<link rel="stylesheet" href="dist/theme/white.css">
+		<link rel="stylesheet" href="plugin/chalkboard/style.css">
+		<link rel="stylesheet" href="plugin/customcontrols/style.css">
+
+
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+
+
+
+		<!-- Theme used for syntax highlighted code -->
+		<link rel="stylesheet" href="plugin/highlight/monokai.css">
+		<style>
+			.container{
+   				 display: flex;
+			}
+			.col{
+    			flex: 1;
+			}
+		</style>
+			<script async defer src="https://buttons.github.io/buttons.js"></script>
+
+		<script src="plugin/menu/menu.js"></script>
+
+		<script src="https://sagecell.sagemath.org/static/embedded_sagecell.js"></script>
+  
+ 	 <script>sagecell.makeSagecell({"inputLocation": ".sage"});</script>
+
+
+
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				
+				<section>
+					<h2>Changing things up.</h2>
+					<h4>M 211</h4>
+					
+					<h4>
+						Oxford College of Emory University <a href="https://app.oxford.emory.edu/WebApps/Directory/index.cfm/view/9984" target="_blank">Tien Chih</a>
+					</h4>
+				</section>
+
+				
+
+
+				<section>
+					<h4>Review</h4>
+				<section data-auto-animate>
+					
+
+					<div data-id="problem" >
+						<p style="font-size: 25px;" >
+							Recall Polar coordinates:
+						</p>
+						<iframe src="https://www.dynamicmath.xyz/math2001/sketches/polar/" width="80%" height="450" style="border: 1px solid #ccc" frameborder=0></iframe>
+					</div>
+
+					<p style="font-size: 25px;" >
+						Consider a region defined by \([0,1]\times[0, \pi/6]\).  How big is this region in \((x,y)\) cartesian coordinates?  How big is it in \((r,\theta)\) polar coordinates?
+					</p>
+
+					
+
+				</section>
+
+
+				<section data-auto-animate>
+					
+
+					<div data-id="problem" >
+						<p style="font-size: 25px;" >
+							Recall Polar coordinates:
+						</p>
+						<iframe src="https://www.dynamicmath.xyz/math2001/sketches/polar/" width="80%" height="450" style="border: 1px solid #ccc" frameborder=0></iframe>
+					</div>
+
+					
+
+					<p style="font-size: 25px;" >
+						Consider a region defined by \([5,6]\times[0, \pi/6]\).  How big is this region in \((x,y)\) cartesian coordinates?  How big is it in \((r,\theta)\) polar coordinates?
+					</p>
+
+				</section>
+
+
+				<section data-auto-animate>
+					
+
+					<div data-id="problem" >
+						<p style="font-size: 25px;" >
+							Recall Polar coordinates:
+						</p>
+						<iframe src="https://www.dynamicmath.xyz/math2001/sketches/polar/" width="80%" height="450" style="border: 1px solid #ccc" frameborder=0></iframe>
+					</div>
+
+					
+
+					<p style="font-size: 25px;" >
+						Consider a region defined by \([r_0,r_0+1]\times[0, \pi/6]\).  How big is this region in \((x,y)\) cartesian coordinates?  How big is it in \((r,\theta)\) polar coordinates?
+					</p>
+
+				</section>
+
+				<section data-auto-animate>
+					
+
+					<div data-id="problem" >
+						
+						<img src="img/polarAreaDifferential.svg" width=40%>
+					</div>
+
+					
+
+					<p style="font-size: 25px;" class="r-frame">
+						Recall that the area of the region bound by \(0\leq r \leq f(\theta)\) and the radial lines \(\theta=a,b\) is:
+
+						\[A=\frac{1}{2}\int_a^bf(\theta)^2\,d\theta.\]
+					</p>
+
+				</section>
+
+
+
+
+				</section>
+
+
+
+				<section>
+					
+					<section data-auto-animate>
+						<h4>Change of Variables: Intro</h4>
+
+						<div class="r-frame">
+							<p style="font-size: 25px;">
+								Suppose we have a region \(D\subseteq \mathbb{R}^2\) over which we integrate \(f(u,v)\).  Then suppose we have a transformation \(T:\mathbb{R}^2\to \mathbb{R}^2\) mapping \((u,v)\mapsto(x,y)\).
+							</p>
+
+						</div>
+
+						<div class="fragment">
+						<p style="font-size: 25px;" class="r-frame">
+								How can we get that:
+
+								\[\int_Df(u,v)\,dudv = \int_{T(D)}???\,dxdy?\]
+						</p>
+						</div>
+
+						
+
+
+					</section>
+
+					<section data-auto-animate>
+
+						<div class="r-frame">
+							<p style="font-size: 25px;">
+							Suppose \(T:\mathbb{R}^2\to \mathbb{R}^2\) where \(T(u,v)=(x,y)=(u+v, 2u-v).\)
+							</p>
+
+							
+
+						</div>
+						<p style="font-size: 25px;">
+							Consider the unit square \(D=[0,1]\times[0,1]\) (in \(uv\) coordinates).  Describe the image \(T(D)\) in the \(xy\)-plane.
+						</p>
+
+						<p style="font-size: 25px;" class="fragment">
+							<iframe src="https://www.desmos.com/calculator/nwqho2oavk" width="100%" height="450" style="border: 1px solid #ccc" frameborder=0></iframe>
+
+							What is the area of \(T(D\))?  (Hint: How might a cross-product be useful here?)
+						</p>
+
+
+
+					</section>
+
+					<section data-auto-animate>
+
+						<div class="r-frame">
+							<p style="font-size: 25px;">
+							Suppose \(T:\mathbb{R}^2\to \mathbb{R}^2\) where \(T(u,v)=(x,y)=(u+v, 2u-v).\)
+							</p>
+
+							
+
+						</div>
+						<p style="font-size: 25px;">
+							Consider the rectangle \(D=[0,du]\times[0,dv]\) (in \(uv\) coordinates).  Describe the image \(T(D)\) in the \(xy\)-plane.
+						</p>
+						<iframe src="https://www.desmos.com/calculator/nwqho2oavk" width="100%" height="450" style="border: 1px solid #ccc" frameborder=0></iframe>
+
+						<p style="font-size: 25px;" class="fragment">
+							
+
+							What is the area of \(T(D\))? 
+						</p>
+
+
+
+					</section>
+
+					<section data-auto-animate>
+
+						<div class="r-frame">
+							<p style="font-size: 25px;">
+							Suppose \(T:\mathbb{R}^2\to \mathbb{R}^2\) where \(T(u,v)=(x,y)=(u+v, 2u-v).\)
+							</p>
+
+							
+
+						</div>
+						<iframe src="https://www.desmos.com/calculator/nwqho2oavk" width="100%" height="450" style="border: 1px solid #ccc" frameborder=0></iframe>
+						
+
+						
+
+						<p style="font-size: 25px;" >
+							
+							
+							If \(T(D)\) has area 1, what is the area of \(D\)?  If \(T(D)\) has area \(dx\cdot dy\), what is the area of \(D\)?
+						</p>
+
+
+
+					</section>
+
+
+					
+				</section>
+
+
+				<section>
+					
+					<section data-auto-animate>
+						<h4>Change of Variables: General</h4>
+
+						<div class="r-frame">
+							<p style="font-size: 25px;">
+								Suppose we have a region \(D\subseteq \mathbb{R}^2\) over which we integrate \(f(u,v)\).  Then suppose we have a differentiable transformation \(T:\mathbb{R}^2\to \mathbb{R}^2\).
+							</p>
+
+							<p style="font-size: 25px;">
+								Let \(D\) be the rectangle \(D=[u_0, u_0+d_u]\times[v_0\times t_v]\).
+							</p>
+
+						</div>
+
+						<div class="fragment">
+						<p style="font-size: 25px;" >
+								If \(T(u_0, v_0)=(x_0, y_0)\) Use local linear approximation to estimate \[T(u_0+du, v_0), T(u_0+du, v_0+dv), T(u_0, v_0+dv)\] in terms of \(\frac{dx}{du}, \frac{dx}{dv}, \frac{dy}{du}, \frac{dy}{dv}.\)
+						</p>
+						</div>
+
+						<div class="fragment">
+						<p style="font-size: 25px;" >
+								Estimate the area of \(T(D)\) using the corner points found above.
+						</p>
+						</div>
+
+						
+
+
+					</section>
+
+					<section data-auto-animate>
+
+						<div class="r-frame">
+							<p style="font-size: 30px;">
+							Let \(R:\mathbb{R}^2\to \mathbb{R}^2\) where \(T(u,v)=T(x(u,v), y(u,v))\), and \(T\) is differentiable.
+							</p>
+
+							<p style="font-size: 30px;">
+							The <strong>Jacobian</strong> of \(T\) is:
+
+							\[\frac{\partial(x,y)}{\partial(u,v)}:=\text{det}DT(u,v)=\text{det}\begin{bmatrix} \frac{\partial x}{\partial u} &  \frac{\partial x}{\partial v} \\
+							\frac{\partial y}{\partial u} &  \frac{\partial y}{\partial v} 
+							\end{bmatrix} = \frac{\partial x}{\partial u} \frac{\partial y}{\partial v} -\frac{\partial x}{\partial v} \frac{\partial y}{\partial u}.\]
+							This measures the "size" of the transformation \(T\) at each point.
+							</p>
+
+							
+
+							
+
+						</div>
+						
+
+
+
+					</section>
+
+					<section data-auto-animate>
+
+						<div class="r-frame">
+							<p style="font-size: 30px;">
+							Let \(R:\mathbb{R}^2\to \mathbb{R}^2\) where \(T(u,v)=T(x(u,v), y(u,v))\), and \(T\) is differentiable.
+							</p>
+
+							<p style="font-size: 30px;">
+							If \(D, D^*\) are elementary regions of the \(xy, uv\) planes respectively such that \(T(D^*)=D\) in a bijective fashion, and \(f:D\to \mathbb{R}\) is integrabale over \(D\), we have:
+
+							\[\iint_D f(x,y) dxdy=\iint_{D^*} f(x(u,v), y(u,v)) \left| \frac{\partial(x,y)}{\partial(u,v)}\right| dudv.\]
+						</p>
+
+							
+
+						</div>
+						
+
+
+
+					</section>
+
+					<section data-auto-animate>
+
+						<iframe scrolling="no" title="Transformations" src="https://www.geogebra.org/material/iframe/id/msqh9rxd/width/772/height/472/border/888888/sfsb/true/smb/false/stb/false/stbh/false/ai/false/asb/false/sri/true/rc/false/ld/false/sdz/true/ctl/true" width="772px" height="472px" style="border:0px;" data-preloaded="" allowfullscreen=""> </iframe>
+						
+
+
+
+					</section>
+
+
+					
+				</section>
+
+
+
+
+				<section>
+					<section data-auto-animate>
+
+					<div class="r-frame">
+							<p style="font-size: 25px;">
+								 \[\text{Consider } \iint_D \cos\left(\frac{x+y}{3}\right)\sin\left(\frac{2x-y}{3}\right) dxdy\]  where
+								\(D\) is the triangle with endpoints \((0,0), (5,10)\) and \( (10,5)\).
+							</p>
+							<p style="font-size: 25px;">
+								Let \(u=\frac{x+y}{3}, v=\frac{2x-y}{3}\).
+							</p>
+
+					</div>
+
+					<img src="img/xy_triangle.svg" width="40%">
+
+					
+
+					</section>
+
+					<section data-auto-animate>
+
+					<div class="r-frame">
+							<p style="font-size: 25px;">
+								 \[\text{Consider } \iint_D \cos\left(\frac{x+y}{3}\right)\sin\left(\frac{2x-y}{3}\right) dxdy\]  where
+								\(D\) is the triangle with endpoints \((0,0), (5,10)\) and \( (10,5)\).
+							</p>
+							<p style="font-size: 25px;">
+								Let \(u=\frac{x+y}{3}, v=\frac{2x-y}{3}\).
+							</p>
+
+					</div>
+
+					
+
+					<p style="font-size: 25px;" >
+						Consider the \(xy\) points \((0,0), (5,10)\) and \( (10,5)\).  What are their corresponding points in the \(uv\) plane?
+					</p>
+
+					<p style="font-size: 25px;" class="fragment">
+						Solve for \(x,y\) in terms of \(u,v\).
+					</p>
+
+					<p style="font-size: 25px;" class="fragment">
+						What is the region \(D^*\) in the \(uv\) plane that maps onto \(D\)?
+					</p>
+
+					</section>
+
+					<section data-auto-animate>
+
+					<div class="r-frame">
+							<p style="font-size: 25px;">
+								 \[\text{Consider } \iint_D \cos\left(\frac{x+y}{3}\right)\sin\left(\frac{2x-y}{3}\right) dxdy\]  where
+								\(D\) is the triangle with endpoints \((0,0), (5,10)\) and \( (10,5)\).
+							</p>
+							<p style="font-size: 25px;">
+								Let \(u=\frac{x+y}{3}, v=\frac{2x-y}{3}\).
+							</p>
+
+					</div>
+
+					<img src="img/uv_triangle.svg" width="40%">
+
+					
+					</section>
+
+					<section data-auto-animate>
+
+					<div class="r-frame">
+							<p style="font-size: 25px;">
+								 \[\text{Consider } \iint_D \cos\left(\frac{x+y}{3}\right)\sin\left(\frac{2x-y}{3}\right) dxdy\]  where
+								\(D\) is the triangle with endpoints \((0,0), (5,10)\) and  \(10,5)\).
+							</p>
+							<p style="font-size: 25px;">
+								Let \(u=\frac{x+y}{3}, v=\frac{2x-y}{3}\).
+							</p>
+
+					</div>
+
+					
+
+					<p style="font-size: 25px;" >
+						Solve for \(x,y\) in terms of \(u,v\).  What are \(\frac{\partial x}{\partial u} ,  \frac{\partial x}{\partial v} ,
+							\frac{\partial y}{\partial u} ,\frac{\partial y}{\partial v} \)?
+					</p>
+
+					
+
+					<p style="font-size: 25px;" class="fragment">
+						Find:
+						\[\iint_D \cos\left(\frac{x+y}{3}\right)\sin\left(\frac{2x-y}{3}\right) dxdy = \iint_{D^*} \cos(u)\sin(v) \left| \frac{\partial(x,y)}{\partial(u,v)}\right| dudv.\]  
+					</p>
+
+					</section>
+
+
+				</section>
+
+				<section>
+					<section data-auto-animate>
+
+					<div class="r-frame">
+							<p style="font-size: 25px;">
+								 \[\text{Consider } \iint_D (x^2-y^2)e^{xy} dxdy\]  where
+								\(D\) is the region bound by \(xy=1, xy=4, y=x, y=x+2\)
+							</p>
+							<p style="font-size: 25px;">
+								Let \(u=xy, v=y-x\).
+							</p>
+
+					</div>
+
+					<iframe src="https://www.desmos.com/calculator/pc62cf1cuq?embed" width="62.5%" height="400" style="border: 1px solid #ccc" frameborder=0></iframe>
+
+					<p style="font-size: 25px;" class="fragment">
+								What are the bounds of \(u, v\)?
+							</p>
+
+
+					</section>
+
+					<section data-auto-animate>
+
+					<div class="r-frame">
+							<p style="font-size: 25px;">
+								 \[\text{Consider } \iint_D (x^2-y^2)e^{xy} dxdy\]  where
+								\(D\) is the region bound by \(xy=1, xy=4, y=x, y=x+2\)
+							</p>
+							<p style="font-size: 25px;">
+								Let \(u=xy, v=y-x\).
+							</p>
+
+					</div>
+
+					<p style="font-size: 25px;" >
+						Find:
+						\[\left|\frac{\partial(u,v)}{\partial(x,y)}\right|.\]  
+					</p>
+
+					<p style="font-size: 25px;" class="fragment">
+						Using the fact that 
+						\[\left|\frac{\partial(x,y)}{\partial(u,v)}\right|=\left|\frac{\partial(u,v)}{\partial(x,y)}\right|^{-1}\]
+
+						find \(\left| \frac{\partial(x,y)}{\partial(u,v)}\right| dudv\) in terms of \(x, y\).
+					</p>
+
+					
+
+					</section>
+
+
+					<section data-auto-animate>
+
+					<div class="r-frame">
+							<p style="font-size: 25px;">
+								 \[\text{Consider } \iint_D (x^2-y^2)e^{xy} dxdy\]  where
+								\(D\) is the region bound by \(xy=1, xy=4, y=x, y=x+2\)
+							</p>
+							<p style="font-size: 25px;">
+								Let \(u=xy, v=y-x\).
+							</p>
+
+					</div>
+
+					<p style="font-size: 25px;" >
+						Consider \[\iint_{D^*} (x^2-y^2)e^{xy} \left| \frac{\partial(x,y)}{\partial(u,v)}\right| dudv.\]
+
+						Simplify and then rewrite in terms of just \(u, v\).
+					</p>
+
+					<p style="font-size: 25px;" class="fragment">
+						Solve the above integral.
+					</p>
+
+					
+
+					</section>
+
+
+
+				</section>
+
+				
+
+
+				<section>
+
+					<section data-auto-animate>
+
+					<div class="r-frame">
+							<p style="font-size: 25px;">
+								 \[\text{Consider } \iint_D \cos(x^2+y^2) dxdy\]  where
+								\(D\) is the region bound by \(y=0, y=\sqrt{9-x^2}\)
+							</p>
+							<p style="font-size: 25px;">
+								Let \(x=r\cos(\theta), r=\sin(\theta)\). (Polar coordinates!)
+							</p>
+
+					</div>
+
+					<iframe src="https://www.desmos.com/calculator/fohr9phqpu?embed" width="62.5%" height="400" style="border: 1px solid #ccc" frameborder=0></iframe>
+
+					<p style="font-size: 25px;" class="fragment">
+								What are the bounds of \(r, \theta\)?
+							</p>
+
+
+					</section>
+
+					<section data-auto-animate>
+
+					<div class="r-frame">
+							<p style="font-size: 25px;">
+								 \[\text{Consider } \iint_D \cos(x^2+y^2) dxdy\]  where
+								\(D\) is the region bound by \(y=0, y=\sqrt{9-x^2}\)
+							</p>
+							<p style="font-size: 25px;">
+								Let \(x=r\cos(\theta), r=\sin(\theta)\). (Polar coordinates!)
+							</p>
+
+					</div>
+
+					<p style="font-size: 25px;" >
+						Find:
+						\[\left|\frac{\partial(x,y)}{\partial(r,\theta)}\right|.\]  
+					</p>
+
+					
+
+					
+
+					</section>
+
+
+					<section data-auto-animate>
+
+					<div class="r-frame">
+							<p style="font-size: 25px;">
+								 \[\text{Consider } \iint_D \cos(x^2+y^2)dxdy\]  where
+								\(D\) is the region bound by \(y=0, y=\sqrt{9-x^2}\)
+							</p>
+							<p style="font-size: 25px;">
+								Let \(x=r\cos(\theta), r=\sin(\theta)\). (Polar coordinates!)
+							</p>
+
+					</div>
+
+					<p style="font-size: 25px;" >
+						Consider \[\iint_{D^*} \cos(x^2+y^2) \left| \frac{\partial(x,y)}{\partial(r,\theta)}\right| dudv.\]
+
+						Simplify and then rewrite in terms of just \(r, \theta\).
+					</p>
+
+					<p style="font-size: 25px;" class="fragment">
+						Solve the above integral.
+					</p>
+
+					
+
+					</section>				
+			</section>	
+
+			<section>
+
+				<section data-auto-animate>
+					<h4>Polar Integral</h4>
+				<div class="r-frame">
+							<p style="font-size: 25px;">
+								 \[\iint_D f(x,y)dxdy = \iint_{D^*} f(r\cos(\theta), r\sin(\theta)) r\, drd\theta\]
+							</p>
+							
+
+					</div>
+				</section>
+				<section data-auto-animate>
+				<div class="r-frame">
+							<p style="font-size: 25px;">
+								 \[\text{Find } \int_{\infty}^\infty \int_{-\infty}^\infty e^{-x^2-y^2}dxdy.\]
+							</p>
+							
+
+					</div>
+					<p style="font-size: 25px;">
+								Hint 1: Use \(x=r\cos(\theta), r=\sin(\theta)\).
+					</p>
+
+					<p style="font-size: 25px;">
+								Hint 2: Make sure you don't overlap the same region twice!
+					</p>
+				</section>
+			</section>
+
+
+
+
+
+
+
+
+
+
+
+				
+
+
+
+
+
+				
+
+
+
+
+
+				
+				
+
+
+				
+
+				
+
+
+
+
+				
+
+
+				
+
+
+
+
+				
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+					
+				
+			</div>
+		</div>
+
+		<script src="dist/reveal.js"></script>
+		<script src="plugin/notes/notes.js"></script>
+		<script src="plugin/markdown/markdown.js"></script>
+		<script src="plugin/highlight/highlight.js"></script>
+		<script>
+			// More info about initialization & config:
+			// - https://revealjs.com/initialization/
+			// - https://revealjs.com/config/
+			Reveal.initialize({
+				hash: true,
+
+				// Learn about plugins: https://revealjs.com/plugins/
+				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
+			});
+		</script>
+		<script src="plugin/math/math.js"></script>
+		<script src="plugin/chalkboard/plugin.js"></script>
+		<script src="plugin/customcontrols/plugin.js"></script>
+
+
+
+	<script>
+  	Reveal.initialize({
+		math: {
+			mathjax: 'https://cdn.jsdelivr.net/gh/mathjax/mathjax@2.7.8/MathJax.js',
+			config: 'TeX-AMS_HTML-full',
+			// pass other options into `MathJax.Hub.Config()`
+			TeX: { Macros: { RR: "{\\bf R}" } }
+		},
+
+		chalkboard: {
+        boardmarkerWidth: 3,
+        chalkWidth: 7,
+        chalkEffect: 1.0,
+        storage: null,
+        src: null,
+        readOnly: undefined,
+        transition: 800,
+        theme: "chalkboard",
+        background: [ 'rgba(127,127,127,.1)' , path + 'img/blackboard.png' ],
+        grid: { color: 'rgb(50,50,10,0.5)', distance: 80, width: 2},
+        eraser: { src: path + 'img/sponge.png', radius: 20},
+        boardmarkers : [
+                { color: 'rgba(100,100,100,1)', cursor: 'url(' + path + 'img/boardmarker-black.png), auto'},
+                { color: 'rgba(30,144,255, 1)', cursor: 'url(' + path + 'img/boardmarker-blue.png), auto'},
+                { color: 'rgba(220,20,60,1)', cursor: 'url(' + path + 'img/boardmarker-red.png), auto'},
+                { color: 'rgba(50,205,50,1)', cursor: 'url(' + path + 'img/boardmarker-green.png), auto'},
+                { color: 'rgba(255,140,0,1)', cursor: 'url(' + path + 'img/boardmarker-orange.png), auto'},
+                { color: 'rgba(150,0,20150,1)', cursor: 'url(' + path + 'img/boardmarker-purple.png), auto'},
+                { color: 'rgba(255,220,0,1)', cursor: 'url(' + path + 'img/boardmarker-yellow.png), auto'}
+        ],
+        chalks: [
+                { color: 'rgba(255,255,255,0.5)', cursor: 'url(' + path + 'img/chalk-white.png), auto'},
+                { color: 'rgba(96, 154, 244, 0.5)', cursor: 'url(' + path + 'img/chalk-blue.png), auto'},
+                { color: 'rgba(237, 20, 28, 0.5)', cursor: 'url(' + path + 'img/chalk-red.png), auto'},
+                { color: 'rgba(20, 237, 28, 0.5)', cursor: 'url(' + path + 'img/chalk-green.png), auto'},
+                { color: 'rgba(220, 133, 41, 0.5)', cursor: 'url(' + path + 'img/chalk-orange.png), auto'},
+                { color: 'rgba(220,0,220,0.5)', cursor: 'url(' + path + 'img/chalk-purple.png), auto'},
+                { color: 'rgba(255,220,0,0.5)', cursor: 'url(' + path + 'img/chalk-yellow.png), auto'}
+        ]
+    },
+    customcontrols: {
+  		controls: [
+  			{ icon: '<i class="fa fa-pen-square"></i>',
+  			  title: 'Toggle chalkboard (B)',
+  			  action: 'RevealChalkboard.toggleChalkboard();'
+  			},
+  			{ icon: '<i class="fa fa-pen"></i>',
+  			  title: 'Toggle notes canvas (C)',
+  			  action: 'RevealChalkboard.toggleNotesCanvas();'
+  			}
+  		]
+    },
+
+		plugins: [ RevealMath, RevealChalkboard, RevealCustomControls, RevealMenu  ]
+		});
+	</script>
+
+	</body>
+</html>

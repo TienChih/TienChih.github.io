@@ -1,0 +1,484 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>reveal.js</title>
+
+		<link rel="stylesheet" href="dist/reset.css">
+		<link rel="stylesheet" href="dist/reveal.css">
+		<link rel="stylesheet" href="dist/theme/white.css">
+		<link rel="stylesheet" href="plugin/chalkboard/style.css">
+		<link rel="stylesheet" href="plugin/customcontrols/style.css">
+
+
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+
+
+
+		<!-- Theme used for syntax highlighted code -->
+		<link rel="stylesheet" href="plugin/highlight/monokai.css">
+		<style>
+			.container{
+   				 display: flex;
+			}
+			.col{
+    			flex: 1;
+			}
+		</style>
+			<script async defer src="https://buttons.github.io/buttons.js"></script>
+
+		<script src="plugin/menu/menu.js"></script>
+
+		<script src="https://sagecell.sagemath.org/static/embedded_sagecell.js"></script>
+  
+ 	 <script>sagecell.makeSagecell({"inputLocation": ".sage"});</script>
+
+
+
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				
+				<section>
+					<h2>A path through a field.</h2>
+					<h4>M 211</h4>
+					
+					<h4>
+						Oxford College of Emory University <a href="https://app.oxford.emory.edu/WebApps/Directory/index.cfm/view/9984" target="_blank">Tien Chih</a>
+					</h4>
+				</section>
+
+				
+
+
+				<section>
+					
+				<section data-auto-animate>
+					
+
+					<div data-id="problem" >
+						<p style="font-size: 25px;" class="r-frame">
+							Consider \(f(x,y)=x+2y+2\).
+						</p>
+						
+					</div>
+
+					<p style="font-size: 25px;" >
+						If you draw a line segment the \(x,y\) plane from \((0,0)\) to \((5,5)\), what is the area of the shape where this segment is the base and \(f\) is the height?
+					</p>
+
+					
+
+				</section>
+
+
+				<section data-auto-animate>
+					
+
+					<iframe scrolling="no" title="Chapter-35-1: Integral" src="https://www.geogebra.org/material/iframe/id/ptz7hgj7/width/617/height/452/border/888888/sfsb/true/smb/false/stb/false/stbh/false/ai/false/asb/false/sri/true/rc/false/ld/false/sdz/true/ctl/false" width="617px" height="452px" style="border:0px;" data-preload="" allowfullscreen=""> </iframe>
+
+					
+
+				</section>
+
+				<section data-auto-animate>
+					
+
+					<div data-id="problem" class="r-frame">
+						<p style="font-size: 25px;" >
+							Consider \(f(x,y)=x+2y+2\) and the area under the curve along the line segment from \((0,0)\) to \((5,5)\).
+						</p>
+						
+					</div>
+
+					<p style="font-size: 25px;" >
+						If one traverses this sgement in 5 seconds, 2 seconds, or 1 second, is the area different?   What if I traverse it backwards?
+					</p>
+
+					
+
+				</section>
+
+				<section data-auto-animate>
+					<h4>Scalar Path Integral</h4>
+					
+
+					<div data-id="problem" class="r-frame">
+						<p style="font-size: 25px;" >
+							The <strong>scalar path integral</strong> of a function \(f:\mathbb{R}^n\to\mathbb{R}\) along the path \(\mathbf{x}\) is \[\int_a^b f(\mathbf{x}(t))|\mathbf{x}'(t)|\, dt.\]
+						</p>
+						
+					</div>
+
+					
+
+					
+
+				</section>
+
+
+
+				<section data-auto-animate>
+					<h4>Scalar Path Integral</h4>
+					
+
+					<div data-id="problem" class="r-frame">
+						<p style="font-size: 25px;" >
+							Find the integral of \(f(x,y)=e^{x^2}y\) along \(\mathbf{x}(t)=(t^2,-t^3) \) from \(t=-3, t=1\).
+						</p>
+						
+					</div>
+
+					
+
+					
+
+				</section>
+
+
+
+
+				</section>
+
+
+
+
+
+
+
+				<section>
+					
+				<section data-auto-animate>
+					
+
+					<div data-id="problem" class="r-frame">
+						<p style="font-size: 25px;" >
+							Consider a straight line path from \((0,0)\) to \((3,4)\).  Divide this path into 5 vectors, with starting points \((0,0), \left( \frac{6}{5}, \frac{8}{5} \right), \left( \frac{3}{5}, \frac{4}{5} \right), \left( \frac{9}{5}, \frac{12}{5} \right), \left( \frac{12}{5}, \frac{16}{5} \right)\) and direction  \(\left\langle \frac{3}{5}, \frac{4}{5} \right\rangle\).
+						</p>
+
+						
+						
+					</div>
+
+					<img src = "img/5path.svg" width="50%">
+
+					
+
+				</section>
+
+
+				<section data-auto-animate>
+					
+
+					<div data-id="problem" class="r-frame">
+						<p style="font-size: 25px;" >
+							Consider a straight line path from \((0,0)\) to \((3,4)\).  Divide this path into 5 vectors, with starting points \((0,0), \left( \frac{6}{5}, \frac{8}{5} \right), \left( \frac{3}{5}, \frac{4}{5} \right), \left( \frac{9}{5}, \frac{12}{5} \right), \left( \frac{12}{5}, \frac{16}{5} \right)\) and direction  \(\left\langle \frac{3}{5}, \frac{4}{5} \right\rangle\).
+						</p>
+
+						
+						
+					</div>
+					<img src = "img/5path1.svg" width="40%">
+
+					<p style="font-size: 25px;" >
+						If \(F(x,y)=\mathbf{i}+\mathbf{j}\) is a vector field, what is the dot product of each of our vectors against the field?  What is the sum of these dot products?
+					</p>
+					
+
+					
+
+				</section>
+
+				<section data-auto-animate>
+					
+
+					<div data-id="problem" class="r-frame">
+						<p style="font-size: 25px;" >
+							Consider a straight line path from \((0,0)\) to \((3,4)\).  Divide this path into 5 vectors, with starting points \((0,0), \left( \frac{6}{5}, \frac{8}{5} \right), \left( \frac{3}{5}, \frac{4}{5} \right), \left( \frac{9}{5}, \frac{12}{5} \right), \left( \frac{12}{5}, \frac{16}{5} \right)\) and direction  \(\left\langle \frac{3}{5}, \frac{4}{5} \right\rangle\).
+						</p>
+
+						
+						
+					</div>
+					<img src = "img/5path2.svg" width="40%">
+
+					<p style="font-size: 25px;" >
+						If \(F(x,y)=-0.8\mathbf{i}+0.6\mathbf{j}\) is a vector field, what is the dot product of each of our vectors against the field?  What is the sum of these dot products?
+					</p>
+					
+
+					
+
+				</section>
+
+				<section data-auto-animate>
+					
+
+					<div data-id="problem" class="r-frame">
+						<p style="font-size: 25px;" >
+							Consider a straight line path from \((0,0)\) to \((3,4)\).  Divide this path into 5 vectors, with starting points \((0,0), \left( \frac{6}{5}, \frac{8}{5} \right), \left( \frac{3}{5}, \frac{4}{5} \right), \left( \frac{9}{5}, \frac{12}{5} \right), \left( \frac{12}{5}, \frac{16}{5} \right)\) and direction  \(\left\langle \frac{3}{5}, \frac{4}{5} \right\rangle\).
+						</p>
+
+						
+						
+					</div>
+					<img src = "img/5path3.svg" width="40%">
+
+					<p style="font-size: 25px;" >
+						If \(F(x,y)= -\mathbf{i}-\frac{1}{2}\mathbf{j}\) is a vector field, what is the dot product of each of our vectors against the field?  What is the sum of these dot products?
+					</p>
+					
+
+					
+
+				</section>
+
+
+				</section>
+
+
+				<section>
+					<section data-auto-animate>
+					<h4>Vector Path Integral</h4>
+					
+
+					<div data-id="problem" class="r-frame">
+						<p style="font-size: 25px;" >
+							The <strong>vector path integral</strong> of a vector field \(F\) along the path \(\mathbf{x}\) is \[\int_a^b F(\mathbf{x}(t)) \cdot \mathbf{x}'(t)\, dt.\]
+						</p>
+						
+					</div>
+
+					<p style="font-size: 25px;" class="fragment">
+						This measures the "<strong>work</strong>" that \(F\) does along \(\mathbf{x}\).
+					</p>
+
+
+					</section>
+
+					<section data-auto-animate>
+					<h4>Vector Path Integral</h4>
+					
+
+					<div data-id="problem" class="r-frame">
+						<p style="font-size: 25px;" >
+							Consider the vector field \(F(x,y)=-y\mathbf{i}+x\mathbf{j}\) and the paths:
+							\[\mathbf{x}_1(t)=(4-t, 2t)\text{ for }t\in [0,4],\] \[\mathbf{x}_2(t)=(4-2t, 4t)\text{ for }t\in [0,2],\] \[\mathbf{x}_3(t)=(t, 8-2t)\text{ for }t\in [0,4].\]
+						</p>
+						
+					</div>
+
+					<img src = "img/pathintegral.png" width="40%">
+
+					
+
+
+					</section>
+
+					<section data-auto-animate>
+					<h4>Vector Path Integral</h4>
+					
+
+					<div data-id="problem" class="r-frame">
+						<p style="font-size: 25px;" >
+							Consider the vector field \(F(x,y)=-y\mathbf{i}+x\mathbf{j}\) and the paths:
+							\[\mathbf{x}_1(t)=(4-t, 2t)\text{ for }t\in [0,4],\] \[\mathbf{x}_2(t)=(4-2t, 4t)\text{ for }t\in [0,2],\] \[\mathbf{x}_3(t)=(t, 8-2t)\text{ for }t\in [0,4].\]
+						</p>
+						
+					</div>
+
+					
+
+					<p style="font-size: 25px;" >
+						Compute the vector path integrals for each path above. 
+					</p>
+
+
+					</section>
+
+
+				</section>
+
+
+				<section>
+					<section data-auto-animate>
+						<div data-id="problem" class="r-frame">
+						<p style="font-size: 25px;" >
+							Let \(\mathbf{x}:[a,b]\to \mathbb{R}\) be  a piecewise \(C^1\) path.  Then \(\mathbf{y}:[c,d]\to \mathbb{R}\) is a <strong>reparameterization</strong> of \(\mathbf{x}\) if there is a bijection \(u:[a,b]\to[c,d]\) such that both \(u, u^{-1}\) are \(C^1\) and \(\mathbf{y}=\mathbf{x}\circ u\).
+						</p>
+						
+					</div>
+
+					<p style="font-size: 25px;" class="fragment">
+						\(\mathbf{y}\) is <strong>orientation preserving</strong> if \(u(a)=c, u(b)=d\), and <strong>orientation reversing</strong> if \(u(a)=d, u(b)=c\).
+					</p>
+
+
+					</section>
+
+					<section data-auto-animate>
+						<div data-id="problem" class="r-frame">
+						<p style="font-size: 25px;" >
+							Let \(\mathbf{x}:[a,b]\to \mathbb{R}\) be  a piecewise \(C^1\) path and \(\mathbf{y}:[c,d]\to \mathbb{R}\) be a reparameterization of \(\mathbf{x}\).
+						</p>
+
+						<p style="font-size: 25px;" >
+							Then the vector path integrals \[ \int_c^d F(\mathbf{y})(t)\mathbf{y}'(t)\, dt = \int_a^b F(\mathbf{x})(t)\mathbf{x}'(t)\, dt  \] if \(\mathbf{y}\) is orientation preserving, and \[ \int_c^d F(\mathbf{y})(t)\mathbf{y}'(t)\, dt = -\int_a^b F(\mathbf{x})(t)\mathbf{x}'(t)\, dt  \] if \(\mathbf{y}\) is orientation reversing.
+						</p>
+						
+					</div>
+
+					<p style="font-size: 25px;" class="fragment">
+						PROOF: Substitution.  (This makes a good test question)
+					</p>
+
+
+					</section>
+
+
+					<section data-auto-animate>
+						<div data-id="problem" class="r-frame">
+						<p style="font-size: 25px;" >
+							A piecewise \(C^1\) path  \(\mathbf{x}:[a,b]\to \mathbb{R}\) is a <strong>closed</strong> curve or contour if \(\mathbf{a}=\mathbf{b}\) and is <strong>simple</strong> if there are no other self intersections.
+						</p>
+
+						
+						
+					</div>
+
+					<iframe src="https://www.desmos.com/calculator/fkmjugazns?embed" width="100%" height="500" style="border: 1px solid #ccc" frameborder=0></iframe>
+
+					<p style="font-size: 25px;" >
+						Above we have a simple closed curve and a non-simple, non-closed curve.  Draw a simple non-closed curve, and a non-simple closed curve.
+					</p>
+
+
+					</section>
+
+				</section>
+
+				
+
+
+
+
+				
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+					
+				
+			</div>
+		</div>
+
+		<script src="dist/reveal.js"></script>
+		<script src="plugin/notes/notes.js"></script>
+		<script src="plugin/markdown/markdown.js"></script>
+		<script src="plugin/highlight/highlight.js"></script>
+		<script>
+			// More info about initialization & config:
+			// - https://revealjs.com/initialization/
+			// - https://revealjs.com/config/
+			Reveal.initialize({
+				hash: true,
+
+				// Learn about plugins: https://revealjs.com/plugins/
+				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
+			});
+		</script>
+		<script src="plugin/math/math.js"></script>
+		<script src="plugin/chalkboard/plugin.js"></script>
+		<script src="plugin/customcontrols/plugin.js"></script>
+
+
+
+	<script>
+  	Reveal.initialize({
+		math: {
+			mathjax: 'https://cdn.jsdelivr.net/gh/mathjax/mathjax@2.7.8/MathJax.js',
+			config: 'TeX-AMS_HTML-full',
+			// pass other options into `MathJax.Hub.Config()`
+			TeX: { Macros: { RR: "{\\bf R}" } }
+		},
+
+		chalkboard: {
+        boardmarkerWidth: 3,
+        chalkWidth: 7,
+        chalkEffect: 1.0,
+        storage: null,
+        src: null,
+        readOnly: undefined,
+        transition: 800,
+        theme: "chalkboard",
+        background: [ 'rgba(127,127,127,.1)' , path + 'img/blackboard.png' ],
+        grid: { color: 'rgb(50,50,10,0.5)', distance: 80, width: 2},
+        eraser: { src: path + 'img/sponge.png', radius: 20},
+        boardmarkers : [
+                { color: 'rgba(100,100,100,1)', cursor: 'url(' + path + 'img/boardmarker-black.png), auto'},
+                { color: 'rgba(30,144,255, 1)', cursor: 'url(' + path + 'img/boardmarker-blue.png), auto'},
+                { color: 'rgba(220,20,60,1)', cursor: 'url(' + path + 'img/boardmarker-red.png), auto'},
+                { color: 'rgba(50,205,50,1)', cursor: 'url(' + path + 'img/boardmarker-green.png), auto'},
+                { color: 'rgba(255,140,0,1)', cursor: 'url(' + path + 'img/boardmarker-orange.png), auto'},
+                { color: 'rgba(150,0,20150,1)', cursor: 'url(' + path + 'img/boardmarker-purple.png), auto'},
+                { color: 'rgba(255,220,0,1)', cursor: 'url(' + path + 'img/boardmarker-yellow.png), auto'}
+        ],
+        chalks: [
+                { color: 'rgba(255,255,255,0.5)', cursor: 'url(' + path + 'img/chalk-white.png), auto'},
+                { color: 'rgba(96, 154, 244, 0.5)', cursor: 'url(' + path + 'img/chalk-blue.png), auto'},
+                { color: 'rgba(237, 20, 28, 0.5)', cursor: 'url(' + path + 'img/chalk-red.png), auto'},
+                { color: 'rgba(20, 237, 28, 0.5)', cursor: 'url(' + path + 'img/chalk-green.png), auto'},
+                { color: 'rgba(220, 133, 41, 0.5)', cursor: 'url(' + path + 'img/chalk-orange.png), auto'},
+                { color: 'rgba(220,0,220,0.5)', cursor: 'url(' + path + 'img/chalk-purple.png), auto'},
+                { color: 'rgba(255,220,0,0.5)', cursor: 'url(' + path + 'img/chalk-yellow.png), auto'}
+        ]
+    },
+    customcontrols: {
+  		controls: [
+  			{ icon: '<i class="fa fa-pen-square"></i>',
+  			  title: 'Toggle chalkboard (B)',
+  			  action: 'RevealChalkboard.toggleChalkboard();'
+  			},
+  			{ icon: '<i class="fa fa-pen"></i>',
+  			  title: 'Toggle notes canvas (C)',
+  			  action: 'RevealChalkboard.toggleNotesCanvas();'
+  			}
+  		]
+    },
+
+		plugins: [ RevealMath, RevealChalkboard, RevealCustomControls, RevealMenu  ]
+		});
+	</script>
+
+	</body>
+</html>
