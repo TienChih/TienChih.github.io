@@ -120,7 +120,11 @@
 
 					<div class="fragment">
 						<p style="font-size: 25px;" >
-							\(f(x,y)\approx p_2(x,y)=f(0,0)+f_x(0,0)x+f_y(0,0)y +\frac{1}{2}\left(f_{xx}(0,0)x^2+2f_{xy}(0,0)xy+f_{yy}(0,0)y^2 \right) \).
+							\[
+							\begin{array}{rcl}
+							f(x,y)&\approx& p_2(x,y)=f(0,0)+f_x(0,0)x+f_y(0,0)y\\
+							&& +\frac{1}{2}\left(f_{xx}(0,0)x^2+2f_{xy}(0,0)xy+f_{yy}(0,0)y^2 \right). 
+							\end{array}\].
 						</p>
 					</div>
 					<div class="fragment">
@@ -150,6 +154,33 @@
 
 					
 
+					</section>
+
+
+					<section data-auto-animate>
+						<h4>The Hessian</h4>
+					<div class="r-frame" >
+						<p style="font-size: 25px;" data-id="thm">
+							Let \(f:X\subseteq\mathbb{R}^n\to \mathbb{R}\) be \(C^2\).  Then the <strong>Hessian</strong> of \(f\) is:
+
+							\[Hf=
+							\left[
+							\begin{array}{cccc}
+							\frac{\partial^2}{\partial x_1 \partial x_1} & \frac{\partial^2}{\partial x_1 \partial x_2} & \cdots &\frac{\partial^2}{\partial x_1 \partial x_n} \\
+
+							\frac{\partial^2}{\partial x_2 \partial x_1} & \frac{\partial^2}{\partial x_2 \partial x_2} & \cdots &\frac{\partial^2}{\partial x_2 \partial x_n} \\
+
+							\vdots & \vdots & \ddots & \vdots \\
+
+							\frac{\partial^2}{\partial x_n \partial x_1} & \frac{\partial^2}{\partial x_n \partial x_2} & \cdots &\frac{\partial^2}{\partial x_n \partial x_n} \\
+
+							\end{array}
+							\right]
+							\]
+
+						</p>
+
+					</div>
 					</section>
 
 					<section data-auto-animate>
@@ -216,7 +247,7 @@
 
 					<div class="fragment" >
 						<ul>
-							<li style="font-size: 25px;">If \(Hf(\mathbf{a})=0\), \(\mathbf{a}\) is <strong>degenerate</strong>.</li>
+							<li style="font-size: 25px;">If \(\text{det} \left(Hf(\mathbf{a})\right)=0\), \(\mathbf{a}\) is <strong>degenerate</strong>.</li>
 							<li style="font-size: 25px;">If \(d_k>0\) for each \(k\), \(Hf(\mathbf{a})\) is positive definite (\(\mathbf{a}\) is a local min).</li>
 							<li style="font-size: 25px;">If \(d_k&lt;0\) when \(k\) is odd but \(d_k>0\) when \(k\) is even, \(Hf(\mathbf{a})\) is positive negative (\(\mathbf{a}\) is a local max).</li>
 

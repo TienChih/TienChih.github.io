@@ -247,13 +247,31 @@
 
 					<div data-id="problem" class="r-frame">
 						<p style="font-size: 25px;" >
-							The <strong>vector path integral</strong> of a vector field \(F\) along the path \(\mathbf{x}\) is \[\int_a^b F(\mathbf{x}(t)) \cdot \mathbf{x}'(t)\, dt.\]
+							The <strong>vector path integral</strong> of a vector field \(F\) along the path \(\mathbf{x}\) is \[\int_\mathbf{x} F\, ds=\int_a^b F(\mathbf{x}(t)) \cdot \mathbf{x}'(t)\, dt.\]
 						</p>
 						
 					</div>
 
 					<p style="font-size: 25px;" class="fragment">
 						This measures the "<strong>work</strong>" that \(F\) does along \(\mathbf{x}\).
+					</p>
+
+
+					</section>
+
+
+
+					<section data-auto-animate>
+					<h4>Vector Path Integral</h4>
+					
+
+					<div data-id="problem" class="r-frame">
+						<img src="img/vfpathintegral.png" width="40%">
+						
+					</div>
+
+					<p style="font-size: 25px;">
+						Consider a vector field \(F\) paths \(C_i\) from \(P_i\to Q_i\).  For which of these is \(\int_{C_i} F\, ds \) positive, and which is negative?
 					</p>
 
 
@@ -299,6 +317,26 @@
 
 					</section>
 
+					<section data-auto-animate>
+					<h4>Vector Path Integral</h4>
+					
+
+					<div data-id="problem" class="r-frame">
+						<p style="font-size: 25px;" >
+							Note for a curve \(C\) and vector field \(F=(F_1, F_2,\ldots, F_n)\) we have:
+
+							\[\int_C F\, ds= \int_a^b \sum_{i=1}^n F_i(\mathbf{x}(t))\mathbf{x}_i'(t)dt=\int_a^b \sum_{i=1}^n F_i(\mathbf{x}_i)dx_i.\]
+						</p>
+						
+					</div>
+
+					<p style="font-size: 25px;" class="fragment">
+						So \[\int_C F(x,y,z)\, ds = \int_C F_1(x,y,z)dx + F_2(x,y,z)dy + F_3(x,y,z)dz.\]
+					</p>
+
+
+					</section>
+
 
 				</section>
 
@@ -339,6 +377,12 @@
 					</section>
 
 
+					
+
+				</section>
+
+
+				<section>
 					<section data-auto-animate>
 						<div data-id="problem" class="r-frame">
 						<p style="font-size: 25px;" >
@@ -358,6 +402,44 @@
 
 					</section>
 
+					<section data-auto-animate>
+						<div data-id="problem" class="r-frame">
+						<p style="font-size: 25px;" >
+							Let \(f(x,y)=x^2-y^2+1\), \(F(x,y)=(x, e^{-y})\) and \(C\) be the circle of radius 2, centered at \((0,0)\), oriented counter-clockwise.
+						</p>
+
+						
+						
+					</div>
+
+					
+
+					<p style="font-size: 25px;" >
+						Find the scalar and vector path integrals of \(f, F\) respectively about \(C\).
+					</p>
+
+
+					</section>
+
+
+					<section data-auto-animate>
+						<div data-id="problem" class="r-frame">
+						<p style="font-size: 25px;" >
+							Let \(f(x,y)=x^2-y^2+1\), \(F(x,y)=(x, e^{-y})\) and \(C\) be a square with endpoints \((0, 0), (1,0), (1,1), (0,1)\) oriented counter-clockwise.
+						</p>
+
+						
+						
+					</div>
+
+					
+
+					<p style="font-size: 25px;" >
+						Find the scalar and vector path integrals of \(f, F\) respectively about \(C\).
+					</p>
+
+
+					</section>
 				</section>
 
 				
