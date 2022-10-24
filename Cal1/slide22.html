@@ -1,0 +1,680 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>reveal.js</title>
+
+		<link rel="stylesheet" href="dist/reset.css">
+		<link rel="stylesheet" href="dist/reveal.css">
+		<link rel="stylesheet" href="dist/theme/white.css">
+		<link rel="stylesheet" href="plugin/chalkboard/style.css">
+		<link rel="stylesheet" href="plugin/customcontrols/style.css">
+
+
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+
+
+
+		<!-- Theme used for syntax highlighted code -->
+		<link rel="stylesheet" href="plugin/highlight/monokai.css">
+		<style>
+			.container{
+   				 display: flex;
+			}
+			.col{
+    			flex: 1;
+			}
+		</style>
+			<script async defer src="https://buttons.github.io/buttons.js"></script>
+
+		<script src="plugin/menu/menu.js"></script>
+
+
+
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				
+				<section>
+					<h2>The Greatest Theorem in Calculus.</h2>
+					<h4>M 111</h4>
+					
+					
+					<h4>
+						Oxford College of Emory University <a href="https://app.oxford.emory.edu/WebApps/Directory/index.cfm/view/9984" target="_blank">Tien Chih</a>
+					</h4>
+				</section>
+
+				
+
+				
+
+
+
+				<section>
+
+					<section data-auto-animate>
+						<h4>The Accumulation Function. </h4>
+						
+						<div class="r-frame" >
+							<p style="font-size: 28px;" >
+								Given a continuous function \(f(x)\), let \(F(x)=\displaystyle\int_0^t f(t) dt\).<br>
+								
+
+							</p>
+						</div>		
+						
+						<iframe src="https://www.desmos.com/calculator/7gqnlucowo?embed" width="100%" height="500" style="border: 1px solid #ccc" frameborder=0></iframe>
+
+
+					</section>
+
+
+					<section data-auto-animate>
+
+						<h4>Change in the accumulation function</h4>
+						<iframe src="https://www.desmos.com/calculator/tfrf5c4ycd?embed" width="100%" height="500" style="border: 1px solid #ccc" frameborder=0></iframe>
+
+
+						<p style="font-size: 28px;" >
+								What determines the rate at which \(F(x)\) changes?  The size of \(x\) or \(f(x)\)?
+								
+
+						</p>
+
+						
+
+
+					</section>
+
+
+					
+
+				</section>
+
+
+				<section>
+
+					<section data-auto-animate>
+						<h4>The Fundamental Theorem of Calculus. </h4>
+						
+						<div class="r-frame" >
+							<p style="font-size: 28px;" >
+								If \(f(x)\) is a continuous function defined on \([a,b]\):
+
+								\[\frac{d}{dx}\left[ \int_a^x f(t)dt\right]=f(x).\]
+
+							</p>
+						</div>		
+						
+						
+
+
+					</section>
+
+					<section data-auto-animate>
+						<h4>The Fundamental Theorem of Calculus. </h4>
+						
+						<div class="r-frame" >
+							<p style="font-size: 28px;" >
+								Note \[F(x+h)-F(x)=\int_a^{x+h}f(t)dt-\int_a^{x}f(t)dt=\int_x^{x+h}f(t)dt.\]
+
+							</p>
+						</div>		
+
+						<img src="img/FTC1.svg" width="40%">
+						
+						
+
+
+					</section>
+
+					<section data-auto-animate>
+						<h4>The Fundamental Theorem of Calculus. </h4>
+						
+						<div class="r-frame" >
+							<p style="font-size: 28px;" >
+								Since \(f(t)\) is continuous, the <strong>Extreme Value Theorem</strong> gives us a minimum \(m(h)\), and maximum value \(M(h)\) for \(f(x)\) on \([x, x+h]\)
+
+							</p>
+						</div>		
+
+						<img src="img/FTC2.svg" width="40%">
+						
+						
+
+
+					</section>
+
+					<section data-auto-animate>
+						<h4>The Fundamental Theorem of Calculus. </h4>
+						
+						<div class="r-frame" >
+							<p style="font-size: 28px;" >
+								We have: \(\displaystyle m(h)\cdot h\leq \int_x^{x+h}f(t)dt \leq M(h)\cdot h\) by comparing areas
+
+							</p>
+						</div>		
+
+						<img src="img/FTC3.svg" width="40%">
+						
+						
+
+
+					</section>
+
+					<section data-auto-animate>
+						<h4>The Fundamental Theorem of Calculus. </h4>
+						
+						<div class="r-frame" >
+							<p style="font-size: 28px;" >
+								What happens to \(m(h), M(h)\) as \(h\to 0\)?
+
+							</p>
+						</div>		
+
+						<iframe src="https://www.desmos.com/calculator/du0gmuptkn?embed" width="500" height="500" style="border: 1px solid #ccc" frameborder=0></iframe>
+						
+						
+
+
+					</section>
+
+
+					<section data-auto-animate>
+						<h4>The Fundamental Theorem of Calculus. </h4>
+						
+						<div class="r-frame" >
+							<p style="font-size: 28px;" >
+								\[\displaystyle m(h)\cdot h\leq \int_x^{x+h}f(t)dt \leq M(h)\cdot h.\]
+
+							</p>
+
+							<p style="font-size: 28px;" class="fragment">
+								\[\displaystyle m(h)\leq \frac{1}{h} \int_x^{x+h}f(t)dt \leq M(h).\]
+
+							</p>
+
+							<p style="font-size: 28px;" class="fragment">
+								\[\displaystyle \lim_{h\to 0}  m(h)\leq \lim_{h\to 0}  \frac{1}{h} \int_x^{x+h}f(t)dt \leq \lim_{h\to 0}  M(h).\]
+
+							</p>
+							<p style="font-size: 28px;" class="fragment">
+								\[\displaystyle f(x) \leq \lim_{h\to 0}  \frac{1}{h} \int_x^{x+h}f(t)dt \leq f(x).\]
+
+								What does the <strong>Squeeze Theorem</strong> tell us?
+
+							</p>
+						</div>		
+
+						
+						
+						
+
+
+					</section>
+
+					<section data-auto-animate>
+						<h4>The Fundamental Theorem of Calculus. </h4>
+						
+						<div class="r-frame" >
+							<p style="font-size: 28px;" >
+							\[
+							\begin{array}{rcl}
+							F'(x) 
+							
+							
+							\end{array}
+							\]
+
+							</p>
+						</div>
+
+					</section>
+
+					<section data-auto-animate>
+						<h4>The Fundamental Theorem of Calculus. </h4>
+						
+						<div class="r-frame" >
+							<p style="font-size: 28px;" >
+							\[
+							\begin{array}{rcl}
+							F'(x) &=&\displaystyle\lim_{h\to 0}\frac{F(x+h)-F(h)}{h} \\
+							
+							
+							\end{array}
+							\]
+
+							</p>
+						</div>
+
+					</section>
+
+
+					<section data-auto-animate>
+						<h4>The Fundamental Theorem of Calculus. </h4>
+						
+						<div class="r-frame" >
+							<p style="font-size: 28px;" >
+							\[
+							\begin{array}{rcl}
+							F'(x) &=&\displaystyle\lim_{h\to 0}\frac{F(x+h)-F(h)}{h} \\
+							&=&\displaystyle\lim_{h\to 0}\frac{1}{h} \int_x^{x+h}f(t)dt \\
+							
+							\end{array}
+							\]
+
+							</p>
+						</div>
+
+					</section>
+
+					<section data-auto-animate>
+						<h4>The Fundamental Theorem of Calculus. </h4>
+						
+						<div class="r-frame" >
+							<p style="font-size: 28px;" >
+							\[
+							\begin{array}{rcl}
+							F'(x) &=&\displaystyle\lim_{h\to 0}\frac{F(x+h)-F(h)}{h} \\
+							&=&\displaystyle\lim_{h\to 0}\frac{1}{h} \int_x^{x+h}f(t)dt \\
+							&=&f(x) \\
+							\end{array}
+							\]
+
+							</p>
+						</div>
+						<p style="font-size: 28px;" class="fragment">
+							The accumulation function \(F(x)\) is an anti-derivative of \(f(x)\).
+						</p>
+
+
+					</section>
+
+
+
+
+					
+
+				</section>
+
+
+				<section>
+					<section data-auto-animate>
+						<h4>Fun fact for anti-derivatives. </h4>
+						
+						<div class="r-frame" >
+							<p style="font-size: 28px;" >
+								Let \(f(x)\) be a continuous function on \([a,b]\) and \(F_1(x), F_2(x)\) be anti-derivatives of \(f(x)\).
+
+							</p>
+
+							<p style="font-size: 28px;" >
+								Compute \(\frac{d}{dx}\left[F_1(x)-F_2(x)\right].\)  What does this tell us about \(F_1(x)-F_2(x)\)?
+
+							</p>
+						</div>		
+						
+						
+
+
+					</section>
+
+					<section data-auto-animate>
+						<h4>FTC Part 2</h4>
+						
+						<div class="r-frame" >
+							<p style="font-size: 28px;" >
+								Let \(f\) be a continuous function on \([a,b]\) then \[\int_a^bf(x)dx=F(b)-F(a)\] where \(F\) is <strong>any</strong> anti-derivative of \(f(x)\).
+
+							</p>
+							</div>	
+
+							<p style="font-size: 28px;" class="fragment">
+								Let \(F(x)\) be any anti derivative of \(f(x)\) and \(F_A(x)\) be an accumulation function of \(f(x)\).  Then:
+								\[
+							\begin{array}{rcl}
+							\int_a^bf(x)dx &=& F_A(b)-F_A(a)\\
+							&=& (F(b)+C)-(F(a)+C)\\
+							&=& F(b)-F(a).\\
+							\end{array}
+							\]
+								
+							</p>
+							
+						
+						
+
+
+					</section>
+				</section>
+
+
+				<section>
+
+					<section data-auto-animate>
+						<div class="r-frame" >
+							<p style="font-size: 28px;" >
+								Evaluate \(\displaystyle \int_{-1}^4 x^2+x-1\ dx.\)
+
+							</p>
+						</div>	
+
+					</section>
+
+					<section data-auto-animate>
+						<div class="r-frame" >
+							<p style="font-size: 28px;" >
+								Evaluate \(\displaystyle \int_{-1}^4 x^2+x-1\ dx.\)
+
+							</p>
+						</div>	
+
+						<p style="font-size: 28px;">
+								
+								\[
+							\begin{array}{rcl}
+							\displaystyle \int_{-1}^4 x^2+x-1\ dx&=& \frac{1}{3}x^3+\frac{1}{2}x^2-x\rvert_{-1}^4\\
+							\end{array}
+							\]
+								
+							</p>
+
+					</section>
+
+					<section data-auto-animate>
+						<div class="r-frame" >
+							<p style="font-size: 28px;" >
+								Evaluate \(\displaystyle \int_{-1}^4 x^2+x-1\ dx.\)
+
+							</p>
+						</div>	
+
+						<p style="font-size: 28px;">
+								
+								\[
+							\begin{array}{rcl}
+							\displaystyle \int_{-1}^4 x^2+x-1\ dx&=& \frac{1}{3}x^3+\frac{1}{2}x^2-x\rvert_{-1}^4\\
+							&=& (\frac{1}{3}4^3+\frac{1}{2}4^2-4)-(\frac{1}{3}(-1)^3+\frac{1}{2}(-1)^2-(-1))\\
+							\end{array}
+							\]
+								
+							</p>
+
+					</section>
+
+					<section data-auto-animate>
+						<div class="r-frame" >
+							<p style="font-size: 28px;" >
+								Evaluate \(\displaystyle \int_{-1}^4 x^2+x-1\ dx.\)
+
+							</p>
+						</div>	
+
+						<p style="font-size: 28px;">
+								
+								\[
+							\begin{array}{rcl}
+							\displaystyle \int_{-1}^4 x^2+x-1\ dx&=& \frac{1}{3}x^3+\frac{1}{2}x^2-x\rvert_{-1}^4\\
+							&=& (\frac{1}{3}4^3+\frac{1}{2}4^2-4)-(\frac{1}{3}(-1)^3+\frac{1}{2}(-1)^2-(-1))\\
+							&=& \frac{145}{6}.\\
+							\end{array}
+							\]
+								
+							</p>
+
+					</section>
+
+					<section data-auto-animate>
+						<h4>Solve:</h4>
+						<div class="r-frame" >
+							<div class="container">
+								<div class="col">
+									<ol type="A">
+										<li style="font-size: 30px;">\(\displaystyle \int_{0}^5 3x^2-5x+2\ dx\).</li><br>
+										<li style="font-size: 30px;">\(\displaystyle \int_{1}^9 3e^t-\sqrt{t}+\frac{1}{t}\ dt\).</li><br>
+
+									</ol>
+								</div>
+
+								<div class="col">
+									<ol type="A" start="3">
+										<li style="font-size: 30px;">\(\displaystyle \int_{-\frac{\pi}{6}}^{\frac{\pi}{6}} x^3+\cos(x)\ dx\).</li><br>
+										<li style="font-size: 30px;">\(\displaystyle \int_{1}^4 \frac{u^5-u^3}{u^2} \ du\).</li><br>
+										
+									</ol>
+								</div>
+							</div>
+						</div>	
+
+
+						
+							
+						
+
+						
+					</section>
+
+					<section data-auto-animate>
+						<div class="r-frame" >
+							<p style="font-size: 28px;" >
+								Why doesn't the FTC apply to \[\int_{-1}^3 \frac{1}{x^2}dx?\]
+
+							</p>
+						</div>	
+
+						
+
+					</section>
+
+				</section>
+
+
+				<section>
+					<section data-auto-animate>
+						<h4>Indefinite Integral</h4>
+						<div class="r-frame" >
+							<p style="font-size: 28px;" >
+								(Kind of annoyingly) We define \[\int f(x) d(x)=F(x)+C\] the collection of all anti-derivatives of \(f(x)\).
+
+							</p>
+						</div>	
+
+						<p style="font-size: 28px;" class="fragment">
+								Why doesn't the choice of \(F(x)\) matter?
+
+							</p>
+
+
+					</section>
+
+
+					<section data-auto-animate>
+						
+						<div class="r-frame" >
+							<p style="font-size: 28px;" >
+								Find \(\displaystyle \int x^3+e^x+\frac{1}{1+x^2} dx\).  (The derivative of what is \(\frac{1}{1+x^2}\)?)
+
+							</p>
+						</div>	
+
+						
+
+
+					</section>
+
+
+				</section>
+
+
+				<section>
+					<section data-auto-animate>
+						<h4>The Net Change "Theorem"</h4>
+						<div class="r-frame" >
+							<p style="font-size: 28px;" >
+								For \(F(x)\) a differentiable function on \([a,b]\), we have: \[\int_a^b F'(x)dx=F(b)-F(a).\]
+
+							</p>
+						</div>	
+
+						
+
+
+					</section>
+
+
+					<section data-auto-animate>
+						
+						<div class="r-frame" >
+							<p style="font-size: 28px;" >
+								For a particle along a line, let \(v(t)=t^{2}-5t+6\) cm/s.  Find an integral which computes the net displacement of the particle from \(t=0\) to \(t=4\) seconds.
+
+							</p>
+						</div>	
+
+						
+
+
+					</section>
+
+					<section data-auto-animate>
+						
+						<div class="r-frame" >
+							<p style="font-size: 28px;" >
+								For a particle along a line, let \(v(t)=t^{2}-5t+6\) cm/s.  Find an integral which computes the <strong>total distance traveled</strong> of the particle from \(t=0\) to \(t=4\) seconds.  (How is this different from the previous problem?)
+
+							</p>
+						</div>	
+
+						
+
+
+					</section>
+
+					<section data-auto-animate>
+						
+						<div class="r-frame" >
+							<p style="font-size: 28px;" >
+								Find the net displacement and total distance traveled of this particle from \(t=0\) to \(t=4\) seconds.
+							</p>
+						</div>	
+
+						<iframe src="https://www.desmos.com/calculator/ufv2oprfv0?embed" width="100%" height="500" style="border: 1px solid #ccc" frameborder=0></iframe>
+
+						
+
+
+					</section>
+
+
+					<section data-auto-animate>
+						
+						<div class="r-frame" >
+							<p style="font-size: 28px;" >
+								If oil leaks from an oil tanker at \(r(t)\) gallons/hour, what is \[\int_0^{120} r(t) dt\] measuring?
+							</p>
+						</div>	
+
+						
+
+						
+
+
+					</section>
+
+
+				</section>
+
+
+
+									
+
+
+
+				
+			</div>
+		</div>
+
+		<script src="dist/reveal.js"></script>
+		<script src="plugin/notes/notes.js"></script>
+		<script src="plugin/markdown/markdown.js"></script>
+		<script src="plugin/highlight/highlight.js"></script>
+		<script>
+			// More info about initialization & config:
+			// - https://revealjs.com/initialization/
+			// - https://revealjs.com/config/
+			Reveal.initialize({
+				hash: true,
+
+				// Learn about plugins: https://revealjs.com/plugins/
+				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
+			});
+		</script>
+		<script src="plugin/math/math.js"></script>
+		<script src="plugin/chalkboard/plugin.js"></script>
+		<script src="plugin/customcontrols/plugin.js"></script>
+
+
+
+	<script>
+  	Reveal.initialize({
+		math: {
+			mathjax: 'https://cdn.jsdelivr.net/gh/mathjax/mathjax@2.7.8/MathJax.js',
+			config: 'TeX-AMS_HTML-full',
+			// pass other options into `MathJax.Hub.Config()`
+			TeX: { Macros: { RR: "{\\bf R}" } }
+		},
+
+		chalkboard: {
+        boardmarkerWidth: 3,
+        chalkWidth: 7,
+        chalkEffect: 1.0,
+        storage: null,
+        src: null,
+        readOnly: undefined,
+        transition: 800,
+        theme: "chalkboard",
+        background: [ 'rgba(127,127,127,.1)' , path + 'img/blackboard.png' ],
+        grid: { color: 'rgb(50,50,10,0.5)', distance: 80, width: 2},
+        eraser: { src: path + 'img/sponge.png', radius: 20},
+        boardmarkers : [
+                { color: 'rgba(100,100,100,1)', cursor: 'url(' + path + 'img/boardmarker-black.png), auto'},
+                { color: 'rgba(30,144,255, 1)', cursor: 'url(' + path + 'img/boardmarker-blue.png), auto'},
+                { color: 'rgba(220,20,60,1)', cursor: 'url(' + path + 'img/boardmarker-red.png), auto'},
+                { color: 'rgba(50,205,50,1)', cursor: 'url(' + path + 'img/boardmarker-green.png), auto'},
+                { color: 'rgba(255,140,0,1)', cursor: 'url(' + path + 'img/boardmarker-orange.png), auto'},
+                { color: 'rgba(150,0,20150,1)', cursor: 'url(' + path + 'img/boardmarker-purple.png), auto'},
+                { color: 'rgba(255,220,0,1)', cursor: 'url(' + path + 'img/boardmarker-yellow.png), auto'}
+        ],
+        chalks: [
+                { color: 'rgba(255,255,255,0.5)', cursor: 'url(' + path + 'img/chalk-white.png), auto'},
+                { color: 'rgba(96, 154, 244, 0.5)', cursor: 'url(' + path + 'img/chalk-blue.png), auto'},
+                { color: 'rgba(237, 20, 28, 0.5)', cursor: 'url(' + path + 'img/chalk-red.png), auto'},
+                { color: 'rgba(20, 237, 28, 0.5)', cursor: 'url(' + path + 'img/chalk-green.png), auto'},
+                { color: 'rgba(220, 133, 41, 0.5)', cursor: 'url(' + path + 'img/chalk-orange.png), auto'},
+                { color: 'rgba(220,0,220,0.5)', cursor: 'url(' + path + 'img/chalk-purple.png), auto'},
+                { color: 'rgba(255,220,0,0.5)', cursor: 'url(' + path + 'img/chalk-yellow.png), auto'}
+        ]
+    },
+    customcontrols: {
+  		controls: [
+  			{ icon: '<i class="fa fa-pen-square"></i>',
+  			  title: 'Toggle chalkboard (B)',
+  			  action: 'RevealChalkboard.toggleChalkboard();'
+  			},
+  			{ icon: '<i class="fa fa-pen"></i>',
+  			  title: 'Toggle notes canvas (C)',
+  			  action: 'RevealChalkboard.toggleNotesCanvas();'
+  			}
+  		]
+    },
+
+		plugins: [ RevealMath, RevealChalkboard, RevealCustomControls, RevealMenu  ]
+		});
+	</script>
+
+	</body>
+</html>

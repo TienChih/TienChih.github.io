@@ -1,0 +1,795 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>reveal.js</title>
+
+		<link rel="stylesheet" href="dist/reset.css">
+		<link rel="stylesheet" href="dist/reveal.css">
+		<link rel="stylesheet" href="dist/theme/white.css">
+		<link rel="stylesheet" href="plugin/chalkboard/style.css">
+		<link rel="stylesheet" href="plugin/customcontrols/style.css">
+
+
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+
+
+
+		<!-- Theme used for syntax highlighted code -->
+		<link rel="stylesheet" href="plugin/highlight/monokai.css">
+		<style>
+			.container{
+   				 display: flex;
+			}
+			.col{
+    			flex: 1;
+			}
+		</style>
+			<script async defer src="https://buttons.github.io/buttons.js"></script>
+
+		<script src="plugin/menu/menu.js"></script>
+
+
+
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				
+				<section>
+					<h2>Making things small (again): Area edition.</h2>
+					<h4>M 111</h4>
+					
+					
+					<h4>
+						Oxford College of Emory University <a href="https://app.oxford.emory.edu/WebApps/Directory/index.cfm/view/9984" target="_blank">Tien Chih</a>
+					</h4>
+				</section>
+
+				
+
+				<section>
+					
+					<section data-auto-animate>
+						<h4>REMEMBER THIS? </h4>
+						
+						<div class="r-frame" >
+							<p style="font-size: 28px;" >
+								Consider the average rate of change of \(h(t)=64-16(t-1)^2\) over \([1.5,1.5+c]\).<br>
+								<iframe src="https://www.desmos.com/calculator/17rhmjmlxm?embed" width="50%" height="300" style="border: 1px solid #ccc" frameborder=0></iframe>
+
+							</p>
+						</div>		
+						
+
+
+					</section>
+
+					
+				</section>
+
+
+
+				<section>
+
+					<section data-auto-animate>
+						<h4>Find the area. </h4>
+						
+						<div class="r-frame" >
+							<p style="font-size: 28px;" >
+								Consider the  area under \(f(x)=x^2\) defined on \([0, 4]\).<br>
+								<iframe src="https://www.desmos.com/calculator/b1bj1sltxp?embed" width="50%" height="300" style="border: 1px solid #ccc" frameborder=0></iframe>
+
+							</p>
+						</div>		
+						
+						<p style="font-size: 28px;" >
+							<ul >
+								<li style="font-size: 28px;" class="fragment">Secant Lines \(\Rightarrow\) Tangent Lines.</li>
+
+								<li style="font-size: 28px;" class="fragment">??? \(\Rightarrow\) Areas.</li>
+							</ul>
+						</p>
+
+
+					</section>
+
+
+					<section data-auto-animate>
+						<h4>Estimate the area. </h4>
+						
+						<div class="r-frame" >
+							<p style="font-size: 28px;" >
+								Consider the  area under \(f(x)=x^2\) defined on \([0, 4]\).<br>
+								<iframe src="https://www.desmos.com/calculator/noi2k9vnjg?embed" width="50%" height="300" style="border: 1px solid #ccc" frameborder=0></iframe>
+
+							</p>
+						</div>	
+
+						<p style="font-size: 28px;" >
+							Consider 4 rectangles with base width 1, and heights \(f(1), f(2), f(3), f(4)\) respectively.  What are the sum of these areas?
+						</p>	
+
+
+						<p style="font-size: 28px;" class="fragment">
+							This sum is \(R_4\).
+						</p>	
+
+
+						
+
+
+					</section>
+
+
+					<section data-auto-animate>
+						<h4>Estimate the area. </h4>
+						
+						<div class="r-frame" >
+							<p style="font-size: 28px;" >
+								Consider the  area under \(f(x)=x^2\) defined on \([0, 4]\).<br>
+								<iframe src="https://www.desmos.com/calculator/4cze01x3pc?embed" width="50%" height="300" style="border: 1px solid #ccc" frameborder=0></iframe>
+
+							</p>
+						</div>	
+
+						<p style="font-size: 28px;" >
+							Consider 4 rectangles with base width 1, and heights \(f(0), f(1), f(2), f(3)\) respectively.  What are the sum of these areas?
+						</p>	
+
+
+						<p style="font-size: 28px;" class="fragment">
+							This sum is \(L_4\).
+						</p>	
+
+
+						
+
+
+					</section>
+
+
+					
+
+
+					<section data-auto-animate>
+						<h4>Estimate the area. </h4>
+						
+						
+
+						<p style="font-size: 28px;" >
+							Do we think \(R_5, L_5\) would be better, equal or worse estimators of this area?
+						</p>	
+
+
+						<p style="font-size: 28px;" class="fragment">
+							Do we think \(R_{10}, L_{10}\) would be better, equal or worse estimators of this area?
+						</p>	
+
+						<p style="font-size: 28px;" class="fragment">
+							For what \(n\) would \(R_{n}, L_{n}\) be the best possible estimators?
+						</p>	
+
+
+						
+
+
+					</section>
+
+
+					<section data-auto-animate>
+						<h4>Estimate the area. </h4>
+						
+						
+
+						<div class="r-frame" >
+							<p style="font-size: 28px;" >
+								Which of the following is a valid expression for \(R_n\)?  (Remember that it should work with \(R_4\) which you found.)
+
+							</p>
+						</div>	
+
+
+						<ul>
+							<li style="font-size: 28px;"> \(\displaystyle \sum_{i=1}^n 4i^2\)</li>
+							<li style="font-size: 28px;"> \(\displaystyle \sum_{i=1}^n \frac{4}{n}\)</li>
+							<li style="font-size: 28px;"> \(\displaystyle \sum_{i=1}^n \frac{4}{i}i\)</li>
+							<li style="font-size: 28px;"> \(\displaystyle \sum_{i=1}^n \frac{4}{n}n^2\)</li>
+							<li style="font-size: 28px;"> \(\displaystyle \sum_{i=1}^n \frac{4}{n}\left(\frac{4i}{n}\right)^2\)</li>
+						</ul>
+
+
+						
+
+
+					</section>
+
+
+					<section data-auto-animate>
+						<h4>Compute the area. </h4>
+						
+						
+
+						<div class="r-frame" >
+							<p style="font-size: 28px;" >
+								\[\displaystyle \sum_{i=1}^n \frac{4}{n}\left(\frac{4i}{n}\right)^2 = \frac{64}{n^3}\sum_{i=1}^n i^2=\frac{64}{n^3}\frac{n(n+1)(2n+1)}{6}.\]
+
+							</p>
+						</div>	
+
+
+						<p style="font-size: 28px;" class="fragment" >
+								What is \[\lim_{n\to \infty} \frac{64}{n^3}\frac{n(n+1)(2n+1)}{6}?\]
+
+								(L'Hopitals applicable but not neccesary.)
+
+							</p>
+
+
+						
+
+						
+
+
+					</section>
+
+				</section>
+
+
+				<section>
+
+					<section data-auto-animate>
+						<h4>The Area. </h4>
+						
+						<div class="r-frame" >
+							<p style="font-size: 28px;" >
+								For a non-negative function \(f(x)\) the area of the function that lies under \(y=f(x)\) on \([a,b]\) is:
+
+								\[A=\lim_{n\to \infty} R_n=\lim_{n\to\infty} \sum_{i=1}^n f(x_i)\Delta x\] where \(x_i=a+i\Delta x\), and  \(\Delta x = \frac{b-a}{n}\)
+
+							</p>
+						</div>		
+						
+						
+
+
+					</section>
+
+
+					<section data-auto-animate>
+						<h4>The Area. </h4>
+						
+							
+						
+						<iframe src="https://www.desmos.com/calculator/fdlkzbz0m1?embed" width="100%" height="500" style="border: 1px solid #ccc" frameborder=0></iframe>
+
+
+					</section>
+
+
+					<section data-auto-animate>
+						<h4>\(L_n\)? </h4>
+						
+							
+						
+						<iframe src="https://www.desmos.com/calculator/5skvedhygj?embed" width="100%" height="500" style="border: 1px solid #ccc" frameborder=0></iframe>
+
+
+					</section>
+
+					<section data-auto-animate>
+						<h4>\(M_n\)? </h4>
+						
+							
+						
+						<iframe src="https://www.desmos.com/calculator/ic9dvly9n8?embed" width="100%" height="500" style="border: 1px solid #ccc" frameborder=0></iframe>
+
+
+					</section>
+
+
+					<section data-auto-animate>
+						<h4>The Area. </h4>
+						
+						<div class="r-frame" >
+							<p style="font-size: 28px;" >
+								For a non-negative function \(f(x)\) the area of the function that lies under \(y=f(x)\) on \([a,b]\) is:
+
+								
+
+								\[A=\lim_{n\to \infty} L_n=\lim_{n\to\infty} \sum_{i=1}^{n} f(x_i)\Delta x\]
+
+								where \(x_i=a+(i-1)\Delta x\), and  \(\Delta x = \frac{b-a}{n}\)
+
+								\[A=\lim_{n\to \infty} M_n=\lim_{n\to\infty} \sum_{i=1}^{n} f(x_i)\Delta x\]
+
+								where \(x_i=a+(i-0.5)\Delta x\), and  \(\Delta x = \frac{b-a}{n}\)
+
+
+								 
+
+							</p>
+						</div>		
+						
+						
+
+
+					</section>
+
+
+					<section data-auto-animate>
+						
+						
+							
+						
+						<iframe src="https://www.desmos.com/calculator/sevsm65c8n" width="100%" height="500" style="border: 1px solid #ccc" frameborder=0></iframe>
+
+
+					</section>
+
+
+					
+
+				</section>
+
+
+				<section>
+					<section data-auto-animate>
+						<h4>The Area. </h4>
+						
+						<div class="r-frame" >
+							<p style="font-size: 28px;" >
+								Let \(f(x)=e^x\) on \([0, 5]\).  Write \(R_n, L_n\)
+
+
+								 
+
+							</p>
+						</div>		
+						
+						
+
+
+					</section>
+				</section>
+
+
+				<section>
+
+					<section data-auto-animate>
+						<h4>Distance. </h4>
+						
+						<div class="r-frame" >
+							<p style="font-size: 28px;" >
+							Suppose a car's velocity over 30 seconds was measured every 5 seconds:
+
+							\[
+							\begin{array}{|c|cccccc|}
+							\hline
+							\text{Time (seconds)} & 0 & 5 & 10 & 15 & 20 & 25 \\
+							\hline
+							\text{Velocity (ft/sec)} &25 & 30 & 26 & 28 & 40 & 27 \\ 
+							\hline
+							\end{array}
+							\]
+							</p>
+						</div>		
+						
+						<p style="font-size: 28px;" class="fragment">
+							Estimate how far the car travels in the first 5 seconds.  The next 5 seconds?
+
+						</p>
+
+						<p style="font-size: 28px;" class="fragment">
+							How can we estimate the distance the car travels over these 30 seconds?
+
+						</p>
+						
+
+
+					</section>
+
+
+					<section data-auto-animate>
+						<h4>Distance. </h4>
+						
+						<div class="r-frame" >
+							<p style="font-size: 28px;" >
+							Suppose a car's velocity over 30 seconds was measured every 5 seconds:
+
+							\[
+							\begin{array}{|c|cccccc|}
+							\hline
+							\text{Time (seconds)} & 0 & 5 & 10 & 15 & 20 & 25 \\
+							\hline
+							\text{Velocity (ft/sec)} &25 & 30 & 26 & 28 & 40 & 27 \\ 
+							\hline
+							\end{array}
+							\]
+							</p>
+						</div>		
+						
+						<p style="font-size: 28px;" >
+							From a differential perspective, what is the connection between the time, distance and velocity?
+
+						</p>
+
+						
+						
+
+
+					</section>
+
+
+					<section data-auto-animate>
+						<h4>Distance. </h4>
+						
+						<div class="r-frame" >
+							<iframe src="https://www.desmos.com/calculator/v2xafjb6c3?embed" width="100%" height="500" style="border: 1px solid #ccc" frameborder=0></iframe>
+						</div>		
+						
+						<p style="font-size: 28px;">
+							From a <strong>geometric</strong> perspective, what is the connection between the time, distance and velocity?
+
+						</p>
+
+						
+						
+
+
+					</section>
+
+					<section data-auto-animate>
+						<img src="img/suprisetool.png" width="100%">
+
+						
+						
+
+
+					</section>
+
+				</section>
+
+
+				
+
+				
+				<section>
+					<section data-auto-animate>
+						<h4>The Integral </h4>
+						
+						<div class="r-frame" >
+							<p style="font-size: 28px;">
+								If \(f(x)\) is defined on \([a,b]\), subdivide \([a,b]\) into \(n\) intervals of width \(\Delta x=\frac{b-a}{n}\).  Let \(x_i^*\) be any value within each interval.
+							</p>
+							<img src="img/integraldef.svg" width="60%">
+							<p style="font-size: 28px;" class="fragment">
+								Then the <strong>integral of \(f(x)\) over \([a,b]\) with respect to \(x\)</strong> is the limit \[\int_a^bf(x)dx = \lim_{n\to\infty} \left(\sum_{i=1}^n f(x_i^*) \Delta x\right)\] provided it exists.  If this limit exists, then \(f(x)\) is <strong>integrable</strong> over \([a,b]\).
+							</p>
+						</div>		
+						
+						
+
+						
+						
+
+
+					</section>
+
+
+					<section data-auto-animate>
+						<h4>The Integral </h4>
+						
+						<iframe src="https://www.desmos.com/calculator/kskhynhfwv" width="100%" height="500" style="border: 1px solid #ccc" frameborder=0></iframe>	
+						
+						
+
+						
+						
+
+
+					</section>
+
+				</section>
+
+
+				<section>
+					<section data-auto-animate>
+						<h4>The Integral </h4>
+						
+						<div class="r-frame" >
+							<p style="font-size: 28px;">
+								\[\int_a^b cf(x)dx=c\int_a^bf(x)dx.\]
+							</p>
+							
+							
+						</div>	
+
+						<p style="font-size: 28px;">
+								\[\lim_{n\to\infty} \left(\sum_{i=1}^n cf(x_i^*) \Delta x\right)=c\lim_{n\to\infty} \left(\sum_{i=1}^n f(x_i^*) \Delta x\right)\]
+						</p>	
+						
+						
+
+						
+						
+
+
+					</section>
+
+					<section data-auto-animate>
+						<h4>The Integral </h4>
+						
+						<div class="r-frame" >
+							<p style="font-size: 28px;">
+								\[\int_a^b cf(x)dx=c\int_a^bf(x)dx.\]
+							</p>
+							
+							
+						</div>	
+
+						<p style="font-size: 28px;">
+								\[\lim_{n\to\infty} \left(\sum_{i=1}^n cf(x_i^*) \Delta x\right)=c\lim_{n\to\infty} \left(\sum_{i=1}^n f(x_i^*) \Delta x\right)\]
+						</p>	
+						
+						
+
+						
+						
+
+
+					</section>
+
+
+					<section data-auto-animate>
+						<h4>The Integral </h4>
+						
+						<div class="r-frame" >
+							<p style="font-size: 28px;">
+								Why is
+								\[\int_a^b f(x)+g(x)dx=\int_a^bf(x)dx +\int_a^b g(x)dx?\]
+							</p>
+							
+							
+						</div>	
+
+						<p style="font-size: 28px;" class="fragment">
+								\[\lim_{n\to\infty} \left(\sum_{i=1}^n f(x_i^*)+g(x_i^*) \Delta x\right)=\lim_{n\to\infty} \left(\sum_{i=1}^n f(x_i^*) \Delta x + \sum_{i=1}^n g(x_i^*) \Delta x\right)\]
+						</p>	
+						
+						
+
+						
+						
+
+
+					</section>
+
+					<section data-auto-animate>
+						<h4>The Integral </h4>
+						
+						<div class="r-frame" >
+							<p style="font-size: 28px;">
+								Explain why:
+								\[\int_a^b f(x)dx + \int_b^c f(x)dx = \int_a^cf(x)dx.\]
+
+								\[\int_b^a f(x) dx= -\int_a^bf(x)dx.\]
+
+							</p>
+							
+							
+						</div>	
+
+
+					</section>
+
+					<section data-auto-animate>
+						
+						
+						<div class="r-frame" >
+							<p style="font-size: 28px;">
+								Conisder the plot \(y=f(x)\) on \([0,4:]\)<br>
+								<iframe src="https://www.desmos.com/calculator/7ql9asg22v?embed" width="500" height="500" style="border: 1px solid #ccc" frameborder=0></iframe><br>
+								Where region \(A\) has area 5, region \(B\) has area 1, region \(A\) has area 3. 
+							</p>
+							
+							
+						</div>	
+ 
+						<p style="font-size: 28px;" class="fragment">
+							Find: \(\int_0^4 f(x)dx, \int_1^2 f(x)dx, \int_2^0 f(x)dx, \int_0^4 |f(x)|dx. \)
+						</p>
+
+
+					</section>
+
+				</section>
+
+
+				<section>
+					<p style="font-size: 28px;">
+						\[\sum_{i=1}^n i = \frac{n(n+1)}{2}, \sum_{i=1}^n i^2 = \frac{n(n+1)(2n+1)}{6}, \sum_{i=1}^n i^3=\left( \frac{n(n+1)}{2} \right)^2\]
+
+						<img src="img/sumint.png" width="40%"> 
+						<img src="img/sumcube.png" width="40%"> 
+
+					</p>
+
+				</section>
+
+				<section>
+					<section data-auto-animate>
+						<div class="r-frame" >
+							<p style="font-size: 28px;">
+								Which of the following is equivalent to \(\displaystyle \int_0^5 x^3\ dx=\displaystyle \lim_{n\to \infty} \sum_{i=1}^n (x_i^*)^3\Delta x\)?
+
+							</p>
+
+							<ul>
+								<li style="font-size: 28px;"> \(\displaystyle \lim_{n\to \infty} \sum_{i=1}^n i^3.\)</li>
+
+								<li style="font-size: 28px;"> \(\displaystyle \lim_{n\to \infty} \sum_{i=1}^n x^3.\)</li>
+
+								<li style="font-size: 28px;"> \(\displaystyle \lim_{n\to \infty}  \sum_{i=1}^n \left(\frac{5i}{n}\right)^3.\)</li>
+
+								<li style="font-size: 28px;"> \(\displaystyle \lim_{n\to \infty}  \sum_{i=1}^n \left(\frac{5i}{n}\right)^3\frac{5}{n}.\)</li>
+							</ul>
+							
+							
+						</div>	
+					</section>
+
+					<section data-auto-animate>
+						<div class="r-frame" >
+							<p style="font-size: 28px;">
+								Which of the following is equivalent to \(\displaystyle \int_0^5 x^3\ dx=\displaystyle \lim_{n\to \infty} \sum_{i=1}^n (x_i^*)^3\Delta x\)?
+
+							</p>
+
+							<ul>
+								<li style="font-size: 28px;"> \(\displaystyle \lim_{n\to \infty} \sum_{i=1}^n i^3.\)</li>
+
+								<li style="font-size: 28px;"> \(\displaystyle \lim_{n\to \infty} \sum_{i=1}^n x^3.\)</li>
+
+								<li style="font-size: 28px;"> \(\displaystyle \lim_{n\to \infty}  \sum_{i=1}^n \left(\frac{5i}{n}\right)^3.\)</li>
+
+								<li style="font-size: 28px;"> \(\displaystyle \lim_{n\to \infty}  \sum_{i=1}^n \left(\frac{5i}{n}\right)^3\frac{5}{n}.\)</li>
+							</ul>
+							
+							
+						</div>	
+					</section>
+
+
+					<section data-auto-animate>
+						<div class="r-frame" >
+							<p style="font-size: 28px;">
+								Use  \[\sum_{i=1}^n i = \frac{n(n+1)}{2}, \sum_{i=1}^n i^2 = \frac{n(n+1)(2n+1)}{6}, \sum_{i=1}^n i^3=\left( \frac{n(n+1)}{2} \right)^2\] to rewrite:
+
+
+								\[\displaystyle \int_0^5 x^3dx = \lim_{n\to \infty}  \sum_{i=1}^n \left(\frac{5i}{n}\right)^3\frac{5}{n} = \lim_{n\to \infty}  \frac{5^4}{n^4} \sum_{i=1}^n  i^3.\] 
+
+							</p>
+
+							
+							
+							
+						</div>	
+					</section>
+
+					<section data-auto-animate>
+						<div class="r-frame" >
+							<p style="font-size: 28px;">
+								Write \(\displaystyle \int_0^4 x^2 dx\) as a limit \(\displaystyle \lim_{n\to \infty}  \sum_{i=1}^n ???.\)
+
+								
+
+							</p>
+
+							<p style="font-size: 28px;" class="fragment">
+								Use \[\sum_{i=1}^n i = \frac{n(n+1)}{2}, \sum_{i=1}^n i^2 = \frac{n(n+1)(2n+1)}{6}, \sum_{i=1}^n i^3=\left( \frac{n(n+1)}{2} \right)^2\] to evaluate the above limit.
+
+								
+
+							</p>
+
+							
+							
+							
+						</div>	
+					</section>
+
+				</section>
+
+
+
+									
+
+
+
+				
+			</div>
+		</div>
+
+		<script src="dist/reveal.js"></script>
+		<script src="plugin/notes/notes.js"></script>
+		<script src="plugin/markdown/markdown.js"></script>
+		<script src="plugin/highlight/highlight.js"></script>
+		<script>
+			// More info about initialization & config:
+			// - https://revealjs.com/initialization/
+			// - https://revealjs.com/config/
+			Reveal.initialize({
+				hash: true,
+
+				// Learn about plugins: https://revealjs.com/plugins/
+				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
+			});
+		</script>
+		<script src="plugin/math/math.js"></script>
+		<script src="plugin/chalkboard/plugin.js"></script>
+		<script src="plugin/customcontrols/plugin.js"></script>
+
+
+
+	<script>
+  	Reveal.initialize({
+		math: {
+			mathjax: 'https://cdn.jsdelivr.net/gh/mathjax/mathjax@2.7.8/MathJax.js',
+			config: 'TeX-AMS_HTML-full',
+			// pass other options into `MathJax.Hub.Config()`
+			TeX: { Macros: { RR: "{\\bf R}" } }
+		},
+
+		chalkboard: {
+        boardmarkerWidth: 3,
+        chalkWidth: 7,
+        chalkEffect: 1.0,
+        storage: null,
+        src: null,
+        readOnly: undefined,
+        transition: 800,
+        theme: "chalkboard",
+        background: [ 'rgba(127,127,127,.1)' , path + 'img/blackboard.png' ],
+        grid: { color: 'rgb(50,50,10,0.5)', distance: 80, width: 2},
+        eraser: { src: path + 'img/sponge.png', radius: 20},
+        boardmarkers : [
+                { color: 'rgba(100,100,100,1)', cursor: 'url(' + path + 'img/boardmarker-black.png), auto'},
+                { color: 'rgba(30,144,255, 1)', cursor: 'url(' + path + 'img/boardmarker-blue.png), auto'},
+                { color: 'rgba(220,20,60,1)', cursor: 'url(' + path + 'img/boardmarker-red.png), auto'},
+                { color: 'rgba(50,205,50,1)', cursor: 'url(' + path + 'img/boardmarker-green.png), auto'},
+                { color: 'rgba(255,140,0,1)', cursor: 'url(' + path + 'img/boardmarker-orange.png), auto'},
+                { color: 'rgba(150,0,20150,1)', cursor: 'url(' + path + 'img/boardmarker-purple.png), auto'},
+                { color: 'rgba(255,220,0,1)', cursor: 'url(' + path + 'img/boardmarker-yellow.png), auto'}
+        ],
+        chalks: [
+                { color: 'rgba(255,255,255,0.5)', cursor: 'url(' + path + 'img/chalk-white.png), auto'},
+                { color: 'rgba(96, 154, 244, 0.5)', cursor: 'url(' + path + 'img/chalk-blue.png), auto'},
+                { color: 'rgba(237, 20, 28, 0.5)', cursor: 'url(' + path + 'img/chalk-red.png), auto'},
+                { color: 'rgba(20, 237, 28, 0.5)', cursor: 'url(' + path + 'img/chalk-green.png), auto'},
+                { color: 'rgba(220, 133, 41, 0.5)', cursor: 'url(' + path + 'img/chalk-orange.png), auto'},
+                { color: 'rgba(220,0,220,0.5)', cursor: 'url(' + path + 'img/chalk-purple.png), auto'},
+                { color: 'rgba(255,220,0,0.5)', cursor: 'url(' + path + 'img/chalk-yellow.png), auto'}
+        ]
+    },
+    customcontrols: {
+  		controls: [
+  			{ icon: '<i class="fa fa-pen-square"></i>',
+  			  title: 'Toggle chalkboard (B)',
+  			  action: 'RevealChalkboard.toggleChalkboard();'
+  			},
+  			{ icon: '<i class="fa fa-pen"></i>',
+  			  title: 'Toggle notes canvas (C)',
+  			  action: 'RevealChalkboard.toggleNotesCanvas();'
+  			}
+  		]
+    },
+
+		plugins: [ RevealMath, RevealChalkboard, RevealCustomControls, RevealMenu  ]
+		});
+	</script>
+
+	</body>
+</html>

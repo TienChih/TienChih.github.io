@@ -1,0 +1,493 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>reveal.js</title>
+
+		<link rel="stylesheet" href="dist/reset.css">
+		<link rel="stylesheet" href="dist/reveal.css">
+		<link rel="stylesheet" href="dist/theme/white.css">
+		<link rel="stylesheet" href="plugin/chalkboard/style.css">
+		<link rel="stylesheet" href="plugin/customcontrols/style.css">
+
+
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+
+
+
+		<!-- Theme used for syntax highlighted code -->
+		<link rel="stylesheet" href="plugin/highlight/monokai.css">
+		<style>
+			.container{
+   				 display: flex;
+			}
+			.col{
+    			flex: 1;
+			}
+		</style>
+			<script async defer src="https://buttons.github.io/buttons.js"></script>
+
+		<script src="plugin/menu/menu.js"></script>
+
+
+
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				
+				<section>
+					<h2>Integration Unchained.</h2>
+					<h4>M 111</h4>
+					
+					
+					<h4>
+						Oxford College of Emory University <a href="https://app.oxford.emory.edu/WebApps/Directory/index.cfm/view/9984" target="_blank">Tien Chih</a>
+					</h4>
+				</section>
+
+				
+
+				
+
+
+
+				<section>
+
+					<section data-auto-animate>
+						<h4>Quick Review. </h4>
+						
+						<div class="r-frame" >
+							<p style="font-size: 28px;" >
+								What is \(\frac{d}{dx}[e^{x^3}]\)?
+								
+
+							</p>
+
+							<div class="fragment">
+							<p style="font-size: 28px;" >
+								Based on your answer, what is \(\int x^2e^{x^3}dx\)?
+							</p>
+
+								<div class="container">
+								<div class="col">
+									<ol type="A">
+										<li style="font-size: 30px;">\( \frac{1}{x^3+1}e^{x^3}+C\).</li><br>
+										<li style="font-size: 30px;">\( \frac{x^3}{3}e^{x^3}+C\).</li><br>
+
+									</ol>
+								</div>
+
+								<div class="col">
+									<ol type="A" start="3">
+										<li style="font-size: 30px;">\(e^{x^3}+C\).</li><br>
+										<li style="font-size: 30px;">\(\frac{1}{3}e^{x^3}+C\).</li><br>
+										
+									</ol>
+								</div>
+							</div>
+							</div>
+								
+
+							
+						</div>		
+						
+						
+
+
+					</section>
+
+
+					<section data-auto-animate>
+						<h4>Chain Rule and Implict Differentiation. </h4>
+						
+						<div class="r-frame" >
+							<p style="font-size: 28px;" >
+								Recall that \(\frac{d}{dx}[u^7]=7u^6u'.\)
+								
+
+							</p>
+
+							<div class="fragment">
+							<p style="font-size: 28px;" >
+								Which of the following are \[\int 7 u^6 u'dx, \int  u^6 u'dx, \int 6 u^6 u'dx?\]
+							</p>
+
+								<div class="container">
+								<div class="col">
+									<ol type="A">
+										<li style="font-size: 30px;">\( \frac{1}{7}u^7+C\).</li><br>
+										<li style="font-size: 30px;">\( u^7+C\).</li><br>
+
+									</ol>
+								</div>
+
+								<div class="col">
+									<ol type="A" start="3">
+										<li style="font-size: 30px;">\( 7u^7+C\).</li><br>
+										<li style="font-size: 30px;">\( \frac{6}{7}u^7+C\).</li><br>
+										
+									</ol>
+								</div>
+							</div>
+							</div>
+								
+
+							
+						</div>		
+						
+						
+
+
+					</section>
+
+
+				</section>
+
+				<section>
+					<h4>u-Substitution</h4>
+
+					<p style="font-size: 28px;" >
+						Recall that \(\frac{d}{dx}[u]=u'\frac{du}{dx}\)
+					</p>
+
+					<div class="fragment">
+						<div class="r-frame">
+							<p style="font-size: 28px;" >
+								Given an integrable function \(g(x)\), we have that 
+								\[\int g(u)u'dx = \int g(u)\frac{du}{dx}dx = \int g(u) du=G(u)+C\]
+
+								where \(G\) is an anti-derivative of \(g\).
+							</p>
+						</div>
+					</div>
+
+
+				</section>
+
+				<section>
+
+					<section data-auto-animate>
+						<div class="r-frame">
+							<p style="font-size: 28px;" >
+								Consider \[\int \frac{1}{x} \sqrt{\ln(x)+1} dx.\]
+							</p>
+						</div>
+
+						<p style="font-size: 28px;" class="fragment">
+							Let \(u=\ln(x)+1\).  Then \(u'=\frac{1}{x}\).
+						</p>
+
+						<p style="font-size: 28px;" class="fragment">
+							Recall that \(u'dx=du\).  so \(\frac{1}{x}dx=du\).
+						</p>
+
+						
+
+					</section>
+
+					<section data-auto-animate>
+						<div class="r-frame">
+							<p style="font-size: 28px;" >
+								Consider \[\int \frac{1}{x} \sqrt{\ln(x)+1} dx.\]
+							</p>
+						</div>
+
+						<p style="font-size: 28px;" >
+							Let \(u=\ln(x)+1\).  Then \(u'=\frac{1}{x}\).
+						</p>
+
+						<p style="font-size: 28px;" >
+							Recall that \(u'dx=du\).  so \(\frac{1}{x}dx=du\).
+						</p>
+
+						<p style="font-size: 28px;" >
+							\[\int \frac{1}{x} \sqrt{\ln(x)+1} dx=\int \frac{1}{x} \sqrt{u} dx\]
+						</p>
+
+						
+
+					</section>
+
+					<section data-auto-animate>
+						<div class="r-frame">
+							<p style="font-size: 28px;" >
+								Consider \[\int \frac{1}{x} \sqrt{\ln(x)+1} dx.\]
+							</p>
+						</div>
+
+						<p style="font-size: 28px;" >
+							Let \(u=\ln(x)+1\).  Then \(u'=\frac{1}{x}\).
+						</p>
+
+						<p style="font-size: 28px;" >
+							Recall that \(u'dx=du\).  so \(\frac{1}{x}dx=du\).
+						</p>
+
+						<p style="font-size: 28px;" >
+							\[\int \frac{1}{x} \sqrt{\ln(x)+1} dx=\int \frac{1}{x} \sqrt{u} dx=\int \sqrt{u} du\]
+						</p>
+
+						
+
+					</section>
+
+					<section data-auto-animate>
+						<div class="r-frame">
+							<p style="font-size: 28px;" >
+								Consider \[\int \frac{1}{x} \sqrt{\ln(x)+1} dx.\]
+							</p>
+						</div>
+
+						<p style="font-size: 28px;" >
+							Let \(u=\ln(x)+1\).  Then \(u'=\frac{1}{x}\).
+						</p>
+
+						<p style="font-size: 28px;" >
+							Recall that \(u'dx=du\).  so \(\frac{1}{x}dx=du\).
+						</p>
+
+						<p style="font-size: 28px;" >
+							\[\int \frac{1}{x} \sqrt{\ln(x)+1} dx=\int \frac{1}{x} \sqrt{u} dx=\int \sqrt{u} du=\frac{1}{2\sqrt{u}}+C\]
+						</p>
+
+						
+
+					</section>
+
+					<section data-auto-animate>
+						<div class="r-frame">
+							<p style="font-size: 28px;" >
+								Consider \[\int \frac{1}{x} \sqrt{\ln(x)+1} dx.\]
+							</p>
+						</div>
+
+						<p style="font-size: 28px;" >
+							Let \(u=\ln(x)+1\).  Then \(u'=\frac{1}{x}\).
+						</p>
+
+						<p style="font-size: 28px;" >
+							Recall that \(u'dx=du\).  so \(\frac{1}{x}dx=du\).
+						</p>
+
+						<p style="font-size: 28px;" >
+							\[\int \frac{1}{x} \sqrt{\ln(x)+1} dx=\int \frac{1}{x} \sqrt{u} dx=\int \sqrt{u} du=\frac{1}{2\sqrt{u}}+C=\frac{1}{2\sqrt{\ln(x)+1}}+C.\]
+						</p>
+
+						
+
+					</section>
+
+					<section data-auto-animate>
+						<div class="r-frame">
+							<p style="font-size: 28px;" >
+								Consider \[\int 3x \cos(x^2) dx.\]
+							</p>
+						</div>
+
+						<p style="font-size: 28px;" >
+							Let \(u=x^2\).  What is \(u'\)?
+						</p>
+
+						<p style="font-size: 28px;" class="fragment">
+							Recall that \(u'dx=du\).  What is \(3xdx\) in terms of \(du\)?
+						</p>
+
+						<p style="font-size: 28px;" class="fragment">
+							Rewrite \(\int 3x \cos(x^2) dx.\) solely in terms of \(u, du\).  Then evaluate.
+						</p>
+
+						<p style="font-size: 28px;" class="fragment">
+							Rewrite what you found as an \(x\) expression.
+						</p>
+
+					</section>
+
+
+
+					<section data-auto-animate>
+						<div class="r-frame">
+							<p style="font-size: 28px;" >
+								Consider \[\int \sin(x) e^{\cos(x)} dx.\]
+							</p>
+						</div>
+
+						<p style="font-size: 28px;" >
+							What is the best choice for \(u\): \(\sin(x), \cos(x)\) or \(e^x\)?
+						</p>
+
+						<p style="font-size: 28px;" class="fragment">
+							Recall that \(u'dx=du\). What is \(du\)?
+						</p>
+
+						<p style="font-size: 28px;" class="fragment">
+							Rewrite \(\int  \sin(x) e^{\cos(x)} dx.\) solely in terms of \(u, du\).  Then evaluate.
+						</p>
+
+						<p style="font-size: 28px;" class="fragment">
+							Rewrite what you found as an \(x\) expression.
+						</p>
+
+					</section>
+
+					<section data-auto-animate>
+						<div class="r-frame">
+							<p style="font-size: 28px;" >
+								Find\[\int \frac{\cos(\sqrt{t}+4)}{\sqrt{t}} dx.\]
+							</p>
+						</div>
+
+						
+
+					</section>
+
+
+				</section>
+
+
+				<section>
+					<section data-auto-animate>
+						<div class="r-frame">
+							<p style="font-size: 28px;" >
+								Consider \[\int_0^4 te^{t^2} dt.\]  Let \(u=t^2\)
+							</p>
+						</div>
+
+						<p style="font-size: 28px;" class="fragment">
+							Why isn't \[\int_0^4 te^{t^2} dt= \int_0^4 \frac{1}{2}e^udu ?\]
+						</p>
+
+
+					</section>
+
+					<section data-auto-animate>
+						<div class="r-frame">
+							<p style="font-size: 28px;" >
+								Consider \[\int_0^4 te^{t^2} dt.\]  Let \(u=t^2\)
+							</p>
+						</div>
+
+						<p style="font-size: 28px;" >
+							 \[\int_0^4 te^{t^2} dt = \int_{t=0}^{t=4} \frac{1}{2}e^udu = \int_{u=?}^{u=?} \frac{1}{2}e^udu.\]  What are the \(u\) bounds of the last integral?  Can you evaluate it?
+						</p>
+
+						<p style="font-size: 28px;" class="fragment">
+							Also note: \[\int_0^4 te^{t^2} dt= \int_{t=0}^{t=4} \frac{1}{2}e^udu = \int_{u=?}^{u=?} \frac{1}{2}e^udu = \frac{1}{2}e^y|_{u=?}^{u=?}=\frac{1}{2}e^{x^2}|_{x=1}^{x=4}.\]  Can you evaluate it?  
+						</p>
+
+
+					</section>
+				</section>
+
+				<section>
+					<section data-auto-animate>
+						<div class="r-frame">
+							<p style="font-size: 28px;" >
+								Consider \[\int \sin(\theta)\cos(\theta) d\theta.\]  Solve this integral twice, where \(u=\sin(\theta)\) and \(u=\cos(\theta)\).
+							</p>
+						</div>
+
+						<p style="font-size: 28px;" class="fragment">
+							Why are these two "different" answers ok?
+						</p>
+
+
+					</section>
+
+				</section>
+
+
+				
+
+
+
+									
+
+
+
+				
+			</div>
+		</div>
+
+		<script src="dist/reveal.js"></script>
+		<script src="plugin/notes/notes.js"></script>
+		<script src="plugin/markdown/markdown.js"></script>
+		<script src="plugin/highlight/highlight.js"></script>
+		<script>
+			// More info about initialization & config:
+			// - https://revealjs.com/initialization/
+			// - https://revealjs.com/config/
+			Reveal.initialize({
+				hash: true,
+
+				// Learn about plugins: https://revealjs.com/plugins/
+				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
+			});
+		</script>
+		<script src="plugin/math/math.js"></script>
+		<script src="plugin/chalkboard/plugin.js"></script>
+		<script src="plugin/customcontrols/plugin.js"></script>
+
+
+
+	<script>
+  	Reveal.initialize({
+		math: {
+			mathjax: 'https://cdn.jsdelivr.net/gh/mathjax/mathjax@2.7.8/MathJax.js',
+			config: 'TeX-AMS_HTML-full',
+			// pass other options into `MathJax.Hub.Config()`
+			TeX: { Macros: { RR: "{\\bf R}" } }
+		},
+
+		chalkboard: {
+        boardmarkerWidth: 3,
+        chalkWidth: 7,
+        chalkEffect: 1.0,
+        storage: null,
+        src: null,
+        readOnly: undefined,
+        transition: 800,
+        theme: "chalkboard",
+        background: [ 'rgba(127,127,127,.1)' , path + 'img/blackboard.png' ],
+        grid: { color: 'rgb(50,50,10,0.5)', distance: 80, width: 2},
+        eraser: { src: path + 'img/sponge.png', radius: 20},
+        boardmarkers : [
+                { color: 'rgba(100,100,100,1)', cursor: 'url(' + path + 'img/boardmarker-black.png), auto'},
+                { color: 'rgba(30,144,255, 1)', cursor: 'url(' + path + 'img/boardmarker-blue.png), auto'},
+                { color: 'rgba(220,20,60,1)', cursor: 'url(' + path + 'img/boardmarker-red.png), auto'},
+                { color: 'rgba(50,205,50,1)', cursor: 'url(' + path + 'img/boardmarker-green.png), auto'},
+                { color: 'rgba(255,140,0,1)', cursor: 'url(' + path + 'img/boardmarker-orange.png), auto'},
+                { color: 'rgba(150,0,20150,1)', cursor: 'url(' + path + 'img/boardmarker-purple.png), auto'},
+                { color: 'rgba(255,220,0,1)', cursor: 'url(' + path + 'img/boardmarker-yellow.png), auto'}
+        ],
+        chalks: [
+                { color: 'rgba(255,255,255,0.5)', cursor: 'url(' + path + 'img/chalk-white.png), auto'},
+                { color: 'rgba(96, 154, 244, 0.5)', cursor: 'url(' + path + 'img/chalk-blue.png), auto'},
+                { color: 'rgba(237, 20, 28, 0.5)', cursor: 'url(' + path + 'img/chalk-red.png), auto'},
+                { color: 'rgba(20, 237, 28, 0.5)', cursor: 'url(' + path + 'img/chalk-green.png), auto'},
+                { color: 'rgba(220, 133, 41, 0.5)', cursor: 'url(' + path + 'img/chalk-orange.png), auto'},
+                { color: 'rgba(220,0,220,0.5)', cursor: 'url(' + path + 'img/chalk-purple.png), auto'},
+                { color: 'rgba(255,220,0,0.5)', cursor: 'url(' + path + 'img/chalk-yellow.png), auto'}
+        ]
+    },
+    customcontrols: {
+  		controls: [
+  			{ icon: '<i class="fa fa-pen-square"></i>',
+  			  title: 'Toggle chalkboard (B)',
+  			  action: 'RevealChalkboard.toggleChalkboard();'
+  			},
+  			{ icon: '<i class="fa fa-pen"></i>',
+  			  title: 'Toggle notes canvas (C)',
+  			  action: 'RevealChalkboard.toggleNotesCanvas();'
+  			}
+  		]
+    },
+
+		plugins: [ RevealMath, RevealChalkboard, RevealCustomControls, RevealMenu  ]
+		});
+	</script>
+
+	</body>
+</html>
