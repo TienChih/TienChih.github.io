@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang=en>
+<head>
+<meta charset=utf-8>
+<title>blah</title>
+<script src="https://sagecell.sagemath.org/static/embedded_sagecell.js"></script>
+  
+ 	 <script>sagecell.makeSagecell({"inputLocation": ".sage"});</script>
+</head>
+<body>
+<p>
+<font size="+2">
+<div class="sage">
+<script type="text/x-sage">
+var("x y z")
+
+f(x)=x
+c=3
+
+sur1 = revolution_plot3d(f(x), (x,0,4), opacity=0.5, show_curve=True, parallel_axis='x', color="blue")
+slab = revolution_plot3d((c,z),(z,0,f(c)), show_curve=False,parallel_axis="x",opacity=0.75, color="red")
+
+sur1+slab
+</script></div>
+</font>
+</p>
+</body>
+</html>
