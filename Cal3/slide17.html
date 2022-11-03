@@ -195,7 +195,7 @@
 
 						\[ C_1 = \begin{cases} x=t\\ y=t^2 \end{cases} 0\leq t\leq 1, C_2 = \begin{cases} x=1-t\\ y=1-t \end{cases} 0\leq t\leq 1. \] Compute
 
-						\[\oint_{\partial R} F_1(x,y)dx+ F_2(x,y)dy =\int_{C_1} F_1(x,y)dx+ F_2(x,y)dy + \int_{C_2} F_1(x,y)dx+ F_2(x,y)dy.\]
+						\[\small \oint_{\partial R} F_1(x,y)dx+ F_2(x,y)dy =\int_{C_1} F_1(x,y)dx+ F_2(x,y)dy + \int_{C_2} F_1(x,y)dx+ F_2(x,y)dy.\]
 					</p>
 					
 
@@ -209,19 +209,16 @@
 
 				<section>
 					<section data-auto-animate>
-					<h4>Vector Path Integral</h4>
+					<h4>The Intuition</h4>
 					
 
-					<div data-id="problem" class="r-frame">
-						<p style="font-size: 25px;" >
-							The <strong>vector path integral</strong> of a vector field \(F\) along the path \(\mathbf{x}\) is \[\int_\mathbf{x} F\, ds=\int_a^b F(\mathbf{x}(t)) \cdot \mathbf{x}'(t)\, dt.\]
-						</p>
-						
-					</div>
+					
 
-					<p style="font-size: 25px;" class="fragment">
-						This measures the "<strong>work</strong>" that \(F\) does along \(\mathbf{x}\).
+					<p style="font-size: 25px;" >
+						Consider a closed contour oriented counter-clockwise integrated over some vector field \(F(x,y)=(F_1(x,y), F_2(x,y))\).
 					</p>
+
+					<img src="img/green1.svg" width="50%">
 
 
 					</section>
@@ -229,120 +226,65 @@
 
 
 					<section data-auto-animate>
-					<h4>Vector Path Integral</h4>
+					<h4>The Intuition</h4>
 					
 
-					<div data-id="problem" class="r-frame">
-						<img src="img/vfpathintegral.png" width="40%">
-						
-					</div>
+					
 
 					<p style="font-size: 25px;">
-						Consider a vector field \(F\) paths \(C_i\) from \(P_i\to Q_i\).  For which of these is \(\int_{C_i} F\, ds \) positive, and which is negative?
+						How do the sum of the two contour integrals shown compare to the original contour integral?
 					</p>
 
-
-					</section>
-
-					<section data-auto-animate>
-					<h4>Vector Path Integral</h4>
-					
-
-					<div data-id="problem" class="r-frame">
-						<p style="font-size: 25px;" >
-							Consider the vector field \(F(x,y)=-y\mathbf{i}+x\mathbf{j}\) and the paths:
-							\[\mathbf{x}_1(t)=(4-t, 2t)\text{ for }t\in [0,4],\] \[\mathbf{x}_2(t)=(4-2t, 4t)\text{ for }t\in [0,2],\] \[\mathbf{x}_3(t)=(t, 8-2t)\text{ for }t\in [0,4].\]
-						</p>
-						
-					</div>
-
-					<img src = "img/pathintegral.png" width="40%">
-
-					
+					<img src="img/green2.svg" width="50%">
 
 
 					</section>
 
 					<section data-auto-animate>
-					<h4>Vector Path Integral</h4>
+					<h4>The Intuition</h4>
 					
-
-					<div data-id="problem" class="r-frame">
-						<p style="font-size: 25px;" >
-							Consider the vector field \(F(x,y)=-y\mathbf{i}+x\mathbf{j}\) and the paths:
-							\[\mathbf{x}_1(t)=(4-t, 2t)\text{ for }t\in [0,4],\] \[\mathbf{x}_2(t)=(4-2t, 4t)\text{ for }t\in [0,2],\] \[\mathbf{x}_3(t)=(t, 8-2t)\text{ for }t\in [0,4].\]
-						</p>
-						
-					</div>
 
 					
 
 					<p style="font-size: 25px;" >
-						Compute the vector path integrals for each path above. 
+						How do the sum of these contour integrals shown compare to the original contour integral?
 					</p>
+
+					<img src="img/green3.svg" width="50%">
 
 
 					</section>
 
 					<section data-auto-animate>
-					<h4>Vector Path Integral</h4>
+					<h4>The Intuition</h4>
 					
 
-					<div data-id="problem" class="r-frame">
-						<p style="font-size: 25px;" >
-							Note for a curve \(C\) and vector field \(F=(F_1, F_2,\ldots, F_n)\) we have:
+					
 
-							\[\int_C F\, ds= \int_a^b \sum_{i=1}^n F_i(\mathbf{x}(t))\mathbf{x}_i'(t)dt=\int_a^b \sum_{i=1}^n F_i(\mathbf{x}_i)dx_i.\]
-						</p>
-						
-					</div>
+					<p style="font-size: 25px;">
+						What happens as the number of contours goes to \(\infty\)?
+					</p>
+
+					<img src="img/green4.svg" width="50%">
 
 					<p style="font-size: 25px;" class="fragment">
-						So \[\int_C F(x,y,z)\, ds = \int_C F_1(x,y,z)dx + F_2(x,y,z)dy + F_3(x,y,z)dz.\]
+						What happens as the area bounded by each contour goes to 0?
 					</p>
 
 
 					</section>
 
-
-				</section>
-
-
-				<section>
-					<section data-auto-animate>
-						<div data-id="problem" class="r-frame">
-						<p style="font-size: 25px;" >
-							Let \(\mathbf{x}:[a,b]\to \mathbb{R}\) be  a piecewise \(C^1\) path.  Then \(\mathbf{y}:[c,d]\to \mathbb{R}\) is a <strong>reparameterization</strong> of \(\mathbf{x}\) if there is a bijection \(u:[a,b]\to[c,d]\) such that both \(u, u^{-1}\) are \(C^1\) and \(\mathbf{y}=\mathbf{x}\circ u\).
-						</p>
-						
-					</div>
-
-					<p style="font-size: 25px;" class="fragment">
-						\(\mathbf{y}\) is <strong>orientation preserving</strong> if \(u(a)=c, u(b)=d\), and <strong>orientation reversing</strong> if \(u(a)=d, u(b)=c\).
-					</p>
-
-
-					</section>
 
 					<section data-auto-animate>
-						<div data-id="problem" class="r-frame">
-						<p style="font-size: 25px;" >
-							Let \(\mathbf{x}:[a,b]\to \mathbb{R}\) be  a piecewise \(C^1\) path and \(\mathbf{y}:[c,d]\to \mathbb{R}\) be a reparameterization of \(\mathbf{x}\).
-						</p>
+					<h4>The Intuition</h4>
+					
 
-						<p style="font-size: 25px;" >
-							Then the vector path integrals \[ \int_c^d F(\mathbf{y})(t)\mathbf{y}'(t)\, dt = \int_a^b F(\mathbf{x})(t)\mathbf{x}'(t)\, dt  \] if \(\mathbf{y}\) is orientation preserving, and \[ \int_c^d F(\mathbf{y})(t)\mathbf{y}'(t)\, dt = -\int_a^b F(\mathbf{x})(t)\mathbf{x}'(t)\, dt  \] if \(\mathbf{y}\) is orientation reversing.
-						</p>
-						
-					</div>
+					
 
-					<p style="font-size: 25px;" class="fragment">
-						PROOF: Substitution.  (This makes a good test question)
-					</p>
+					<iframe src="https://www.desmos.com/calculator/ltnctixrib?embed" width="100%" height="600" style="border: 1px solid #ccc" frameborder=0></iframe>
 
 
 					</section>
-
 
 					
 
@@ -351,72 +293,663 @@
 
 				<section>
 					<section data-auto-animate>
-						<div data-id="problem" class="r-frame">
-						<p style="font-size: 25px;" >
-							A piecewise \(C^1\) path  \(\mathbf{x}:[a,b]\to \mathbb{R}\) is a <strong>closed</strong> curve or contour if \(\mathbf{a}=\mathbf{b}\) and is <strong>simple</strong> if there are no other self intersections.
-						</p>
-
-						
-						
-					</div>
-
-					<iframe src="https://www.desmos.com/calculator/fkmjugazns?embed" width="100%" height="500" style="border: 1px solid #ccc" frameborder=0></iframe>
-
-					<p style="font-size: 25px;" >
-						Above we have a simple closed curve and a non-simple, non-closed curve.  Draw a simple non-closed curve, and a non-simple closed curve.
-					</p>
-
-
-					</section>
-
-					<section data-auto-animate>
-						<div data-id="problem" class="r-frame">
-						<p style="font-size: 25px;" >
-							Let \(f(x,y)=x^2-y^2+1\), \(F(x,y)=(x, e^{-y})\) and \(C\) be the circle of radius 2, centered at \((0,0)\), oriented counter-clockwise.
-						</p>
-
-						
-						
-					</div>
+					<h4>The Intuition</h4>
+					
 
 					
 
 					<p style="font-size: 25px;" >
-						Find the scalar and vector path integrals of \(f, F\) respectively about \(C\).
+						Consider one of the closed mini-contours oriented counter-clockwise integrated over some vector field \(F(x,y)=(F_1(x,y), F_2(x,y))\).
 					</p>
 
+					<div class="container">
+						<div class="col">
+							<img src="img/CD1.svg" width="100%">
+						</div>
+
+						<div class="col">
+							<p style="font-size: 25px;" class="fragment">
+								Let \(P_1=\begin{cases}t=0 \\ t=\Delta t \end{cases}, (x_0+t, y_0)\).  Then 
+								\[\small \int_{P_1}F_1dx+F_2dy = \int_0^{\Delta x}F_1(x_0+t, y_0)dt.\]
+							</p>
+						</div>
+					</div>
+
+					</section>
+
+
+					
+
+					
+
+					<section data-auto-animate>
+					<h4>The Intuition</h4>
+					
+
+					
+
+					<p style="font-size: 25px;" >
+						Consider one of the closed mini-contours oriented counter-clockwise integrated over some vector field \(F(x,y)=(F_1(x,y), F_2(x,y))\).
+					</p>
+
+					<div class="container">
+						<div class="col">
+							<img src="img/CD2.svg" width="100%">
+						</div>
+
+						<div class="col">
+							<p style="font-size: 25px;" >
+								Let \(P_1=\begin{cases}t=0 \\ t=\Delta t \end{cases}, (x_0+t, y_0)\).  Then 
+								\[
+								\begin{array}{rcl}
+								\small \int_{P_1}F_1dx+F_2dy &=& \int_0^{\Delta x}F_1(x_0+t, y_0)dt.\\
+								&=& \Delta(x)F_1(x_0+t_1^*, y_0).\\
+								\end{array}
+								\]
+							</p>
+						</div>
+					</div>
+
+					</section>
+
+
+
+
+
+					<section data-auto-animate>
+					<h4>The Intuition</h4>
+					
+
+					
+
+					<p style="font-size: 25px;" >
+						Consider one of the closed mini-contours oriented counter-clockwise integrated over some vector field \(F(x,y)=(F_1(x,y), F_2(x,y))\).
+					</p>
+
+					<div class="container">
+						<div class="col">
+							<img src="img/CD2.svg" width="100%">
+						</div>
+
+						<div class="col">
+							<p style="font-size: 25px;" class="fragment">
+								Let \(P_3=\begin{cases}t=\Delta t \\ t=0 \end{cases}, (x_0+t, y_0+\Delta y)\).  Then 
+								\[\small \int_{P_3}F_1dx+F_2dy = \int_0^{\Delta x}F_1(x_0+t, y_0+\Delta y)dt.\]
+							</p>
+						</div>
+					</div>
+
+					</section>
+
+
+					
+
+
+
+					<section data-auto-animate>
+					<h4>The Intuition</h4>
+					
+
+					
+
+					<p style="font-size: 25px;" >
+						Consider one of the closed mini-contours oriented counter-clockwise integrated over some vector field \(F(x,y)=(F_1(x,y), F_2(x,y))\).
+					</p>
+
+					<div class="container">
+						<div class="col">
+							<img src="img/CD2.svg" width="100%">
+						</div>
+
+						<div class="col">
+							<p style="font-size: 25px;" >
+								Let \(P_3=\begin{cases}t=\Delta t \\ t=0 \end{cases}, (x_0+t, y_0+\Delta y)\).  Then 
+								\[
+								\begin{array}{rcl}
+								\small \int_{P_3}F_1dx+F_2dy &=& \int_{\Delta x}^{0}F_1(x_0+t, y_0+\Delta y)dt.\\
+								&=& -\int_0^{\Delta x}F_1(x_0+t, y_0+\Delta y)dt.\\
+								
+								\end{array}
+								\]
+							</p>
+						</div>
+					</div>
 
 					</section>
 
 
 					<section data-auto-animate>
-						<div data-id="problem" class="r-frame">
-						<p style="font-size: 25px;" >
-							Let \(f(x,y)=x^2-y^2+1\), \(F(x,y)=(x, e^{-y})\) and \(C\) be a square with endpoints \((0, 0), (1,0), (1,1), (0,1)\) oriented counter-clockwise.
-						</p>
-
-						
-						
-					</div>
+					<h4>The Intuition</h4>
+					
 
 					
 
 					<p style="font-size: 25px;" >
-						Find the scalar and vector path integrals of \(f, F\) respectively about \(C\).
+						Consider one of the closed mini-contours oriented counter-clockwise integrated over some vector field \(F(x,y)=(F_1(x,y), F_2(x,y))\).
 					</p>
 
+					<div class="container">
+						<div class="col">
+							<img src="img/CD3.svg" width="100%">
+						</div>
+
+						<div class="col">
+							<p style="font-size: 25px;" >
+								Let \(P_3=\begin{cases}t=\Delta t \\ t=0 \end{cases}, (x_0+t, y_0+\Delta y)\).  Then 
+								\[
+								\begin{array}{rcl}
+								\small \int_{P_3}F_1dx+F_2dy &=& \int_{\Delta x}^{0}F_1(x_0+t, y_0+\Delta y)dt.\\
+								&=& -\int_0^{\Delta x}F_1(x_0+t, y_0+\Delta y)dt.\\
+								&=& -\Delta(x)F_1(x_0+t_3^*, y_0+\Delta y).\\
+								\end{array}
+								\]
+							</p>
+						</div>
+					</div>
 
 					</section>
+
+					<section data-auto-animate>
+					<h4>The Intuition</h4>
+					
+
+					
+
+					<p style="font-size: 25px;" >
+						Consider one of the closed mini-contours oriented counter-clockwise integrated over some vector field \(F(x,y)=(F_1(x,y), F_2(x,y))\).
+					</p>
+
+					<div class="container">
+						<div class="col">
+							<img src="img/CD3.svg" width="100%">
+						</div>
+
+						<div class="col">
+							<p style="font-size: 25px;" >
+								
+								\[
+								\begin{array}{rcl}
+								\small &&\int_{P_1}F_1dx+F_2dy+\small \int_{P_3}F_1dx+F_2dy\\ &=&  -\Delta x \left( F_1(x_0+t_3^*, y_0+\Delta y) - F_1(x_0+t_1^*, y_0)\right).\\
+								\end{array}
+								\]
+							</p>
+						</div>
+					</div>
+
+					</section>
+
+					<section data-auto-animate>
+					<h4>The Intuition</h4>
+					
+
+					
+
+					<p style="font-size: 25px;" >
+						Consider one of the closed mini-contours oriented counter-clockwise integrated over some vector field \(F(x,y)=(F_1(x,y), F_2(x,y))\).
+					</p>
+
+					<div class="container">
+						<div class="col">
+							<img src="img/CD3.svg" width="100%">
+						</div>
+
+						<div class="col">
+							<p style="font-size: 25px;" >
+								
+								\[
+								\begin{array}{rcl}
+								\small &&\int_{P_1}F_1dx+F_2dy+\small \int_{P_3}F_1dx+F_2dy\\
+								&=&  -\Delta x \left( F_1(x_0+t_3^*, y_0+\Delta y) - F_1(x_0+t_1^*, y_0)\right).\\
+								 &=&  -\Delta x \Delta y \left( \displaystyle\frac{F_1(x_0+t_3^*, y_0+\Delta y) - F_1(x_0+t_1^*, y_0)}{\Delta y}\right).\\
+								\end{array}
+								\]
+							</p>
+						</div>
+					</div>
+
+					</section>
+
+					<section data-auto-animate>
+					<h4>The Intuition</h4>
+					
+
+					
+
+					<p style="font-size: 25px;" >
+						Consider one of the closed mini-contours oriented counter-clockwise integrated over some vector field \(F(x,y)=(F_1(x,y), F_2(x,y))\).
+					</p>
+
+					<div class="container">
+						<div class="col">
+							<img src="img/CD4.svg" width="100%">
+						</div>
+
+						<div class="col">
+							<p style="font-size: 25px;" >
+								
+								\[
+								\begin{array}{rcl}
+								\small &&\int_{P_2}F_1dx+F_2dy+\small \int_{P_4}F_1dx+F_2dy\\
+								
+								 &=&  \Delta x \Delta y \left( \displaystyle\frac{F_2(x_0+\Delta x, y_0+t_2^*) - F_2(x_0, y_0+t_4^*)}{\Delta x}\right).\\
+								\end{array}
+								\]
+							</p>
+						</div>
+					</div>
+
+					</section>
+
+					<section data-auto-animate>
+					<h4>The Intuition</h4>
+					
+
+					
+
+					<p style="font-size: 25px;" >
+						What happens to \(t_1^*, t_2^*, t_3^*, t_4^*\) as \(\Delta x, \Delta y\to 0\)?
+					</p>
+
+					<iframe src="https://www.desmos.com/calculator/d9qy6xtvtf" width="100%" height="600" style="border: 1px solid #ccc" frameborder=0></iframe>
+
+					</section>
+
+
+					<section data-auto-animate>
+					<h4>The Intuition</h4>
+					
+
+					
+
+					
+
+					<iframe src="https://www.desmos.com/calculator/d9qy6xtvtf" width="80%" height="400" style="border: 1px solid #ccc" frameborder=0></iframe>
+
+					<p style="font-size: 25px;" >
+						\[\oint_{C_i} F_1dx+F_2dy =\int_{P_1}+\int_{P_2}+\int_{P_3}+\int_{P_4} \] \[\approx \Delta x \Delta y \left( \left( \displaystyle\frac{F_2(x_0+\Delta x, y_0+t^*) - F_2(x_0, y_0+t^*)}{\Delta x}\right) -  \left( \displaystyle\frac{F_1(x_0+t^*, y_0+\Delta y) - F_1(x_0+t^*, y_0)}{\Delta y}\right) \right)\]
+					</p>
+
+					</section>
+
+					<section data-auto-animate>
+					<h4>The Intuition</h4>
+					
+
+					
+
+					
+
+					<iframe src="https://www.desmos.com/calculator/d9qy6xtvtf" width="80%" height="400" style="border: 1px solid #ccc" frameborder=0></iframe>
+
+					<p style="font-size: 25px;" >
+						\[\displaystyle \lim_{n\to \infty}\sum_{i=1}^n\left(\oint_{C_i} F_1dx+F_2dy \right) \] \[= \displaystyle \lim_{n\to \infty} \sum_{i=1}^n \Delta x \Delta y \left( \left( \displaystyle\frac{F_2(x_i+\Delta x, y_i+t^*) - F_2(x_i, y_i+t^*)}{\Delta x}\right) -  \left( \displaystyle\frac{F_1(x_i+t^*, y_i+\Delta y) - F_1(x_i+t^*, y_i)}{\Delta y}\right) \right)\]
+					</p>
+
+					</section>
+
+					<section data-auto-animate>
+					<h4>FINALLY!</h4>
+					
+
+					
+
+					
+
+					<iframe src="https://www.desmos.com/calculator/d9qy6xtvtf" width="80%" height="400" style="border: 1px solid #ccc" frameborder=0></iframe>
+
+					<p style="font-size: 25px;" >
+						\[\displaystyle \oint_{\partial R} F_1(x,y)dx+F_2(x,y)dy \] \[= \iint_R \frac{\partial F_2}{\partial y} - \frac{\partial F_1}{\partial x}\, dA\]
+					</p>
+
+					</section>
+
 				</section>
 
+
+				<section>
+					<section data-auto-animate>
+						<h4>Greene's Theorem</h4>
+					
+
+					<div data-id="problem" class="r-frame">
+						<p style="font-size: 25px;" >
+							Let \(R\subseteq \mathbb{R}^2\) be a closed and bounded region where it's boundary \(\partial R\) consists of finitely many simple closed, piecewise \(C^1\) curves.  Orient \(\partial R\) so that \(R\) lies on the left of \(\partial R\).
+						</p>
+
+						<p style="font-size: 25px;" >
+							Then for a vector field \(F(x,y)=(F_1(x,y), F_2(x,y))\) we have:
+
+							\[\displaystyle \oint_{\partial R} F_1(x,y)dx+F_2(x,y)dy = \iint_R \frac{\partial F_2}{\partial y} - \frac{\partial F_1}{\partial x}\, dA.\]
+						</p>
+
+						
+						
+					</div>
+					</section>
+
+					<section data-auto-animate>
+						<h4>Basically This:</h4>
+					
+
+						<img src="img/stokes.png" width=55%>
+
+					</section>
+
+					<section data-auto-animate>
+
+					<div data-id="problem" class="r-frame">
+						<p style="font-size: 25px;" >
+							Let \(C=P_1+P_2\) where \(P_1=\begin{cases} t=0 \\ t=9\end{cases} (t,t), P_2 = \begin{cases} t=0 \\ t=9\end{cases} (9-t,\sqrt{9-t}).\)
+						</p>
+
+						
+
+						
+						
+					</div>
+
+					<p style="font-size: 25px;" >
+							Sketch \(C\).  What are these curves \(P_1, P_2\)?
+						</p>
+
+						<p style="font-size: 25px;" class="fragment">
+							Let \(F(x,y)=(xy, y^2)\).  Use Greene's Theorem to find \(\oint_C F_1(x,y)dx+F_2(x,y)dy.\)  (Also denoted \(\oint_C F\cdot ds.\))
+						</p>
+					</section>
+
+					<section data-auto-animate>
+
+					<iframe src="https://www.desmos.com/calculator/zhbbmnkw6f" width="100%" height="600" style="border: 1px solid #ccc" frameborder=0></iframe>
+					</section>
+
+
+					<section data-auto-animate>
+
+					<div data-id="problem" class="r-frame">
+						<p style="font-size: 25px;" >
+							Let \(C'=Q_1+Q_2\) where \(Q_1 = \begin{cases} t=0, \\ t=9\end{cases} (t,\sqrt{t}), Q_2=\begin{cases} t=9 \\ t=0\end{cases} (t,t).\)
+						</p>
+
+						
+
+						
+						
+					</div>
+
+					
+
+						<p style="font-size: 25px;" >
+							Let \(F(x,y)=(xy, y^2)\).  Find \(\oint_{C'}x F_1(x,y)dx+F_2(x,y)dy.\) <br><br> (Hint: We shouldn't have to compute any integrals.)
+						</p>
+					</section>
+
+
+
+				</section>
+
+
+				<section>
+					<section data-auto-animate>
+
+					
+						<p style="font-size: 25px;" >
+							Consider a parameterized closed curve \(\mathbf{r}(t)=(x(t), y(t))\) which encloses a region.  
+						</p>
+
+						
+						<iframe src="https://www.desmos.com/calculator/7kassmwtbt?embed" width="100%" height="500" style="border: 1px solid #ccc" frameborder=0></iframe>
+						
+						
+					
+
+					
+
+						<p style="font-size: 25px;" >
+							We know the tangent vector at \(t=t_0\) is \((x'(t_0), y'(t_0))\).  What are the orthogonal vectors with the same magnitude?
+						</p>
+					</section>
+
+					<section data-auto-animate>
+
+					
+						<p style="font-size: 25px;" >
+							Consider a parameterized closed curve \(\mathbf{r}(t)=(x(t), y(t))\) which encloses a region.  
+						</p>
+
+						
+						<iframe src="https://www.desmos.com/calculator/7kassmwtbt?embed" width="100%" height="500" style="border: 1px solid #ccc" frameborder=0></iframe>
+						
+						
+					
+
+					
+
+						<p style="font-size: 25px;" >
+							Which orthogonal vector points "in" and which points "out"?
+						</p>
+					</section>
+
+
+					<section data-auto-animate>
+
+					
+						<iframe src="https://www.desmos.com/calculator/ltnctixrib?embed" width="100%" height="600" style="border: 1px solid #ccc" frameborder=0></iframe>
+						
+						
+					
+
+					
+
+						<p style="font-size: 25px;" >
+							If we integrate over the <strong>divergence</strong> of each point, what do we suppose we're measuring about the boundary?
+						</p>
+					</section>
+
+
+					<section data-auto-animate>
+						<h4>Divergence Theorem</h4>
+					
+
+					<div data-id="problem" class="r-frame">
+						<p style="font-size: 25px;" >
+							Let \(R\subseteq \mathbb{R}^2\) be a region with boundary \(\partial R\) as in Greens Theorem.
+						</p>
+
+						<p style="font-size: 25px;" >
+							Then for each point on \(\partial R\), let \(\mathbf{n}\) denote the unit normal vector facing outward.  Then the contour integral of \(F\cdot \mathbf{n}\) along \(\partial R\) is equal to the integral of the divergence of \(F\) over \(R\).  Or:
+
+							\[\displaystyle \oint_{\partial R} F\cdot \mathbf{n} ds = \iint_R \frac{\partial F_2}{\partial x} + \frac{\partial F_2}{\partial y}\, dA.\]
+						</p>
+
+						
+						
+					</div>
+					</section>
+
+
+
+					<section data-auto-animate>
+						<h4>Divergence Theorem</h4>
+					
+
+						<iframe src="https://www.desmos.com/calculator/dov0a5eut8" width="100%" height="600" style="border: 1px solid #ccc" frameborder=0></iframe>
+
+
+					</section>
+
+
+					<section data-auto-animate>
+						<h4>Divergence Theorem</h4>
+					
+						<p style="font-size: 25px;" >
+
+						\[
+						\begin{array}{rcl}
+							\displaystyle \oint_{\partial R} F\cdot \mathbf{n} ds &=& \displaystyle\int_a^b F(\mathbf{r}(t))\cdot \mathbf{n}(t) |\mathbf{r}'(t)| dt\\
+
+							
+							
+						\end{array}
+						\]
+
+						</p>
+
+
+					</section>	
+
+
+
+					<section data-auto-animate>
+						<h4>Divergence Theorem</h4>
+					
+						<p style="font-size: 25px;" >
+
+						\[
+						\begin{array}{rcl}
+							\displaystyle \oint_{\partial R} F\cdot \mathbf{n} ds &=& \displaystyle\int_a^b F(\mathbf{r}(t))\cdot \mathbf{n}(t) |\mathbf{r}'(t)| dt\\
+							&=& \displaystyle\int_a^b \langle F_1(x(t),y(t)), F_2(x(t),y(t))\rangle\cdot \mathbf{n}(t) |\mathbf{r}'(t)| dt\\
+
+							
+							
+						\end{array}
+						\]
+
+						</p>
+
+
+					</section>	
+
+
+
+
+					<section data-auto-animate>
+						<h4>Divergence Theorem</h4>
+					
+						<p style="font-size: 25px;" >
+
+						\[
+						\begin{array}{rcl}
+							\displaystyle \oint_{\partial R} F\cdot \mathbf{n} ds &=& \displaystyle\int_a^b F(\mathbf{r}(t))\cdot \mathbf{n}(t) |\mathbf{r}'(t)| dt\\
+							&=& \displaystyle\int_a^b \langle F_1(x(t),y(t)), F_2(x(t),y(t))\rangle\cdot \mathbf{n}(t) |\mathbf{r}'(t)| dt\\
+							&=& \displaystyle\int_a^b \langle F_1(x(t),y(t)), F_2(x(t),y(t))\rangle\cdot \frac{ \langle y'(t), -x'(t) \rangle }{ |\mathbf{r}'(t)|} |\mathbf{r}'(t)| dt\\
+
+							
+							
+						\end{array}
+						\]
+
+						</p>
+
+
+					</section>	
+
+
+
+					<section data-auto-animate>
+						<h4>Divergence Theorem</h4>
+					
+						<p style="font-size: 25px;" >
+
+						\[
+						\begin{array}{rcl}
+							\displaystyle \oint_{\partial R} F\cdot \mathbf{n} ds &=& \displaystyle\int_a^b F(\mathbf{r}(t))\cdot \mathbf{n}(t) |\mathbf{r}'(t)| dt\\
+							&=& \displaystyle\int_a^b \langle F_1(x(t),y(t)), F_2(x(t),y(t))\rangle\cdot \mathbf{n}(t) |\mathbf{r}'(t)| dt\\
+							&=& \displaystyle\int_a^b \langle F_1(x(t),y(t)), F_2(x(t),y(t))\rangle\cdot \frac{ \langle y'(t), -x'(t) \rangle }{ |\mathbf{r}'(t)|} |\mathbf{r}'(t)| dt\\
+
+							&=& \displaystyle\int_a^b \langle F_1(x(t),y(t)), F_2(x(t),y(t))\rangle\cdot  \langle y'(t), -x'(t) \rangle  dt\\
+							
+							
+						\end{array}
+						\]
+
+						</p>
+
+
+					</section>	
+
+
+
+					<section data-auto-animate>
+						<h4>Divergence Theorem</h4>
+					
+						<p style="font-size: 25px;" >
+
+						\[
+						\begin{array}{rcl}
+							\displaystyle \oint_{\partial R} F\cdot \mathbf{n} ds &=& \displaystyle\int_a^b F(\mathbf{r}(t))\cdot \mathbf{n}(t) |\mathbf{r}'(t)| dt\\
+							&=& \displaystyle\int_a^b \langle F_1(x(t),y(t)), F_2(x(t),y(t))\rangle\cdot \mathbf{n}(t) |\mathbf{r}'(t)| dt\\
+							&=& \displaystyle\int_a^b \langle F_1(x(t),y(t)), F_2(x(t),y(t))\rangle\cdot \frac{ \langle y'(t), -x'(t) \rangle }{ |\mathbf{r}'(t)|} |\mathbf{r}'(t)| dt\\
+
+							&=& \displaystyle\int_a^b \langle F_1(x(t),y(t)), F_2(x(t),y(t))\rangle\cdot  \langle y'(t), -x'(t) \rangle  dt\\
+							&=& \displaystyle\int_a^b  F_1(x(t),y(t))y'(t) -  F_2(x(t),y(t))x'(t) dt\\
+							
+							
+						\end{array}
+						\]
+
+						</p>
+
+
+					</section>					
+
+
+					<section data-auto-animate>
+						<h4>Divergence Theorem</h4>
+					
+						<p style="font-size: 25px;" >
+
+						\[
+						\begin{array}{rcl}
+							\displaystyle \oint_{\partial R} F\cdot \mathbf{n} ds &=& \displaystyle\int_a^b F(\mathbf{r}(t))\cdot \mathbf{n}(t) |\mathbf{r}'(t)| dt\\
+							&=& \displaystyle\int_a^b \langle F_1(x(t),y(t)), F_2(x(t),y(t))\rangle\cdot \mathbf{n}(t) |\mathbf{r}'(t)| dt\\
+							&=& \displaystyle\int_a^b \langle F_1(x(t),y(t)), F_2(x(t),y(t))\rangle\cdot \frac{ \langle y'(t), -x'(t) \rangle }{ |\mathbf{r}'(t)|} |\mathbf{r}'(t)| dt\\
+
+							&=& \displaystyle\int_a^b \langle F_1(x(t),y(t)), F_2(x(t),y(t))\rangle\cdot  \langle y'(t), -x'(t) \rangle  dt\\
+							&=& \displaystyle\int_a^b  F_1(x(t),y(t))y'(t) -  F_2(x(t),y(t))x'(t) dt\\
+							
+							&=& \displaystyle\int_{\partial R}   -  F_2(x,y)dx + F_1(x,y)dy\\
+							
+						\end{array}
+						\]
+
+						</p>
+
+
+					</section>
+
+
+					<section data-auto-animate>
+						<h4>Divergence Theorem</h4>
+					
+						<p style="font-size: 25px;" >
+
+						\[
+						\begin{array}{rcl}
+							\displaystyle \oint_{\partial R} F\cdot \mathbf{n} ds &=& \displaystyle\int_a^b F(\mathbf{r}(t))\cdot \mathbf{n}(t) |\mathbf{r}'(t)| dt\\
+							&=& \displaystyle\int_a^b \langle F_1(x(t),y(t)), F_2(x(t),y(t))\rangle\cdot \mathbf{n}(t) |\mathbf{r}'(t)| dt\\
+							&=& \displaystyle\int_a^b \langle F_1(x(t),y(t)), F_2(x(t),y(t))\rangle\cdot \frac{ \langle y'(t), -x'(t) \rangle }{ |\mathbf{r}'(t)|} |\mathbf{r}'(t)| dt\\
+
+							&=& \displaystyle\int_a^b \langle F_1(x(t),y(t)), F_2(x(t),y(t))\rangle\cdot  \langle y'(t), -x'(t) \rangle  dt\\
+							&=& \displaystyle\int_a^b  F_1(x(t),y(t))y'(t) -  F_2(x(t),y(t))x'(t) dt\\
+							
+							&=& \displaystyle\int_{\partial R}   -  F_2(x,y)dx + F_1(x,y)dy\\
+							&=& \displaystyle\iint_{ R}  \frac{\partial F_1}{\partial x}  -  (-\frac{\partial F_2}{\partial y}) dA = \iint_R \frac{\partial F_1}{\partial x} + \frac{\partial F_2}{\partial y} dA= \iint_R \nabla \cdot F dA.\\
+						\end{array}
+						\]
+
+						</p>
+
+
+					</section>
+
+
+
+
+
+				</section>
+
+
 				
-
-
-
-
-				
-
-
 
 
 
