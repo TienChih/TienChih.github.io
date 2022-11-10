@@ -176,7 +176,7 @@
 							Consider the unit square \(D=[0,1]\times[0,1]\) (in \(uv\) coordinates).  Describe the image \(T(D)\) in the \(xy\)-plane.
 						</p>
 
-						<p style="font-size: 25px;" class="fragment">
+						<p style="font-size: 25px;">
 							<iframe src="https://www.desmos.com/calculator/nwqho2oavk" width="100%" height="450" style="border: 1px solid #ccc" frameborder=0></iframe>
 
 							What is the area of \(T(D\))?  (Hint: How might a cross-product be useful here?)
@@ -252,14 +252,14 @@
 							</p>
 
 							<p style="font-size: 25px;">
-								Let \(D\) be the rectangle \(D=[u_0, u_0+d_u]\times[v_0\times t_v]\).
+								Let \(D\) be the rectangle \(D=[u_0, u_0+d_u]\times[v_0, v_0+d_v]\).
 							</p>
 
 						</div>
 
 						<div class="fragment">
 						<p style="font-size: 25px;" >
-								If \(T(u_0, v_0)=(x_0, y_0)\) Use local linear approximation to estimate \[T(u_0+du, v_0), T(u_0+du, v_0+dv), T(u_0, v_0+dv)\] in terms of \(\frac{dx}{du}, \frac{dx}{dv}, \frac{dy}{du}, \frac{dy}{dv}.\)
+								If  \(T(u,v)=(x,y)\) where \(T(u_0, v_0)=(x_0, y_0)\) Use local linear approximation to estimate \[T(u_0+du, v_0), T(u_0+du, v_0+dv), T(u_0, v_0+dv)\] in terms of \(\frac{dx}{du}, \frac{dx}{dv}, \frac{dy}{du}, \frac{dy}{dv}.\)
 						</p>
 						</div>
 
@@ -278,7 +278,7 @@
 
 						<div class="r-frame">
 							<p style="font-size: 30px;">
-							Let \(R:\mathbb{R}^2\to \mathbb{R}^2\) where \(T(u,v)=T(x(u,v), y(u,v))\), and \(T\) is differentiable.
+							Let \(R:\mathbb{R}^2\to \mathbb{R}^2\) where \(T(u,v)=(x(u,v), y(u,v))\), and \(T\) is differentiable.
 							</p>
 
 							<p style="font-size: 30px;">
@@ -305,7 +305,7 @@
 
 						<div class="r-frame">
 							<p style="font-size: 30px;">
-							Let \(R:\mathbb{R}^2\to \mathbb{R}^2\) where \(T(u,v)=T(x(u,v), y(u,v))\), and \(T\) is differentiable.
+							Let \(R:\mathbb{R}^2\to \mathbb{R}^2\) where \(T(u,v)=(x(u,v), y(u,v))\), and \(T\) is differentiable.
 							</p>
 
 							<p style="font-size: 30px;">
@@ -588,7 +588,7 @@
 					</div>
 
 					<p style="font-size: 25px;" >
-						Consider \[\iint_{D^*} \cos(x^2+y^2) \left| \frac{\partial(x,y)}{\partial(r,\theta)}\right| dudv.\]
+						Consider \[\iint_{D^*} \cos(x^2+y^2) \left| \frac{\partial(x,y)}{\partial(r,\theta)}\right| drd\theta.\]
 
 						Simplify and then rewrite in terms of just \(r, \theta\).
 					</p>
@@ -630,6 +630,167 @@
 								Hint 2: Make sure you don't overlap the same region twice!
 					</p>
 				</section>
+			</section>
+
+
+
+			<section>
+
+				<section data-auto-animate>
+					<h4>3d Jacobian</h4>
+
+						<div class="r-frame">
+							<p style="font-size: 30px;">
+							Let \(R:\mathbb{R}^3\to \mathbb{R}^3\) where \(T(u,v, w)=(x(u,v,w), y(u,v,w), z(u,v,w))\), and \(T\) is differentiable.
+							</p>
+
+							<p style="font-size: 30px;">
+							The <strong>Jacobian</strong> of \(T\) is:
+
+							\[\frac{\partial(x,y, z)}{\partial(u,v, w)}:=\text{det}DT(u,v)=\text{det}
+							\begin{bmatrix} 
+							\frac{\partial x}{\partial u} &  \frac{\partial x}{\partial v} &  \frac{\partial x}{\partial w} \\
+							\frac{\partial y}{\partial u} &  \frac{\partial y}{\partial v} &  \frac{\partial y}{\partial w} \\
+							\frac{\partial z}{\partial u} &  \frac{\partial z}{\partial v} &  \frac{\partial z}{\partial w}
+							\end{bmatrix}.\]
+							
+							</p>
+
+							
+
+							
+
+						</div>
+						
+
+
+
+					</section>
+
+
+					<section data-auto-animate>
+						<h4>Cylindrical</h4>
+
+						<div class="r-frame">
+							<p style="font-size: 30px;">
+							Consider \(\begin{cases} x = r\cos(\theta) \\ y=r\sin(\theta) \\ z=z  \end{cases}\).  Then
+							</p>
+
+							<p style="font-size: 30px;">
+							
+
+							\[dV = dxdydz = \left|\text{det}
+							\begin{bmatrix} 
+							\cos(\theta) &  -r\sin(\theta) &  0\\
+							\sin(\theta) &  r\cos(\theta) &  0 \\
+							0 &  0 &  1
+							\end{bmatrix}\right|drd\theta dz = r\, drd\theta  dz.\]
+							
+							</p>
+
+							
+
+							
+
+						</div>
+						
+
+
+
+					</section>
+
+
+
+					<section data-auto-animate>
+						<h4>Cylindrical</h4>
+
+						<div class="r-frame">
+							<p style="font-size: 30px;">
+							Let \(R\) be the region \(x^2+y^2+4z^2\leq 16, f(x,y,z)=z^2\).   Then using:
+							
+							
+
+							\[dV = dxdydz =   r\, drd\theta  dz\]
+
+							rewrite \(\displaystyle \iiint_R (z^2) dV\) in cylindrical coordinates.
+
+
+							
+							</p>
+
+							
+
+							
+
+						</div>
+						
+
+
+
+					</section>
+
+
+					<section data-auto-animate>
+						<h4>Spherical</h4>
+
+						<div class="r-frame">
+							<p style="font-size: 30px;">
+							Consider \(\begin{cases} x = \rho\sin(\phi)\cos(\theta) \\ y=\rho\sin(\phi)\sin(\theta) \\ z=\rho\cos(\phi)  \end{cases}\).  Then
+							</p>
+
+							<p style="font-size: 30px;">
+							
+
+							\[dV = dxdydz  \] \[ =\left|\text{det}
+							\begin{bmatrix} 
+							\sin(\phi)\cos(\theta) &  -\rho\sin(\phi)\sin(\theta) &  \rho\cos(\phi)\cos(\theta)\\
+							\sin(\phi)\sin(\theta) &  \rho\sin(\phi)\cos(\theta) &  \rho\cos(\phi)\sin(\theta) \\
+							\cos(\phi) &  0 &  -\rho\sin(\phi)
+							\end{bmatrix}\right|d\rho d\theta d\phi\] \[  = \rho^2\sin(\phi)\, d\rho d\theta d\phi.\]
+							
+							</p>
+
+							
+
+							
+
+						</div>
+						
+
+
+
+					</section>
+
+
+					<section data-auto-animate>
+						<h4>Cylindrical</h4>
+
+						<div class="r-frame">
+							<p style="font-size: 30px;">
+							Let \(R\) be the region \(x^2+y^2+z^2\leq 16, f(x,y,z)=\frac{1}{\sqrt{x^2+y^2+z^2}}\).   Then using:
+							
+							
+
+							\[dV = dxdydz =    \rho^2\sin(\phi)\, d\rho d\theta d\phi\]
+
+							rewrite \(\displaystyle \iiint_R \frac{1}{\sqrt{x^2+y^2+z^2}} dV\) in spherical coordinates.
+
+
+							
+							</p>
+
+							
+
+							
+
+						</div>
+						
+
+
+
+					</section>
+
+
 			</section>
 
 

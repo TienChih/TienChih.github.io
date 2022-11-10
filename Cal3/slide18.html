@@ -1,0 +1,414 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>reveal.js</title>
+
+		<link rel="stylesheet" href="dist/reset.css">
+		<link rel="stylesheet" href="dist/reveal.css">
+		<link rel="stylesheet" href="dist/theme/white.css">
+		<link rel="stylesheet" href="plugin/chalkboard/style.css">
+		<link rel="stylesheet" href="plugin/customcontrols/style.css">
+
+
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+
+
+
+		<!-- Theme used for syntax highlighted code -->
+		<link rel="stylesheet" href="plugin/highlight/monokai.css">
+		<style>
+			.container{
+   				 display: flex;
+			}
+			.col{
+    			flex: 1;
+			}
+		</style>
+			<script async defer src="https://buttons.github.io/buttons.js"></script>
+
+		<script src="plugin/menu/menu.js"></script>
+
+		<script src="https://sagecell.sagemath.org/static/embedded_sagecell.js"></script>
+  
+ 	 <script>sagecell.makeSagecell({"inputLocation": ".sage"});</script>
+
+
+
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				
+				<section>
+					<h2>Take any path you want</h2>
+					<h4>M 211</h4>
+					
+					<h4>
+						Oxford College of Emory University <a href="https://app.oxford.emory.edu/WebApps/Directory/index.cfm/view/9984" target="_blank">Tien Chih</a>
+					</h4>
+				</section>
+
+				
+
+
+				<section>
+					
+				<section data-auto-animate>
+					
+
+					<div data-id="problem" >
+						<p style="font-size: 25px;" class="r-frame">
+							Sketch three different paths from \( (-4,4) \) to \((4,4)\) with different vector path integrals or show why that can't be done.
+
+							
+						</p>
+
+						<img src="img/NotCon1.png" width="40%">
+						
+					</div>
+
+					
+
+					
+
+				</section>
+
+
+				<section data-auto-animate>
+					
+
+					<div data-id="problem" >
+						<p style="font-size: 25px;" class="r-frame">
+							Sketch three different paths from \( (-4,4) \) to \((4,4)\) with different vector path integrals or show why that can't be done.
+
+							
+						</p>
+
+						<img src="img/NotCon2.png" width="40%">
+						
+					</div>
+
+					
+
+					
+
+				</section>
+
+				<section data-auto-animate>
+					
+
+					<div data-id="problem" >
+						<p style="font-size: 25px;" class="r-frame">
+							Sketch three different paths from \( (-4,4) \) to \((4,4)\) with different vector path integrals or show why that can't be done.
+
+							
+						</p>
+
+						<img src="img/Con1.png" width="40%">
+						
+					</div>
+
+					
+
+					
+
+				</section>
+
+
+
+
+				</section>
+
+
+
+
+
+
+
+				<section>
+					<section data-auto-animate>
+						<div data-id="problem" >
+						<p style="font-size: 25px;">
+							Suppose \(F\) is a vector field with 0 circulation density.  Consider the path integral \(\int_{C_1}F\cdot ds\).
+
+							
+						</p>
+
+						<img src="img/ConPath1.svg" width="40%">
+						
+					</div>
+					</section>
+
+					<section data-auto-animate>
+						<div data-id="problem" >
+						<p style="font-size: 25px;" >
+							What does Greens Theorem say about \(\int_{C_1}F\cdot ds+ \int_{C_2}F\cdot ds\)?
+
+							
+						</p>
+
+						<img src="img/ConPath2.svg" width="40%">
+						
+					</div>
+					</section>
+
+					<section data-auto-animate>
+						<div data-id="problem" >
+						<p style="font-size: 25px;" >
+							What is the relationship between \(\int_{C_1}F\cdot ds, \int_{C_2}F\cdot ds\)?
+
+							
+						</p>
+
+						<img src="img/ConPath2.svg" width="40%">
+						
+					</div>
+					</section>
+
+					<section data-auto-animate>
+						<div data-id="problem" >
+						<p style="font-size: 25px;" >
+							Draw some \(C_3\) from \(P_1, P_2\).  How do \(\int_{C_1}F\cdot ds, \int_{C_3}F\cdot ds\) compare?
+
+							
+						</p>
+
+						<img src="img/ConPath1.svg" width="40%">
+						
+					</div>
+					</section>
+					
+				</section>
+
+
+				<section>
+					<section data-auto-animate>
+						<div data-id="problem" >
+						<p style="font-size: 25px;" class="r-frame">
+							If \(\nabla\times F=0\) then if \(\mathbf{x}_1, \mathbf{x}_2\) are paths with the same start and endpoint.  We have: \[\int_{\mathbf{x}_1} F\cdot ds = \int_{\mathbf{x}_2} F\cdot ds.\] 
+							
+
+							
+						</p>
+
+						<img src="img/ConPath1.svg" width="40%">
+						
+					</div>
+
+					<p style="font-size: 25px;">
+							We say \(F\) is <strong>path-independent</strong>.
+							
+
+							
+						</p>
+					</section>
+
+
+					<section data-auto-animate>
+						<div data-id="problem" class="r-frame">
+						<p style="font-size: 25px;" >
+							Suppose \(F=\nabla f\).  We say \(F\) is a <strong>gradient field</strong> or <strong>conservative vector field</strong>.  Let \(\mathbf{x}:[a,b]\to \mathbb{R}^n\) be \(C^1\) where \(\mathbf{x}(a)=A, \mathbf{x}(b)=B.\)
+							
+
+							
+						</p>
+
+						
+						
+					</div>
+
+					<p style="font-size: 25px;" class="fragment">
+							Then: \[ \int_{\mathbf{x}} F\cdot ds= \int_{\mathbf{x}} \nabla f\cdot ds= \int_{a}^b \nabla f(\mathbf{x}(t))\cdot \mathbf{x}'(t)dt\]
+							
+					</p>
+
+					<p style="font-size: 25px;" class="fragment">
+							 \[= \int_a^b \frac{d}{dt}[f(\mathbf{x}(t))]dt\]
+							
+					</p>
+
+					<p style="font-size: 25px;" class="fragment">
+							 \[=f(\mathbf{x}(b))-f(\mathbf{x}(a))=f(B)-f(A).\]
+							
+					</p>
+				</section>
+
+
+				<section data-auto-animate>
+					<h4>Fundamental Theorem of Path Integrals</h4>
+						<div data-id="problem" class="r-frame">
+						<p style="font-size: 25px;" >
+							Suppose Let \(F\) be a vector field, then \(\nabla \times F=0\) if and only if there is a potential function \(f\) such that \(F=\nabla f\), if and only if \(F\) is path independent.  Moreover given any \(\mathbf{x}:[a,b]\to \mathbb{R}^n\) be \(C^1\) where \(\mathbf{x}(a)=A, \mathbf{x}(b)=B\), we have:
+							
+							\[ \int_{\mathbf{x}} F\cdot ds= f(B)-f(A).\]
+							
+						</p>
+							
+
+						
+						
+					</div>
+				</section>
+
+
+				</section>
+
+
+				<section>
+
+					<section data-auto-animate>
+						<div data-id="problem" class="r-frame">
+						<p style="font-size: 25px;" >
+							Let \[F(x,y) = (2x\cos(y), x^2\sin(y) +\cos(y)),\]\[ G(x,y)=(2x\cos(y)+1, -x^2\sin(y) +\cos(y)).\]  Which of these vector fields is conservative (has 0 circulation density)?
+							
+
+							
+						</p>
+
+						
+						
+					</div>
+
+					<p style="font-size: 25px;" class="fragment">
+							Find \(\displaystyle \int 2x\cos(y)+1 dx, \int -x^2\sin(y) +\cos(y) dy\).
+							
+					</p>
+
+					<p style="font-size: 25px;" class="fragment">
+							 Find a \(g(x,y)\) so that \(\nabla g = G\).
+							
+					</p>
+
+					<p style="font-size: 25px;" class="fragment">
+							 Let \(\mathbf{x}_1:[0,10]\to \mathbb{R}^2\) be defined as: \(\mathbf{x}_1(t) = (t+1, 0).\)  Find \(\displaystyle \int_{\mathbf{x}_1}G\cdot ds\).
+							
+					
+							</p>
+					<p style="font-size: 25px;" class="fragment">
+							 Let \(\mathbf{x}_2:[0,10]\to \mathbb{R}^2\) be defined as: \[\mathbf{x}_2(t) = ((t^2-8t+1)\cos(2\pi t), (t^{26}-4t^{18}+19t^{12})e^{t^8-19t^5+2}\arctan(3t)\sin(2\pi t)).\]  Find \(\displaystyle \int_{\mathbf{x}_2}G\cdot ds\).
+							
+					</p>
+				</section>
+
+
+				</section>
+
+
+				
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+					
+				
+			</div>
+		</div>
+
+		<script src="dist/reveal.js"></script>
+		<script src="plugin/notes/notes.js"></script>
+		<script src="plugin/markdown/markdown.js"></script>
+		<script src="plugin/highlight/highlight.js"></script>
+		<script>
+			// More info about initialization & config:
+			// - https://revealjs.com/initialization/
+			// - https://revealjs.com/config/
+			Reveal.initialize({
+				hash: true,
+
+				// Learn about plugins: https://revealjs.com/plugins/
+				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
+			});
+		</script>
+		<script src="plugin/math/math.js"></script>
+		<script src="plugin/chalkboard/plugin.js"></script>
+		<script src="plugin/customcontrols/plugin.js"></script>
+
+
+
+	<script>
+  	Reveal.initialize({
+		math: {
+			mathjax: 'https://cdn.jsdelivr.net/gh/mathjax/mathjax@2.7.8/MathJax.js',
+			config: 'TeX-AMS_HTML-full',
+			// pass other options into `MathJax.Hub.Config()`
+			TeX: { Macros: { RR: "{\\bf R}" } }
+		},
+
+		chalkboard: {
+        boardmarkerWidth: 3,
+        chalkWidth: 7,
+        chalkEffect: 1.0,
+        storage: null,
+        src: null,
+        readOnly: undefined,
+        transition: 800,
+        theme: "chalkboard",
+        background: [ 'rgba(127,127,127,.1)' , path + 'img/blackboard.png' ],
+        grid: { color: 'rgb(50,50,10,0.5)', distance: 80, width: 2},
+        eraser: { src: path + 'img/sponge.png', radius: 20},
+        boardmarkers : [
+                { color: 'rgba(100,100,100,1)', cursor: 'url(' + path + 'img/boardmarker-black.png), auto'},
+                { color: 'rgba(30,144,255, 1)', cursor: 'url(' + path + 'img/boardmarker-blue.png), auto'},
+                { color: 'rgba(220,20,60,1)', cursor: 'url(' + path + 'img/boardmarker-red.png), auto'},
+                { color: 'rgba(50,205,50,1)', cursor: 'url(' + path + 'img/boardmarker-green.png), auto'},
+                { color: 'rgba(255,140,0,1)', cursor: 'url(' + path + 'img/boardmarker-orange.png), auto'},
+                { color: 'rgba(150,0,20150,1)', cursor: 'url(' + path + 'img/boardmarker-purple.png), auto'},
+                { color: 'rgba(255,220,0,1)', cursor: 'url(' + path + 'img/boardmarker-yellow.png), auto'}
+        ],
+        chalks: [
+                { color: 'rgba(255,255,255,0.5)', cursor: 'url(' + path + 'img/chalk-white.png), auto'},
+                { color: 'rgba(96, 154, 244, 0.5)', cursor: 'url(' + path + 'img/chalk-blue.png), auto'},
+                { color: 'rgba(237, 20, 28, 0.5)', cursor: 'url(' + path + 'img/chalk-red.png), auto'},
+                { color: 'rgba(20, 237, 28, 0.5)', cursor: 'url(' + path + 'img/chalk-green.png), auto'},
+                { color: 'rgba(220, 133, 41, 0.5)', cursor: 'url(' + path + 'img/chalk-orange.png), auto'},
+                { color: 'rgba(220,0,220,0.5)', cursor: 'url(' + path + 'img/chalk-purple.png), auto'},
+                { color: 'rgba(255,220,0,0.5)', cursor: 'url(' + path + 'img/chalk-yellow.png), auto'}
+        ]
+    },
+    customcontrols: {
+  		controls: [
+  			{ icon: '<i class="fa fa-pen-square"></i>',
+  			  title: 'Toggle chalkboard (B)',
+  			  action: 'RevealChalkboard.toggleChalkboard();'
+  			},
+  			{ icon: '<i class="fa fa-pen"></i>',
+  			  title: 'Toggle notes canvas (C)',
+  			  action: 'RevealChalkboard.toggleNotesCanvas();'
+  			}
+  		]
+    },
+
+		plugins: [ RevealMath, RevealChalkboard, RevealCustomControls, RevealMenu  ]
+		});
+	</script>
+
+	</body>
+</html>

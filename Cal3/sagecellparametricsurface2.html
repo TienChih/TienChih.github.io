@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang=en>
+<head>
+<meta charset=utf-8>
+<title>blah</title>
+<script src="https://sagecell.sagemath.org/static/embedded_sagecell.js"></script>
+  
+ 	 <script>sagecell.makeSagecell({"inputLocation": ".sage"});</script>
+</head>
+<body>
+<p>
+<font size="+2">
+<div class="sage">
+<script type="text/x-sage">
+var('s t x y z')
+PS = parametric_plot3d((FIXME, FIXME, FIXME ), (s,FIXME, FIXME), (t,FIXME,FIXME), mesh=True, opacity=0.6)
+IP = implicit_plot3d(x+y^2+z^2==9, (x,0,9), (y,-3,3), (z,-3,3), opacity=0.6, color="red")
+
+PS+IP
+
+
+</script></div>
+</font>
+</p>
+</body>
+</html>
