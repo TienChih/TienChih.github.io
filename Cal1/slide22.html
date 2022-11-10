@@ -61,7 +61,7 @@
 						
 						<div class="r-frame" >
 							<p style="font-size: 28px;" >
-								Given a continuous function \(f(x)\), let \(F(x)=\displaystyle\int_0^t f(t) dt\).<br>
+								Given a continuous function \(f(x)\), let \(F(x)=\displaystyle\int_0^x f(t) dt\).<br>
 								
 
 							</p>
@@ -180,7 +180,7 @@
 						
 						
 						<p style="font-size: 28px;" class="fragment">
-							\(\displaystyle \lim_{h\to 0} m(h) = f(x) = \displaystyle \lim_{h\to 0} M(h)\) since \(f(x)\) is continuous.
+							\(\displaystyle \lim_{h\to 0} m(h) = f(x) = \displaystyle \lim_{h\to 0} M(h)\)  since \(f(x)\) is continuous.
 
 						</p>
 
@@ -245,7 +245,7 @@
 							<p style="font-size: 28px;" >
 							\[
 							\begin{array}{rcl}
-							F'(x) &=&\displaystyle\lim_{h\to 0}\frac{F(x+h)-F(h)}{h} \\
+							F'(x) &=&\displaystyle\lim_{h\to 0}\frac{F(x+h)-F(x)}{h} \\
 							
 							
 							\end{array}
@@ -264,7 +264,7 @@
 							<p style="font-size: 28px;" >
 							\[
 							\begin{array}{rcl}
-							F'(x) &=&\displaystyle\lim_{h\to 0}\frac{F(x+h)-F(h)}{h} \\
+							F'(x) &=&\displaystyle\lim_{h\to 0}\frac{F(x+h)-F(x)}{h} \\
 							&=&\displaystyle\lim_{h\to 0}\frac{1}{h} \int_x^{x+h}f(t)dt \\
 							
 							\end{array}
@@ -282,7 +282,7 @@
 							<p style="font-size: 28px;" >
 							\[
 							\begin{array}{rcl}
-							F'(x) &=&\displaystyle\lim_{h\to 0}\frac{F(x+h)-F(h)}{h} \\
+							F'(x) &=&\displaystyle\lim_{h\to 0}\frac{F(x+h)-F(x)}{h} \\
 							&=&\displaystyle\lim_{h\to 0}\frac{1}{h} \int_x^{x+h}f(t)dt \\
 							&=&f(x) \\
 							\end{array}
