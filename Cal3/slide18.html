@@ -241,7 +241,7 @@
 					<h4>Fundamental Theorem of Path Integrals</h4>
 						<div data-id="problem" class="r-frame">
 						<p style="font-size: 25px;" >
-							Suppose Let \(F\) be a vector field, then \(\nabla \times F=0\) if and only if there is a potential function \(f\) such that \(F=\nabla f\), if and only if \(F\) is path independent.  Moreover given any \(\mathbf{x}:[a,b]\to \mathbb{R}^n\) be \(C^1\) where \(\mathbf{x}(a)=A, \mathbf{x}(b)=B\), we have:
+							 Let \(F\) be a \(C^1\) vector field with a simply connected domain in \(\mathbb{R}^2\) or  \(\mathbb{R}^3\), then \(\nabla \times F=0\) if and only if there is a potential function \(f\) such that \(F=\nabla f\), if and only if \(F\) is path independent.  Moreover given any \(\mathbf{x}:[a,b]\to \mathbb{R}^n\) be \(C^1\) where \(\mathbf{x}(a)=A, \mathbf{x}(b)=B\), we have:
 							
 							\[ \int_{\mathbf{x}} F\cdot ds= f(B)-f(A).\]
 							
@@ -294,6 +294,45 @@
 				</section>
 
 
+				</section>
+
+
+				<section>
+					<section data-auto-animate>
+						<div class="r-frame">
+							<p style="font-size: 25px;" >
+								Let \(F(x,y) = \displaystyle \left\langle \frac{-y}{x^2+y^2}, \frac{x}{x^2+y^2}  \right\rangle\).
+							</p>
+						</div>
+
+						<p style="font-size: 25px;" class="fragment">
+							Compute the circulation density of \(F(x,y)\).
+						</p>
+
+						<p style="font-size: 25px;" class="fragment">
+							Find \(\displaystyle \nabla\left(\arctan\left(y\over x\right)\right)\).
+						</p>
+
+						<p style="font-size: 25px;" class="fragment">
+							Directly compute \(\displaystyle \int_C F\cdot ds \) where \(C\) is the curve parameterized by \(r(t)=(\cos(t), \sin(t)), 0\leq t \leq 2\pi\).
+						</p>
+
+						<p style="font-size: 25px;" class="fragment">
+							Whats up with that?
+						</p>
+
+
+					</section>
+
+					<section data-auto-animate>
+						<iframe src="https://www.math3d.org/CPGwD4UvW" width="90%" height="600" style="border: 1px solid #ccc" frameborder=0></iframe>
+
+						<p style="font-size: 25px;">
+							What exactly is the domain of \(F(x,y) = \displaystyle \left\langle \frac{-y}{x^2+y^2}, \frac{x}{x^2+y^2}  \right\rangle\)?
+						</p>
+
+
+					</section>
 				</section>
 
 
