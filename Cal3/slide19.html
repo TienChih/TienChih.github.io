@@ -105,7 +105,7 @@
 						
 					</div>
 
-					<iframe src="sagecellparametricsurface1.html" width="80%" height="500" style="border: 1px solid #ccc" frameborder=0></iframe>
+					<iframe src="https://www.math3d.org/gmjXMvfMj" width="100%" height="500" style="border: 1px solid #ccc" frameborder=0></iframe>
 
 					
 
@@ -159,7 +159,7 @@
 						
 					</div>
 
-					<iframe src="sagecellparametricsurface1.html" width="80%" height="500" style="border: 1px solid #ccc" frameborder=0></iframe>
+					<iframe src="https://www.math3d.org/Pi21NKNAt" width="100%" height="500" style="border: 1px solid #ccc" frameborder=0></iframe>
 
 					
 
@@ -214,7 +214,7 @@
 						
 					</div>
 
-					<iframe src="sagecellparametricsurface1.html" width="80%" height="500" style="border: 1px solid #ccc" frameborder=0></iframe>
+					<iframe src="https://www.math3d.org/VqhUbU6wJ" width="100%" height="500" style="border: 1px solid #ccc" frameborder=0></iframe>
 
 					
 
@@ -254,7 +254,35 @@
 						
 					</div>
 
-					<iframe src="sagecellparametricsurface2.html" width="80%" height="500" style="border: 1px solid #ccc" frameborder=0></iframe>
+					<iframe src="https://www.math3d.org/VqhUbU6wJ" width="100%" height="500" style="border: 1px solid #ccc" frameborder=0></iframe>
+
+					
+
+				</section>
+
+					<section data-auto-animate>
+						<p style="font-size: 25px;" class="r-frame">
+							Parameterize a sphere centered at the origin with radius 4.
+
+							
+						</p>
+
+					</section>
+
+					<section data-auto-animate>
+					
+
+					<div data-id="problem" >
+						<p style="font-size: 25px;" class="r-frame">
+							Test it out!
+
+							
+						</p>
+						
+						
+					</div>
+
+					<iframe src="https://www.math3d.org/VqhUbU6wJ" width="100%" height="500" style="border: 1px solid #ccc" frameborder=0></iframe>
 
 					
 
@@ -303,7 +331,7 @@
 							What measures the size of a \(d_s\times d_t\) rectangle after mapping it to the \(xyz\)-space?
 						</p>
 
-						<iframe src="sagecellparametricsurface1.html" width="80%" height="500" style="border: 1px solid #ccc" frameborder=0></iframe>
+						<iframe src="https://www.math3d.org/VqhUbU6wJ" width="100%" height="500" style="border: 1px solid #ccc" frameborder=0></iframe>
 
 
 					</section>
@@ -313,16 +341,16 @@
 
 
 							<p style="font-size: 25px;">
-								Let \(X:\mathbb{R}^2\to\mathbb{R}^3\) be \(C^1\).  Then the <strong>surface area</strong> of the surface \(S\) defined by \(X(s,t), s_0\leq s \leq 1, t_0\leq t \leq t_1\) is determined by:
+								Let \(\mathbf{X}:\mathbb{R}^2\to\mathbb{R}^3\) be \(C^1\).  Then the <strong>surface area</strong> of the surface \(S\) defined by \(\mathbf{X}(s,t), (s,t)\in D\) is determined by:
 
-								\[\iint_{[s_0, s_1]\times [t_0, t_1]} \|T_s(s,t)\times T_t(s,t)\| dsdt\]
+								\[\iint_{D} \|\mathbf{T}_s(s,t)\times \mathbf{T}_t(s,t)\| dsdt\]
 							</p>
 						</div>
 
 						<p style="font-size: 25px;" class="fragment">
 								
 
-								If \(N(s,t):= T_s(s,t)\times T_t(s,t) \)  and \(X(s,t)=(x(s,t), y(s,t), z(s,t))\) then: \[\|N(s,t)\| = \sqrt{ \left( \frac{\partial(x, y)}{\partial(s,t)}\right)^2 + \left( \frac{\partial(x, z)}{\partial(s,t)}\right)^2 +\left( \frac{\partial(y, z)}{\partial(s,t)}\right)^2 }\]
+								If \(\mathbf{N}(s,t):= \mathbf{T}_s(s,t)\times \mathbf{T}_t(s,t) \)  and \(\mathbf{X}(s,t)=(\mathbf{x}(s,t), y(s,t), z(s,t))\) then: \[\|\mathbf{N}(s,t)\| = \sqrt{ \left( \frac{\partial(x, y)}{\partial(s,t)}\right)^2 + \left( \frac{\partial(x, z)}{\partial(s,t)}\right)^2 +\left( \frac{\partial(y, z)}{\partial(s,t)}\right)^2 }\]
 							</p>
 
 					</section>
@@ -332,26 +360,58 @@
 
 
 							<p style="font-size: 25px;">
-								  Let \(f:\mathbb{R}^3\to \mathbb{R}\).  Then the integral of \(f\) over the surface \(X(s,t), s_0\leq s \leq 1, t_0\leq t \leq t_1\) is determined by:
+								  Let \(f:\mathbb{R}^3\to \mathbb{R}\).  Then the integral of \(f\) over the surface \(\mathbf{X}(s,t), (s,t)\in D\) is determined by:
 
-								\[\iint_{[s_0, s_1]\times [t_0, t_1]} f(X(s,t)) \|T_s(s,t)\times T_t(s,t)\| dsdt \]\[= \iint_{[s_0, s_1]\times [t_0, t_1]} f(X(s,t)) \|N(s,t)\| dsdt\]
+								\[\iint_{D} f(\mathbf{X}(s,t)) \|\mathbf{T}_s(s,t)\times \mathbf{T}_t(s,t)\| dsdt \]\[= \iint_{D} f(\mathbf{X}(s,t)) \|\mathbf{N}(s,t)\| dsdt\]
 							</p>
 						</div>
 
 					</section>
 
+
+
 					<section>
 						<div class="r-frame">
 
 
 							<p style="font-size: 25px;">
-								  Integrate \(f(x,y,z)=z^3\) over the sphere \(X(s,t) = (2\cos(s)\sin(t), 2\sin(s)\sin(t), 2\cos(t)), s\in [0, 2\pi], t\in[0,\pi]\).
+								  Integrate \(f(x,y,z)=z\) over the surface \(\mathbf{X}(s,t) = (\sqrt{t}\cos(s), \sqrt{t}\sin(s), t), s\in [0, 2\pi], t\in[0,4]\).
 							</p>
 						</div>
 
 						<p style="font-size: 25px;">
-							What is \(N(s,t)\)?
+							What is \(\mathbf{N}(s,t)\)?
 						</p>
+
+					</section>
+
+					<section>
+						<div class="r-frame">
+
+
+							<p style="font-size: 25px;">
+								  Integrate \(f(x,y,z)=z\) over the surface \(\mathbf{X}(s,t) = (\sqrt{t}\cos(s), \sqrt{t}\sin(s), t), s\in [0, 2\pi], t\in[0,4]\).
+							</p>
+						</div>
+
+						<iframe src="https://www.math3d.org/6WRtg6F9o" width="100%" height="500" style="border: 1px solid #ccc" frameborder=0></iframe>
+
+						
+
+					</section>
+
+					<section>
+						<div class="r-frame">
+
+
+							<p style="font-size: 25px;">
+								  Consider the surface \(z=f(x,y), (x,y)\in D\).  What are \(\mathbf{T}_x, \mathbf{T}_y, \mathbf{T}_x\times \mathbf{T}_y\)?
+							</p>
+						</div>
+
+						
+
+						
 
 					</section>
 
@@ -375,23 +435,116 @@
 
 					</section>
 
+					<section data-auto-animate>
+						<div class="r-frame" id="problem">
+
+
+							<p style="font-size: 25px;">
+								  Recall: the integral of \(f\) over the surface \(\mathbf{X}(s,t), (s,t)\in D\) is determined by:
+
+								\[\iint_{D} f(\mathbf{X}(s,t)) \|\mathbf{T}_s(s,t)\times \mathbf{T}_t(s,t)\| dsdt.\]
+							</p>
+
+							
+						</div>
+
+						
+
+					</section>
+
+					<section data-auto-animate>
+						<div class="r-frame" id="problem">
+
+
+							<p style="font-size: 25px;">
+								  Let \(\mathbf{F}:\mathbb{R}^3\to \mathbb{R}^3\) be a vector field. What does
+
+								\[\iint_{D} \left( \mathbf{F}(\mathbf{X}(s,t)) \cdot \frac{\mathbf{T}_s(s,t)\times \mathbf{T}_t(s,t)}{\|\mathbf{T}_s(s,t)\times \mathbf{T}_t(s,t)\|} \right) \|\mathbf{T}_s(s,t)\times \mathbf{T}_t(s,t)\| dsdt\] measure?
+							</p>
+
+							
+						</div>
+
+						
+
+					</section>
+
 					<section>
 						<div class="r-frame">
 
 
 							<p style="font-size: 25px;">
-								  Let  \(F:\mathbb{R}^3\to \mathbb{R}^3\) be a vector field.  Then the <strong> vector surface integral </strong> of \(F\) over the surface \(X\) is determined by:
-
-								\[ \iint_X F\cdot dS =   \iint_{[s_0, s_1]\times [t_0, t_1]} F(X(s,t)) \cdot N(s,t) dsdt.\]
+								  \[\iint_{D} \left( \mathbf{F}(\mathbf{X}(s,t)) \cdot \frac{\mathbf{T}_s(s,t)\times \mathbf{T}_t(s,t)}{\|\mathbf{T}_s(s,t)\times \mathbf{T}_t(s,t)\|} \right) \|\mathbf{T}_s(s,t)\times \mathbf{T}_t(s,t)\| dsdt\]
 							</p>
 						</div>
+
+						<iframe src="https://www.math3d.org/RAPxlpPIq" width="100%" height="500" style="border: 1px solid #ccc" frameborder=0></iframe>
+
+						
+
+					</section>
+
+					<section>
+						<div class="r-frame">
+
+
+							<p style="font-size: 25px;">
+								  Let  \(\mathbf{F}:\mathbb{R}^3\to \mathbb{R}^3\) be a vector field.  Suppose the surface \(S\) parameterized is \(\mathbf{X}(s,t)\). Then the <strong> vector surface integral </strong> of \(F\) over the surface \(S\) is determined by:
+
+								\[ \iint_\mathbf{X} F\cdot d\mathbf{S} =   \iint_{D} F(\mathbf{X}(s,t)) \cdot \mathbf{N}(s,t) dsdt.\]
+							</p>
+						</div>
+
+					</section>
+
+					<section>
+						<div class="r-frame">
+
+
+							<p style="font-size: 25px;">
+								  Let  \(\mathbf{F}(x,y,z) = \langle x, y, z-2y\) and \(S\) be the helicoid parameterized by \(\mathbf{X}(s,t)=(s\cos(t), s\sin(t), t), 0\leq s\leq 1, 0\leq t \leq 2\pi\).  Find \[\iint_\mathbf{X} F\cdot d\mathbf{S}.\]
+							</p>
+						</div>
+
+					</section>
+
+					<section>
+						<div class="r-frame">
+
+
+							<p style="font-size: 25px;">
+								  Let  \(\mathbf{F}(x,y,z) = \langle x, y, z-2y\) and \(S\) be the helicoid parameterized by \(\mathbf{X}(s,t)=(s\cos(t), s\sin(t), t), 0\leq s\leq 1, 0\leq t \leq 2\pi\).  Find \[\iint_\mathbf{X} F\cdot d\mathbf{S}.\]
+							</p>
+						</div>
+
+						<iframe src="https://www.math3d.org/C2XlRpdMA" width="100%" height="500" style="border: 1px solid #ccc" frameborder=0></iframe>
+
+						
+
+					</section>
+
+				</section>
+
+				<section>
+					<section>
+						<div class="r-frame">
+
+
+							<p style="font-size: 25px;">
+								  What about this thing?
+							</p>
+						</div>
+
+						<iframe src="https://www.math3d.org/sEvY7rsRa" width="100%" height="500" style="border: 1px solid #ccc" frameborder=0></iframe>
+
+						
 
 					</section>
 
 				</section>
 
 
-				<section>
+				<!--<section>
 
 					<section>
 						<h4>Greens Theorem</h4>
@@ -436,7 +589,7 @@
 
 							<p style="font-size: 30px;" class="fragment">
 								  \[
-								  \iint_S \nabla \times F\cdot N(s,t) dsdt = \oint_{\partial S} F(x(t))\cdot x'(t)dt.
+								  \iint_S \nabla \times F\cdot \mathbf{N}(s,t) dsdt = \oint_{\partial S} F(x(t))\cdot x'(t)dt.
 								  \]
 							</p>
 
@@ -447,7 +600,7 @@
 					</section>
 
 
-				</section>
+				</section>-->
 
 
 				
