@@ -61,7 +61,7 @@
 
 					<div data-id="problem" >
 						<p style="font-size: 25px;" class="r-frame">
-							Consider the following vector field \(F(x,y)\) and contour \(C\), is \(\displaystyle \displaystyle \int_C F \cdot ds\) positive, negative or zero?
+							Consider the following vector field \(F(x,y)\) and contour \(C\), is \(\displaystyle \displaystyle \int_C F \cdot d\mathbf{s}\) positive, negative or zero?
 
 							
 						</p>
@@ -84,7 +84,7 @@
 
 					<div data-id="problem" >
 						<p style="font-size: 25px;" class="r-frame">
-							Consider the following vector field \(F(x,y)\) and contour \(C\), is \(\displaystyle \displaystyle \int_C F \cdot ds\) positive, negative or zero?
+							Consider the following vector field \(F(x,y)\) and contour \(C\), is \(\displaystyle \displaystyle \int_C F \cdot d\mathbf{s}\) positive, negative or zero?
 
 							
 						</p>
@@ -106,7 +106,7 @@
 
 					<div data-id="problem" >
 						<p style="font-size: 25px;" class="r-frame">
-							Consider the following vector field \(F(x,y)\) and contour \(C\), is \(\displaystyle \displaystyle \int_C F \cdot ds\) positive, negative or zero?
+							Consider the following vector field \(F(x,y)\) and contour \(C\), is \(\displaystyle \displaystyle \int_C F \cdot d\mathbf{s}\) positive, negative or zero?
 
 							
 						</p>
@@ -653,7 +653,7 @@
 						</p>
 
 						<p style="font-size: 25px;" class="fragment">
-							Let \(F(x,y)=(xy, y^2)\).  Use Green's Theorem to find \(\oint_C F_1(x,y)dx+F_2(x,y)dy.\)  (Also denoted \(\oint_C F\cdot ds.\))
+							Let \(F(x,y)=(xy, y^2)\).  Use Green's Theorem to find \(\oint_C F_1(x,y)dx+F_2(x,y)dy.\)  (Also denoted \(\oint_C F\cdot d\mathbf{s}.\))
 						</p>
 					</section>
 
@@ -758,7 +758,7 @@
 						<p style="font-size: 25px;" >
 							Then for each point on \(\partial R\), let \(\mathbf{n}\) denote the unit normal vector facing outward.  Then the contour integral of \(F\cdot \mathbf{n}\) along \(\partial R\) is equal to the integral of the divergence of \(F\) over \(R\).  Or:
 
-							\[\displaystyle \oint_{\partial R} F\cdot \mathbf{n} ds = \iint_R \frac{\partial F_1}{\partial x} + \frac{\partial F_2}{\partial y}\, dA.\]
+							\[\displaystyle \oint_{\partial R} F\cdot \mathbf{n} d\mathbf{s} = \iint_R \frac{\partial F_1}{\partial x} + \frac{\partial F_2}{\partial y}\, dA.\]
 						</p>
 
 						
@@ -806,7 +806,7 @@
 
 						\[
 						\begin{array}{rcl}
-							\displaystyle \oint_{\partial R} F\cdot \mathbf{n} ds &=& \displaystyle\displaystyle \int_a^b F(\mathbf{r}(t))\cdot \mathbf{n}(t) |\mathbf{r}'(t)| dt\\
+							\displaystyle \oint_{\partial R} F\cdot \mathbf{n} d\mathbf{s} &=& \displaystyle\displaystyle \int_a^b F(\mathbf{r}(t))\cdot \mathbf{n}(t) |\mathbf{r}'(t)| dt\\
 							&=& \displaystyle\displaystyle \int_a^b \langle F_1(x(t),y(t)), F_2(x(t),y(t))\rangle\cdot \mathbf{n}(t) |\mathbf{r}'(t)| dt\\
 
 							
@@ -829,7 +829,7 @@
 
 						\[
 						\begin{array}{rcl}
-							\displaystyle \oint_{\partial R} F\cdot \mathbf{n} ds &=& \displaystyle\displaystyle \int_a^b F(\mathbf{r}(t))\cdot \mathbf{n}(t) |\mathbf{r}'(t)| dt\\
+							\displaystyle \oint_{\partial R} F\cdot \mathbf{n} d\mathbf{s} &=& \displaystyle\displaystyle \int_a^b F(\mathbf{r}(t))\cdot \mathbf{n}(t) |\mathbf{r}'(t)| dt\\
 							&=& \displaystyle\displaystyle \int_a^b \langle F_1(x(t),y(t)), F_2(x(t),y(t))\rangle\cdot \mathbf{n}(t) |\mathbf{r}'(t)| dt\\
 							&=& \displaystyle\displaystyle \int_a^b \langle F_1(x(t),y(t)), F_2(x(t),y(t))\rangle\cdot \frac{ \langle y'(t), -x'(t) \rangle }{ |\mathbf{r}'(t)|} |\mathbf{r}'(t)| dt\\
 
@@ -852,7 +852,7 @@
 
 						\[
 						\begin{array}{rcl}
-							\displaystyle \oint_{\partial R} F\cdot \mathbf{n} ds &=& \displaystyle\displaystyle \int_a^b F(\mathbf{r}(t))\cdot \mathbf{n}(t) |\mathbf{r}'(t)| dt\\
+							\displaystyle \oint_{\partial R} F\cdot \mathbf{n} d\mathbf{s} &=& \displaystyle\displaystyle \int_a^b F(\mathbf{r}(t))\cdot \mathbf{n}(t) |\mathbf{r}'(t)| dt\\
 							&=& \displaystyle\displaystyle \int_a^b \langle F_1(x(t),y(t)), F_2(x(t),y(t))\rangle\cdot \mathbf{n}(t) |\mathbf{r}'(t)| dt\\
 							&=& \displaystyle\displaystyle \int_a^b \langle F_1(x(t),y(t)), F_2(x(t),y(t))\rangle\cdot \frac{ \langle y'(t), -x'(t) \rangle }{ |\mathbf{r}'(t)|} |\mathbf{r}'(t)| dt\\
 
@@ -876,7 +876,7 @@
 
 						\[
 						\begin{array}{rcl}
-							\displaystyle \oint_{\partial R} F\cdot \mathbf{n} ds &=& \displaystyle\displaystyle \int_a^b F(\mathbf{r}(t))\cdot \mathbf{n}(t) |\mathbf{r}'(t)| dt\\
+							\displaystyle \oint_{\partial R} F\cdot \mathbf{n} d\mathbf{s} &=& \displaystyle\displaystyle \int_a^b F(\mathbf{r}(t))\cdot \mathbf{n}(t) |\mathbf{r}'(t)| dt\\
 							&=& \displaystyle\displaystyle \int_a^b \langle F_1(x(t),y(t)), F_2(x(t),y(t))\rangle\cdot \mathbf{n}(t) |\mathbf{r}'(t)| dt\\
 							&=& \displaystyle\displaystyle \int_a^b \langle F_1(x(t),y(t)), F_2(x(t),y(t))\rangle\cdot \frac{ \langle y'(t), -x'(t) \rangle }{ |\mathbf{r}'(t)|} |\mathbf{r}'(t)| dt\\
 
@@ -900,7 +900,7 @@
 
 						\[
 						\begin{array}{rcl}
-							\displaystyle \oint_{\partial R} F\cdot \mathbf{n} ds &=& \displaystyle\displaystyle \int_a^b F(\mathbf{r}(t))\cdot \mathbf{n}(t) |\mathbf{r}'(t)| dt\\
+							\displaystyle \oint_{\partial R} F\cdot \mathbf{n} d\mathbf{s} &=& \displaystyle\displaystyle \int_a^b F(\mathbf{r}(t))\cdot \mathbf{n}(t) |\mathbf{r}'(t)| dt\\
 							&=& \displaystyle\displaystyle \int_a^b \langle F_1(x(t),y(t)), F_2(x(t),y(t))\rangle\cdot \mathbf{n}(t) |\mathbf{r}'(t)| dt\\
 							&=& \displaystyle\displaystyle \int_a^b \langle F_1(x(t),y(t)), F_2(x(t),y(t))\rangle\cdot \frac{ \langle y'(t), -x'(t) \rangle }{ |\mathbf{r}'(t)|} |\mathbf{r}'(t)| dt\\
 
@@ -925,7 +925,7 @@
 
 						\[
 						\begin{array}{rcl}
-							\displaystyle \oint_{\partial R} F\cdot \mathbf{n} ds &=& \displaystyle\displaystyle \int_a^b F(\mathbf{r}(t))\cdot \mathbf{n}(t) |\mathbf{r}'(t)| dt\\
+							\displaystyle \oint_{\partial R} F\cdot \mathbf{n} d\mathbf{s} &=& \displaystyle\displaystyle \int_a^b F(\mathbf{r}(t))\cdot \mathbf{n}(t) |\mathbf{r}'(t)| dt\\
 							&=& \displaystyle\displaystyle \int_a^b \langle F_1(x(t),y(t)), F_2(x(t),y(t))\rangle\cdot \mathbf{n}(t) |\mathbf{r}'(t)| dt\\
 							&=& \displaystyle\displaystyle \int_a^b \langle F_1(x(t),y(t)), F_2(x(t),y(t))\rangle\cdot \frac{ \langle y'(t), -x'(t) \rangle }{ |\mathbf{r}'(t)|} |\mathbf{r}'(t)| dt\\
 
@@ -984,7 +984,7 @@
 					<img src = "img/greenexample.svg" width="40%">
 
 					<p style="font-size: 25px;" >
-							Compute \(\displaystyle \oint_{\partial R} F\cdot \mathbf{n} ds \).
+							Compute \(\displaystyle \oint_{\partial R} F\cdot \mathbf{n} d\mathbf{s} \).
 						</p>
 
 					
