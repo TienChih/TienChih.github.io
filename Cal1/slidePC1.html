@@ -1,0 +1,989 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>reveal.js</title>
+
+		<link rel="stylesheet" href="dist/reset.css">
+		<link rel="stylesheet" href="dist/reveal.css">
+		<link rel="stylesheet" href="dist/theme/white.css">
+		<link rel="stylesheet" href="plugin/chalkboard/style.css">
+		<link rel="stylesheet" href="plugin/customcontrols/style.css">
+
+
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+		<link rel="stylesheet" type="text/css" href="https://tikzjax.com/v1/fonts.css">
+		<script src="https://tikzjax.com/v1/tikzjax.js"></script>
+
+
+
+
+		<!-- Theme used for syntax highlighted code -->
+		<link rel="stylesheet" href="plugin/highlight/monokai.css">
+		<style>
+			.container{
+   				 display: flex;
+			}
+			.col{
+    			flex: 1;
+			}
+		</style>
+			<script async defer src="https://buttons.github.io/buttons.js"></script>
+
+		<script src="plugin/menu/menu.js"></script>
+
+
+
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				
+				<section>
+					<h2>A whirlwind Precalc Review</h2>
+					<h4>M 111</h4>
+					
+					
+					<h4>
+						Oxford College of Emory University <a href="https://app.oxford.emory.edu/WebApps/Directory/index.cfm/view/9984" target="_blank">Tien Chih</a>
+					</h4>
+				</section>
+
+
+				<section>
+					<section data-auto-animate>
+
+						<div class="r-frame" >
+							<p style="font-size: 30px;" >
+								A <strong style="color: blue;">function</strong> is a mapping or rule \(f\) assigning each element of a <strong style="color: forestgreen;">domain</strong> to another set called a <strong style="color: red;">co-domain</strong>.
+
+							</p>
+
+							<p style="font-size: 30px;" >
+								We denote a function \(f\) mapping from a domain \(X\) to a co-domain \(Y\) with \(f:X\to Y\). <br>
+								
+							</p>
+
+							<p><center>
+								<script type="text/tikz">
+								  \begin{tikzpicture}
+								    \draw[teal] (0,0) circle (1in);
+								    \draw[red] (10,0) circle (1in);
+
+								    \node at (0,-3){$X$};
+								    \node at (10,-3){$Y$};
+
+								    \node at (5,-3){$f$};
+
+								    
+								    \draw[fill, teal] (1,1) circle (2pt) node[above ]{\small$ 1$};
+								    \draw[fill, teal] (-1,1.5) circle (2pt) node[below left]{\small$ 2$};
+								    \draw[fill, teal] (-1.5,-1) circle (2pt) node[below left]{\small$ 3$};
+								    \draw[fill, teal] (0.5,-0.5) circle (2pt) node[below left]{\small$ 4$};
+
+								    \draw[fill, red] (10,2) circle (2pt) node[right]{\small$ a$};
+								    \draw[fill, red] (10,1) circle (2pt) node[right]{\small$ b$};
+								    \draw[fill, red] (10,0) circle (2pt) node[right]{\small$ c$};
+								    \draw[fill, red] (10,-1) circle (2pt) node[right]{\small$ d$};
+								    \draw[fill, red] (10,-2) circle (2pt) node[right]{\small$ e$};
+
+								    \draw[dashed, -latex] (1,1) -- (10,2);
+								    \draw[dashed, -latex] (-1,1.5) -- (10,2);
+								    \draw[dashed, -latex] (0.5,-0.5) -- (10,0);
+								    \draw[dashed, -latex] (-1.5,-1) -- (10,-1);
+
+
+
+								  \end{tikzpicture}
+								</script>
+							</center></p>
+										
+
+						</div>
+					</section>
+
+					<section data-auto-animate>
+
+						<div class="r-frame" data-id="Def">
+							<p style="font-size: 30px;" >
+								If whenever \(x\neq y\) we have that \(f(x)\neq f(y)\), then we say that \(f\) is <strong style="color: blue;">1-1</strong> or <strong style="color: blue;">injective</strong>.  (Or a <strong style="color: blue;">monomorphism</strong> for the truly fancy).
+
+							</p>
+
+
+						</div>
+
+						<p style="font-size: 30px;" data-id="desmos">
+							An injective function: <br>
+
+							<iframe src="https://www.desmos.com/calculator/dnfctv3rj0" width="100%" height="500" style="border: 1px solid #ccc" frameborder=0></iframe>
+
+						</p>
+					</section>
+
+					<section data-auto-animate>
+
+						<div class="r-frame" data-id="Def">
+							<p style="font-size: 30px;" >
+								If whenever \(x\neq y\) we have that \(f(x)\neq f(y)\), then we say that \(f\) is <strong style="color: blue;">1-1</strong> or <strong style="color: blue;">injective</strong>.  (Or a <strong style="color: blue;">monomorphism</strong> for the truly fancy).
+
+							</p>
+
+
+						</div>
+
+						<p style="font-size: 30px;" data-id="desmos">
+							<strong>NOT</strong> an injective function: <br>
+
+							<iframe src="https://www.desmos.com/calculator/5jy2i0wxnq" width="100%" height="500" style="border: 1px solid #ccc" frameborder=0></iframe>
+
+						</p>
+					</section>
+
+
+					<section data-auto-animate>
+
+						<div class="r-frame" data-id="Def">
+							<p style="font-size: 30px;" >
+								If for each \(z\) in the co-domain, there is a \(x\) in the domain so that \(f(x)=z\), then we say that \(f\) is <strong style="color: blue;">onto</strong> or <strong style="color: blue;">surjective</strong>.  (Or an <strong style="color: blue;">epimorphism</strong> for the truly fancy).
+
+							</p>
+
+
+						</div>
+
+						<p style="font-size: 30px;" data-id="desmos">
+							A surjective function: <br>
+
+							<iframe src="https://www.desmos.com/calculator/vorxqtuvp3" width="100%" height="500" style="border: 1px solid #ccc" frameborder=0></iframe>
+
+						</p>
+					</section>
+
+					<section data-auto-animate>
+
+						<div class="r-frame" data-id="Def">
+							<p style="font-size: 30px;" >
+								If for each \(z\) in the co-domain, there is a \(x\) in the domain so that \(f(x)=z\), then we say that \(f\) is <strong style="color: blue;">onto</strong> or <strong style="color: blue;">surjective</strong>.  (Or an <strong style="color: blue;">epimorphism</strong> for the truly fancy).
+
+							</p>
+
+
+						</div>
+
+						<p style="font-size: 30px;" data-id="desmos">
+							<strong>NOT</strong> a  surjective function: <br>
+
+							<iframe src="https://www.desmos.com/calculator/z7xd3ottdt" width="100%" height="500" style="border: 1px solid #ccc" frameborder=0></iframe>
+
+						</p>
+					</section>
+
+					<section data-auto-animate>
+
+						<div class="r-frame" data-id="Def">
+							<p style="font-size: 30px;" >
+								If \(f\) is both injective and surjective, we say that it is a <strong style="color: blue;">bijection</strong>.
+
+							</p>
+
+
+						</div>
+
+						<p style="font-size: 30px;" data-id="desmos">
+							A bijective function: <br>
+
+							<iframe src="https://www.desmos.com/calculator/cb6m4rxazp" width="100%" height="500" style="border: 1px solid #ccc" frameborder=0></iframe>
+
+						</p>
+					</section>
+
+
+					<section data-auto-animate>
+
+						<div class="r-frame" >
+							<p style="font-size: 30px;" >
+								<strong style="color: orange;"> NOT ALLOWED</strong>
+
+							</p>
+
+							
+
+							<p><center>
+								<script type="text/tikz">
+								  \begin{tikzpicture}
+								    \draw[teal] (0,0) circle (1in);
+								    \draw[red] (10,0) circle (1in);
+
+								    \node at (0,-3){$X$};
+								    \node at (10,-3){$Y$};
+
+								    \node at (5,-3){$f$};
+
+								    
+								    \draw[fill, orange] (1,1) circle (2pt) node[above ]{\small$ 1$};
+								    \draw[fill, teal] (-1,1.5) circle (2pt) node[below left]{\small$ 2$};
+								    \draw[fill, teal] (-1.5,-1) circle (2pt) node[below left]{\small$ 3$};
+								    \draw[fill, orange] (0.5,-0.5) circle (2pt) node[below left]{\small$ 4$};
+
+								    \draw[fill, red] (10,2) circle (2pt) node[right]{\small$ a$};
+								    \draw[fill, red] (10,1) circle (2pt) node[right]{\small$ b$};
+								    \draw[fill, red] (10,0) circle (2pt) node[right]{\small$ c$};
+								    \draw[fill, red] (10,-1) circle (2pt) node[right]{\small$ d$};
+								    \draw[fill, red] (10,-2) circle (2pt) node[right]{\small$ e$};
+
+								    \draw[dashed, -latex] (1,1) -- (10,2);
+								    \draw[dashed, -latex] (1,1) -- (10,1);
+								    \draw[dashed, -latex] (-1,1.5) -- (10,2);
+								    
+								    \draw[dashed, -latex] (-1.5,-1) -- (10,-1);
+
+
+
+								  \end{tikzpicture}
+								</script>
+							</center></p>
+										
+
+						</div>
+					</section>
+						
+						
+						
+
+					
+				</section>
+
+
+
+
+
+
+				<!-- Linear Functions -->
+
+				<section>
+					<section data-auto-animate>
+
+						<div class="r-frame" data-id="Def">
+							<p style="font-size: 30px;" >
+								A function with a constant rate of change is called a <strong style="color: blue;">linear</strong> function.
+
+							</p>
+
+							<p style="font-size: 30px;">
+								A linear function written in <strong style="color: blue;">slope-intercept</strong> or \(y=mx+b\) form has slope \(m\) and \(y\)-intercept \(b\).
+							</p>
+
+
+						</div>
+
+						<p style="font-size: 30px;" data-id="desmos">
+							
+
+							<iframe src="https://www.desmos.com/calculator/lovd2l37iq" width="100%" height="500" style="border: 1px solid #ccc" frameborder=0></iframe>
+
+						</p>
+					</section>
+
+					<section data-auto-animate>
+
+						<div class="r-frame" data-id="Def">
+							<p style="font-size: 30px;" >
+								A function with a constant rate of change is called a <strong style="color: blue;">linear</strong> function.
+
+							</p>
+
+							<p style="font-size: 30px;">
+								A linear function written in <strong style="color: blue;">point-slope</strong> or \(y=m(x-x_0)+y_0\) form has slope \(m\) passes through \((x_0, y_0)\)-intercept \(b\).
+							</p>
+
+
+						</div>
+
+						<p style="font-size: 30px;" data-id="desmos">
+							
+
+							<iframe src="https://www.desmos.com/calculator/x3rfyajd7d" width="100%" height="500" style="border: 1px solid #ccc" frameborder=0></iframe>
+
+						</p>
+					</section>
+
+					<section data-auto-animate>
+
+						<div class="r-frame">
+							<p style="font-size: 30px;" >
+								Find a linear function passing through \((2,3)\) with slope \(-1\).
+
+							</p>
+
+							<p style="font-size: 30px;">
+								Find a linear function passing through \((-4,-1)\) and \(1, 2\).
+							</p>
+
+
+						</div>
+
+						
+					</section>
+
+
+				</section>
+
+
+				<!-- Quadratics -->
+
+				<section>
+					<section data-auto-animate>
+
+						<div class="r-frame" data-id="Def">
+							<p style="font-size: 30px;" >
+								A function of the form \(q(x)=ax^2+bx+c, a\neq0\) is called a  <strong style="color: blue;">quadratic</strong> function.
+
+							</p>
+
+							
+
+
+						</div>
+
+						<p style="font-size: 30px;" data-id="desmos">
+							
+
+							<iframe src="https://www.desmos.com/calculator/q9dm7x8m32" width="100%" height="500" style="border: 1px solid #ccc" frameborder=0></iframe>
+
+						</p>
+					</section>
+
+					<section data-auto-animate>
+
+						<div class="r-frame" data-id="Def">
+							<p style="font-size: 30px;" >
+								Notice that  \(q(x)=ax^2+bx+c = a\left(x-\frac{b}{2a} \right)^2 +c-\frac{b^2}{4a} = a(x-h)^2+k \). This is the <strong style="color: blue;">vertex</strong> form.
+
+							</p>
+
+							
+
+
+						</div>
+
+						<p style="font-size: 30px;" data-id="desmos">
+							<img src="img/completesquare.gif">
+
+							
+
+						</p>
+					</section>
+
+
+
+					<section data-auto-animate>
+
+						<div class="r-frame" data-id="Def">
+							<p style="font-size: 30px;" >
+								Notice that  \(q(x)=ax^2+bx+c = a\left(x-\frac{b}{2a} \right)^2 +c-\frac{b^2}{4a} = a(x-h)^2+k \). This is the <strong style="color: blue;">vertex</strong> form.
+
+							</p>
+
+							
+
+
+						</div>
+
+						<p style="font-size: 30px;" data-id="desmos">
+							
+
+							<iframe src="https://www.desmos.com/calculator/3p3t2aaawi" width="100%" height="500" style="border: 1px solid #ccc" frameborder=0></iframe>
+
+						</p>
+					</section>
+
+					<section data-auto-animate>
+
+						<div class="r-frame" data-id="Def">
+							<p style="font-size: 30px;" >
+								Find the vertex form for \(y=2x^2+4x-1\).
+							</p>
+
+							
+
+
+						</div>
+
+						<p style="font-size: 30px;" data-id="desmos">
+							
+
+							<iframe src="https://www.desmos.com/calculator/3p3t2aaawi" width="100%" height="500" style="border: 1px solid #ccc" frameborder=0></iframe>
+
+						</p>
+					</section>
+
+				</section>
+
+
+				<!-- Polynomials -->
+
+
+				<section>
+
+					<section data-auto-animate>
+
+						<div class="r-frame" data-id="Def">
+							<p style="font-size: 30px;" >
+								A function of the form \(p(x)=a_nx^n+a_{n-1}x^{n-1}+\cdots a_1x^1+a_0x^0 = \displaystyle \sum_{i=0}^n a_ix^i, a_n\leq 0\) is called a  <strong style="color: blue;">polynomial</strong> function.
+
+							</p>
+
+							
+
+
+						</div>
+
+						<p style="font-size: 30px;" data-id="desmos">
+							
+
+							<iframe src="https://www.desmos.com/calculator/e49nmfsk2m" width="100%" height="500" style="border: 1px solid #ccc" frameborder=0></iframe>
+
+						</p>
+					</section>
+
+					<section data-auto-animate>
+
+						<div class="r-frame" data-id="Def">
+							<p style="font-size: 30px;" >
+								For \(p(x)=a_nx^n+a_{n-1}x^{n-1}+\cdots a_1x^1+a_0x^0, a_n\leq 0\), <strong style="color: blue;">\(a_n\)</strong> is the <strong style="color: blue;">leading coefficient</strong>, <strong style="color: blue;">\(n\)</strong> is the <strong style="color: blue;">degree</strong>, and <strong style="color: blue;">\(a_nx^n\)</strong> is the <strong style="color: blue;">leading term</strong>.
+
+							</p>
+
+							
+
+
+						</div>
+
+						<p style="font-size: 30px;" data-id="desmos">
+							The leading term determines the <q>long term behavior</q> of a polynomial<br>
+							
+
+							<iframe src="https://www.desmos.com/calculator/dhwfcfcyg4" width="100%" height="500" style="border: 1px solid #ccc" frameborder=0></iframe>
+
+						</p>
+					</section>
+
+					<section data-auto-animate>
+
+						<div class="r-frame" data-id="Def">
+							<p style="font-size: 30px;" >
+								For \(p(x)=a(x-x_1)^{n_1}(x-x_2)^{n_2}\cdots(x-x_k)^{n_k}\), <strong style="color: blue;">\(x_i\)</strong> are the <strong style="color: blue;">roots</strong> of \(p(x)\) with  <strong style="color: blue;">multiplicity</strong>  <strong style="color: blue;">\(n_i\)</strong>.
+
+							</p>
+
+							
+
+
+						</div>
+
+						<p style="font-size: 30px;" data-id="desmos">
+							
+
+							<iframe src="https://www.desmos.com/calculator/sluhdrzwi7" width="100%" height="500" style="border: 1px solid #ccc" frameborder=0></iframe>
+
+						</p>
+					</section>
+
+				</section>
+
+				<section>
+					<section data-auto-animate>
+
+						<div class="r-frame" data-id="Def">
+							<p style="font-size: 30px;" >
+								A function of the form \(r(x)=\frac{p(x)}{q(x)}\) where \(p(x), q(x)\) are polynomials is called a  <strong style="color: blue;">rational function</strong>.
+
+							</p>
+
+							
+
+
+						</div>
+
+						<p style="font-size: 30px;" data-id="desmos">
+							
+							
+
+							<iframe src="https://www.desmos.com/calculator/kdg7kra3xa" width="100%" height="500" style="border: 1px solid #ccc" frameborder=0></iframe>
+
+						</p>
+					</section>
+				</section>
+
+
+				<section>
+					<section data-auto-animate>
+
+						<div class="r-frame" data-id="Def">
+							<p style="font-size: 30px;" >
+								A function of the form \(f(x)=b\cdot a^x\)  is called an  <strong style="color: blue;">exponential function</strong>.
+
+							</p>
+
+							<p style="font-size: 30px;" >
+								\(b\) is the  <strong style="color: blue;">\(y\)-intercept</strong> and \(a\) is the <strong style="color: blue;">growth factor</strong>.
+
+							</p>
+
+							
+
+
+						</div>
+
+						<p style="font-size: 30px;" data-id="desmos">
+							
+							
+
+							<iframe src="https://www.desmos.com/calculator/9jsnvhkibl" width="100%" height="500" style="border: 1px solid #ccc" frameborder=0></iframe>
+
+						</p>
+					</section>
+
+					<section data-auto-animate>
+
+						<div class="r-frame" data-id="Def">
+							<p style="font-size: 30px;" >
+								Find an exponential function passing through \(1,2\) and \(3,4\)
+
+							
+
+							</p>
+
+							
+
+
+						</div>
+
+						<p style="font-size: 30px;" data-id="desmos">
+							
+							
+
+							<iframe src="https://www.desmos.com/calculator/neeyo6ri6d" width="100%" height="500" style="border: 1px solid #ccc" frameborder=0></iframe>
+
+						</p>
+					</section>
+				</section>
+
+				<section>
+					<section data-auto-animate>
+
+						<div class="r-frame" data-id="Def">
+							<p style="font-size: 30px;" >
+								Since \(f(x)=a^x\) is an injective function it has an inverse \(\log_a(x)\).  The inverse of \(f(x)=e^x\) is \(\ln(x)\).
+
+							</p>
+
+							
+
+							
+
+
+						</div>
+
+						<p style="font-size: 30px;" data-id="desmos">
+							
+							
+
+							<iframe src="https://www.desmos.com/calculator/xjojb89wzl" width="100%" height="500" style="border: 1px solid #ccc" frameborder=0></iframe>
+
+						</p>
+					</section>
+
+					<section data-auto-animate>
+
+						<div class="r-frame" data-id="Def">
+							<p style="font-size: 30px;" >
+								Since \(a^b\cdot a^c=a^{b+c}\) we have
+
+								\[a^{\log_a\left( bc \right)} = bc =a^{\log_a(b)}a^{\log_a(c)}=a^{\log_a(b)+\log_b(c)} \] so that
+								\[\log_a\left( bc \right) = \log_a(b)+\log_b(c).\]
+
+							
+
+							</p>
+
+							
+
+
+						</div><br>
+
+						<div class="fragment">
+							<div class="r-frame" data-id="Def">
+								<p style="font-size: 30px;" >
+									Since \(\left(a^b\right)^c =a^{bc}\) we have
+
+									\[a^{\log_a\left( b^c \right)} = b^c =\left(a^{\log_a(b)} \right)^c=a^{c\log_a(b)}. \] so that
+									\[\log_a(b^c) = c\log_a(b).\]
+
+								
+
+								</p>
+
+							
+							</div>
+						</div>
+
+						
+					</section>
+
+					<section data-auto-animate>
+
+						<div class="r-frame" data-id="Def">
+							<p style="font-size: 30px;" >
+								Solve \(5=2^x\).
+
+							
+
+							</p>
+
+							<p style="font-size: 30px;" >
+								Solve \(\frac{1}{4}=(0.9)^{3x}\).
+
+							
+
+							</p>
+
+							
+
+
+						</div><br>
+
+						
+
+						
+					</section>
+				</section>
+
+
+				<section>
+					<section data-auto-animate>
+
+						<div class="r-frame" data-id="Def">
+							<p style="font-size: 30px;" >
+								All trigonometric functions are based on ratios of sides of triangles, particularly on the unit circle.
+
+							</p>
+
+							
+
+							
+
+
+						</div>
+
+						<p style="font-size: 30px;" data-id="desmos">
+							
+							
+
+							<iframe src="https://www.desmos.com/calculator/titzpx12yc" width="100%" height="500" style="border: 1px solid #ccc" frameborder=0></iframe>
+
+						</p>
+					</section>
+
+					<section data-auto-animate>
+
+						<div class="r-frame" data-id="Def">
+							<p style="font-size: 30px;" >
+								\(\cos(\theta), \sin(\theta)\) are the \(x, y\) coordinates of the corresponding points on the unit circle.
+
+							</p>
+
+							
+
+							
+
+
+						</div>
+
+						<p style="font-size: 30px;" data-id="desmos">
+							
+							
+
+							<iframe src="https://www.desmos.com/calculator/j4xjmlkttg" width="100%" height="500" style="border: 1px solid #ccc" frameborder=0></iframe>
+
+						</p>
+					</section>
+
+					<section data-auto-animate>
+
+						<div class="r-frame" data-id="Def">
+							<p style="font-size: 30px;" >
+								\(\tan(\theta)\) is the slope of the corresponding line.
+
+							</p>
+
+							
+
+							
+
+
+						</div>
+
+						<p style="font-size: 30px;" data-id="desmos">
+							
+							
+
+							<iframe src="https://www.desmos.com/calculator/azl2jg9l50" width="100%" height="500" style="border: 1px solid #ccc" frameborder=0></iframe>
+
+						</p>
+					</section>
+
+					<section data-auto-animate>
+
+						<div class="r-frame" data-id="Def">
+							<p style="font-size: 30px;" >
+								Important Identities:
+
+								<ul>
+									<li style="font-size: 30px;">\(\sin^2(x)+\cos^2(x)=1\).</li>
+									<li style="font-size: 30px;" class="fragment">\(\tan^2(x)+1=\sec^2(x)\).</li>
+									<li style="font-size: 30px;" class="fragment">\(1+\cot^2(x)=\csc^2(x)\).</li>
+									<li style="font-size: 30px;" class="fragment">\(\sin(2x)=2\sin(x)\cos(x)\).</li>
+									<li style="font-size: 30px;" class="fragment">\(\cos(2x)=\cos^2(x)-\sin^2(x)\).</li>
+
+								</ul>
+
+							</p>
+
+							
+
+							
+
+
+						</div>
+
+						
+					</section>
+
+
+
+				</section>
+
+				<section>
+					<section data-auto-animate>
+
+						<div class="r-frame" data-id="Def">
+							<p style="font-size: 30px;" >
+								Each trigonometric function has an inverse (with an appropriate restricted domain).
+
+							</p>
+
+							<p style="font-size: 30px;">
+								Trig functions take  <strong style="color: blue;">angles</strong> to <strong style="color: orange;">ratios</strong>.  Inverse functions take <strong style="color: orange;">ratios</strong> to <strong style="color: blue;">angles</strong>.
+							</p>
+
+
+						</div>
+
+						<p data-id="desmos"><center>
+							<script type="text/tikz">
+								  \begin{tikzpicture}
+								    \draw[blue] (0,0) circle (1in);
+								    \draw[orange] (10,0) circle (1in);
+
+								    \node[blue] at (0,-3){Angles};
+								    \node[orange] at (10,-3){Ratios};
+
+								    
+
+								    
+
+								    \draw[->] (2,2) edge[bend left] node[above]{trig} (8,2);
+								    \draw[dashed, ->] (8,-2) edge[bend left] node[below]{arctrig} (2,-2);
+								    
+
+
+
+								  \end{tikzpicture}
+							</script>
+						</center></p>
+					</section>
+
+					<section data-auto-animate>
+
+						<div class="r-frame" data-id="Def">
+							<p style="font-size: 30px;" >
+								Find \(\tan(\arcsin(x))\).
+
+							</p>
+
+							<p style="font-size: 30px;" class="fragment">
+								Find \(\cos(\arctan(2x^2))\).
+
+							</p>
+
+							<p data-id="desmos"><center>
+							<script type="text/tikz">
+								\begin{tikzpicture}[scale=4]
+									\draw (0,0) -- node[below]{??}(2,0);
+									\draw (2,0) -- node[right]{?}(2,2);
+									\draw (0,0) -- node[above left]{ ???}(2,2);
+									\draw (0.2,0.05)--node[above right]{$\theta$}(0.2,0.05);
+								    
+
+
+
+								\end{tikzpicture}
+							</script>
+						</center></p>
+
+							
+
+
+						</div>
+
+						
+					</section>
+				</section>
+
+				<section>
+					<section data-auto-animate>
+
+						<div class="r-frame" data-id="Def">
+							<p style="font-size: 30px;" >
+								If the codomain of \(f\) is the domain of \(g\) we may compose \(g\circ f(x)=g(f(x))\)
+
+							</p>
+
+
+						</div>
+
+						<p style="font-size: 30px;" data-id="desmos">
+							<img src="img/composition.gif">
+
+							
+
+						</p>
+
+						
+					</section>
+
+					<section data-auto-animate>
+
+						<div class="r-frame" data-id="Def">
+							<p style="font-size: 30px;" >
+								Let \(f(x)=x^2+x+3, g(x)=2x-1\), find:
+
+							</p>
+
+							<ul>
+								
+								<li style="font-size: 30px;">\(g(f(x))\).</li>
+								<li style="font-size: 30px;">\(g(g(x))\).</li>
+								<li style="font-size: 30px;">\(f(x+2)\).</li>
+								<li style="font-size: 30px;">\(g(x+2)\).</li>
+								<li style="font-size: 30px;">\(f(x+h)\).</li>
+								<li style="font-size: 30px;">\(g(x+h)\).</li>
+							</ul>
+
+
+						</div>
+
+						
+
+						
+					</section>
+				</section>
+
+
+
+				
+
+
+
+
+
+
+					
+				
+			</div>
+		</div>
+
+		<script src="dist/reveal.js"></script>
+		<script src="plugin/notes/notes.js"></script>
+		<script src="plugin/markdown/markdown.js"></script>
+		<script src="plugin/highlight/highlight.js"></script>
+		<script>
+			// More info about initialization & config:
+			// - https://revealjs.com/initialization/
+			// - https://revealjs.com/config/
+			Reveal.initialize({
+				hash: true,
+
+				// Learn about plugins: https://revealjs.com/plugins/
+				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
+			});
+		</script>
+		<script src="plugin/math/math.js"></script>
+		<script src="plugin/chalkboard/plugin.js"></script>
+		<script src="plugin/customcontrols/plugin.js"></script>
+
+
+
+	<script>
+  	Reveal.initialize({
+		math: {
+			mathjax: 'https://cdn.jsdelivr.net/gh/mathjax/mathjax@2.7.8/MathJax.js',
+			config: 'TeX-AMS_HTML-full',
+			// pass other options into `MathJax.Hub.Config()`
+			TeX: { Macros: { RR: "{\\bf R}" } }
+		},
+
+		chalkboard: {
+        boardmarkerWidth: 3,
+        chalkWidth: 7,
+        chalkEffect: 1.0,
+        storage: null,
+        src: null,
+        readOnly: undefined,
+        transition: 800,
+        theme: "chalkboard",
+        background: [ 'rgba(127,127,127,.1)' , path + 'img/blackboard.png' ],
+        grid: { color: 'rgb(50,50,10,0.5)', distance: 80, width: 2},
+        eraser: { src: path + 'img/sponge.png', radius: 20},
+        boardmarkers : [
+                { color: 'rgba(100,100,100,1)', cursor: 'url(' + path + 'img/boardmarker-black.png), auto'},
+                { color: 'rgba(30,144,255, 1)', cursor: 'url(' + path + 'img/boardmarker-blue.png), auto'},
+                { color: 'rgba(220,20,60,1)', cursor: 'url(' + path + 'img/boardmarker-red.png), auto'},
+                { color: 'rgba(50,205,50,1)', cursor: 'url(' + path + 'img/boardmarker-green.png), auto'},
+                { color: 'rgba(255,140,0,1)', cursor: 'url(' + path + 'img/boardmarker-orange.png), auto'},
+                { color: 'rgba(150,0,20150,1)', cursor: 'url(' + path + 'img/boardmarker-purple.png), auto'},
+                { color: 'rgba(255,220,0,1)', cursor: 'url(' + path + 'img/boardmarker-yellow.png), auto'}
+        ],
+        chalks: [
+                { color: 'rgba(255,255,255,0.5)', cursor: 'url(' + path + 'img/chalk-white.png), auto'},
+                { color: 'rgba(96, 154, 244, 0.5)', cursor: 'url(' + path + 'img/chalk-blue.png), auto'},
+                { color: 'rgba(237, 20, 28, 0.5)', cursor: 'url(' + path + 'img/chalk-red.png), auto'},
+                { color: 'rgba(20, 237, 28, 0.5)', cursor: 'url(' + path + 'img/chalk-green.png), auto'},
+                { color: 'rgba(220, 133, 41, 0.5)', cursor: 'url(' + path + 'img/chalk-orange.png), auto'},
+                { color: 'rgba(220,0,220,0.5)', cursor: 'url(' + path + 'img/chalk-purple.png), auto'},
+                { color: 'rgba(255,220,0,0.5)', cursor: 'url(' + path + 'img/chalk-yellow.png), auto'}
+        ]
+    },
+    customcontrols: {
+  		controls: [
+  			{ icon: '<i class="fa fa-pen-square"></i>',
+  			  title: 'Toggle chalkboard (B)',
+  			  action: 'RevealChalkboard.toggleChalkboard();'
+  			},
+  			{ icon: '<i class="fa fa-pen"></i>',
+  			  title: 'Toggle notes canvas (C)',
+  			  action: 'RevealChalkboard.toggleNotesCanvas();'
+  			}
+  		]
+    },
+
+		plugins: [ RevealMath, RevealChalkboard, RevealCustomControls, RevealMenu  ]
+		});
+	</script>
+
+	</body>
+</html>
