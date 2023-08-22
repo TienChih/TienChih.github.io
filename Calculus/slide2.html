@@ -1,0 +1,624 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>reveal.js</title>
+
+		<link rel="stylesheet" href="dist/reset.css">
+		<link rel="stylesheet" href="dist/reveal.css">
+		<link rel="stylesheet" href="dist/theme/white.css">
+		<link rel="stylesheet" href="plugin/chalkboard/style.css">
+		<link rel="stylesheet" href="plugin/customcontrols/style.css">
+
+
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+
+
+
+		<!-- Theme used for syntax highlighted code -->
+		<link rel="stylesheet" href="plugin/highlight/monokai.css">
+		<style>
+			.container{
+   				 display: flex;
+			}
+			.col{
+    			flex: 1;
+			}
+		</style>
+			<script async defer src="https://buttons.github.io/buttons.js"></script>
+
+		<script src="plugin/menu/menu.js"></script>
+
+
+
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				
+				<section>
+					<h2>Continuity: The Good, The Bad and the (not so) Ugly</h2>
+					<h4>M 111</h4>
+					
+					
+					<h4>
+						Oxford College of Emory University <a href="https://app.oxford.emory.edu/WebApps/Directory/index.cfm/view/9984" target="_blank">Tien Chih</a>
+					</h4>
+				</section>
+
+
+				<section>
+					<section data-auto-animate>
+						
+
+						<div>
+							<img src="img/pascal.gif" height="200">
+
+						</div>
+						<div  >
+							<p style="font-size: 30px;" >
+								(Stating at row 0) the coefficients of \((t+h)^n\) coincide with the \(n\)th row.
+							</p>
+									
+
+						</div>
+
+						<div class="fragment" >
+							<p style="font-size: 30px;" >
+								\[(t+h)^n =\sum_{i=0}^n {n\choose i}t^ih^{n-i}, {n\choose i}=\frac{n!}{i!(n-i)!}.\]
+								What is \((t+h)^6\)?
+							</p>
+									
+
+						</div>
+
+						<div class="fragment" >
+							<p style="font-size: 30px;" >
+								For \(n\geq 2\)
+								\[(t+h)^n-t^n = {n\choose 0} t^n+{n\choose 1}t^{n-1}h+ {n\choose 2}t^{n-2}h^2+\cdots+{n\choose n}h^n-t^n \]
+							</p>
+									
+
+						</div>
+
+						
+
+						
+					</section>
+
+					<section data-auto-animate>
+						
+
+						<div>
+							<img src="img/pascal.gif" height="200">
+
+						</div>
+						<div  >
+							<p style="font-size: 30px;" >
+								(Stating at row 0) the coefficients of \((t+h)^n\) coincide with the \(n\)th row.
+							</p>
+									
+
+						</div>
+
+						<div >
+							<p style="font-size: 30px;" >
+								\[(t+h)^n =\sum_{i=0}^n {n\choose i}t^ih^{n-i}, {n\choose i}=\frac{n!}{i!(n-i)!}.\]
+								What is \((t+h)^6\)?
+							</p>
+									
+
+						</div>
+
+						<div  >
+							<p style="font-size: 30px;" >
+								\[(t+h)^n-t^n =  nt^{n-1}h+ h^2(\text{some polynomial}) \]
+							</p>
+									
+
+						</div>
+
+						
+
+						
+					</section>
+
+					
+
+
+					
+
+				</section>
+
+				
+
+				<section>
+					<section data-auto-animate>
+						<div >
+							<p style="font-size: 30px;" >
+								A sum is called <strong>telescoping</strong> if succesive terms cancel out the middle terms. \[\sum_{i=1}^n (Q(t_{i+1})-Q(t_i))=Q(t_{n+1})-Q(t_1)\]
+							</p>
+						</div>
+						<div class="fragment">
+							<p style="font-size: 30px;" >
+								Find the third, sixth and \(k\)th term for \(a_n=\displaystyle \sum_{i=1}^n (i^2-(i-1)^2)\).
+								
+								
+							</p>
+							
+						</div>
+					</section>
+
+					
+				</section>
+
+
+				<section>
+					<section data-auto-animate>
+						<div>
+							<iframe src="https://www.desmos.com/calculator/wieoy0kmiy" width="90%" height="500" style="border: 1px solid #ccc" frameborder=0></iframe>
+						</div>
+						<div >
+							<p style="font-size: 25px;" >
+								\(\Delta A=(X+\Delta X)(Y+\Delta Y)-XY = Y\Delta X + X\Delta Y +(\Delta X)(\Delta Y)\)
+							</p>
+									
+
+						</div>
+
+						<div class="fragment">
+							<p  style="font-size: 25px;">
+								Suppose that \(X=2, Y=3, \Delta X=\Delta Y\).  What should \(\Delta X\) be so that \(\Delta A<0.01\)?
+							</p>
+						</div>
+
+						<div class="fragment">
+							<p style="font-size: 25px;">
+								Is there a \(\Delta X\) be so that \(\Delta A<0.0001\)?
+							</p>
+						</div>
+
+
+					</section>
+
+					
+
+					
+
+
+				</section>
+
+
+				<section>
+
+
+
+
+					<section data-auto-animate>
+						
+
+						<div>
+							<iframe src="https://www.desmos.com/calculator/e02d79mybi" width="90%" height="500" style="border: 1px solid #ccc" frameborder=0></iframe>
+						</div>
+						<div  >
+							<p style="font-size: 30px;" >
+								\(Q(x)\) is  <strong>continuous</strong> at \(x=t\) if I can get \(Q(x)\) as close to \(Q(t)\) as I want by moving \(x\) closer to \(t\).
+							</p>
+									
+
+						</div>
+
+						
+
+						
+					</section>
+
+					<section data-auto-animate>
+						
+
+						<div>
+							<iframe src="https://www.desmos.com/calculator/e02d79mybi" width="90%" height="500" style="border: 1px solid #ccc" frameborder=0></iframe>
+						</div>
+						<div  >
+							<p style="font-size: 30px;" >
+								\(Q(x)\) is  <strong>continuous</strong> at \(x=c\) if <strong style="color: blue;">I can get \(Q(ct)\) as close to \(Q(c)\) as I want </strong>  <strong style="color: red;">by moving \(t\) closer to \(c\).</strong>
+							</p>
+									
+
+						</div>
+
+						
+
+						
+					</section>
+
+					<section data-auto-animate>
+						
+
+						<div>
+							<iframe src="https://www.desmos.com/calculator/e02d79mybi" width="90%" height="500" style="border: 1px solid #ccc" frameborder=0></iframe>
+						</div>
+						<div  >
+							<p style="font-size: 30px;" >
+								\(Q(x)\) is  <strong>continuous</strong> at \(x=c\) if <strong style="color: blue;">for any small difference in \(y\) </strong>  <strong style="color: red;">I can pick a small difference in \(x\), so if \(t\) is within the \(x\) distance of \(c\)</strong>, <strong style="color: blue;">\(Q(t)\) is within the \(y\) distance of \(Q(c)\)</strong>
+							</p>
+									
+
+						</div>
+
+						
+
+						
+					</section>
+
+					<section data-auto-animate>
+						
+
+						<div>
+							<iframe src="https://www.desmos.com/calculator/e02d79mybi" width="90%" height="500" style="border: 1px solid #ccc" frameborder=0></iframe>
+						</div>
+						<div  >
+							<p style="font-size: 30px;" >
+								\(Q(x)\) is  <strong>continuous</strong> at \(x=c\) if <strong style="color: blue;">for any \(\epsilon>0\) </strong>  <strong style="color: red;">I can pick a small difference in \(x\), so if \(t\) is within the \(x\) distance of \(c\)</strong>, <strong style="color: blue;">\(Q(t)\) is within the \(y\) distance of \(Q(c)\)</strong>
+							</p>
+									
+
+						</div>
+
+						
+
+						
+					</section>
+
+					<section data-auto-animate>
+						
+
+						<div>
+							<iframe src="https://www.desmos.com/calculator/e02d79mybi" width="90%" height="500" style="border: 1px solid #ccc" frameborder=0></iframe>
+						</div>
+						<div  >
+							<p style="font-size: 30px;" >
+								\(Q(x)\) is  <strong>continuous</strong> at \(x=c\) if <strong style="color: blue;">for any \(\epsilon>0\) </strong>  <strong style="color: red;">there is a \(\delta>0\), so if \(t\) is within the \(x\) distance of \(c\)</strong>, <strong style="color: blue;">\(Q(t)\) is within the \(y\) distance of \(Q(c)\)</strong>
+							</p>
+									
+
+						</div>
+
+						
+
+						
+					</section>
+
+					<section data-auto-animate>
+						
+
+						<div>
+							<iframe src="https://www.desmos.com/calculator/e02d79mybi" width="90%" height="500" style="border: 1px solid #ccc" frameborder=0></iframe>
+						</div>
+						<div  >
+							<p style="font-size: 30px;" >
+								\(Q(x)\) is  <strong>continuous</strong> at \(x=c\) if <strong style="color: blue;">for any \(\epsilon>0\) </strong>  <strong style="color: red;">there is a \(\delta>0\), so if \(|t-c|<\delta\)</strong>, <strong style="color: blue;">\(Q(t)\) is within the \(y\) distance of \(Q(c)\)</strong>
+							</p>
+									
+
+						</div>
+
+						
+
+						
+					</section>
+
+					<section data-auto-animate>
+						
+
+						<div>
+							<iframe src="https://www.desmos.com/calculator/e02d79mybi" width="90%" height="500" style="border: 1px solid #ccc" frameborder=0></iframe>
+						</div>
+						<div  >
+							<p style="font-size: 30px;" >
+								\(Q(x)\) is  <strong>continuous</strong> at \(x=t\) if <strong style="color: blue;">for any \(\epsilon>0\) </strong>  <strong style="color: red;">there is a \(\delta>0\), so if \(|t-c|<\delta\)</strong>, <strong style="color: blue;">then \(|Q(t)-Q(c)|<\epsilon\)</strong>.
+							</p>
+									
+
+						</div>
+
+						
+
+						
+					</section>
+
+					
+				</section>
+
+				<section>
+					<section data-auto-animate>
+						<div >
+							<p style="font-size: 30px;" >
+								Let \((a,b)\) be an open interval containing \(c\) in the domain of \(Q\).  For any \(t\) in \((a,b)\), we want \(|Q(t)-Q(c)|<\epsilon.\)
+							</p>
+						</div>
+
+						
+
+						<div class="fragment">
+							<p style="font-size: 30px;" >
+								For any \(\epsilon>0\), suppose there is a \(M\) so \(|t-c|<\frac{\epsilon}{M}\). (We can think of \(\frac{\epsilon}{M}\) as <strong style="color: red;">\(\delta\) </strong>.)
+							</p>
+						</div>
+
+						<div class="fragment">
+							<p style="font-size: 30px;" >
+								If \(|t-c|<\frac{\epsilon}{M}\), then \(M|t-c|<\epsilon\).
+							</p>
+						</div>
+
+						<div class="fragment">
+							<p style="font-size: 30px;" >
+								If \(|Q(t)-Q(c)|< M|t-c|\), then \(|Q(t)-Q(c)|< M|t-c|<\epsilon\).
+							</p>
+						</div>
+					</section>
+
+					<section data-auto-animate>
+						<div class="r-frame">
+							<p style="font-size: 30px;" >
+								Let \((a,b)\) be an open interval containing \(c\) in the domain of \(Q\).  For any \(t\) in \((a,b)\), if there is a \(M\) so that \(|Q(t)-Q(c)|< M|t-c|\), then \(Q\) is <strong>continuous</strong> at \(c\).
+							</p>
+						</div>
+
+						<iframe src="https://www.desmos.com/calculator/kzxqzs8cnq" width="90%" height="500" style="border: 1px solid #ccc" frameborder=0></iframe>
+					</section>
+
+					<section data-auto-animate>
+						<h4>Discontinuous</h4>
+						
+
+						<iframe src="https://www.desmos.com/calculator/hdslupi1w7" width="90%" height="500" style="border: 1px solid #ccc" frameborder=0></iframe>
+					</section>
+
+
+					
+
+				</section>
+
+				
+
+				<section>
+					<section data-auto-animate>
+						<div class="r-frame">
+							<p style="font-size: 30px;" >
+								Let \(Q(t)=t^2\) on some \([a,b]\).  Note that \[|Q(t)-Q(c)|=|t^2-c^2|=|t+c||t-c|.\]
+							</p>
+						</div>
+						<div class="fragment">
+							<p style="font-size: 30px;" >
+								Which of the following are a good choice for \(M\) so \(|Q(t)-Q(c)|< M|t-c|\)?
+								
+								
+							</p>
+							<ol type="upper-alpha">
+									<li style="font-size: 30px;" >
+										\(M=|a+b|\).
+									</li>
+									<li style="font-size: 30px;" >
+										\(M=|a|+|b|\).
+									</li>
+									<li style="font-size: 30px;" >
+										\(M=\max(|a|,|b|)\).
+									</li>
+									<li style="font-size: 30px;" >
+										\(M=2\max(|a|,|b|)\).
+									</li>
+
+							</ol>
+							<p style="font-size: 30px;" >
+								(Hint: think about \([1,3], c=2\) and \([-1,1], c=0\).)
+							</p>
+						</div>
+					</section>
+
+
+					<section data-auto-animate>
+
+						<iframe src="https://www.desmos.com/calculator/kzxqzs8cnq" width="90%" height="500" style="border: 1px solid #ccc" frameborder=0></iframe>
+					</section>
+
+
+
+					<section data-auto-animate>
+						<div class="r-frame">
+							<p style="font-size: 30px;" >
+								Let \(Q(t)=\sqrt{t}\) on some \([a,b], 0\leq a < b\).  
+							</p>
+						</div>
+						
+					</section>
+
+					<section data-auto-animate>
+						<div class="r-frame">
+							<p style="font-size: 30px;" >
+								Let \(Q(t)=\sqrt{t}\) on some \([a,b], 0\leq a < b\).  Note that \[|Q(t)-Q(c)|=|\sqrt{t}-\sqrt{c}|\]\[=\left| \frac{(\sqrt{t}-\sqrt{c})(\sqrt{t}+\sqrt{c})}{\sqrt{t}+\sqrt{c}} \right| = \left| \frac{1}{\sqrt{t}+\sqrt{c}}\right||t-c| < \left| \frac{1}{\sqrt{c}}\right||t-c|.\]
+							</p>
+						</div>
+						<div class="fragment">
+							<p style="font-size: 30px;" >
+								If \(c>0\) what is a good choice for \(M\) so that \(\left| \frac{1}{\sqrt{c}}\right||t-c| \leq M|t-c|\)?
+							</p>
+						</div>
+
+						<div class="fragment">
+							<p style="font-size: 30px;" >
+								If \(c=0\) what is a good choice for \(\delta\) so that if \(|t-0|<\delta\), \(
+								|\sqrt{t}-\sqrt{0}|<\epsilon\)?
+							</p>
+
+							<ol type="upper-alpha">
+									<li style="font-size: 30px;" >
+										\(\delta=1\).
+									</li>
+									<li style="font-size: 30px;" >
+										\(\delta=\epsilon\).
+									</li>
+									<li style="font-size: 30px;" >
+										\(\delta=\epsilon^2\).
+									</li>
+									<li style="font-size: 30px;" >
+										\(\delta=\sqrt{\epsilon}\).
+									</li>
+
+							</ol>
+							<p style="font-size: 30px;" >
+								(Hint: Let \(\epsilon=0.25\).)
+							</p>
+						</div>
+					</section>
+
+					<section data-auto-animate>
+
+						<iframe src="https://www.desmos.com/calculator/ouayuurev4" width="90%" height="500" style="border: 1px solid #ccc" frameborder=0></iframe>
+					</section>
+				</section>
+
+
+				<section>
+
+					<section data-auto-animate>
+						<div class="r-frame">
+							<p style="font-size: 30px;" >
+								If \(Q(t), R(t)\) are continuous on each \(c\) in \((a,b)\), then so is \((Q+R)(t)\).
+							</p>
+						</div>
+
+						<iframe src="https://www.desmos.com/calculator/ceqar5png1" width="90%" height="500" style="border: 1px solid #ccc" frameborder=0></iframe>
+
+
+					</section>
+
+					
+
+					<section data-auto-animate>
+
+						<p style="font-size: 30px;" >
+								If \(Q(t), R(t)\) are continuous on each \(c\) in \((a,b)\), then so is \((Q\cdot R)(c)\).
+						</p>
+
+						<iframe src="https://www.desmos.com/calculator/lxskrxf05j" width="90%" height="500" style="border: 1px solid #ccc" frameborder=0></iframe>
+
+					</section>
+
+					
+
+					
+
+					
+					<section data-auto-animate>
+						<div class="r-frame">
+							<p style="font-size: 30px;" >
+								If \(Q(t)\) is continuous at  \(c\), and \(R(t)\) is continuous at \(Q(c)\) then \((R\circ Q)(t)\) is continuous at \(c\).
+							</p>
+						</div>
+						</section>
+					<section data-auto-animate>
+						<div class="r-frame">
+							<p style="font-size: 30px;" >
+								If \(Q(t)\) is continuous at  \(c\), then \(kQ(t)\) is continuous at  \(c\) for any constant \(k\).
+							</p>
+						</div>
+					</section>
+
+					<section data-auto-animate>
+						<div class="r-frame">
+							<p style="font-size: 30px;" >
+								If \(R(t)\) is continuous at  \(c\), and \(|Q(t)-Q(c)|<|R(t)-R(c)|\) for every \(t\) in an open interval \((a,b)\) containing \(t\), then \(Q(t)\) is continuous at  \(c\).
+							</p>
+						</div>
+					</section>
+					
+				</section>
+					
+				
+			</div>
+		</div>
+
+		<script src="dist/reveal.js"></script>
+		<script src="plugin/notes/notes.js"></script>
+		<script src="plugin/markdown/markdown.js"></script>
+		<script src="plugin/highlight/highlight.js"></script>
+		<script>
+			// More info about initialization & config:
+			// - https://revealjs.com/initialization/
+			// - https://revealjs.com/config/
+			Reveal.initialize({
+				hash: true,
+
+				// Learn about plugins: https://revealjs.com/plugins/
+				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
+			});
+		</script>
+		<script src="plugin/math/math.js"></script>
+		<script src="plugin/chalkboard/plugin.js"></script>
+		<script src="plugin/customcontrols/plugin.js"></script>
+
+
+
+	<script>
+  	Reveal.initialize({
+		math: {
+			mathjax: 'https://cdn.jsdelivr.net/gh/mathjax/mathjax@2.7.8/MathJax.js',
+			config: 'TeX-AMS_HTML-full',
+			// pass other options into `MathJax.Hub.Config()`
+			TeX: { Macros: { RR: "{\\bf R}" } }
+		},
+
+		chalkboard: {
+        boardmarkerWidth: 3,
+        chalkWidth: 7,
+        chalkEffect: 1.0,
+        storage: null,
+        src: null,
+        readOnly: undefined,
+        transition: 800,
+        theme: "chalkboard",
+        background: [ 'rgba(127,127,127,.1)' , path + 'img/blackboard.png' ],
+        grid: { color: 'rgb(50,50,10,0.5)', distance: 80, width: 2},
+        eraser: { src: path + 'img/sponge.png', radius: 20},
+        boardmarkers : [
+                { color: 'rgba(100,100,100,1)', cursor: 'url(' + path + 'img/boardmarker-black.png), auto'},
+                { color: 'rgba(30,144,255, 1)', cursor: 'url(' + path + 'img/boardmarker-blue.png), auto'},
+                { color: 'rgba(220,20,60,1)', cursor: 'url(' + path + 'img/boardmarker-red.png), auto'},
+                { color: 'rgba(50,205,50,1)', cursor: 'url(' + path + 'img/boardmarker-green.png), auto'},
+                { color: 'rgba(255,140,0,1)', cursor: 'url(' + path + 'img/boardmarker-orange.png), auto'},
+                { color: 'rgba(150,0,20150,1)', cursor: 'url(' + path + 'img/boardmarker-purple.png), auto'},
+                { color: 'rgba(255,220,0,1)', cursor: 'url(' + path + 'img/boardmarker-yellow.png), auto'}
+        ],
+        chalks: [
+                { color: 'rgba(255,255,255,0.5)', cursor: 'url(' + path + 'img/chalk-white.png), auto'},
+                { color: 'rgba(96, 154, 244, 0.5)', cursor: 'url(' + path + 'img/chalk-blue.png), auto'},
+                { color: 'rgba(237, 20, 28, 0.5)', cursor: 'url(' + path + 'img/chalk-red.png), auto'},
+                { color: 'rgba(20, 237, 28, 0.5)', cursor: 'url(' + path + 'img/chalk-green.png), auto'},
+                { color: 'rgba(220, 133, 41, 0.5)', cursor: 'url(' + path + 'img/chalk-orange.png), auto'},
+                { color: 'rgba(220,0,220,0.5)', cursor: 'url(' + path + 'img/chalk-purple.png), auto'},
+                { color: 'rgba(255,220,0,0.5)', cursor: 'url(' + path + 'img/chalk-yellow.png), auto'}
+        ]
+    },
+    customcontrols: {
+  		controls: [
+  			{ icon: '<i class="fa fa-pen-square"></i>',
+  			  title: 'Toggle chalkboard (B)',
+  			  action: 'RevealChalkboard.toggleChalkboard();'
+  			},
+  			{ icon: '<i class="fa fa-pen"></i>',
+  			  title: 'Toggle notes canvas (C)',
+  			  action: 'RevealChalkboard.toggleNotesCanvas();'
+  			}
+  		]
+    },
+
+		plugins: [ RevealMath, RevealChalkboard, RevealCustomControls, RevealMenu  ]
+		});
+	</script>
+
+	</body>
+</html>
