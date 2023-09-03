@@ -1,0 +1,1398 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>reveal.js</title>
+
+		<link rel="stylesheet" href="dist/reset.css">
+		<link rel="stylesheet" href="dist/reveal.css">
+		<link rel="stylesheet" href="dist/theme/white.css">
+		<link rel="stylesheet" href="plugin/chalkboard/style.css">
+		<link rel="stylesheet" href="plugin/customcontrols/style.css">
+
+
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+		<script src="https://tikzjax.com/v1/tikzjax.js"></script>
+
+
+
+
+		<!-- Theme used for syntax highlighted code -->
+		<link rel="stylesheet" href="plugin/highlight/monokai.css">
+		<style>
+			.container{
+   				 display: flex;
+			}
+			.col{
+    			flex: 1;
+			}
+		</style>
+			<script async defer src="https://buttons.github.io/buttons.js"></script>
+
+		<script src="plugin/menu/menu.js"></script>
+
+
+
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				
+				<section>
+					<h2>Sweet Clydes Inversion Theorem</h2>
+					<h4>Math Club Event!</h4>
+					
+					
+					<h4>
+						Oxford College of Emory University <a href="https://app.oxford.emory.edu/WebApps/Directory/index.cfm/view/9984" target="_blank">Tien Chih</a>
+					</h4>
+				</section>
+
+				
+
+				<section>
+					
+					<section data-auto-animate>
+						<h4>Permutations</h4>
+
+					<div class="r-frame">
+						<p style="font-size: 30px">
+							A <strong style="color: blue"> permutation</strong> on \(n\) objects is a rearrangement of those objects.
+						</p>
+					</div>	
+					
+					<div class="fragment">
+						<p><center>
+								<script type="text/tikz">
+								  \begin{tikzpicture}[]
+								    
+
+								    \foreach \x in {1,...,5}{
+								    	\draw[fill, teal] (\x*2,4) circle (4pt) node[above ]{\Large $ \x$};
+								    	\draw[fill, teal] (\x*2,0) circle (4pt) node[below ]{\Large $ \x$};
+								    }
+
+								    
+								    \draw[->, dashed, ultra thick] (2,4) -- (10,0);
+								    \draw[->, dashed, ultra thick] (4,4) -- (2,0);
+								    \draw[->, dashed, ultra thick] (6,4) -- (8,0);
+								    \draw[->, dashed, ultra thick] (8,4) -- (6,0);
+								    \draw[->, dashed, ultra thick] (10,4) -- (4,0);
+
+								    \node[] at (-1,2){\Huge $\textcolor{blue}{f}:$};
+
+
+
+								  \end{tikzpicture}
+								</script>
+							</center></p>
+						<p style="font-size: 30px;" >
+							More formally a <strong style="color: blue"> bijection</strong>.  \(f:[5]\to[5]\) sends \(1\mapsto 5, 2\mapsto 1, 3\mapsto 4, 4\mapsto 3, 5\mapsto 2, \) 
+						</p>
+					</div>		
+						
+
+						
+					</section>
+
+					<section data-auto-animate>
+						<h4>Permutations</h4>
+
+					<div class="r-frame">
+						<p style="font-size: 30px">
+							The <strong style="color: blue"> identity</strong> is a permutation.
+						</p>
+					</div>	
+					
+					<div >
+						<p><center>
+								<script type="text/tikz">
+								  \begin{tikzpicture}[]
+								    
+
+								    \foreach \x in {1,...,5}{
+								    	\draw[fill, teal] (\x*2,4) circle (4pt) node[above ]{\Large $ \x$};
+								    	\draw[fill, teal] (\x*2,0) circle (4pt) node[below ]{\Large $ \x$};
+								    }
+
+								    
+								    \draw[->, dashed, ultra thick] (2,4) -- (2,0);
+								    \draw[->, dashed, ultra thick] (4,4) -- (4,0);
+								    \draw[->, dashed, ultra thick] (6,4) -- (6,0);
+								    \draw[->, dashed, ultra thick] (8,4) -- (8,0);
+								    \draw[->, dashed, ultra thick] (10,4) -- (10,0);
+
+								    \node[] at (-1,2){\Huge $\textcolor{blue}{id}:$};
+
+
+
+								  \end{tikzpicture}
+								</script>
+							</center></p>
+						
+					</div>		
+						
+
+						
+					</section>
+
+
+					<section data-auto-animate>
+						<h4>Permutations</h4>
+
+					<div class="r-frame">
+						<p style="font-size: 30px">
+							Permutations may be  <strong style="color: blue"> composed</strong>.
+						</p>
+					</div>
+						
+					<div>
+						<p><center>
+								<script type="text/tikz">
+								  \begin{tikzpicture}[]
+								    
+
+								    \foreach \x in {1,...,5}{
+								    	\draw[fill, teal] (\x*2,4) circle (4pt) node[above ]{\Large $ \x$};
+								    	\draw[fill, teal] (\x*2,0) circle (4pt) node[right]{\Large $ \x$};
+								    	\draw[fill, teal] (\x*2,-4) circle (4pt) node[below ]{\Large $ \x$};
+								    }
+
+								    
+								    \draw[->, dashed, ultra thick] (2,4) -- (10,0);
+								    \draw[->, dashed, ultra thick] (4,4) -- (2,0);
+								    \draw[->, dashed, ultra thick] (6,4) -- (8,0);
+								    \draw[->, dashed, ultra thick] (8,4) -- (6,0);
+								    \draw[->, dashed, ultra thick] (10,4) -- (4,0);
+
+								    \node[] at (-1,2){\Huge $\textcolor{blue}{f}:$};
+
+								    \draw[->, dashed, ultra thick] (2,0) -- (2,-4);
+								    \draw[->, dashed, ultra thick] (4,0) -- (8,-4);
+								    \draw[->, dashed, ultra thick] (6,0) -- (10,-4);
+								    \draw[->, dashed, ultra thick] (8,0) -- (6,-4);
+								    \draw[->, dashed, ultra thick] (10,0) -- (4,-4);
+
+								    \node[] at (-1,-2){\Huge $\textcolor{red}{g}:$};
+
+
+
+								  \end{tikzpicture}
+								</script>
+							</center></p>
+						<p style="font-size: 30px;" >
+							What is \(g\circ f\)?
+						</p>
+					</div>		
+						
+
+						
+					</section>
+
+					<section data-auto-animate>
+						<h4>Permutations</h4>
+
+					<div class="r-frame">
+						<p style="font-size: 30px">
+							Permutations may be  <strong style="color: blue"> composed</strong>.
+						</p>
+					</div>
+						
+					<div>
+						<p><center>
+								<script type="text/tikz">
+								  \begin{tikzpicture}[]
+								    
+
+								    \foreach \x in {1,...,5}{
+								    	\draw[fill, teal] (\x*2,4) circle (4pt) node[above ]{\Large $ \x$};
+								    	\draw[fill, teal] (\x*2,0) circle (4pt) node[right]{\Large $ \x$};
+								    	\draw[fill, teal] (\x*2,-4) circle (4pt) node[below ]{\Large $ \x$};
+								    }
+
+								    
+								    \draw[->, dashed, ultra thick] (2,4) -- (10,0);
+								    \draw[->, dashed, ultra thick] (4,4) -- (2,0);
+								    \draw[->, dashed, ultra thick] (6,4) -- (8,0);
+								    \draw[->, dashed, ultra thick] (8,4) -- (6,0);
+								    \draw[->, dashed, ultra thick] (10,4) -- (4,0);
+
+								    \node[] at (-1,2){\Huge $\textcolor{blue}{f}:$};
+
+								    \draw[->, dashed, ultra thick] (2,0) -- (2,-4);
+								    \draw[->, dashed, ultra thick] (4,0) -- (8,-4);
+								    \draw[->, dashed, ultra thick] (6,0) -- (10,-4);
+								    \draw[->, dashed, ultra thick] (8,0) -- (6,-4);
+								    \draw[->, dashed, ultra thick] (10,0) -- (4,-4);
+
+								    \node[] at (-1,-2){\Huge $\textcolor{red}{g}:$};
+
+								    \draw[->, dashed, ultra thick, purple] (2,4) -- (4,-4);
+								    \draw[->, dashed, ultra thick, purple] (4,4) -- (2,-4);
+								    \draw[->, dashed, ultra thick, purple] (6,4) -- (6,-4);
+								    \draw[->, dashed, ultra thick, purple] (8,4) -- (10,-4);
+								    \draw[->, dashed, ultra thick, purple] (10,4) -- (8,-4);
+
+
+
+								  \end{tikzpicture}
+								</script>
+							</center></p>
+						<p style="font-size: 30px;" >
+							What is \(g\circ f\)?
+						</p>
+					</div>		
+						
+
+						
+					</section>
+
+
+
+
+					<section data-auto-animate>
+						<h4>Permutations</h4>
+
+					<div class="r-frame">
+						<p style="font-size: 30px">
+							Permutations may be  <strong style="color: blue"> composed</strong>.
+						</p>
+					</div>
+						
+					<div>
+						<p><center>
+								<script type="text/tikz">
+								  \begin{tikzpicture}[]
+								    
+
+								    \foreach \x in {1,...,5}{
+								    	\draw[fill, teal] (\x*2,4) circle (4pt) node[above ]{\Large $ \x$};
+								    	\draw[fill, teal] (\x*2,0) circle (4pt) node[right]{\Large $ \x$};
+								    	\draw[fill, teal] (\x*2,-4) circle (4pt) node[below ]{\Large $ \x$};
+								    }
+
+								    
+								    \draw[->, dashed, ultra thick] (2,4-4) -- (10,0-4);
+								    \draw[->, dashed, ultra thick] (4,4-4) -- (2,0-4);
+								    \draw[->, dashed, ultra thick] (6,4-4) -- (8,0-4);
+								    \draw[->, dashed, ultra thick] (8,4-4) -- (6,0-4);
+								    \draw[->, dashed, ultra thick] (10,4-4) -- (4,0-4);
+
+								    \node[] at (-1,2-4){\Huge $\textcolor{blue}{f}:$};
+
+								    \draw[->, dashed, ultra thick] (2,0+4) -- (2,-4+4);
+								    \draw[->, dashed, ultra thick] (4,0+4) -- (8,-4+4);
+								    \draw[->, dashed, ultra thick] (6,0+4) -- (10,-4+4);
+								    \draw[->, dashed, ultra thick] (8,0+4) -- (6,-4+4);
+								    \draw[->, dashed, ultra thick] (10,0+4) -- (4,-4+4);
+
+								    \node[] at (-1,-2+4){\Huge $\textcolor{red}{g}:$};
+
+
+
+								  \end{tikzpicture}
+								</script>
+							</center></p>
+						<p style="font-size: 30px;" >
+							What is \( f\circ g\)?
+						</p>
+					</div>		
+
+					
+						
+
+						
+					</section>
+
+
+
+
+
+
+
+
+					<section data-auto-animate>
+						<h4>Permutations</h4>
+
+					<div class="r-frame">
+						<p style="font-size: 30px">
+							Permutations may be  <strong style="color: blue"> composed</strong>.
+						</p>
+					</div>
+						
+					<div>
+						<p><center>
+								<script type="text/tikz">
+								  \begin{tikzpicture}[]
+								    
+
+								    \foreach \x in {1,...,5}{
+								    	\draw[fill, teal] (\x*2,4) circle (4pt) node[above ]{\Large $ \x$};
+								    	\draw[fill, teal] (\x*2,0) circle (4pt) node[right]{\Large $ \x$};
+								    	\draw[fill, teal] (\x*2,-4) circle (4pt) node[below ]{\Large $ \x$};
+								    }
+
+								    
+								    \draw[->, dashed, ultra thick] (2,4-4) -- (10,0-4);
+								    \draw[->, dashed, ultra thick] (4,4-4) -- (2,0-4);
+								    \draw[->, dashed, ultra thick] (6,4-4) -- (8,0-4);
+								    \draw[->, dashed, ultra thick] (8,4-4) -- (6,0-4);
+								    \draw[->, dashed, ultra thick] (10,4-4) -- (4,0-4);
+
+								    \node[] at (-1,2-4){\Huge $\textcolor{blue}{f}:$};
+
+								    \draw[->, dashed, ultra thick] (2,0+4) -- (2,-4+4);
+								    \draw[->, dashed, ultra thick] (4,0+4) -- (8,-4+4);
+								    \draw[->, dashed, ultra thick] (6,0+4) -- (10,-4+4);
+								    \draw[->, dashed, ultra thick] (8,0+4) -- (6,-4+4);
+								    \draw[->, dashed, ultra thick] (10,0+4) -- (4,-4+4);
+
+								    \node[] at (-1,-2+4){\Huge $\textcolor{red}{g}:$};
+
+								    \draw[->, dashed, ultra thick, orange] (2,4) -- (10,-4);
+								    \draw[->, dashed, ultra thick, orange] (4,4) -- (6,-4);
+								    \draw[->, dashed, ultra thick, orange] (6,4) -- (4,-4);
+								    \draw[->, dashed, ultra thick, orange] (8,4) -- (8,-4);
+								    \draw[->, dashed, ultra thick, orange] (10,4) -- (2,-4);
+
+
+
+								  \end{tikzpicture}
+								</script>
+							</center></p>
+						<p style="font-size: 30px;" >
+							What is \( f\circ g\)?
+						</p>
+					</div>		
+
+					<div class="fragment">
+						<p style="font-size: 30px;" >
+							Composition is <strong style="color: blue"> non-commutative</strong>.
+						</p>
+						
+					</div>
+						
+
+						
+					</section>
+
+					<section data-auto-animate>
+						<h4>Permutations</h4>
+
+					<div class="r-frame">
+						<p style="font-size: 30px">
+							Permutations may be  <strong style="color: blue"> inverted</strong>.
+						</p>
+					</div>
+						
+					<div>
+						<p><center>
+								<script type="text/tikz">
+								  \begin{tikzpicture}[]
+								    
+
+								    \foreach \x in {1,...,5}{
+								    	\draw[fill, teal] (\x*2,4) circle (4pt) node[above ]{\Large $ \x$};
+								    	\draw[fill, teal] (\x*2,0) circle (4pt) node[right]{\Large $ \x$};
+								    	\draw[fill, teal] (\x*2,-4) circle (4pt) node[below ]{\Large $ \x$};
+								    }
+
+								    
+								    \draw[->, dashed, ultra thick] (2,4) -- (10,0);
+								    \draw[->, dashed, ultra thick] (4,4) -- (2,0);
+								    \draw[->, dashed, ultra thick] (6,4) -- (8,0);
+								    \draw[->, dashed, ultra thick] (8,4) -- (6,0);
+								    \draw[->, dashed, ultra thick] (10,4) -- (4,0);
+
+								    \node[] at (-1,2){\Huge $\textcolor{blue}{f}:$};
+
+								    %\draw[->, dashed, ultra thick] (2,0) -- (2,-4);
+								    %\draw[->, dashed, ultra thick] (4,0) -- (8,-4);
+								    %\draw[->, dashed, ultra thick] (6,0) -- (10,-4);
+								    %\draw[->, dashed, ultra thick] (8,0) -- (6,-4);
+								    %\draw[->, dashed, ultra thick] (10,0) -- (4,-4);
+
+								    \node[] at (-1,-2){\Huge $\textcolor{red}{f^{-1}}:$};
+
+
+
+								  \end{tikzpicture}
+								</script>
+							</center></p>
+						<p style="font-size: 30px;" >
+							What should \(f^{-1}\) be so that \(f^{-1}\circ f =id\)?
+						</p>
+					</div>		
+
+					
+						
+
+						
+					</section>
+
+					<section data-auto-animate>
+						<h4>Permutations</h4>
+
+					<div class="r-frame">
+						<p style="font-size: 30px">
+							Permutations may be  <strong style="color: blue"> inverted</strong>.
+						</p>
+					</div>
+						
+					<div>
+						<p><center>
+								<script type="text/tikz">
+								  \begin{tikzpicture}[]
+								    
+
+								    \foreach \x in {1,...,5}{
+								    	\draw[fill, teal] (\x*2,4) circle (4pt) node[above ]{\Large $ \x$};
+								    	\draw[fill, teal] (\x*2,0) circle (4pt) node[right]{\Large $ \x$};
+								    	\draw[fill, teal] (\x*2,-4) circle (4pt) node[below ]{\Large $ \x$};
+								    }
+
+								    
+								    \draw[->, dashed, ultra thick] (2,4) -- (10,0);
+								    \draw[->, dashed, ultra thick] (4,4) -- (4,0);
+								    \draw[->, dashed, ultra thick] (6,4) -- (8,0);
+								    \draw[->, dashed, ultra thick] (8,4) -- (6,0);
+								    \draw[->, dashed, ultra thick] (10,4) -- (2,0);
+
+								    \node[] at (-1,2){\Huge $\textcolor{blue}{f}:$};
+
+								    \draw[->, dashed, ultra thick] (2,0) -- (10,-4);
+								    \draw[->, dashed, ultra thick] (4,0) -- (4,-4);
+								    \draw[->, dashed, ultra thick] (6,0) -- (8,-4);
+								    \draw[->, dashed, ultra thick] (8,0) -- (6,-4);
+								    \draw[->, dashed, ultra thick] (10,0) -- (2,-4);
+
+								    \node[] at (-1,-2){\Huge $\textcolor{red}{f^{-1}}:$};
+
+								    \draw[->, dashed, ultra thick, teal] (2,4) -- (2,-4);
+								    \draw[->, dashed, ultra thick, teal] (4,4) -- (4,-4);
+								    \draw[->, dashed, ultra thick, teal] (6,4) -- (6,-4);
+								    \draw[->, dashed, ultra thick, teal] (8,4) -- (8,-4);
+								    \draw[->, dashed, ultra thick, teal] (10,4) -- (10,-4);
+
+
+
+								  \end{tikzpicture}
+								</script>
+							</center></p>
+						<p style="font-size: 30px;" >
+							What should \(f^{-1}\) be so that \(f^{-1}\circ f =id\)?
+						</p>
+					</div>		
+
+					
+						
+					</section>
+
+
+					<section data-auto-animate>
+						<h4>Permutations</h4>
+
+					<div class="r-frame">
+						<p style="font-size: 30px">
+							A   <strong style="color: blue"> group</strong> is a set \(G\) along with a binary operation \(*\) satisfying.
+						</p>
+
+						<ul>
+							<li style="font-size: 30px"><strong style="color: blue"> Closer</strong>: Given any \(a, b\in G\), we have \(a*b\in G\).</li>
+							<li style="font-size: 30px"><strong style="color: blue"> Associativity</strong>: Given any \(a, b, c\in G\), we have \(a*(b*c) = (a*b)*c\).</li>
+							<li style="font-size: 30px"><strong style="color: blue"> Identity</strong>: There is an element \(e\in G\), so that for any \(a\in G\), \(a*e=e=e*a\).</li>
+							<li style="font-size: 30px"><strong style="color: blue"> Inverses</strong>: Given any \(a\in G\), there is an \(a^{-1}\in G\) so that \(a*a^{-1}=e\).</li>
+						</ul>
+					</div>
+						
+					
+					<div>
+						<p style="font-size: 30px">
+							The set of permutations on a set form a group with the composition operation.
+						</p>
+					</div>
+					
+						
+					</section>
+
+
+
+
+					
+				</section>
+
+
+				<section>
+					<section data-auto-animate>
+						<div>
+							<p style="font-size: 30px">
+								We often use <strong style="color: blue"> cycle notation</strong> to describe a permutation. \[(ablx)\]
+								describes the permutation that sends \(a\mapsto b, b\mapsto l, l\mapsto x,\)
+							</p>
+						</div>
+
+						<div class="fragment">
+							<p style="font-size: 30px">
+								\((abc)(cd) = (cdab)\)
+							</p>
+						</div>
+
+						<div class="fragment">
+							<p style="font-size: 30px">
+								\( (cd)(abc) = (abdc)\)
+							</p>
+						</div>	
+
+						<div class="fragment">
+							<p style="font-size: 30px">
+								\((abc)(xyz) = (xyz)(abc)\)
+							</p>
+						</div>
+						
+						
+
+					</section>
+
+
+					<section data-auto-animate>
+						
+
+						<div >
+							<p><center>
+									<script type="text/tikz">
+									  \begin{tikzpicture}[]
+									    
+
+									    \foreach \x in {1,...,5}{
+									    	\draw[fill, teal] (\x*2,4) circle (4pt) node[above ]{\Large $ \x$};
+									    	\draw[fill, teal] (\x*2,0) circle (4pt) node[below ]{\Large $ \x$};
+									    }
+
+									    
+									    \draw[->, dashed, ultra thick] (2,4) -- (10,0);
+									    \draw[->, dashed, ultra thick] (4,4) -- (2,0);
+									    \draw[->, dashed, ultra thick] (6,4) -- (8,0);
+									    \draw[->, dashed, ultra thick] (8,4) -- (6,0);
+									    \draw[->, dashed, ultra thick] (10,4) -- (4,0);
+
+									    \node[] at (-1,2){\Huge $\textcolor{blue}{f}:$};
+
+
+
+									  \end{tikzpicture}
+									</script>
+								</center></p>
+							<p style="font-size: 30px;" >
+								\(f=(1,5,2)(3,4)=(3,4)(1,5,2)\).
+							</p>
+						</div>	
+
+						<div class="fragment">
+							<p style="font-size: 30px;" >
+								Each permutation may be written as a product of <strong style="color: blue"> disjoint</strong> cycles.
+							</p>
+						</div>
+						
+						
+
+					</section>
+
+
+					<section data-auto-animate>
+						
+
+						<div >
+							<p><center>
+									<script type="text/tikz">
+									  \begin{tikzpicture}[]
+									    
+
+									    \foreach \x in {1,...,5}{
+									    	\draw[fill, teal] (\x*2,-4) circle (4pt) node[below ]{\Large $ \x$};
+									    	\draw[fill, teal] (\x*2,0) circle (4pt) node[above ]{\Large $ \x$};
+									    }
+
+									    
+									    \draw[->, dashed, ultra thick] (2,0) -- (2,-4);
+									    \draw[->, dashed, ultra thick] (4,0) -- (8,-4);
+									    \draw[->, dashed, ultra thick] (6,0) -- (10,-4);
+									    \draw[->, dashed, ultra thick] (8,0) -- (6,-4);
+									    \draw[->, dashed, ultra thick] (10,0) -- (4,-4);
+
+									    \node[] at (-1,-2){\Huge $\textcolor{blue}{g}:$};
+
+
+
+									  \end{tikzpicture}
+									</script>
+								</center></p>
+							<p style="font-size: 30px;" >
+								Write \(g\) as the product of disjoint cycles.
+							</p>
+						</div>	
+						
+						
+
+					</section>
+
+					<section data-auto-animate>
+						<div>
+							<p style="font-size: 30px">
+								Each cycle (and thus permutation) may be  written as a product of <strong style="color: blue"> two-cycles</strong> or transpositions (L to R).
+
+								\[(a_1a_2a_3a_4a_5) = (a_4a_5)(a_3a_4)(a_2a_3)(a_1a_2).\]
+							</p>
+						</div>
+
+						<div class="fragment">
+							<p style="font-size: 30px">
+								
+
+								\[(a_1a_2a_3a_4a_5)^{-1}=(a_5a_4a_3a_2a_1) =  (a_1a_2)(a_2a_3)(a_3a_4)(a_4a_5).\]
+							</p>
+						</div>
+
+						
+						
+						
+
+					</section>
+				</section>
+
+				<section>
+					
+					<section data-auto-animate>
+						<h4>THE BIG QUESTION</h4>
+						<div >
+							<p style="font-size: 30px">
+								Permutations are the product of transpositions.
+							</p>
+						</div>
+
+						<div class="fragment">
+							<p style="font-size: 30px">
+								To invert a permutation, we could just reverse the order of transpositions.
+							</p>
+						</div>
+
+						<div class="fragment">
+							<p style="font-size: 30px">
+								But what if we couldn't re-use transpositions?
+							</p>
+						</div>	
+
+						
+						
+						
+
+					</section>
+
+					<section data-auto-animate>
+						<h4>Sweet Clyde's Inversion Theorem</h4>
+						<img src="img/futuramass.webp", width="150%">
+
+						
+						
+						
+
+					</section>
+
+					<section data-auto-animate>
+						<h4>Ken Keeler</h4>
+						<img src="img/KenKeeler.jpg", height="500">
+
+						
+						
+						
+
+					</section>
+
+					<section data-auto-animate>
+						<h4>THE Strategy</h4>
+						<div class="r-frame">
+							<p style="font-size: 30px">
+								For  an inversion scheme with two additional elements \(X, Y\), it suffices that:
+
+								<ul>
+									<li style="font-size: 30px"> It can generate any cycle.</li>
+									<li style="font-size: 30px"> It only uses \((aX)\) or \((aY)\) transpositions.</li>
+									<li style="font-size: 30px"> The set \(\{X, Y\}\) is preserved.</li>
+								</ul>
+
+							</p>
+						</div>
+
+						<div >
+							<p style="font-size: 30px">
+								Why?
+							</p>
+						</div>
+
+						
+
+						
+						
+						
+
+					</section>
+
+					<section data-auto-animate>
+						<div class="r-frame">
+							<p style="font-size: 30px">
+								Let \(1\leq \ell \leq k\).  Consider \[ \left[(a_1X)(a_2X)\cdots(a_{\ell}X)\right] \left[(a_{\ell+1}Y)(a_{\ell+2}Y)\cdots (a_{k}Y)\right] (a_{\ell+1}X) (a_{1}Y)\]
+
+							</p>
+						</div>
+
+						<div class="fragment">
+							<p style="font-size: 30px">
+								\[ \left[(a_1a_2\cdots a_{\ell}X)\right]\left[(a_{\ell+1}Y)(a_{\ell+2}Y)\cdots (a_{k}Y)\right] (a_{\ell+1}X) (a_{1}Y)\]
+							</p>
+						</div>
+
+						<div class="fragment">
+							<p style="font-size: 30px">
+								\[ \left[(a_1a_2\cdots a_{\ell}X)\right]\left[(a_{\ell+1}a_{\ell+2}\cdots a_{k}Y)\right] (a_{\ell+1}X) (a_{1}Y)\]
+							</p>
+						</div>
+
+						<div class="fragment">
+							<p style="font-size: 30px">
+								 \[(a_1a_2\cdots a_{\ell} a_{\ell+1}a_{\ell+2}\cdots a_{k})(XY)\]
+								QED
+							</p>
+						</div>
+
+						
+
+						
+						
+						
+
+					</section>
+					
+
+				</section>
+
+
+
+				<section>
+					
+					<section data-auto-animate>
+						<h4>Permuting</h4>
+						<img src="img/futurama/1AP.png", width="50%">
+						<div class="r-frame">
+							<p style="font-size: 30px">
+								\[(PA)\]
+
+							</p>
+						</div>
+
+
+					</section>
+
+					<section data-auto-animate>
+						<h4>Permuting</h4>
+						<img src="img/futurama/2AB.png", width="50%">
+						<div class="r-frame">
+							<p style="font-size: 30px">
+								\[(AP)(AB)\]
+
+							</p>
+						</div>
+
+
+					</section>
+					<section data-auto-animate>
+						<h4>Permuting</h4>
+						<img src="img/futurama/3LP.png", width="50%">
+						<div class="r-frame">
+							<p style="font-size: 30px">
+								\[(AP)(AB)(LP)\]
+
+							</p>
+						</div>
+
+
+					</section>
+					<section data-auto-animate>
+						<h4>Permuting</h4>
+						<img src="img/futurama/4WA.png", width="50%">
+						<div class="r-frame">
+							<p style="font-size: 30px">
+								\[(AP)(AB)(LP)(WA)\]
+
+							</p>
+						</div>
+
+
+					</section>
+					<section data-auto-animate>
+						<h4>Permuting</h4>
+						<img src="img/futurama/5ZF.png", width="50%">
+						<div class="r-frame">
+							<p style="font-size: 30px">
+								\[(AP)(AB)(LP)(WA)(ZF)\]
+
+							</p>
+						</div>
+
+
+					</section>
+					<section data-auto-animate>
+						<h4>Permuting</h4>
+						<img src="img/futurama/6WE.png", width="50%">
+						<div class="r-frame">
+							<p style="font-size: 30px">
+								\[(AP)(AB)(LP)(WA)(ZF)(WE)\]
+
+							</p>
+						</div>
+
+
+					</section>
+					<section data-auto-animate>
+						<h4>Permuting (last one!)</h4>
+						<img src="img/futurama/7HL.png", width="50%">
+						<div class="r-frame">
+							<p style="font-size: 30px">
+								\[(AP)(AB)(LP)(WA)(ZF)(HL)\]
+
+							</p>
+						</div>
+
+
+					</section>
+
+					<section data-auto-animate>
+						<h4>The final Permutation</h4>
+						<img src="img/futurama/7HL.png", width="50%">
+						<div class="r-frame">
+							<p style="font-size: 30px">
+								\[(AHLPBEW)(ZF)\]
+
+							</p>
+						</div>
+
+
+					</section>
+
+					<section data-auto-animate>
+						<h4>Inverting (ZF)</h4>
+						<img src="img/futurama/8(FX)(ZY).png", width="50%">
+						<div class="r-frame">
+							<p style="font-size: 30px">
+								\[(AHLPBEW)(ZF)\]
+
+							</p>
+						</div>
+
+						<div >
+							<p style="font-size: 30px">
+								 \[(FX)(ZY)\]
+							</p>
+						</div>
+
+
+
+
+					</section>
+
+					<section data-auto-animate>
+						<h4>Inverting (ZF) (last one!)</h4>
+						<img src="img/futurama/9(ZX)(FY).png", width="50%">
+						<div class="r-frame">
+							<p style="font-size: 30px">
+								\[(AHLPBEW)(ZF)\]
+
+							</p>
+						</div>
+
+						<div >
+							<p style="font-size: 30px">
+								 \[(FX)(ZY)(ZX)(FY)\]
+							</p>
+						</div>
+
+
+
+
+					</section>
+					<section data-auto-animate>
+						<h4>Inverting (ZF)</h4>
+						<img src="img/futurama/9(ZX)(FY).png", width="50%">
+						<div class="r-frame">
+							<p style="font-size: 30px">
+								\[(AHLPBEW)(ZF)\]
+
+							</p>
+						</div>
+
+						<div >
+							<p style="font-size: 30px">
+								 \[(FZ)(XY)\]
+							</p>
+						</div>
+
+
+
+
+					</section>
+
+					<section data-auto-animate>
+						<h4>Inverting (ZF) (applying)</h4>
+						<img src="img/futurama/9(ZX)(FY).png", width="50%">
+						<div class="r-frame">
+							<p style="font-size: 30px">
+								\[(AHLPBEW)(ZF)(FZ)(XY)\]
+
+							</p>
+						</div>
+
+						<div >
+							<p style="font-size: 30px">
+								 
+							</p>
+						</div>
+
+
+
+
+					</section>
+
+					<section data-auto-animate>
+						<h4>Inverting (ZF) (applying)</h4>
+						<img src="img/futurama/9(ZX)(FY).png", width="50%">
+						<div class="r-frame">
+							<p style="font-size: 30px">
+								\[(AHLPBEW)(XY)\]
+
+							</p>
+						</div>
+
+						<div >
+							<p style="font-size: 30px">
+								 
+							</p>
+						</div>
+
+
+
+
+					</section>
+
+					<section data-auto-animate>
+						<h4>Inverting (ZF) (applying)</h4>
+						<img src="img/futurama/9(ZX)(FY).png", width="50%">
+						<div class="r-frame">
+							<p style="font-size: 30px">
+								\[(XY)(AHLPBEW)\]
+
+							</p>
+						</div>
+
+						<div >
+							<p style="font-size: 30px">
+								 
+							</p>
+						</div>
+
+
+
+
+					</section>
+
+					<section data-auto-animate>
+						<h4>Inverting (AHLPBEW) </h4>
+						<img src="img/futurama/10(PX)(WY).png", width="50%">
+						<div class="r-frame">
+							<p style="font-size: 30px">
+								\[(XY)(AHLPBEW)\]
+
+							</p>
+						</div>
+
+						<div >
+							<p style="font-size: 30px">
+								 \[(PX)(WY)\]
+							</p>
+						</div>
+
+
+
+
+					</section>
+
+					<section data-auto-animate>
+						<h4>Inverting (AHLPBEW) </h4>
+						<img src="img/futurama/11(LX)(EY).png", width="50%">
+						<div class="r-frame">
+							<p style="font-size: 30px">
+								\[(XY)(AHLPBEW)\]
+
+							</p>
+						</div>
+
+						<div >
+							<p style="font-size: 30px">
+								 \[(PX)(WY)(LX)(EY)\]
+							</p>
+						</div>
+
+
+
+
+					</section>
+
+					<section data-auto-animate>
+						<h4>Inverting (AHLPBEW) </h4>
+						<img src="img/futurama/12(HX)(BY).png", width="50%">
+						<div class="r-frame">
+							<p style="font-size: 30px">
+								\[(XY)(AHLPBEW)\]
+
+							</p>
+						</div>
+
+						<div >
+							<p style="font-size: 30px">
+								 \[(PX)(WY)(LX)(EY)(HX)(BY)\]
+							</p>
+						</div>
+
+
+
+
+					</section>
+
+					<section data-auto-animate>
+						<h4>Inverting (AHLPBEW) </h4>
+						<img src="img/futurama/13(AX)(PY).png", width="50%">
+						<div class="r-frame">
+							<p style="font-size: 30px">
+								\[(XY)(AHLPBEW)\]
+
+							</p>
+						</div>
+
+						<div >
+							<p style="font-size: 30px">
+								 \[(PX)(WY)(LX)(EY)(HX)(BY)(AX)(PY)\]
+							</p>
+						</div>
+
+
+
+
+					</section>
+
+					<section data-auto-animate>
+						<h4>Inverting (AHLPBEW) (last one!)</h4>
+						<img src="img/futurama/14(WX).png", width="50%">
+						<div class="r-frame">
+							<p style="font-size: 30px">
+								\[(XY)(AHLPBEW)\]
+
+							</p>
+						</div>
+
+						<div >
+							<p style="font-size: 30px">
+								 \[(PX)(WY)(LX)(EY)(HX)(BY)(AX)(PY)(WX)\]
+							</p>
+						</div>
+
+
+
+
+					</section>
+
+					<section data-auto-animate>
+						<h4>Inverting (AHLPBEW) </h4>
+						<img src="img/futurama/14(WX).png", width="50%">
+						<div class="r-frame">
+							<p style="font-size: 30px">
+								\[(XY)(AHLPBEW)\]
+
+							</p>
+						</div>
+
+						<div >
+							<p style="font-size: 30px">
+								 \[(PX)(LX)(HX)(AX)(WY)(EY)(BY)(WX)(PY)\]
+							</p>
+						</div>
+
+
+
+
+					</section>
+
+					<section data-auto-animate>
+						<h4>Inverting (AHLPBEW) </h4>
+						<img src="img/futurama/14(WX).png", width="50%">
+						<div class="r-frame">
+							<p style="font-size: 30px">
+								\[(XY)(AHLPBEW)\]
+
+							</p>
+						</div>
+
+						<div >
+							<p style="font-size: 30px">
+								 \[ \left[(PX)(LX)(HX)(AX)\right] \left[(WY)(EY)(BY)\right](WX)(PY)\]
+							</p>
+						</div>
+
+
+
+
+					</section>
+
+					<section data-auto-animate>
+						<h4>Inverting (AHLPBEW) </h4>
+						<img src="img/futurama/14(WX).png", width="50%">
+						<div class="r-frame">
+							<p style="font-size: 30px">
+								\[(XY)(AHLPBEW)\]
+
+							</p>
+						</div>
+
+						<div >
+							<p style="font-size: 30px">
+								 \[ \left[(PLHAX)\right] \left[(WEBY)\right](WX)(PY)\]
+							</p>
+						</div>
+
+
+
+
+					</section>
+
+					<section data-auto-animate>
+						<h4>Inverting (AHLPBEW) </h4>
+						<img src="img/futurama/14(WX).png", width="50%">
+						<div class="r-frame">
+							<p style="font-size: 30px">
+								\[(XY)(AHLPBEW)\]
+
+							</p>
+						</div>
+
+						<div >
+							<p style="font-size: 30px">
+								 \[ (PLHAWEBY)(XY)\]
+							</p>
+						</div>
+
+
+
+
+					</section>
+
+					<section data-auto-animate>
+						<h4>Inverting (AHLPBEW) (applying) </h4>
+						<img src="img/futurama/14(WX).png", width="50%">
+						<div class="r-frame">
+							<p style="font-size: 30px">
+								\[(XY)(AHLPBEW)(PLHAWEBY)(XY)\]
+
+							</p>
+						</div>
+
+						<div >
+							<p style="font-size: 30px">
+								 \[ \]
+							</p>
+						</div>
+
+
+
+
+					</section>
+
+					<section data-auto-animate>
+						<h4>Inverting (AHLPBEW) (applying) </h4>
+						<img src="img/futurama/14(WX).png", width="50%">
+						<div class="r-frame">
+							<p style="font-size: 30px">
+								\[(XY)(XY)\]
+
+							</p>
+						</div>
+
+						<div >
+							<p style="font-size: 30px">
+								 \[ \]
+							</p>
+						</div>
+
+
+
+
+					</section>
+
+					<section data-auto-animate>
+						<h4>Inverting (AHLPBEW) (applying) </h4>
+						<img src="img/futurama/14(WX).png", width="50%">
+						<div class="r-frame">
+							<p style="font-size: 30px">
+								\[id\]
+
+							</p>
+						</div>
+
+						<div >
+							<p style="font-size: 30px">
+								 \[ \]
+							</p>
+						</div>
+
+
+
+
+					</section>
+					
+				</section>
+
+				<section>
+					<section data-auto-animate>
+						<div >
+							<p style="font-size: 30px">
+								Let \(1\leq \ell \leq k\).  Consider \[ \left[(a_1X)(a_2X)\cdots(a_{\ell}X)\right] \left[(a_{\ell+1}Y)(a_{\ell+2}Y)\cdots (a_{k}Y)\right] (a_{\ell+1}X) (a_{1}Y)\]
+
+							</p>
+						</div>
+
+						<div >
+							<p style="font-size: 30px">
+								\[ \left[(a_1a_2\cdots a_{\ell}X)\right]\left[(a_{\ell+1}Y)(a_{\ell+2}Y)\cdots (a_{k}Y)\right] (a_{\ell+1}X) (a_{1}Y)\]
+							</p>
+						</div>
+
+						<div >
+							<p style="font-size: 30px">
+								\[ \left[(a_1a_2\cdots a_{\ell}X)\right]\left[(a_{\ell+1}a_{\ell+2}\cdots a_{k}Y)\right] (a_{\ell+1}X) (a_{1}Y)\]
+							</p>
+						</div>
+
+						<div >
+							<p style="font-size: 30px">
+								 \[(a_1a_2\cdots a_{\ell} a_{\ell+1}a_{\ell+2}\cdots a_{k})(XY)\]
+								
+							</p>
+						</div>
+
+						
+
+						
+						
+						
+
+					</section>
+					
+
+				</section>
+
+
+
+
+				
+
+
+
+
+
+
+
+									
+
+
+
+				
+			</div>
+		</div>
+
+		<script src="dist/reveal.js"></script>
+		<script src="plugin/notes/notes.js"></script>
+		<script src="plugin/markdown/markdown.js"></script>
+		<script src="plugin/highlight/highlight.js"></script>
+		<script>
+			// More info about initialization & config:
+			// - https://revealjs.com/initialization/
+			// - https://revealjs.com/config/
+			Reveal.initialize({
+				hash: true,
+
+				// Learn about plugins: https://revealjs.com/plugins/
+				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
+			});
+		</script>
+		<script src="plugin/math/math.js"></script>
+		<script src="plugin/chalkboard/plugin.js"></script>
+		<script src="plugin/customcontrols/plugin.js"></script>
+
+
+
+	<script>
+  	Reveal.initialize({
+		math: {
+			mathjax: 'https://cdn.jsdelivr.net/gh/mathjax/mathjax@2.7.8/MathJax.js',
+			config: 'TeX-AMS_HTML-full',
+			// pass other options into `MathJax.Hub.Config()`
+			TeX: { Macros: { RR: "{\\bf R}" } }
+		},
+
+		chalkboard: {
+        boardmarkerWidth: 3,
+        chalkWidth: 7,
+        chalkEffect: 1.0,
+        storage: null,
+        src: null,
+        readOnly: undefined,
+        transition: 800,
+        theme: "chalkboard",
+        background: [ 'rgba(127,127,127,.1)' , path + 'img/blackboard.png' ],
+        grid: { color: 'rgb(50,50,10,0.5)', distance: 80, width: 2},
+        eraser: { src: path + 'img/sponge.png', radius: 20},
+        boardmarkers : [
+                { color: 'rgba(100,100,100,1)', cursor: 'url(' + path + 'img/boardmarker-black.png), auto'},
+                { color: 'rgba(30,144,255, 1)', cursor: 'url(' + path + 'img/boardmarker-blue.png), auto'},
+                { color: 'rgba(220,20,60,1)', cursor: 'url(' + path + 'img/boardmarker-red.png), auto'},
+                { color: 'rgba(50,205,50,1)', cursor: 'url(' + path + 'img/boardmarker-green.png), auto'},
+                { color: 'rgba(255,140,0,1)', cursor: 'url(' + path + 'img/boardmarker-orange.png), auto'},
+                { color: 'rgba(150,0,20150,1)', cursor: 'url(' + path + 'img/boardmarker-purple.png), auto'},
+                { color: 'rgba(255,220,0,1)', cursor: 'url(' + path + 'img/boardmarker-yellow.png), auto'}
+        ],
+        chalks: [
+                { color: 'rgba(255,255,255,0.5)', cursor: 'url(' + path + 'img/chalk-white.png), auto'},
+                { color: 'rgba(96, 154, 244, 0.5)', cursor: 'url(' + path + 'img/chalk-blue.png), auto'},
+                { color: 'rgba(237, 20, 28, 0.5)', cursor: 'url(' + path + 'img/chalk-red.png), auto'},
+                { color: 'rgba(20, 237, 28, 0.5)', cursor: 'url(' + path + 'img/chalk-green.png), auto'},
+                { color: 'rgba(220, 133, 41, 0.5)', cursor: 'url(' + path + 'img/chalk-orange.png), auto'},
+                { color: 'rgba(220,0,220,0.5)', cursor: 'url(' + path + 'img/chalk-purple.png), auto'},
+                { color: 'rgba(255,220,0,0.5)', cursor: 'url(' + path + 'img/chalk-yellow.png), auto'}
+        ]
+    },
+    customcontrols: {
+  		controls: [
+  			{ icon: '<i class="fa fa-pen-square"></i>',
+  			  title: 'Toggle chalkboard (B)',
+  			  action: 'RevealChalkboard.toggleChalkboard();'
+  			},
+  			{ icon: '<i class="fa fa-pen"></i>',
+  			  title: 'Toggle notes canvas (C)',
+  			  action: 'RevealChalkboard.toggleNotesCanvas();'
+  			}
+  		]
+    },
+
+		plugins: [ RevealMath, RevealChalkboard, RevealCustomControls, RevealMenu  ]
+		});
+	</script>
+
+	</body>
+</html>
