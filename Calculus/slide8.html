@@ -1,0 +1,517 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>reveal.js</title>
+
+		<link rel="stylesheet" href="dist/reset.css">
+		<link rel="stylesheet" href="dist/reveal.css">
+		<link rel="stylesheet" href="dist/theme/white.css">
+		<link rel="stylesheet" href="plugin/chalkboard/style.css">
+		<link rel="stylesheet" href="plugin/customcontrols/style.css">
+
+
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+
+
+
+		<!-- Theme used for syntax highlighted code -->
+		<link rel="stylesheet" href="plugin/highlight/monokai.css">
+		<style>
+			.container{
+   				 display: flex;
+			}
+			.col{
+    			flex: 1;
+			}
+		</style>
+			<script async defer src="https://buttons.github.io/buttons.js"></script>
+
+		<script src="plugin/menu/menu.js"></script>
+
+
+
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				
+				<section>
+					<h2>Moving Forward between Small Things</h2>
+					<h4>M 111</h4>
+					
+					
+					<h4>
+						Oxford College of Emory University <a href="https://app.oxford.emory.edu/WebApps/Directory/index.cfm/view/9984" target="_blank">Tien Chih</a>
+					</h4>
+				</section>
+
+
+
+				<section>
+
+					<section data-auto-animate>
+						<div  >
+									<iframe src="https://www.desmos.com/calculator/wqtm46l96i" width="90%" height="400" style="border: 1px solid #ccc" frameborder=0></iframe>
+									
+
+						</div>
+
+						<div >
+							<p style="font-size: 25px;" > 
+								The "actual" average growth is  between the lower and upper bounds.
+							</p>
+
+						</div>
+
+						
+
+						
+					</section>
+
+					<section data-auto-animate>
+						<div  >
+									<iframe src="https://www.desmos.com/calculator/boym5thntk" width="90%" height="400" style="border: 1px solid #ccc" frameborder=0></iframe>
+									
+
+						</div>
+
+						<div >
+							<p style="font-size: 25px;" > 
+								Let \(a < b\), \(a=t_0 < t_1 < \cdots < t_i  < \cdots < t_n=b\).  Let \(T_i \in  [t_{i-1}, t_i ]\)
+							</p>
+
+							<p style="font-size: 25px;" > 
+								We have: \[\underline{v}_i \leq v(T_i) \leq \overline{v}_i \]
+							</p>
+
+						</div>
+
+						
+
+						
+
+						
+					</section>
+
+
+
+					<section data-auto-animate>
+						<div  >
+									<iframe src="https://www.desmos.com/calculator/boym5thntk" width="90%" height="400" style="border: 1px solid #ccc" frameborder=0></iframe>
+									
+
+						</div>
+
+						<div >
+							<p style="font-size: 25px;" > 
+								Let \(a < b\), \(a=t_0 < t_1 < \cdots < t_i  < \cdots < t_n=b\).  Let \(T_i \in  [t_{i-1}, t_i ]\)
+							</p>
+
+							<p style="font-size: 25px;" > 
+								We have: \[\underline{v}_i(t_{i+1} - t_i) \leq v(T_i)(t_{i+1} - t_i) \leq \overline{v}_i(t_{i+1} - t_i) \]
+							</p>
+
+						</div>
+
+						
+
+						
+
+						
+					</section>
+
+					<section data-auto-animate>
+						<div  >
+									<iframe src="https://www.desmos.com/calculator/boym5thntk" width="90%" height="400" style="border: 1px solid #ccc" frameborder=0></iframe>
+									
+
+						</div>
+
+						<div >
+							<p style="font-size: 25px;" > 
+								Let \(a < b\), \(a=t_0 < t_1 < \cdots < t_i  < \cdots < t_n=b\).  Let \(T_i \in  [t_{i-1}, t_i ]\)
+							</p>
+
+							<p style="font-size: 25px;" > 
+								We have: \[ \sum_{i=1}^n \underline{v}_i(t_{i+1} - t_i) \leq \sum_{i=1}^n v(T_i)(t_{i+1} - t_i) \leq \sum_{i=1}^n \overline{v}_i(t_{i+1} - t_i) \]
+							</p>
+
+						</div>
+
+						
+
+						
+
+						
+					</section>
+
+
+					
+				</section>
+
+
+
+				<section>
+
+					<section data-auto-animate>
+						<div  >
+									<iframe src="https://www.desmos.com/calculator/bpmdr5btil" width="90%" height="400" style="border: 1px solid #ccc" frameborder=0></iframe>
+									
+
+						</div>
+
+						<div >
+							<p style="font-size: 25px;" > 
+								Let's focus on say \([t_{i-1}, t_{i}]\).  We have a lower bound \(\underline{v}_{i-1}\) and upper bound \(\overline{v}_i\).
+							</p>
+
+							<p style="font-size: 25px;" > 
+								Estimates of displacement are now: \[\underline{v}_{i}(t_i-t_{i-1}) \leq \overline{v}_{i}(t_i-t_{i-1})\]
+							</p>
+
+
+						</div>
+
+
+						
+					</section>
+
+
+					<section data-auto-animate>
+						<div  >
+									<iframe src="https://www.desmos.com/calculator/n6anlste6o" width="90%" height="400" style="border: 1px solid #ccc" frameborder=0></iframe>
+									
+
+						</div>
+
+						<div >
+							<p style="font-size: 25px;" > 
+								Let's chop this into 2 bits.
+							</p>
+
+							<p style="font-size: 25px;" > 
+								\[\underline{v}_{i}(t_i-t_{*}) +\underline{v}_{i}(t_*-t_{i-1}) \leq \overline{v}_{i}(t_i-t_{*}) + \overline{v}_{i}(t_*-t_{i-1}) \]
+							</p>
+
+
+						</div>
+
+
+						
+					</section>
+
+
+					<section data-auto-animate>
+						<div  >
+									<iframe src="https://www.desmos.com/calculator/e0j3jk5zke" width="90%" height="400" style="border: 1px solid #ccc" frameborder=0></iframe>
+									
+
+						</div>
+
+						<div >
+							
+
+							<p style="font-size: 25px;" > 
+								Notice: \[\underline{v}_{i}(t_i-t_{*}) +\underline{v}_{i}(t_*-t_{i-1}) \leq \underline{v}_{*}(t_i-t_{i}) + \underline{v}_{i}(t_*-t_{i-1}) \]
+							</p>
+
+
+						</div>
+
+
+						
+					</section>
+
+
+					<section data-auto-animate>
+						<div  >
+									<iframe src="https://www.desmos.com/calculator/e0j3jk5zke" width="90%" height="400" style="border: 1px solid #ccc" frameborder=0></iframe>
+									
+
+						</div>
+
+						<div >
+							
+
+							<p style="font-size: 25px;" > 
+								Notice: \[\overline{v}_{i}(t_i-t_{*}) +\overline{v}_{*}(t_*-t_{i-1}) \leq \overline{v}_{i}(t_i-t_{*}) + \overline{v}_{i}(t_*-t_{i-1}) \]
+							</p>
+
+
+						</div>
+
+
+						
+					</section>
+
+					<section data-auto-animate>
+						<div  >
+									<iframe src="https://www.desmos.com/calculator/e0j3jk5zke" width="90%" height="400" style="border: 1px solid #ccc" frameborder=0></iframe>
+									
+
+						</div>
+
+						<div >
+							
+
+							<p style="font-size: 25px;" > 
+								So we have improved bound: \[\underline{v}_{*}(t_i-t_{i}) + \underline{v}_{i}(t_*-t_{i-1})\leq \overline{v}_{i}(t_i-t_{*}) +\overline{v}_{*}(t_*-t_{i-1})  \]
+							</p>
+
+
+						</div>
+
+
+						
+					</section>
+
+					<section data-auto-animate>
+						<div  >
+									<iframe src="https://www.desmos.com/calculator/wv2cmtybd1" width="90%" height="400" style="border: 1px solid #ccc" frameborder=0></iframe>
+									
+
+						</div>
+
+						<div >
+							
+
+							<p style="font-size: 25px;" > 
+								Then we can do it again!
+							</p>
+
+
+						</div>
+
+
+						
+					</section>
+
+					<section data-auto-animate>
+						<div  >
+									<iframe src="https://www.desmos.com/calculator/rdhxgob9uq" width="90%" height="500" style="border: 1px solid #ccc" frameborder=0></iframe>
+									
+
+						</div>
+
+						
+
+						
+					</section>
+
+					
+
+
+					
+				</section>
+
+
+					
+
+
+				<section>
+					<section data-auto-animate>
+						<p style="font-size: 25px;" > 
+							A function  \(v(t)\) is called <strong>integrable</strong> over \( [a,b] \) so that given  <strong>any</strong> partition of \([a,b]\) \(a=t_0 < t_1 < \cdots < t_i  < \cdots < t_n=b\), there is a unique number \(I\) such that:
+
+							\[  \sum_{i=1}^n \underline{v}_i(t_i-t_{i-1}) \leq I \leq  \sum_{i=1}^n \overline{v}_i(t_i-t_{i-1})  \]
+						</p>
+
+						<iframe src="https://www.desmos.com/calculator/ht5khii7cp" width="90%" height="400" style="border: 1px solid #ccc" frameborder=0></iframe>
+
+					</section>
+
+					<section data-auto-animate>
+						<p style="font-size: 25px;" > 
+							A function  \(v(t)\) is called <strong>integrable</strong> over \( [a,b] \) so that given  <strong>any</strong> partition of \([a,b]\) \(a=t_0 < t_1 < \cdots < t_i  < \cdots < t_n=b\), there is a unique number \(I\) such that:
+
+							\[ \underline{S}= \sum_{i=1}^n \underline{v}_i(t_i-t_{i-1}) \leq I \leq  \sum_{i=1}^n \overline{v}_i(t_i-t_{i-1})  =\oerline{S} \]
+						</p>
+
+						<p style="font-size: 25px;" > 
+							<strong>If</strong> such a number exists, we denote it \[I=\int_a^b v(t)dt.\]
+						</p>
+
+					</section>
+				</section>
+
+
+				<section>
+					<section data-auto-animate>
+						<h4>Yet to be proven facts</h4>
+						<p style="font-size: 25px;" > 
+							If \(v(t)\) is continuous over \([a,b]\) then it is integrable.
+						</p>
+
+						<iframe src="https://www.desmos.com/calculator/tyrorlkjf3" width="90%" height="400" style="border: 1px solid #ccc" frameborder=0></iframe>
+
+					</section>
+
+					<section data-auto-animate>
+						<h4>Yet to be proven facts</h4>
+						<p style="font-size: 25px;" > 
+							If \(v(t)\) is monotonic over \([a,b]\) then it is integrable.
+						</p>
+
+						<iframe src="https://www.desmos.com/calculator/a5m5y79htc" width="90%" height="400" style="border: 1px solid #ccc" frameborder=0></iframe>
+
+					</section>
+
+					<section data-auto-animate>
+						<h4>Yet to be proven facts</h4>
+						<p style="font-size: 25px;" > 
+							If \(v(t)\) is integrable over \([a,b]\) then \(|S-I|\leq |\overline{S}-\underline{S}|\).
+						</p>
+
+						<iframe src="https://www.desmos.com/calculator/drvgym3q4c" width="90%" height="400" style="border: 1px solid #ccc" frameborder=0></iframe>
+
+					</section>
+
+					
+
+					<section data-auto-animate>
+						<h4>Yet to be proven facts</h4>
+						<p style="font-size: 25px;" > 
+							If \(v(t)\) is integrable over \([a,b]\) if and only if \(v(t)\) is integrable over \([a,c]\) and \([c,b]\) for each \(a< c < b \). Moreover \(\displaystyle \int_a^bv(t) dt = \int_a^cv(t)dt + \int_c^bv(t)dt\)
+						</p>
+
+						<iframe src="https://www.desmos.com/calculator/ma2kbvupi1" width="45%" height="400" style="border: 1px solid #ccc" frameborder=0></iframe><iframe src="https://www.desmos.com/calculator/mzcrefejdo" width="45%" height="400" style="border: 1px solid #ccc" frameborder=0></iframe>
+
+					</section>
+
+					<section data-auto-animate>
+						<h4>Yet to be proven facts</h4>
+						<p style="font-size: 25px;" > 
+							If \(\overline{S}_n-\underline{S}_n\)  can be made as small as we like, then \(\displaystyle \int_a^b v(t)dt\) exists and \(|S_n-I|\) can be made arbitrarily small.
+						</p>
+
+						<iframe src="https://www.desmos.com/calculator/shu3nmqxzk" width="90%" height="400" style="border: 1px solid #ccc" frameborder=0></iframe>
+
+					</section>
+
+
+				</section>
+
+				<section>
+					<section data-auto-animate>
+						<p style="font-size: 25px;" > 
+							How would you write the integral \(\displaystyle \int_0^4 f(x)dx\) where \(f(x)=\begin{cases} \frac{(x-1)^2}{2} & 0\leq x\leq 2 &  2\sqrt{x}-\frac{1}{2} & 2< x \leq 4  \end{cases}\) as a sum of integrals of continuous functions? (We are not asking to evaluate.)
+						</p>
+
+						<iframe src="https://www.desmos.com/calculator/apq1184nqr" width="90%" height="500" style="border: 1px solid #ccc" frameborder=0></iframe>
+
+					</section>
+
+					<section data-auto-animate>
+						<p style="font-size: 25px;" > 
+							How would you write the integral to describe the region bound by \(y=2x\) and \(x^3-x^2\)? (We are not asking to evaluate.)
+						</p>
+
+						<iframe src="https://www.desmos.com/calculator/6im5woai0e" width="90%" height="500" style="border: 1px solid #ccc" frameborder=0></iframe>
+
+					</section>
+
+					<section data-auto-animate>
+						<p style="font-size: 25px;" > 
+							How would you write the integral the displacement of a particle oscilating back and forth with velocity \(v(t)=\cos(t)\) over 5 seconds?    How about the total distance traveled (regardless of direction)? (We are not asking to evaluate.)
+						</p>
+
+						<iframe src="https://www.desmos.com/calculator/ipavfjhy2h" width="90%" height="500" style="border: 1px solid #ccc" frameborder=0></iframe>
+
+					</section>
+					
+				</section>
+
+				
+
+
+
+
+				
+					
+				
+			</div>
+		</div>
+
+		<script src="dist/reveal.js"></script>
+		<script src="plugin/notes/notes.js"></script>
+		<script src="plugin/markdown/markdown.js"></script>
+		<script src="plugin/highlight/highlight.js"></script>
+		<script>
+			// More info about initialization & config:
+			// - https://revealjs.com/initialization/
+			// - https://revealjs.com/config/
+			Reveal.initialize({
+				hash: true,
+
+				// Learn about plugins: https://revealjs.com/plugins/
+				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
+			});
+		</script>
+		<script src="plugin/math/math.js"></script>
+		<script src="plugin/chalkboard/plugin.js"></script>
+		<script src="plugin/customcontrols/plugin.js"></script>
+
+
+
+	<script>
+  	Reveal.initialize({
+		math: {
+			mathjax: 'https://cdn.jsdelivr.net/gh/mathjax/mathjax@2.7.8/MathJax.js',
+			config: 'TeX-AMS_HTML-full',
+			// pass other options into `MathJax.Hub.Config()`
+			TeX: { Macros: { RR: "{\\bf R}" } }
+		},
+
+		chalkboard: {
+        boardmarkerWidth: 3,
+        chalkWidth: 7,
+        chalkEffect: 1.0,
+        storage: null,
+        src: null,
+        readOnly: undefined,
+        transition: 800,
+        theme: "chalkboard",
+        background: [ 'rgba(127,127,127,.1)' , path + 'img/blackboard.png' ],
+        grid: { color: 'rgb(50,50,10,0.5)', distance: 80, width: 2},
+        eraser: { src: path + 'img/sponge.png', radius: 20},
+        boardmarkers : [
+                { color: 'rgba(100,100,100,1)', cursor: 'url(' + path + 'img/boardmarker-black.png), auto'},
+                { color: 'rgba(30,144,255, 1)', cursor: 'url(' + path + 'img/boardmarker-blue.png), auto'},
+                { color: 'rgba(220,20,60,1)', cursor: 'url(' + path + 'img/boardmarker-red.png), auto'},
+                { color: 'rgba(50,205,50,1)', cursor: 'url(' + path + 'img/boardmarker-green.png), auto'},
+                { color: 'rgba(255,140,0,1)', cursor: 'url(' + path + 'img/boardmarker-orange.png), auto'},
+                { color: 'rgba(150,0,20150,1)', cursor: 'url(' + path + 'img/boardmarker-purple.png), auto'},
+                { color: 'rgba(255,220,0,1)', cursor: 'url(' + path + 'img/boardmarker-yellow.png), auto'}
+        ],
+        chalks: [
+                { color: 'rgba(255,255,255,0.5)', cursor: 'url(' + path + 'img/chalk-white.png), auto'},
+                { color: 'rgba(96, 154, 244, 0.5)', cursor: 'url(' + path + 'img/chalk-blue.png), auto'},
+                { color: 'rgba(237, 20, 28, 0.5)', cursor: 'url(' + path + 'img/chalk-red.png), auto'},
+                { color: 'rgba(20, 237, 28, 0.5)', cursor: 'url(' + path + 'img/chalk-green.png), auto'},
+                { color: 'rgba(220, 133, 41, 0.5)', cursor: 'url(' + path + 'img/chalk-orange.png), auto'},
+                { color: 'rgba(220,0,220,0.5)', cursor: 'url(' + path + 'img/chalk-purple.png), auto'},
+                { color: 'rgba(255,220,0,0.5)', cursor: 'url(' + path + 'img/chalk-yellow.png), auto'}
+        ]
+    },
+    customcontrols: {
+  		controls: [
+  			{ icon: '<i class="fa fa-pen-square"></i>',
+  			  title: 'Toggle chalkboard (B)',
+  			  action: 'RevealChalkboard.toggleChalkboard();'
+  			},
+  			{ icon: '<i class="fa fa-pen"></i>',
+  			  title: 'Toggle notes canvas (C)',
+  			  action: 'RevealChalkboard.toggleNotesCanvas();'
+  			}
+  		]
+    },
+
+		plugins: [ RevealMath, RevealChalkboard, RevealCustomControls, RevealMenu  ]
+		});
+	</script>
+
+	</body>
+</html>

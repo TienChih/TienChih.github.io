@@ -1,0 +1,605 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>reveal.js</title>
+
+		<link rel="stylesheet" href="dist/reset.css">
+		<link rel="stylesheet" href="dist/reveal.css">
+		<link rel="stylesheet" href="dist/theme/white.css">
+		<link rel="stylesheet" href="plugin/chalkboard/style.css">
+		<link rel="stylesheet" href="plugin/customcontrols/style.css">
+
+
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+
+
+
+		<!-- Theme used for syntax highlighted code -->
+		<link rel="stylesheet" href="plugin/highlight/monokai.css">
+		<style>
+			.container{
+   				 display: flex;
+			}
+			.col{
+    			flex: 1;
+			}
+		</style>
+			<script async defer src="https://buttons.github.io/buttons.js"></script>
+
+		<script src="plugin/menu/menu.js"></script>
+
+
+
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				
+				<section>
+					<h2>Taking infinitely small steps infinitely often</h2>
+					<h4>M 111</h4>
+					
+					
+					<h4>
+						Oxford College of Emory University <a href="https://app.oxford.emory.edu/WebApps/Directory/index.cfm/view/9984" target="_blank">Tien Chih</a>
+					</h4>
+				</section>
+
+
+
+				<section>
+
+					<section data-auto-animate>
+						<div  >
+									<iframe src="https://www.desmos.com/calculator/boezqui3t7" width="90%" height="400" style="border: 1px solid #ccc" frameborder=0></iframe>
+									
+
+						</div>
+
+						<div >
+							<p style="font-size: 25px;" > 
+								As we continue to partition, we always have \(\underline{S}\leq \overline{S}\).
+							</p>
+
+						</div>
+
+						<div class="fragment">
+							<p style="font-size: 25px;" > 
+								There must be a greatest lower bound and least upper bound. so that \(\underline{S}\leq \leq \underline{S}^* \leq \overline{S}^* \leq \overline{S}\).
+							</p>
+
+						</div>
+
+						<div class="fragment">
+							<p style="font-size: 25px;" > 
+								If \(\underline{S}^* \neq \overline{S}^*\) then any \(I\) in between can be an "integral" and \(v(t)\) fails to be integrable.
+							</p>
+
+						</div>
+
+						
+
+						
+					</section>
+
+					<section data-auto-animate>
+						<h4>Lemma</h4>
+
+						<div  >
+									<iframe src="https://www.desmos.com/calculator/boezqui3t7" width="90%" height="400" style="border: 1px solid #ccc" frameborder=0></iframe>
+									
+
+						</div>
+
+						<div >
+							<p style="font-size: 25px;" > 
+								If for any \(\epsilon>0\) there is a partition \(a=t_0, \ldots, t_i, \ldots, t_n=b\) so that \(\overline{S}-\underline{S}<\epsilon\) on this partition, then \(v(t)\) is integrable.
+							</p>
+
+							
+
+						</div>
+
+						
+
+						
+
+						
+					</section>
+
+
+
+					
+
+
+					
+				</section>
+
+
+
+				<section>
+
+					<section data-auto-animate>
+						<h4>Theorem</h4>
+						
+
+						<div label="thm">
+							<p style="font-size: 25px;" > 
+								<strong>Theorem 1</strong> (Newton)
+							</p>
+
+							<p style="font-size: 25px;" > 
+								If a function is monotonically increasing (decreasing) then it is integrable.
+							</p>
+
+							
+
+
+						</div>
+
+
+						
+					</section>
+
+
+					<section data-auto-animate>
+						<h4>Theorem</h4>
+						
+
+						<div label="thm">
+							<p style="font-size: 15px;" > 
+								<strong>Theorem 1</strong> (Newton)
+							</p>
+
+							<p style="font-size: 15px;" > 
+								If a function is monotonically increasing (decreasing) then it is integrable.
+							</p>
+
+
+
+						</div>
+
+						<div class="container">
+
+							<div class="col">
+								<div>
+									<p style="font-size: 25px;" > 
+										Let \(\epsilon>0\).  Let \(\delta > \max(t_i-t_{i-1})\).
+									</p>
+								</div>
+
+								<div class="fragment">
+									<p style="font-size: 25px;" > 
+										Since \(f\) is increasing, \(\overline{f}_i=f(t_{i}), \underline{f}_i=f(t_{i-1})\).  \(\overline{S}=\displaystyle\sum_{i=1}^n \overline{f}_i(t_i-t_{i-1}) , \overline{S}=\displaystyle\sum_{i=1}^n \underline{f}_i(t_i-t_{i-1})\).
+									</p>
+								</div>
+
+								<div class="fragment">
+									<p style="font-size: 25px;" > 
+										\[\overline{S} - \underline{S} = \sum_{i=1}^n \left(\overline{f}_i(t_i-t_{i-1}) - \underline{f}_i(t_i-t_{i-1}) \right)\]
+									</p>
+								</div>
+
+
+							</div>
+
+							<div class="col">
+								<img src="img/newton.png"/>
+							</div>
+
+						</div>
+
+
+
+						
+					</section>
+
+					<section data-auto-animate>
+						<h4>Theorem</h4>
+						
+
+						<div label="thm">
+							<p style="font-size: 15px;" > 
+								<strong>Theorem 1</strong> (Newton)
+							</p>
+
+							<p style="font-size: 15px;" > 
+								If a function is monotonically increasing (decreasing) then it is integrable.
+							</p>
+
+
+
+						</div>
+
+						<div class="container">
+
+							<div class="col">
+								<div>
+									<p style="font-size: 25px;" > 
+										Let \(\epsilon>0\).  Let \(\delta > \max(t_i-t_{i-1})\).
+									</p>
+								</div>
+
+								<div >
+									<p style="font-size: 25px;" > 
+										Since \(f\) is increasing, \(\overline{f}_i=f(t_{i}), \underline{f}_i=f(t_{i-1})\).  \(\overline{S}=\displaystyle\sum_{i=1}^n \overline{f}_i(t_i-t_{i-1}) , \overline{S}=\displaystyle\sum_{i=1}^n \underline{f}_i(t_i-t_{i-1})\).
+									</p>
+								</div>
+
+								<div >
+									<p style="font-size: 25px;" > 
+										\[\overline{S} - \underline{S} = \sum_{i=1}^n (f(t_i)-f(t_{i-1} ))(t_i-t_{i-1}) \]
+									</p>
+								</div>
+
+								<div class="fragment">
+									<p style="font-size: 25px;" > 
+										\[\leq  \delta\sum_{i=1}^n (f(t_i)-f(t_{i-1} )) \]
+									</p>
+								</div>
+
+
+							</div>
+
+							<div class="col">
+								<img src="img/newton.png"/>
+							</div>
+
+						</div>
+
+						
+					</section>
+
+					<section data-auto-animate>
+						<h4>Theorem</h4>
+						
+
+						<div label="thm">
+							<p style="font-size: 15px;" > 
+								<strong>Theorem 1</strong> (Newton)
+							</p>
+
+							<p style="font-size: 15px;" > 
+								If a function is monotonically increasing (decreasing) then it is integrable.
+							</p>
+
+
+
+						</div>
+
+						<div class="container">
+
+							<div class="col">
+								<div>
+									<p style="font-size: 25px;" > 
+										Let \(\epsilon>0\).  Let \(\delta > \max(t_i-t_{i-1})\).
+									</p>
+								</div>
+
+								<div >
+									<p style="font-size: 25px;" > 
+										Since \(f\) is increasing, \(\overline{f}_i=f(t_{i}), \underline{f}_i=f(t_{i-1})\).  \(\overline{S}=\displaystyle\sum_{i=1}^n \overline{f}_i(t_i-t_{i-1}) , \overline{S}=\displaystyle\sum_{i=1}^n \underline{f}_i(t_i-t_{i-1})\).
+									</p>
+								</div>
+
+								<div >
+									<p style="font-size: 25px;" > 
+										\[\overline{S} - \underline{S} = \sum_{i=1}^n (f(t_i)-f(t_{i-1} ))(t_i-t_{i-1}) \]
+									</p>
+								</div>
+
+								<div >
+									<p style="font-size: 25px;" > 
+										\[\leq  \delta\left( (f(t_1)-f(t_0)+ (f(t_2)-f(t_1)) + \cdots+ (f(t_n)-f(t_{n-1}) \right) \]
+									</p>
+								</div>
+
+
+							</div>
+
+							<div class="col">
+								<img src="img/newton.png"/>
+							</div>
+
+						</div>
+
+						
+					</section>
+
+
+					<section data-auto-animate>
+						<h4>Theorem</h4>
+						
+
+						<div label="thm">
+							<p style="font-size: 15px;" > 
+								<strong>Theorem 1</strong> (Newton)
+							</p>
+
+							<p style="font-size: 15px;" > 
+								If a function is monotonically increasing (decreasing) then it is integrable.
+							</p>
+
+
+
+						</div>
+
+						<div class="container">
+
+							<div class="col">
+								<div>
+									<p style="font-size: 25px;" > 
+										Let \(\epsilon>0\).  Let \(\delta > \max(t_i-t_{i-1})\).
+									</p>
+								</div>
+
+								<div >
+									<p style="font-size: 25px;" > 
+										Since \(f\) is increasing, \(\overline{f}_i=f(t_{i}), \underline{f}_i=f(t_{i-1})\).  \(\overline{S}=\displaystyle\sum_{i=1}^n \overline{f}_i(t_i-t_{i-1}) , \overline{S}=\displaystyle\sum_{i=1}^n \underline{f}_i(t_i-t_{i-1})\).
+									</p>
+								</div>
+
+								<div >
+									<p style="font-size: 25px;" > 
+										\[\overline{S} - \underline{S} = \sum_{i=1}^n (f(t_i)-f(t_{i-1} ))(t_i-t_{i-1}) \]
+									</p>
+								</div>
+
+								<div >
+									<p style="font-size: 25px;" > 
+										\[\leq  \delta\left( t_n-t_0\right) \]
+									</p>
+								</div>
+
+
+							</div>
+
+							<div class="col">
+								<img src="img/newton.png"/>
+							</div>
+
+						</div>
+
+						
+					</section>
+
+					<section data-auto-animate>
+						<h4>Theorem</h4>
+						
+
+						<div label="thm">
+							<p style="font-size: 15px;" > 
+								<strong>Theorem 1</strong> (Newton)
+							</p>
+
+							<p style="font-size: 15px;" > 
+								If a function is monotonically increasing (decreasing) then it is integrable.
+							</p>
+
+
+
+						</div>
+
+						<div class="container">
+
+							<div class="col">
+								<div>
+									<p style="font-size: 25px;" > 
+										Let \(\epsilon>0\).  Let \(\delta > \max(t_i-t_{i-1})\).
+									</p>
+								</div>
+
+								<div >
+									<p style="font-size: 25px;" > 
+										Since \(f\) is increasing, \(\overline{f}_i=f(t_{i}), \underline{f}_i=f(t_{i-1})\).  \(\overline{S}=\displaystyle\sum_{i=1}^n \overline{f}_i(t_i-t_{i-1}) , \overline{S}=\displaystyle\sum_{i=1}^n \underline{f}_i(t_i-t_{i-1})\).
+									</p>
+								</div>
+
+								<div >
+									<p style="font-size: 25px;" > 
+										\[\overline{S} - \underline{S} = \sum_{i=1}^n (f(t_i)-f(t_{i-1} ))(t_i-t_{i-1}) \]
+									</p>
+								</div>
+
+								<div >
+									<p style="font-size: 25px;" > 
+										\[\leq  \delta\left( b-a\right) \]
+									</p>
+								</div>
+
+
+							</div>
+
+							<div class="col">
+								<img src="img/newton.png"/>
+							</div>
+
+						</div>
+
+						<div class="fragment">
+							<p style="font-size: 25px;" > 
+								If \(n\) big, \(\delta\) is small and if \(\delta\) is small enough, \(\delta\left( b-a\right)< \epsilon\).
+							</p>
+							
+						</div>
+
+						
+					</section>
+
+
+					
+
+					
+
+
+					
+				</section>
+
+
+					
+
+
+				
+
+
+				<section>
+					
+					<section data-auto-animate>
+						<p style="font-size: 25px;" > 
+							If \(\overline{S}_n-\underline{S}_n\)  can be made as small as we like, then \(\displaystyle \int_a^b v(t)dt\) exists and \(|S_n-I|\) can be made arbitrarily small.
+						</p>
+
+						<iframe src="https://www.desmos.com/calculator/shu3nmqxzk" width="90%" height="400" style="border: 1px solid #ccc" frameborder=0></iframe>
+
+					</section>
+
+					<section data-auto-animate>
+						<p style="font-size: 25px;" > 
+							If \(v(t)\) is monotonic over \([a,b]\) then it is integrable.
+						</p>
+
+						<iframe src="https://www.desmos.com/calculator/a5m5y79htc" width="90%" height="400" style="border: 1px solid #ccc" frameborder=0></iframe>
+
+					</section>
+
+
+					<section data-auto-animate>
+						<p style="font-size: 25px;" > 
+							If \(v(t)\) is continuous over \([a,b]\) then it is integrable.
+						</p>
+
+						<iframe src="https://www.desmos.com/calculator/tyrorlkjf3" width="90%" height="400" style="border: 1px solid #ccc" frameborder=0></iframe>
+
+					</section>
+
+					
+
+					<section data-auto-animate>
+						<p style="font-size: 25px;" > 
+							If \(v(t)\) is integrable over \([a,b]\) then \(|S-I|\leq |\overline{S}-\underline{S}|\).
+						</p>
+
+						<iframe src="https://www.desmos.com/calculator/drvgym3q4c" width="90%" height="400" style="border: 1px solid #ccc" frameborder=0></iframe>
+
+					</section>
+
+					
+
+					<section data-auto-animate>
+						<p style="font-size: 25px;" > 
+							If \(v(t)\) is integrable over \([a,b]\) if and only if \(v(t)\) is integrable over \([a,c]\) and \([c,b]\) for each \(a< c < b \). Moreover \(\displaystyle \int_a^bv(t) dt = \int_a^cv(t)dt + \int_c^bv(t)dt\)
+						</p>
+
+						<iframe src="https://www.desmos.com/calculator/ma2kbvupi1" width="45%" height="400" style="border: 1px solid #ccc" frameborder=0></iframe><iframe src="https://www.desmos.com/calculator/mzcrefejdo" width="45%" height="400" style="border: 1px solid #ccc" frameborder=0></iframe>
+
+					</section>
+
+					
+
+
+				</section>
+
+				<section>
+					<H4>Examples</H4>
+
+					<ol>
+						<li>Paraboloid. \(z=4-r^2\)</li>
+						<li>Work. \(z=4-r^2\)</li>
+					</ol>
+					
+				</section>
+
+				
+
+
+
+
+				
+					
+				
+			</div>
+		</div>
+
+		<script src="dist/reveal.js"></script>
+		<script src="plugin/notes/notes.js"></script>
+		<script src="plugin/markdown/markdown.js"></script>
+		<script src="plugin/highlight/highlight.js"></script>
+		<script>
+			// More info about initialization & config:
+			// - https://revealjs.com/initialization/
+			// - https://revealjs.com/config/
+			Reveal.initialize({
+				hash: true,
+
+				// Learn about plugins: https://revealjs.com/plugins/
+				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
+			});
+		</script>
+		<script src="plugin/math/math.js"></script>
+		<script src="plugin/chalkboard/plugin.js"></script>
+		<script src="plugin/customcontrols/plugin.js"></script>
+
+
+
+	<script>
+  	Reveal.initialize({
+		math: {
+			mathjax: 'https://cdn.jsdelivr.net/gh/mathjax/mathjax@2.7.8/MathJax.js',
+			config: 'TeX-AMS_HTML-full',
+			// pass other options into `MathJax.Hub.Config()`
+			TeX: { Macros: { RR: "{\\bf R}" } }
+		},
+
+		chalkboard: {
+        boardmarkerWidth: 3,
+        chalkWidth: 7,
+        chalkEffect: 1.0,
+        storage: null,
+        src: null,
+        readOnly: undefined,
+        transition: 800,
+        theme: "chalkboard",
+        background: [ 'rgba(127,127,127,.1)' , path + 'img/blackboard.png' ],
+        grid: { color: 'rgb(50,50,10,0.5)', distance: 80, width: 2},
+        eraser: { src: path + 'img/sponge.png', radius: 20},
+        boardmarkers : [
+                { color: 'rgba(100,100,100,1)', cursor: 'url(' + path + 'img/boardmarker-black.png), auto'},
+                { color: 'rgba(30,144,255, 1)', cursor: 'url(' + path + 'img/boardmarker-blue.png), auto'},
+                { color: 'rgba(220,20,60,1)', cursor: 'url(' + path + 'img/boardmarker-red.png), auto'},
+                { color: 'rgba(50,205,50,1)', cursor: 'url(' + path + 'img/boardmarker-green.png), auto'},
+                { color: 'rgba(255,140,0,1)', cursor: 'url(' + path + 'img/boardmarker-orange.png), auto'},
+                { color: 'rgba(150,0,20150,1)', cursor: 'url(' + path + 'img/boardmarker-purple.png), auto'},
+                { color: 'rgba(255,220,0,1)', cursor: 'url(' + path + 'img/boardmarker-yellow.png), auto'}
+        ],
+        chalks: [
+                { color: 'rgba(255,255,255,0.5)', cursor: 'url(' + path + 'img/chalk-white.png), auto'},
+                { color: 'rgba(96, 154, 244, 0.5)', cursor: 'url(' + path + 'img/chalk-blue.png), auto'},
+                { color: 'rgba(237, 20, 28, 0.5)', cursor: 'url(' + path + 'img/chalk-red.png), auto'},
+                { color: 'rgba(20, 237, 28, 0.5)', cursor: 'url(' + path + 'img/chalk-green.png), auto'},
+                { color: 'rgba(220, 133, 41, 0.5)', cursor: 'url(' + path + 'img/chalk-orange.png), auto'},
+                { color: 'rgba(220,0,220,0.5)', cursor: 'url(' + path + 'img/chalk-purple.png), auto'},
+                { color: 'rgba(255,220,0,0.5)', cursor: 'url(' + path + 'img/chalk-yellow.png), auto'}
+        ]
+    },
+    customcontrols: {
+  		controls: [
+  			{ icon: '<i class="fa fa-pen-square"></i>',
+  			  title: 'Toggle chalkboard (B)',
+  			  action: 'RevealChalkboard.toggleChalkboard();'
+  			},
+  			{ icon: '<i class="fa fa-pen"></i>',
+  			  title: 'Toggle notes canvas (C)',
+  			  action: 'RevealChalkboard.toggleNotesCanvas();'
+  			}
+  		]
+    },
+
+		plugins: [ RevealMath, RevealChalkboard, RevealCustomControls, RevealMenu  ]
+		});
+	</script>
+
+	</body>
+</html>
