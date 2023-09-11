@@ -156,7 +156,7 @@
 							<ol >
 								<li style="font-size: 25px;" >If \(F(x)=\displaystyle \int_a^x f(t)dt\) then for all \(x_1, x_2\) such that \(a\leq x_1< x_2 \leq b\) then \[\underline{f}(x_2-x_1)\leq F(x_2)-F(x_1) \leq \overline{f}(x_2-x_1).\]</li>
 
-								<li style="font-size: 25px;" >Converseley, if there was a \(F(x)\) such that for all \(x_1, x_2\) where \(a\leq x_1< x_2 \leq b\) we have \[\underline{f}(x_2-x_1)\leq F(x_2)-F(x_1) \leq \overline{f}(x_2-x_1),\] then \(\displaystyle \int_a^b f(t)dt = F(b)-F(a)\).</li>
+								<li style="font-size: 25px;" >Conversely, if there was a \(F(x)\) such that for all \(x_1, x_2\) where \(a\leq x_1< x_2 \leq b\) we have \[\underline{f}(x_2-x_1)\leq F(x_2)-F(x_1) \leq \overline{f}(x_2-x_1),\] then \(\displaystyle \int_a^b f(t)dt = F(b)-F(a)\).</li>
 							</ol>
 							
 
@@ -1037,14 +1037,142 @@
 					<section data-auto-animate>
 
 
-						<div >
+						<div class="r-frame">
 							<p style="font-size: 25px;" > 
-								Use the integral power rule to find \( \displaystyle \int_1^9 \sqrt{t} dt \)
+								For \(k\) a constant, \(\displaystyle \int_a^bk f(t)dt = k\int_a^b f(t)dt\). 
 							</p>
 
 						</div>
 
-						<iframe src="https://www.desmos.com/calculator/k8nxkbdrh5" width="90%" height="500" style="border: 1px solid #ccc" frameborder=0></iframe>
+						<div class="fragment">
+							<p style="font-size: 25px;" > 
+								Suppose \(k>0\).  Then \(\overline{kf}=k\overline{f}, \underline{kf}=k\underline{f}\).
+							</p>
+
+						</div>
+
+						<div class="fragment">
+							<p style="font-size: 25px;" > 
+								 \(\displaystyle \overline{S}_{kf} =\sum_{i=1}^n \overline{kf}_i\Delta t_i =k\sum_{i=1}^n\overline{f}_i\Delta t_i=k\overline{S}_f, \overline{S}_{kf} =\sum_{i=1}^n \underline{kf}_i\Delta t_i = k\sum_{i=1}^n\underline{f}_i\Delta t_i = k\underline{S}_f\).
+							</p>
+
+						</div>
+
+						<div class="fragment">
+							<p style="font-size: 25px;" > 
+								 \(\displaystyle \overline{S}_{kf} - \underline{S}_{kf} = k(\overline{S}_{f} - \underline{S}_{f})<\epsilon\).
+							</p>
+
+						</div>
+
+						<div class="fragment">
+							<p style="font-size: 25px;" > 
+								 Since  \(\displaystyle \overline{S}_{f} \leq I \leq \underline{S}_{f}\) we have that  \(\displaystyle \overline{S}_{kf} \leq kI \leq \underline{S}_{kf}\).
+							</p>
+
+						</div>
+
+						<div class="fragment">
+							<p style="font-size: 25px;" > 
+								 \(\displaystyle \int_a^bk f(t)dt = k\int_a^b f(t)dt\).
+							</p>
+
+						</div>
+
+						
+					</section>
+					
+				</section>
+
+
+				<section>
+					<section data-auto-animate>
+
+						<iframe src="https://www.desmos.com/calculator/y1o7szri6b" width="90%" height="450" style="border: 1px solid #ccc" frameborder=0></iframe>
+						<div >
+							<p style="font-size: 25px;" > 
+								 Note \(\overline{f+g}\leq \overline{f}+\overline{g}. \)
+							</p>
+
+						</div>
+
+						<div class="fragment">
+							<p style="font-size: 25px;" > 
+								 Similarly \(\underline{f+g}\leq \underline{f}+\underline{g}. \)
+							</p>
+
+						</div>
+
+					</section>
+
+					<section>
+					<section data-auto-animate>
+
+
+						<div class="r-frame">
+							<p style="font-size: 25px;" > 
+								\(\displaystyle \int_a^bk [f(t)+g(t)]dt = \int_a^b f(t)dt + \int_a^b g(t)dt\). 
+							</p>
+
+						</div>
+
+						
+
+						<div class="fragment">
+							<p style="font-size: 25px;" > 
+								 \(\displaystyle \sum_{i=1}(\underline{f}+\underline{g})\Delta t_i = \sum_{i=1}\underline{f+g}\Delta t_i \leq \sum_{i=1}\overline{f+g}\Delta t_i \leq \sum_{i=1}(\overline{f}+\overline{g})\Delta t_i \).
+							</p>
+
+						</div>
+
+						<div class="fragment">
+							<p style="font-size: 25px;" > 
+								 \(\overline{S}_{f+g} - \underline{S}_{f+g}  \leq  (\overline{S}_{f} - \underline{S}_{f} ) + (\overline{S}_{g} - \underline{S}_{g} )<\epsilon\)
+							</p>
+
+						</div>
+
+						<div class="fragment">
+							<p style="font-size: 25px;" > 
+								 What if there was a \(J\) satisfying \[\sum_{i=1}\underline{f+g}\Delta t_i \leq J\leq \sum_{i=1}\overline{f+g}\Delta t_i \] where \(J\neq I_f+I_g\).  Why can't that happen?
+							</p>
+
+						</div>
+
+						<div class="fragment">
+							<p style="font-size: 25px;" > 
+								 \(\displaystyle \int_a^bk [f(t)+g(t)]dt = \int_a^b f(t)dt + \int_a^b g(t)dt\)
+							</p>
+
+						</div>
+
+						
+
+						
+					</section>
+					
+				</section>
+
+
+
+					
+				</section>
+
+
+
+
+				<section>
+					<section data-auto-animate>
+
+
+						<div >
+							<p style="font-size: 25px;" > 
+								Use the integral power rule and the linearity of the integral to find \( \displaystyle \int_1^9 2\sqrt{t} +4t^2dt \)
+							</p>
+
+						</div>
+
+						
 					</section>
 					
 				</section>
