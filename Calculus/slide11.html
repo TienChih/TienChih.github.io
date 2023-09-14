@@ -1,0 +1,846 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>reveal.js</title>
+
+		<link rel="stylesheet" href="dist/reset.css">
+		<link rel="stylesheet" href="dist/reveal.css">
+		<link rel="stylesheet" href="dist/theme/white.css">
+		<link rel="stylesheet" href="plugin/chalkboard/style.css">
+		<link rel="stylesheet" href="plugin/customcontrols/style.css">
+
+
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+
+
+
+		<!-- Theme used for syntax highlighted code -->
+		<link rel="stylesheet" href="plugin/highlight/monokai.css">
+		<style>
+			.container{
+   				 display: flex;
+			}
+			.col{
+    			flex: 1;
+			}
+		</style>
+			<script async defer src="https://buttons.github.io/buttons.js"></script>
+
+		<script src="plugin/menu/menu.js"></script>
+
+
+
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				
+				<section>
+					<h2>Flip it, revert it</h2>
+					<h4>M 111</h4>
+					
+					
+					<h4>
+						Oxford College of Emory University <a href="https://app.oxford.emory.edu/WebApps/Directory/index.cfm/view/9984" target="_blank">Tien Chih</a>
+					</h4>
+				</section>
+
+
+
+				<section>
+
+					<section data-auto-animate>
+						<div  >
+									<iframe src="https://www.desmos.com/calculator/kzjooh4kte" width="90%" height="500" style="border: 1px solid #ccc" frameborder=0></iframe>
+									
+
+						</div>
+
+						<div >
+							<p style="font-size: 25px;" > 
+								Set \(n\) to be 100 to estimate \(\displaystyle \int_1^3 \frac{1}{t}dt\).
+							</p>
+
+						</div>
+
+
+						
+
+						
+
+						
+					</section>
+
+					<section data-auto-animate>
+						<div  >
+									<iframe src="https://www.desmos.com/calculator/lfyjrvxyte" width="90%" height="500" style="border: 1px solid #ccc" frameborder=0></iframe>
+									
+
+						</div>
+
+
+						<div >
+							<p style="font-size: 25px;" > 
+								Set \(k\) to be 2 to estimate \(\displaystyle \int_2^6 \frac{1}{t}dt\).
+							</p>
+
+						</div>
+
+
+						
+					</section>
+
+					<section data-auto-animate>
+						<div  >
+									<iframe src="https://www.desmos.com/calculator/pxbhg6updi" width="90%" height="500" style="border: 1px solid #ccc" frameborder=0></iframe>
+									
+
+						</div>
+
+						
+
+						<div >
+							<p style="font-size: 25px;" > 
+								Set \(k\) to be whatever you want to estimate \(\displaystyle \int_k^{3k} \frac{1}{t}dt\).  Set it to a bunch of values.  What do you notice?
+							</p>
+
+						</div>
+
+						
+
+						
+
+						
+					</section>
+
+					<section data-auto-animate>
+						
+
+						
+
+						<div >
+							<p style="font-size: 25px;" > 
+								Consider \([x_{i-1}, x_i]\) and \(x_{i-1}\leq X_i \leq x_i \).
+							</p>
+
+						</div>
+
+						<div class="fragment">
+							<p style="font-size: 25px;" > 
+								\[\frac{1}{X_i}(x_i-x_{i-1}) = \frac{1}{kX_i}(kx_i-kx_{i-1})\]
+							</p>
+
+						</div>
+
+						<div class="fragment">
+							<p style="font-size: 25px;" > 
+								\[\sum_{i=1}^n\frac{1}{X_i}(x_i-x_{i-1}) = \sum_{i=1}^n \frac{1}{kX_i}(kx_i-kx_{i-1})\]
+							</p>
+
+						</div>
+
+						
+
+						
+
+						
+					</section>
+
+
+
+					
+
+
+					
+				</section>
+
+
+
+				<section>
+
+					<section data-auto-animate>
+						<h4>Theorem</h4>
+						
+
+						<div label="thm" class="r-frame">
+							<p style="font-size: 25px;" >
+								\[\int_1^b \frac{1}{x}dx = \int_a^{ab} \frac{1}{x}dx. \]
+							</p>
+							
+							
+
+							
+
+
+						</div>
+
+						<div  class="fragment">
+
+							<p style="font-size: 25px;" >
+								Let \(x_0=1 , x_1, x_2, \ldots, x_n=b\) be a partition of \([1,b]\).
+							</p>
+
+							<p style="font-size: 25px;" >
+								If \(\underline{S} = \displaystyle \sum_{i=1}^n \frac{1}{x_i}(x_i-x_{i-1})\) is a lower sum of \(\displaystyle  \int_1^b \frac{1}{x}dx\), then \(\underline{S}^* = \displaystyle \sum_{i=1}^n \frac{1}{ax_i}(ax_i-ax_{i-1})\) is a lower sum of \(\displaystyle  \int_a^{ab} \frac{1}{x}dx\) for partition \(ax_0=a , ax_1, ax_2, \ldots, ax_n=ab\).
+							</p>
+										
+
+						</div>
+
+						<div  class="fragment">
+
+							<p style="font-size: 25px;" >
+								Let \(x_0^*=a , x_1^*, x_2^*, \ldots, x_n^*=ab\) be a partition of \([a,ab]\).
+							</p>
+
+							<p style="font-size: 25px;" >
+								If \(\underline{S}^* = \displaystyle \sum_{i=1}^n \frac{1}{x_i^*}(x_i^*-x^*_{i-1})\) is a lower sum of \(\displaystyle  \int_a^{ab} \frac{1}{x}dx\), then \(\underline{S} = \displaystyle \sum_{i=1}^n \frac{1}{x_i\over a}({x_i\over a}-{x_{i-1}\over a})\) is a lower sum of \(\displaystyle  \int_1^{b} \frac{1}{x}dx\) for partition \({x^*_0\over a} =1 , {x_1^*\over a}, {x_2^*\over a}, \ldots, {x_n^*\over a}=b\).
+							</p>
+										
+
+						</div>
+
+
+						
+					</section>
+
+
+					
+
+					
+					<section data-auto-animate>
+						<h4>Corollary</h4>
+						<div label="thm" class="r-frame">
+							<p style="font-size: 25px;" >
+								\[\int_1^{ab} \frac{1}{x}dx = \int_1^{a} \frac{1}{x}dx +\int_1^{b} \frac{1}{x}dx. \]
+							</p>
+							
+						</div>
+
+						<div  class="fragment">
+
+							<p style="font-size: 25px;" >
+								\[\int_1^{ab} \frac{1}{x}dx = \int_1^{a} \frac{1}{x}dx+\int_a^{ab} \frac{1}{x}dx\]
+							</p>
+
+							
+										
+
+						</div>
+
+						<div  class="fragment">
+
+							<p style="font-size: 25px;" >
+								\[= \int_1^{a} \frac{1}{x}dx+\int_1^{b} \frac{1}{x}dx.\]
+							</p>
+
+							
+										
+
+						</div>
+
+
+
+					</section>
+
+					
+
+					
+
+
+					
+				</section>
+
+
+
+				<section>
+
+					<section data-auto-animate>
+						<div label="thm" class="r-frame">
+							<p style="font-size: 25px;" >
+								\[\ln(x) := \int_1^{x} \frac{1}{t}dt\]
+							</p>
+							
+						</div>
+
+						<div class="fragment">
+							<div class="container">
+
+								<div class="col">
+									<ol>
+										<li style="font-size: 25px;" >\(\ln(ab) = \ln(a)+\ln(b) \)</li>
+										<li style="font-size: 25px;" >\( \ln(a/b) = \ln(a)-\ln(b) \)</li>
+										<li style="font-size: 25px;" >\( \ln(a^k) = k\ln(a) \)</li>
+										<li style="font-size: 25px;" >There is a number \( e\) such that \(\ln(e)=1\)</li>
+										<li style="font-size: 25px;" >\(2< e < 3\) </li>
+									</ol>
+								</div>
+
+								<div class="col">
+									<ol start="6">
+										<li style="font-size: 25px;" >\(\ln(x) \) is continuous and stritcly increasing.</li>
+										<li style="font-size: 25px;" >\( \ln(x) \) is unbounded.</li>
+										<li style="font-size: 25px;" >\( \ln(x) \) has an inverse defined \(e^x\).</li>
+										<li style="font-size: 25px;" > \( a=\ln(b) \Leftrightarrow e^a=b\) such that \(\ln(e)=1\)</li>
+										<li style="font-size: 25px;" >If \(a>0\) we define \(a^x=e^{x\ln(a)}\).</li>
+									</ol>
+								</div>
+
+								</div>
+							
+						</div>
+
+
+
+
+					</section>
+
+					
+					
+				</section>
+
+
+				<section>
+
+					<section data-auto-animate>
+						<h4>Theorem</h4>
+						<div label="thm" class="r-frame">
+							<p style="font-size: 25px;" >
+								\[{1\over x_2}(x_2-x_1) < \ln(x_2)-\ln(x_1) <  {1\over x_1}(x_2-x_1) \]
+							</p>
+							
+						</div>
+
+						<iframe src="https://www.desmos.com/calculator/duqyyawn0s" width="90%" height="500" style="border: 1px solid #ccc" frameborder=0></iframe>
+
+
+
+
+					</section>
+
+					<section data-auto-animate>
+						<h4>Theorem</h4>
+						<div label="thm" class="r-frame">
+							<p style="font-size: 25px;" >
+								\[{1\over x_2}(x_2-x_1) < \ln(x_2)-\ln(x_1) <  {1\over x_1}(x_2-x_1) \]
+							</p>
+							
+						</div>
+
+						<div >
+							<p style="font-size: 25px;" >
+								\[{1\over x_2} < \frac{\ln(x_2)-\ln(x_1)}{x_2-x_1} <  {1\over x_1} \]
+							</p>
+							
+						</div>
+
+
+
+
+					</section>
+
+					<section data-auto-animate>
+						<h4>Theorem</h4>
+						<div label="thm" class="r-frame">
+							<p style="font-size: 25px;" >
+								Let \(f(t)=\ln(t), c>0\).  Then \(f\) is differentiable at \(t=c\) and \(f'(c)=\frac{1}{c}\).
+							</p>
+							
+						</div>
+
+						<div class="fragment">
+							<p style="font-size: 25px;" >
+								\[D_cf(t)=\begin{cases} \frac{\ln(t)-\ln(c)}{t-c} & t\neq c \\ \frac{1}{c} & t=c \end{cases}\]
+							</p>
+							
+						</div>
+
+						<div class="fragment">
+							<p style="font-size: 25px;" >
+								\[\frac{1}{c} <  \frac{\ln(t)-\ln(c)}{t-c}  <\frac{1}{t}\] or
+								\[\frac{1}{t} <  \frac{\ln(t)-\ln(c)}{t-c}  <\frac{1}{c}\]
+							</p>
+							
+						</div>
+
+
+
+
+					</section>
+
+					<section data-auto-animate>
+						<h4>Theorem</h4>
+						<div label="thm" class="r-frame">
+							<p style="font-size: 25px;" >
+								Let \(f(t)=\ln(t), c>0\).  Then \(f\) is differentiable at \(t=c\) and \(f'(c)=\frac{1}{c}\).
+							</p>
+							
+						</div>
+
+						<div >
+							<p style="font-size: 25px;" >
+								\[D_cf(t)=\begin{cases} \frac{\ln(t)-\ln(c)}{t-c} & t\neq c \\ \frac{1}{c} & t=c \end{cases}\]
+							</p>
+							
+						</div>
+
+						<div >
+							<p style="font-size: 25px;" >
+								\[ \left| \frac{\ln(t)-\ln(c)}{t-c} - \frac{1}{c} \right| < \left| \frac{1}{t} -\frac{1}{c} \right|\]
+							</p>
+							
+						</div>
+
+
+
+
+					</section>
+
+					<section data-auto-animate>
+						<h4>Theorem</h4>
+						<div label="thm" class="r-frame">
+							<p style="font-size: 25px;" >
+								Let \(f(t)=\ln(t), c>0\).  Then \(f\) is differentiable at \(t=c\) and \(f'(c)=\frac{1}{c}\).
+							</p>
+							
+						</div>
+
+						<div >
+							<p style="font-size: 25px;" >
+								\[D_cf(t)=\begin{cases} \frac{\ln(t)-\ln(c)}{t-c} & t\neq c \\ \frac{1}{c} & t=c \end{cases}\]
+							</p>
+							
+						</div>
+
+						<div >
+							<p style="font-size: 25px;" >
+								\[ \left| D_cf(t) - D_cf(c) \right| < \left| \frac{1}{t} -\frac{1}{c} \right|\]
+							</p>
+							
+						</div>
+
+						<div class="fragment">
+							<p style="font-size: 25px;" >
+								Since \(\frac{1}{t}\) is continuous, \(D_cf(t)\) is continuous by Squeeze.
+							</p>
+							
+						</div>
+
+
+
+
+					</section>
+
+					
+					
+				</section>
+
+
+
+				<section>
+					<section data-auto-animate>
+						<div>
+							<p style="font-size: 25px;" >
+								\[\frac{1}{x_2}(x_2-x_1) <  \ln(x_2)-\ln(x_1)  <\frac{1}{x_1}(x_2-x_1)\]
+							</p>
+						</div>
+
+						<div class="fragment">
+							<p style="font-size: 25px;" >
+								If \(x_1 < x_2, x_1=\cos(\theta_1), x_2=\cos(\theta_2)\) then \(\theta_2<\theta_1\).
+							</p>
+						</div>
+
+
+					</section>
+
+					<section data-auto-animate>
+						<div>
+							<p style="font-size: 25px;" >
+								\[\frac{1}{\cos(\theta_2)}(\cos(\theta_2)-\cos(\theta_1)) <  \ln(\cos(\theta_2))-\ln(\cos(\theta_1))  <\frac{1}{\cos(\theta_1)}(\cos(\theta_2)-\cos(\theta_1))\]
+							</p>
+						</div>
+
+						<div class="fragment">
+							<p style="font-size: 25px;" >
+								\[\frac{\sin(\theta_2) }{\cos(\theta_2)} (\theta_2-\theta_1) <  \ln(\cos(\theta_2))-\ln(\cos(\theta_1))  <\frac{\sin(\theta_1)}{\cos(\theta_1)}(\theta_2-\theta_1)\]
+							</p>
+						</div>
+
+						<div class="fragment">
+							<p style="font-size: 25px;" >
+								\[\tan(\theta_2)(\theta_2-\theta_1) <  \ln(\cos(\theta_2))-\ln(\cos(\theta_1))  <\tan(\theta_1)(\theta_2-\theta_1)\]
+							</p>
+						</div>
+						<div class="fragment">
+							<p style="font-size: 25px;" >
+								\[\tan(\theta_2)(\theta_1-\theta_2) <  \left(-\ln(\cos(\theta_2))\right) - \left(-\ln(\cos(\theta_1))\right)  <\tan(\theta_1)(\theta_1-\theta_2)\]
+							</p>
+						</div>
+
+						<div class="fragment">
+							<p style="font-size: 25px;" >
+								\[\int_a^b \tan(t)dt = -\ln|\cos(b)|-(-\ln|\cos(a)|).\]
+							</p>
+						</div>
+
+
+					</section>
+
+					
+				</section>
+
+
+
+
+
+
+				<section>
+					<section data-auto-animate>
+						<div class="r-frame">
+							<p style="font-size: 25px;" >
+								\[\int_a^b (\ln(x)+1)dx=b\ln(b)-a\ln(a).\]
+							</p>
+							
+						</div>
+						<iframe src="https://www.desmos.com/calculator/883isbh66s" width="90%" height="500" style="border: 1px solid #ccc" frameborder=0></iframe>
+					</section>
+
+					<section data-auto-animate>
+						
+						<iframe src="https://www.desmos.com/calculator/owpfm3bbyo" width="90%" height="500" style="border: 1px solid #ccc" frameborder=0></iframe>
+
+						<div >
+							<p style="font-size: 25px;" >
+								\[x_2\ln(x_2)-x_1\ln(x_1) = (x_2-x_1)\ln(x_2)+x_1(\ln(x_2)-\ln(x_1)).\]
+							</p>
+							
+						</div>
+					</section>
+
+					<section data-auto-animate>
+						
+						<iframe src="https://www.desmos.com/calculator/tpfepoeup0" width="90%" height="500" style="border: 1px solid #ccc" frameborder=0></iframe>
+
+						<div >
+							<p style="font-size: 25px;" >
+								\[x_2\ln(x_2)-x_1\ln(x_1) = (x_2-x_1)\ln(x_1)+x_2(\ln(x_2)-\ln(x_1)).\]
+							</p>
+							
+						</div>
+					</section>
+
+					<section data-auto-animate>
+						
+
+						<div >
+							<p style="font-size: 25px;" >
+								\[(x_2-x_1)\ln(x_2)+x_1(\ln(x_2)-\ln(x_1)) < (x_2-x_1)\ln(x_2)+\frac{x_1}{x_1}(x_2-x_1)= (x_2-x_1)(\ln(x_2)+1) \]
+							</p>
+							
+						</div>
+
+						<div class="fragment">
+							<p style="font-size: 25px;" >
+								\[(x_2-x_1)\ln(x_1)+x_2(\ln(x_2)-\ln(x_1)) > (x_2-x_1)\ln(x_1)+\frac{x_2}{x_2}(x_2-x_1)= (x_2-x_1)(\ln(x_1)+1) \]
+							</p>
+							
+						</div>
+						<div class="fragment">
+							<p style="font-size: 25px;" >
+								\[(x_2-x_1)(\ln(x_2)+1) < x_2\ln(x_1)-x_1\ln(x_1) < (x_2-x_1)(\ln(x_1)+1) \]
+							</p>
+							
+						</div>
+						<div class="fragment">
+							<p style="font-size: 25px;" >
+								\[\underline{f}\cdot (x_2-x_1) < x_2\ln(x_2)-x_1\ln(x_1) < \overline{f}\cdot (x_2-x_1) \]
+							</p>
+							
+						</div>
+						<div class="fragment">
+							<p style="font-size: 25px;" >
+								\(F(t) = t\ln(t) \) for \(f(t)=\ln(t)+1\).
+							</p>
+							
+						</div>
+					</section>
+
+					<section data-auto-animate>
+						
+
+						<div class="r-frame">
+							<p style="font-size: 25px;" >
+								\[\int_a^b (\ln(x)+1)dx = b\ln(b)-a\ln(a).\]
+							</p>
+							
+						</div>
+
+						<br><br><br>
+
+						<div class="fragment">
+							<div class="r-frame">
+								<p style="font-size: 25px;" >
+									\[\int_a^b \ln(x)dx = (x\ln(x)-x)|_a^b.\]
+								</p>
+								
+							</div>
+							
+						</div>
+						
+					</section>
+					
+				</section>
+
+
+				<section>
+					<section data-auto-animate>
+						<div class="r-frame">
+								<p style="font-size: 25px;" >
+									\[\int_a^b f^{-1}(x)dx = bf^{-1}(b)-af^{-1}(a)-\int_{f^{-1}(a)}^{f^{-1}(b)}f(y)dy.\]
+								</p>
+								
+							</div>
+
+							<iframe src="https://www.desmos.com/calculator/zsooaqdrgg" width="90%" height="500" style="border: 1px solid #ccc" frameborder=0></iframe>
+					</section>
+
+					<section data-auto-animate>
+							<div >
+								<p style="font-size: 25px;" >
+									\[\int_a^b e^xdx = be^b-ae^a-\int_{e^a}^{e^b}\ln(y)dy \]
+								</p>
+								
+							</div>
+
+							<div class="fragment">
+								<p style="font-size: 25px;" >
+									\[= be^b-ae^a-\left( y\ln(y)-y\right)|_{e^a}^{e^b}\]
+								</p>
+								
+							</div>
+
+							<div class="fragment">
+								<p style="font-size: 25px;" >
+									\[= be^b-ae^a-\left( e^b\ln(e^b)-e^b -e^a\ln(e^a)+e^a\right)\]
+								</p>
+								
+							</div>
+
+							<div class="fragment">
+								<p style="font-size: 25px;" >
+									\[= be^b-ae^a- e^bb+e^b +e^aa-e^a\]
+								</p>
+								
+							</div>
+
+							<div class="fragment">
+								<p style="font-size: 25px;" >
+									\[= e^b -e^a\]
+								</p>
+								
+							</div>
+
+							
+					</section>
+
+					<section data-auto-animate>
+							<div class="r-frame">
+								<p style="font-size: 25px;" >
+									\(f(x)=e^x\) is continuous.
+								</p>
+								
+							</div>
+
+							<div class="fragment">
+								<p style="font-size: 25px;" >
+									\[|e^x-e^c| = \left|\int_c^x e^t dt\right| < \max(e^x, e^c)|x-c|\]
+								</p>
+
+								<iframe src="https://www.desmos.com/calculator/zllcej1d8x" width="90%" height="400" style="border: 1px solid #ccc" frameborder=0></iframe>
+								
+							</div>
+
+							
+
+							
+					</section>
+
+					<section data-auto-animate>
+							<div class="r-frame">
+								<p style="font-size: 25px;" >
+									If \(f(x)=e^x\) then \(f'(x)=e^x\).
+								</p>
+								
+							</div>
+
+							<iframe src="https://www.desmos.com/calculator/zllcej1d8x" width="90%" height="400" style="border: 1px solid #ccc" frameborder=0></iframe>
+
+							<p style="font-size: 25px;" >
+									\(e^x<\frac{e^x-e^c}{x-c}< e^c\) or
+									\(e^c<\frac{e^x-e^c}{x-c}< e^x\)
+								</p>
+
+							
+
+							
+					</section>
+
+					<section data-auto-animate>
+							<div class="r-frame">
+								<p style="font-size: 25px;" >
+									If \(f(x)=e^x\) then \(f'(x)=e^x\).
+								</p>
+								
+							</div>
+
+							<div class="fragment">
+								<p style="font-size: 25px;" >
+									Let \[D_cf(t)=\begin{cases} \frac{e^t-e^c}{t-c} & t\neq c \\ e^c & t=c \end{cases}\]
+								</p>
+
+								
+							</div>
+
+							<div class="fragment">
+								<p style="font-size: 25px;" >
+									 \[D_cf(t)-D_cf(c)=\begin{cases} \frac{e^t-e^c}{t-c}-e^c & t\neq c \\ 0 & t=c \end{cases}\]
+								</p>
+
+								
+							</div>
+
+							<div class="fragment">
+								<p style="font-size: 25px;" >
+									 \[|D_cf(t)-D_cf(c)|<|e^x-e^c|\]
+								</p>
+
+								
+							</div>
+
+							<div class="fragment">
+								<p style="font-size: 25px;" >
+									 \(D_cf(t)-D_cf(c)\) is continuous.
+								</p>
+
+								
+							</div>
+
+							<div class="fragment">
+								<p style="font-size: 25px;" >
+									 \(D_cf(t)\) is continuous.
+								</p>
+
+								
+							</div>
+
+							
+
+							
+					</section>
+					
+				</section>
+
+
+					
+
+
+				
+
+
+				
+
+				
+
+
+
+
+				
+					
+				
+			</div>
+		</div>
+
+		<script src="dist/reveal.js"></script>
+		<script src="plugin/notes/notes.js"></script>
+		<script src="plugin/markdown/markdown.js"></script>
+		<script src="plugin/highlight/highlight.js"></script>
+		<script>
+			// More info about initialization & config:
+			// - https://revealjs.com/initialization/
+			// - https://revealjs.com/config/
+			Reveal.initialize({
+				hash: true,
+
+				// Learn about plugins: https://revealjs.com/plugins/
+				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
+			});
+		</script>
+		<script src="plugin/math/math.js"></script>
+		<script src="plugin/chalkboard/plugin.js"></script>
+		<script src="plugin/customcontrols/plugin.js"></script>
+
+
+
+	<script>
+  	Reveal.initialize({
+		math: {
+			mathjax: 'https://cdn.jsdelivr.net/gh/mathjax/mathjax@2.7.8/MathJax.js',
+			config: 'TeX-AMS_HTML-full',
+			// pass other options into `MathJax.Hub.Config()`
+			TeX: { Macros: { RR: "{\\bf R}" } }
+		},
+
+		chalkboard: {
+        boardmarkerWidth: 3,
+        chalkWidth: 7,
+        chalkEffect: 1.0,
+        storage: null,
+        src: null,
+        readOnly: undefined,
+        transition: 800,
+        theme: "chalkboard",
+        background: [ 'rgba(127,127,127,.1)' , path + 'img/blackboard.png' ],
+        grid: { color: 'rgb(50,50,10,0.5)', distance: 80, width: 2},
+        eraser: { src: path + 'img/sponge.png', radius: 20},
+        boardmarkers : [
+                { color: 'rgba(100,100,100,1)', cursor: 'url(' + path + 'img/boardmarker-black.png), auto'},
+                { color: 'rgba(30,144,255, 1)', cursor: 'url(' + path + 'img/boardmarker-blue.png), auto'},
+                { color: 'rgba(220,20,60,1)', cursor: 'url(' + path + 'img/boardmarker-red.png), auto'},
+                { color: 'rgba(50,205,50,1)', cursor: 'url(' + path + 'img/boardmarker-green.png), auto'},
+                { color: 'rgba(255,140,0,1)', cursor: 'url(' + path + 'img/boardmarker-orange.png), auto'},
+                { color: 'rgba(150,0,20150,1)', cursor: 'url(' + path + 'img/boardmarker-purple.png), auto'},
+                { color: 'rgba(255,220,0,1)', cursor: 'url(' + path + 'img/boardmarker-yellow.png), auto'}
+        ],
+        chalks: [
+                { color: 'rgba(255,255,255,0.5)', cursor: 'url(' + path + 'img/chalk-white.png), auto'},
+                { color: 'rgba(96, 154, 244, 0.5)', cursor: 'url(' + path + 'img/chalk-blue.png), auto'},
+                { color: 'rgba(237, 20, 28, 0.5)', cursor: 'url(' + path + 'img/chalk-red.png), auto'},
+                { color: 'rgba(20, 237, 28, 0.5)', cursor: 'url(' + path + 'img/chalk-green.png), auto'},
+                { color: 'rgba(220, 133, 41, 0.5)', cursor: 'url(' + path + 'img/chalk-orange.png), auto'},
+                { color: 'rgba(220,0,220,0.5)', cursor: 'url(' + path + 'img/chalk-purple.png), auto'},
+                { color: 'rgba(255,220,0,0.5)', cursor: 'url(' + path + 'img/chalk-yellow.png), auto'}
+        ]
+    },
+    customcontrols: {
+  		controls: [
+  			{ icon: '<i class="fa fa-pen-square"></i>',
+  			  title: 'Toggle chalkboard (B)',
+  			  action: 'RevealChalkboard.toggleChalkboard();'
+  			},
+  			{ icon: '<i class="fa fa-pen"></i>',
+  			  title: 'Toggle notes canvas (C)',
+  			  action: 'RevealChalkboard.toggleNotesCanvas();'
+  			}
+  		]
+    },
+
+		plugins: [ RevealMath, RevealChalkboard, RevealCustomControls, RevealMenu  ]
+		});
+	</script>
+
+	</body>
+</html>
