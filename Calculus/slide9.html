@@ -68,7 +68,7 @@
 
 						<div class="fragment">
 							<p style="font-size: 25px;" > 
-								There must be a greatest lower bound and least upper bound. so that \(\underline{S}\leq \leq \underline{S}^* \leq \overline{S}^* \leq \overline{S}\).
+								There must be a greatest lower bound and least upper bound. so that \(\underline{S}\leq \underline{S}^* \leq \overline{S}^* \leq \overline{S}\).
 							</p>
 
 						</div>
@@ -173,13 +173,13 @@
 
 								<div class="fragment">
 									<p style="font-size: 25px;" > 
-										Since \(f\) is increasing, \(\overline{f}_i=f(t_{i}), \underline{f}_i=f(t_{i-1})\).  \(\overline{S}=\displaystyle\sum_{i=1}^n \overline{f}_i(t_i-t_{i-1}) , \overline{S}=\displaystyle\sum_{i=1}^n \underline{f}_i(t_i-t_{i-1})\).
+										Since \(f\) is increasing, \(\overline{f}_i=f(t_{i}), \underline{f}_i=f(t_{i-1})\).  \(\overline{S}=\displaystyle\sum_{i=1}^n \overline{f}_i\cdot(t_i-t_{i-1}) , \underline{S}=\displaystyle\sum_{i=1}^n \underline{f}_i\cdot(t_i-t_{i-1})\).
 									</p>
 								</div>
 
 								<div class="fragment">
 									<p style="font-size: 25px;" > 
-										\[\overline{S} - \underline{S} = \sum_{i=1}^n \left(\overline{f}_i(t_i-t_{i-1}) - \underline{f}_i(t_i-t_{i-1}) \right)\]
+										\[\overline{S} - \underline{S} = \sum_{i=1}^n \left(\overline{f}_i\cdot(t_i-t_{i-1}) - \underline{f}_i\cdot(t_i-t_{i-1}) \right)\]
 									</p>
 								</div>
 
@@ -486,6 +486,16 @@
 
 					</section>
 
+
+					<section data-auto-animate>
+						<p style="font-size: 25px;" > 
+							If \(v(t)\) is integrable over \([a,b]\) and \(a< x_a < x_2< b\) then \(v(t)\) is integrable over \([x_1,x_2]\).
+						</p>
+
+						<iframe src="https://www.desmos.com/calculator/jwcphkdxzp" width="90%" height="400" style="border: 1px solid #ccc" frameborder=0></iframe>
+
+					</section>
+
 					
 
 					<section data-auto-animate>
@@ -500,6 +510,63 @@
 					
 
 
+				</section>
+
+				<section>
+					<section data-auto-animate>
+						<div class="r-frame">
+							<p style="font-size: 25px;" > 
+								Consider a square pyramid who's base is 10 m by 10 m and whose height is 15 m.  Suppose the density of the pyramid \(h\) m off the ground is \(\delta(h)=\sqrt{50-h}\) kg/m\(^3\).
+							</p>
+						</div>
+						<iframe src="https://www.desmos.com/calculator/1iijywmali" width="90%" height="400" style="border: 1px solid #ccc" frameborder=0></iframe>
+					</section>
+
+					<section data-auto-animate>
+						<div >
+							<p style="font-size: 25px;" > 
+								What is the volume of a slab at height \(h\) m with width \(h\) m?
+							</p>
+						</div>
+						<iframe src="https://www.desmos.com/calculator/1iijywmali" width="90%" height="400" style="border: 1px solid #ccc" frameborder=0></iframe>
+					</section>
+
+					<section data-auto-animate>
+						<div >
+							<p style="font-size: 25px;" > 
+								What is the density of a slab at height \(h\) m with width \(h\) m?
+							</p>
+						</div>
+						<iframe src="https://www.desmos.com/calculator/1iijywmali" width="90%" height="400" style="border: 1px solid #ccc" frameborder=0></iframe>
+					</section>
+
+					<section data-auto-animate>
+						<div >
+							<p style="font-size: 25px;" > 
+								What is the mass of a slab at height \(h\) m with width \(h\) m?
+							</p>
+						</div>
+						<iframe src="https://www.desmos.com/calculator/1iijywmali" width="90%" height="400" style="border: 1px solid #ccc" frameborder=0></iframe>
+					</section>
+
+					<section data-auto-animate>
+						<div class="r-frame">
+							<p style="font-size: 25px;" > 
+								\[M=\int_a^b A(h)\delta(h)dh\]
+							</p>
+						</div>
+						<iframe src="https://www.desmos.com/calculator/1iijywmali" width="90%" height="400" style="border: 1px solid #ccc" frameborder=0></iframe>
+					</section>
+
+					<section data-auto-animate>
+						<div class="r-frame">
+							<p style="font-size: 25px;" > 
+								\[h_{com}=\frac{\int_a^b hA(h)\delta(h)dh}{M}\]
+							</p>
+						</div>
+						<iframe src="https://www.desmos.com/calculator/1iijywmali" width="90%" height="400" style="border: 1px solid #ccc" frameborder=0></iframe>
+					</section>
+					
 				</section>
 
 				<section>
