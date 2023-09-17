@@ -1,0 +1,1021 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>reveal.js</title>
+
+		<link rel="stylesheet" href="dist/reset.css">
+		<link rel="stylesheet" href="dist/reveal.css">
+		<link rel="stylesheet" href="dist/theme/white.css">
+		<link rel="stylesheet" href="plugin/chalkboard/style.css">
+		<link rel="stylesheet" href="plugin/customcontrols/style.css">
+
+
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+
+
+
+		<!-- Theme used for syntax highlighted code -->
+		<link rel="stylesheet" href="plugin/highlight/monokai.css">
+		<style>
+			.container{
+   				 display: flex;
+			}
+			.col{
+    			flex: 1;
+			}
+		</style>
+			<script async defer src="https://buttons.github.io/buttons.js"></script>
+
+		<script src="plugin/menu/menu.js"></script>
+
+
+
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				
+				<section>
+					<h2>Another Vt, the MVT you could say</h2>
+					<h4>M 111</h4>
+					
+					
+					<h4>
+						Oxford College of Emory University <a href="https://app.oxford.emory.edu/WebApps/Directory/index.cfm/view/9984" target="_blank">Tien Chih</a>
+					</h4>
+				</section>
+
+
+
+				<section>
+
+					<section data-auto-animate>
+						<div label="statement">
+							<p style="font-size: 25px;" > 
+								Let \(f(t)\) be continuous on \([a,b]\).  
+							</p>	
+									
+
+						</div>
+
+						<iframe src="https://www.desmos.com/calculator/tqffhzox8l" width="90%" height="400" style="border: 1px solid #ccc" frameborder=0></iframe>
+
+						<div class="fragment" label="prompt">
+							<p style="font-size: 25px;" > 
+								Then \(f\) achieves a minimum \(\underline{f}\) and a maximum \(\overline{f}\) on \([a,b]\).  Which theorem allows us to say this?
+							</p>
+							<div class="container">
+
+								<div class="col" start="1" type="A">
+									<ol>
+										<li style="font-size: 25px;" >IVT</li>
+									</ol>
+								</div>
+
+								<div class="col">
+									<ol start="2" type="A">
+										<li style="font-size: 25px;" >EVT</li>
+										
+									</ol>
+								</div>
+
+							</div>
+
+						</div>
+
+						
+					</section>
+
+					<section data-auto-animate>
+						<div label="statement">
+							<p style="font-size: 25px;" > 
+								Let \(f(t)\) be continuous on \([a,b]\).  
+							</p>	
+									
+
+						</div>
+
+						<iframe src="https://www.desmos.com/calculator/tqffhzox8l" width="90%" height="400" style="border: 1px solid #ccc" frameborder=0></iframe>
+
+						<div  label="prompt">
+							<p style="font-size: 25px;" > 
+								\[\underline{f}\cdot(b-a) \leq\int_a^b f(t)dt\leq \overline{f}\cdot (b-a)\]
+							</p>
+							
+						</div>
+
+						<div  class="fragment">
+							<p style="font-size: 25px;" > 
+								\[\underline{f} \leq \frac{1}{b-a}\int_a^b f(t)dt\leq \overline{f}\]
+							</p>
+							
+						</div>
+
+						
+					</section>
+
+					<section data-auto-animate>
+						<div label="statement">
+							<p style="font-size: 25px;" > 
+								\[\underline{f} \leq \frac{1}{b-a}\int_a^b f(t)dt\leq \overline{f}\]
+							</p>	
+									
+
+						</div>
+
+						<iframe src="https://www.desmos.com/calculator/0r6bwstg8a" width="90%" height="400" style="border: 1px solid #ccc" frameborder=0></iframe>
+
+
+						<div class="fragment" label="prompt">
+							<p style="font-size: 25px;" > 
+								Then there is a \(c, a\leq c\leq b\) where \(f(c)=\frac{1}{b-a}\int_a^b f(t)dt\).  Which theorem allows us to say this?
+							</p>
+							<div class="container">
+
+								<div class="col" start="1" type="A">
+									<ol>
+										<li style="font-size: 25px;" >IVT</li>
+									</ol>
+								</div>
+
+								<div class="col">
+									<ol start="2" type="A">
+										<li style="font-size: 25px;" >EVT</li>
+										
+									</ol>
+								</div>
+
+							</div>
+
+						</div>
+
+						
+					</section>
+
+
+					<section data-auto-animate>
+						<h4>Mean Value Theorem (Integrals)</h4>
+						<div label="statement" class="r-frame">
+							<p style="font-size: 25px;" > 
+								Let \(f(t)\) be continuous on \([a,b]\).  Then there is a \(c, a\leq c\leq b\) where \(f(c)=\displaystyle \frac{1}{b-a}\int_a^b f(t)dt\).
+							</p>	
+									
+
+						</div>
+
+						<iframe src="https://www.desmos.com/calculator/0r6bwstg8a" width="90%" height="400" style="border: 1px solid #ccc" frameborder=0></iframe>
+
+
+						
+
+						
+					</section>
+
+					
+				</section>
+
+
+
+
+
+
+
+
+
+
+				<section>
+
+					<section data-auto-animate>
+						<div label="statement">
+							<p style="font-size: 25px;" > 
+								Let \(f(t), g(t)\) be continuous on \([a,b]\), and \(g(t)\geq 0\) on \([a,b]\).  
+							</p>	
+									
+
+						</div>
+
+						<iframe src="https://www.desmos.com/calculator/ko9fgzpmqm" width="90%" height="400" style="border: 1px solid #ccc" frameborder=0></iframe>
+
+						<div class="fragment" label="prompt">
+							<p style="font-size: 25px;" > 
+								\[\underline{f}\cdot\int_a^bg(t)dt \leq \int_a^b f(t)g(t)dt \leq \overline{f}\cdot\int_a^bg(t)dt\]
+							</p>
+							
+
+						</div>
+
+						
+					</section>
+
+					<section data-auto-animate>
+						<div label="statement">
+							<p style="font-size: 25px;" > 
+								\[\underline{f}\cdot\int_a^bg(t)dt \leq \int_a^b f(t)g(t)dt \leq \overline{f}\cdot\int_a^bg(t)dt\]
+							</p>	
+									
+
+						</div>
+
+						<iframe src="https://www.desmos.com/calculator/ko9fgzpmqm" width="90%" height="400" style="border: 1px solid #ccc" frameborder=0></iframe>
+
+						<div class="fragment" label="prompt">
+							<p style="font-size: 25px;" > 
+								\[\underline{f} \leq \frac{\int_a^b f(t)g(t)dt }{\int_a^bg(t)dt}\leq \overline{f}\]
+							</p>
+							
+
+						</div>
+
+						
+					</section>
+
+					<section data-auto-animate>
+						<div label="statement">
+							<p style="font-size: 25px;" > 
+								\[\underline{f} \leq \frac{\int_a^b f(t)g(t)dt }{\int_a^bg(t)dt}\leq \overline{f}\]
+							</p>	
+									
+
+						</div>
+
+						<iframe src="https://www.desmos.com/calculator/ko9fgzpmqm" width="90%" height="400" style="border: 1px solid #ccc" frameborder=0></iframe>
+
+
+						<div class="fragment" label="prompt">
+							<p style="font-size: 25px;" > 
+								Then there is a \(c, a\leq c\leq b\) where \(f(c)=\frac{\int_a^b f(t)g(t)dt }{\int_a^bg(t)dt}\).  Which theorem allows us to say this?
+							</p>
+							<div class="container">
+
+								<div class="col" start="1" type="A">
+									<ol>
+										<li style="font-size: 25px;" >IVT</li>
+									</ol>
+								</div>
+
+								<div class="col">
+									<ol start="2" type="A">
+										<li style="font-size: 25px;" >EVT</li>
+										
+									</ol>
+								</div>
+
+							</div>
+
+						</div>
+
+						
+					</section>
+
+
+					<section data-auto-animate>
+						<h4>Mean Value Theorem (Integrals-General)</h4>
+						<div label="statement" class="r-frame">
+							<p style="font-size: 25px;" > 
+								Let \(f(t), g(t)\) be continuous on \([a,b]\), \(g(t)\geq 0\) on \([a,b]\).  Then there is a \(c, a\leq c\leq b\) where \(\displaystyle \int_a^b f(t)g(t)dt = f(c)\int_a^bg(t)dt\).
+							</p>	
+									
+
+						</div>
+
+						<iframe src="https://www.desmos.com/calculator/ko9fgzpmqm" width="90%" height="400" style="border: 1px solid #ccc" frameborder=0></iframe>
+
+
+						
+
+						
+					</section>
+
+
+
+
+					
+
+
+
+					
+
+
+					
+				</section>
+
+
+				<section>
+					<section data-auto-animate>
+						<div label="statement">
+							<p style="font-size: 25px;" > 
+								Let \(f(t)\) be continuous on \([a,b]\), and differentiable on \((a,b)\).  Let \(L(t)=\frac{f(b)-f(a)}{b-a}(t-a)+f(a)\).  
+							</p>	
+									
+
+						</div>
+
+						<iframe src="https://www.desmos.com/calculator/kekevwq7gn" width="90%" height="400" style="border: 1px solid #ccc" frameborder=0></iframe>
+
+						<div class="fragment" label="prompt">
+							<p style="font-size: 25px;" > 
+								How geometrically would you describe \(y=L(t)\)?
+							</p>
+							
+
+						</div>
+
+						
+					</section>
+
+					<section data-auto-animate>
+						<div label="statement">
+							<p style="font-size: 25px;" > 
+								Let \(f(t)\) be continuous on \([a,b]\), and differentiable on \((a,b)\).  Let \(L(t)=\frac{f(b)-f(a)}{b-a}(t-a)+f(a)\).  
+							</p>	
+									
+
+						</div>
+
+						<iframe src="https://www.desmos.com/calculator/kekevwq7gn" width="90%" height="400" style="border: 1px solid #ccc" frameborder=0></iframe>
+
+						<div label="prompt">
+							<p style="font-size: 25px;" > 
+								What are \(L(a), L(b)\)?
+							</p>
+							
+
+						</div>
+
+						
+					</section>
+
+					<section data-auto-animate>
+						<div label="statement">
+							<p style="font-size: 25px;" > 
+								Let \(h(t)=f(t)-L(t)\).  
+							</p>	
+									
+
+						</div>
+
+						<iframe src="https://www.desmos.com/calculator/f6nehelkuw" width="90%" height="400" style="border: 1px solid #ccc" frameborder=0></iframe>
+
+						<div label="prompt">
+							<p style="font-size: 25px;" > 
+								What are \(h(a), h(b)\)?
+							</p>
+							
+
+						</div>
+
+						
+					</section>
+
+					<section data-auto-animate>
+						<div label="statement">
+							<p style="font-size: 25px;" > 
+								Let \(h(t)=f(t)-L(t)\).  
+							</p>	
+									
+
+						</div>
+
+						<iframe src="https://www.desmos.com/calculator/jdmkvfsx1r" width="90%" height="400" style="border: 1px solid #ccc" frameborder=0></iframe>
+
+						<div label="prompt">
+							<p style="font-size: 25px;" > 
+								If \(h(t)\) is constant, is there a \(c, a< c < b\) where \(h'(c)=0\)?
+							</p>
+							
+
+						</div>
+
+						
+					</section>
+
+					<section data-auto-animate>
+						<div label="statement">
+							<p style="font-size: 25px;" > 
+								Let \(h(t)=f(t)-L(t)\).  
+							</p>	
+									
+
+						</div>
+
+						<iframe src="https://www.desmos.com/calculator/f6nehelkuw" width="90%" height="400" style="border: 1px solid #ccc" frameborder=0></iframe>
+
+						<div label="prompt">
+							<p style="font-size: 25px;" > 
+								If \(h(t)\) is not constant, what theorem lets us say \(h(t)\) achieves a max and a min on \((a,b)\)?
+							</p>
+
+							<div class="container">
+
+								<div class="col" start="1" type="A">
+									<ol>
+										<li style="font-size: 25px;" >IVT</li>
+									</ol>
+								</div>
+
+								<div class="col">
+									<ol start="2" type="A">
+										<li style="font-size: 25px;" >EVT</li>
+										
+									</ol>
+								</div>
+
+							</div>
+							
+
+						</div>
+
+						
+					</section>
+
+					<section data-auto-animate>
+						<div label="statement">
+							<p style="font-size: 25px;" > 
+								Let \(h(t)=f(t)-L(t)\).  
+							</p>	
+									
+
+						</div>
+
+						<iframe src="https://www.desmos.com/calculator/m5yavhl4qm" width="90%" height="400" style="border: 1px solid #ccc" frameborder=0></iframe>
+
+						<div label="prompt">
+							<p style="font-size: 25px;" > 
+								If \(h(c)\) is an extreme value what can we say about \(h'(c)\)?
+							</p>
+
+							<div class="container">
+
+								<div class="col" start="1" type="A">
+									<ol>
+										<li style="font-size: 25px;" >\(h'(c)>0\)</li>
+									</ol>
+								</div>
+
+								<div class="col">
+									<ol start="2" type="A">
+										<li style="font-size: 25px;" >\(h'(c)=0\)</li>
+										
+									</ol>
+								</div>
+								<div class="col">
+									<ol start="2" type="A">
+										<li style="font-size: 25px;" >\(h'(c)<0\)</li>
+										
+									</ol>
+								</div>
+
+							</div>
+							
+
+						</div>
+
+						
+					</section>
+
+					<section data-auto-animate>
+						<div label="statement">
+							<p style="font-size: 25px;" > 
+								Notice that \(h'(t)=f'(t)-L'(t)\).  
+							</p>	
+									
+
+						</div>
+
+						<iframe src="https://www.desmos.com/calculator/m5yavhl4qm" width="90%" height="400" style="border: 1px solid #ccc" frameborder=0></iframe>
+
+						<div label="prompt">
+							<p style="font-size: 25px;" > 
+								If \(h'(c)=0\) what can we say about \(f'(c), L'(c)\)?
+							</p>
+							
+
+						</div>
+
+						<div class="fragment">
+							<p style="font-size: 25px;" > 
+								What is \(L'(c)\) anyway?
+							</p>
+							
+
+						</div>
+
+						
+					</section>
+
+					<section data-auto-animate>
+						<h4>Mean Value Theorem (Derivatives)</h4>
+						<div label="statement" class="r-frame">
+							<p style="font-size: 25px;" > 
+								Let \(f(t)\) be continuous on \([a,b]\), and differentiable on \((a,b)\).  Then there is a \(a< c< b\) where \(f'(c)=\frac{f(b)-f(a)}{b-a}\).
+							</p>	
+									
+
+						</div>
+
+						<iframe src="https://www.desmos.com/calculator/m5yavhl4qm" width="90%" height="400" style="border: 1px solid #ccc" frameborder=0></iframe>
+
+						
+
+						
+					</section>
+					
+				</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+				<section>
+					<section data-auto-animate>
+						<div label="statement">
+							<p style="font-size: 25px;" > 
+								Recall that \[R=\frac{R_1\Delta t_1 + R_2\Delta t_2+ \cdots + R_n\Delta t_n}{\Delta t_1 + \Delta t_2+ \cdots + \Delta t_n}\]
+							</p>	
+									
+
+						</div>
+
+						<iframe src="https://www.desmos.com/calculator/k61mbmk5of" width="90%" height="500" style="border: 1px solid #ccc" frameborder=0></iframe>
+					</section>
+
+					<section data-auto-animate>
+						<div label="statement">
+							<p style="font-size: 25px;" > 
+								Let \(a=t_0 < t_1 < \cdots < t_n=b\), then: \[R=\frac{R_1(t_1-t_0) + R_2(t_2-t_1)+ \cdots + R_n(t_n-t_{n-1})}{(t_1-t_0) + (t_2-t_1)+ \cdots + (t_n-t_{n-1})}\]
+							</p>	
+									
+
+						</div>
+
+						<iframe src="https://www.desmos.com/calculator/k61mbmk5of" width="90%" height="500" style="border: 1px solid #ccc" frameborder=0></iframe>
+					</section>
+
+					<section data-auto-animate>
+						<div label="statement">
+							<p style="font-size: 25px;" > 
+								Let \(a=t_0 < t_1 < \cdots < t_n=b\), then: \[R=\frac{R_1(t_1-t_0) + R_2(t_2-t_1)+ \cdots + R_n(t_n-t_{n-1})}{t_n-t_0}\]
+							</p>	
+									
+
+						</div>
+
+						<iframe src="https://www.desmos.com/calculator/k61mbmk5of" width="90%" height="500" style="border: 1px solid #ccc" frameborder=0></iframe>
+					</section>
+
+					<section data-auto-animate>
+						<div label="statement">
+							<p style="font-size: 25px;" > 
+								Let \(a=t_0 < t_1 < \cdots < t_n=b\), then: \[R=\frac{1}{b-a}\left(R_1(t_1-t_0) + R_2(t_2-t_1)+ \cdots + R_n(t_n-t_{n-1})\right)\]
+							</p>	
+									
+
+						</div>
+
+						<iframe src="https://www.desmos.com/calculator/k61mbmk5of" width="90%" height="500" style="border: 1px solid #ccc" frameborder=0></iframe>
+					</section>
+
+					<section data-auto-animate>
+						<div label="statement">
+							<p style="font-size: 25px;" > 
+								Let \(a=t_0 < t_1 < \cdots < t_n=b\), then: \[R=\frac{1}{b-a}S\]
+							</p>	
+									
+
+						</div>
+
+						<iframe src="https://www.desmos.com/calculator/k61mbmk5of" width="90%" height="500" style="border: 1px solid #ccc" frameborder=0></iframe>
+					</section>
+
+					<section data-auto-animate>
+						<div label="statement">
+							<p style="font-size: 25px;" > 
+								The average value of \(f(t)\) over \([a,b]\) is: \[\text{avg}(f)=\frac{1}{b-a}\int_a^bf(t)dt\]
+							</p>	
+									
+
+						</div>
+
+						<iframe src="https://www.desmos.com/calculator/4gthixh9uo" width="90%" height="500" style="border: 1px solid #ccc" frameborder=0></iframe>
+					</section>
+
+
+					<section data-auto-animate>
+						<div label="statement">
+							<p style="font-size: 25px;" > 
+								Find the average value of \(f(x)=4x-x^2\) over \([0,4]\).
+							</p>	
+									
+
+						</div>
+
+						<iframe src="https://www.desmos.com/calculator/v41jwcuuut" width="90%" height="500" style="border: 1px solid #ccc" frameborder=0></iframe>
+					</section>
+
+					<section data-auto-animate>
+						<div label="statement">
+							<p style="font-size: 25px;" > 
+								Find the average value of \(f(x)=\int_1^x \frac{1}{t}dt\) over \([1,x]\).
+							</p>	
+									
+
+						</div>
+
+						<iframe src="https://www.desmos.com/calculator/jgbizo6ex0" width="90%" height="500" style="border: 1px solid #ccc" frameborder=0></iframe>
+					</section>
+
+					<section data-auto-animate>
+						<div label="statement">
+							<p style="font-size: 25px;" > 
+								Let \(a(x)=\frac{1}{x-1}\int_1^x \frac{1}{t}dt\).  Then \[\frac{1}{x}\leq \frac{1}{x-1}\int_1^x \frac{1}{t}dt \leq 1\]
+							</p>	
+									
+
+						</div>
+
+						<iframe src="https://www.desmos.com/calculator/jgbizo6ex0" width="90%" height="500" style="border: 1px solid #ccc" frameborder=0></iframe>
+					</section>
+
+					<section data-auto-animate>
+						<div label="statement">
+							<p style="font-size: 25px;" > 
+								Let \(a(x)=\frac{1}{x-1}\int_1^x \frac{1}{t}dt\).  Then \[\frac{1}{x}\leq \frac{F(x)-F(1)}{x-1} \leq 1.\]  What happens if \(x=1\)?
+							</p>	
+									
+
+						</div>
+
+						<iframe src="https://www.desmos.com/calculator/jgbizo6ex0" width="90%" height="500" style="border: 1px solid #ccc" frameborder=0></iframe>
+					</section>
+
+					<section data-auto-animate>
+						<div label="statement">
+							<p style="font-size: 25px;" > 
+								Let \(a(x)=\frac{1}{x-1}\int_1^x \frac{1}{t}dt\).  Then \[a(x^2) = \frac{1}{x^2-1}\int_1^{x^2} \frac{1}{t}dt\]
+							</p>	
+									
+
+						</div>
+
+						<iframe src="https://www.desmos.com/calculator/iwwwydmwvi" width="90%" height="500" style="border: 1px solid #ccc" frameborder=0></iframe>
+					</section>
+
+					<section data-auto-animate>
+						<div label="statement">
+							<p style="font-size: 25px;" > 
+								\[a(x^2) = \frac{1}{x^2-1}\int_1^{x^2} \frac{1}{t}dt< \frac{(x-1)\cdot 1+(x^2-x)\cdot\frac{1}{x}}{x^2-1}\]
+							</p>	
+									
+
+						</div>
+
+						<iframe src="https://www.desmos.com/calculator/iwwwydmwvi" width="90%" height="500" style="border: 1px solid #ccc" frameborder=0></iframe>
+					</section>
+
+					<section data-auto-animate>
+						<div label="statement">
+							<p style="font-size: 25px;" > 
+								\[a(x^2) = \frac{1}{x^2-1}\int_1^{x^2} \frac{1}{t}dt< \frac{(x-1)+x(x-1)\cdot\frac{1}{x}}{(x-1)(x+1)}\]
+							</p>	
+									
+
+						</div>
+
+						<iframe src="https://www.desmos.com/calculator/iwwwydmwvi" width="90%" height="500" style="border: 1px solid #ccc" frameborder=0></iframe>
+					</section>
+
+					<section data-auto-animate>
+						<div label="statement">
+							<p style="font-size: 25px;" > 
+								\[a(x^2) = \frac{1}{x^2-1}\int_1^{x^2} \frac{1}{t}dt< \frac{(x-1)+(x-1)}{(x-1)(x+1)}\]
+							</p>	
+									
+
+						</div>
+
+						<iframe src="https://www.desmos.com/calculator/iwwwydmwvi" width="90%" height="500" style="border: 1px solid #ccc" frameborder=0></iframe>
+					</section>
+
+					<section data-auto-animate>
+						<div label="statement">
+							<p style="font-size: 25px;" > 
+								\[a(x^2) = \frac{1}{x^2-1}\int_1^{x^2} \frac{1}{t}dt< \frac{2}{x+1}\]
+							</p>	
+									
+
+						</div>
+
+						<iframe src="https://www.desmos.com/calculator/iwwwydmwvi" width="90%" height="500" style="border: 1px solid #ccc" frameborder=0></iframe>
+					</section>
+
+					<section data-auto-animate>
+						<div label="statement">
+							<p style="font-size: 25px;" > 
+								\[a(x) = \frac{1}{x-1}\int_1^{x} \frac{1}{t}dt< \frac{2}{\sqrt{x}+1}\]
+							</p>	
+									
+
+						</div>
+
+						<iframe src="https://www.desmos.com/calculator/iwwwydmwvi" width="90%" height="500" style="border: 1px solid #ccc" frameborder=0></iframe>
+					</section>
+
+						
+					
+				</section>
+
+
+				<section>
+					<section data-auto-animate>
+						<div label="statement" class="r-frame">
+							<p style="font-size: 25px;" > 
+								\[\frac{1}{x-1}\int_1^{x} \frac{1}{t}dt = \frac{\ln(x)}{x-1}< \frac{2}{\sqrt{x}+1}\] 
+							</p>	
+									
+
+						</div>
+
+						<div class="fragment">
+							<p style="font-size: 25px;" > 
+								As \(x\to \infty\), since \(\displaystyle \frac{\ln(x)}{x} < \frac{\ln(x)}{x-1} < \frac{2}{\sqrt{x}+1}\), and \(\displaystyle \frac{2}{\sqrt{x}+1}\to 0\).  We have that \(\displaystyle \frac{\ln(x)}{x} \to 0\).
+							</p>
+
+						</div>
+
+						<div class="fragment">
+							<p style="font-size: 25px;" > 
+								As \(x\to \infty\), since \(\displaystyle \frac{\ln(x)}{x} \to 0\), let \(u=e^x\).  We have that \(\displaystyle \frac{x}{e^x} = \frac{\ln(u)}{u} \to 0\).
+							</p>
+
+						</div>
+
+						
+					</section>
+
+					<section data-auto-animate>
+
+						<div label="statement" class="r-frame">
+							<p style="font-size: 25px;" > 
+								Let \(n>0, x\to \infty\). 
+							</p>	
+									
+
+						</div>
+
+						
+
+						<div >
+							<p style="font-size: 25px;" > 
+								\(\displaystyle\frac{\ln(x)}{x^n} = \frac{1}{n}\frac{\ln(x^n)}{x^n}\) so let \(u=x^n\): \(\displaystyle\frac{1}{n}\frac{\ln(x^n)}{x^n} = \frac{1}{n}\frac{\ln(u)}{u}\to 0\).
+								
+							</p>
+
+						
+							<p style="font-size: 25px;" > 
+								\(\displaystyle\frac{x^n}{e^x} = \left( \frac{x}{e^{x/n}}\right)^n\) so let \(x=n\ln(u)\): \(\displaystyle\left( \frac{x}{e^{x/n}}\right)^n = \left( \frac{n\ln(u)}{e^{\ln(u)}}\right)^n = \left( \frac{n\ln(u)}{u}\right)^n < \left( \frac{2n}{\sqrt{u}+1}\right)^n = \left( \frac{2n}{\sqrt{e^{x/2n}}+1}\right)^n\to 0\).
+							</p>
+
+						</div>
+
+						
+					</section>
+
+
+					<section data-auto-animate>
+
+						<div label="statement" class="r-frame">
+							<p style="font-size: 25px;" > 
+								From slowest to fastest orders of growth, we have:
+								\[\ln(x) < x^n < e^x\] (where \(n>0\).)
+							</p>	
+									
+
+						</div>
+
+						
+
+						
+
+						
+					</section>
+
+					
+					
+
+				</section>
+
+
+				<section>
+					<section data-auto-animate>
+						<div label="statement" class="r-frame">
+							<p style="font-size: 25px;" > 
+								Suppose for each \(c\) in \((a,b)\) we had that \(f'(c)=0\).  Let \(a< x_1 < x_2 < b\).
+							</p>	
+									
+
+						</div>
+						<iframe src="https://www.desmos.com/calculator/idc05tv1tp" width="90%" height="400" style="border: 1px solid #ccc" frameborder=0></iframe>
+
+						<div class="fragment" label="prompt">
+							<p style="font-size: 25px;" > 
+								What theorem gives us a \(c, x_1 < c < x_2\) so that \(f'(c)=\frac{f(x_2)-f(x_1)}{x_2-x_1}\)?
+							</p>
+
+							<div class="container">
+
+								<div class="col" start="1" type="A">
+									<ol>
+										<li style="font-size: 25px;" >IVT</li>
+									</ol>
+								</div>
+
+								<div class="col">
+									<ol start="2" type="A">
+										<li style="font-size: 25px;" >EVT</li>
+										
+									</ol>
+								</div>
+
+								<div class="col">
+									<ol start="3" type="A">
+										<li style="font-size: 25px;" >MVT</li>
+										
+									</ol>
+								</div>
+
+							</div>
+							
+
+						</div>
+					</section>
+
+					<section data-auto-animate>
+						<div label="statement" class="r-frame">
+							<p style="font-size: 25px;" > 
+								Suppose for each \(c\) in \((a,b)\) we had that \(f'(c)=0\).  Let \(a< x_1 < x_2 < b\).
+							</p>	
+									
+
+						</div>
+						<iframe src="https://www.desmos.com/calculator/idc05tv1tp" width="90%" height="400" style="border: 1px solid #ccc" frameborder=0></iframe>
+
+						<div  label="prompt">
+							<p style="font-size: 25px;" > 
+								\(f'(c)=\frac{f(x_2)-f(x_1)}{x_2-x_1}\).  What sign is \(f'(c)\)?  \(x_2-x_1\)?
+							</p>
+
+							
+							
+
+						</div>
+
+						<div  class="fragment">
+							<p style="font-size: 25px;" > 
+								What sign is \(f(x_2)-f(x_1)\)?
+							</p>
+
+							
+							
+
+						</div>
+					</section>
+
+					<section data-auto-animate>
+						<div label="statement" class="r-frame">
+							<p style="font-size: 25px;" > 
+								Let \(f(t)\) be differentiable on \((a,b)\).
+							</p>	
+							<ol>
+								<li style="font-size: 25px;" >If \(f'(c)>0\) for each \(a< c < b\), then \(f\) is increasing on \((a,b)\).</li>
+								<li style="font-size: 25px;" >If \(f'(c)<0\) for each \(a< c < b\), then \(f\) is decreasing on \((a,b)\).</li>
+								<li style="font-size: 25px;" >If \(f'(c)=0\) for each \(a< c < b\), then \(f\) is constant on \((a,b)\).</li>	
+							</ol>
+									
+
+						</div>
+						<iframe src="https://www.desmos.com/calculator/idc05tv1tp" width="90%" height="400" style="border: 1px solid #ccc" frameborder=0></iframe>
+
+						
+					</section>
+
+
+
+				</section>
+
+
+					
+
+
+				
+
+
+				
+
+				
+
+
+
+
+				
+					
+				
+			</div>
+		</div>
+
+		<script src="dist/reveal.js"></script>
+		<script src="plugin/notes/notes.js"></script>
+		<script src="plugin/markdown/markdown.js"></script>
+		<script src="plugin/highlight/highlight.js"></script>
+		<script>
+			// More info about initialization & config:
+			// - https://revealjs.com/initialization/
+			// - https://revealjs.com/config/
+			Reveal.initialize({
+				hash: true,
+
+				// Learn about plugins: https://revealjs.com/plugins/
+				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
+			});
+		</script>
+		<script src="plugin/math/math.js"></script>
+		<script src="plugin/chalkboard/plugin.js"></script>
+		<script src="plugin/customcontrols/plugin.js"></script>
+
+
+
+	<script>
+  	Reveal.initialize({
+		math: {
+			mathjax: 'https://cdn.jsdelivr.net/gh/mathjax/mathjax@2.7.8/MathJax.js',
+			config: 'TeX-AMS_HTML-full',
+			// pass other options into `MathJax.Hub.Config()`
+			TeX: { Macros: { RR: "{\\bf R}" } }
+		},
+
+		chalkboard: {
+        boardmarkerWidth: 3,
+        chalkWidth: 7,
+        chalkEffect: 1.0,
+        storage: null,
+        src: null,
+        readOnly: undefined,
+        transition: 800,
+        theme: "chalkboard",
+        background: [ 'rgba(127,127,127,.1)' , path + 'img/blackboard.png' ],
+        grid: { color: 'rgb(50,50,10,0.5)', distance: 80, width: 2},
+        eraser: { src: path + 'img/sponge.png', radius: 20},
+        boardmarkers : [
+                { color: 'rgba(100,100,100,1)', cursor: 'url(' + path + 'img/boardmarker-black.png), auto'},
+                { color: 'rgba(30,144,255, 1)', cursor: 'url(' + path + 'img/boardmarker-blue.png), auto'},
+                { color: 'rgba(220,20,60,1)', cursor: 'url(' + path + 'img/boardmarker-red.png), auto'},
+                { color: 'rgba(50,205,50,1)', cursor: 'url(' + path + 'img/boardmarker-green.png), auto'},
+                { color: 'rgba(255,140,0,1)', cursor: 'url(' + path + 'img/boardmarker-orange.png), auto'},
+                { color: 'rgba(150,0,20150,1)', cursor: 'url(' + path + 'img/boardmarker-purple.png), auto'},
+                { color: 'rgba(255,220,0,1)', cursor: 'url(' + path + 'img/boardmarker-yellow.png), auto'}
+        ],
+        chalks: [
+                { color: 'rgba(255,255,255,0.5)', cursor: 'url(' + path + 'img/chalk-white.png), auto'},
+                { color: 'rgba(96, 154, 244, 0.5)', cursor: 'url(' + path + 'img/chalk-blue.png), auto'},
+                { color: 'rgba(237, 20, 28, 0.5)', cursor: 'url(' + path + 'img/chalk-red.png), auto'},
+                { color: 'rgba(20, 237, 28, 0.5)', cursor: 'url(' + path + 'img/chalk-green.png), auto'},
+                { color: 'rgba(220, 133, 41, 0.5)', cursor: 'url(' + path + 'img/chalk-orange.png), auto'},
+                { color: 'rgba(220,0,220,0.5)', cursor: 'url(' + path + 'img/chalk-purple.png), auto'},
+                { color: 'rgba(255,220,0,0.5)', cursor: 'url(' + path + 'img/chalk-yellow.png), auto'}
+        ]
+    },
+    customcontrols: {
+  		controls: [
+  			{ icon: '<i class="fa fa-pen-square"></i>',
+  			  title: 'Toggle chalkboard (B)',
+  			  action: 'RevealChalkboard.toggleChalkboard();'
+  			},
+  			{ icon: '<i class="fa fa-pen"></i>',
+  			  title: 'Toggle notes canvas (C)',
+  			  action: 'RevealChalkboard.toggleNotesCanvas();'
+  			}
+  		]
+    },
+
+		plugins: [ RevealMath, RevealChalkboard, RevealCustomControls, RevealMenu  ]
+		});
+	</script>
+
+	</body>
+</html>
