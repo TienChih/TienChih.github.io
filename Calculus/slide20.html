@@ -1,0 +1,371 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>reveal.js</title>
+
+		<link rel="stylesheet" href="dist/reset.css">
+		<link rel="stylesheet" href="dist/reveal.css">
+		<link rel="stylesheet" href="dist/theme/white.css">
+		<link rel="stylesheet" href="plugin/chalkboard/style.css">
+		<link rel="stylesheet" href="plugin/customcontrols/style.css">
+
+
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+
+
+
+		<!-- Theme used for syntax highlighted code -->
+		<link rel="stylesheet" href="plugin/highlight/monokai.css">
+		<style>
+			.container{
+   				 display: flex;
+			}
+			.col{
+    			flex: 1;
+			}
+		</style>
+			<script async defer src="https://buttons.github.io/buttons.js"></script>
+
+		<script src="plugin/menu/menu.js"></script>
+
+
+
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				
+				<section>
+					<h2>Changing things change each other.</h2>
+					<h4>M 111</h4>
+					
+					
+					<h4>
+						Oxford College of Emory University <a href="https://app.oxford.emory.edu/WebApps/Directory/index.cfm/view/9984" target="_blank">Tien Chih</a>
+					</h4>
+				</section>
+
+				
+
+				<section>
+					<section data-auto-animate>
+					<h4>Balloon</h4>
+
+					<div data-id="problem" class="r-frame">
+						<p style="font-size: 30px;" >
+							Consider a spherical balloon with 6 cm radius, increasing at 2 cm/s.  How is the volume changing?
+						</p>
+						
+					</div>
+
+					<p style="font-size: 30px;", class="fragment">
+						Recall that \(V=\frac{4}{3}\pi r^3.\)  Differentiate both sides with respect to \(t\).
+					</p>
+
+					<p style="font-size: 30px;", class="fragment">
+						Fill in any of these values if they appear in the  equality you just found (if you know what they are): \(V, r, \frac{dV}{dt}, \frac{dr}{dt}\).
+					</p>
+
+					
+					</section>
+
+					
+					
+				</section>
+
+				<section>
+					<section data-auto-animate>
+					<h4>Ladder</h4>
+
+					<div data-id="problem" class="r-frame">
+						<p style="font-size: 25px;" >
+							Consider a 10 foot ladder leaning against a wall so that the top of the ladder is 6 ft off the ground.  If the ladder is pulled at at 1 ft/s, how fast does the top of the ladder descend?
+						</p>
+						
+					</div>
+
+					<iframe src="https://www.desmos.com/calculator/dmsualcxad?embed" width="100%" height="450" style="border: 1px solid #ccc" frameborder=0></iframe>
+
+					
+					</section>
+					<section data-auto-animate>
+					<h4>Ladder</h4>
+
+					<div data-id="problem" class="r-frame">
+						<p style="font-size: 30px;" >
+							Consider a 10 foot ladder leaning against a wall so that the top of the ladder is 6 ft off the ground.  If the ladder is pulled at at 1 ft/s, how fast does the top of the ladder descend?
+						</p>
+						
+					</div>
+
+					<img src="img/ladder.svg" width=30%>
+
+					<p style="font-size: 30px;" >
+						(Let \(x\) denote the distance from the base of the ladder to the wall, and \(y\) denote the distance from the top of the ladder to the floor. Out of \(x, y, \frac{dx}{dt}, \frac{dy}{dt}\), which are known to us?  What equality connects \(x, y\) to the 10 feet?)
+					</p>
+
+					
+
+
+					
+
+					
+					</section>
+
+					
+
+					
+					
+				</section>
+
+				<section>
+					<section data-auto-animate>
+					<h4>Laser</h4>
+
+					<div data-id="problem" class="r-frame">
+						<p style="font-size: 30px;" >
+							A laser pointer held on the ground is aimed at a wall 10 feet away.  Suppose the pointer is pointed at a bug on the wall at an angle of \(\pi/3\).  If the bug scurries up at 0.25 feet/second, how is the angle changing?
+						</p>
+						
+					</div>
+
+					<p style="font-size: 30px;" >
+						(Draw a picture).
+					</p>
+
+					
+
+					
+					</section>
+
+					<section data-auto-animate>
+					<h4>Laser</h4>
+
+					<div data-id="problem" class="r-frame">
+						<p style="font-size: 30px;" >
+							A laser pointer held on the ground is aimed at a wall 10 feet away.  Suppose the pointer is pointed at a bug on the wall at an angle of \(\pi/3\).  If the bug scurries up at 0.25 feet/second, how is the angle changing?
+						</p>
+						
+					</div>
+
+					<iframe src="https://www.desmos.com/calculator/retdufwks8?embed" width="100%" height="400" style="border: 1px solid #ccc" frameborder=0></iframe>
+
+					
+
+					
+					</section>
+				</section>
+
+				<section>
+
+					<section data-auto-animate>
+					<h4>Shadow</h4>
+
+					<div data-id="problem" class="r-frame">
+						<p style="font-size: 30px;" >
+							A light is placed on the ground 50 feet from a wall.  A 6 ft man standing 15 feet away from a light on the ground, walks towards that light at 1.1 feet per second.  How does the height of the shadow on the wall change?
+
+
+						</p>
+						
+					</div>
+
+					<img src="img/shadow.svg" width=50%>
+
+					<p style="font-size: 30px;" >
+						(The two triangles in this problem are similar.)
+					</p>
+
+					
+
+					
+					</section>
+
+					<section data-auto-animate>
+					<h4>Shadow</h4>
+
+					<div data-id="problem" class="r-frame">
+						<p style="font-size: 30px;" >
+							A light is placed on the ground 50 feet from a wall.  A 6 ft man standing 15 feet away from a light on the ground, walks towards that light at 1.1 feet per second.  How does the height of the shadow on the wall change?
+
+
+						</p>
+						
+					</div>
+
+					<iframe src="https://www.desmos.com/calculator/a7028qdsrn?embed" width="100%" height="400" style="border: 1px solid #ccc" frameborder=0></iframe>
+
+					
+
+					
+					</section>
+				</section>	
+
+				<section>
+					<section data-auto-animate>
+					<h4>Cars</h4>
+
+					<div data-id="problem" class="r-frame">
+						<p style="font-size: 30px;" >
+							Suppose a car 60 miles from a town drives east towards the town at 70 mph.  A car 80 miles north of the same town drives north at 60 mph.  How is the distance between them changing?
+						</p>
+						
+					</div>
+
+					<p style="font-size: 30px;" >
+						(Draw a picture).
+					</p>
+
+					
+
+					
+					</section>
+
+					
+					
+					<section data-auto-animate>
+					<h4>Cars</h4>
+
+					<div data-id="problem" class="r-frame">
+						<p style="font-size: 30px;" >
+							Suppose a car 60 miles from a town drives east towards the town at 70 mph.  A car 80 miles north of the same town drives north at 60 mph.  How is the distance between them changing?
+						</p>
+						
+					</div>
+
+					<iframe src="https://www.desmos.com/calculator/inzpy1ve6d?embed" width="100%" height="400" style="border: 1px solid #ccc" frameborder=0></iframe>
+
+					
+
+					
+					</section>
+
+
+
+
+
+					
+					
+				</section>
+
+
+
+
+
+				
+
+
+
+					
+
+
+					
+
+
+				
+
+				
+
+
+
+				
+
+					
+						
+					
+
+					
+				
+
+
+									
+
+
+
+				
+			</div>
+		</div>
+
+		<script src="dist/reveal.js"></script>
+		<script src="plugin/notes/notes.js"></script>
+		<script src="plugin/markdown/markdown.js"></script>
+		<script src="plugin/highlight/highlight.js"></script>
+		<script>
+			// More info about initialization & config:
+			// - https://revealjs.com/initialization/
+			// - https://revealjs.com/config/
+			Reveal.initialize({
+				hash: true,
+
+				// Learn about plugins: https://revealjs.com/plugins/
+				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
+			});
+		</script>
+		<script src="plugin/math/math.js"></script>
+		<script src="plugin/chalkboard/plugin.js"></script>
+		<script src="plugin/customcontrols/plugin.js"></script>
+
+
+
+	<script>
+  	Reveal.initialize({
+		math: {
+			mathjax: 'https://cdn.jsdelivr.net/gh/mathjax/mathjax@2.7.8/MathJax.js',
+			config: 'TeX-AMS_HTML-full',
+			// pass other options into `MathJax.Hub.Config()`
+			TeX: { Macros: { RR: "{\\bf R}" } }
+		},
+
+		chalkboard: {
+        boardmarkerWidth: 3,
+        chalkWidth: 7,
+        chalkEffect: 1.0,
+        storage: null,
+        src: null,
+        readOnly: undefined,
+        transition: 800,
+        theme: "chalkboard",
+        background: [ 'rgba(127,127,127,.1)' , path + 'img/blackboard.png' ],
+        grid: { color: 'rgb(50,50,10,0.5)', distance: 80, width: 2},
+        eraser: { src: path + 'img/sponge.png', radius: 20},
+        boardmarkers : [
+                { color: 'rgba(100,100,100,1)', cursor: 'url(' + path + 'img/boardmarker-black.png), auto'},
+                { color: 'rgba(30,144,255, 1)', cursor: 'url(' + path + 'img/boardmarker-blue.png), auto'},
+                { color: 'rgba(220,20,60,1)', cursor: 'url(' + path + 'img/boardmarker-red.png), auto'},
+                { color: 'rgba(50,205,50,1)', cursor: 'url(' + path + 'img/boardmarker-green.png), auto'},
+                { color: 'rgba(255,140,0,1)', cursor: 'url(' + path + 'img/boardmarker-orange.png), auto'},
+                { color: 'rgba(150,0,20150,1)', cursor: 'url(' + path + 'img/boardmarker-purple.png), auto'},
+                { color: 'rgba(255,220,0,1)', cursor: 'url(' + path + 'img/boardmarker-yellow.png), auto'}
+        ],
+        chalks: [
+                { color: 'rgba(255,255,255,0.5)', cursor: 'url(' + path + 'img/chalk-white.png), auto'},
+                { color: 'rgba(96, 154, 244, 0.5)', cursor: 'url(' + path + 'img/chalk-blue.png), auto'},
+                { color: 'rgba(237, 20, 28, 0.5)', cursor: 'url(' + path + 'img/chalk-red.png), auto'},
+                { color: 'rgba(20, 237, 28, 0.5)', cursor: 'url(' + path + 'img/chalk-green.png), auto'},
+                { color: 'rgba(220, 133, 41, 0.5)', cursor: 'url(' + path + 'img/chalk-orange.png), auto'},
+                { color: 'rgba(220,0,220,0.5)', cursor: 'url(' + path + 'img/chalk-purple.png), auto'},
+                { color: 'rgba(255,220,0,0.5)', cursor: 'url(' + path + 'img/chalk-yellow.png), auto'}
+        ]
+    },
+    customcontrols: {
+  		controls: [
+  			{ icon: '<i class="fa fa-pen-square"></i>',
+  			  title: 'Toggle chalkboard (B)',
+  			  action: 'RevealChalkboard.toggleChalkboard();'
+  			},
+  			{ icon: '<i class="fa fa-pen"></i>',
+  			  title: 'Toggle notes canvas (C)',
+  			  action: 'RevealChalkboard.toggleNotesCanvas();'
+  			}
+  		]
+    },
+
+		plugins: [ RevealMath, RevealChalkboard, RevealCustomControls, RevealMenu  ]
+		});
+	</script>
+
+	</body>
+</html>
