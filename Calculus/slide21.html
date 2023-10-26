@@ -84,33 +84,7 @@
 					</section>
 
 
-					<section data-auto-animate>
-						<div label="statement">
-							<p style="font-size: 25px;" > 
-								\(a_n=1\) when \(n\) is a power of 2, \(a_n=0\) otherwise. Why doesn't this sequence converge to 0?
-							</p>	
-									
-
-						</div>
-
-						
-
-						<div >
-							<iframe src="https://www.desmos.com/calculator/sop8spmz99" width="90%" height="500" style="border: 1px solid #ccc" frameborder=0></iframe>
-
-							
-							
-
-						</div>
-
-
-
-						
-
-						
-
-						
-					</section>
+					
 
 					<section data-auto-animate>
 						<div label="statement">
@@ -387,6 +361,75 @@
 					
 					
 				</section>
+
+
+				<section>
+					<section data-auto-animate>
+						<div label="statement" >
+
+							<p style="font-size: 25px;" > 
+								Recall that the partial sum sequence \(A_n=\sum_{i=1}^n a_n\) is a sequence.
+							</p>
+								
+
+
+							<div class="fragment">
+								<p style="font-size: 25px;" >
+									<iframe src="https://www.desmos.com/calculator/lwyocmujcs" width="80%" height="500" style="border: 1px solid #ccc" frameborder=0></iframe>
+
+
+								</p>
+								<p style="font-size: 25px;" >
+									Also recall that \(R_n = \displaystyle \sum_{i=1}^n f(x_i)\Delta x\) is a sequence.  What is \(\displaystyle \lim_{n\to \infty} R_n\)?
+								</p>
+								
+							</div>
+									
+
+						</div>
+
+					
+
+						
+						
+					</section>
+
+					<section data-auto-animate>
+						<h4>The Integral </h4>
+						
+						<div class="r-frame" >
+							<p style="font-size: 28px;">
+								If \(f(x)\) is defined on \([a,b]\), subdivide \([a,b]\) into \(n\) intervals of width \(\Delta x=\frac{b-a}{n}\).  Let \(x_i^*\) be any value within each interval.
+							</p>
+							<img src="img/integraldef.svg" width="60%">
+							<p style="font-size: 28px;" class="fragment">
+								Then the <strong>integral of \(f(x)\) over \([a,b]\) with respect to \(x\)</strong> is the limit \[\int_a^bf(x)dx = \lim_{n\to\infty} \left(\sum_{i=1}^n f(x_i^*) \Delta x\right)\] provided it exists.  If this limit exists, then \(f(x)\) is <strong>integrable</strong> over \([a,b]\).
+							</p>
+						</div>		
+						
+
+
+					</section>
+
+					<section>
+						<p style="font-size: 28px;">
+							\[\sum_{i=1}^n i = \frac{n(n+1)}{2}, \sum_{i=1}^n i^2 = \frac{n(n+1)(2n+1)}{6}, \sum_{i=1}^n i^3=\left( \frac{n(n+1)}{2} \right)^2\]
+
+							<img src="img/sumint.png" width="40%"> 
+							<img src="img/sumcube.png" width="40%"> 
+
+						</p>
+
+					</section>
+
+					
+
+				</section>
+
+
+
+
+
 
 				<section>
 
