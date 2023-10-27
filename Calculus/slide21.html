@@ -380,7 +380,7 @@
 
 								</p>
 								<p style="font-size: 25px;" >
-									Also recall that \(R_n = \displaystyle \sum_{i=1}^n f(x_i)\Delta x\) is a sequence.  What is \(\displaystyle \lim_{n\to \infty} R_n\)?
+									Also recall that \(\displaystyle \sum_{i=1}^n f(x_i^*)(x_i-x_{i-1})\) is a sequence.  What is \(\displaystyle \lim_{n\to \infty}  \sum_{i=1}^n f(x_i^*)(x_i-x_{i-1})\)?
 								</p>
 								
 							</div>
@@ -394,22 +394,7 @@
 						
 					</section>
 
-					<section data-auto-animate>
-						<h4>The Integral </h4>
-						
-						<div class="r-frame" >
-							<p style="font-size: 28px;">
-								If \(f(x)\) is defined on \([a,b]\), subdivide \([a,b]\) into \(n\) intervals of width \(\Delta x=\frac{b-a}{n}\).  Let \(x_i^*\) be any value within each interval.
-							</p>
-							<img src="img/integraldef.svg" width="60%">
-							<p style="font-size: 28px;" class="fragment">
-								Then the <strong>integral of \(f(x)\) over \([a,b]\) with respect to \(x\)</strong> is the limit \[\int_a^bf(x)dx = \lim_{n\to\infty} \left(\sum_{i=1}^n f(x_i^*) \Delta x\right)\] provided it exists.  If this limit exists, then \(f(x)\) is <strong>integrable</strong> over \([a,b]\).
-							</p>
-						</div>		
-						
-
-
-					</section>
+					
 
 					<section>
 						<p style="font-size: 28px;">
@@ -422,7 +407,7 @@
 
 					</section>
 
-					
+
 
 				</section>
 
