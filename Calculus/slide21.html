@@ -1009,7 +1009,7 @@
 						<div >
 							
 							<p style="font-size: 25px;" >
-								Determine if \(f(x) = \begin{cases} \ln(x) & x < 1 \\ -3 & x = \cos(\pi x/3) \end{cases}\) is continuous at \(x=1\).  If not, what kind of discontinuity does it have?
+								Determine if \(f(x) = \begin{cases} \ln(x) & x < 1 \\ -3 & x = 1 \\ \cos(\pi x/3) & x > 1 \end{cases}\) is continuous at \(x=1\).  If not, what kind of discontinuity does it have?
 
 							</p>
 
@@ -1027,7 +1027,7 @@
 						<div >
 							
 							<p style="font-size: 25px;" >
-								Find \(k\) so that  \(f(x) = \begin{cases} \ln(x) & x < 1 \\ -3 & x = \cos(\pi x/3) + k  \end{cases}\) has a removable discontinuity at \(x=1\).
+								Find \(k\) so that  \(f(x) = \begin{cases} \ln(x) & x < 1 \\ -3 & x = 1 \\ \cos(\pi x/3) + k& x > 1  \end{cases}\) has a removable discontinuity at \(x=1\).
 
 							</p>
 
@@ -1038,7 +1038,596 @@
 						
 							
 					</section>
+
+					<section data-auto-animate>
+					<div>
+						<p style="font-size: 20px;" >
+							Classify the discontinuities of  \[\begin{equation*}
+							f(x) = \begin{cases}
+							1 - x, &amp; x < -3 \\
+							2, &amp; x = -3 \\
+							-\frac{x^2-7x}{|x|},  &amp; -3< x < 2\\
+							2x-1, &amp; x \geq 2
+							\end{cases}.
+							\end{equation*}
+							\]
+
+						</p>
+						<p style="font-size: 30px;" class="fragment">
+							<iframe src="https://www.desmos.com/calculator/fk3dxwfmrb" width="90%" height="500" style="border: 1px solid #ccc" frameborder=0></iframe>
+						</p>
+
+					</div>
+					</section>
 				</section>
+
+
+				<section>
+					<section data-auto-animate>
+					<div class="r-frame" data-id="def">
+						<p style="font-size: 25px;" >
+							We say the limit of \(f(x)\) as \(x\) goes to infinity is \(L\) or  \[\lim_{x\to \infty}f(x) = L\] if for any distance from L, \(f(x)\) for large enough \(x\) stays within that distance from \(L\).
+
+
+						</p>
+					</div>	
+					<br><br>
+					<div class="fragment" data-id="def">
+						<p style="font-size: 25px;" class="r-frame">
+							If \[\lim_{x\to \infty}f(x)=a, \text{or  }, \lim_{x\to-\infty}f(x)=a\] we say that \(f(x)\) has a <strong>horizontal asymptote</strong> \(y=a\).
+
+
+						</p>
+					</div>	
+					</section>	
+
+
+					<section data-auto-animate>
+						<div >
+							<p style="font-size: 25px;" >
+								Recall that \[\ln(x) < x^n < e^{ax}\] and so \[\frac{1}{\ln(x)} > \frac{1}{x^n} > \frac{1}{e^{ax}}.\]
+
+
+							</p>
+						</div>	
+
+						<div class="fragment">
+							<p style="font-size: 25px;" >
+								We say that if \(\displaystyle \lim_{x\to\infty}f(x), \displaystyle \lim_{x\to\infty} g(x)=\infty\) and  \(\displaystyle \lim_{x\to\infty}\frac{f(x)}{g(x)}=\infty\) then \(f(x)\) has a higher order of growth than \(g(x)\). 
+							</p>
+
+							<p style="font-size: 25px;" >
+								Conversely, if \(\displaystyle \lim_{x\to\infty}f(x), \displaystyle \lim_{x\to\infty} g(x)=0\) and  \(\displaystyle \lim_{x\to\infty}\frac{f(x)}{g(x)}=0\) then \(f(x)\) has a higher order of vanishing than \(g(x)\). 
+							</p>
+						</div>
+					</section>	
+
+					<section data-auto-animate>
+						<div >
+							<p style="font-size: 25px;" >
+								A function has a <strong>horizontal asymptote</strong> \(y=L\) if \(\displaystyle \lim_{x\to\infty} f(x)=L\) or \(\displaystyle \lim_{x\to-\infty} f(x)=L\).
+
+
+							</p>
+
+							<p style="font-size: 25px;" >
+								A function has a <strong>vertical asymptote</strong> \(x=c\) if \(\displaystyle \lim_{x\to c^-} f(x)= \pm \infty\) or \(\displaystyle \lim_{x\to c^+} f(x)=\pm \infty\).
+
+
+							</p>
+						</div>	
+
+						<p style="font-size: 30px;" class="fragment">
+							<iframe src="https://www.desmos.com/calculator/usr3dfun8i" width="90%" height="500" style="border: 1px solid #ccc" frameborder=0></iframe>
+						</p>
+						
+					</section>
+
+					<section data-auto-animate>
+						<div >
+							<p style="font-size: 25px;" >
+								Find and describe the following limits and give a graphical interpretation of them for \(\displaystyle f(x) = \frac{x^2(x+1)}{(x-2)^2(x+1)} = \frac{x^3+x}{x^3+3x^2+4}\).
+
+
+							</p>
+
+							<p style="font-size: 25px;" >
+								\(\displaystyle \lim_{x\to -1^-}f(x), \lim_{x\to -1^+}f(x), \lim_{x\to 0^-}f(x), \lim_{x\to 0^+}f(x), \lim_{x\to 2^-}f(x), \lim_{x\to 2^-}f(x), \lim_{x\to -\infty}f(x), \lim_{x\to \infty}f(x).\).
+
+
+							</p>
+
+							
+						
+					</section>
+
+
+
+					<section data-auto-animate>
+						<div>
+							<p style="font-size: 25px;">
+						Consider a plot of \(\tan(x)\) on \((-\pi/2, \pi/2)\):<br>
+						<iframe src="https://www.desmos.com/calculator/itbjaumzzm?embed" width="80%" height="500" style="border: 1px solid #ccc" frameborder=0></iframe></p>
+						<p style="font-size: 25px;">Based on this, what asymptotes should \(\arctan(x)\) have?</p>
+					</div>
+					</section>
+
+					<section data-auto-animate>
+						<div>
+							<p style="font-size: 25px;">
+						
+						<iframe src="https://www.desmos.com/calculator/9gne6orvwb?embed" width="80%" height="500" style="border: 1px solid #ccc" frameborder=0></iframe></p>
+						
+					</div>
+					</section>
+
+					<section>
+						<p style="font-size: 25px;">
+							Consider \(\displaystyle\lim_{x\to \infty}\frac{\sqrt{x^4+3x^2} }{2x^2}\), multiply by \(\frac{\frac{1}{x^2}}{\frac{1}{x^2}}\) to resolve this limit.
+						</p>
+						
+						<p style="font-size: 25px;" class="fragment">
+							Consider \(\displaystyle \lim_{x\to \infty} \sqrt{x^3+1}-x \), multiply by \(\frac{\sqrt{x^3+1}+x}{\sqrt{x^3+1}-x}\) to resolve this limit.
+						</p>
+					</section>
+
+					<section>
+						<div>
+							 <p style="font-size: 25px;">
+							 	Find the limits to positive and negative infinity of the following.
+							 	<ul>
+							 		<li style="font-size: 25px;">\(f(x)=\frac{x^3-5x+3}{-x+2}\).<br><br></li>
+							 		<li style="font-size: 25px;">\(g(x)=\frac{3x-4}{2x+12}.\)<br><br></li>
+							 		<li style="font-size: 25px;">\(h(x)=\frac{7x^4-5x^3+2x-12}{8x^5+2x-1}.\)<br><br></li>
+							 		<li style="font-size: 25px;">\(\alpha(x)=\frac{x^3-1}{\sqrt{x^4+1}}.\)<br><br></li>
+							 		<li style="font-size: 25px;">\(\beta(x)=\sqrt{x^2+2}-2x.\)<br><br></li>
+							 	</ul>
+							 </p>
+						</div>
+					</section>
+
+
+					
+
+					
+
+
+				</section>
+
+
+
+
+
+
+
+				<section>
+					
+					<section data-auto-animate>
+						<div class="r-frame" >
+							<p style="font-size: 30px;" >
+								Consider \(\displaystyle \lim_{x\to 0} \frac{\ln(1+x)}{x}\).
+
+							</p>
+							
+						</div>	
+							
+						
+
+						
+					</section>
+
+
+					<section data-auto-animate>
+						<div class="r-frame" >
+							<p style="font-size: 30px;" >
+								Consider \(\displaystyle \lim_{x\to 0} \frac{\ln(1+x)}{x}\).
+
+							</p>
+							
+						</div>	
+							
+						<div>		
+							<p style="font-size: 25px;">
+								Which of the following is equivalent to \(\displaystyle \lim_{x\to 0} \frac{\ln(1+x)}{x}?\)
+							</p> 
+
+							<ul>
+								<li style="font-size: 25px;"> \(\displaystyle \lim_{x\to 0} \frac{\ln(1+x)-\ln(x)}{x}\).</li>
+
+								<li style="font-size: 25px;"> \(\displaystyle \lim_{x\to 0} \frac{\ln(1+x)-x}{x}\).</li>
+
+								<li style="font-size: 25px;"> \(\displaystyle \lim_{x\to 0} \frac{\ln(1+x)-\ln(1)}{x}\).</li>
+
+								<li style="font-size: 25px;"> \(\displaystyle \lim_{x\to 0} \frac{\ln(1+x)-\ln(0)}{x}\).</li>
+
+								<li style="font-size: 25px;"> \(\displaystyle \lim_{x\to 0} \frac{\ln(1+x)-1}{x}\).</li>
+							</ul>
+
+							<p style="font-size: 25px;">
+								Then using the limit definition, find \(f(x), a\) so that \(\displaystyle \lim_{x\to 0} \frac{\ln(1+x)}{x}=f'(a)\).
+							</p> 
+
+							
+
+						</div>
+
+						
+					</section>
+
+					<section data-auto-animate>
+						<div class="r-frame" >
+							<p style="font-size: 30px;" >
+								Consider \(\displaystyle \lim_{x\to 0} \frac{\ln(1+x)}{x}\).
+
+							</p>
+							
+						</div>	
+							
+						<iframe src="https://www.desmos.com/calculator/xwjqbv2qqw" width="100%" height="500" style="border: 1px solid #ccc" frameborder=0></iframe>
+
+						
+					</section>
+
+					
+				</section>
+
+				<section>
+
+					<h4>Intuition behind L'Hopitals</h4>
+
+					<section data-auto-animate>
+						<div class="r-frame" >
+							<p style="font-size: 30px;" >
+								Consider \(\displaystyle \lim_{x\to a} \frac{f(x)}{g(x)}\) if \(f,g\) are differentiable, \(f(a), g(a)=0\) but \(g'(a)\neq 0\).
+
+							</p>
+							
+						</div>		
+						
+
+						
+					</section>
+
+
+
+					<section data-auto-animate>
+						<div class="r-frame" >
+							<p style="font-size: 30px;" >
+								Consider \(\displaystyle \lim_{x\to a} \frac{f(x)}{g(x)}\) if \(f,g\) are differentiable, \(f(a), g(a)=0\) but \(g'(a)\neq 0\).
+
+							</p>
+							
+						</div>	
+
+						<p style="font-size: 30px;" >
+							\[
+							\begin{array}{rcl}
+							\displaystyle \lim_{x\to a} \frac{f(x)}{g(x)}&=&\displaystyle \lim_{x\to a} \frac{f(x)-0}{g(x)-0}\\
+							
+							
+							
+
+							\end{array}
+							\]
+						</p>	
+						
+
+						
+					</section>
+
+					<section data-auto-animate>
+						<div class="r-frame" >
+							<p style="font-size: 30px;" >
+								Consider \(\displaystyle \lim_{x\to a} \frac{f(x)}{g(x)}\) if \(f,g\) are differentiable, \(f(a), g(a)=0\) but \(g'(a)\neq 0\).
+
+							</p>
+							
+						</div>	
+
+						<p style="font-size: 30px;" >
+							\[
+							\begin{array}{rcl}
+							\displaystyle \lim_{x\to a} \frac{f(x)}{g(x)}&=&\displaystyle \lim_{x\to a} \frac{f(x)-0}{g(x)-0}\\
+							&=&\displaystyle \lim_{x\to a} \frac{f(x)-f(a)}{g(x)-g(a)}\\
+							
+							
+
+							\end{array}
+							\]
+						</p>	
+						
+
+						
+					</section>
+
+					<section data-auto-animate>
+						<div class="r-frame" >
+							<p style="font-size: 30px;" >
+								Consider \(\displaystyle \lim_{x\to a} \frac{f(x)}{g(x)}\) if \(f,g\) are differentiable, \(f(a), g(a)=0\) but \(g'(a)\neq 0\).
+
+							</p>
+							
+						</div>	
+
+						<p style="font-size: 30px;" >
+							\[
+							\begin{array}{rcl}
+							\displaystyle \lim_{x\to a} \frac{f(x)}{g(x)}&=&\displaystyle \lim_{x\to a} \frac{f(x)-0}{g(x)-0}\\
+							&=&\displaystyle \lim_{x\to a} \frac{f(x)-f(a)}{g(x)-g(a)}\\
+							&=&\displaystyle \lim_{x\to a} \frac{\frac{f(x)-f(a)}{x-a}}{\frac{g(x)-g(a)}{x-a}}\\
+							
+
+							\end{array}
+							\]
+						</p>	
+						
+
+						
+					</section>
+
+					<section data-auto-animate>
+						<div class="r-frame" >
+							<p style="font-size: 30px;" >
+								Consider \(\displaystyle \lim_{x\to a} \frac{f(x)}{g(x)}\) if \(f,g\) are differentiable, \(f(a), g(a)=0\) but \(g'(a)\neq 0\).
+
+							</p>
+							
+						</div>	
+
+						<p style="font-size: 30px;" >
+							\[
+							\begin{array}{rcl}
+							\displaystyle \lim_{x\to a} \frac{f(x)}{g(x)}&=&\displaystyle \lim_{x\to a} \frac{f(x)-0}{g(x)-0}\\
+							&=&\displaystyle \lim_{x\to a} \frac{f(x)-f(a)}{g(x)-g(a)}\\
+							&=&\displaystyle \lim_{x\to a} \frac{\frac{f(x)-f(a)}{x-a}}{\frac{g(x)-g(a)}{x-a}}\\
+							&=&\displaystyle\frac{f'(a)}{g'(a)}=\displaystyle \lim_{x\to a} \frac{f'(x)}{g'(x)}\\
+
+							\end{array}
+							\]
+						</p>	
+						
+
+						
+					</section>
+
+
+				</section>
+
+				<section>
+					<h4>L'Hopitals Rule</h4>
+					<section data-auto-animate>
+						<div class="r-frame" >
+							<p style="font-size: 30px;" >
+								Let \(f,g\) be differentiable functions such that \(\displaystyle \lim_{x\to a}f(x)=\displaystyle \lim_{x\to a}g(x)=0\) or \(\infty\).  Then \[\displaystyle \lim_{x\to a}\frac{f(x)}{g(x)}=\displaystyle \lim_{x\to a}\frac{f'(x)}{g'(x)}.\] (If the limit even exists!)
+
+							</p>
+							
+						</div>		
+						
+						
+					</section>
+
+					
+
+
+				</section>
+
+
+				<section>
+					<section data-auto-animate>
+					<div class="r-frame" >
+							<p style="font-size: 30px;" >
+								Find the following limits:
+
+							</p>
+						<ul>
+							<li style="font-size: 30px;">\(\displaystyle \lim_{x\to 0}\frac{x^3}{e^x-1}\).</li><br>
+							<li style="font-size: 30px;">\(\displaystyle \lim_{x\to \infty}\frac{x^3}{e^x-1}\).</li><br>
+							<li style="font-size: 30px;">\(\displaystyle \lim_{x\to 1}\frac{x^3}{e^x-1}\).</li>
+								
+
+						</ul>
+						<br><br>	
+							
+						</div>	
+
+
+						
+					</section>
+
+					<section data-auto-animate>
+						<p style="font-size: 30px;" >
+								\(y=\displaystyle \frac{x^3}{e^x-1}\).
+
+							</p>
+					<iframe src="https://www.desmos.com/calculator/lvtvafotqu?embed" width="100%" height="500" style="border: 1px solid #ccc" frameborder=0></iframe>
+
+
+						
+					</section>
+
+					<section data-auto-animate>
+					<div class="r-frame" >
+							<p style="font-size: 30px;" >
+								For which of the following does L'Hopitals rule apply?  Why doesn't it apply to the other two?
+
+							</p>
+						<ul>
+							<li style="font-size: 30px;">\(\displaystyle \lim_{x\to 0^+} \frac{\ln(x)}{x}\).</li><br>
+							<li style="font-size: 30px;">\(\displaystyle \lim_{x\to \infty}\frac{\ln(x)}{x}\).</li><br>
+							<li style="font-size: 30px;">\(\displaystyle \lim_{x\to 1}\frac{\ln(x)}{x}\).</li>
+								
+
+						</ul>
+						<br><br>	
+							
+						</div>	
+
+
+						
+					</section>
+
+					<section data-auto-animate>
+						<p style="font-size: 30px;" >
+								\(y=\displaystyle \frac{\ln(x)}{x}\).
+
+							</p>
+					<iframe src="https://www.desmos.com/calculator/z2kxbbhgbt?embed" width="100%" height="500" style="border: 1px solid #ccc" frameborder=0></iframe>
+
+
+						
+					</section>
+					
+				</section>
+
+				
+
+
+				<section>
+					<section data-auto-animate>
+					<div class="r-frame" >
+							<p style="font-size: 30px;" >
+								Consider \(\displaystyle \lim_{x\to 0}x\ln(x)\).
+
+							</p>
+					</div>	
+
+					<p style="font-size: 30px;" >
+						Which of the following is equivalent to \(\displaystyle \lim_{x\to 0}x\ln(x)\)?
+					</p>
+					<ul>
+						<li style="font-size: 30px;" >\(\displaystyle \lim_{x\to 0}\frac{\ln(x)}{x}\).</li><br>
+						<li style="font-size: 30px;" >\(\displaystyle \lim_{x\to 0}\frac{x}{\ln(x)}\).</li><br>
+						<li style="font-size: 30px;" >\(\displaystyle \lim_{x\to 0}\frac{\ln(x)}{x^{-1}}\).</li>
+					</ul>
+
+					<p style="font-size: 30px;" >
+						Then find the limit.
+					</p>
+
+						
+					</section>
+
+					<section data-auto-animate>
+					
+
+					<p style="font-size: 30px;" >
+						\(y=x\ln(x)\).
+					</p>
+					<iframe src="https://www.desmos.com/calculator/jkcrwxfm69?embed" width="100%" height="500" style="border: 1px solid #ccc" frameborder=0></iframe>
+
+						
+					</section>
+
+					<section data-auto-animate>
+					<div class="r-frame" >
+							<p style="font-size: 30px;" >
+								Find \(\displaystyle \lim_{x\to \infty}x^3e^{-2x}\).
+
+							</p>
+					</div>	
+
+					
+
+						
+					</section>
+
+				</section>
+
+				<section>
+					<section data-auto-animate>
+					<div class="r-frame" >
+							<p style="font-size: 30px;" >
+								Consider \(\displaystyle \lim_{x\to 0}x^x\).
+
+							</p>
+					</div>	
+
+					<p style="font-size: 30px;" >
+						Which of the following is equivalent to \(\ln\left(x^x\right)\)?
+					</p>
+					<ul>
+						<li style="font-size: 30px;" >\(\ln(x)+\ln(x)\).</li><br>
+						<li style="font-size: 30px;" >\(x+\ln(x)\).</li><br>
+						<li style="font-size: 30px;" >\(\ln(x)\ln(x)\).</li><br>
+						<li style="font-size: 30px;" >\(x\ln(x)\).</li>
+					</ul>
+
+					<p style="font-size: 30px;" class="fragment">
+						Find \(\displaystyle \lim_{x\to 0}\ln\left(x^x\right)\).
+					</p>
+
+					<p style="font-size: 30px;" class="fragment">
+						If we know \(\displaystyle \lim_{x\to 0}\ln\left(x^x\right)\), how can we find \(\displaystyle \lim_{x\to 0}x^x\)?
+					</p>
+
+						
+					</section>
+
+					<section data-auto-animate>
+					
+
+					<p style="font-size: 30px;" >
+						\(y=x^x\).
+					</p>
+					<iframe src="https://www.desmos.com/calculator/gmrexdynke?embed" width="100%" height="500" style="border: 1px solid #ccc" frameborder=0></iframe>
+
+						
+					</section>
+
+					
+
+					<section data-auto-animate>
+					<div class="r-frame" >
+							<p style="font-size: 30px;" >
+								Consider \(\displaystyle \lim_{x\to a}f(x)^{g(x)}\).
+
+							</p>
+					</div>	
+
+					<p style="font-size: 30px;" >
+						The following are <strong>indeterminant forms</strong> of this limit:
+					</p>
+					<ul>
+						<li style="font-size: 30px;" >\(\displaystyle \lim_{x\to a}f(x)=0, \displaystyle \lim_{x\to a}g(x)=0\).</li><br>
+						<li style="font-size: 30px;" >\(\displaystyle \lim_{x\to a}f(x)=\infty, \displaystyle \lim_{x\to a}g(x)=0\).</li><br>
+						<li style="font-size: 30px;" >\(\displaystyle \lim_{x\to a}f(x)=1, \displaystyle \lim_{x\to a}g(x)=\pm \infty\).</li>
+					</ul>
+
+					<p style="font-size: 30px;" class="fragment">
+						Why isn't \(\displaystyle \lim_{x\to a}f(x)=0, \displaystyle \lim_{x\to a}g(x)=\infty\) an indeterminant form?
+					</p>
+
+						
+					</section>
+
+				</section>
+
+
+				<section>
+					<div class="r-frame">
+					<p style="font-size: 30px;" >
+						Find the following:
+					</p>
+					</div>
+					<div class="container">
+						<div class="col">
+					<ul>
+						<li style="font-size: 25px;" >\(\displaystyle \lim_{x\to \infty}(0.8)^{x}\sqrt{x+1}\).</li><br>
+						<li style="font-size: 25px;" >\(\displaystyle \lim_{x\to \infty}\frac{\left(\frac{2}{3}\right)^x}{x^2+1}\).</li><br>
+						<li style="font-size: 25px;" >\(\displaystyle \lim_{x\to 0}\frac{\left(\frac{2}{3}\right)^x}{x^2+1}\).</li><br>
+					</ul>
+					</div>
+					<div class="col">
+						<ul>
+						<li style="font-size: 25px;" >\(\displaystyle \lim_{x\to 1}\frac{\ln(x)}{x^2-1}\).</li><br>
+						<li style="font-size: 25px;" >\(\displaystyle \lim_{x\to \infty}\left(\frac{1}{x^2+1}\right)^x\).</li><br>
+						<li style="font-size: 25px;" >\(\displaystyle \lim_{x\to \infty}\frac{e^{3x}}{e^{2x}}\).</li>
+					</ul>
+				</section>
+
+
+
 
 
 				
