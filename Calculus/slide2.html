@@ -53,7 +53,7 @@
 					<section data-auto-animate>
 						<div  >
 							<p style="font-size: 30px;" >
-								Consider the sequence \(a_i=i^2\): \[1,4,9,16,25,36,\ldots\] create a new sequence by taking differences between consecutive terms.  What do you notice?
+								Consider the sequence \(a_i=i^2\): \[1,4,9,16,25,36,\ldots\] create a new sequence by taking differences between consecutive terms \((4-1), (9-4), \ldots\).  What do you notice?
 							</p>
 									
 
@@ -169,9 +169,34 @@
 						</div>
 						<div class="fragment">
 							<p style="font-size: 30px;" >
-								Find the third, sixth and \(k\)th term for \(a_n=\displaystyle \sum_{i=1}^n (i^2-(i-1)^2)\).
+								Write out the three terms of \(\displaystyle \sum_{i=0}^2 (2^{i+1}-2^i)\).  Do anything cancel?
 								
 								
+							</p>
+							
+						</div>
+
+						<div class="fragment">
+							<p style="font-size: 30px;" >
+								Write out the  terms of \(\displaystyle \sum_{i=0}^4 (2^{i+1}-2^i)\).  Do anything cancel?
+								
+								
+							</p>
+							
+						</div>
+
+						<div class="fragment">
+							<p style="font-size: 30px;" >
+								How do you think \(\displaystyle \sum_{i=0}^n (2^{i+1}-2^i)\) would simplify?
+
+								
+								
+							</p>
+							<p style="font-size: 30px;" >
+								<strong>(A)</strong>: \(2^n, \ \ \) 
+								<strong>(B)</strong>: \(2^n-1, \ \ \) 
+								<strong>(C)</strong>: \(2^{n+1}, \ \ \) 
+								<strong>(D)</strong>: \(2^{n+1}-1. \ \ \) 
 							</p>
 							
 						</div>
@@ -453,58 +478,104 @@
 
 
 
-					<section data-auto-animate>
-						<div class="r-frame">
-							<p style="font-size: 30px;" >
-								Let \(Q(t)=\sqrt{t}\) on some \([a,b], 0\leq a < b\).  
+					
+				</section>
+
+				<section>
+					<div >
+						<p style="font-size: 30px;" class="r-frame">
+							Let \(Q(t)=2t^4\) on  \([0,5]\).  
+						</p>
+						<p style="font-size: 30px;" >
+						 	Find \(Q(t)-Q(c)\).
+						 </p>
+					</div>
+
+					<div class="fragment">
+						<p style="font-size: 30px;" >
+							Simplify \(\frac{Q(t)-Q(c)}{t-c}\).
+						</p>
+					</div>
+
+					<div class="fragment">
+						<p style="font-size: 30px;" >
+							If we wanted to make \(\frac{Q(t)-Q(c)}{t-c}\) as big as possible, what should \(t, c\) be? (remember the domain of \(Q\)).
+						</p>
+						<p style="font-size: 30px;" >
+								<strong>(A)</strong>: \(0, \ \ \) 
+								<strong>(B)</strong>: \(5, \ \ \) 
+								<strong>(C)</strong>: \(100, \ \ \) 
+								<strong>(D)</strong>: \(-\infty. \ \ \) 
 							</p>
-						</div>
-						
-					</section>
+					</div>
 
-					<section data-auto-animate>
-						<div class="r-frame">
-							<p style="font-size: 30px;" >
-								Let \(Q(t)=\sqrt{t}\) on some \([a,b], 0\leq a < b\).  Note that \[|Q(t)-Q(c)|=|\sqrt{t}-\sqrt{c}|\]\[=\left| \frac{(\sqrt{t}-\sqrt{c})(\sqrt{t}+\sqrt{c})}{\sqrt{t}+\sqrt{c}} \right| = \left| \frac{1}{\sqrt{t}+\sqrt{c}}\right||t-c| < \left| \frac{1}{\sqrt{c}}\right||t-c|.\]
+					<div class="fragment">
+						<p style="font-size: 30px;" >
+							What is a good choice for \(M\)?
+						</p>
+						<p style="font-size: 30px;" >
+								<strong>(A)</strong>: \(0, \ \ \) 
+								<strong>(B)</strong>: \(5^3, \ \ \) 
+								<strong>(C)</strong>: \(3\cdot5^3, \ \ \) 
+								<strong>(D)</strong>: \(6\cdot 5^3. \ \ \) 
 							</p>
-						</div>
-						<div class="fragment">
-							<p style="font-size: 30px;" >
-								If \(c>0\) what is a good choice for \(M\) so that \(\left| \frac{1}{\sqrt{c}}\right||t-c| \leq M|t-c|\)?
+					</div>
+					
+				</section>
+
+				<section>
+					<div >
+						<p style="font-size: 30px;" class="r-frame">
+							Let \(Q(t)=\sqrt{2t+1}\) on  \([0,4]\).  
+						</p>
+						<p style="font-size: 30px;" >
+						 	Find \(Q(t)-Q(c)\).
+						 </p>
+					</div>
+
+					<div class="fragment">
+						<p style="font-size: 30px;" >
+							Simplify \(\frac{Q(t)-Q(c)}{t-c}\).  You will need to rationalize the numerator.
+						</p>
+					</div>
+
+					<div class="fragment">
+						<p style="font-size: 30px;" >
+							If we wanted to make \(\frac{Q(t)-Q(c)}{t-c}\) as big as possible, what should \(t, c\) be? (remember the domain of \(Q\)).
+						</p>
+						<p style="font-size: 30px;" >
+								<strong>(A)</strong>: \(0, \ \ \) 
+								<strong>(B)</strong>: \(1, \ \ \) 
+								<strong>(C)</strong>: \(4, \ \ \) 
 							</p>
-						</div>
+					</div>
 
-						<div class="fragment">
-							<p style="font-size: 30px;" >
-								If \(c=0\) what is a good choice for \(\delta\) so that if \(|t-0|<\delta\), \(
-								|\sqrt{t}-\sqrt{0}|<\epsilon\)?
+					<div class="fragment">
+						<p style="font-size: 30px;" >
+							What is a good choice for \(M\)?
+						</p>
+						<p style="font-size: 30px;" >
+								<strong>(A)</strong>: \(0, \ \ \) 
+								<strong>(B)</strong>: \(1, \ \ \) 
+								<strong>(C)</strong>: \(2, \ \ \) 
+								<strong>(D)</strong>: \(\frac{2}{3}. \ \ \) 
 							</p>
+					</div>
+					
+				</section>
 
-							<ol type="upper-alpha">
-									<li style="font-size: 30px;" >
-										\(\delta=1\).
-									</li>
-									<li style="font-size: 30px;" >
-										\(\delta=\epsilon\).
-									</li>
-									<li style="font-size: 30px;" >
-										\(\delta=\epsilon^2\).
-									</li>
-									<li style="font-size: 30px;" >
-										\(\delta=\sqrt{\epsilon}\).
-									</li>
+				<section>
+					<p style="font-size: 30px;" >
+							Show that \(f(t) = \begin{cases} t^2 & t<1 \\ t-3 & t\geq 1 \end{cases}\) is not continuous at \(t=1\).
+						</p>
+					
+				</section>
 
-							</ol>
-							<p style="font-size: 30px;" >
-								(Hint: Let \(\epsilon=0.25\).)
-							</p>
-						</div>
-					</section>
-
-					<section data-auto-animate>
-
-						<iframe src="https://www.desmos.com/calculator/ouayuurev4" width="90%" height="500" style="border: 1px solid #ccc" frameborder=0></iframe>
-					</section>
+				<section>
+					<p style="font-size: 30px;" >
+							Find \(c\) so that \(g(t) = \begin{cases} \frac{t^2-4t+3}{t-3} & t\neq 3 \\ c & t =3 \end{cases}\) is  continuous at \(t=3\).
+						</p>
+					
 				</section>
 
 
