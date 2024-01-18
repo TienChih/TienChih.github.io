@@ -54,12 +54,12 @@
 
 					<section data-auto-animate>
 						<div  >
-									<p style="font-size: 30px;" >
+									<p style="font-size: 25px;" >
 										Recall that the rate of change between \(c, t\) of \(f(t)\) is \(\frac{f(t)-f(c)}{t-c}\).
 
 									</p>
 
-									<p style="font-size: 30px;" > 
+									<p style="font-size: 25px;" > 
 										Let \(f(t)=t^2, c=1\).
 
 									</p>
@@ -68,22 +68,9 @@
 						</div>
 
 						<div  class="fragment">
-									<p style="font-size: 30px;" > 
-										Find the rate of change of \(f\) between \(1\) and \(3\).
+									
 
-									</p>
-
-									<p style="font-size: 30px;" > 
-										Find the rate of change of \(f\) between \(1\) and \(2\).
-
-									</p>
-
-									<p style="font-size: 30px;" > 
-										Find the rate of change of \(f\) between \(1\) and \(-1\).
-
-									</p>
-
-									<p style="font-size: 30px;" > 
+									<p style="font-size: 25px;" > 
 										Find the rate of change of \(f\) between \(1\) and \(a\).
 
 									</p>
@@ -94,7 +81,7 @@
 						</div>
 
 						<div  class="fragment">
-									<p style="font-size: 30px;" > 
+									<p style="font-size: 25px;" > 
 										Find the rate of change of \(f\) between \(1\) and \(1\).
 
 									</p>
@@ -116,7 +103,7 @@
 					<section data-auto-animate>
 						<div>
 							<iframe src="https://www.desmos.com/calculator/z2yevyu0sf" width="90%" height="500" style="border: 1px solid #ccc" frameborder=0></iframe>
-							<p style="font-size: 30px;" > 
+							<p style="font-size: 25px;" > 
 								What "<strong>should</strong>" the rate of change of \(f\) between \(1\) and \(1\) be?
 
 							</p>
@@ -127,19 +114,19 @@
 				<section>
 					<section data-auto-animate>
 						<div class="r-frame">	
-							<p style="font-size: 30px;" > 
-								For some position function \(f\) of some particle, and time \(c\) consider the velocity function \[D_cf(t)=\begin{cases} \frac{f(t)-f(c)}{t-c} & t\neq c \\ k & t=c \end{cases}\]
+							<p style="font-size: 25px;" > 
+								For some position function \(f\) of some particle, and time \(c\) consider the velocity function \[D_cf(t)=\begin{cases} \frac{f(t)-f(c)}{t-c} & t\neq c \\ v & t=c \end{cases}\]
 								which computes the average velocity of the particles between times \(c\) and \(t\).
 							</p>
 
-							<p style="font-size: 30px;" > 
-								If there is a \(k\) so that \(D\) is continuous, then we call \(k\) the <strong>instantaneous velocity</strong> at time \(c\).
+							<p style="font-size: 25px;" > 
+								If there is a \(v\) so that \(D\) is continuous, then we call \(v\) the <strong>instantaneous velocity</strong> at time \(c\).
 							</p>
 						</div>
 
 						<div class="fragment">
-							<p style="font-size: 30px;" > 
-								Could there be more than 1 choice of \(k\)?  Why or why not?
+							<p style="font-size: 25px;" > 
+								Could there be more than 1 choice of \(v\)?  Why or why not?
 							</p>
 						</div>
 					</section>
@@ -147,26 +134,51 @@
 
 				<section>
 					<section data-auto-animate>
-						<div >	
-							<p style="font-size: 30px;" > 
-								Let \(Q(t)=t^n\) simplify \(\displaystyle R= \frac{Q(t)-Q(c)}{t-c}\) if \(t\neq c\).
+						<div class="r-frame">	
+							<p style="font-size: 25px;" > 
+								Let \(Q(t)=t^n\) 
 							</p>
 
 							
 						</div>
 
 						<div class="fragment">	
-							<p style="font-size: 30px;" > 
+							<p style="font-size: 25px;" > 
+								Simplify \(\displaystyle R= \frac{Q(t)-Q(c)}{t-c}\) if \(t\neq c\).
+							</p>
+
+							<p style="font-size: 25px;" > 
+								<strong>(A)</strong>:\(\displaystyle \sum_{k=0}^nt^kc^{n-k}, \ \ \)
+								<strong>(B)</strong>:\(\displaystyle \sum_{k=0}^{n-1}t^kc^{n-k}, \ \ \)
+								<strong>(C)</strong>:\(\displaystyle \sum_{k=0}^{n-1}t^kc^{n-k-1}.\)
+							</p>
+
+							
+						</div>
+
+						<div class="fragment">	
+							<p style="font-size: 25px;" > 
 								If we replaced "\(t\)" with "\(c\)" in this expression for \(R\), how would that simplify?
 							</p>
 
+							<p style="font-size: 25px;" > 
+								<strong>(A)</strong>:\(nc^n, \  \)
+								<strong>(B)</strong>:\((n-1)c^{n-1}, \  \)
+								<strong>(C)</strong>:\((n-1)c^n, \ \)
+								<strong>(D)</strong>:\(nc^{n-1}, \ \)
+								<strong>(E)</strong>:\(nt^n, \  \)
+								<strong>(F)</strong>:\((n-1)t^{n-1}, \  \)
+								<strong>(G)</strong>:\((n-1)t^n, \ \)
+								<strong>(H)</strong>:\(nt^{n-1}.\)
+							</p>
+
 							
 						</div>
 
 						<div class="fragment">	
-							<p style="font-size: 30px;" > 
-								What should \(k\) be for 
-								\[D_cf(t)=\begin{cases} \frac{Q(t)-Q(c)}{t-c} & t\neq c \\ k & t=c \end{cases}\]
+							<p style="font-size: 25px;" > 
+								What should \(v\) be for 
+								\(\displaystyle D_cf(t)=\begin{cases} \frac{Q(t)-Q(c)}{t-c} & t\neq c \\ v & t=c \end{cases}\)
 								to be continuous?
 							</p>
 
@@ -182,18 +194,32 @@
 				<section>
 					<section data-auto-animate>
 						<div>	
-							<p style="font-size: 30px;" > 
-								Recall that if \(|f(t)-f(c)|<|g(t)-g(c)|\) for all \(t\) in an open interval containing \(c\) and \(g\) is continuous at \(c\), so is \(f\).
+							<p style="font-size: 25px;" > 
+								Recall that if \(|f(t)-f(c)|\leq |g(t)-g(c)|\) for all \(t\) in an open interval containing \(c\) and \(g\) is continuous at \(c\), so is \(f\).
 							</p>
 						</div>
 
 						<div class="fragment">	
-							<p style="font-size: 30px;" > 
-								Recall that for \(0\leq c< t \leq \frac{\pi}{2} \), \(-(t-c)\sin(t) < \cos(t)-\cos(c) < -(t-c)\sin(c) \).
+							<p style="font-size: 25px;" > 
+								 Recall that for \(0\leq c< t \leq \frac{\pi}{2} \), \[-(t-c)\sin(t) < \cos(t)-\cos(c) < -(t-c)\sin(c) \]
 							</p>
-							<p style="font-size: 30px;" > 
-								Find upper and lower bounds for  \(\frac{\cos(t)-\cos(c)}{t-c}\).
+							
+						</div>
+
+						<div class="fragment">	
+							
+							<p style="font-size: 25px;" > 
+								\[-\sin(t) < \frac{\cos(t)-\cos(c)}{t-c} < -\sin(c) \]
 							</p>
+						</div>
+
+
+
+						<div  class="fragment">	
+							<p style="font-size: 25px;" class="r-frame" > 
+								Let \(D(t)=\begin{cases} \frac{\cos(t)-\cos(c)}{t-c} & t\neq c \\ -\sin(c) & t=c \end{cases}\).
+							</p>
+							
 						</div>
 					</section>
 
@@ -201,16 +227,13 @@
 						
 
 						<div >	
-							<p style="font-size: 30px;" > 
-								Recall that for \(0\leq c< t \leq \frac{\pi}{2} \), \(-(t-c)\sin(t) < \cos(t)-\cos(c) < -(t-c)\sin(c) \).
-							</p>
-							<p style="font-size: 30px;" > 
-								Find upper and lower bounds for  \(\frac{\cos(t)-\cos(c)}{t-c}\).
+							<p style="font-size: 25px;" > 
+								\[-\sin(t) < \frac{\cos(t)-\cos(c)}{t-c} < -\sin(c) \]
 							</p>
 						</div>
 
 						<div  class="r-frame">	
-							<p style="font-size: 30px;" > 
+							<p style="font-size: 25px;" > 
 								Let \(D(t)=\begin{cases} \frac{\cos(t)-\cos(c)}{t-c} & t\neq c \\ -\sin(c) & t=c \end{cases}\).
 							</p>
 							
@@ -219,26 +242,34 @@
 						
 
 						<div >	
-							<p style="font-size: 30px;" > 
-								Find upper and lower bounds for  \(D(t)-D(c)\). 
-							</p>
-
-							<p style="font-size: 30px;" > 
-								 (Recall that we basically have upper and lower bounds for \(D(t)-D(c)\).)
+							<p style="font-size: 25px;" > 
+								\(D(t)-D(c)=\begin{cases} \frac{\cos(t)-\cos(c)}{t-c} + \sin(c)& t\neq c \\ 0 & t=c \end{cases}\)
 							</p>
 						</div>
 
 						<div class="fragment">	
-							<p style="font-size: 30px;" > 
-								Why is \(D(t)\) continuous at \(c\)?
+							<p style="font-size: 25px;" > 
+								\[\sin(c)-\sin(t) \leq D(t)-D(c) \leq 0 \]
+							</p>
+						</div>
+
+						<div class="fragment">	
+							<p style="font-size: 25px;" > 
+								\[|D(t)-D(c) |\leq |\sin(t)-\sin(c)|\]
+							</p>
+						</div>
+
+						<div class="fragment">	
+							<p style="font-size: 25px;" > 
+								\(D(t)-D(c)\) is continuous, \(D(c)\) is a constant, so \(D(t)\) is continuous.
 							</p>
 						</div>
 					</section>
 
-					<section data-auto-animate>
+					<!--<section data-auto-animate>
 						<iframe src="https://www.desmos.com/calculator/vijdtzz7gg" width="90%" height="500" style="border: 1px solid #ccc" frameborder=0></iframe>
 						
-					</section>
+					</section>-->
 					
 				</section>
 
@@ -248,12 +279,12 @@
 						<div >	
 							<iframe src="https://www.desmos.com/calculator/gsnd112xds" width="90%" height="500" style="border: 1px solid #ccc" frameborder=0></iframe>
 
-							<p style="font-size: 30px;" > 
-								 We have show \(\dot{x}=-\sin(t)=-\dot{y}\).
+							<p style="font-size: 25px;" > 
+								 We have shown \(\dot{x}=-\sin(t)=-\dot{y}\).
 							</p>
 						</div>
 						<div class="fragment">
-							<p style="font-size: 30px;" > 
+							<p style="font-size: 25px;" > 
 								Similarly \(\dot{y}=\cos(t)=\dot{x}\).
 							</p>
 						</div>
@@ -264,27 +295,85 @@
 
 
 				<section>
+					<div class="r-frame">
+						<p style="font-size: 25px;" > 
+							Let \(g(t)=\sqrt{6-2t}\). Then \[D_1g(t) = \begin{cases}\frac{g(t)-g(1)}{t-1} & t\neq 1 \\ v & t=1 \end{cases}.\]
+
+						</p>
+						
+					</div>
+
+					<div class="fragment">
+						<p style="font-size: 25px;" > 
+							Simplify \(R = \frac{g(t)-g(1)}{t-1}\).  (Remember  conjugates.)
+
+						</p>
+						
+					</div>
+
+					<div class="fragment">
+						<p style="font-size: 25px;" > 
+							Evaluate \(R|_{t=1}\) to find \(v\).
+
+						</p>
+						
+					</div>
+
+				</section>
+
+				<section>
+					<div class="r-frame">
+						<p style="font-size: 25px;" > 
+							Let \(\varphi(t)=\frac{2}{t^3}\). Then \[D_c\varphi(t) = \begin{cases}\frac{\varphi(t)-\varphi(c)}{t-c} & t\neq c \\ v & t=c \end{cases}.\]
+
+						</p>
+						
+					</div>
+
+					<div class="fragment">
+						<p style="font-size: 25px;" > 
+							Simplify \(R = \frac{\varphi(t)-\varphi(c)}{t-c}\).  (Remember  common denominators.)
+
+						</p>
+						
+					</div>
+
+					<div class="fragment">
+						<p style="font-size: 25px;" > 
+							Evaluate \(R|_{t=c}\) to find \(v\).
+
+						</p>
+						
+					</div>
+
+				</section>
+
+
+
+
+
+				<!--<section>
 					<section data-auto-animate>
 						
 						<div >	
 
-							<p style="font-size: 30px;" > 
+							<p style="font-size: 25px;" > 
 								 Consider \(\cos(at+b)\), let \(D(t)=\begin{cases} \frac{\cos(at+b)-\cos(ac+b)}{t-c} & t\neq c \\ -\sin(at+b) & t=c \end{cases}\)
 							</p>
 						</div>
 						<div class="fragment">
-							<p style="font-size: 30px;" > 
+							<p style="font-size: 25px;" > 
 								Recall that  \(-\sin(\theta_2) < \frac{\cos(\theta_2)-\cos(\theta_1)}{\theta_2-\theta_1} < -\sin(\theta_1)\).  Let \(\theta_1=ac+b, \theta_2=at+b\) and rewrite this inequality.
 							</p>
 
-							<p style="font-size: 30px;" > 
+							<p style="font-size: 25px;" > 
 								Use this inequality to find bounds for \(\frac{\cos(at+b)-\cos(ac+b)}{t-c}\).
 							</p>
 
 						</div>
 
 						<div class="fragment">
-							<p style="font-size: 30px;" > 
+							<p style="font-size: 25px;" > 
 								Use these bounds to find bounds for \(D(t)-D(c)\).  Why is \(D(t)\) continuous?
 							</p>
 						</div>
@@ -295,23 +384,23 @@
 
 				<section>
 					<div >	
-						<p style="font-size: 30px;" > 
+						<p style="font-size: 25px;" > 
 							Let \(x(t)=\frac{a}{2}t^2+vt+s\).  
 						</p>
 
 						
-						<p style="font-size: 30px;" > 
+						<p style="font-size: 25px;" > 
 							Let \(t=c+h\), simplify \(\frac{x(c+h)-x(c)}{h}\).
 						</p>
 					</div>
 
 					<div class="fragment">
-						<p style="font-size: 30px;" > 
+						<p style="font-size: 25px;" > 
 							What if \(h=0\)?
 						</p>
 					</div>
 
-				</section>
+				</section>-->
 
 
 
