@@ -440,6 +440,37 @@
 					<section data-auto-animate>
 						<div class="r-frame">
 							<p style="font-size: 25px;" >
+								Let \(Q(t)=t^2\) on some \([-2,5]\).  Note that \[|Q(t)-Q(c)|=|t^2-c^2|=|t+c||t-c|\leq (|t|+|c|)|t-c|.\]
+							</p>
+						</div>
+						<div class="fragment">
+							<p style="font-size: 25px;" >
+								Which of the following are a good choice for \(M\) so \(|Q(t)-Q(c)|< M|t-c|\)?
+								
+								
+							</p>
+							<ol type="upper-alpha">
+									<li style="font-size: 25px;" >
+										\(M=|-2+5|\).
+									</li>
+									<li style="font-size: 25px;" >
+										\(M=|-2|+|5|\).
+									</li>
+									<li style="font-size: 25px;" >
+										\(M=\max(|-2|,|5|)\).
+									</li>
+									<li style="font-size: 25px;" >
+										\(M=2\max(|-2|,|5|)\).
+									</li>
+
+							</ol>
+							
+						</div>
+					</section>
+
+					<section data-auto-animate>
+						<div class="r-frame">
+							<p style="font-size: 25px;" >
 								Let \(Q(t)=t^2\) on some \([a,b]\).  Note that \[|Q(t)-Q(c)|=|t^2-c^2|=|t+c||t-c|\leq (|t|+|c|)|t-c|.\]
 							</p>
 						</div>
@@ -464,9 +495,7 @@
 									</li>
 
 							</ol>
-							<p style="font-size: 25px;" >
-								(Hint: think about \([1,3], c=2\) and \([-1,1], c=0\).)
-							</p>
+							
 						</div>
 					</section>
 
@@ -505,7 +534,7 @@
 							Simplify \(\frac{Q(t)-Q(c)}{t-c}\).
 						</p>
 						<p style="font-size: 25px;">
-						 	<strong>(A)</strong>: \(2(t^4+t^3c+t^2c^2+6c^3+c^4), \ \ \)
+						 	<strong>(A)</strong>: \(2(t^4+t^3c+t^2c^2+tc^3+c^4), \ \ \)
 						 	<strong>(B)</strong>: \(2(t^3+t^2c+tc^2+c^3), \ \ \)
 						 	<strong>(C)</strong>: \(2(t^3-c^3).\)
 						 </p>
@@ -560,7 +589,8 @@
 
 						<div class="fragment">
 							<p style="font-size: 25px;" >
-								Simplify \[\frac{Q(t)-Q(c)}{t-c}\]
+								Simplify \(\displaystyle \frac{Q(t)-Q(c)}{t-c}\)
+								(Multiply by \(\frac{\sqrt{2t+1} - \sqrt{2c+1}}{\sqrt{2t+1} - \sqrt{2c+1}}\) )
 							</p>
 							
 						</div>
