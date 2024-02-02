@@ -59,12 +59,16 @@
 
 									</p>
 
-									<p style="font-size: 30px;" > 
+									
+									
+
+						</div>
+
+						<div class="fragment">
+							<p style="font-size: 30px;" > 
 										Whats the least distance they  could have  traveled?  Whats the farthest they could have traveled?
 
 									</p>
-									
-
 						</div>
 
 						<div class="fragment">
@@ -99,11 +103,7 @@
 
 							</p>
 
-							<p style="font-size: 30px;" >
-								If \(t\) is in \([0,1]\) whats the lowest the particles velocity could be?  The highest?  What about in \([1,3]\)?
-										
-
-							</p>
+							
 
 							
 
@@ -112,7 +112,7 @@
 
 						<div class="fragment">
 							<p style="font-size: 30px;" >
-								If \(t\) is in \([0,1]\) whats the shortest distance the particles velocity could have traveled?  The farthest?  What about in \([1,3]\)?
+								If \(t\) is in \([0,1]\) whats the lowest the particle's velocity could be?  The highest?  What about in \([1,3]\)?
 										
 
 							</p>
@@ -121,7 +121,25 @@
 
 						<div class="fragment">
 							<p style="font-size: 30px;" >
-								What are the errors in these cases?
+								If \(t\) is in \([0,1]\) whats the shortest distance the particle's velocity could have traveled?    What about in \([1,3]\)?  Call the sum of these distances \(\underline{S}\)
+										
+
+							</p>
+
+						</div>
+
+						<div class="fragment">
+							<p style="font-size: 30px;" >
+								If \(t\) is in \([0,1]\) whats the farthest distance the particle's velocity could have traveled?    What about in \([1,3]\)? Call the sum of these distances \(\overline{S}\)
+										
+
+							</p>
+
+						</div>
+
+						<div class="fragment">
+							<p style="font-size: 30px;" >
+								What is \(\overline{S}-\underline{S}\)?
 										
 
 							</p>
@@ -167,37 +185,12 @@
 					<section data-auto-animate>
 						<div class="r-frame">	
 							<p style="font-size: 30px;" > 
-								Consider \(v(t)=t^2\)  over \(t\) in \([0,2]\)  Let \(n=4\).  If we subdivide \([0,2]\) into 4 pieces, we get 4 regions \[[t_{i-1}, t_{i}]\] where \(t_0=0, t_1=0.5, t_2=1, t_3=1.5, t_4=2.\)
+								Consider \(v(t)=t^2\) m/s over \([0,1]\) seconds.  Subdivide \([0,1]\) into 4  regions: \([t_{i-1}, t_{i}]\) where \(t_0=0, t_1=0.25, t_2=0.5, t_3=0.75, t_4=1.\)
 							</p>
 							
 						</div>
 
-						<div>
-							<p style="font-size: 30px;" > 
-								For each of the 4 regions region \([t_{i-1}, t_i]\) find a lower bound \(\underline{v}_i\) and upper bound \(\overline{v}_i\) for the velocity in that region.
-							</p>
-						</div>
-
-						<div class="fragment">
-							<p style="font-size: 30px;" > 
-								For each of the 4 regions region \([t_{i-1}, t_i]\) find a lower bound  and upper bound  for the distance traveled in that region.
-							</p>
-						</div>
-
-						<div class="fragment">
-							<p style="font-size: 30px;" > 
-								Find a lower and upper bound for the distance they could have travled.
-							</p>
-						</div>
-
-						
-
-						
-					</section>
-
-
-					<section data-auto-animate>
-						<iframe src="https://www.desmos.com/calculator/bf6speben8" width="90%" height="500" style="border: 1px solid #ccc" frameborder=0></iframe>
+						<iframe src="https://www.desmos.com/calculator/05e2zhjkpf" width="100%" height="500" style="border: 1px solid #ccc" frameborder=0></iframe>
 
 						
 
@@ -206,38 +199,269 @@
 
 					<section data-auto-animate>
 						<div class="r-frame">	
-							<p style="font-size: 30px;" > 
-								Consider \(v(t)=t^2\)  over \(t\) in \([0,2]\)  Let \(n=5\).  
+							<p style="font-size: 25px;" > 
+								Consider \(v(t)=t^2\) m/s over \([0,1]\) seconds.  Subdivide \([0,1]\) into 4  regions: \([t_{i-1}, t_{i}]\) where \(t_0=0, t_1=0.25, t_2=0.5, t_3=0.75, t_4=1.\)
 							</p>
 							
 						</div>
+						<iframe src="https://www.desmos.com/calculator/05e2zhjkpf" width="60%" height="300" style="border: 1px solid #ccc" frameborder=0></iframe>
 
 						<div>
 							<p style="font-size: 30px;" > 
-								For each of the 5 regions region \([t_{i-1}, t_i]\) find a lower bound \(\underline{v}_i\) and upper bound \(\overline{v}_i\) for the velocity in that region.
+								Which are the lowest velocities in each of the four regions?
 							</p>
-						</div>
-
-						<div class="fragment">
-							<p style="font-size: 30px;" > 
-								For each of the 5 regions region \([t_{i-1}, t_i]\) find a lower bound  and upper bound  for the distance traveled in that region.
-							</p>
-						</div>
-
-						<div class="fragment">
-							<p style="font-size: 30px;" > 
-								Find a lower and upper bound for the distance they could have travled.
-							</p>
-						</div>
-
 						
+								<p style="font-size: 25px;" >
+								<strong>(A)</strong>: \(0,\frac{1}{4},\frac{1}{2},\frac{3}{4}\ \ \) 
+								<strong>(B)</strong>: \(\frac{1}{4},\frac{1}{2},\frac{3}{4},1\)
+								</p>
+								 <p style="font-size: 25px;" >
+								<strong>(C)</strong>: \(0^2,\left(\frac{1}{4}\right)^2,\left(\frac{1}{2}\right)^2,\left(\frac{3}{4}\right)^2\ \ \ \ \) 
+								<strong>(D)</strong>: \(\left(\frac{1}{4}\right)^2,\left(\frac{1}{2}\right)^2,\left(\frac{3}{4}\right)^2, 1^2\) 
+							</p>
+						</div>
 
+			
+						
+					</section>
+
+					<section data-auto-animate>
+						<div class="r-frame">	
+							<p style="font-size: 25px;" > 
+								Consider \(v(t)=t^2\) m/s  over \([0,2]\) seconds.  Subdivide \([0,2]\) into 4  regions: \([t_{i-1}, t_{i}]\) where \(t_0=0, t_1=0.5, t_2=1, t_3=1.5, t_4=2.\)
+							</p>
+							
+						</div>
+						<iframe src="https://www.desmos.com/calculator/05e2zhjkpf" width="60%" height="300" style="border: 1px solid #ccc" frameborder=0></iframe>
+
+						<div>
+							<p style="font-size: 30px;" > 
+								Which represents the sum of the lowest displacements in each region?
+							</p>
+						
+								
+								 <p style="font-size: 23px;" >
+								<strong>(A)</strong>: \(\underline{S}=1\cdot \left(0^2+ \left(\frac{1}{4}\right)^2+ \left(\frac{1}{2}\right)^2+ \left(\frac{3}{4}\right)^2\right)\ \ \ \ \) 
+								<strong>(B)</strong>: \(\underline{S}=1\cdot \left(\left(\frac{1}{4}\right)^2+ \left(\frac{1}{2}\right)^2+\left(\frac{3}{4}\right)^2+ 1^2\right)\) 
+							</p>
+
+								
+								 <p style="font-size: 23px;" >
+								<strong>(C)</strong>: \(\underline{S}=\frac{1}{4}\cdot \left(0^2+ \left(\frac{1}{4}\right)^2+ \left(\frac{1}{2}\right)^2+ \left(\frac{3}{4}\right)^2\right)\ \ \ \ \) 
+								<strong>(D)</strong>: \(\underline{S}=\frac{1}{4}\cdot \left(\left(\frac{1}{4}\right)^2+ \left(\frac{1}{2}\right)^2+\left(\frac{3}{4}\right)^2+ 1^2\right)\) 
+							</p>
+						</div>
+
+			
 						
 					</section>
 
 
 					<section data-auto-animate>
-						<iframe src="https://www.desmos.com/calculator/phrmpm3iua" width="90%" height="500" style="border: 1px solid #ccc" frameborder=0></iframe>
+						<div class="r-frame">	
+							<p style="font-size: 25px;" > 
+								Consider \(v(t)=t^2\) m/s over \([0,1]\) seconds.  Subdivide \([0,1]\) into 4  regions: \([t_{i-1}, t_{i}]\) where \(t_0=0, t_1=0.25, t_2=0.5, t_3=0.75, t_4=1.\)
+							</p>
+							
+						</div>
+						<iframe src="https://www.desmos.com/calculator/05e2zhjkpf" width="60%" height="300" style="border: 1px solid #ccc" frameborder=0></iframe>
+
+						<div>
+							<p style="font-size: 30px;" > 
+								Which are the largest velocities in each of the four regions?
+							</p>
+						
+								<p style="font-size: 25px;" >
+								<strong>(A)</strong>: \(0,\frac{1}{4},\frac{1}{2},\frac{3}{4}\ \ \) 
+								<strong>(B)</strong>: \(\frac{1}{4},\frac{1}{2},\frac{3}{4},1\)
+								</p>
+								 <p style="font-size: 25px;" >
+								<strong>(C)</strong>: \(0^2,\left(\frac{1}{4}\right)^2,\left(\frac{1}{2}\right)^2,\left(\frac{3}{4}\right)^2\ \ \ \ \) 
+								<strong>(D)</strong>: \(\left(\frac{1}{4}\right)^2,\left(\frac{1}{2}\right)^2,\left(\frac{3}{4}\right)^2, 1^2\) 
+							</p>
+						</div>
+
+			
+						
+					</section>
+
+					<section data-auto-animate>
+						<div class="r-frame">	
+							<p style="font-size: 25px;" > 
+								Consider \(v(t)=t^2\) m/s over \([0,1]\) seconds.  Subdivide \([0,1]\) into 4  regions: \([t_{i-1}, t_{i}]\) where \(t_0=0, t_1=0.25, t_2=0.5, t_3=0.75, t_4=1.\)
+							</p>
+							
+						</div>
+						<iframe src="https://www.desmos.com/calculator/05e2zhjkpf" width="60%" height="300" style="border: 1px solid #ccc" frameborder=0></iframe>
+
+						<div>
+							<p style="font-size: 30px;" > 
+								Which represents the sum of the largest displacements in each region?
+							</p>
+						
+								
+								 <p style="font-size: 23px;" >
+								<strong>(A)</strong>: \(\overline{S}=1\cdot \left(0^2+ \left(\frac{1}{4}\right)^2+ \left(\frac{1}{2}\right)^2+ \left(\frac{3}{4}\right)^2\right)\ \ \ \ \) 
+								<strong>(B)</strong>: \(\overline{S}=1\cdot \left(\left(\frac{1}{4}\right)^2+ \left(\frac{1}{2}\right)^2+\left(\frac{3}{4}\right)^2+ 1^2\right)\) 
+							</p>
+
+								
+								 <p style="font-size: 23px;" >
+								<strong>(C)</strong>: \(\overline{S}=\frac{1}{4}\cdot \left(0^2+ \left(\frac{1}{4}\right)^2+ \left(\frac{1}{2}\right)^2+ \left(\frac{3}{4}\right)^2\right)\ \ \ \ \) 
+								<strong>(D)</strong>: \(\overline{S}=\frac{1}{4}\cdot \left(\left(\frac{1}{4}\right)^2+ \left(\frac{1}{2}\right)^2+\left(\frac{3}{4}\right)^2+ 1^2\right)\) 
+							</p>
+						</div>
+
+			
+						
+					</section>
+
+					<section data-auto-animate>
+						<div class="r-frame">	
+							<p style="font-size: 25px;" > 
+								Consider \(v(t)=t^2\) m/s over \([0,1]\) seconds.  Subdivide \([0,1]\) into 4  regions: \([t_{i-1}, t_{i}]\) where \(t_0=0, t_1=0.25, t_2=0.5, t_3=0.75, t_4=1.\)
+							</p>
+							
+						</div>
+						<iframe src="https://www.desmos.com/calculator/05e2zhjkpf" width="60%" height="300" style="border: 1px solid #ccc" frameborder=0></iframe>
+
+						<div>
+							<p style="font-size: 30px;" > 
+								Which is the difference between \(\overline{S}-\underline{S}\)?
+							</p>
+						
+								
+								 <p style="font-size: 20px;" >
+								<strong>(A)</strong>: \(\overline{S}-\underline{S}=\displaystyle \frac{1}{4}\left(4^2-1^2\right) \ \ \ \ \) 
+								<strong>(B)</strong>: \(\overline{S}-\underline{S}=\displaystyle \frac{1}{4}\left(4-1\right)\) 
+							</p>
+
+								
+								 <p style="font-size: 20px;" >
+								<strong>(C)</strong>: \(\overline{S}-\underline{S}=\displaystyle \frac{1}{4}\left(1^2-0^2\right)\ \ \ \ \) 
+								<strong>(D)</strong>: \(\overline{S}-\underline{S}=\displaystyle \frac{1}{4}\left(1^2- \left(\frac{1}{4}\right)^2 \right) \) 
+							</p>
+						</div>
+
+			
+						
+					</section>
+
+					
+
+					<section data-auto-animate>
+						<div class="r-frame">	
+							<p style="font-size: 25px;" > 
+								Consider \(v(t)=t^2\) m/s over \([0,1]\) seconds.  Subdivide \([0,1]\) into <strong style="color: blue;">\(n\)</strong>	  equal length regions.
+							</p>
+							
+						</div>
+						<iframe src="https://www.desmos.com/calculator/zq0uqtw8xk" width="60%" height="300" style="border: 1px solid #ccc" frameborder=0></iframe>
+
+						<div>
+							<p style="font-size: 30px;" > 
+								Which represents the sum of the smallest displacements in each region?
+							</p>
+						
+								
+								 <p style="font-size: 23px;" >
+								<strong>(A)</strong>: \(\underline{S}=1\cdot \left( \left(\frac{0}{n}\right)^2+ \left(\frac{1}{n}\right)^2+  \cdots+\left(\frac{n-1}{n}\right)^2\right)\ \ \ \ \) 
+								<strong>(B)</strong>: \(\underline{S}=1\cdot \left( \left(\frac{1}{n}\right)^2+ \left(\frac{2}{n}\right)^2+  \cdots+\left(\frac{n}{n}\right)^2\right)\) 
+							</p>
+
+								
+								 <p style="font-size: 23px;" >
+								<strong>(C)</strong>: \(\underline{S}=\frac{1}{n}\cdot \left( \left(\frac{0}{n}\right)^2+ \left(\frac{1}{n}\right)^2+  \cdots+\left(\frac{n-1}{n}\right)^2\right)\ \ \ \ \) 
+								<strong>(D)</strong>: \(\underline{S}=\frac{1}{n}\cdot \left( \left(\frac{1}{n}\right)^2+ \left(\frac{2}{n}\right)^2+  \cdots+\left(\frac{n}{n}\right)^2\right)\) 
+							</p>
+						</div>
+
+			
+						
+					</section>
+
+
+					<section data-auto-animate>
+						<div class="r-frame">	
+							<p style="font-size: 25px;" > 
+								Consider \(v(t)=t^2\) m/s over \([0,1]\) seconds.  Subdivide \([0,1]\) into <strong style="color: blue;">\(n\)</strong>	  equal length regions.
+							</p>
+							
+						</div>
+						<iframe src="https://www.desmos.com/calculator/zq0uqtw8xk" width="60%" height="300" style="border: 1px solid #ccc" frameborder=0></iframe>
+
+						<div>
+							<p style="font-size: 30px;" > 
+								Which represents the sum of the largest displacements in each region?
+							</p>
+						
+								
+								 <p style="font-size: 23px;" >
+								<strong>(A)</strong>: \(\overline{S}=1\cdot \left( \left(\frac{0}{n}\right)^2+ \left(\frac{1}{n}\right)^2+  \cdots+\left(\frac{n-1}{n}\right)^2\right)\ \ \ \ \) 
+								<strong>(B)</strong>: \(\overline{S}=1\cdot \left( \left(\frac{1}{n}\right)^2+ \left(\frac{2}{n}\right)^2+  \cdots+\left(\frac{n}{n}\right)^2\right)\) 
+							</p>
+
+								
+								 <p style="font-size: 23px;" >
+								<strong>(C)</strong>: \(\overline{S}=\frac{1}{n}\cdot \left( \left(\frac{0}{n}\right)^2+ \left(\frac{1}{n}\right)^2+  \cdots+\left(\frac{n-1}{n}\right)^2\right)\ \ \ \ \) 
+								<strong>(D)</strong>: \(\overline{S}=\frac{1}{n}\cdot \left( \left(\frac{1}{n}\right)^2+ \left(\frac{2}{n}\right)^2+  \cdots+\left(\frac{n}{n}\right)^2\right)\) 
+							</p>
+						</div>
+
+			
+						
+					</section>
+
+
+					<section data-auto-animate>
+						<div class="r-frame">	
+							<p style="font-size: 25px;" > 
+								Consider \(v(t)=t^2\) m/s over \([0,1]\) seconds.  Subdivide \([0,1]\) into <strong style="color: blue;">\(n\)</strong>	  equal length regions.
+							</p>
+							
+						</div>
+						<iframe src="https://www.desmos.com/calculator/zq0uqtw8xk" width="60%" height="300" style="border: 1px solid #ccc" frameborder=0></iframe>
+
+						<div>
+							<p style="font-size: 30px;" > 
+								Which is the difference between \(\overline{S}-\underline{S}\)?
+							</p>
+						
+								
+								 <p style="font-size: 20px;" >
+								<strong>(A)</strong>: \(\overline{S}-\underline{S}=\displaystyle \frac{1}{n}\left(n^2-1^2\right) \ \ \ \ \) 
+								<strong>(B)</strong>: \(\overline{S}-\underline{S}=\displaystyle \frac{1}{n}\left(n-1\right)\) 
+							</p>
+
+								
+								 <p style="font-size: 20px;" >
+								<strong>(C)</strong>: \(\overline{S}-\underline{S}=\displaystyle \frac{1}{n}\left(1^2-0^2\right)\ \ \ \ \) 
+								<strong>(D)</strong>: \(\overline{S}-\underline{S}=\displaystyle \frac{1}{n}\left(1^2- \left(\frac{1}{n}\right)^2 \right) \) 
+							</p>
+						</div>
+
+			
+						
+					</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+					<section data-auto-animate>
+						<iframe src="https://www.desmos.com/calculator/1sgb8brxm2" width="90%" height="500" style="border: 1px solid #ccc" frameborder=0></iframe>
 
 						<div class="fragment">
 							<p style="font-size: 30px;" > 
@@ -251,7 +475,7 @@
 					</section>
 
 					<section data-auto-animate>
-						<iframe src="https://www.desmos.com/calculator/hfchfd03gc" width="90%" height="500" style="border: 1px solid #ccc" frameborder=0></iframe>
+						<iframe src="https://www.desmos.com/calculator/fnioak1tfk" width="90%" height="500" style="border: 1px solid #ccc" frameborder=0></iframe>
 
 						<div class="fragment">
 							<p style="font-size: 30px;" > 
@@ -270,7 +494,21 @@
 					<section data-auto-animate>
 						<div class="r-frame">	
 							<p style="font-size: 30px;" > 
-								The displacement of a particle over \([a,b]\) satisfies \[\sum_{i=1}^n \underline{v}_i(t_i-t_{i-1})\leq D \leq \sum_{i=1}^n  \overline{v}_i(t_i-t_{i-1})\] where \(t_0=a< t_1<\cdots< t_{n-1}< t_n=b\) \(\underline{v}_i, \overline{v}_i\) are the lower and upper bound of \(v\) in \([t_i-t_{i-1}]\), 
+								The displacement of a particle over \([a,b]\) satisfies \[\sum_{i=1}^n \underline{v}_i(t_i-t_{i-1})\leq D \leq \sum_{i=1}^n  \overline{v}_i(t_i-t_{i-1})\] where \(\underline{v}_i, \overline{v}_i\) are the lower and upper bound of \(v\) in \([t_i-t_{i-1}]\).
+							</p>
+							
+						</div>
+
+						<div class="fragment">
+							<p style="font-size: 30px;" > 
+								 \[\sum_{i=1}^n \underline{v}_i\Delta t_i\leq D \leq \sum_{i=1}^n  \overline{v}_i\Delta t_i\] 
+							</p>
+							
+						</div>
+
+						<div class="fragment">
+							<p style="font-size: 30px;" > 
+								 As \(n\) gets large, how does  \(\Delta t_i\) change?
 							</p>
 							
 						</div>
@@ -281,86 +519,16 @@
 
 						
 					</section>
+
 				</section>
+
+				
+
 
 				<section>
 					<section data-auto-animate>
-						<div clas="r-frame">
-							<p style="font-size: 30px;" > 
-								Suppose the rate of change of a radioactive mass that is \(x\) kg is \(R=-x\)kg/hour.
-							</p>
-						</div>
-
-						<div >
-							<p style="font-size: 30px;" > 
-								How long does it take for the mass to decrease from \(A\) to \(\frac{A}{2}\)?
-							</p>
-						</div>
-
-						<div class="fragment">
-							<p style="font-size: 30px;" > 
-								What's \(\Delta x\)?
-							</p>
-						</div>
+						<iframe src="https://www.desmos.com/calculator/yroewaddz6" width="90%" height="500" style="border: 1px solid #ccc" frameborder=0></iframe>
 					</section>
-
-					<section data-auto-animate>
-						<div clas="r-frame">
-							<p style="font-size: 30px;" > 
-								\[\underline{R}\Delta t \leq \Delta x \leq \overline{R}\Delta t\]
-							</p>
-						</div>
-
-						
-
-						<div class="fragment">
-							<p style="font-size: 30px;" > 
-								\[\frac{\Delta x}{\overline{R}} \leq \Delta t \leq \frac{\Delta x}{\underline{R}}\]
-							</p>
-						</div>
-
-						<div class="fragment">
-							<p style="font-size: 30px;" > 
-								\[\frac{A}{2\overline{R}} \leq \Delta t \leq \frac{A}{2\underline{R}}\]
-							</p>
-						</div>
-					</section>
-
-					<section data-auto-animate>
-						
-
-						<div >
-							<p style="font-size: 30px;" > 
-								\[\frac{A}{2\overline{R}} \leq \Delta t \leq \frac{A}{2\underline{R}}\]
-							</p>
-						</div>
-
-						<div >
-							<p style="font-size: 30px;" > 
-								Consider the decay from \(A\) to \(A\) to \(\frac{3A}{4}\) then from \(\frac{3A}{4}\) to \(\frac{A}{2}\).  What are the lower and upper bounds for the rate in these regions: \(\underline{R}_1, \overline{R}_1, \underline{R}_2, \overline{R}_2\).  
-							</p>
-						</div>
-
-						<div class="fragment">
-							<p style="font-size: 30px;" > 
-								Note that \[\sum_{i=1}^n \frac{x_{i}-x_{i-1} }{\overline{R}}\leq t \leq \frac{x_{i}-x_{i-1} }{\underline{R}}.\]  What we just did was for \(n=2\), \(x_0=A, x_1=\frac{3A}{4}, x_2=\frac{A}{2}\).  Find the bounds for \(t\).
-							</p>
-						</div>
-
-
-					</section>
-
-					<section data-auto-animate>
-						
-
-						<iframe src="https://www.desmos.com/calculator/nsq4ni2u44" width="90%" height="600" style="border: 1px solid #ccc" frameborder=0></iframe>
-
-
-					</section>
-				</section>
-
-
-				<section>
 					<section data-auto-animate>
 						
 
@@ -414,7 +582,7 @@
 
 						<div class="fragment">
 							<p style="font-size: 30px;" > 
-								Lettinfg \(d_x\approx \Delta x\) and given \(dy \approx f'(3)dx\), find an estimate for \(dy\).
+								Letting \(d_x\approx \Delta x\) and given \(dy \approx f'(3)dx\), find an estimate for \(dy\).
 							</p>
 						</div>
 
@@ -428,9 +596,7 @@
 
 					</section>
 
-					<section data-auto-animate>
-						<iframe src="https://www.desmos.com/calculator/yroewaddz6" width="90%" height="500" style="border: 1px solid #ccc" frameborder=0></iframe>
-					</section>
+					
 
 					
 
