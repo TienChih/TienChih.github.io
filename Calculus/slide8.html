@@ -111,7 +111,7 @@
 							</p>
 
 							<p style="font-size: 25px;" > 
-								We have: \[\underline{v}_i(t_{i+1} - t_i) \leq v(T_i)(t_{i+1} - t_i) \leq \overline{v}_i(t_{i+1} - t_i) \]
+								We have: \[\underline{v}_i\cdot (t_{i+1} - t_i) \leq v(T_i)\cdot (t_{i+1} - t_i) \leq \overline{v}_i\cdot (t_{i+1} - t_i) \]
 							</p>
 
 						</div>
@@ -136,7 +136,57 @@
 							</p>
 
 							<p style="font-size: 25px;" > 
-								We have: \[ \sum_{i=1}^n \underline{v}_i(t_{i+1} - t_i) \leq \sum_{i=1}^n v(T_i)(t_{i+1} - t_i) \leq \sum_{i=1}^n \overline{v}_i(t_{i+1} - t_i) \]
+								We have: \[\underline{v}_i\cdot \Delta t_i \leq v(T_i)\cdot \Delta t_i\leq \overline{v}_i\cdot \Delta t_i\]
+							</p>
+
+						</div>
+
+						
+
+						
+
+						
+					</section>
+
+					<section data-auto-animate>
+						<div  >
+									<iframe src="https://www.desmos.com/calculator/boym5thntk" width="90%" height="400" style="border: 1px solid #ccc" frameborder=0></iframe>
+									
+
+						</div>
+
+						<div >
+							<p style="font-size: 25px;" > 
+								Let \(a < b\), \(a=t_0 < t_1 < \cdots < t_i  < \cdots < t_n=b\).  Let \(T_i \in  [t_{i-1}, t_i ]\)
+							</p>
+
+							<p style="font-size: 25px;" > 
+								We have: \[ \sum_{i=1}^n \underline{v}_i\cdot \Delta t_i\leq \sum_{i=1}^n v(T_i)\cdot \Delta t_i\leq \sum_{i=1}^n \overline{v}_i\cdot \Delta t_i\]
+							</p>
+
+						</div>
+
+						
+
+						
+
+						
+					</section>
+
+					<section data-auto-animate>
+						<div  >
+									<iframe src="https://www.desmos.com/calculator/boym5thntk" width="90%" height="400" style="border: 1px solid #ccc" frameborder=0></iframe>
+									
+
+						</div>
+
+						<div >
+							<p style="font-size: 25px;" > 
+								Let \(a < b\), \(a=t_0 < t_1 < \cdots < t_i  < \cdots < t_n=b\).  Let \(T_i \in  [t_{i-1}, t_i ]\)
+							</p>
+
+							<p style="font-size: 25px;" > 
+								We have: \[ \sum_{i=1}^n \underline{v}_i\cdot \Delta t_i \leq \sum_{i=1}^n v(T_i) \cdot \Delta t_i \leq \sum_{i=1}^n \overline{v}_i\cdot \Delta t_i\]
 							</p>
 
 						</div>
@@ -169,7 +219,7 @@
 							</p>
 
 							<p style="font-size: 25px;" > 
-								Estimates of displacement are now: \[\underline{v}_{i}(t_i-t_{i-1}) \leq \overline{v}_{i}(t_i-t_{i-1})\]
+								Estimates of displacement are now: \[\underline{v}_{i}\cdot (t_i-t_{i-1})\leq \overline{v}_{i} \cdot (t_i-t_{i-1})\]
 							</p>
 
 
@@ -316,7 +366,17 @@
 						<p style="font-size: 25px;" > 
 							A function  \(v(t)\) is called <strong>integrable</strong> over \( [a,b] \) so that given  <strong>any</strong> partition of \([a,b]\) \(a=t_0 < t_1 < \cdots < t_i  < \cdots < t_n=b\), there is a unique number \(I\) such that:
 
-							\[  \sum_{i=1}^n \underline{v}_i(t_i-t_{i-1}) \leq I \leq  \sum_{i=1}^n \overline{v}_i(t_i-t_{i-1})  \]
+							\[  \sum_{i=1}^n \underline{v}_i \cdot \Delta t_i \leq I \leq  \sum_{i=1}^n \overline{v}_i\cdot \Delta t_i  \]
+						</p>
+
+						<iframe src="https://www.desmos.com/calculator/ht5khii7cp" width="90%" height="400" style="border: 1px solid #ccc" frameborder=0></iframe>
+
+					</section>
+					<section data-auto-animate>
+						<p style="font-size: 25px;" > 
+							A function  \(v(t)\) is called <strong>integrable</strong> over \( [a,b] \) so that given  <strong>any</strong> partition of \([a,b]\) \(a=t_0 < t_1 < \cdots < t_i  < \cdots < t_n=b\), there is a unique number \(I\) such that:
+
+							\[  \sum_{i=1}^n \underline{v}_i\cdot \Delta t_i \leq I \leq  \sum_{i=1}^n \overline{v}_i\cdot \Delta t_i \]
 						</p>
 
 						<iframe src="https://www.desmos.com/calculator/ht5khii7cp" width="90%" height="400" style="border: 1px solid #ccc" frameborder=0></iframe>
@@ -327,7 +387,7 @@
 						<p style="font-size: 25px;" > 
 							A function  \(v(t)\) is called <strong>integrable</strong> over \( [a,b] \) so that given  <strong>any</strong> partition of \([a,b]\) \(a=t_0 < t_1 < \cdots < t_i  < \cdots < t_n=b\), there is a unique number \(I\) such that:
 
-							\[ \underline{S}= \sum_{i=1}^n \underline{v}_i(t_i-t_{i-1}) \leq I \leq  \sum_{i=1}^n \overline{v}_i(t_i-t_{i-1})  =\overline{S} \]
+							\[ \underline{S}= \sum_{i=1}^n \underline{v}_i\cdot \Delta t_i\leq I \leq  \sum_{i=1}^n \overline{v}_i\cdot \Delta t_i =\overline{S} \]
 						</p>
 
 						<p style="font-size: 25px;" > 
@@ -340,59 +400,202 @@
 
 				<section>
 					<section data-auto-animate>
-						<h4>Yet to be proven facts</h4>
 						<p style="font-size: 25px;" > 
-							If \(v(t)\) is continuous over \([a,b]\) then it is integrable.
+							If \(\ell(x)\) is length measured in meters and \(x\) is also length measured in meters, what does 
+							\[\displaystyle \int_{x =a}^{x=b} \ell(x)dx\] measure?
 						</p>
 
-						<iframe src="https://www.desmos.com/calculator/tyrorlkjf3" width="90%" height="400" style="border: 1px solid #ccc" frameborder=0></iframe>
+						<p style="font-size: 25px;" >
+								<strong>(A)</strong>: Length in m \( \ \ \) 
+								<strong>(B)</strong>: Area in m\(^2\) 
+							</p>
+							<p style="font-size: 25px;" >
+								<strong>(C)</strong>: Change in Length in m/s\( \ \ \) 
+								<strong>(D)</strong>: Change in Length in m\(^2\)/s
+							</p>
 
 					</section>
 
 					<section data-auto-animate>
-						<h4>Yet to be proven facts</h4>
 						<p style="font-size: 25px;" > 
-							If \(v(t)\) is monotonic over \([a,b]\) then it is integrable.
+							If \(v(x)\) is velocity measured in meters per second and \(x\) is time measured in seconds, what does 
+							\[\displaystyle \int_{x =a}^{x=b} v(x)dx\] measure?
 						</p>
 
-						<iframe src="https://www.desmos.com/calculator/a5m5y79htc" width="90%" height="400" style="border: 1px solid #ccc" frameborder=0></iframe>
+						<p style="font-size: 25px;" >
+								<strong>(A)</strong>: Velocity in m/s\( \ \ \) 
+								<strong>(B)</strong>: Length in m 
+							</p>
+							<p style="font-size: 25px;" >
+								<strong>(C)</strong>: Displacment in m\( \ \ \) 
+								<strong>(D)</strong>: Acceleration in m/s\(^2\)
+							</p>
 
 					</section>
 
 					<section data-auto-animate>
-						<h4>Yet to be proven facts</h4>
 						<p style="font-size: 25px;" > 
-							If \(v(t)\) is integrable over \([a,b]\) then \(|S-I|\leq |\overline{S}-\underline{S}|\).
+							If \(A(x)\) is area in square inches and \(x\) is length in inches, what does 
+							\[\displaystyle \int_{x =a}^{x=b} A(x)dx\] measure?
 						</p>
 
-						<iframe src="https://www.desmos.com/calculator/drvgym3q4c" width="90%" height="400" style="border: 1px solid #ccc" frameborder=0></iframe>
+						<p style="font-size: 25px;" >
+								<strong>(A)</strong>: Length\( \ \ \) 
+								<strong>(B)</strong>: Area
+							</p>
+							<p style="font-size: 25px;" >
+								<strong>(C)</strong>: Change in length per second\( \ \ \) 
+								<strong>(D)</strong>: Volume.
+							</p>
+
+					</section>
+
+					<section data-auto-animate>
+						<p style="font-size: 25px;" > 
+							If \(A(x)\) is area in square meters, \(\delta(x)\) density in kg/meters  and \(x\) is length in meters, what does 
+							\[\displaystyle \int_{x =a}^{x=b} A(x)\delta(x) dx\] measure?
+						</p>
+
+						<p style="font-size: 25px;" >
+								<strong>(A)</strong>: Mass\( \ \ \) 
+								<strong>(B)</strong>: Density
+							</p>
+							<p style="font-size: 25px;" >
+								<strong>(C)</strong>: Area\( \ \ \) 
+								<strong>(D)</strong>: Volume.
+							</p>
+
+					</section>
+
+					<section data-auto-animate>
+						<p style="font-size: 25px;" > 
+							If \(\ell(x)\) is length measured in feet, \(\rho(x)\) is pressure in lb/square foot  and \(x\) is length in geet, what does 
+							\[\displaystyle \int_{x =a}^{x=b} \ell(x)\rho(x) dx\] measure?
+						</p>
+
+						<p style="font-size: 25px;" >
+								<strong>(A)</strong>: Mass\( \ \ \) 
+								<strong>(B)</strong>: Area
+							</p>
+							<p style="font-size: 25px;" >
+								<strong>(C)</strong>: Force\( \ \ \) 
+								<strong>(D)</strong>: Pressure.
+							</p>
+
+					</section>
+
+					<section data-auto-animate>
+						<p style="font-size: 25px;" > 
+							Whatever this is:
+						</p>
+						<img src="img\anthcalc.png" width="50%"/>
+						<p style="font-size: 25px;" > 
+							
+							Courtesy of Nicole Paula.
+						</p>
+
+						
 
 					</section>
 
 					
 
-					<section data-auto-animate>
-						<h4>Yet to be proven facts</h4>
-						<p style="font-size: 25px;" > 
-							If \(v(t)\) is integrable over \([a,b]\) if and only if \(v(t)\) is integrable over \([a,c]\) and \([c,b]\) for each \(a< c < b \). Moreover \(\displaystyle \int_a^bv(t) dt = \int_a^cv(t)dt + \int_c^bv(t)dt\)
-						</p>
-
-						<iframe src="https://www.desmos.com/calculator/ma2kbvupi1" width="45%" height="400" style="border: 1px solid #ccc" frameborder=0></iframe><iframe src="https://www.desmos.com/calculator/mzcrefejdo" width="45%" height="400" style="border: 1px solid #ccc" frameborder=0></iframe>
-
-					</section>
-
-					<section data-auto-animate>
-						<h4>Yet to be proven facts</h4>
-						<p style="font-size: 25px;" > 
-							If \(\overline{S}_n-\underline{S}_n\)  can be made as small as we like, then \(\displaystyle \int_a^b v(t)dt\) exists and \(|S_n-I|\) can be made arbitrarily small.
-						</p>
-
-						<iframe src="https://www.desmos.com/calculator/shu3nmqxzk" width="90%" height="400" style="border: 1px solid #ccc" frameborder=0></iframe>
-
-					</section>
-
 
 				</section>
+				<section>
+					<section data-auto-animate>
+						<div class="r-frame">
+							<p style="font-size: 25px;" > 
+								Consider a square pyramid who's base is 10 m by 10 m and whose height is 15 m.  Suppose the density of the pyramid \(h\) m off the ground is \(\delta(h)=\sqrt{50-h}\) kg/m\(^3\).
+							</p>
+						</div>
+						<iframe src="https://www.desmos.com/calculator/1iijywmali" width="90%" height="400" style="border: 1px solid #ccc" frameborder=0></iframe>
+					</section>
+
+					<section data-auto-animate>
+						<div >
+							<p style="font-size: 25px;" > 
+								What is the area of the cross section when \(h=10\)?
+							</p>
+						</div>
+						<iframe src="https://www.desmos.com/calculator/1iijywmali" width="90%" height="400" style="border: 1px solid #ccc" frameborder=0></iframe>
+						<p style="font-size: 25px;" >
+								<strong>(A)</strong>: 10m\( \ \ \) 
+								<strong>(B)</strong>: 100m\(^2 \ \ \) <strong>(C)</strong>: \(\frac{10}{3}\)m \( \ \ \) 
+								<strong>(D)</strong>:\(\left(\frac{10}{3}\right)^2\)m\(^2\)
+							</p>
+					</section>
+
+					<section data-auto-animate>
+						<div >
+							<p style="font-size: 25px;" > 
+								What is the area of the cross section when \(h=3\)?
+							</p>
+						</div>
+						<iframe src="https://www.desmos.com/calculator/1iijywmali" width="90%" height="400" style="border: 1px solid #ccc" frameborder=0></iframe>
+						<p style="font-size: 25px;" >
+								<strong>(A)</strong>: 8m\( \ \ \) 
+								<strong>(B)</strong>: \(8^2\)m\(^2 \ \ \) <strong>(C)</strong>: \(1\)m \( \ \ \) 
+								<strong>(D)</strong>:\(\left(1\right)^2\)m\(^2\)
+							</p>
+					</section>
+
+					<section data-auto-animate>
+						<div >
+							<p style="font-size: 25px;" > 
+								What is the area of the cross section at height \(h\)?
+							</p>
+						</div>
+						<iframe src="https://www.desmos.com/calculator/1iijywmali" width="90%" height="400" style="border: 1px solid #ccc" frameborder=0></iframe>
+					</section>
+
+					<section data-auto-animate>
+						<div >
+							<p style="font-size: 25px;" > 
+								What is the volume of a slab at height \(h\) m with width \(dh\) m?
+							</p>
+						</div>
+						<iframe src="https://www.desmos.com/calculator/1iijywmali" width="90%" height="400" style="border: 1px solid #ccc" frameborder=0></iframe>
+					</section>
+
+					<section data-auto-animate>
+						<div >
+							<p style="font-size: 25px;" > 
+								What is the density of a slab at height \(h\) m with width \(dh\) m?
+							</p>
+						</div>
+						<iframe src="https://www.desmos.com/calculator/1iijywmali" width="90%" height="400" style="border: 1px solid #ccc" frameborder=0></iframe>
+					</section>
+
+					<section data-auto-animate>
+						<div >
+							<p style="font-size: 25px;" > 
+								What is the mass of a slab at height \(h\) m with width \(dh\) m?
+							</p>
+						</div>
+						<iframe src="https://www.desmos.com/calculator/1iijywmali" width="90%" height="400" style="border: 1px solid #ccc" frameborder=0></iframe>
+					</section>
+
+					<section data-auto-animate>
+						<div class="r-frame">
+							<p style="font-size: 25px;" > 
+								\[M=\int_a^b A(h)\delta(h)dh\]
+							</p>
+						</div>
+						<iframe src="https://www.desmos.com/calculator/1iijywmali" width="90%" height="400" style="border: 1px solid #ccc" frameborder=0></iframe>
+					</section>
+
+					<section data-auto-animate>
+						<div class="r-frame">
+							<p style="font-size: 25px;" > 
+								\[h_{com}=\frac{\int_a^b hA(h)\delta(h)dh}{M}\]
+							</p>
+						</div>
+						<iframe src="https://www.desmos.com/calculator/1iijywmali" width="90%" height="400" style="border: 1px solid #ccc" frameborder=0></iframe>
+					</section>
+					
+				</section>
+					
 
 				<section>
 					<section data-auto-animate>
