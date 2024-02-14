@@ -304,7 +304,7 @@
 
 								<div >
 									<p style="font-size: 25px;" > 
-										Since \(f\) is increasing, \(\overline{f}_i=f(t_{i}), \underline{f}_i=f(t_{i-1})\).  \(\overline{S}=\displaystyle\sum_{i=1}^n \overline{f}_i(t_i-t_{i-1}) , \overline{S}=\displaystyle\sum_{i=1}^n \underline{f}_i(t_i-t_{i-1})\).
+										Since \(f\) is increasing, \(\overline{f}_i=f(t_{i}), \underline{f}_i=f(t_{i-1})\).  \(\overline{S}=\displaystyle\sum_{i=1}^n \overline{f}_i(t_i-t_{i-1}) , \underline{S}=\displaystyle\sum_{i=1}^n \underline{f}_i(t_i-t_{i-1})\).
 									</p>
 								</div>
 
@@ -361,7 +361,7 @@
 
 								<div >
 									<p style="font-size: 25px;" > 
-										Since \(f\) is increasing, \(\overline{f}_i=f(t_{i}), \underline{f}_i=f(t_{i-1})\).  \(\overline{S}=\displaystyle\sum_{i=1}^n \overline{f}_i(t_i-t_{i-1}) , \overline{S}=\displaystyle\sum_{i=1}^n \underline{f}_i(t_i-t_{i-1})\).
+										Since \(f\) is increasing, \(\overline{f}_i=f(t_{i}), \underline{f}_i=f(t_{i-1})\).  \(\overline{S}=\displaystyle\sum_{i=1}^n \overline{f}_i(t_i-t_{i-1}) , \underline{S}=\displaystyle\sum_{i=1}^n \underline{f}_i(t_i-t_{i-1})\).
 									</p>
 								</div>
 
@@ -373,7 +373,7 @@
 
 								<div >
 									<p style="font-size: 25px;" > 
-										\[\leq  \delta\left( t_n-t_0\right) \]
+										\[\leq  \delta\left( f(t_n)-f(t_0)\right) \]
 									</p>
 								</div>
 
@@ -417,7 +417,7 @@
 
 								<div >
 									<p style="font-size: 25px;" > 
-										Since \(f\) is increasing, \(\overline{f}_i=f(t_{i}), \underline{f}_i=f(t_{i-1})\).  \(\overline{S}=\displaystyle\sum_{i=1}^n \overline{f}_i(t_i-t_{i-1}) , \overline{S}=\displaystyle\sum_{i=1}^n \underline{f}_i(t_i-t_{i-1})\).
+										Since \(f\) is increasing, \(\overline{f}_i=f(t_{i}), \underline{f}_i=f(t_{i-1})\).  \(\overline{S}=\displaystyle\sum_{i=1}^n \overline{f}_i(t_i-t_{i-1}) , \underline{S}=\displaystyle\sum_{i=1}^n \underline{f}_i(t_i-t_{i-1})\).
 									</p>
 								</div>
 
@@ -429,7 +429,7 @@
 
 								<div >
 									<p style="font-size: 25px;" > 
-										\[\leq  \delta\left( b-a\right) \]
+										\[\leq  \delta\left( f(b)-f(a)\right) \]
 									</p>
 								</div>
 
@@ -444,7 +444,7 @@
 
 						<div class="fragment">
 							<p style="font-size: 25px;" > 
-								If \(n\) big, \(\delta\) is small and if \(\delta\) is small enough, \(\delta\left( b-a\right)< \epsilon\).
+								If \(n\) big, \(\delta\) is small and if \(\delta\) is small enough, \(\delta\left( f(b)-f(a)\right)< \epsilon\).
 							</p>
 							
 						</div>
@@ -500,14 +500,7 @@
 
 					
 
-					<section data-auto-animate>
-						<p style="font-size: 25px;" > 
-							If \(v(t)\) is integrable over \([a,b]\) then \(|S-I|\leq |\overline{S}-\underline{S}|\).
-						</p>
-
-						<iframe src="https://www.desmos.com/calculator/drvgym3q4c" width="90%" height="400" style="border: 1px solid #ccc" frameborder=0></iframe>
-
-					</section>
+					
 
 
 					<section data-auto-animate>
@@ -548,7 +541,7 @@
 					<section data-auto-animate>
 						<div >
 							<p style="font-size: 25px;" > 
-								What is the volume of a slab at height \(h\) m with width \(h\) m?
+								What is the volume of a slab at height \(h\) m with width \(dh\) m?
 							</p>
 						</div>
 						<iframe src="https://www.desmos.com/calculator/1iijywmali" width="90%" height="400" style="border: 1px solid #ccc" frameborder=0></iframe>
@@ -557,7 +550,7 @@
 					<section data-auto-animate>
 						<div >
 							<p style="font-size: 25px;" > 
-								What is the density of a slab at height \(h\) m with width \(h\) m?
+								What is the density of a slab at height \(h\) m with width \(dh\) m?
 							</p>
 						</div>
 						<iframe src="https://www.desmos.com/calculator/1iijywmali" width="90%" height="400" style="border: 1px solid #ccc" frameborder=0></iframe>
@@ -566,7 +559,7 @@
 					<section data-auto-animate>
 						<div >
 							<p style="font-size: 25px;" > 
-								What is the mass of a slab at height \(h\) m with width \(h\) m?
+								What is the mass of a slab at height \(h\) m with width \(dh\) m?
 							</p>
 						</div>
 						<iframe src="https://www.desmos.com/calculator/1iijywmali" width="90%" height="400" style="border: 1px solid #ccc" frameborder=0></iframe>
