@@ -1,0 +1,226 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>reveal.js</title>
+
+		<link rel="stylesheet" href="dist/reset.css">
+		<link rel="stylesheet" href="dist/reveal.css">
+		<link rel="stylesheet" href="dist/theme/white.css">
+		<link rel="stylesheet" href="plugin/chalkboard/style.css">
+		<link rel="stylesheet" href="plugin/customcontrols/style.css">
+
+		<script src="https://tikzjax.com/v1/tikzjax.js"></script>
+
+
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+
+
+
+		<!-- Theme used for syntax highlighted code -->
+		<link rel="stylesheet" href="plugin/highlight/monokai.css">
+		<style>
+			.container{
+   				 display: flex;
+			}
+			.col{
+    			flex: 1;
+			}
+		</style>
+			<script async defer src="https://buttons.github.io/buttons.js"></script>
+
+		<script src="plugin/menu/menu.js"></script>
+
+
+
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				
+				<section>
+					<h2>Limit Review</h2>
+					<h4>M 112</h4>
+					
+					
+					<h4>
+						Oxford College of Emory University <a href="https://app.oxford.emory.edu/WebApps/Directory/index.cfm/view/9984" target="_blank">Tien Chih</a>
+					</h4>
+				</section>
+
+
+
+				<section>
+					<section data-auto-animate>
+						<p style="font-size: 25px;" > 
+							Sketch a function \(y=f(x)\) such that:
+							<ul>
+							<li style="font-size: 25px;">\(\displaystyle\lim_{x\to1^-}f(x)\neq \lim_{x\to1^+}f(x)\) but neither limit is infinite.</li>
+							<li style="font-size: 25px;">\(\displaystyle\lim_{x\to -3}f(x) \neq f(-3)\) but both are defined.</li>
+							<li style="font-size: 25px;">\(\displaystyle\lim_{x\to0^-}f(x)\) is infinite but \(\displaystyle\lim_{x\to0^+}f(x)\) is finite.</li>
+							<li style="font-size: 25px;">\(\displaystyle\lim_{x\to \infty}f(x)=-\infty\) is infinite but \(\displaystyle\lim_{x\to -\infty}f(x)\) is finite.</li>
+							</ul>
+						</p>
+					</section>
+				</section>	
+
+				<section>
+					<section data-auto-animate>
+						<p style="font-size: 25px;" > 
+							Find all limits to infinity, asymptotes and removable discontinuities of \[f(x)=\frac{(2x-6)(x+5)}{(x+2)(3-x)}\] and justify with the appropriate (left and right) limits.
+							
+						</p>
+					</section>
+				</section>	
+
+				<section>
+					<section data-auto-animate>
+						<p style="font-size: 25px;" > 
+							 Consider the function \[a(x) = \begin{cases} \sqrt{x + 7} - 3 & x < -3 \\ 0 & x = -3 \\ -x - 2 & -3 < x < 6 \\ -10 & x = 6 \\ -\frac{2 \, {\left(x - 7\right)}^{2}}{{\left| x - 7 \right|}} - 6 & x > 6 \end{cases}.\] Identify and classify all the discontinuities of \(a(x)\). 
+
+							
+						</p>
+					</section>
+				</section>	
+
+				<section>
+					<section data-auto-animate>
+						<p style="font-size: 25px;" > 
+							  Use the limit formulation of the derivative to show whether or not the derivative of the function exists at \(c\). If not differentiable at \(c\), classify the derivative as a corner, vertical tangent, or vertical tangent with a cusp. 
+
+							  <ul>
+							<li style="font-size: 25px;">\( \displaystyle f(x) = {\left(x - 1\right)}^{2} {\left| x + 1 \right|}^{3}\) at \(c = -1\). </li>
+							<li style="font-size: 25px;">\( \displaystyle g(x) = {\left(x - 2\right)}^{2} {\left(x - 4\right)}^{\frac{2}{5}}\) at \(c = 4\). </li>
+							</ul>
+
+							
+						</p>
+					</section>
+				</section>	
+
+				
+
+
+				
+
+
+
+
+
+				
+
+				
+
+
+
+
+
+
+
+
+
+
+				
+
+
+					
+
+
+				
+
+
+				
+
+				
+
+
+
+
+				
+					
+				
+			</div>
+		</div>
+
+		<script src="dist/reveal.js"></script>
+		<script src="plugin/notes/notes.js"></script>
+		<script src="plugin/markdown/markdown.js"></script>
+		<script src="plugin/highlight/highlight.js"></script>
+		<script>
+			// More info about initialization & config:
+			// - https://revealjs.com/initialization/
+			// - https://revealjs.com/config/
+			Reveal.initialize({
+				hash: true,
+
+				// Learn about plugins: https://revealjs.com/plugins/
+				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
+			});
+		</script>
+		<script src="plugin/math/math.js"></script>
+		<script src="plugin/chalkboard/plugin.js"></script>
+		<script src="plugin/customcontrols/plugin.js"></script>
+
+
+
+	<script>
+  	Reveal.initialize({
+		math: {
+			mathjax: 'https://cdn.jsdelivr.net/gh/mathjax/mathjax@2.7.8/MathJax.js',
+			config: 'TeX-AMS_HTML-full',
+			// pass other options into `MathJax.Hub.Config()`
+			TeX: { Macros: { RR: "{\\bf R}" } }
+		},
+
+		chalkboard: {
+        boardmarkerWidth: 3,
+        chalkWidth: 7,
+        chalkEffect: 1.0,
+        storage: null,
+        src: null,
+        readOnly: undefined,
+        transition: 800,
+        theme: "chalkboard",
+        background: [ 'rgba(127,127,127,.1)' , path + 'img/blackboard.png' ],
+        grid: { color: 'rgb(50,50,10,0.5)', distance: 80, width: 2},
+        eraser: { src: path + 'img/sponge.png', radius: 20},
+        boardmarkers : [
+                { color: 'rgba(100,100,100,1)', cursor: 'url(' + path + 'img/boardmarker-black.png), auto'},
+                { color: 'rgba(30,144,255, 1)', cursor: 'url(' + path + 'img/boardmarker-blue.png), auto'},
+                { color: 'rgba(220,20,60,1)', cursor: 'url(' + path + 'img/boardmarker-red.png), auto'},
+                { color: 'rgba(50,205,50,1)', cursor: 'url(' + path + 'img/boardmarker-green.png), auto'},
+                { color: 'rgba(255,140,0,1)', cursor: 'url(' + path + 'img/boardmarker-orange.png), auto'},
+                { color: 'rgba(150,0,20150,1)', cursor: 'url(' + path + 'img/boardmarker-purple.png), auto'},
+                { color: 'rgba(255,220,0,1)', cursor: 'url(' + path + 'img/boardmarker-yellow.png), auto'}
+        ],
+        chalks: [
+                { color: 'rgba(255,255,255,0.5)', cursor: 'url(' + path + 'img/chalk-white.png), auto'},
+                { color: 'rgba(96, 154, 244, 0.5)', cursor: 'url(' + path + 'img/chalk-blue.png), auto'},
+                { color: 'rgba(237, 20, 28, 0.5)', cursor: 'url(' + path + 'img/chalk-red.png), auto'},
+                { color: 'rgba(20, 237, 28, 0.5)', cursor: 'url(' + path + 'img/chalk-green.png), auto'},
+                { color: 'rgba(220, 133, 41, 0.5)', cursor: 'url(' + path + 'img/chalk-orange.png), auto'},
+                { color: 'rgba(220,0,220,0.5)', cursor: 'url(' + path + 'img/chalk-purple.png), auto'},
+                { color: 'rgba(255,220,0,0.5)', cursor: 'url(' + path + 'img/chalk-yellow.png), auto'}
+        ]
+    },
+    customcontrols: {
+  		controls: [
+  			{ icon: '<i class="fa fa-pen-square"></i>',
+  			  title: 'Toggle chalkboard (B)',
+  			  action: 'RevealChalkboard.toggleChalkboard();'
+  			},
+  			{ icon: '<i class="fa fa-pen"></i>',
+  			  title: 'Toggle notes canvas (C)',
+  			  action: 'RevealChalkboard.toggleNotesCanvas();'
+  			}
+  		]
+    },
+
+		plugins: [ RevealMath, RevealChalkboard, RevealCustomControls, RevealMenu  ]
+		});
+	</script>
+
+	</body>
+</html>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="159.8pt" height="124.715pt" viewBox="0 0 159.8 124.715">
+<g enable-background="new">
+<path transform="matrix(1,0,0,-1,28.546,113.585)" stroke-width=".3985" stroke-linecap="butt" stroke-miterlimit="10" stroke-linejoin="miter" fill="none" stroke="#000000" d="M -28.3468 0 L 113.38724 0 L 113.38724 113.38724 "/>
+<path transform="matrix(1,0,0,-1,28.546,113.585)" stroke-width="1.59404" stroke-linecap="butt" stroke-miterlimit="10" stroke-linejoin="miter" fill="none" stroke="#0000ff" d="M 0 0 L 113.38724 85.04042 "/>
+<text fill="#0000ff" xml:space="preserve" transform="matrix(1 0 -0 1 0 124.715)" font-size="9.9626" font-family="CMMI10" font-style="italic"><tspan y="-3.321" x="82.392">x</tspan></text>
+<text fill="#0000ff" xml:space="preserve" transform="matrix(1 0 -0 1 0 124.715007)" font-size="9.9626" font-family="CMMI10" font-style="italic"><tspan y="-52.473" x="145.451">y</tspan></text>
+<text fill="#0000ff" xml:space="preserve" transform="matrix(1 0 -0 1 0 124.715)" font-size="9.9626" font-family="CMR10"><tspan y="-57.169" x="52.661 57.6423 65.94115 68.9897 73.41309 77.83649">10feet</tspan></text>
+<path transform="matrix(1,0,0,-1,28.546,113.585)" stroke-width=".79701" stroke-linecap="butt" stroke-miterlimit="10" stroke-linejoin="miter" fill="none" stroke="#ff0000" d="M 0 0 L -13.46603 0 "/>
+<path transform="matrix(-1,-0,0,1,15.079969,113.585)" stroke-width=".6376" stroke-linecap="round" stroke-linejoin="round" fill="none" stroke="#ff0000" d="M -1.55415 2.0722 C -1.42464 1.29512 0 .1295 .38852 0 C 0 -.1295 -1.42464 -1.29512 -1.55415 -2.0722 "/>
+<text fill="#ff0000" xml:space="preserve" transform="matrix(1 0 -0 1 0 124.715)" font-size="6.9738" font-family="CMMI7" font-style="italic"><tspan y="-22.207" x="17.127 21.276413">dx</tspan></text>
+<path transform="matrix(1,0,0,-1,17.127,103.939998)" stroke-width=".398" stroke-linecap="butt" stroke-miterlimit="10" stroke-linejoin="miter" fill="none" stroke="#ff0000" d="M 0 0 L 8.665 0 "/>
+<text fill="#ff0000" xml:space="preserve" transform="matrix(1 0 -0 1 0 124.715)" font-size="6.9738" font-family="CMMI7" font-style="italic"><tspan y="-14.849" x="17.881 22.03041">dt</tspan></text>
+<path transform="matrix(1,0,0,-1,28.546,113.585)" stroke-width=".79701" stroke-linecap="butt" stroke-miterlimit="10" stroke-linejoin="miter" fill="none" stroke="#ff0000" d="M 113.38724 85.04042 L 113.38724 71.57437 "/>
+<path transform="matrix(0,1,1,0,141.93325,42.010629)" stroke-width=".6376" stroke-linecap="round" stroke-linejoin="round" fill="none" stroke="#ff0000" d="M -1.55415 2.0722 C -1.42464 1.29512 0 .1295 .38852 0 C 0 -.1295 -1.42464 -1.29512 -1.55415 -2.0722 "/>
+<text fill="#ff0000" xml:space="preserve" transform="matrix(1 0 -0 1 0 124.715)" font-size="6.9738" font-family="CMMI7" font-style="italic"><tspan y="-90.601" x="146.846 150.9954">dy</tspan></text>
+<path transform="matrix(1,0,0,-1,146.846,36.067995)" stroke-width=".398" stroke-linecap="butt" stroke-miterlimit="10" stroke-linejoin="miter" fill="none" stroke="#ff0000" d="M 0 0 L 8.438 0 "/>
+<text fill="#ff0000" xml:space="preserve" transform="matrix(1 0 -0 1 0 124.715)" font-size="6.9738" font-family="CMMI7" font-style="italic"><tspan y="-82.721" x="147.487 151.63642">dt</tspan></text>
+</g>
+</svg>
