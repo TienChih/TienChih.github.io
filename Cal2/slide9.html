@@ -1,0 +1,473 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>reveal.js</title>
+
+		<link rel="stylesheet" href="dist/reset.css">
+		<link rel="stylesheet" href="dist/reveal.css">
+		<link rel="stylesheet" href="dist/theme/white.css">
+		<link rel="stylesheet" href="plugin/chalkboard/style.css">
+		<link rel="stylesheet" href="plugin/customcontrols/style.css">
+
+		<script src="https://tikzjax.com/v1/tikzjax.js"></script>
+
+
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+
+
+
+		<!-- Theme used for syntax highlighted code -->
+		<link rel="stylesheet" href="plugin/highlight/monokai.css">
+		<style>
+			.container{
+   				 display: flex;
+			}
+			.col{
+    			flex: 1;
+			}
+		</style>
+			<script async defer src="https://buttons.github.io/buttons.js"></script>
+
+		<script src="plugin/menu/menu.js"></script>
+
+
+
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				
+				<section>
+					<h2>It's all Improper</h2>
+					<h4>M 112</h4>
+					
+					
+					<h4>
+						Oxford College of Emory University <a href="https://app.oxford.emory.edu/WebApps/Directory/index.cfm/view/9984" target="_blank">Tien Chih</a>
+					</h4>
+				</section>
+
+
+
+				<section>
+					<section data-auto-animate>
+						<p style="font-size: 25px;" > 
+							Let \(c>1\), compute: \[\int_1^c\frac{1}{x}dx\ \ \ \ \int_1^c\frac{1}{x^2}dx\ \ \ \ \int_1^c\frac{1}{\sqrt{x}}dx.\]
+						</p>
+						
+						
+						<p style="font-size: 25px;" class="fragment"> 
+							Then for each, take the limit as \(c\) tends to infinity.  Which of these limits are defined?
+
+						</p>
+					</section>
+					<section data-auto-animate>
+						<p style="font-size: 25px;" > 
+							Let \(0 < c < 1\), compute: \[\int_c^1\frac{1}{x}dx\ \ \ \ \int_c^1\frac{1}{x^2}dx\ \ \ \ \int_c^1\frac{1}{\sqrt{x}}dx.\]
+						</p>
+						
+						
+						<p style="font-size: 25px;" class="fragment"> 
+							Then for each, take the limit as \(c\) tends to zero from the right.  Which of these limits are defined?
+
+						</p>
+					</section>
+					<section data-auto-animate>
+					<iframe src="https://www.desmos.com/calculator/h7z5lah8ls" width="100%" height="600" style="border: 1px solid #ccc" frameborder=0></iframe>
+
+					
+					</section>
+					<section data-auto-animate>
+					<iframe src="https://www.desmos.com/calculator/xtewfxqe8k" width="100%" height="600" style="border: 1px solid #ccc" frameborder=0></iframe>
+
+					
+					</section>
+				</section>
+
+				<section>
+					<section data-auto-animate>
+					<p style="font-size: 25px;" class="r-frame"> For a  function \(f(x)\) defined for each \(x\) greater than some \(a\), we define the <strong style="color:blue;">improper integral</strong>	\(\displaystyle \int_a^\infty f(x)dx\) as \[\int_a^\infty f(x)dx:=\lim_{c\to \infty}\int_a^c f(x)dx.\]  If an improper integral has a defined value, we say it is <strong style="color:green;">convergent</strong>, otherwise it is  <strong style="color:red;">divergent</strong>.</p>
+
+					<p style="font-size: 25px;" class="fragment"> We define	\(\displaystyle \int_{-\infty}^a f(x)dx\) similarly.</p>
+
+					<p style="font-size: 25px;" class="fragment"> How might we  define	\(\displaystyle \int_{-\infty}^\infty f(x)dx\)?</p>
+
+					
+					</section>
+
+					<section data-auto-animate>
+					<p style="font-size: 25px;" class="r-frame"> Find \[\int_0^\infty e^{-x}dx\]</p>
+
+
+					<p style="font-size: 25px;" class="fragment">Find \[\int_0^\infty xe^{-x}dx\ \ \int_0^\infty x^2e^{-x}dx\ \ \int_0^\infty x^3e^{-x}dx\] (use parts and the previous step(s))</p>
+
+					<p style="font-size: 25px;" class="fragment"> What do you think is the value of this integral \[\int_0^\infty x^ne^{-x}dx?\]</p>
+
+					
+					</section>
+					<section data-auto-animate>
+					<iframe src="https://www.desmos.com/calculator/dnuvfk9fbq" width="100%" height="600" style="border: 1px solid #ccc" frameborder=0></iframe>
+
+					
+					</section>
+					<section data-auto-animate>
+						<p style="font-size: 25px;" class="r-frame"> Find \[\int_{-\infty}^\infty \frac{1}{1+x^2}dx\]</p>
+						<div class="fragment">
+							<p style="font-size: 25px;" class="r-frame"> Find \[\int_{2}^\infty \frac{1}{\sqrt{x+2}}dx\]</p>
+						</div>
+					</section>
+
+				</section>
+
+
+
+				<section>
+					<section>
+					<p style="font-size: 25px;" class="r-frame"> Consider \[\int_0^1 \frac{1}{x}dx\] how might we define this?</p>
+
+					
+					</section>
+					<section data-auto-animate>
+					<p style="font-size: 25px;" class="r-frame"> For a  function \(f(x)\) defined for each \(x\) greater than some \(a\), but not continuous at \(a\), we define the <strong style="color:blue;">improper integral</strong>	\(\displaystyle \int_a^b f(x)dx\) as \[\int_a^b f(x)dx:=\lim_{c\to a^+}\int_c^b f(x)dx\] for \(b>a\). If an improper integral has a defined value, we say it is <strong style="color:green;">convergent</strong>, otherwise it is  <strong style="color:red;">divergent</strong>.
+					</p>
+
+					<p style="font-size: 25px;" class="fragment"> What should be the left analogue?</p>
+
+					
+
+					
+					</section>
+				</section>
+				<section>
+					<section data-auto-animate>
+						<p style="font-size: 25px;" class="r-frame"> Find \[\int_{7\pi/7}^{3\pi/2} \tan(x)dx\]</p>
+						<div class="fragment">
+							<p style="font-size: 25px;" class="r-frame"> Find \[\int_{0}^e \ln(x)dx\]</p>
+						</div>
+					</section>
+				</section>
+
+
+				<section>
+					<section data-auto-animate>
+						<p style="font-size: 25px;" > Without computing anything, is \(\displaystyle \int_1^\infty 3dx\) convergent?</p>
+						<div class="fragment">
+							<p style="font-size: 25px;" > What about \(\displaystyle \int_1^\infty \frac{x+4}{x}dx\)?</p>
+						</div>
+						
+					</section>
+					<section data-auto-animate>
+						<p style="font-size: 25px;" > Suppose \(0 < p, p\neq 1 \) what is \(\displaystyle \int \frac{dx}{x^p}\)?</p>
+						<div class="fragment">
+							<p style="font-size: 25px;" > For what values is \(\displaystyle \int_1^\infty \frac{dx}{x^p} \) convergent?</p>
+						</div>
+						<div class="fragment">
+							<p style="font-size: 25px;" > For what values is \(\displaystyle \int_0^1 \frac{dx}{x^p} \) convergent?</p>
+						</div>
+						<div class="fragment">
+							<p style="font-size: 25px;" > What about \(p=1\)?</p>
+						</div>
+					</section>
+					<section data-auto-animate>
+					<iframe src="https://www.desmos.com/calculator/oll6ylr5pp" width="100%" height="600" style="border: 1px solid #ccc" frameborder=0></iframe>
+
+					
+					</section>
+				</section>
+
+				<section>
+					<section data-auto-animate>
+						<p style="font-size: 25px;" > Suppose \(0< g(x)< f(x)< h(x) \) and \(\displaystyle \int_a^\infty f(x)dx \) is convergent.   What can be said about \(\displaystyle \int_a^\infty g(x)dx\)?</p>
+						<img src="img/finfinity.svg" width="50%">
+						
+						
+							<p style="font-size: 25px;">A) Must be convergent. \(\ \)
+							B) Must be divergent. \(\ \ \) C)Could be either convergent or divergent.</p>
+						
+					</section>
+					<section data-auto-animate>
+						<p style="font-size: 25px;" > Suppose \(0< g(x)< f(x)< h(x) \) and \(\displaystyle \int_a^\infty f(x)dx \) is convergent.   What can be said about \(\displaystyle \int_a^\infty h(x)dx\)?</p>
+						<img src="img/finfinity.svg" width="50%">
+						
+						
+							<p style="font-size: 25px;">A) Must be convergent. \(\ \)
+							B) Must be divergent. \(\ \ \) C)Could be either convergent or divergent.</p>
+						
+					</section>
+
+					<section data-auto-animate>
+						<p style="font-size: 25px;" > Suppose \(0< g(x)< f(x)< h(x) \) and \(\displaystyle \int_1^a f(x)dx \) is convergent.   What can be said about \(\displaystyle \int_1^a g(x)dx\)?</p>
+
+						<div class="container">
+
+							<div class="col">
+								<img src="img/fzero.svg" width="70%">
+							</div>
+							<div class="col">
+								<p style="font-size: 25px;">A) Must be convergent. </p>
+								<br>
+								<p style="font-size: 25px;">B) Must be divergent. </p>
+								<br>
+								<p style="font-size: 25px;">C) Could be either convergent or divergent. </p>
+								
+							</div>
+						</div>
+						
+						
+					</section>
+					<section data-auto-animate>
+						<p style="font-size: 25px;" > Suppose \(0< g(x)< f(x)< h(x) \) and \(\displaystyle \int_1^a f(x)dx \) is convergent.   What can be said about \(\displaystyle \int_1^a h(x)dx\)?</p>
+
+						<div class="container">
+
+							<div class="col">
+								<img src="img/fzero.svg" width="70%">
+							</div>
+							<div class="col">
+								<p style="font-size: 25px;">A) Must be convergent. </p>
+								<br>
+								<p style="font-size: 25px;">B) Must be divergent. </p>
+								<br>
+								<p style="font-size: 25px;">C) Could be either convergent or divergent. </p>
+								
+							</div>
+						</div>
+						
+						
+					</section>
+
+
+
+
+
+					<section data-auto-animate>
+						<p style="font-size: 25px;" > Suppose \(0< g(x)< f(x)< h(x) \) and \(\displaystyle \int_a^\infty f(x)dx \) is divergent.   What can be said about \(\displaystyle \int_a^\infty g(x)dx\)?</p>
+						<img src="img/finfinity.svg" width="50%">
+						
+						
+							<p style="font-size: 25px;">A) Must be convergent. \(\ \)
+							B) Must be divergent. \(\ \ \) C)Could be either convergent or divergent.</p>
+						
+					</section>
+					<section data-auto-animate>
+						<p style="font-size: 25px;" > Suppose \(0< g(x)< f(x)< h(x) \) and \(\displaystyle \int_a^\infty f(x)dx \) is divergent.   What can be said about \(\displaystyle \int_a^\infty h(x)dx\)?</p>
+						<img src="img/finfinity.svg" width="50%">
+						
+						
+							<p style="font-size: 25px;">A) Must be convergent. \(\ \)
+							B) Must be divergent. \(\ \ \) C)Could be either convergent or divergent.</p>
+						
+					</section>
+
+					<section data-auto-animate>
+						<p style="font-size: 25px;" > Suppose \(0< g(x)< f(x)< h(x) \) and \(\displaystyle \int_1^a f(x)dx \) is divergent.   What can be said about \(\displaystyle \int_1^a g(x)dx\)?</p>
+
+						<div class="container">
+
+							<div class="col">
+								<img src="img/fzero.svg" width="70%">
+							</div>
+							<div class="col">
+								<p style="font-size: 25px;">A) Must be convergent. </p>
+								<br>
+								<p style="font-size: 25px;">B) Must be divergent. </p>
+								<br>
+								<p style="font-size: 25px;">C) Could be either convergent or divergent. </p>
+								
+							</div>
+						</div>
+						
+						
+					</section>
+					<section data-auto-animate>
+						<p style="font-size: 25px;" > Suppose \(0< g(x)< f(x)< h(x) \) and \(\displaystyle \int_1^a f(x)dx \) is divergent.   What can be said about \(\displaystyle \int_1^a h(x)dx\)?</p>
+
+						<div class="container">
+
+							<div class="col">
+								<img src="img/fzero.svg" width="70%">
+							</div>
+							<div class="col">
+								<p style="font-size: 25px;">A) Must be convergent. </p>
+								<br>
+								<p style="font-size: 25px;">B) Must be divergent. </p>
+								<br>
+								<p style="font-size: 25px;">C) Could be either convergent or divergent. </p>
+								
+							</div>
+						</div>
+						
+						
+					</section>
+				</section>
+
+				<section>
+					<p style="font-size: 25px;" > Without computing integrals, which converge and which diverge?</p>
+
+					<div class="container">
+
+							<div class="col">
+								<ul>
+									<li style="font-size: 25px;">
+										\(\displaystyle\int_5^\infty\frac{dx}{x-3}.\)
+									</li><br>
+									<li style="font-size: 25px;">
+										\(\displaystyle\int_1^\infty\frac{dx}{\sqrt{x^3+5x+2}}.\)
+									</li><br>
+									<li style="font-size: 25px;">
+										\(\displaystyle\int_e^\infty\frac{dx}{\ln(x)}.\)
+									</li><br>
+									<li style="font-size: 25px;">
+										\(\displaystyle\int_2^\infty\frac{x^2+5x+3}{x^2+2x+1}dx.\)
+									</li><br>
+									<li style="font-size: 25px;">
+										\(\displaystyle\int_4^\infty\frac{1}{x^2\ln(x)}dx.\)
+									</li><br>
+								</ul>
+							</div>
+							<div class="col">
+								<ul>
+									<li style="font-size: 25px;">
+											\(\displaystyle\int_3^5\frac{dx}{x-3}.\)
+									</li><br>
+
+									<li style="font-size: 25px;">
+											\(\displaystyle\int_0^\infty e^{-x^2}dx.\)
+									</li><br>
+
+									<li style="font-size: 25px;">
+											\(\displaystyle\int_0^1 \frac{\sin(x)}{\sqrt{x}} dx.\)
+									</li><br>
+									<li style="font-size: 25px;">
+											\(\displaystyle\int_0^1 \frac{1}{x^2+x+7} dx.\)
+									</li><br>
+									<li style="font-size: 25px;">
+											\(\displaystyle\int_0^1 \frac{1}{e^x-1} dx.\)
+									</li><br>
+								</ul>
+								
+							</div>
+						</div>
+				</section>
+
+
+
+
+
+				
+				
+
+
+
+
+
+
+
+
+
+
+				
+
+
+					
+
+
+				
+
+
+				
+
+				
+
+
+
+
+				
+					
+				
+			</div>
+		</div>
+
+		<script src="dist/reveal.js"></script>
+		<script src="plugin/notes/notes.js"></script>
+		<script src="plugin/markdown/markdown.js"></script>
+		<script src="plugin/highlight/highlight.js"></script>
+		<script>
+			// More info about initialization & config:
+			// - https://revealjs.com/initialization/
+			// - https://revealjs.com/config/
+			Reveal.initialize({
+				hash: true,
+
+				// Learn about plugins: https://revealjs.com/plugins/
+				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
+			});
+		</script>
+		<script src="plugin/math/math.js"></script>
+		<script src="plugin/chalkboard/plugin.js"></script>
+		<script src="plugin/customcontrols/plugin.js"></script>
+
+
+
+	<script>
+  	Reveal.initialize({
+		math: {
+			mathjax: 'https://cdn.jsdelivr.net/gh/mathjax/mathjax@2.7.8/MathJax.js',
+			config: 'TeX-AMS_HTML-full',
+			// pass other options into `MathJax.Hub.Config()`
+			TeX: { Macros: { RR: "{\\bf R}" } }
+		},
+
+		chalkboard: {
+        boardmarkerWidth: 3,
+        chalkWidth: 7,
+        chalkEffect: 1.0,
+        storage: null,
+        src: null,
+        readOnly: undefined,
+        transition: 800,
+        theme: "chalkboard",
+        background: [ 'rgba(127,127,127,.1)' , path + 'img/blackboard.png' ],
+        grid: { color: 'rgb(50,50,10,0.5)', distance: 80, width: 2},
+        eraser: { src: path + 'img/sponge.png', radius: 20},
+        boardmarkers : [
+                { color: 'rgba(100,100,100,1)', cursor: 'url(' + path + 'img/boardmarker-black.png), auto'},
+                { color: 'rgba(30,144,255, 1)', cursor: 'url(' + path + 'img/boardmarker-blue.png), auto'},
+                { color: 'rgba(220,20,60,1)', cursor: 'url(' + path + 'img/boardmarker-red.png), auto'},
+                { color: 'rgba(50,205,50,1)', cursor: 'url(' + path + 'img/boardmarker-green.png), auto'},
+                { color: 'rgba(255,140,0,1)', cursor: 'url(' + path + 'img/boardmarker-orange.png), auto'},
+                { color: 'rgba(150,0,20150,1)', cursor: 'url(' + path + 'img/boardmarker-purple.png), auto'},
+                { color: 'rgba(255,220,0,1)', cursor: 'url(' + path + 'img/boardmarker-yellow.png), auto'}
+        ],
+        chalks: [
+                { color: 'rgba(255,255,255,0.5)', cursor: 'url(' + path + 'img/chalk-white.png), auto'},
+                { color: 'rgba(96, 154, 244, 0.5)', cursor: 'url(' + path + 'img/chalk-blue.png), auto'},
+                { color: 'rgba(237, 20, 28, 0.5)', cursor: 'url(' + path + 'img/chalk-red.png), auto'},
+                { color: 'rgba(20, 237, 28, 0.5)', cursor: 'url(' + path + 'img/chalk-green.png), auto'},
+                { color: 'rgba(220, 133, 41, 0.5)', cursor: 'url(' + path + 'img/chalk-orange.png), auto'},
+                { color: 'rgba(220,0,220,0.5)', cursor: 'url(' + path + 'img/chalk-purple.png), auto'},
+                { color: 'rgba(255,220,0,0.5)', cursor: 'url(' + path + 'img/chalk-yellow.png), auto'}
+        ]
+    },
+    customcontrols: {
+  		controls: [
+  			{ icon: '<i class="fa fa-pen-square"></i>',
+  			  title: 'Toggle chalkboard (B)',
+  			  action: 'RevealChalkboard.toggleChalkboard();'
+  			},
+  			{ icon: '<i class="fa fa-pen"></i>',
+  			  title: 'Toggle notes canvas (C)',
+  			  action: 'RevealChalkboard.toggleNotesCanvas();'
+  			}
+  		]
+    },
+
+		plugins: [ RevealMath, RevealChalkboard, RevealCustomControls, RevealMenu  ]
+		});
+	</script>
+
+	</body>
+</html>

@@ -1,0 +1,647 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>reveal.js</title>
+
+		<link rel="stylesheet" href="dist/reset.css">
+		<link rel="stylesheet" href="dist/reveal.css">
+		<link rel="stylesheet" href="dist/theme/white.css">
+		<link rel="stylesheet" href="plugin/chalkboard/style.css">
+		<link rel="stylesheet" href="plugin/customcontrols/style.css">
+
+		<script src="https://tikzjax.com/v1/tikzjax.js"></script>
+
+
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+
+
+
+		<!-- Theme used for syntax highlighted code -->
+		<link rel="stylesheet" href="plugin/highlight/monokai.css">
+		<style>
+			.container{
+   				 display: flex;
+			}
+			.col{
+    			flex: 1;
+			}
+		</style>
+			<script async defer src="https://buttons.github.io/buttons.js"></script>
+
+		<script src="plugin/menu/menu.js"></script>
+
+
+
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				
+				<section>
+					<h2>Sequential Convergence</h2>
+					<h4>M 112</h4>
+					
+					
+					<h4>
+						Oxford College of Emory University <a href="https://app.oxford.emory.edu/WebApps/Directory/index.cfm/view/9984" target="_blank">Tien Chih</a>
+					</h4>
+				</section>
+
+
+
+				<section>
+
+					<section data-auto-animate>
+						<h4>Sequences</h4>
+						<div  >
+							<p style="font-size: 25px;" >
+								A <strong>sequence</strong> is a function on integer values, usually denoted \(a_n\).
+							</p>
+									
+
+						</div>
+
+						<div class="fragment">
+							<p style="font-size: 25px;" >
+								A <strong>finite</strong> sequence is defined for \(m \leq n\leq p\). For example for \(1\leq n\leq 5\), the assocated sequence has the form \[a_1, a_2, a_3, a_4, a_5\]
+							</p>	
+						</div>
+
+						<div class="fragment">
+							<p style="font-size: 25px;" >
+								An <strong>infinite</strong> sequence is defined for \(n\geq m\) (\(m\) is usually 0 or 1). For example for \(n\geq 0\), the assocated sequence has the form \[a_0, a_1, a_2, \ldots, a_n,\ldots\]
+							</p>	
+						</div>	
+
+						
+					</section>
+
+					<section data-auto-animate>
+						<h4>Defining a Sequence</h4>
+						<div  >
+							<p style="font-size: 25px;" >
+								A sequence may be defined <strong>explicitly</strong>...
+							</p>
+
+							<p  style="font-size: 25px;" >
+								For \(a_n=n^2-3n, n\geq 1\) the first few terms of the sequence would be \[-2,-2,0,4,\ldots\] what are \(a_5, a_6\)?
+							</p>	
+									
+
+						</div>
+
+						
+
+
+						<div class="fragment">
+							<p style="font-size: 25px;" >
+								or  <strong>recursively</strong>.
+							</p>
+
+							<p style="font-size: 25px;" >
+								For \(b_{n+1}=2b_n-b_{n-1}+2, b_1=-2, b_2=-2\) the next few terms of the sequence would be \[b_3=2(b_2)-(b_1)+2=0, b_4=2(b_3)-(b_2)+2=4.\] 
+							</p>
+						</div>	
+
+						<div class="fragment">
+							<p style="font-size: 25px;" >
+								What is \(b_5\)?
+							</p>
+
+							
+						</div>	
+
+						
+					</section>
+
+					
+
+					
+				</section>
+
+				<section>
+					
+					<section data-auto-animate>
+						<h4>Special Sequences</h4>
+						<div  >
+							<p style="font-size: 25px;" >
+								An <strong>arithmetic</strong> sequence has the form \(a_n=m\cdot n + b\).  (Think linear function)
+							</p>
+
+								
+
+									
+
+						</div>
+						<div class = "fragment">
+							<p style="font-size: 25px;" >
+								Find an explict formula for the sequence \[2,5,8,11, \ldots\] where \(n\geq 1\).
+							</p>
+							<p style="font-size: 25px;">
+								<strong>(A)</strong>: \(3n, \ \ \)
+								<strong>(B)</strong>: \(2n, \ \ \)
+								<strong>(C)</strong>: \(3n+2, \ \ \)
+								<strong>(D)</strong>: \(3n-1.\)
+							</p>	
+						</div>
+
+						<div class="fragment">
+							<p style="font-size: 25px;" >
+								A <strong>geometric</strong> sequence has the form \(a_n=\alpha\cdot r^n\).   (Think exponential function)
+							</p>
+
+							<p style="font-size: 25px;" >
+								
+							</p>	
+						</div>	
+
+						<div class = "fragment">
+							<p style="font-size: 25px;" >
+								Find an explict formula for the sequence \[2,6,18,54, \ldots\] where \(n\geq 0\). 
+							</p>
+							<p style="font-size: 25px;">
+								<strong>(A)</strong>: \(3^n, \ \ \)
+								<strong>(B)</strong>: \(n^3, \ \ \)
+								<strong>(C)</strong>: \(2\cdot 3^n, \ \ \)
+								<strong>(D)</strong>: \(3\cdot 2^n.\)
+							</p>	
+						</div>
+
+						
+					</section>
+				</section>
+
+				<section>
+					<section data-auto-animate>
+						<div label="statement">
+							<p style="font-size: 25px;" > 
+								Recall: a <strong>sequence</strong> is a function from a set of integers to the real numbers, usually denoted \(\{a_n\}\).
+							</p>	
+									
+
+						</div>
+
+						
+
+						<div class="fragment">
+							<iframe src="https://www.desmos.com/calculator/dxves6yacd" width="90%" height="500" style="border: 1px solid #ccc" frameborder=0></iframe>
+
+							<p style="font-size: 25px;" > 
+								We say the <strong>limit</strong> of \(\{a_n\}\) (if it exists) is a number \(L\) so that \(a_n\) is as close to \(L\) as we please, for every \(n\) sufficiently big.
+							</p>
+							
+
+						</div>
+
+
+
+						
+
+						
+
+						
+					</section>
+
+
+					
+
+					<section data-auto-animate>
+						<div label="statement">
+							<p style="font-size: 25px;" > 
+								Let \(a_n = \frac{1}{n} + (-1)^n \)
+							</p>	
+									
+
+						</div>
+
+						
+
+						<div >
+							<iframe src="https://www.desmos.com/calculator/tolep9csq3" width="90%" height="450" style="border: 1px solid #ccc" frameborder=0></iframe>
+
+							<p style="font-size: 25px;" > 
+								To what does \(a_n\) converge?
+							</p>
+							<div class="container">
+
+								<div class="col" >
+									<ol start="1" type="A">
+										<li style="font-size: 25px;" >\(1\)</li>
+										<li style="font-size: 25px;" >\(-1\)</li>
+									</ol>
+								</div>
+
+								<div class="col">
+									<ol start="3" type="A">
+										<li style="font-size: 25px;" >Both</li>
+										<li style="font-size: 25px;" >Neither</li>
+										
+									</ol>
+								</div>
+
+								
+
+							</div>
+							
+
+						</div>
+
+						
+
+						
+
+						
+
+						
+					</section>
+
+					
+					
+				</section>
+
+
+				<section>
+
+					<section data-auto-animate>
+						<div label="statement" class="r-frame">
+							<p style="font-size: 25px;" > 
+								Use the calculator below and adjust \(p\).  For which values of \(p\) does \(\frac{1}{n^p}\) converge?
+							</p>	
+									
+
+						</div>
+
+						
+
+						<div >
+							<iframe src="https://www.desmos.com/calculator/btrxoihph1" width="90%" height="500" style="border: 1px solid #ccc" frameborder=0></iframe>
+
+							
+							
+
+						</div>
+
+
+
+						
+
+						
+
+						
+					</section>
+
+
+					<section data-auto-animate>
+						<div label="statement" class="r-frame">
+							<p style="font-size: 25px;" > 
+								\(\frac{1}{n^p}\to 0\) if \(p>0\).
+							</p>	
+									
+
+						</div>
+
+						
+
+						<div >
+							<iframe src="https://www.desmos.com/calculator/btrxoihph1" width="90%" height="500" style="border: 1px solid #ccc" frameborder=0></iframe>
+
+							
+							
+
+						</div>
+
+
+
+						
+
+						
+
+						
+					</section>
+
+					<section data-auto-animate>
+						<div label="statement" class="r-frame">
+							<p style="font-size: 25px;" > 
+								For which \(r\) does the sequence \(r^n\) converge?
+							</p>	
+									
+
+						</div>
+
+						
+
+						<div >
+							<iframe src="https://www.desmos.com/calculator/tvjuhjcfeu" width="90%" height="500" style="border: 1px solid #ccc" frameborder=0></iframe>
+
+							
+							
+
+						</div>
+
+
+
+						
+
+						
+
+						
+					</section>
+
+
+
+					<section data-auto-animate>
+						<div label="statement" class="r-frame">
+							<p style="font-size: 25px;" > 
+								\(r^n\to 0\) if \(-1 < r \leq 1\).
+							</p>	
+									
+
+						</div>
+
+						
+
+						<div >
+							<iframe src="https://www.desmos.com/calculator/tvjuhjcfeu" width="90%" height="500" style="border: 1px solid #ccc" frameborder=0></iframe>
+
+							
+							
+
+						</div>
+
+
+
+						
+
+						
+
+						
+					</section>
+
+
+					<section data-auto-animate>
+						<div label="statement" class="r-frame">
+							<p style="font-size: 25px;" > 
+								Let \(M\) and \(r\) be positive constants with \(r< 1\) and suppose \(b_n\to K\) for some number \(K\).
+							</p>	
+
+
+							<ul>
+								<li style="font-size: 25px;"> If \(|a_n-L|\leq M\cdot \frac{1}{n}\) for all sufficiently large \(n\) then \(a_n\to L\).</li>
+								<li style="font-size: 25px;"> If \(|a_n-L|\leq M\cdot r^n\) for all sufficiently large \(n\) and \(0< r <1\) then \(a_n\to L\).</li>
+								<li style="font-size: 25px;"> If \(|a_n-L|\leq |b_n-K|\) for all sufficiently large \(n\) then \(a_n\to L\).</li>	
+							</ul>
+									
+
+						</div>
+
+						<div class="fragment">
+							<p style="font-size: 25px;" > 
+								If \(\left| \frac{a_{n+1}}{a_n} \right|\leq r <1\) for all sufficiently large \(n\) then \(a_n\to L\).
+							</p>	
+
+
+							
+									
+
+						</div>
+
+						
+						
+					</section>
+
+					<section data-auto-animate>
+						<div label="statement" >
+
+							<p style="font-size: 25px;" > 
+								Let \(\displaystyle \lim_{n\to \infty} a_n  = L, \lim_{n\to \infty} b_n  = K\).
+							</p>
+								
+
+
+							<ul>
+								<li style="font-size: 25px;"> \(\displaystyle \lim_{n\to \infty} (a_n+b_n) = L+K \).</li>
+								<li style="font-size: 25px;"> \(\displaystyle \lim_{n\to \infty} (a_n-b_n) = L-K \).</li>
+								<li style="font-size: 25px;"> \(\displaystyle \lim_{n\to \infty} (a_nb_n) = LK \).</li>	
+								<li style="font-size: 25px;"> \(\displaystyle \lim_{n\to \infty} (a_n/b_n) = L/K \) if \(K\neq 0\).</li>
+								<li style="font-size: 25px;"> \(\displaystyle \lim_{n\to \infty} (a_{n+m}) = L \) for any positive integer \(m\).</li>
+							</ul>
+									
+
+						</div>
+
+					
+
+						
+						
+					</section>
+
+					<section data-auto-animate>
+						<div label="statement" class="r-frame">
+
+							<p style="font-size: 25px;" > 
+								If \(f(x)\) is continuous at \(c\) and \(a_n\to c\) then \(f(a_n)\to f(c)\).
+							</p>
+
+							<iframe src="https://www.desmos.com/calculator/uqh92odevj" width="90%" height="400" style="border: 1px solid #ccc" frameborder=0></iframe>
+								
+
+
+							
+									
+
+						</div>
+
+						<div class="fragment">
+
+							<p style="font-size: 25px;" > 
+								<ol>
+								<li style="font-size: 25px;">Since \(f\) is continuous at \(c, f(x)\)  can be made as close to \(f(c)\)  by making \(x\) close to \(c\). </li>
+								<li style="font-size: 25px;"> Since \(a_n\to c, a_n\) can be made as close to \(c\) as we please by making \(n\) sufficiently big. </li>
+								<li style="font-size: 25px;"> So if \(n\) is sufficiently, \(f(a_n)\) can be made as close to \(f(c)\) as we please.</li>
+								</ol>
+							</p>
+								
+
+
+							
+									
+
+						</div>
+
+					
+
+						
+						
+					</section>
+
+
+					
+
+					
+					
+				</section>
+
+
+				<section>
+					<section data-auto-animate>
+						<p style="font-size: 25px;" > 
+							Find \[\lim_{n\to \infty} \cos\left(\frac{\pi}{n}\right).\]
+						</p>
+						<p style="font-size: 25px;" class="fragment"> 
+							Find \[\lim_{n\to \infty} \frac{n!}{n^n}\] (hint: starting at \(n=1\), write out a few terms and see if you can see a pattern.)
+						</p>
+					</section>
+				</section>
+
+				<section>
+					<section data-auto-animate>
+						<p style="font-size: 25px;" > 
+							Sketch a positive sequence where each term is less than the previous.
+						</p>
+						<p style="font-size: 25px;" class="fragment"> 
+							Does your sequence converge?
+						</p>
+					</section>
+
+					<section data-auto-animate>
+						<p style="font-size: 25px;" class="r-frame"> 
+							A sequence \(\{a_n\}\) is called <strong style="color:blue;">increasing</strong> if whenever \(m>n\), we have \(a_m > a_n\).  (Decreasing defined similarly.)  
+						</p>
+						<div class="fragment">
+						<p style="font-size: 25px;" class="r-frame"> 
+							A sequence \(\{a_n\}\) is called <strong style="color:blue;">bounded above</strong> if there is a \(c\) such that \(a_n\leq c\) for all \(n\).  Similarly for bounded below.
+
+						</p>
+						</div>
+					</section>
+
+					<section data-auto-animate>
+						<p style="font-size: 25px;" class="r-frame"> 
+							<strong>Theorem</strong><br> A decreasing (increasing) bounded below (above) converges.
+						</p>
+						<div class="fragment">
+						<iframe src="https://www.desmos.com/calculator/hsmtgjdbda" width="100%" height="500" style="border: 1px solid #ccc" frameborder=0></iframe>
+						</div>
+					</section>
+				</section>
+
+
+
+
+				
+				
+
+
+
+
+
+
+
+
+
+
+				
+
+
+					
+
+
+				
+
+
+				
+
+				
+
+
+
+
+				
+					
+				
+			</div>
+		</div>
+
+		<script src="dist/reveal.js"></script>
+		<script src="plugin/notes/notes.js"></script>
+		<script src="plugin/markdown/markdown.js"></script>
+		<script src="plugin/highlight/highlight.js"></script>
+		<script>
+			// More info about initialization & config:
+			// - https://revealjs.com/initialization/
+			// - https://revealjs.com/config/
+			Reveal.initialize({
+				hash: true,
+
+				// Learn about plugins: https://revealjs.com/plugins/
+				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
+			});
+		</script>
+		<script src="plugin/math/math.js"></script>
+		<script src="plugin/chalkboard/plugin.js"></script>
+		<script src="plugin/customcontrols/plugin.js"></script>
+
+
+
+	<script>
+  	Reveal.initialize({
+		math: {
+			mathjax: 'https://cdn.jsdelivr.net/gh/mathjax/mathjax@2.7.8/MathJax.js',
+			config: 'TeX-AMS_HTML-full',
+			// pass other options into `MathJax.Hub.Config()`
+			TeX: { Macros: { RR: "{\\bf R}" } }
+		},
+
+		chalkboard: {
+        boardmarkerWidth: 3,
+        chalkWidth: 7,
+        chalkEffect: 1.0,
+        storage: null,
+        src: null,
+        readOnly: undefined,
+        transition: 800,
+        theme: "chalkboard",
+        background: [ 'rgba(127,127,127,.1)' , path + 'img/blackboard.png' ],
+        grid: { color: 'rgb(50,50,10,0.5)', distance: 80, width: 2},
+        eraser: { src: path + 'img/sponge.png', radius: 20},
+        boardmarkers : [
+                { color: 'rgba(100,100,100,1)', cursor: 'url(' + path + 'img/boardmarker-black.png), auto'},
+                { color: 'rgba(30,144,255, 1)', cursor: 'url(' + path + 'img/boardmarker-blue.png), auto'},
+                { color: 'rgba(220,20,60,1)', cursor: 'url(' + path + 'img/boardmarker-red.png), auto'},
+                { color: 'rgba(50,205,50,1)', cursor: 'url(' + path + 'img/boardmarker-green.png), auto'},
+                { color: 'rgba(255,140,0,1)', cursor: 'url(' + path + 'img/boardmarker-orange.png), auto'},
+                { color: 'rgba(150,0,20150,1)', cursor: 'url(' + path + 'img/boardmarker-purple.png), auto'},
+                { color: 'rgba(255,220,0,1)', cursor: 'url(' + path + 'img/boardmarker-yellow.png), auto'}
+        ],
+        chalks: [
+                { color: 'rgba(255,255,255,0.5)', cursor: 'url(' + path + 'img/chalk-white.png), auto'},
+                { color: 'rgba(96, 154, 244, 0.5)', cursor: 'url(' + path + 'img/chalk-blue.png), auto'},
+                { color: 'rgba(237, 20, 28, 0.5)', cursor: 'url(' + path + 'img/chalk-red.png), auto'},
+                { color: 'rgba(20, 237, 28, 0.5)', cursor: 'url(' + path + 'img/chalk-green.png), auto'},
+                { color: 'rgba(220, 133, 41, 0.5)', cursor: 'url(' + path + 'img/chalk-orange.png), auto'},
+                { color: 'rgba(220,0,220,0.5)', cursor: 'url(' + path + 'img/chalk-purple.png), auto'},
+                { color: 'rgba(255,220,0,0.5)', cursor: 'url(' + path + 'img/chalk-yellow.png), auto'}
+        ]
+    },
+    customcontrols: {
+  		controls: [
+  			{ icon: '<i class="fa fa-pen-square"></i>',
+  			  title: 'Toggle chalkboard (B)',
+  			  action: 'RevealChalkboard.toggleChalkboard();'
+  			},
+  			{ icon: '<i class="fa fa-pen"></i>',
+  			  title: 'Toggle notes canvas (C)',
+  			  action: 'RevealChalkboard.toggleNotesCanvas();'
+  			}
+  		]
+    },
+
+		plugins: [ RevealMath, RevealChalkboard, RevealCustomControls, RevealMenu  ]
+		});
+	</script>
+
+	</body>
+</html>
