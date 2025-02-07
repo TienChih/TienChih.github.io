@@ -226,8 +226,8 @@
 					<section data-auto-animate>
 						<h4>Sums</h4>
 						<div  >
-							<p style="font-size: 25px;" >
-								A <strong>sequence of sums</strong> of the form \(s_n = \displaystyle \sum_{k=m}^n a_k\) is a sequence defined by \[s_m=\displaystyle \sum_{k=m}^m a_k = a_m, s_{n+1} = \sum_{k=m}^{n+1} a_k := \sum_{k=m}^{n}a_k + a_{n+1}=s_n+a_{n+1}\]
+							<p style="font-size: 25px;" class="r-frame">
+								Given a sequence \(\{a_n\}\), a <strong>sequence of partial sums</strong> is a sequence of the form \(s_n = \displaystyle \sum_{k=m}^n a_k\) is a sequence defined by \[s_m=\displaystyle \sum_{k=m}^m a_k = a_m, s_{n+1} = \sum_{k=m}^{n+1} a_k := \sum_{k=m}^{n}a_k + a_{n+1}=s_n+a_{n+1}\]
 							</p>
 
 							
@@ -521,6 +521,70 @@
 					</section>
 
 
+				</section>
+
+				<section>
+					<section data-auto-animate>
+						<div >
+							<p style="font-size: 25px;" >
+								A sum is called <strong>telescoping</strong> if succesive terms cancel out the middle terms. \[\sum_{i=1}^n (Q(t_{i+1})-Q(t_i))=Q(t_{n+1})-Q(t_1)\]
+							</p>
+						</div>
+						<div class="fragment">
+							<p style="font-size: 25px;" >
+								Write out the three terms of \(\displaystyle \sum_{i=0}^2 (2^{i+1}-2^i)\).  Do anything cancel?
+								
+								
+							</p>
+							
+						</div>
+
+						<div class="fragment">
+							<p style="font-size: 25px;" >
+								Write out the  terms of \(\displaystyle \sum_{i=0}^4 (2^{i+1}-2^i)\).  Do anything cancel?
+								
+								
+							</p>
+							
+						</div>
+
+						<div class="fragment">
+							<p style="font-size: 25px;" >
+								How do you think \(\displaystyle \sum_{i=0}^n (2^{i+1}-2^i)\) would simplify?
+
+								
+								
+							</p>
+							<p style="font-size: 25px;" >
+								<strong>(A)</strong>: \(2^n, \ \ \) 
+								<strong>(B)</strong>: \(2^n-1, \ \ \) 
+								<strong>(C)</strong>: \(2^{n+1}, \ \ \) 
+								<strong>(D)</strong>: \(2^{n+1}-1. \ \ \) 
+							</p>
+							
+						</div>
+					</section>
+
+					
+				</section>
+
+				<section>
+					<section data-auto-animate>
+						<p style="font-size: 25px;" class="r-frame">
+							Given a sequence \(\{a_n\}\) and it's partial sum sequence \(s_n=\displaystyle \sum_{k=m}^n a_n\), we define \[\sum_{k=m}^\infyu a_n=\lim_{n\to \infty} s_n.\]
+							If this limit is defined, we say this limit is <strong style="color:blue;">convergent</strong>, otherwise it is <strong style="color:red;">divergent</strong>.
+						</p>
+						<p style="font-size: 25px;" class="r-frame">
+							What are \[\sum_{k=0}^n3\left( \frac{1}{2}\right)^k, \sum_{k=1}^n2\left( \frac{5}{4}\right)^k?\]
+						</p>
+
+						<p style="font-size: 25px;" class="r-frame">
+							What are \[\sum_{k=0}^n\left( \frac{1}{n+1} - \frac{1}{n+2} \right), \sum_{k=1}^n \frac{2}{(2k+1)(2k+3)}?\]
+						</p>
+					</section>
+					<section data-auto-animate>
+						<iframe src="https://www.desmos.com/calculator/nlnehcgtqk?embed" width="100%" height="600" style="border: 1px solid #ccc" frameborder=0></iframe>
+					</section>
 				</section>
 
 				<!--<section>

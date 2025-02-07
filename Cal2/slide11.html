@@ -1,0 +1,681 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>reveal.js</title>
+
+		<link rel="stylesheet" href="dist/reset.css">
+		<link rel="stylesheet" href="dist/reveal.css">
+		<link rel="stylesheet" href="dist/theme/white.css">
+		<link rel="stylesheet" href="plugin/chalkboard/style.css">
+		<link rel="stylesheet" href="plugin/customcontrols/style.css">
+
+		<script src="https://tikzjax.com/v1/tikzjax.js"></script>
+
+
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+
+
+
+		<!-- Theme used for syntax highlighted code -->
+		<link rel="stylesheet" href="plugin/highlight/monokai.css">
+		<style>
+			.container{
+   				 display: flex;
+			}
+			.col{
+    			flex: 1;
+			}
+		</style>
+			<script async defer src="https://buttons.github.io/buttons.js"></script>
+
+		<script src="plugin/menu/menu.js"></script>
+
+
+
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				
+				<section>
+					<h2>Why So Series?</h2>
+					<h4>M 112</h4>
+					
+					
+					<h4>
+						Oxford College of Emory University <a href="https://app.oxford.emory.edu/WebApps/Directory/index.cfm/view/9984" target="_blank">Tien Chih</a>
+					</h4>
+				</section>
+
+
+				<section>	
+
+					<section data-auto-animate>
+						<h4>Sums</h4>
+						<div  >
+							<p style="font-size: 25px;" class="r-frame">
+								Given a sequence \(\{a_n\}\), a <strong>sequence of partial sums</strong> is a sequence of the form \(s_n = \displaystyle \sum_{k=m}^n a_k\) is a sequence defined by \[s_m=\displaystyle \sum_{k=m}^m a_k = a_m, s_{n+1} = \sum_{k=m}^{n+1} a_k := \sum_{k=m}^{n}a_k + a_{n+1}=s_n+a_{n+1}\]
+							</p>
+
+							
+									
+
+						</div>
+
+						<div class="fragment">
+							<p style="font-size: 25px;" >
+								For example, if  \[s_n = \displaystyle\sum_{k=1}^n 2k\] then \[s_5 = \sum_{k=1}^5 2k = 2(1) +2(2)+2(3) + 2(4) +2(5) = 2 + 4 + 6+ 8 +10.\]
+							</p>
+
+							
+						</div>	
+
+						
+
+						
+					</section>
+					<section data-auto-animate>
+						<h4>Sums</h4>
+						<div  >
+							<p style="font-size: 25px;" >
+								Match the following:
+							</p>
+						</div>
+
+						<div class="container">
+							<div class="col">
+								<ol type="alphaList">
+									<li style="font-size: 25px;">
+										\(\displaystyle \sum_{k=1}^5 (2k-1)\)
+									</li>
+
+									<li style="font-size: 25px;">
+										\(\displaystyle \sum_{k=0}^5 (2k+1)\)
+									</li>
+
+									<li style="font-size: 25px;">
+										\(\displaystyle \sum_{k=1}^5 2^k\)
+									</li>
+
+									<li style="font-size: 25px;">
+										\(\displaystyle \sum_{k=0}^4 2^k\)
+									</li>	
+								</ol>
+							</div>	
+
+							<div class="col">
+								<ol type="alphaList"	>
+									<li style="font-size: 25px;">
+										\(1+2+4+8+16\)
+									</li>
+									<br>
+
+									<li style="font-size: 25px;">
+										\(1+3+5+7+9+11\)
+									</li>
+									<br>
+
+									<li style="font-size: 25px;">
+										\(1+3+5+7+9\)
+									</li>
+									<br>
+
+									<li style="font-size: 25px;">
+										\(2+4+8+16+32\)
+									</li>	
+								</ol>
+							</div>	
+									
+
+						</div>
+
+						
+
+					</section>	
+
+
+
+					<section data-auto-animate>
+						<h4>Sums</h4>
+						<div  >
+							<p style="font-size: 25px;" >
+								Match the following:
+							</p>
+						</div>
+
+						<div class="container">
+							<div class="col">
+								<ol type="alphaList">
+									<li style="font-size: 25px;">
+										\(\displaystyle \sum_{k=0}^5 x^k\)
+									</li>
+
+
+									<li style="font-size: 25px;">
+										\(\displaystyle \sum_{k=0}^5 y^k\)
+									</li>
+
+									<li style="font-size: 25px;">
+										\(\displaystyle \sum_{k=0}^5 x^ky^k\)
+									</li>
+
+									<li style="font-size: 25px;">
+										\(\displaystyle \sum_{k=0}^5 x^ky^{5-k}\)
+									</li>	
+								</ol>
+							</div>	
+
+							<div class="col">
+								<ol type="alphaList"	>
+									<li style="font-size: 25px;">
+										\(1+x+x^2+x^3+x^4+x^5\)
+									</li>
+									<br>
+
+									<li style="font-size: 25px;">
+										\(x^5+x^4y+x^3y^2+x^2y^3+xy^4+y^5 \)
+									</li>
+									<br>
+
+									<li style="font-size: 25px;">
+										\(1+xy+x^2y^2+x^3y^3+x^4y^4+x^5y^5\)
+									</li>
+									<br>
+
+									<li style="font-size: 25px;">
+										\(1+y+y^2+y^3+y^4+y^5\)
+									</li>	
+								</ol>
+							</div>	
+									
+
+						</div>
+
+						
+
+					</section>	
+
+					<section data-auto-animate>
+						<h4>Sums</h4>
+						<div  >
+							<p style="font-size: 25px;" >
+								Match the following:
+							</p>
+						</div>
+
+						<div class="container">
+							<div class="col">
+								<ol type="alphaList">
+									<li style="font-size: 25px;">
+										\(\displaystyle \sum_{k=0}^n x^ky^{n-k}\)
+									</li>
+
+
+									<li style="font-size: 25px;">
+										\(\displaystyle \sum_{k=1}^n x^k\)
+									</li>
+
+									
+								</ol>
+							</div>	
+
+							<div class="col">
+								<ol type="alphaList"	>
+									<li style="font-size: 25px;">
+										\(1+x+x^2+x^3+\cdots +x^n\)
+									</li>
+									<br>
+
+									<li style="font-size: 25px;">
+										\(x+x^2+\cdots +x^n\)
+									</li>
+									<br>
+
+									<li style="font-size: 25px;">
+										\(x^n+x^{n-1}y+x^{n-2}y^2+\cdots +xy^{n-1}+y^n\)
+									</li>
+									<br>
+
+									<li style="font-size: 25px;">
+										\(1+xy^{-1}+x^2y^{-2}+\cdots+x^ny^{-n}\)
+									</li>	
+								</ol>
+							</div>	
+									
+
+						</div>
+
+						
+
+					</section>	
+
+				</section>
+
+				<section>	
+
+					<section data-auto-animate>
+						<h4>Special Sequences</h4>
+						<div  >
+							<p style="font-size: 25px;" >
+								(finite) Sums are  <strong>linear</strong> \[\displaystyle \sum_{i=m}^n ca_i = c\sum_{i=m}^n a_i, \ \ \  \sum_{i=m}^n (a_i+b_i)=\sum_{i=m}^n a_i+\sum_{i=m}^n b_i.\]
+							</p>
+
+							
+									
+
+						</div>
+
+
+						<div class="fragment">
+							<p style="font-size: 25px;" >
+								\[c(a_1+a_2+a_3)=ca_1+ca_2+ca_3.\]
+								\[(a_1+b_1) + (a_2+b_2)+(a_3+b_3)= (a_1+a_2+a_3)+(b_1+b_2+b_3).\]
+							</p>
+
+							
+						</div>	
+
+						
+
+						
+					</section>
+
+
+					<section data-auto-animate>
+						<div  >
+							<p style="font-size: 25px;" >
+								Suppose that \(\displaystyle \sum_{i=3}^n a_i = 5, \sum_{i=3}^n b_i = 7, \sum_{i=3}^n a_i^2 = 8\)
+							</p>
+
+							<p style="font-size: 25px;" >
+								What is \(\displaystyle \sum_{i=3}^n (2a_i+3b_i)\)?
+							</p>
+							
+									
+
+						</div>
+
+
+						<div class="fragment">
+							<p style="font-size: 25px;" >
+								What is \(\displaystyle \sum_{i=1}^n 1\)? (Hint, what if \(n=5\))?
+							</p>
+
+							<p style="font-size: 25px;" >
+								<strong>(A)</strong>: \(n, \ \ \) 
+								<strong>(B)</strong>: \(n-1, \ \ \) 
+								<strong>(C)</strong>: \(n+1, \ \ \) 
+								<strong>(D)</strong>: \(1.\) 
+							</p>
+
+							
+						</div>	
+
+						<div class="fragment">
+							<p style="font-size: 25px;" >
+								What is \(\displaystyle \sum_{i=3}^n 1\)? (Hint, what if \(n=5\))?
+							</p>
+
+							<p style="font-size: 25px;" >
+								<strong>(A)</strong>: \(n, \ \ \) 
+								<strong>(B)</strong>: \(n-3, \ \ \) 
+								<strong>(C)</strong>: \(n-2, \ \ \) 
+								<strong>(D)</strong>: \(n+3.\) 
+							</p>
+
+							
+						</div>	
+
+						<div class="fragment">
+							<p style="font-size: 25px;" >
+								What is \(\displaystyle \sum_{i=3}^n (a_i+1)^2\)?
+							</p>
+
+							<p style="font-size: 25px;" >
+								<strong>(A)</strong>: \(18, \ \ \) 
+								<strong>(B)</strong>: \(18+n, \ \ \) 
+								<strong>(C)</strong>: \(16+n, \ \ \) 
+								<strong>(D)</strong>: \(15+n.\) 
+							</p>
+
+							
+						</div>	
+
+						
+
+						
+					</section>
+
+
+				</section>
+
+				<section>
+					
+					<section data-auto-animate>
+						<div  class="r-frame">
+							<p style="font-size: 25px;" >
+								Recall that:
+								\[\displaystyle \sum_{k=0}^n x^ky^{n-k} = \frac{x^{n+1}-y^{n+1}}{x-y}\]
+							</p>
+
+							
+									
+
+						</div>
+
+						<div class="fragment">
+							<p style="font-size: 22px;" >
+								Let \( x=r, y=1\).  What is \(\displaystyle \sum_{k=0}^n r^k\)?
+							</p>
+							<p style="font-size: 22px;" >
+								<strong>(A)</strong>: \(\frac{1-r^n}{1-r}, \ \ \) 
+								<strong>(B)</strong>: \(\frac{1-r^{n+1}}{1-r}, \ \ \) 
+								<strong>(C)</strong>: \(\frac{r-r^n}{1-r}, \ \ \) 
+								<strong>(D)</strong>: \(\frac{r-r^{n+1}}{1-r}.\) 
+							</p>
+
+							
+						</div>	
+
+						<div class="fragment">
+							<p style="font-size: 22px;" >
+								What is \(\displaystyle \sum_{k=1}^n r^k\)?
+							</p>
+							<p style="font-size: 22px;" >
+								<strong>(A)</strong>: \(\frac{1-r^n}{1-r}, \ \ \) 
+								<strong>(B)</strong>: \(\frac{1-r^{n+1}}{1-r}, \ \ \) 
+								<strong>(C)</strong>: \(\frac{r-r^n}{1-r}, \ \ \) 
+								<strong>(D)</strong>: \(\frac{r-r^{n+1}}{1-r}.\) 
+							</p>
+
+							
+						</div>	
+
+						<div class="fragment">
+							<p style="font-size: 22px;" >
+								What is \(\displaystyle \sum_{k=1}^{8} \left(\frac{1}{4}\right)^k\)?
+							</p>
+							
+
+							
+						</div>	
+
+						<div class="fragment">
+							<p style="font-size: 22px;" >
+								What is \(\displaystyle \lim_{n\to\infty} \left(\sum_{k=1}^{n} \left(\frac{1}{4}\right)^k\right)\)?
+							</p>
+							
+
+							
+						</div>	
+
+						
+
+						
+					</section>
+
+					<section data-auto-animate>
+
+						<img src="img/SquareAnimation.gif" height="500">
+					</section>
+
+				</section>	
+
+				<section>
+					<section data-auto-animate>
+						<div >
+							<p style="font-size: 25px;" >
+								A sum is called <strong>telescoping</strong> if succesive terms cancel out the middle terms. \[\sum_{i=1}^n (Q(t_{i+1})-Q(t_i))=Q(t_{n+1})-Q(t_1)\]
+							</p>
+						</div>
+						<div class="fragment">
+							<p style="font-size: 25px;" >
+								Write out the three terms of \(\displaystyle \sum_{i=0}^2 (2^{i+1}-2^i)\).  Do anything cancel?
+								
+								
+							</p>
+							
+						</div>
+
+						<div class="fragment">
+							<p style="font-size: 25px;" >
+								Write out the  terms of \(\displaystyle \sum_{i=0}^4 (2^{i+1}-2^i)\).  Do anything cancel?
+								
+								
+							</p>
+							
+						</div>
+
+						<div class="fragment">
+							<p style="font-size: 25px;" >
+								How do you think \(\displaystyle \sum_{i=0}^n (2^{i+1}-2^i)\) would simplify?
+
+								
+								
+							</p>
+							<p style="font-size: 25px;" >
+								<strong>(A)</strong>: \(2^n, \ \ \) 
+								<strong>(B)</strong>: \(2^n-1, \ \ \) 
+								<strong>(C)</strong>: \(2^{n+1}, \ \ \) 
+								<strong>(D)</strong>: \(2^{n+1}-1. \ \ \) 
+							</p>
+							
+						</div>
+					</section>
+
+					
+				</section>
+
+				<section>
+					<section data-auto-animate>
+						<div >
+							<p style="font-size: 25px;" >
+								A sum is called <strong>telescoping</strong> if succesive terms cancel out the middle terms. \[\sum_{i=1}^n (Q(t_{i+1})-Q(t_i))=Q(t_{n+1})-Q(t_1)\]
+							</p>
+						</div>
+						<div class="fragment">
+							<p style="font-size: 25px;" >
+								Write out the three terms of \(\displaystyle \sum_{i=0}^2 (2^{i+1}-2^i)\).  Do anything cancel?
+								
+								
+							</p>
+							
+						</div>
+
+						<div class="fragment">
+							<p style="font-size: 25px;" >
+								Write out the  terms of \(\displaystyle \sum_{i=0}^4 (2^{i+1}-2^i)\).  Do anything cancel?
+								
+								
+							</p>
+							
+						</div>
+
+						<div class="fragment">
+							<p style="font-size: 25px;" >
+								How do you think \(\displaystyle \sum_{i=0}^n (2^{i+1}-2^i)\) would simplify?
+
+								
+								
+							</p>
+							<p style="font-size: 25px;" >
+								<strong>(A)</strong>: \(2^n, \ \ \) 
+								<strong>(B)</strong>: \(2^n-1, \ \ \) 
+								<strong>(C)</strong>: \(2^{n+1}, \ \ \) 
+								<strong>(D)</strong>: \(2^{n+1}-1. \ \ \) 
+							</p>
+							
+						</div>
+					</section>
+
+					
+				</section>
+
+				<section>
+					<section data-auto-animate>
+						<p style="font-size: 25px;" class="r-frame">
+							Given a sequence \(\{a_n\}\) and it's partial sum sequence \(s_n=\displaystyle \sum_{k=m}^n a_n\), we define \[\sum_{k=m}^\infyu a_n=\lim_{n\to \infty} s_n.\]
+							If this limit is defined, we say this limit is <strong style="color:blue;">convergent</strong>, otherwise it is <strong style="color:red;">divergent</strong>.
+						</p>
+						<p style="font-size: 25px;" class="fragment">
+							What are \[\sum_{k=0}^n3\left( \frac{1}{2}\right)^k, \sum_{k=1}^n2\left( \frac{5}{4}\right)^k?\]
+						</p>
+
+						<p style="font-size: 25px;" class="fragment">
+							What are \[\sum_{k=0}^n\left( \frac{1}{n+1} - \frac{1}{n+2} \right), \sum_{k=1}^n \frac{2}{(2k+1)(2k+3)}?\]
+						</p>
+					</section>
+					<section data-auto-animate>
+						<iframe src="https://www.desmos.com/calculator/nlnehcgtqk" width="100%" height="600" style="border: 1px solid #ccc" frameborder=0></iframe>
+					</section>
+				</section>
+
+				<section>
+					<section data-auto-animate>
+						<iframe src="https://www.desmos.com/calculator/hvzpq4skmt" width="100%" height="400" style="border: 1px solid #ccc" frameborder=0></iframe>
+						<p style="font-size: 25px;" class="fragment">
+							For what values of \(r\) does \(\displaystyle \sum_{k=1}^nr^k\) converge?
+						</p>
+						<p style="font-size: 25px;" class="fragment">
+							When \(\displaystyle \sum_{k=1}^nr^k\) converges, what does it converge to?
+						</p>
+					</section>
+
+					<section data-auto-animate>
+						<p style="font-size: 25px;" >
+							Without computing a limit, how do we know whether or not \(\displaystyle \sum_{k=1}^n \frac{k+3}{k+1}\) converges?
+						</p>
+						<p style="font-size: 25px;" class="fragment">
+							If \(\displaystyle \sum_{k=1}^n a_n\) converges, what must be true about \(\displaystyle \lim_{n\to \infty}a_n\)?
+						</p>
+
+						<p style="font-size: 25px;" class="fragment">
+							If \(\displaystyle \lim_{n\to \infty}a_n=0\), does \(\displaystyle \sum_{k=1}^n a_n\) have to converge?
+						</p>
+						
+						<p style="font-size: 25px;" class="fragment" >
+							<iframe src="https://www.desmos.com/calculator/0xyrymwiah" width="100%" height="400" style="border: 1px solid #ccc" frameborder=0></iframe>
+						</p>
+					</section>
+				</section>
+
+
+
+
+				
+				
+
+
+
+
+
+
+
+
+
+
+				
+
+
+					
+
+
+				
+
+
+				
+
+				
+
+
+
+
+				
+					
+				
+			</div>
+		</div>
+
+		<script src="dist/reveal.js"></script>
+		<script src="plugin/notes/notes.js"></script>
+		<script src="plugin/markdown/markdown.js"></script>
+		<script src="plugin/highlight/highlight.js"></script>
+		<script>
+			// More info about initialization & config:
+			// - https://revealjs.com/initialization/
+			// - https://revealjs.com/config/
+			Reveal.initialize({
+				hash: true,
+
+				// Learn about plugins: https://revealjs.com/plugins/
+				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
+			});
+		</script>
+		<script src="plugin/math/math.js"></script>
+		<script src="plugin/chalkboard/plugin.js"></script>
+		<script src="plugin/customcontrols/plugin.js"></script>
+
+
+
+	<script>
+  	Reveal.initialize({
+		math: {
+			mathjax: 'https://cdn.jsdelivr.net/gh/mathjax/mathjax@2.7.8/MathJax.js',
+			config: 'TeX-AMS_HTML-full',
+			// pass other options into `MathJax.Hub.Config()`
+			TeX: { Macros: { RR: "{\\bf R}" } }
+		},
+
+		chalkboard: {
+        boardmarkerWidth: 3,
+        chalkWidth: 7,
+        chalkEffect: 1.0,
+        storage: null,
+        src: null,
+        readOnly: undefined,
+        transition: 800,
+        theme: "chalkboard",
+        background: [ 'rgba(127,127,127,.1)' , path + 'img/blackboard.png' ],
+        grid: { color: 'rgb(50,50,10,0.5)', distance: 80, width: 2},
+        eraser: { src: path + 'img/sponge.png', radius: 20},
+        boardmarkers : [
+                { color: 'rgba(100,100,100,1)', cursor: 'url(' + path + 'img/boardmarker-black.png), auto'},
+                { color: 'rgba(30,144,255, 1)', cursor: 'url(' + path + 'img/boardmarker-blue.png), auto'},
+                { color: 'rgba(220,20,60,1)', cursor: 'url(' + path + 'img/boardmarker-red.png), auto'},
+                { color: 'rgba(50,205,50,1)', cursor: 'url(' + path + 'img/boardmarker-green.png), auto'},
+                { color: 'rgba(255,140,0,1)', cursor: 'url(' + path + 'img/boardmarker-orange.png), auto'},
+                { color: 'rgba(150,0,20150,1)', cursor: 'url(' + path + 'img/boardmarker-purple.png), auto'},
+                { color: 'rgba(255,220,0,1)', cursor: 'url(' + path + 'img/boardmarker-yellow.png), auto'}
+        ],
+        chalks: [
+                { color: 'rgba(255,255,255,0.5)', cursor: 'url(' + path + 'img/chalk-white.png), auto'},
+                { color: 'rgba(96, 154, 244, 0.5)', cursor: 'url(' + path + 'img/chalk-blue.png), auto'},
+                { color: 'rgba(237, 20, 28, 0.5)', cursor: 'url(' + path + 'img/chalk-red.png), auto'},
+                { color: 'rgba(20, 237, 28, 0.5)', cursor: 'url(' + path + 'img/chalk-green.png), auto'},
+                { color: 'rgba(220, 133, 41, 0.5)', cursor: 'url(' + path + 'img/chalk-orange.png), auto'},
+                { color: 'rgba(220,0,220,0.5)', cursor: 'url(' + path + 'img/chalk-purple.png), auto'},
+                { color: 'rgba(255,220,0,0.5)', cursor: 'url(' + path + 'img/chalk-yellow.png), auto'}
+        ]
+    },
+    customcontrols: {
+  		controls: [
+  			{ icon: '<i class="fa fa-pen-square"></i>',
+  			  title: 'Toggle chalkboard (B)',
+  			  action: 'RevealChalkboard.toggleChalkboard();'
+  			},
+  			{ icon: '<i class="fa fa-pen"></i>',
+  			  title: 'Toggle notes canvas (C)',
+  			  action: 'RevealChalkboard.toggleNotesCanvas();'
+  			}
+  		]
+    },
+
+		plugins: [ RevealMath, RevealChalkboard, RevealCustomControls, RevealMenu  ]
+		});
+	</script>
+
+	</body>
+</html>
