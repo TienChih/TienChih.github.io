@@ -1,0 +1,587 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>reveal.js</title>
+
+		<link rel="stylesheet" href="dist/reset.css">
+		<link rel="stylesheet" href="dist/reveal.css">
+		<link rel="stylesheet" href="dist/theme/white.css">
+		<link rel="stylesheet" href="plugin/chalkboard/style.css">
+		<link rel="stylesheet" href="plugin/customcontrols/style.css">
+
+		<script src="https://tikzjax.com/v1/tikzjax.js"></script>
+
+
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+
+
+
+		<!-- Theme used for syntax highlighted code -->
+		<link rel="stylesheet" href="plugin/highlight/monokai.css">
+		<style>
+			.container{
+   				 display: flex;
+			}
+			.col{
+    			flex: 1;
+			}
+		</style>
+			<script async defer src="https://buttons.github.io/buttons.js"></script>
+
+		<script src="plugin/menu/menu.js"></script>
+
+
+
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				
+				<section>
+					<h2>Integrals are Sums too</h2>
+					<h4>M 112</h4>
+					
+					
+					<h4>
+						Oxford College of Emory University <a href="https://app.oxford.emory.edu/WebApps/Directory/index.cfm/view/9984" target="_blank">Tien Chih</a>
+					</h4>
+				</section>
+
+
+				<section>	
+
+					<section data-auto-animate>
+						<div  >
+							<p style="font-size: 25px;">
+								Consider the series \(\displaystyle\sum_{k=1}^\infty \frac{1}{k^2}.\) 
+							</p>
+
+							<p style="font-size: 25px;">
+								The limit of this series is: \[\textbf{(A) }L \geq 2\ \  \textbf{(B) }1< L < 2\ \ \textbf{(C) }0< L < 1\ \  \textbf{(D) }\infty\ \   \textbf{(E) } \text{Impossible to determine.}\]
+							</p>
+
+							
+									
+
+						</div>
+
+						
+						
+
+						
+					</section>
+					<section data-auto-animate>
+						<div  >
+							<p style="font-size: 25px;">
+								Consider the series \(\displaystyle\sum_{k=1}^\infty \frac{1}{k^2}.\) 
+							</p>
+
+							<iframe src="https://www.desmos.com/calculator/k3wnwh6zcx" width="100%" height="400" style="border: 1px solid #ccc" frameborder=0></iframe>
+
+							<p style="font-size: 25px;">
+								The limit of this series is: \[\textbf{(A) }L \geq 2\ \  \textbf{(B) }1< L < 2\ \ \textbf{(C) }0< L < 1\ \  \textbf{(D) }\infty\ \   \textbf{(E) } \text{Impossible to determine.}\]
+							</p>
+
+							
+									
+
+						</div>
+
+						
+						
+
+						
+					</section>
+
+					<section data-auto-animate>
+						<div  >
+							<p style="font-size: 25px;">
+								Consider the series \(\displaystyle\sum_{k=1}^\infty \frac{1}{\sqrt{k}}.\) 
+							</p>
+
+							<p style="font-size: 25px;">
+								The limit of this series is: \[\textbf{(A) }L \geq 2\ \  \textbf{(B) }1< L < 2\ \ \textbf{(C) }0< L < 1\ \  \textbf{(D) }\infty\ \   \textbf{(E) } \text{Impossible to determine.}\]
+							</p>
+
+							
+									
+
+						</div>
+
+						
+						
+
+						
+					</section>
+					<section data-auto-animate>
+						<div  >
+							<p style="font-size: 25px;">
+								Consider the series \(\displaystyle\sum_{k=1}^\infty \frac{1}{\sqrt{k}}.\) 
+							</p>
+
+							<iframe src="https://www.desmos.com/calculator/pzr4qjidju" width="100%" height="400" style="border: 1px solid #ccc" frameborder=0></iframe>
+
+							<p style="font-size: 25px;">
+								The limit of this series is: \[\textbf{(A) }L \geq 2\ \  \textbf{(B) }1< L < 2\ \ \textbf{(C) }0< L < 1\ \  \textbf{(D) }\infty\ \   \textbf{(E) } \text{Impossible to determine.}\]
+							</p>
+
+							
+									
+
+						</div>
+
+						
+						
+
+						
+					</section>
+
+
+
+					
+
+				</section>
+
+				<section>
+					<h4>The Integral Test</h4>
+					<div class="r-frame">
+						<p style="font-size: 25px;" >
+							Let \(a_n\) be a sequence and let \(f(x)\) be a positive, decreasing, continuous function such that \(a_n=f(n)\). 
+						</p>
+						<p style="font-size: 25px;" >
+							Then \(\displaystyle \sum_{n=1}^\infty a_n\) converges (diverges) if and only if \(\displaystyle \int_1^\infty f(x)dx\) converges (diverges).
+						</p>
+					</div>
+
+				</section>
+
+				<section>	
+
+					<section data-auto-animate>
+						<div  >
+							<p style="font-size: 25px;" >
+								Use the integral test to determine if \(\displaystyle \sum_{n=1}^\infty \frac{1}{n^2+1}\) converges.
+							</p>
+
+							
+									
+
+						</div>
+
+						<div  class="fragment">
+							<p style="font-size: 25px;" >
+								Use the integral test to determine if \(\displaystyle \sum_{n=1}^\infty \frac{\ln(n)}{n}\) converges.
+							</p>
+
+							
+									
+
+						</div>
+
+
+						<div  class="fragment">
+							<p style="font-size: 25px;" >
+								For what values of \(p>0\) does \(\displaystyle \sum_{n=1}^\infty \frac{1}{n^p}\) converge?
+							</p>
+
+							
+									
+
+						</div>
+
+
+
+						<div  class="fragment">
+							<p style="font-size: 25px;" >
+								These are called \(p\)-series.
+							</p>
+
+							
+									
+
+						</div>
+
+						
+
+						
+					</section>
+
+
+					
+
+
+				</section>
+
+				<section>
+					
+					<section data-auto-animate>
+							<p style="font-size: 25px;">
+								What is \(\displaystyle\sum_{k=1}^{10} \frac{1}{k^2}?\) 
+							</p>
+
+							<iframe src="https://www.desmos.com/calculator/k3wnwh6zcx" width="100%" height="400" style="border: 1px solid #ccc" frameborder=0></iframe>
+
+							<p style="font-size: 25px;" class="fragment">
+								How close is this to \(\displaystyle\sum_{k=1}^\infty \frac{1}{k^2}?\) 
+							</p>
+
+					</section>
+					<section data-auto-animate>		
+									
+
+
+							<p style="font-size: 25px;">
+								Let \(\displaystyle R_{10} = S - \sum_{k=1}^{10} \frac{1}{k^2} =\sum_{11}^\infty \frac{1}{k^2}\)
+							</p>
+
+							<iframe src="https://www.desmos.com/calculator/m3mgh9u94s" width="100%" height="400" style="border: 1px solid #ccc" frameborder=0></iframe>
+
+							<p style="font-size: 25px;" >
+								Is \(\displaystyle \int_{10}^\infty \frac{1}{x^2}dx\) a lower or upper bound of \(R_{10}\)?
+							</p>
+
+							
+					</section>
+					<section data-auto-animate>				
+
+						
+							<p style="font-size: 25px;">
+								Let \(\displaystyle R_{10} = S - \sum_{k=1}^{10} \frac{1}{k^2} =\sum_{11}^\infty \frac{1}{k^2}\)
+							</p>
+
+							<iframe src="https://www.desmos.com/calculator/eb3un7w9yr" width="100%" height="400" style="border: 1px solid #ccc" frameborder=0></iframe>
+
+							<p style="font-size: 25px;" >
+								Is \(\displaystyle \int_{11}^\infty \frac{1}{x^2}dx\) a lower or upper bound of \(R_{10}\)?
+							</p>
+
+							
+									
+					</section>
+
+					<section data-auto-animate>		
+						
+							<p style="font-size: 25px;">
+								Let \(\displaystyle R_{10} = S - \sum_{k=1}^{10}\frac{1}{k^2} =\sum_{11}^\infty \frac{1}{k^2}\)
+							</p>
+
+							<iframe src="https://www.desmos.com/calculator/eb3un7w9yr" width="100%" height="400" style="border: 1px solid #ccc" frameborder=0></iframe>
+
+							<p style="font-size: 25px;" >
+								What are upper and lower bounds for \(R_{10}\)?
+							</p>
+
+							
+					</section>
+
+					<section data-auto-animate>		
+						
+							<p style="font-size: 25px;">
+								Let \(\displaystyle R_{10} = S - \sum_{k=1}^{10} \frac{1}{k^2} =\sum_{11}^\infty \frac{1}{k^2}\)
+							</p>
+
+							<iframe src="https://www.desmos.com/calculator/eb3un7w9yr" width="100%" height="400" style="border: 1px solid #ccc" frameborder=0></iframe>
+
+							<p style="font-size: 25px;" >
+								What are upper and lower bounds for \(\displaystyle S = \sum_{k=1}^\infty \frac{1}{k^2}\)?
+							</p>
+
+							
+									
+					</section>
+					
+					<section data-auto-animate>					
+
+						
+							<p style="font-size: 25px;">
+								Let \(\displaystyle R_{n} = S - \sum_{k=1}^n \frac{1}{k^2} =\sum_{n+1}^\infty \frac{1}{k^2}\)
+							</p>
+
+							<iframe src="https://www.desmos.com/calculator/eb3un7w9yr" width="100%" height="400" style="border: 1px solid #ccc" frameborder=0></iframe>
+
+							<p style="font-size: 25px;" >
+								What are upper and lower bounds for \(R_{n}\)?
+							</p>
+
+							
+									
+
+
+						
+
+						
+					</section>
+
+					
+
+				</section>	
+
+				<section>
+					<section data-auto-animate>
+						<div class="r-frame">
+							<p style="font-size: 25px;" >
+								Let \(\displaystyle \sum_{n=1}^\infty\) be convergent and \(a_n=f(n)\) where \(f(x)\) is a continuous, decreasing, positive function.  
+							</p>
+							<p style="font-size: 25px;" >
+								Then \(\displaystyle R_{n}=\sum_{n+1}^\infty a_n \leq \int_n^\infty f(x)dx\)
+							</p>
+						</div>
+						<iframe src="https://www.desmos.com/calculator/m3mgh9u94s" width="100%" height="400" style="border: 1px solid #ccc" frameborder=0></iframe>
+					</section>
+
+					<section data-auto-animate>
+						<div class="r-frame">
+							<p style="font-size: 25px;" >
+								Let \(\displaystyle \sum_{n=1}^\infty\) be convergent and \(a_n=f(n)\) where \(f(x)\) is a continuous, decreasing, positive function.  
+							</p>
+							<p style="font-size: 25px;" >
+								Then \(\displaystyle R_{n}=\sum_{n+1}^\infty a_n \geq \int_{n+1}^\infty f(x)dx\)
+							</p>
+						</div>
+						<iframe src="https://www.desmos.com/calculator/eb3un7w9yr" width="100%" height="400" style="border: 1px solid #ccc" frameborder=0></iframe>
+					</section>
+
+					
+				</section>
+
+				<section>
+					<section data-auto-animate>
+						<h4>Proof of the Integral Test</h4>
+						<p style="font-size: 25px;" >
+							Suppose \(\displaystyle \int_1^\infty f(x)dx\) converges.
+						</p>	
+						<div class="fragment">
+							<iframe src="https://www.desmos.com/calculator/bjfdfuw9bc" width="100%" height="400" style="border: 1px solid #ccc" frameborder=0></iframe>
+							<p style="font-size: 25px;" >
+								\(\displaystyle S_n=\sum_{k=1}^na_k \leq a_1+\int_{1}^{n}f(x)dx.\)
+							</p>
+						</div>
+						
+					</section>
+
+					<section data-auto-animate>
+						<h4>Proof of the Integral Test</h4>
+						<p style="font-size: 25px;" >
+							Suppose \(\displaystyle \int_1^\infty f(x)dx\) converges.
+						</p>	
+						<div >
+							<iframe src="https://www.desmos.com/calculator/bjfdfuw9bc" width="100%" height="400" style="border: 1px solid #ccc" frameborder=0></iframe>
+							<p style="font-size: 25px;" >
+								\(\displaystyle S_n=\sum_{k=1}^n a_k\leq a_1+\int_{1}^{n}f(x)dx\leq \int_{1}^{\infty}f(x)dx.\)
+							</p>
+						</div>
+						
+					</section>
+
+					<section data-auto-animate>
+						<h4>Proof of the Integral Test</h4>
+						<p style="font-size: 25px;" >
+							Suppose \(\displaystyle \int_1^\infty f(x)dx\) converges.
+						</p>	
+						<div>
+							<iframe src="https://www.desmos.com/calculator/bjfdfuw9bc" width="100%" height="400" style="border: 1px solid #ccc" frameborder=0></iframe>
+							<p style="font-size: 25px;" >
+								\(a_n > 0\) so \(S_n\) is increasing and bounded above.
+							</p>
+						</div>
+						
+					</section>
+
+					<section data-auto-animate>
+						<h4>Proof of the Integral Test</h4>
+						<p style="font-size: 25px;" >
+							Suppose \(\displaystyle \int_1^\infty f(x)dx\) converges.
+						</p>	
+						<div >
+							<iframe src="https://www.desmos.com/calculator/bjfdfuw9bc" width="100%" height="400" style="border: 1px solid #ccc" frameborder=0></iframe>
+							<p style="font-size: 25px;" >
+								 \(S_n\) converges!
+							</p>
+						</div>
+						
+					</section>
+
+					<section data-auto-animate>
+						<h4>Proof of the Integral Test</h4>
+						<p style="font-size: 25px;" >
+							Suppose \(\displaystyle \int_1^\infty f(x)dx\) diverges.
+						</p>	
+						<div class="fragment">
+							<iframe src="https://www.desmos.com/calculator/oibfx9fvpy" width="100%" height="400" style="border: 1px solid #ccc" frameborder=0></iframe>
+							<p style="font-size: 25px;" >
+								\(\displaystyle S_n=\sum_{k=1}^n a_k \geq \int_{1}^{n}f(x)dx.\)
+							</p>
+						</div>
+
+						
+					</section>
+
+					<section data-auto-animate>
+						<h4>Proof of the Integral Test</h4>
+						<p style="font-size: 25px;" >
+							Suppose \(\displaystyle \int_1^\infty f(x)dx\) diverges.
+						</p>	
+						<div >
+							<iframe src="https://www.desmos.com/calculator/oibfx9fvpy" width="100%" height="400" style="border: 1px solid #ccc" frameborder=0></iframe>
+							<p style="font-size: 25px;" >
+								\(\displaystyle \lim_{n\to\infty}\sum_{k=1}^n a_k \geq \lim_{n\to\infty} \int_{1}^{n}f(x)dx.\)
+							</p>
+						</div>
+						
+						
+					</section>
+
+					<section data-auto-animate>
+						<h4>Proof of the Integral Test</h4>
+						<p style="font-size: 25px;" >
+							Suppose \(\displaystyle \int_1^\infty f(x)dx\) diverges.
+						</p>	
+						<div >
+							<iframe src="https://www.desmos.com/calculator/oibfx9fvpy" width="100%" height="400" style="border: 1px solid #ccc" frameborder=0></iframe>
+							<p style="font-size: 25px;" >
+								\(\displaystyle \sum_{k=1}^\infty a_k \geq  \int_{1}^{\infty}f(x)dx.\)
+							</p>
+						</div>
+						
+						
+					</section>
+
+					<section data-auto-animate>
+						<h4>Proof of the Integral Test</h4>
+						<p style="font-size: 25px;" >
+							Suppose \(\displaystyle \int_1^\infty f(x)dx\) diverges.
+						</p>	
+						<div >
+							<iframe src="https://www.desmos.com/calculator/oibfx9fvpy" width="100%" height="400" style="border: 1px solid #ccc" frameborder=0></iframe>
+							<p style="font-size: 25px;" >
+								\(\displaystyle \sum_{k=1}^\infty a_k \geq  \int_{1}^{\infty}f(x)dx=\infty.\)
+							</p>
+						</div>
+						
+						
+					</section>
+
+					
+				</section>
+
+				
+
+
+
+				
+				
+
+
+
+
+
+
+
+
+
+
+				
+
+
+					
+
+
+				
+
+
+				
+
+				
+
+
+
+
+				
+					
+				
+			</div>
+		</div>
+
+		<script src="dist/reveal.js"></script>
+		<script src="plugin/notes/notes.js"></script>
+		<script src="plugin/markdown/markdown.js"></script>
+		<script src="plugin/highlight/highlight.js"></script>
+		<script>
+			// More info about initialization & config:
+			// - https://revealjs.com/initialization/
+			// - https://revealjs.com/config/
+			Reveal.initialize({
+				hash: true,
+
+				// Learn about plugins: https://revealjs.com/plugins/
+				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
+			});
+		</script>
+		<script src="plugin/math/math.js"></script>
+		<script src="plugin/chalkboard/plugin.js"></script>
+		<script src="plugin/customcontrols/plugin.js"></script>
+
+
+
+	<script>
+  	Reveal.initialize({
+		math: {
+			mathjax: 'https://cdn.jsdelivr.net/gh/mathjax/mathjax@2.7.8/MathJax.js',
+			config: 'TeX-AMS_HTML-full',
+			// pass other options into `MathJax.Hub.Config()`
+			TeX: { Macros: { RR: "{\\bf R}" } }
+		},
+
+		chalkboard: {
+        boardmarkerWidth: 3,
+        chalkWidth: 7,
+        chalkEffect: 1.0,
+        storage: null,
+        src: null,
+        readOnly: undefined,
+        transition: 800,
+        theme: "chalkboard",
+        background: [ 'rgba(127,127,127,.1)' , path + 'img/blackboard.png' ],
+        grid: { color: 'rgb(50,50,10,0.5)', distance: 80, width: 2},
+        eraser: { src: path + 'img/sponge.png', radius: 20},
+        boardmarkers : [
+                { color: 'rgba(100,100,100,1)', cursor: 'url(' + path + 'img/boardmarker-black.png), auto'},
+                { color: 'rgba(30,144,255, 1)', cursor: 'url(' + path + 'img/boardmarker-blue.png), auto'},
+                { color: 'rgba(220,20,60,1)', cursor: 'url(' + path + 'img/boardmarker-red.png), auto'},
+                { color: 'rgba(50,205,50,1)', cursor: 'url(' + path + 'img/boardmarker-green.png), auto'},
+                { color: 'rgba(255,140,0,1)', cursor: 'url(' + path + 'img/boardmarker-orange.png), auto'},
+                { color: 'rgba(150,0,20150,1)', cursor: 'url(' + path + 'img/boardmarker-purple.png), auto'},
+                { color: 'rgba(255,220,0,1)', cursor: 'url(' + path + 'img/boardmarker-yellow.png), auto'}
+        ],
+        chalks: [
+                { color: 'rgba(255,255,255,0.5)', cursor: 'url(' + path + 'img/chalk-white.png), auto'},
+                { color: 'rgba(96, 154, 244, 0.5)', cursor: 'url(' + path + 'img/chalk-blue.png), auto'},
+                { color: 'rgba(237, 20, 28, 0.5)', cursor: 'url(' + path + 'img/chalk-red.png), auto'},
+                { color: 'rgba(20, 237, 28, 0.5)', cursor: 'url(' + path + 'img/chalk-green.png), auto'},
+                { color: 'rgba(220, 133, 41, 0.5)', cursor: 'url(' + path + 'img/chalk-orange.png), auto'},
+                { color: 'rgba(220,0,220,0.5)', cursor: 'url(' + path + 'img/chalk-purple.png), auto'},
+                { color: 'rgba(255,220,0,0.5)', cursor: 'url(' + path + 'img/chalk-yellow.png), auto'}
+        ]
+    },
+    customcontrols: {
+  		controls: [
+  			{ icon: '<i class="fa fa-pen-square"></i>',
+  			  title: 'Toggle chalkboard (B)',
+  			  action: 'RevealChalkboard.toggleChalkboard();'
+  			},
+  			{ icon: '<i class="fa fa-pen"></i>',
+  			  title: 'Toggle notes canvas (C)',
+  			  action: 'RevealChalkboard.toggleNotesCanvas();'
+  			}
+  		]
+    },
+
+		plugins: [ RevealMath, RevealChalkboard, RevealCustomControls, RevealMenu  ]
+		});
+	</script>
+
+	</body>
+</html>
