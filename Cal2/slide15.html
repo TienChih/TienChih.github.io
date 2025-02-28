@@ -41,7 +41,7 @@
 			<div class="slides">
 				
 				<section>
-					<h2>Alternating and Altercation</h2>
+					<h2>Geometricish</h2>
 					<h4>M 112</h4>
 					
 					
@@ -54,33 +54,80 @@
 				<section>	
 
 					<section data-auto-animate>
-						<div  >
+						<h4>Ratio Test</h4>
+						<div class="r-frame">
 							<p style="font-size: 25px;">
-								Consider the infinite series \[1-1+1-1+1-1+1-1\cdots\]
+							Let \(\{a_n\}\) be a sequence such that \( \displaystyle \lim_{n\to \infty} \left| \frac{a_{n+1}}{a_n} \right|=L\).
+								
 							</p>
 
-						</div>
-
-						<div class="fragment" >
-							<p style="font-size: 25px;">
-								To what should this series <q>converge</q>? \[(1-1)+(1-1)+(1-1)+(1-1)\cdots\]
+							<p style="font-size: 25px;" class="fragment">
+							If \(L < 1\) then \(\sum a_n\) is absolutely convergent.
+								
 							</p>
 
-						</div>
-
-						<div class="fragment" >
-							<p style="font-size: 25px;">
-								To what should this series <q>converge</q>? \[1+(-1+1)+(-1+1)+(-1+1)+(-1+1)+\cdots\]
+							<p style="font-size: 25px;" class="fragment">
+							If \(L > 1\) or \(L=\infty\) then \(\sum a_n\) is divergent.
+								
 							</p>
 
-						</div>
-
-						<div class="fragment" >
-							<p style="font-size: 25px;">
-								Luigi Guido Grandi (1671-1740), priest and mathematician referred to this as a <q>proof of God</q>.
+							<p style="font-size: 25px;" class="fragment">
+							If \(L =1\)...  &#129320;
+								
 							</p>
-
+							
 						</div>
+
+						
+						
+
+						
+					</section>
+
+					<section data-auto-animate>
+						<p style="font-size: 25px;">
+							Suppose \(L < 1\), then there is an integer \(M\) and real number \(0< r < 1\) so that for \(n\geq M\), \( \left| \frac{a_{n+1}}{a_n} \right|< r < 1\).
+						</p>
+						<p style="font-size: 25px;" class="fragment">
+							\(|a_{n+1}| < r|a_n| \)
+						</p>
+						<p style="font-size: 25px;" class="fragment">
+							\(|a_{n+2}| < r|a_{n+1}| < r^2|a_{n}| \)
+						</p>
+						<p style="font-size: 25px;" class="fragment">
+							\(|a_{n+3}| < r|a_{n+2}| < r^2|a_{n+1}| < r^3|a_{n}| \)
+						</p>
+
+						<p style="font-size: 25px;" class="fragment">
+							\(\displaystyle \sum_{n=M}^\infty a_n \leq \sum_{k=0}^\infty (r^k |a_n|) \).  Why does \(\sum_{n=M}^\infty a_n\) converge?
+						</p>
+
+						<p style="font-size: 25px;" class="fragment">
+							Why does \(\sum_{n=1}^\infty a_n\) converge?
+						</p>
+							
+							
+
+						
+						
+
+						
+					</section>
+
+					<section data-auto-animate>
+						<p style="font-size: 25px;">
+							Suppose \(L > 1\), then there is an integer \(M\) so that for \(n\geq M\), \( \left| \frac{a_{n+1}}{a_n} \right| > 1\).
+						</p>
+						<p style="font-size: 25px;" class="fragment">
+							Which is greater, \(a_n\) or \(a_{n+1}\)?
+						</p>
+						
+
+						<p style="font-size: 25px;" class="fragment">
+							Why does \(\sum_{n=1}^\infty a_n\) diverge?
+						</p>
+							
+							
 
 						
 						
@@ -103,11 +150,12 @@
 				<section>	
 
 					<section data-auto-animate>
-						<h4>Alternating Series Test</h4>
 
 
-						<p style="font-size: 25px;" class="r-frame">
-							Let \(\{b_n\}\) be a positive decreasing sequence which converges to 0, and \(a_n=b_n\cdot(-1)^{n+1}\).  Then \(\displaystyle \sum b_n\) converges.
+						<p style="font-size: 25px;" >
+							Use the ratio test to see if the following converge:
+
+							\[\sum_{n=0}^\infty \frac{n^2+5}{2^n}, \sum_{k=1}^\infty \frac{k!}{k^k}, \sum_{n=1}^\infty \frac{3^n}{n^3} \]
 								
 						</p>
 						
@@ -116,49 +164,15 @@
 					</section>
 
 					<section data-auto-animate>
-						<h4>Proof</h4>
+
+
 						<p style="font-size: 25px;" >
-							Let \(\{b_n\}\) be a positive decreasing sequence which converges to 0.  Let \(s_n = b_1-b_2+b_3\cdots +b_n(-1)^{n+1}\).
-						</p>
-						<p style="font-size: 25px;" class="fragment">
-							Is \(s_2 = b_1-b_2\) positive or negative?
-						</p>
+							Apply the ratio test to the following:
 
-						<p style="font-size: 25px;" class="fragment">
-							Is \(s_4 = b_1-b_2+b_3-b_4=s_2+(b_3-b_4)\) greater than or less then \(s_2\)?
+							\[\sum_{n=1}^\infty \frac{1}{n}, \sum_{n=1}^\infty \frac{1}{n^2} \]
+								
 						</p>
-
-						<p style="font-size: 25px;" class="fragment">
-							Is \(s_{2n} = b_1-b_2+b_3-b_4+\cdots +b_{2n-1}-b_{2n}=s_{2n-2}+(b_{2n-1}-b_{2n})\) greater than or less then \(s_{2n-2}\)?
-						</p>
-
-						<p style="font-size: 25px;" class="fragment">
-							Is \(s_2, s_4, s_6, \ldots, s_{2n}, \ldots\) an increasing or decreasing sequence?
-						</p>
-
-						<p style="font-size: 25px;" class="fragment">
-							Consider that \(s_{2n} = b_1-(b_2-b_3)-(b_4-b_5)-\cdots -(b_{2n-2}-b_{2n-1})-b_{2n}.\) Is \(s_{2n}\) greater than or less than \(b_1\)?
-						</p>
-
-						<p style="font-size: 25px;" class="fragment">
-							Why is \(s_2, s_4, s_6, \ldots, s_{2n}, \ldots\) convergent?  Call this limit \(L\).
-						</p>
-
-
 						
-					</section>
-
-					<section data-auto-animate>
-						<h4>Proof</h4>
-						<p style="font-size: 25px;" >
-							Consider \(s_{2n+1} = b_1-b_2+b_3-b_4+\cdots +b_{2n-1}-b_{2n}+b_{2n+1}=s_{2n}+b_{2n+1}\).
-						</p>
-						<p style="font-size: 25px;" class="fragment">
-							Note that \[\lim_{n\to \infty }s_{2n+1} = \lim_{n\to \infty } s_{2n} + \lim_{n\to \infty }b_{2n+1}.\]  Why is \[\lim_{n\to \infty }s_{2n+1} = \lim_{n\to \infty }s_{2n}=L?\]
-						</p>
-
-						
-
 
 						
 					</section>
@@ -171,101 +185,50 @@
 
 				</section>
 
-				<section>
-					
-					<section data-auto-animate>
+				<section data-auto-animate>
+						<h4>Root Test</h4>
+						<div class="r-frame">
 							<p style="font-size: 25px;">
-								Which of the following converge by the Alternating Series Test?
-								\[\sum_{n=1}^\infty \frac{\cos^2(n)(-1)^n}{\sqrt{n}}, \sum_{n=3}^\infty \frac{\ln(n)(-1)^n}{n^2},  \sum_{n=1}^\infty \frac{(-1)^n}{n},  \sum_{n=0}^\infty \frac{\arctan(n)(-1)^n}{e^n},  \sum_{n=1}^\infty \frac{\cos(n\pi)}{n^2}.\] 
+							Let \(\{a_n\}\) be a sequence such that \( \displaystyle \lim_{n\to \infty} \sqrt[n]{|a_n|}=L\).
+								
+							</p>
+
+							<p style="font-size: 25px;" class="fragment">
+							If \(L < 1\) then \(\sum a_n\) is absolutely convergent.
+								
+							</p>
+
+							<p style="font-size: 25px;" class="fragment">
+							If \(L > 1\) or \(L=\infty\) then \(\sum a_n\) is divergent.
+								
+							</p>
+
+							<p style="font-size: 25px;" class="fragment">
+							If \(L =1\)...  &#129320;
+								
 							</p>
 							
-
-					</section>
-					
-						
-
-					
-				</section>
-
-
-				<section>
-					<section data-auto-animate>
-						<h4>Remainders</h4>
-						<div class="r-frame">
-							<p style="font-size: 25px;">
-								Let \(\{b_n\}\) be a positive decreasing sequence which converges to 0, and \(a_n=b_n\cdot(-1)^{n+1}\). Then the remainder \(\displaystyle |R_n| := \left|\sum_{k=n+1}^\infty a_n\right| \leq b_{n+1}\).
-							</p>
 						</div>
-						<p style="font-size: 25px;" class="fragment">
-							\[|s-s_n|\leq |s_{n+1}-s_n|=|b_n+1|.\]
-						</p>
-					</section>
-				</section>
 
-				<section>
-					<section data-auto-animate>
-						<h4>Conditional and Absolute Convergence</h4>
+						<section data-auto-animate>
+
+
+						<p style="font-size: 25px;" >
+							Use the ratio test to see if the following converge:
+
+							\[\sum_{n=0}^\infty \left(\frac{2n+3}{3n+2} \right)^n, \sum_{n=1}^\infty \left( \frac{n}{n+1} \right)^n.\]
+								
+						</p>
 						
-						<div class="r-frame">
-							<p style="font-size: 25px;">
-								Consider a series \(\sum a_n\).
-							</p>
-							<ul>
-								<li style="font-size: 25px;">
-									If \(\sum |a_n|\) converges then we say that \(\sum a_n\) is <strong style="color:blue;">absolutely convergent</strong>.
-								</li>
-								<li style="font-size: 25px;">
-									If \(\sum |a_n|\) diverges but \(\sum a_n\) converges then we say that \(\sum a_n\) is <strong style="color:red;">conditionally convergent</strong>.
-								</li>
-							</ul>
-						</div>
-						
-					</section>
-					<section data-auto-animate>
-						<h4>Conditional and Absolute Convergence</h4>
-						
-						<div class="r-frame">
-							<p style="font-size: 25px;">
-								If \(\sum a_n\) is absolutely convergent, then it is convergent.  
-							</p>
-						</div>
-						<p style="font-size: 25px;" class="fragment">
-							Suppose \(\sum |a_n|\) converges.  Why is \[0\leq a_n+|a_n|\leq 2|a_n|? \]
-						</p>
-						<p style="font-size: 25px;" class="fragment">
-							So we now have \[\sum 0\leq \sum (a_n+|a_n|)\leq \sum 2|a_n|, \] why does \(\sum 2|a_n|\) converge?
-						</p>
-
-						<p style="font-size: 25px;" class="fragment">
-							Why does \(\sum (a_n+|a_n|)\) converge?
-						</p>
-
-						<p style="font-size: 25px;" class="fragment">
-							Why does \(\sum a_n\) converge?
-						</p>
-
 
 						
 					</section>
 
-					<section data-auto-animate>
-							<p style="font-size: 25px;">
-								Classify the following as absolutely convergent, conditionally convergent and divergent.
-								\[\sum_{n=3}^\infty \frac{\ln(n)(-1)^n}{n^2},  \sum_{n=1}^\infty \frac{(-1)^n}{n},  \sum_{n=0}^\infty \frac{\arctan(n)(-1)^n}{e^n},  \sum_{n=1}^\infty \frac{\cos(n\pi)}{n^2}\] 
-								\[\sum_{n=3}^\infty \frac{\ln(n)}{n^2},  \sum_{n=1}^\infty \frac{1}{n},  \sum_{n=0}^\infty \frac{\arctan(n)}{e^n}\] 
-							</p>
-							
+						
+						
 
+						
 					</section>
-				</section>
-
-				<section>
-					<p style="font-size: 25px;" class="r-frame">
-						If a series \(\sum a_n\) is conditionally convergent, then it can be <q>rearranged</q> to converge to any real number <m>R</m>.
-					</p>
-					<iframe src="https://www.desmos.com/calculator/4gi57sjizc" width="100%" height="400" style="border: 1px solid #ccc" frameborder=0></iframe>
-					
-				</section>
 
 				
 

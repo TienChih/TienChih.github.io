@@ -41,7 +41,7 @@
 			<div class="slides">
 				
 				<section>
-					<h2>Comparison is an act of violence against the self</h2>
+					<h2>Alternating and Altercation</h2>
 					<h4>M 112</h4>
 					
 					
@@ -56,64 +56,29 @@
 					<section data-auto-animate>
 						<div  >
 							<p style="font-size: 25px;">
-								To what does \(\displaystyle \sum_{k=1}^{\infty} \frac{1}{2^k}\) converge?
+								Consider the infinite series \[1-1+1-1+1-1+1-1\cdots\]
 							</p>
-
-							<p style="font-size: 25px;" class="fragment">
-								Does \(\displaystyle \sum_{k=1}^{\infty} \frac{1}{2^k}\) converge?  Why or why not?
-							</p>
-
-							
-									
 
 						</div>
 
-						
-						
-
-						
-					</section>
-					<section data-auto-animate>
-						<h4>The Direct Comparison Test</h4>
-						<div  class="r-frame">
-							<p style="font-size: 25px;" >
-								Let \(\{a_n\}, \{b_n\}\) be positive sequences such that for any \(n, a_n\leq b_n\).
-								<ol >
-									<li style="font-size: 25px;" >If \(\sum b_n\) converges, so does \(\sum a_n\).</li>
-									<li style="font-size: 25px;" >If \(\sum a_n\) diverges, so does \(\sum b_n\).</li>
-								</ol>
-							</p>
-						</div>	
-
-							<p style="font-size: 25px;" class="fragment">
-								Suppose \(\sum b_n=L\).  Why is \(s_n = \sum_{k=1}^n a_k\) an increasing sequence?  Why is it bounded above?
-							</p>
-
-							<p style="font-size: 25px;" class="fragment">
-								Suppose \(\sum a_n=\infty\).  Why must \(\sum b_n=\infty\)?
-							</p>
-							
-
-							
-									
-
-
-						
-						
-
-						
-					</section>
-
-					<section data-auto-animate>
-						<div  >
+						<div class="fragment" >
 							<p style="font-size: 25px;">
-								Determine if \[\sum_{k=0}^n \frac{1}{2k^2+5k+3}, \sum_{k=2}^n \frac{\ln(k)}{k}, \sum_{k=1}^n \frac{1}{2^k-1}\] converge.
+								To what should this series <q>converge</q>? \[(1-1)+(1-1)+(1-1)+(1-1)\cdots\]
 							</p>
 
-							
+						</div>
 
-							
-									
+						<div class="fragment" >
+							<p style="font-size: 25px;">
+								To what should this series <q>converge</q>? \[1+(-1+1)+(-1+1)+(-1+1)+(-1+1)+\cdots\]
+							</p>
+
+						</div>
+
+						<div class="fragment" >
+							<p style="font-size: 25px;">
+								Luigi Guido Grandi (1671-1740), priest and mathematician referred to this as a <q>proof of God</q>.
+							</p>
 
 						</div>
 
@@ -122,6 +87,9 @@
 
 						
 					</section>
+					
+
+					
 					
 
 
@@ -135,72 +103,67 @@
 				<section>	
 
 					<section data-auto-animate>
-						<p style="font-size: 25px;" >
-							Do you think that \(\displaystyle \sum_{n=1}^\infty \frac{1}{3^n-2}\) converges?
-						</p>
-						<div class="fragment">
-							<iframe src="https://www.desmos.com/calculator/mpbls3t5rk" width="100%" height="500" style="border: 1px solid #ccc" frameborder=0></iframe>
-						</div>
+						<h4>Alternating Series Test</h4>
 
+
+						<p style="font-size: 25px;" class="r-frame">
+							Let \(\{b_n\}\) be a positive decreasing sequence which converges to 0, and \(a_n=b_n\cdot(-1)^{n+1}\).  Then \(\displaystyle \sum b_n\) converges.
+								
+						</p>
 						
 
 						
 					</section>
 
 					<section data-auto-animate>
-						<h4>The Limit Comparison Test</h4>
-						<div  class="r-frame">
-							<p style="font-size: 25px;" >
-								Let \(\{a_n\}, \{b_n\}\) be positive sequences such that \[\displaystyle \lim_{n\to \infty} \frac{a_n}{b_n}=c\] a positive real number then either \( \sum a_n, \sum b_n\) both converge or both diverge.
-								
-							</p>
-						</div>	
+						<h4>Proof</h4>
+						<p style="font-size: 25px;" >
+							Let \(\{b_n\}\) be a positive decreasing sequence which converges to 0.  Let \(s_n = b_1-b_2+b_3\cdots +b_n(-1)^{n+1}\).
+						</p>
+						<p style="font-size: 25px;" class="fragment">
+							Is \(s_2 = b_1-b_2\) positive or negative?
+						</p>
 
-							<p style="font-size: 25px;" class="fragment">
-								Let \(m, M>0\) such that \(m< c < M\).
-							</p>
+						<p style="font-size: 25px;" class="fragment">
+							Is \(s_4 = b_1-b_2+b_3-b_4=s_2+(b_3-b_4)\) greater than or less then \(s_2\)?
+						</p>
 
-							<p style="font-size: 25px;" class="fragment">
-								Eventually for a big enough \(n\), we would have  \(m< \frac{a_n}{b_n} < M\).  Why?
-							</p>
+						<p style="font-size: 25px;" class="fragment">
+							Is \(s_{2n} = b_1-b_2+b_3-b_4+\cdots +b_{2n-1}-b_{2n}=s_{2n-2}+(b_{2n-1}-b_{2n})\) greater than or less then \(s_{2n-2}\)?
+						</p>
 
-							<p style="font-size: 25px;" class="fragment">
-								So  \(mb_n< a_n < Mb_n\).  Thus \(m\sum b_n< \sum a_n < M \sum b_n\).
-							</p>
+						<p style="font-size: 25px;" class="fragment">
+							Is \(s_2, s_4, s_6, \ldots, s_{2n}, \ldots\) an increasing or decreasing sequence?
+						</p>
 
-							<p style="font-size: 25px;" class="fragment">
-								If \(\sum b_n\) converges, how does the above inequality and the positivity of \(a_n\) show \(\sum a_n\) converges?
-							</p>
+						<p style="font-size: 25px;" class="fragment">
+							Consider that \(s_{2n} = b_1-(b_2-b_3)-(b_4-b_5)-\cdots -(b_{2n-2}-b_{2n-1})-b_{2n}.\) Is \(s_{2n}\) greater than or less than \(b_1\)?
+						</p>
 
-							<p style="font-size: 25px;" class="fragment">
-								If \(\sum b_n\) diverges, how does the above inequality show \(\sum a_n\) diverges?
-							</p>
+						<p style="font-size: 25px;" class="fragment">
+							Why is \(s_2, s_4, s_6, \ldots, s_{2n}, \ldots\) convergent?  Call this limit \(L\).
+						</p>
 
-							
-							
-
-							
-									
-
-
-						
-						
 
 						
 					</section>
 
-					<section>
-						<p style="font-size: 22px;" >
-							Compare \(\displaystyle \sum_{n=1}^\infty \frac{1}{3^n-2}\) to \(\displaystyle \sum_{n=1}^\infty \frac{1}{3^n}\) and use the limit comparison test to determine if \(\displaystyle \sum_{n=1}^\infty \frac{1}{3^n-2}\) converges.
+					<section data-auto-animate>
+						<h4>Proof</h4>
+						<p style="font-size: 25px;" >
+							Consider \(s_{2n+1} = b_1-b_2+b_3-b_4+\cdots +b_{2n-1}-b_{2n}+b_{2n+1}=s_{2n}+b_{2n+1}\).
+						</p>
+						<p style="font-size: 25px;" class="fragment">
+							Note that \[\lim_{n\to \infty }s_{2n+1} = \lim_{n\to \infty } s_{2n} + \lim_{n\to \infty }b_{2n+1}.\]  Why is \[\lim_{n\to \infty }s_{2n+1} = \lim_{n\to \infty }s_{2n}=L?\]
 						</p>
 
-						<p style="font-size: 22px;" class="fragment">
-							Consider \(\displaystyle \sum_{n=0}^\infty \frac{3n^2+5n}{\sqrt{n^7+12}}\).  Who would make a reasonable choice for \(\displaystyle \sum_{n=0}^\infty b_n\) for a comparison? \[\text{(A) }\sum_{n=0}^\infty \frac{3n^2}{\sqrt{n^7+12}}\ \ \text{(B) }\sum_{n=0}^\infty \frac{3n^2+5n}{\sqrt{n^7}}\ \ \text{(C) }\sum_{n=0}^\infty \frac{3n^2}{\sqrt{n^7}}\ \ \text{(D) }\sum_{n=0}^\infty \frac{2n}{\sqrt{n^7}}\ \ \text{(E) }\sum_{n=0}^\infty \frac{3n^2}{\sqrt{12}}\ \ \text{(F) }\sum_{n=0}^\infty \frac{2n}{\sqrt{12}}.\]  Does your choice converge?
-						</p>
-						<p style="font-size: 22px;" class="fragment">
-							Compute \(\displaystyle \lim_{n \to \infty} \left( \frac{3n^2+5n}{\sqrt{n^7+12}}\cdot \frac{1}{b_n}\right) \).  Does \(\displaystyle \sum_{n=1}^\infty \frac{3n^2+5n}{\sqrt{n^7+12}}\) converge?
-						</p>
+						
+
+
+						
 					</section>
+
+					
 
 
 					
@@ -211,29 +174,96 @@
 				<section>
 					
 					<section data-auto-animate>
-							<p style="font-size: 20px;">
-								Consider that \(\displaystyle \frac{1}{k^3+1} < \frac{1}{k^3}\).  Consider  \(\displaystyle \sum_{k=1}^\infty \frac{1}{k^3+1}, \sum_{k=1}^\infty \frac{1}{k^3}\).  
+							<p style="font-size: 25px;">
+								Which of the following converge by the Alternating Series Test?
+								\[\sum_{n=1}^\infty \frac{\cos^2(n)(-1)^n}{\sqrt{n}}, \sum_{n=3}^\infty \frac{\ln(n)(-1)^n}{n^2},  \sum_{n=1}^\infty \frac{(-1)^n}{n},  \sum_{n=0}^\infty \frac{\arctan(n)(-1)^n}{e^n},  \sum_{n=1}^\infty \frac{\cos(n\pi)}{n^2}.\] 
 							</p>
-							<p style="font-size: 20px;">
-								Let \(R_{100}, T_{100}\) the remainder of both series after computing \(\displaystyle \sum_{k=1}^{100} \frac{1}{k^3+1}, \sum_{k=1}^{100} \frac{1}{k^3}\), which do you think is bigger?
-							</p>
-
-
-							<p style="font-size: 20px;" class="fragment">
-								Find an upper bound for \(T_{100}\) by integrating \(\displaystyle \int_{100}^\infty \frac{dx}{x^3}\).
-							</p>
-
-							<div class="fragment">
-							<p style="font-size: 20px;" >
-								Use a calculator to compute \(\displaystyle \sum_{k=1}^{100} \frac{1}{k^3+1}\).  What is the biggest \(\displaystyle \sum_{k=1}^{\infty} \frac{1}{k^3+1}\) could be?
-							</p>
-							<iframe src="https://www.desmos.com/calculator/iuawlfamzk" width="600" height="250" style="border: 1px solid #ccc" frameborder=0></iframe>
-							</div>
+							
 
 					</section>
 					
 						
 
+					
+				</section>
+
+
+				<section>
+					<section data-auto-animate>
+						<h4>Remainders</h4>
+						<div class="r-frame">
+							<p style="font-size: 25px;">
+								Let \(\{b_n\}\) be a positive decreasing sequence which converges to 0, and \(a_n=b_n\cdot(-1)^{n+1}\). Then the remainder \(\displaystyle |R_n| := \left|\sum_{k=n+1}^\infty a_n\right| \leq b_{n+1}\).
+							</p>
+						</div>
+						<p style="font-size: 25px;" class="fragment">
+							\[|s-s_n|\leq |s_{n+1}-s_n|=|b_n+1|.\]
+						</p>
+					</section>
+				</section>
+
+				<section>
+					<section data-auto-animate>
+						<h4>Conditional and Absolute Convergence</h4>
+						
+						<div class="r-frame">
+							<p style="font-size: 25px;">
+								Consider a series \(\sum a_n\).
+							</p>
+							<ul>
+								<li style="font-size: 25px;">
+									If \(\sum |a_n|\) converges then we say that \(\sum a_n\) is <strong style="color:blue;">absolutely convergent</strong>.
+								</li>
+								<li style="font-size: 25px;">
+									If \(\sum |a_n|\) diverges but \(\sum a_n\) converges then we say that \(\sum a_n\) is <strong style="color:red;">conditionally convergent</strong>.
+								</li>
+							</ul>
+						</div>
+						
+					</section>
+					<section data-auto-animate>
+						<h4>Conditional and Absolute Convergence</h4>
+						
+						<div class="r-frame">
+							<p style="font-size: 25px;">
+								If \(\sum a_n\) is absolutely convergent, then it is convergent.  
+							</p>
+						</div>
+						<p style="font-size: 25px;" class="fragment">
+							Suppose \(\sum |a_n|\) converges.  Why is \[0\leq a_n+|a_n|\leq 2|a_n|? \]
+						</p>
+						<p style="font-size: 25px;" class="fragment">
+							So we now have \[\sum 0\leq \sum (a_n+|a_n|)\leq \sum 2|a_n|, \] why does \(\sum 2|a_n|\) converge?
+						</p>
+
+						<p style="font-size: 25px;" class="fragment">
+							Why does \(\sum (a_n+|a_n|)\) converge?
+						</p>
+
+						<p style="font-size: 25px;" class="fragment">
+							Why does \(\sum a_n\) converge?
+						</p>
+
+
+						
+					</section>
+
+					<section data-auto-animate>
+							<p style="font-size: 25px;">
+								Classify the following as absolutely convergent, conditionally convergent and divergent.
+								\[\sum_{n=3}^\infty \frac{\ln(n)(-1)^n}{n^2},  \sum_{n=1}^\infty \frac{(-1)^n}{n},  \sum_{n=0}^\infty \frac{\arctan(n)(-1)^n}{e^n},  \sum_{n=1}^\infty \frac{\cos(n\pi)}{n^2}\] 
+								\[\sum_{n=3}^\infty \frac{\ln(n)}{n^2},  \sum_{n=1}^\infty \frac{1}{n},  \sum_{n=0}^\infty \frac{\arctan(n)}{e^n}\] 
+							</p>
+							
+
+					</section>
+				</section>
+
+				<section>
+					<p style="font-size: 25px;" class="r-frame">
+						If a series \(\sum a_n\) is conditionally convergent, then it can be <q>rearranged</q> to converge to any real number <m>R</m>.
+					</p>
+					<iframe src="https://www.desmos.com/calculator/4gi57sjizc" width="100%" height="400" style="border: 1px solid #ccc" frameborder=0></iframe>
 					
 				</section>
 
