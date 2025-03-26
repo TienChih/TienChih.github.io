@@ -1,0 +1,405 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>reveal.js</title>
+
+		<link rel="stylesheet" href="dist/reset.css">
+		<link rel="stylesheet" href="dist/reveal.css">
+		<link rel="stylesheet" href="dist/theme/white.css">
+		<link rel="stylesheet" href="plugin/chalkboard/style.css">
+		<link rel="stylesheet" href="plugin/customcontrols/style.css">
+
+		<script src="https://tikzjax.com/v1/tikzjax.js"></script>
+
+
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+
+
+
+		<!-- Theme used for syntax highlighted code -->
+		<link rel="stylesheet" href="plugin/highlight/monokai.css">
+		<style>
+			.container{
+   				 display: flex;
+			}
+			.col{
+    			flex: 1;
+			}
+		</style>
+			<script async defer src="https://buttons.github.io/buttons.js"></script>
+
+		<script src="plugin/menu/menu.js"></script>
+
+
+
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				
+				<section>
+					<h2>Power Series</h2>
+					<h3>(Not the show, I haven't seen it)</h3>
+					<h4>M 112</h4>
+					
+					
+					<h4>
+						Oxford College of Emory University <a href="https://app.oxford.emory.edu/WebApps/Directory/index.cfm/view/9984" target="_blank">Tien Chih</a>
+					</h4>
+				</section>
+
+
+				<section>	
+
+					<section data-auto-animate>
+						<div class="r-frame">
+							<p style="font-size: 25px;">
+							Let \(x\) be a real number and consider the series
+							 \[\sum_{k=0}^\infty 4^kx^k.\]
+								
+							</p>
+
+							
+							
+						</div>
+
+						<p style="font-size: 25px;" class="fragment">
+							Let \(x= -1000000, -10, -4, -1, -1/2, -1/4, -1/10, 0, 1/10, 1/4, 1/2, 1, 4, 10, 1000000\), for which of these values does \(\displaystyle \sum_{k=0}^\infty 4^kx^k\) converge?
+						</p>
+
+						<p style="font-size: 25px;" class="fragment">
+							Classify the values of \(x\) for which \(\displaystyle \sum_{k=0}^\infty 4^kx^k\) converges.
+						</p>
+
+						
+						
+
+						
+					</section>
+
+					<section data-auto-animate>
+						<div class="r-frame">
+							<p style="font-size: 25px;">
+							Let \(x\) be a real number and consider the series
+							 \[\sum_{k=0}^\infty \frac{x^n}{n}.\]
+								
+							</p>
+
+							
+							
+						</div>
+
+						<p style="font-size: 25px;" >
+							Let \(x= -1000000, -10, -4, -1, -1/2, -1/4, -1/10, 0, 1/10, 1/4, 1/2, 1, 4, 10, 1000000\), for which of these values does \(\displaystyle \sum_{k=0}^\infty \frac{x^n}{n}\) converge?
+						</p>
+
+						<p style="font-size: 25px;" class="fragment">
+							Classify the values of \(x\) for which \(\displaystyle \sum_{k=0}^\infty \frac{x^n}{n}\) converges.
+						</p>
+
+						
+						
+
+						
+					</section>
+
+					<section data-auto-animate>
+						<div class="r-frame">
+							<p style="font-size: 25px;">
+							Let \(x\) be a real number and consider the series
+							 \[\sum_{k=0}^\infty \frac{x^n}{n!}.\]
+								
+							</p>
+
+							
+							
+						</div>
+
+						<p style="font-size: 25px;" >
+							Let \(x= -1000000, -10, -4, -1, -1/2, -1/4, -1/10, 0, 1/10, 1/4, 1/2, 1, 4, 10, 1000000\), for which of these values does \(\displaystyle \sum_{k=0}^\infty \frac{x^n}{n!}\) converge?
+						</p>
+
+						<p style="font-size: 25px;" class="fragment">
+							Classify the values of \(x\) for which \(\displaystyle \sum_{k=0}^\infty \frac{x^n}{n}\) converges.
+						</p>
+
+						
+						
+
+						
+					</section>
+
+					<section data-auto-animate>
+						<div class="r-frame">
+							<p style="font-size: 25px;">
+							Let \(x\) be a real number and consider the series
+							 \[\sum_{k=0}^\infty n!x^n.\]
+								
+							</p>
+
+							
+							
+						</div>
+
+						<p style="font-size: 25px;" >
+							Let \(x= -1000000, -10, -4, -1, -1/2, -1/4, -1/10, 0, 1/10, 1/4, 1/2, 1, 4, 10, 1000000\), for which of these values does \(\displaystyle \sum_{k=0}^\infty n!x^n\) converge?
+						</p>
+
+						<p style="font-size: 25px;" class="fragment">
+							Classify the values of \(x\) for which \(\displaystyle \sum_{k=0}^\infty n!x^n\) converges.
+						</p>
+
+						
+						
+
+						
+					</section>
+					
+
+					
+					
+
+
+
+					
+
+				</section>
+
+
+
+				<section>	
+					<section data-auto-animate>
+						<div class="r-frame">
+							<p style="font-size: 25px;">
+							A <strong>power series</strong> is a series of the form
+							 \[\sum_{k=0}^\infty c_k(x-a)^k\]
+							 where \(c_k, a\) are real numbers.
+								
+							</p>
+
+							
+							
+						</div>
+						<p style="font-size: 25px;" class="fragment">
+							For the previous series, describe \(a, c_k\).
+						</p>
+						<p style="font-size: 25px;" class="fragment">
+							Is \(4x^3-2x^2+7\) a power series?
+						</p>
+					</section>
+
+					<section data-auto-animate>
+
+
+						<p style="font-size: 25px;" >
+							Consider the power series \(\displaystyle \sum_{k=0}^\infty c_k(x-a)^k\).
+								
+						</p>
+
+						<p style="font-size: 25px;" >
+							What condition on \[\lim_{k\to \infty} \left|\frac{c_{k+1}(x-a)}{c_k(x-a)} \right|\] would ensure that \(\displaystyle \sum_{k=0}^\infty c_k(x-a)^k\) converged?
+								
+						</p>
+						
+
+						
+					</section>
+
+					<section data-auto-animate>
+
+
+						<p style="font-size: 25px;" >
+							Consider the power series \(\displaystyle \sum_{k=0}^\infty \frac{(-1)^k(x-1)^k}{k\cdot 3^k}\).  What are \(a, c_k\)?
+								
+						</p>
+
+						<p style="font-size: 25px;" class="fragment">
+							For what values of \(|x-1|\) is \(\displaystyle \lim_{k\to \infty} \left|\frac{c_{k+1}(x-a)}{c_k(x-a)} \right|<1\)?
+								
+						</p>
+
+						<p style="font-size: 25px;" class="fragment" >
+							Does \(\displaystyle \sum_{k=0}^\infty \frac{(-1)^k(x-1)^k}{k\cdot 3^k}\) converge if \(x=4, -2\)?
+						</p>
+						
+
+						
+					</section>
+
+					
+
+
+					
+
+
+				</section>
+
+				<section>	
+
+					<section data-auto-animate>
+						<div class="r-frame">
+							<p style="font-size: 25px;">
+							<strong>Theorem</strong>:<br>
+
+							Given a power series \(\displaystyle \sum_{k=0}^\infty c_k(x-a)^k\) there are three possibilities:
+
+							<ol>
+								<li style="font-size: 25px;">
+									\(\displaystyle \sum_{k=0}^\infty c_k(x-a)^k\) converges for all values of \(x\).
+								</li>
+								<li style="font-size: 25px;">
+									\(\displaystyle \sum_{k=0}^\infty c_k(x-a)^k\) converges only when \(x=a\).
+								</li>
+								<li style="font-size: 25px;">
+									There is a \(R &gt; 0\) such that \(\displaystyle \sum_{k=0}^\infty c_k(x-a)^k\) converges when \(|x-a| < R\).
+								</li>
+							</ol>
+						</div>	
+								
+							</p>
+
+							<p style="font-size: 25px;" class="fragment">
+								In the last case, we test seperately if \(x= a-R, a+R\) converges.
+							</p>
+
+							<p style="font-size: 25px;" class="fragment">
+								The values of \(x\) for which \(\displaystyle \sum_{k=0}^\infty c_k(x-a)^k\) converges is called the interval of convergence.
+							</p>
+
+
+							
+							
+						
+
+						
+
+						
+						
+
+						
+					</section>
+				</section>
+
+				
+
+				
+
+
+
+				
+				
+
+
+
+
+
+
+
+
+
+
+				
+
+
+					
+
+
+				
+
+
+				
+
+				
+
+
+
+
+				
+					
+				
+			</div>
+		</div>
+
+		<script src="dist/reveal.js"></script>
+		<script src="plugin/notes/notes.js"></script>
+		<script src="plugin/markdown/markdown.js"></script>
+		<script src="plugin/highlight/highlight.js"></script>
+		<script>
+			// More info about initialization & config:
+			// - https://revealjs.com/initialization/
+			// - https://revealjs.com/config/
+			Reveal.initialize({
+				hash: true,
+
+				// Learn about plugins: https://revealjs.com/plugins/
+				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
+			});
+		</script>
+		<script src="plugin/math/math.js"></script>
+		<script src="plugin/chalkboard/plugin.js"></script>
+		<script src="plugin/customcontrols/plugin.js"></script>
+
+
+
+	<script>
+  	Reveal.initialize({
+		math: {
+			mathjax: 'https://cdn.jsdelivr.net/gh/mathjax/mathjax@2.7.8/MathJax.js',
+			config: 'TeX-AMS_HTML-full',
+			// pass other options into `MathJax.Hub.Config()`
+			TeX: { Macros: { RR: "{\\bf R}" } }
+		},
+
+		chalkboard: {
+        boardmarkerWidth: 3,
+        chalkWidth: 7,
+        chalkEffect: 1.0,
+        storage: null,
+        src: null,
+        readOnly: undefined,
+        transition: 800,
+        theme: "chalkboard",
+        background: [ 'rgba(127,127,127,.1)' , path + 'img/blackboard.png' ],
+        grid: { color: 'rgb(50,50,10,0.5)', distance: 80, width: 2},
+        eraser: { src: path + 'img/sponge.png', radius: 20},
+        boardmarkers : [
+                { color: 'rgba(100,100,100,1)', cursor: 'url(' + path + 'img/boardmarker-black.png), auto'},
+                { color: 'rgba(30,144,255, 1)', cursor: 'url(' + path + 'img/boardmarker-blue.png), auto'},
+                { color: 'rgba(220,20,60,1)', cursor: 'url(' + path + 'img/boardmarker-red.png), auto'},
+                { color: 'rgba(50,205,50,1)', cursor: 'url(' + path + 'img/boardmarker-green.png), auto'},
+                { color: 'rgba(255,140,0,1)', cursor: 'url(' + path + 'img/boardmarker-orange.png), auto'},
+                { color: 'rgba(150,0,20150,1)', cursor: 'url(' + path + 'img/boardmarker-purple.png), auto'},
+                { color: 'rgba(255,220,0,1)', cursor: 'url(' + path + 'img/boardmarker-yellow.png), auto'}
+        ],
+        chalks: [
+                { color: 'rgba(255,255,255,0.5)', cursor: 'url(' + path + 'img/chalk-white.png), auto'},
+                { color: 'rgba(96, 154, 244, 0.5)', cursor: 'url(' + path + 'img/chalk-blue.png), auto'},
+                { color: 'rgba(237, 20, 28, 0.5)', cursor: 'url(' + path + 'img/chalk-red.png), auto'},
+                { color: 'rgba(20, 237, 28, 0.5)', cursor: 'url(' + path + 'img/chalk-green.png), auto'},
+                { color: 'rgba(220, 133, 41, 0.5)', cursor: 'url(' + path + 'img/chalk-orange.png), auto'},
+                { color: 'rgba(220,0,220,0.5)', cursor: 'url(' + path + 'img/chalk-purple.png), auto'},
+                { color: 'rgba(255,220,0,0.5)', cursor: 'url(' + path + 'img/chalk-yellow.png), auto'}
+        ]
+    },
+    customcontrols: {
+  		controls: [
+  			{ icon: '<i class="fa fa-pen-square"></i>',
+  			  title: 'Toggle chalkboard (B)',
+  			  action: 'RevealChalkboard.toggleChalkboard();'
+  			},
+  			{ icon: '<i class="fa fa-pen"></i>',
+  			  title: 'Toggle notes canvas (C)',
+  			  action: 'RevealChalkboard.toggleNotesCanvas();'
+  			}
+  		]
+    },
+
+		plugins: [ RevealMath, RevealChalkboard, RevealCustomControls, RevealMenu  ]
+		});
+	</script>
+
+	</body>
+</html>

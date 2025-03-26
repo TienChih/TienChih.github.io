@@ -1,0 +1,357 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>reveal.js</title>
+
+		<link rel="stylesheet" href="dist/reset.css">
+		<link rel="stylesheet" href="dist/reveal.css">
+		<link rel="stylesheet" href="dist/theme/white.css">
+		<link rel="stylesheet" href="plugin/chalkboard/style.css">
+		<link rel="stylesheet" href="plugin/customcontrols/style.css">
+
+		<script src="https://tikzjax.com/v1/tikzjax.js"></script>
+
+
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+
+
+
+		<!-- Theme used for syntax highlighted code -->
+		<link rel="stylesheet" href="plugin/highlight/monokai.css">
+		<style>
+			.container{
+   				 display: flex;
+			}
+			.col{
+    			flex: 1;
+			}
+		</style>
+			<script async defer src="https://buttons.github.io/buttons.js"></script>
+
+		<script src="plugin/menu/menu.js"></script>
+
+
+
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				
+				<section>
+					<h2>Manipulating Power (series)</h2>
+					<h4>M 112</h4>
+					
+					
+					<h4>
+						Oxford College of Emory University <a href="https://app.oxford.emory.edu/WebApps/Directory/index.cfm/view/9984" target="_blank">Tien Chih</a>
+					</h4>
+				</section>
+
+
+				<section>	
+
+					<section data-auto-animate>
+						<div class="r-frame">
+							<p style="font-size: 25px;">
+							Recall that for \(-1 < x < 1\), we have that \[\displaystyle \frac{1}{1-x} = \sum_{k=0}^\infty x^k \]
+								
+							</p>
+
+							
+							
+						</div>
+
+						<p style="font-size: 25px;" class="fragment">
+							Manipulate the above so you get \(\displaystyle \frac{1}{1+x} = \sum_{k=0}^\infty ?x^k \)
+						</p>
+
+						<p style="font-size: 25px;" class="fragment">
+							Manipulate the above (or original) so you get \(\displaystyle \frac{1}{1+x^2} = \sum_{k=0}^\infty ?x^? \)
+						</p>
+
+						<p style="font-size: 25px;" class="fragment">
+							Use integration to find \(\displaystyle \arctan(x) = \sum_{k=0}^\infty ?x^? \)
+						</p>
+
+						
+						
+
+						
+					</section>
+
+					<section data-auto-animate>
+						<div class="r-frame">
+							<p style="font-size: 25px;">
+							Recall that for \(-1 < x < 1\), we have that \[\displaystyle \frac{1}{1-x} = \sum_{k=0}^\infty x^k \]
+								
+							</p>
+
+							
+							
+						</div>
+
+						<p style="font-size: 25px;" >
+							Use manipulation, derivatives or integration to find power series representations for \[\frac{1}{(1-x)^2}, \ln|1+x|, \frac{1}{5+x}\]
+						</p>
+
+						<p style="font-size: 25px;" class="fragment">
+							For the series you just found, when are they defined?
+						</p>
+
+						
+						
+
+						
+					</section>
+
+					
+					
+
+					
+					
+
+
+
+					
+
+				</section>
+
+
+
+				<section>	
+					<section data-auto-animate>
+						<div class="r-frame">
+							<p style="font-size: 25px;">
+							Since \(\displaystyle \sum_{k=0}^\infty c_k(x-a)^k\) converges within it's interval of convergence \(I\), by letting \(f(x) = \displaystyle \sum_{k=0}^\infty c_k(x-a)^k\), we define a function \(f: I\to \mathbb{R}\).
+								
+							</p>
+
+							
+							
+						</div>
+						
+					</section>
+
+					<section data-auto-animate>
+							<p style="font-size: 25px;">
+							<strong>Theorem</strong>:<br>
+							If \(\displaystyle f(x)=\sum_{k=0}^\infty c_k(x-a)^k\) with radius of convergence \(R > 0\) is a differentiable function on \(I\), then:
+
+							<ol>
+								<li style="font-size: 25px;">
+									\(\displaystyle f'(x)=\sum_{k=0}^\infty c_k\cdot k\cdot (x-a)^{k-1} = \sum_{k=1}^\infty c_k\cdot k\cdot (x-a)^{k-1} = \sum_{k=0}^\infty c_{k+1}(k+1) (x-a)^{k}\) 
+								</li>
+
+								<li style="font-size: 25px;">
+									\(\displaystyle F(x)=C+\sum_{k=0}^\infty \frac{c_k}{k+1}\cdot (x-a)^{k+1} = C+ \sum_{k=1}^\infty \frac{c_{k-1}}{k}\cdot (x-a)^k \). Where \(F(x)\) is an antiderivative of \(f(x)\) where \(F(a)=C\).
+								</li>
+							</ol>
+								
+							</p>
+
+							
+							
+						
+					</section>
+
+					
+
+
+					
+
+
+				</section>
+
+				<section>	
+
+					<section data-auto-animate>
+						<p style="font-size: 25px;">
+							The <strong>Bessel function of order 0</strong> is a function defined by \[\displaystyle J_0(x) = \sum_{n=0}^\infty \frac{(-1)^n x^{2n}}{2^{2n(n!)^2}}.\]
+						</p>
+
+
+
+						<p style="font-size: 25px;">
+							Show that the radius of convergence for the Bessel function is \(\infty\).
+						</p>
+							
+							
+						
+
+						
+
+						
+						
+
+						
+					</section>
+
+					<section>
+						<iframe src="https://www.desmos.com/calculator/tqc6fpuuuj" width="100%" height="500" style="border: 1px solid #ccc" frameborder=0></iframe>
+					</section>
+				</section>
+
+				<section>	
+
+					<section data-auto-animate>
+						<p style="font-size: 25px;">
+							Let \(f(x)=\displaystyle \sum_{n=0}^\infty F_nx^n\) where \(F_n\) is the \(n\)th Fibonacci number \(F_0=F_1=1\).
+						</p>
+
+
+
+						<p style="font-size: 25px;" class="fragment">
+							Note that \[f(x)-xf(x)-x^2f(x) = 1\]
+						</p>
+
+						<p style="font-size: 25px;" class="fragment">
+							 \[f(x) = \frac{1}{1-x-x^2} = \frac{1}{\varphi\sqrt{5}(x+\varphi)} - \frac{1}{\psi\sqrt{5}(x+\psi)}\] by partial fractions ( \(\varphi = \frac{1+\sqrt{5}}{2}, \psi = \frac{1-\sqrt{5}}{2}\) ).
+						</p>
+
+						<p style="font-size: 25px;" class="fragment">
+							 \[f(x)=\displaystyle \sum_{n=0}^\infty F_nx^n = \frac{1}{\varphi\sqrt{5}}\sum_{n=0}^\infty \frac{x^n}{(-\varphi)^n} - \frac{1}{\psi\sqrt{5}}\sum_{n=0}^\infty \frac{x^n}{(-\psi)^n}\]
+						</p>
+
+						<p style="font-size: 25px;" class="fragment">
+							 \[F_n = \frac{1}{\varphi\sqrt{5}(-\varphi)^n} - \frac{1}{\psi\sqrt{5}(-\psi)^n}\]
+						</p>
+							
+							
+						
+
+						
+
+						
+						
+
+						
+					</section>
+
+					<section>
+						<iframe src="https://www.desmos.com/calculator/tryelhyclr" width="100%" height="500" style="border: 1px solid #ccc" frameborder=0></iframe>
+					</section>
+				</section>
+
+				
+
+				
+
+
+
+				
+				
+
+
+
+
+
+
+
+
+
+
+				
+
+
+					
+
+
+				
+
+
+				
+
+				
+
+
+
+
+				
+					
+				
+			</div>
+		</div>
+
+		<script src="dist/reveal.js"></script>
+		<script src="plugin/notes/notes.js"></script>
+		<script src="plugin/markdown/markdown.js"></script>
+		<script src="plugin/highlight/highlight.js"></script>
+		<script>
+			// More info about initialization & config:
+			// - https://revealjs.com/initialization/
+			// - https://revealjs.com/config/
+			Reveal.initialize({
+				hash: true,
+
+				// Learn about plugins: https://revealjs.com/plugins/
+				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
+			});
+		</script>
+		<script src="plugin/math/math.js"></script>
+		<script src="plugin/chalkboard/plugin.js"></script>
+		<script src="plugin/customcontrols/plugin.js"></script>
+
+
+
+	<script>
+  	Reveal.initialize({
+		math: {
+			mathjax: 'https://cdn.jsdelivr.net/gh/mathjax/mathjax@2.7.8/MathJax.js',
+			config: 'TeX-AMS_HTML-full',
+			// pass other options into `MathJax.Hub.Config()`
+			TeX: { Macros: { RR: "{\\bf R}" } }
+		},
+
+		chalkboard: {
+        boardmarkerWidth: 3,
+        chalkWidth: 7,
+        chalkEffect: 1.0,
+        storage: null,
+        src: null,
+        readOnly: undefined,
+        transition: 800,
+        theme: "chalkboard",
+        background: [ 'rgba(127,127,127,.1)' , path + 'img/blackboard.png' ],
+        grid: { color: 'rgb(50,50,10,0.5)', distance: 80, width: 2},
+        eraser: { src: path + 'img/sponge.png', radius: 20},
+        boardmarkers : [
+                { color: 'rgba(100,100,100,1)', cursor: 'url(' + path + 'img/boardmarker-black.png), auto'},
+                { color: 'rgba(30,144,255, 1)', cursor: 'url(' + path + 'img/boardmarker-blue.png), auto'},
+                { color: 'rgba(220,20,60,1)', cursor: 'url(' + path + 'img/boardmarker-red.png), auto'},
+                { color: 'rgba(50,205,50,1)', cursor: 'url(' + path + 'img/boardmarker-green.png), auto'},
+                { color: 'rgba(255,140,0,1)', cursor: 'url(' + path + 'img/boardmarker-orange.png), auto'},
+                { color: 'rgba(150,0,20150,1)', cursor: 'url(' + path + 'img/boardmarker-purple.png), auto'},
+                { color: 'rgba(255,220,0,1)', cursor: 'url(' + path + 'img/boardmarker-yellow.png), auto'}
+        ],
+        chalks: [
+                { color: 'rgba(255,255,255,0.5)', cursor: 'url(' + path + 'img/chalk-white.png), auto'},
+                { color: 'rgba(96, 154, 244, 0.5)', cursor: 'url(' + path + 'img/chalk-blue.png), auto'},
+                { color: 'rgba(237, 20, 28, 0.5)', cursor: 'url(' + path + 'img/chalk-red.png), auto'},
+                { color: 'rgba(20, 237, 28, 0.5)', cursor: 'url(' + path + 'img/chalk-green.png), auto'},
+                { color: 'rgba(220, 133, 41, 0.5)', cursor: 'url(' + path + 'img/chalk-orange.png), auto'},
+                { color: 'rgba(220,0,220,0.5)', cursor: 'url(' + path + 'img/chalk-purple.png), auto'},
+                { color: 'rgba(255,220,0,0.5)', cursor: 'url(' + path + 'img/chalk-yellow.png), auto'}
+        ]
+    },
+    customcontrols: {
+  		controls: [
+  			{ icon: '<i class="fa fa-pen-square"></i>',
+  			  title: 'Toggle chalkboard (B)',
+  			  action: 'RevealChalkboard.toggleChalkboard();'
+  			},
+  			{ icon: '<i class="fa fa-pen"></i>',
+  			  title: 'Toggle notes canvas (C)',
+  			  action: 'RevealChalkboard.toggleNotesCanvas();'
+  			}
+  		]
+    },
+
+		plugins: [ RevealMath, RevealChalkboard, RevealCustomControls, RevealMenu  ]
+		});
+	</script>
+
+	</body>
+</html>

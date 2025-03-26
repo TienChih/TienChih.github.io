@@ -1,0 +1,517 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>reveal.js</title>
+
+		<link rel="stylesheet" href="dist/reset.css">
+		<link rel="stylesheet" href="dist/reveal.css">
+		<link rel="stylesheet" href="dist/theme/white.css">
+		<link rel="stylesheet" href="plugin/chalkboard/style.css">
+		<link rel="stylesheet" href="plugin/customcontrols/style.css">
+
+		<script src="https://tikzjax.com/v1/tikzjax.js"></script>
+
+
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+
+
+
+		<!-- Theme used for syntax highlighted code -->
+		<link rel="stylesheet" href="plugin/highlight/monokai.css">
+		<style>
+			.container{
+   				 display: flex;
+			}
+			.col{
+    			flex: 1;
+			}
+		</style>
+			<script async defer src="https://buttons.github.io/buttons.js"></script>
+
+		<script src="plugin/menu/menu.js"></script>
+
+
+
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				
+				<section>
+					<h2>Taylor Series</h2>
+					<h4>M 112</h4>
+					
+					
+					<h4>
+						Oxford College of Emory University <a href="https://app.oxford.emory.edu/WebApps/Directory/index.cfm/view/9984" target="_blank">Tien Chih</a>
+					</h4>
+				</section>
+
+
+				<section>	
+
+					<section data-auto-animate>
+						<div class="r-frame">
+							<p style="font-size: 25px;">
+							Suppose we wanted to find \[e^x = \sum_{k=0}^\infty c_kx^k.\]  Let \(f(x)=e^x\)
+								
+							</p>
+
+							
+							
+						</div>
+
+						<p style="font-size: 25px;" class="fragment">
+							What is \(f(0)\)?  What does \(c_0\) have to be?
+						</p>
+
+						<p style="font-size: 25px;" class="fragment">
+							What are \(f'(0), f''(0), f'''(0)\)?  What does \(c_1, c_2, c_3\) have to be?
+						</p>
+
+						<p style="font-size: 25px;" class="fragment">
+							What is \(f^{(k)}(0)\)?  What does \(c_k\) have to be?
+						</p>
+
+						<p style="font-size: 25px;" class="fragment">
+							What is the power series form of \(e^x\)?
+						</p>
+
+						
+
+
+						
+						
+
+						
+					</section>
+
+
+					<section data-auto-animate>
+						<div class="r-frame">
+							<p style="font-size: 25px;">
+							Suppose a function had two power series forms \[f(x) = \sum_{k=0}^\infty c_kx^k = \sum_{k=0}^\infty b_kx^k.\] 
+								
+							</p>
+
+							
+							
+						</div>
+
+						<p style="font-size: 25px;" class="fragment">
+							What must be true about \(\displaystyle \sum_{k=0}^\infty c_kx^k - \sum_{k=0}^\infty b_kx^k\) as a function of \(x\)?
+						</p>
+
+						<p style="font-size: 25px;" class="fragment">
+							What can we say when we compare \(c_k, b_k\)?
+						</p>
+
+						
+
+
+						
+						
+
+						
+					</section>
+
+					
+
+					
+					
+
+					
+					
+
+
+
+					
+
+				</section>
+
+
+
+				<section>	
+					<section data-auto-animate>
+						<div class="r-frame">
+							<p style="font-size: 25px;">
+							If \(f(x) = \displaystyle \sum_{k=0}^\infty c_k(x-a)^k \) on some interval of convergence \(I\), then \(\displaystyle c_k = \frac{f^{(k)}(a)}{k!}\)
+								
+							</p>
+
+							<p style="font-size: 25px;">
+							We call \(\displaystyle f(x) = \sum_{k=0}^\infty \frac{f^{(k)}(a)}{k!}(x-a)^k\) the <strong>Taylor Series of \(f(x)\) centered at \(a\).</strong>
+								
+							</p>
+
+
+
+							
+							
+						</div>
+
+						<p style="font-size: 25px;" class="fragment">
+							We call \(\displaystyle f_n(x) = \sum_{k=0}^n \frac{f^{(k)}(a)}{k!}(x-a)^k\) the <strong>\(n\)th degree Taylor Polynomial of \(f(x)\)</strong>.
+						</p>
+
+						<p style="font-size: 25px;" class="fragment">
+							If \(a=0\), we call the Taylor Series a Maclaurin Series for historical reasons.
+						</p>
+						
+					</section>
+
+					<section data-auto-animate>
+						<iframe src="https://www.desmos.com/calculator/ayrjbpeuuw" width="100%" height="500" style="border: 1px solid #ccc" frameborder=0></iframe>
+
+							
+
+							
+							
+						
+					</section>
+
+					
+
+
+					
+
+
+				</section>
+
+				<section>	
+
+					<section data-auto-animate>
+						<p style="font-size: 25px;">
+							Let's find a Taylor Series centered at \(0\) for \(sin(x)\).  Let \(f(x)=\sin(x)\)
+						</p>
+
+
+
+						<p style="font-size: 25px;" class="fragment">
+							Find \(f(0), f'(0), f''(0), f'''(0), f''''(0)\).
+						</p>
+
+						<p style="font-size: 25px;" class="fragment">
+							Find \(f^{(4k)}(0), f^{(4k+1)}(0), f^{(4k+2)}(0), f^{(4k+3)}(0)\).
+						</p>
+
+						<p style="font-size: 25px;" class="fragment">
+							We have that \[ \sin(x) = \sum_{k=0}^\infty \frac{(-1)^?x^{2k+1}}{(?)!} \]
+						</p>
+							
+							
+						
+
+						
+
+						
+						
+
+						
+					</section>
+
+					<section data-auto-animate>
+						<p style="font-size: 25px;">
+							Let's find a Taylor Series centered at \(0\) for \(cos(x)\).  Let \(f(x)=\cos(x)\)
+						</p>
+
+
+
+						<p style="font-size: 25px;" class="fragment">
+							Find \(f(0), f'(0), f''(0), f'''(0), f''''(0)\).
+						</p>
+
+						<p style="font-size: 25px;" class="fragment">
+							Find \(f^{(2k)}(0), f^{(2k+1)}(0)\).
+						</p>
+
+						<p style="font-size: 25px;" class="fragment">
+							Find \(f^{(4k)}(0), f^{(4k+1)}(0), f^{(4k+2)}(0), f^{(4k+3)}(0)\).
+						</p>
+
+						<p style="font-size: 25px;" class="fragment">
+							We have that \[ \sin(x) = \sum_{k=0}^\infty \frac{(-1)^?x^{2k}}{(?)!} \]
+						</p>
+							
+							
+						
+
+						
+
+						
+						
+
+						
+					</section>
+				</section>
+
+				<section>	
+
+					<section data-auto-animate>
+						<p style="font-size: 25px;">
+							Find a Taylor/power series form for \(e^{-x^2}\).
+						</p>
+
+
+
+						<p style="font-size: 25px;" class="fragment">
+							Use the 10th degree Taylor polynomial centered at \(0\) to estimate \(\displaystyle ]\int_0^1 e^{-x^2}dx\).
+						</p>
+
+						
+							
+							
+						
+
+						
+
+						
+						
+
+						
+					</section>
+
+					<section data-auto-animate>
+						<iframe src="https://www.desmos.com/calculator/wrko1cg0ku" width="100%" height="500" style="border: 1px solid #ccc" frameborder=0></iframe>
+
+
+						
+							
+							
+						
+
+						
+
+						
+						
+
+						
+					</section>
+
+					
+				</section>
+
+				<section>	
+
+					<section data-auto-animate>
+						<p style="font-size: 25px;">
+							Note that \((1+x)^m = \displaystyle \sum_{k=0}^m {m\choose k} x^k = \sum_{k=0}^m \frac{m(m-1)\cdots(m-k+1)}{k!} x^k\).  This is called the <strong>binomial expansion of </strong> of \((1+x)^m\)
+						</p>
+
+
+
+						<p style="font-size: 25px;" class="fragment">
+							Find the binomial expansion for \((1+x)^3\).
+						</p>
+
+						<p style="font-size: 25px;" class="fragment">
+							Find the binomial expansion for \((1+x)^{-1}\).
+						</p>
+
+						<p style="font-size: 25px;" class="fragment">
+							Start writing out the binomial expansion for \(\sqrt{1+x}\).
+						</p>
+
+						
+							
+							
+						
+
+						
+
+						
+						
+
+						
+					</section>
+
+					
+				</section>
+
+				<section>	
+
+					<section data-auto-animate>
+						<p style="font-size: 25px;">
+							Find a Taylor/power series form for \(x^4sin(x)\)  (don't overthink this, \(x^4sin(x) = x^4\cdot sin(x)\)).
+						</p>
+
+
+
+						<p style="font-size: 25px;" class="fragment">
+							Find a Taylor/power series form for \(x^2\arctan(2x)\).
+						</p>
+
+						<p style="font-size: 25px;" class="fragment">
+							Find a Taylor/power series form for \(xe^{-x}\).
+						</p>
+
+						<p style="font-size: 25px;" class="fragment">
+							Find a Taylor/power series form for \(\frac{d}{dx}[xe^{-x}]=(1-x)e^{-x}\).
+						</p>
+
+						
+							
+							
+						
+
+						
+
+						
+						
+
+						
+					</section>
+
+
+					<section data-auto-animate>
+						<p style="font-size: 25px;">
+							Write out the first 4 terms of the Taylor Series expansions for \(e^x\) and \(\sin(x)\)
+						</p>
+
+
+
+						<p style="font-size: 25px;" class="fragment">
+							Write out the first 4 terms of \(e^x\sin(x)=\left( \sum_{k=0}^\infty \frac{x^k}{k!} \right) \left( \sum_{k=0}^\infty \frac{(-1)^kx^{2k+1}}{(2k+1)!} \right)\).
+						</p>
+
+						
+
+						
+							
+							
+						
+
+						
+
+						
+						
+
+						
+					</section>
+
+					
+				</section>
+
+				
+
+				
+
+
+
+				
+				
+
+
+
+
+
+
+
+
+
+
+				
+
+
+					
+
+
+				
+
+
+				
+
+				
+
+
+
+
+				
+					
+				
+			</div>
+		</div>
+
+		<script src="dist/reveal.js"></script>
+		<script src="plugin/notes/notes.js"></script>
+		<script src="plugin/markdown/markdown.js"></script>
+		<script src="plugin/highlight/highlight.js"></script>
+		<script>
+			// More info about initialization & config:
+			// - https://revealjs.com/initialization/
+			// - https://revealjs.com/config/
+			Reveal.initialize({
+				hash: true,
+
+				// Learn about plugins: https://revealjs.com/plugins/
+				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
+			});
+		</script>
+		<script src="plugin/math/math.js"></script>
+		<script src="plugin/chalkboard/plugin.js"></script>
+		<script src="plugin/customcontrols/plugin.js"></script>
+
+
+
+	<script>
+  	Reveal.initialize({
+		math: {
+			mathjax: 'https://cdn.jsdelivr.net/gh/mathjax/mathjax@2.7.8/MathJax.js',
+			config: 'TeX-AMS_HTML-full',
+			// pass other options into `MathJax.Hub.Config()`
+			TeX: { Macros: { RR: "{\\bf R}" } }
+		},
+
+		chalkboard: {
+        boardmarkerWidth: 3,
+        chalkWidth: 7,
+        chalkEffect: 1.0,
+        storage: null,
+        src: null,
+        readOnly: undefined,
+        transition: 800,
+        theme: "chalkboard",
+        background: [ 'rgba(127,127,127,.1)' , path + 'img/blackboard.png' ],
+        grid: { color: 'rgb(50,50,10,0.5)', distance: 80, width: 2},
+        eraser: { src: path + 'img/sponge.png', radius: 20},
+        boardmarkers : [
+                { color: 'rgba(100,100,100,1)', cursor: 'url(' + path + 'img/boardmarker-black.png), auto'},
+                { color: 'rgba(30,144,255, 1)', cursor: 'url(' + path + 'img/boardmarker-blue.png), auto'},
+                { color: 'rgba(220,20,60,1)', cursor: 'url(' + path + 'img/boardmarker-red.png), auto'},
+                { color: 'rgba(50,205,50,1)', cursor: 'url(' + path + 'img/boardmarker-green.png), auto'},
+                { color: 'rgba(255,140,0,1)', cursor: 'url(' + path + 'img/boardmarker-orange.png), auto'},
+                { color: 'rgba(150,0,20150,1)', cursor: 'url(' + path + 'img/boardmarker-purple.png), auto'},
+                { color: 'rgba(255,220,0,1)', cursor: 'url(' + path + 'img/boardmarker-yellow.png), auto'}
+        ],
+        chalks: [
+                { color: 'rgba(255,255,255,0.5)', cursor: 'url(' + path + 'img/chalk-white.png), auto'},
+                { color: 'rgba(96, 154, 244, 0.5)', cursor: 'url(' + path + 'img/chalk-blue.png), auto'},
+                { color: 'rgba(237, 20, 28, 0.5)', cursor: 'url(' + path + 'img/chalk-red.png), auto'},
+                { color: 'rgba(20, 237, 28, 0.5)', cursor: 'url(' + path + 'img/chalk-green.png), auto'},
+                { color: 'rgba(220, 133, 41, 0.5)', cursor: 'url(' + path + 'img/chalk-orange.png), auto'},
+                { color: 'rgba(220,0,220,0.5)', cursor: 'url(' + path + 'img/chalk-purple.png), auto'},
+                { color: 'rgba(255,220,0,0.5)', cursor: 'url(' + path + 'img/chalk-yellow.png), auto'}
+        ]
+    },
+    customcontrols: {
+  		controls: [
+  			{ icon: '<i class="fa fa-pen-square"></i>',
+  			  title: 'Toggle chalkboard (B)',
+  			  action: 'RevealChalkboard.toggleChalkboard();'
+  			},
+  			{ icon: '<i class="fa fa-pen"></i>',
+  			  title: 'Toggle notes canvas (C)',
+  			  action: 'RevealChalkboard.toggleNotesCanvas();'
+  			}
+  		]
+    },
+
+		plugins: [ RevealMath, RevealChalkboard, RevealCustomControls, RevealMenu  ]
+		});
+	</script>
+
+	</body>
+</html>
