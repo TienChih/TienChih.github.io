@@ -1,0 +1,96 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>SageMathCell</title>
+    <script src="https://sagecell.sagemath.org/static/embedded_sagecell.js"></script>
+    <script>
+    // Make the div with id 'mycell' a Sage cell
+    sagecell.makeSagecell({inputLocation:  '#mycell',
+                           template:       sagecell.templates.minimal,
+                           evalButtonText: 'Activate'});
+    // Make *any* div with class 'compute' a Sage cell
+    sagecell.makeSagecell({inputLocation: 'div.compute',
+                           evalButtonText: 'Evaluate'});
+    </script>
+  </head>
+  <body>
+  
+    <div class="compute"><script type="text/x-sage">
+P = LatticePoset({1: [2, 3], 2: [4, 5], 3: [5,6], 4: [7], 5: [7], 6: [7]})
+
+#P = P.dual()
+
+P.show()
+
+GenSet = [(5,7), (6,7), (4,7)]
+
+RM = GenSet
+
+for y in P:
+    RM.append( (y,y) )
+
+
+
+#Pullback
+TempRM = []
+while(TempRM != RM):
+    TempRM = RM
+    for x in RM:
+        for y in P:
+            if P.is_less_than(y,x[1]):
+                dummy = 1
+                for z in RM:
+                    if z == (P.meet(x[0],y), y):
+                        dummy = 0
+                if dummy == 1:
+                    RM.append( (P.meet(x[0],y), y) )
+
+
+#Composition
+TempRM = []
+while(TempRM != RM):
+    TempRM = RM
+    for x1 in RM:
+        for x2 in RM:
+            if x1[1] == x2[0]:
+                dummy = 1
+                for z in RM:
+                    if z == (x1[0], x2[1]):
+                        dummy = 0
+                if dummy == 1:
+                    RM.append( (x1[0], x2[1]) )
+
+#Compute E(R)
+
+ER = []
+
+for r in RM:
+    if r[0] != r[1]:
+        for x in P:
+            if P.is_less_than(x,r[0]) or x == r[0]:
+                dummy = 1
+                for s in ER:
+                    if (x, r[1]) == s:
+                        dummy = 0
+                if dummy == 1:
+                    ER.append( (x, r[1]) )
+
+#Compute E(R)^c
+LM=[]
+
+for x in P:
+    for y in P:
+        if P.is_less_than(x,y) or x == y:
+            dummy = 1
+            for r in ER:
+                if (x,y) == r:
+                    dummy = 0
+            if dummy == 1:
+                LM.append( (x, y) )
+print("The Right Morphisms are: ",RM)
+print("The Left Morphisms are: ", LM)  </script></div>
+    
+  </body>
+</html>
