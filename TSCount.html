@@ -1,0 +1,68 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>SageMathCell</title>
+    <script src="https://sagecell.sagemath.org/static/embedded_sagecell.js"></script>
+    <script>
+    // Make the div with id 'mycell' a Sage cell
+    sagecell.makeSagecell({inputLocation:  '#mycell',
+                           template:       sagecell.templates.minimal,
+                           evalButtonText: 'Activate'});
+    // Make *any* div with class 'compute' a Sage cell
+    sagecell.makeSagecell({inputLocation: 'div.compute',
+                           evalButtonText: 'Evaluate'});
+    </script>
+  </head>
+  <body>
+  
+    <div class="compute"><script type="text/x-sage">
+def s(P):
+        P = P.relabel()
+        m = P.join_matrix()
+
+        n = len(P)
+        class Frame:
+                def __init__(self,n):
+                        self.next = 0 
+                        self.span = Bitset([0], capacity=n)
+                        self.gens = Bitset(capacity=n)
+
+        stack = [Frame(n)]
+        out = 0 
+
+        while stack:
+                frame = stack.pop()
+
+                for next in (next for next in range(frame.next, n) if not next in frame.span):
+                        # next is the next node to make a decision about.
+                        # First, decide no then push to stack.
+                        new_frame = deepcopy(frame)
+                        new_frame.next = next+1
+                        stack.append(new_frame)
+
+                        # Then, decide yes and keep processing
+                        frame.gens.add(next)
+                        for o in frame.span:
+                                frame.span.add(m[next, o]) 
+                # No more decisions, so this is a minimal generating set.
+                out += 1
+        return out 
+
+#G = DiCyclicGroup(3)
+#subgroups = G.subgroups()
+#f = lambda h,k: h.is_subgroup(k)
+#P = LatticePoset((subgroups, f)) 
+
+
+P = LatticePoset({1: [2, 3], 2: [4, 5], 3: [5,6], 4: [7], 5: [7], 6: [7]})
+#P = P.dual()
+P.show()
+
+
+
+print(s(P.dual())) </script></div>
+    
+  </body>
+</html>
