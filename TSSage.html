@@ -18,13 +18,13 @@
   <body>
   
     <div class="compute"><script type="text/x-sage">
-P = LatticePoset({1: [2, 3], 2: [4, 5], 3: [5,6], 4: [7], 5: [7], 6: [7]})
+P = LatticePoset({0: ['a', 'b'], 'a': ['c', 'd'], 'b': ['d','e'], 'c': [1], 'd': [1], 'e': [1]})
 
 #P = P.dual()
 
 P.show()
 
-GenSet = [(5,7), (6,7), (4,7)]
+GenSet = [('a',1), ('e',1)]
 
 RM = GenSet
 
