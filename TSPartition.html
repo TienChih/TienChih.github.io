@@ -1,0 +1,59 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>SageMathCell</title>
+    <script src="https://sagecell.sagemath.org/static/embedded_sagecell.js"></script>
+    <script>
+    // Make the div with id 'mycell' a Sage cell
+    sagecell.makeSagecell({inputLocation:  '#mycell',
+                           template:       sagecell.templates.minimal,
+                           evalButtonText: 'Activate'});
+    // Make *any* div with class 'compute' a Sage cell
+    sagecell.makeSagecell({inputLocation: 'div.compute',
+                           evalButtonText: 'Evaluate'});
+    </script>
+  </head>
+  <body>
+  
+    <div class="compute"><script type="text/x-sage">
+def CloseMeet(P, S):
+    CloseSet = S
+    TempClose = []
+    
+    while(CloseSet != TempClose):
+        TempClose = CloseSet
+        PowerSet = Subsets(CloseSet).list()
+        for X in PowerSet:
+            e = P.meet(X)
+            if e not in CloseSet:
+                CloseSet.append(e)
+                #CloseSet.sort()
+    return(Set(CloseSet))        
+
+P = LatticePoset({0: ['a', 'b', 'c'], 'a': ['d'], 'b': ['d','e'], 'c': ['d', 'f'], 'd': [1], 'e': [1], 'f': [1]})
+#P = P.dual()
+P.show()
+
+Elements = P.list()
+Elements.remove(P.join(Elements))
+PowerSets = Subsets(Elements).list()
+Cosaturated = []
+
+for X in PowerSets:
+    Generated = CloseMeet(P,X.list())
+    dummy = 0
+    for i in range(len(Cosaturated)):
+        if Generated == Cosaturated[i][1]:
+            Cosaturated[i][0] = Cosaturated[i][0] +[X]
+            dummy = 1
+    if dummy == 0:
+        Cosaturated += [[[X], Generated]]
+
+print(len(Cosaturated))
+for X in Cosaturated:
+    print(X[0]) </script></div>
+    
+  </body>
+</html>
