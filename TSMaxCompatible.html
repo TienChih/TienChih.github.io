@@ -92,12 +92,20 @@ def MakeMaxComp(P, RM):
                     if (P.is_less_than(C2, B) or C2 == B):
                         if (P.meet(C1, A), P.meet(C2, A)) in RM:
                             #print([(P.meet(C1, A), P.meet(C2, A)), (C1,C2)])
-                            dummy = ((C1, C2) in RM)
+                            #dummy = ((C1, C2) in RM)
+                            if (C1, C2) not in RM:
+                                dummy = False
                             #print(dummy)    
         if dummy and (A,B) not in RMp:
             RMp.append((A,B))
     return(RMp)                        
     
+def removeid(S):
+    St = []
+    for x in S:
+        if x[0] != x[1]:
+            St.append(x)
+    return(St)        
     
 P = LatticePoset({0: ['a', 'b'], 'a': ['c', 'd'], 'b': ['d','e'], 'c': [1], 'd': [1], 'e': [1]})
 
@@ -105,7 +113,7 @@ P = LatticePoset({0: ['a', 'b'], 'a': ['c', 'd'], 'b': ['d','e'], 'c': [1], 'd':
 
 P.show()
 
-GenSet = [('a',1)]
+GenSet = [('e',1)]
 
 LM = MakeFS(P, GenSet)[0]
 RM = MakeFS(P, GenSet)[1]
@@ -113,10 +121,12 @@ RM = MakeFS(P, GenSet)[1]
 RMp = MakeMaxComp(P, RM)
 LMp = MakeFS(P, RMp)[0]
                 
-print("The Right Morphisms are: ",RM)
-print("The Left Morphisms are: ", LM)
-print("The Right Morphisms of Max Compatible are: ", RMp)
-print("The Left Morphisms of Max Compatible are: ", LMp)
+print("The Right Morphisms are: ",removeid(RM))
+print("The Left Morphisms are: ", removeid(LM))
+print("The Right Morphisms of Max Compatible are: ", removeid(RMp))
+print("The Left Morphisms of Max Compatible are: ", removeid(LMp))
+
+set(RM) == set(RMp)
  </script></div>
     
   </body>
