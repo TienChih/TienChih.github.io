@@ -1,0 +1,119 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>SageMathCell</title>
+    <script src="https://sagecell.sagemath.org/static/embedded_sagecell.js"></script>
+    <script>
+    // Make the div with id 'mycell' a Sage cell
+    sagecell.makeSagecell({inputLocation:  '#mycell',
+                           template:       sagecell.templates.minimal,
+                           evalButtonText: 'Activate'});
+    // Make *any* div with class 'compute' a Sage cell
+    sagecell.makeSagecell({inputLocation: 'div.compute',
+                           languages: 'r',
+                           evalButtonText: 'Evaluate'});
+    </script>
+  </head>
+  <body>
+  
+    <div class="compute"><script type="text/x-sage" lang="r">
+## Poker hand simulator & plotter (base R, SageCell-friendly)
+## Change n to control how many hands you simulate.
+
+numhands = 1000
+
+simulate_poker <- function(n = numhands, seed = 1, plot = TRUE) {
+  set.seed(seed)
+
+  ## Build a standard deck: ranks 2..14 (where 14 = Ace), 4 suits
+  deck <- expand.grid(rank = 2:14, suit = c("C","D","H","S"), KEEP.OUT.ATTRS = FALSE)
+
+  ## Hand ranking levels in a natural, rare-to-common order
+  hand_levels <- c("Royal Flush","Straight Flush","Four of a Kind","Full House",
+                   "Flush","Straight","Three of a Kind","Two Pair","One Pair","High Card")
+
+  ## Classify a single 5-card hand
+  classify_hand <- function(hand) {
+    ranks <- sort(hand$rank)
+    suits <- hand$suit
+
+    ## Counts by rank (e.g., c(3,2) means full house)
+    rc <- sort(as.integer(table(ranks)), decreasing = TRUE)
+
+    ## Flush?
+    is_flush <- (length(unique(suits)) == 1)
+
+    ## Straight? (handle A as high and A-2-3-4-5 as low)
+    uniqr <- sort(unique(ranks))
+    is_straight <- FALSE
+    if (length(uniqr) == 5) {
+      is_straight <- (max(uniqr) - min(uniqr) == 4) || all(uniqr == c(2,3,4,5,14))
+    }
+
+    ## Royal Flush and Straight Flush detection
+    if (is_flush && is_straight) {
+      if (all(uniqr == c(10,11,12,13,14))) {
+        return("Royal Flush")
+      } else {
+        return("Straight Flush")
+      }
+    }
+
+    ## Four of a Kind / Full House
+    if (rc[1] == 4) return("Four of a Kind")
+    if (rc[1] == 3 && rc[2] == 2) return("Full House")
+
+    ## Flush / Straight
+    if (is_flush)   return("Flush")
+    if (is_straight) return("Straight")
+
+    ## Trips / Two Pair / One Pair / High Card
+    if (rc[1] == 3) return("Three of a Kind")
+    if (rc[1] == 2 && rc[2] == 2) return("Two Pair")
+    if (rc[1] == 2) return("One Pair")
+    return("High Card")
+  }
+
+  ## Simulate n hands and classify
+  draw_one <- function() deck[sample(52, 5, replace = FALSE), ]
+  results <- character(n)
+  for (i in seq_len(n)) {
+    results[i] <- classify_hand(draw_one())
+  }
+
+  ## Tabulate & normalize (ensure fixed order even if zero counts occur)
+  counts <- table(factor(results, levels = hand_levels))
+  props  <- counts / sum(counts)
+
+  ## Plot as a bar chart of percentages
+  if (plot) {
+    op <- par(no.readonly = TRUE)
+    on.exit(par(op))
+    par(mar = c(8, 4, 3, 1))
+    bars <- barplot(100 * as.numeric(props),
+                    names.arg = hand_levels,
+                    las = 2, col = "#4C78A8",
+                    ylab = "Percentage of hands",
+                    main = sprintf("Empirical distribution of 5-card poker hands (n = %d)", n))
+    ## Add values above bars
+    text(x = bars, y = 100 * as.numeric(props),
+         labels = sprintf("%.3f%%", 100 * as.numeric(props)),
+         pos = 3, cex = 0.8)
+  }
+
+  invisible(list(counts = counts, proportions = props))
+}
+
+## --- Run it (you can change n and the seed) ---
+out <- simulate_poker(n = numhands, seed = 42, plot = TRUE)
+
+## Show a tidy table in the console
+print(round(100 * as.numeric(out$proportions), 4))
+names(out$proportions) <- c("Royal Flush","Straight Flush","Four of a Kind","Full House",
+                            "Flush","Straight","Three of a Kind","Two Pair","One Pair","High Card")
+out$proportions </script></div>
+    
+  </body>
+</html>
