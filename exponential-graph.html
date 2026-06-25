@@ -1,0 +1,761 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Exponential Graph H^G — category of graphs</title>
+<style>
+  :root{
+    --bg:#fbfbfd; --panel:#ffffff; --ink:#1f2330; --muted:#6b7280;
+    --line:#e5e7eb; --line2:#d1d5db; --accent:#4f46e5; --accent-soft:#eef2ff;
+    --gold:#f59e0b; --gold-deep:#b45309; --edge:#9aa3b2; --hl:#ef4444;
+    --serif:Cambria,Georgia,"Times New Roman",serif;
+  }
+  *{box-sizing:border-box}
+  html,body{margin:0;background:var(--bg);color:var(--ink);
+    font-family:system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;}
+  a{color:var(--accent)}
+  .wrap{max-width:1180px;margin:0 auto;padding:18px 18px 60px;}
+  header h1{font-family:var(--serif);font-weight:600;font-size:25px;margin:4px 0 2px;letter-spacing:.2px;}
+  header h1 .exp{font-style:italic;}
+  header p.sub{margin:0 0 12px;color:var(--muted);font-size:14px;}
+  .badge{display:inline-block;font-size:12px;padding:2px 8px;border-radius:999px;border:1px solid var(--line2);background:#fff;color:var(--muted);vertical-align:middle;margin-left:8px;}
+  .badge.ok{color:#15803d;border-color:#bbf7d0;background:#f0fdf4;}
+  .badge.bad{color:#b91c1c;border-color:#fecaca;background:#fef2f2;}
+  details.about{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:0 14px;margin:10px 0 16px;}
+  details.about summary{cursor:pointer;padding:11px 0;font-weight:600;font-size:14px;outline:none;}
+  details.about .body{font-family:var(--serif);font-size:14.5px;line-height:1.55;padding:2px 0 14px;color:#2b2f3a;}
+  details.about .body code,.mono{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;}
+  details.about .def{background:#fafafe;border:1px solid var(--line);border-radius:8px;padding:8px 12px;margin:8px 0;}
+  .grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;align-items:start;}
+  @media(max-width:880px){.grid{grid-template-columns:1fr;}}
+  .card{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:12px 13px 14px;}
+  .card h2{margin:0 0 8px;font-size:14px;font-weight:700;letter-spacing:.3px;text-transform:uppercase;color:#3a3f4b;}
+  .card h2 small{font-weight:500;text-transform:none;letter-spacing:0;color:var(--muted);font-size:12px;margin-left:6px;}
+  .row{display:flex;gap:8px;flex-wrap:wrap;align-items:center;}
+  .row + .row{margin-top:8px;}
+  label.lbl{font-size:12.5px;color:var(--muted);}
+  select,input[type=number],button{font:inherit;font-size:13px;}
+  select{padding:5px 7px;border:1px solid var(--line2);border-radius:7px;background:#fff;color:var(--ink);}
+  input[type=number]{width:74px;padding:5px 7px;border:1px solid var(--line2);border-radius:7px;}
+  button{padding:6px 11px;border:1px solid var(--line2);border-radius:7px;background:#fff;cursor:pointer;color:var(--ink);}
+  button:hover{background:#f3f4f6;}
+  button.primary{background:var(--accent);border-color:var(--accent);color:#fff;}
+  button.primary:hover{background:#4338ca;}
+  .hint{font-size:12px;color:var(--muted);line-height:1.4;margin-top:8px;}
+  svg{display:block;width:100%;height:auto;touch-action:none;user-select:none;}
+  .svgbox{border:1px solid var(--line);border-radius:9px;background:
+     repeating-linear-gradient(0deg,transparent,transparent 23px,#f4f5f8 23px,#f4f5f8 24px),
+     repeating-linear-gradient(90deg,transparent,transparent 23px,#f4f5f8 23px,#f4f5f8 24px),#fff;}
+  .infogrid{display:grid;grid-template-columns:repeat(2,1fr);gap:6px 16px;margin-top:10px;font-size:13px;}
+  .infogrid .k{color:var(--muted);}
+  .infogrid .v{font-weight:600;font-variant-numeric:tabular-nums;}
+  .readout{margin-top:10px;border-top:1px dashed var(--line);padding-top:10px;min-height:64px;font-size:13.5px;}
+  .readout .ftitle{font-family:ui-monospace,Menlo,monospace;font-weight:600;}
+  .pillrow{display:flex;flex-wrap:wrap;gap:6px;margin-top:6px;}
+  .pill{font-family:ui-monospace,Menlo,monospace;font-size:12px;padding:2px 7px;border-radius:6px;border:1px solid var(--line2);background:#fff;}
+  .warn{margin-top:10px;background:#fffbeb;border:1px solid #fde68a;color:#92400e;border-radius:8px;padding:8px 11px;font-size:13px;}
+  .legend{display:flex;gap:14px;flex-wrap:wrap;font-size:12px;color:var(--muted);margin-top:8px;align-items:center;}
+  .legend .dot{display:inline-block;width:11px;height:11px;border-radius:50%;vertical-align:middle;margin-right:5px;border:1.5px solid #888;}
+  .full{grid-column:1/-1;}
+  .vbtn{font-size:12px;padding:4px 9px;}
+  .switch{display:inline-flex;align-items:center;gap:6px;font-size:12.5px;color:var(--ink);cursor:pointer;}
+  .pathbar{display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin-top:10px;border-top:1px dashed var(--line);padding-top:10px;}
+  .pathseq{margin-top:8px;font-size:13px;line-height:1.95;}
+  .pathseq .pnode{display:inline-block;font-family:ui-monospace,Menlo,monospace;font-size:12px;padding:2px 7px;border-radius:6px;border:1px solid var(--line2);background:#fff;}
+  .pathseq .pend{background:#111827;color:#fff;border-color:#111827;}
+  .pathseq .parrow{color:var(--muted);margin:0 1px;}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <h1>Exponential graph <span class="exp">H<sup>G</sup></span> <span class="mono" style="font-style:normal">in the category of graphs</span>
+      <span id="selfbadge" class="badge">self-test…</span>
+    </h1>
+    <p class="sub">Objects = sets with a symmetric edge relation (loops allowed, no multi-edges); morphisms = edge-preserving maps. Build a domain <b>G</b> and codomain <b>H</b>, read off <span class="exp mono" style="font-style:normal">H<sup>G</sup></span>, and hover a vertex to see the function it represents.</p>
+  </header>
+
+  <details class="about">
+    <summary>Definitions &amp; what you are looking at</summary>
+    <div class="body">
+      <div class="def">
+        <b>Product (categorical / tensor).</b> &nbsp; In <code>G&nbsp;×&nbsp;H</code>, &nbsp; <code>(g,h) ~ (g′,h′)</code> &nbsp;iff&nbsp; <code>g ~<sub>G</sub> g′</code> <b>and</b> <code>h ~<sub>H</sub> h′</code>.
+      </div>
+      <div class="def">
+        <b>Exponential <span class="exp">H<sup>G</sup></span>.</b><br>
+        • <u>Vertices</u> = <b>all</b> functions <code>f : V<sub>G</sub> → V<sub>H</sub></code> (not only the homomorphisms).<br>
+        • <u>Edges</u>: &nbsp;<code>f ~ f′</code> &nbsp;iff&nbsp; for every edge <code>x ~<sub>G</sub> y</code> we have <code>f(x) ~<sub>H</sub> f′(y)</code>.
+      </div>
+      A vertex <code>f</code> carries a <b>loop</b> exactly when <code>f(x) ~<sub>H</sub> f(y)</code> for all edges <code>x ~<sub>G</sub> y</code> — i.e. exactly when <code>f</code> is a graph homomorphism. So the looped vertices of <span class="exp">H<sup>G</sup></span> are precisely <code>Hom(G,H)</code> (shown by default below).
+      <div class="def" style="background:#f6f5ff;border-color:#ddd6fe">
+        <b>Universal property.</b> &nbsp; <code>Hom(K × G, H) ≅ Hom(K, H<sup>G</sup>)</code>, naturally in <code>K</code>. &nbsp; In particular <code>H<sup>1</sup> ≅ H</code> (1 = the single looped point) and <code>H<sup>0</sup> ≅ 1</code>.
+      </div>
+      <b>Hover</b> any vertex of <span class="exp">H<sup>G</sup></span>: each domain vertex <code>x</code> is colored and an arrow is drawn to its image <code>f(x)</code> in H. <b>Click two</b> vertices to trace the paths between them. Node <b>fill color</b> = connected component; a small arc = loop = homomorphism.
+    </div>
+  </details>
+
+  <div class="grid">
+    <!-- LEFT: editors + info -->
+    <div class="card">
+      <h2>Domain G &amp; Codomain H <small>click empty space to add a vertex</small></h2>
+      <div class="row">
+        <label class="lbl">G preset</label>
+        <select id="presetG"></select>
+        <button class="vbtn" data-clear="G">clear G</button>
+        <span style="flex:1"></span>
+        <label class="lbl">H preset</label>
+        <select id="presetH"></select>
+        <button class="vbtn" data-clear="H">clear H</button>
+      </div>
+      <div class="svgbox" style="margin-top:10px">
+        <svg id="morph" viewBox="0 0 760 360" aria-label="domain and codomain editor"></svg>
+      </div>
+      <div class="hint">
+        <b>Edit:</b> click empty space to add a vertex · click a vertex then another to toggle an edge · click the same vertex twice to toggle its loop · drag to move · double-click to delete.
+        Left of the divider is <b>G</b>, right is <b>H</b>.
+      </div>
+
+      <div class="infogrid">
+        <div class="k">|V<sub>G</sub>|, edges</div><div class="v" id="iG">–</div>
+        <div class="k">|V<sub>H</sub>|, edges</div><div class="v" id="iH">–</div>
+        <div class="k">|V(H<sup>G</sup>)| = |V<sub>H</sub>|<sup>|V<sub>G</sub>|</sup></div><div class="v" id="iN">–</div>
+        <div class="k">homomorphisms G→H</div><div class="v" id="iHom">–</div>
+        <div class="k">edges of H<sup>G</sup> (no loops)</div><div class="v" id="iE">–</div>
+        <div class="k">loops of H<sup>G</sup> (= #hom)</div><div class="v" id="iL">–</div>
+      </div>
+
+      <div class="readout" id="readout">
+        <span style="color:var(--muted)">Hover a vertex of H<sup>G</sup> to inspect its function. Click two to trace paths.</span>
+      </div>
+    </div>
+
+    <!-- RIGHT: exponential -->
+    <div class="card">
+      <h2>Exponential graph H<sup>G</sup></h2>
+      <div class="row">
+        <label class="switch"><input type="checkbox" id="homOnly" checked> homomorphisms only</label>
+        <span style="flex:1"></span>
+        <label class="lbl">render cap</label>
+        <input type="number" id="cap" value="256" min="1" max="2000" step="1">
+        <button class="vbtn" id="relayout">re-layout</button>
+      </div>
+      <div class="svgbox" style="margin-top:10px">
+        <svg id="exp" viewBox="0 0 760 470" aria-label="exponential graph"></svg>
+      </div>
+      <div class="legend">
+        <span><span class="dot" style="background:#4f7ce3;border-color:#2c4a91"></span>fill = connected component</span>
+        <span>⌒ arc = homomorphism (looped)</span>
+        <span><span class="dot" style="background:#fff;border-color:var(--hl)"></span>hover = correspondence</span>
+        <span><b>A</b>,&nbsp;<b>B</b> = path endpoints</span>
+      </div>
+      <div id="expwarn"></div>
+
+      <div class="pathbar" id="pathbar">
+        <b style="font-size:13px">Paths&nbsp;</b>
+        <span id="pathstatus" style="color:var(--muted);font-size:12.5px">click two vertices in H<sup>G</sup> to trace the paths between them.</span>
+        <span id="pathctl" style="display:none;align-items:center;gap:8px;flex-wrap:wrap">
+          <button id="pathPrev" class="vbtn">◀</button>
+          <span id="pathwhich" class="mono" style="font-size:12px">1 / 1</span>
+          <button id="pathNext" class="vbtn">▶</button>
+          <label class="switch"><input type="checkbox" id="pathAll"> overlay all</label>
+          <span class="lbl">max length</span>
+          <button id="lenMinus" class="vbtn">−</button>
+          <span id="lenVal" class="mono" style="font-size:12px">0</span>
+          <button id="lenPlus" class="vbtn">+</button>
+          <button id="pathClear" class="vbtn">clear</button>
+        </span>
+      </div>
+      <div id="pathseq" class="pathseq"></div>
+    </div>
+  </div>
+</div>
+
+<script>
+"use strict";
+/* ============================================================
+   CORE MATH  (kept identical to the node test harness)
+   A graph is an n×n symmetric boolean matrix `adj` (adj[i][i]=loop).
+   ============================================================ */
+function computeExp(adjG, adjH, maxEnum){
+  const nG = adjG.length, nH = adjH.length;
+  const N = Math.pow(nH, nG);
+  const res = { nG, nH, N, enumerated:false, funcs:null, isHom:null,
+                homCount:0, Ge:null, adjacent:null, edgeCountFull:null };
+  const Ge = [];
+  for (let x=0;x<nG;x++) for (let y=0;y<nG;y++) if (adjG[x][y]) Ge.push([x,y]);
+  res.Ge = Ge;
+  const adjacent = (f,g)=>{ for(let e=0;e<Ge.length;e++){const x=Ge[e][0],y=Ge[e][1]; if(!adjH[f[x]][g[y]])return false;} return true; };
+  res.adjacent = adjacent;
+  if (!(N <= maxEnum)) return res;
+  const funcs = new Array(N);
+  for (let code=0; code<N; code++){
+    const f = new Array(nG); let c = code;
+    for (let i=0;i<nG;i++){ f[i] = nH ? (c % nH) : 0; c = Math.floor(c/nH); }
+    funcs[code] = f;
+  }
+  const isHom = new Array(N); let homCount = 0;
+  for (let k=0;k<N;k++){ isHom[k] = adjacent(funcs[k], funcs[k]); if (isHom[k]) homCount++; }
+  res.funcs = funcs; res.isHom = isHom; res.homCount = homCount; res.enumerated = true;
+  if (N <= 2000){
+    let E = 0;
+    for (let a=0;a<N;a++){ const fa=funcs[a]; for(let b=a+1;b<N;b++) if(adjacent(fa,funcs[b])) E++; }
+    res.edgeCountFull = E;
+  }
+  return res;
+}
+function edgesAmong(exp, idxs){
+  const out=[]; const A=exp.funcs;
+  for(let a=0;a<idxs.length;a++){ const fa=A[idxs[a]];
+    for(let b=a+1;b<idxs.length;b++){ if(exp.adjacent(fa,A[idxs[b]])) out.push([a,b]); } }
+  return out;
+}
+
+/* ============================================================
+   GRAPH PRESETS
+   ============================================================ */
+function gEmpty(n){const a=[];for(let i=0;i<n;i++)a.push(new Array(n).fill(false));return a;}
+function gLoopPt(){return [[true]];}
+function gPath(n){const a=gEmpty(n);for(let i=0;i+1<n;i++){a[i][i+1]=a[i+1][i]=true;}return a;}
+function gCycle(n){const a=gPath(n);if(n>=3){a[0][n-1]=a[n-1][0]=true;}return a;}
+function gComplete(n){const a=gEmpty(n);for(let i=0;i<n;i++)for(let j=0;j<n;j++)if(i!==j)a[i][j]=true;return a;}
+function gStar(n){const a=gEmpty(n);for(let i=1;i<n;i++){a[0][i]=a[i][0]=true;}return a;}
+const PRESETS = [
+  ["• single vertex (no loop)", ()=>gEmpty(1)],
+  ["• looped point  (terminal 1)", gLoopPt],
+  ["K₂  (single edge)", ()=>gComplete(2)],
+  ["P₃  (path on 3)", ()=>gPath(3)],
+  ["P₄  (path on 4)", ()=>gPath(4)],
+  ["C₃ = K₃  (triangle)", ()=>gCycle(3)],
+  ["C₄", ()=>gCycle(4)],
+  ["C₅", ()=>gCycle(5)],
+  ["K₄  (complete)", ()=>gComplete(4)],
+  ["Star S₃", ()=>gStar(4)],
+  ["Empty on 3", ()=>gEmpty(3)],
+];
+
+/* ============================================================
+   STATE
+   ============================================================ */
+const MAXENUM = 12000;
+const G = { adj: gComplete(2), pos: [] };   // domain
+const H = { adj: gCycle(3),   pos: [] };    // codomain
+const state = {
+  sel: null,            // {which:'G'|'H', i} selected vertex for edge/loop toggle
+  exp: null,            // computeExp result
+  renderIdx: [],        // exponential vertex indices currently drawn
+  nodes: [],            // {idx,f,hom,label,x,y,vx,vy,cx,cy}
+  edges: [],            // [a,b] (a<b) into nodes
+  active: null,         // hovered node index (correspondence)
+  alpha: 0,
+  adjList: [], components: [], compCount: 0, compCenters: [],
+  pathA: null, pathB: null, paths: null, pathIdx: 0,
+  pathShowAll: false, pathDist: null, pathMaxLen: 0, pathCapped: false,
+};
+
+/* layout helpers for G/H panel */
+const MORPH_W=760, MORPH_H=360, DIV=380;
+function layoutCircle(graph, cx, cy, r){
+  const n = graph.adj.length; graph.pos = [];
+  for (let i=0;i<n;i++){
+    if (n===1){ graph.pos.push({x:cx,y:cy}); continue; }
+    const t = -Math.PI/2 + i*2*Math.PI/n;
+    graph.pos.push({x: cx + r*Math.cos(t), y: cy + r*Math.sin(t)});
+  }
+}
+function relayoutGraphs(){
+  layoutCircle(G, 190, 180, Math.min(120, 40+G.adj.length*14));
+  layoutCircle(H, 570, 180, Math.min(120, 40+H.adj.length*14));
+}
+
+/* domain vertex colors (for the correspondence arrows) */
+function domColor(i){ const n=Math.max(1,G.adj.length); return `hsl(${Math.round(i*360/n)},68%,46%)`; }
+
+/* component palette + small color utilities */
+const COMP_COLORS=["#4f7ce3","#e3724f","#2fa66b","#b257d6","#d6a521","#2f9fb6","#d6587f","#7a9a3a",
+                   "#8a6d3b","#5a6acb","#c44d3f","#2f8f7f","#9b59b6","#cf7a1c","#5f8e23","#2c8ec4"];
+function compColor(c){ const n=COMP_COLORS.length; return COMP_COLORS[((c%n)+n)%n]; }
+function darken(hex,f){ const n=parseInt(hex.slice(1),16); const r=Math.round(((n>>16)&255)*f),g=Math.round(((n>>8)&255)*f),b=Math.round((n&255)*f); return `rgb(${r},${g},${b})`; }
+function lum(hex){ const n=parseInt(hex.slice(1),16); return (0.2126*((n>>16)&255)+0.7152*((n>>8)&255)+0.0722*(n&255))/255; }
+function textOn(hex){ return lum(hex)>0.62?"#15233b":"#ffffff"; }
+function loopArc(x,y,r){ const t=y-r; return `M ${(x-5).toFixed(1)} ${t.toFixed(1)} C ${(x-13).toFixed(1)} ${(t-17).toFixed(1)}, ${(x+13).toFixed(1)} ${(t-17).toFixed(1)}, ${(x+5).toFixed(1)} ${t.toFixed(1)}`; }
+
+/* ============================================================
+   ELEMENTS
+   ============================================================ */
+const SVGNS="http://www.w3.org/2000/svg";
+const morph = document.getElementById("morph");
+const expSvg = document.getElementById("exp");
+function el(tag, attrs){ const e=document.createElementNS(SVGNS,tag); if(attrs)for(const k in attrs)e.setAttribute(k,attrs[k]); return e; }
+function svgPt(svg, ev){ const p=svg.createSVGPoint(); p.x=ev.clientX; p.y=ev.clientY; const m=svg.getScreenCTM().inverse(); const q=p.matrixTransform(m); return {x:q.x,y:q.y}; }
+function countEdges(adj){ let e=0,l=0; const n=adj.length;
+  for(let i=0;i<n;i++){ if(adj[i][i])l++; for(let j=i+1;j<n;j++) if(adj[i][j])e++; } return {e,l}; }
+
+/* ============================================================
+   RECOMPUTE  (graphs changed)
+   ============================================================ */
+function recompute(){
+  state.exp = computeExp(G.adj, H.adj, MAXENUM);
+  state.active=null; state.pathA=null; state.pathB=null; state.paths=null;
+  buildRenderSet();
+  initExpLayout();
+  updateInfo();
+  renderMorph();
+  renderExp();
+  updatePathUI();
+}
+
+function buildRenderSet(){
+  const exp = state.exp;
+  const warn = document.getElementById("expwarn");
+  warn.innerHTML = "";
+  state.renderIdx = []; state.nodes = []; state.edges = [];
+  state.adjList=[]; state.components=[]; state.compCount=0; state.compCenters=[];
+  state.pathA=null; state.pathB=null; state.paths=null; state.pathShowAll=false; state.pathIdx=0;
+  if (!exp.enumerated){
+    warn.innerHTML = `<div class="warn">|V(H<sup>G</sup>)| = <b>${exp.N.toLocaleString()}</b> is too large to enumerate (limit ${MAXENUM.toLocaleString()}). Shrink G or H.</div>`;
+    return;
+  }
+  const homOnly = document.getElementById("homOnly").checked;
+  let cap = parseInt(document.getElementById("cap").value,10); if(!(cap>0)) cap=256;
+  let idx = [];
+  for (let k=0;k<exp.N;k++){ if(!homOnly || exp.isHom[k]) idx.push(k); }
+  const full = idx.length;
+  if (full > cap){
+    let msg = `<div class="warn">Showing nothing: the selected set has <b>${full.toLocaleString()}</b> vertices, above the render cap (${cap}). `;
+    if(!homOnly && exp.homCount<=cap) msg += `Try <b>“homomorphisms only”</b> (${exp.homCount} vertices) `;
+    msg += `or raise the cap.</div>`;
+    warn.innerHTML = msg;
+    return;
+  }
+  state.renderIdx = idx;
+  const labelOK = full <= 40;
+  for (let a=0;a<idx.length;a++){
+    const k=idx[a]; const f=exp.funcs[k];
+    state.nodes.push({ idx:k, f, hom:exp.isHom[k], label: tupleLabel(f), showLabel: labelOK, x:0,y:0,vx:0,vy:0 });
+  }
+  state.edges = edgesAmong(exp, idx);
+  assignComponents();
+}
+function tupleLabel(f){
+  if (f.length===0) return "∗";
+  if (state.exp.nH <= 10 && f.length<=6) return f.join("");
+  return "("+f.join(",")+")";
+}
+
+/* ============================================================
+   CONNECTED COMPONENTS  (of the rendered graph)
+   ============================================================ */
+function assignComponents(){
+  const n=state.nodes.length;
+  state.adjList=Array.from({length:n},()=>[]);
+  for(const [a,b] of state.edges){ state.adjList[a].push(b); state.adjList[b].push(a); }
+  const comp=new Array(n).fill(-1); let c=0;
+  for(let i=0;i<n;i++){ if(comp[i]<0){ comp[i]=c; const q=[i]; while(q.length){ const u=q.pop(); for(const v of state.adjList[u]) if(comp[v]<0){comp[v]=c;q.push(v);} } c++; } }
+  state.components=comp; state.compCount=c;
+  // lay component centers on a grid so components separate spatially as well as by color
+  const cols=Math.max(1,Math.ceil(Math.sqrt(c))), rows=Math.max(1,Math.ceil(c/cols));
+  const mx=74,my=60; state.compCenters=[];
+  for(let k=0;k<c;k++){ const col=k%cols,row=Math.floor(k/cols);
+    const x=cols===1?EXP_W/2:mx+col*(EXP_W-2*mx)/(cols-1);
+    const y=rows===1?EXP_H/2:my+row*(EXP_H-2*my)/(rows-1);
+    state.compCenters.push({x,y}); }
+  for(let i=0;i<n;i++){ const cc=state.compCenters[comp[i]]||{x:EXP_W/2,y:EXP_H/2}; state.nodes[i].cx=cc.x; state.nodes[i].cy=cc.y; }
+}
+
+/* ============================================================
+   PATHS  (between two chosen vertices)
+   ============================================================ */
+function bfsDist(src){ const n=state.nodes.length,d=new Array(n).fill(-1); d[src]=0; const q=[src]; let h=0;
+  while(h<q.length){ const u=q[h++]; for(const v of state.adjList[u]) if(d[v]<0){d[v]=d[u]+1;q.push(v);} } return d; }
+function computePaths(){
+  const A=state.pathA,B=state.pathB;
+  state.paths=[]; state.pathIdx=0; state.pathShowAll=false; state.pathCapped=false;
+  const dA=bfsDist(A); state.pathDist=dA[B];
+  if(dA[B]<0){ state.pathMaxLen=0; return; }      // different components
+  state.pathMaxLen=dA[B];                          // default: shortest length only
+  enumeratePaths();
+}
+function enumeratePaths(){
+  const A=state.pathA,B=state.pathB,L=state.pathMaxLen;
+  const dB=bfsDist(B);                             // distance-to-target, for pruning
+  const paths=[]; const CAP=400; const seen=new Set([A]); const cur=[A];
+  (function dfs(u){
+    if(paths.length>=CAP) return;
+    if(u===B){ paths.push(cur.slice()); return; }
+    if(cur.length-1>=L) return;                    // path length counted in edges
+    for(const v of state.adjList[u]){
+      if(seen.has(v)||dB[v]<0) continue;
+      if((cur.length-1)+1+dB[v] > L) continue;     // cannot reach B within remaining budget
+      seen.add(v); cur.push(v); dfs(v); cur.pop(); seen.delete(v);
+      if(paths.length>=CAP) return;
+    }
+  })(A);
+  paths.sort((p,q)=> p.length-q.length || p.join(",").localeCompare(q.join(",")));
+  state.paths=paths; state.pathCapped=paths.length>=CAP; if(state.pathIdx>=paths.length) state.pathIdx=0;
+}
+function currentPathSets(){
+  const es=new Set(), vs=new Set();
+  if(!state.paths||!state.paths.length) return {es,vs};
+  const list=state.pathShowAll?state.paths:[state.paths[state.pathIdx]];
+  for(const p of list){ for(let i=0;i<p.length;i++){ vs.add(p[i]); if(i){ const a=p[i-1],b=p[i]; es.add(a<b?a+"-"+b:b+"-"+a); } } }
+  return {es,vs};
+}
+function updatePathUI(){
+  const status=document.getElementById("pathstatus");
+  const ctl=document.getElementById("pathctl");
+  const seq=document.getElementById("pathseq");
+  const A=state.pathA,B=state.pathB;
+  if(A==null){ status.innerHTML="click two vertices in H<sup>G</sup> to trace the paths between them."; ctl.style.display="none"; seq.innerHTML=""; return; }
+  if(B==null){ status.innerHTML=`source <b>A</b> = <span class="mono">${state.nodes[A].label}</span> — now click a target vertex.`; ctl.style.display="none"; seq.innerHTML=""; return; }
+  if(state.pathDist==null || state.pathDist<0){ status.innerHTML=`<b>A</b>=<span class="mono">${state.nodes[A].label}</span>, <b>B</b>=<span class="mono">${state.nodes[B].label}</span> lie in <b>different components</b> — no path.`; ctl.style.display="none"; seq.innerHTML=""; return; }
+  const m=state.paths.length;
+  status.innerHTML=`<b>A</b>=<span class="mono">${state.nodes[A].label}</span> → <b>B</b>=<span class="mono">${state.nodes[B].label}</span> &nbsp;·&nbsp; distance <b>${state.pathDist}</b> &nbsp;·&nbsp; ${m}${state.pathCapped?"+":""} path${m!==1?"s":""} of length ≤ ${state.pathMaxLen}`;
+  ctl.style.display="inline-flex";
+  document.getElementById("pathwhich").textContent = state.pathShowAll ? ("all "+m) : ((state.pathIdx+1)+" / "+m);
+  document.getElementById("lenVal").textContent = state.pathMaxLen;
+  document.getElementById("pathAll").checked = state.pathShowAll;
+  if(state.pathShowAll){
+    seq.innerHTML=`<span style="color:var(--muted)">overlaying ${m}${state.pathCapped?"+":""} path${m!==1?"s":""} (length ≤ ${state.pathMaxLen})</span>`;
+  } else {
+    const p=state.paths[state.pathIdx]; let html="";
+    for(let i=0;i<p.length;i++){ const isEnd=(i===0||i===p.length-1);
+      html+=`<span class="pnode${isEnd?' pend':''}">${state.nodes[p[i]].label}</span>`;
+      if(i<p.length-1) html+=`<span class="parrow">—</span>`; }
+    seq.innerHTML=html;
+  }
+}
+
+/* ============================================================
+   FORCE LAYOUT for exponential (gravity toward each node's component center)
+   ============================================================ */
+const EXP_W=760, EXP_H=470;
+function initExpLayout(){
+  const ns=state.nodes,n=ns.length;
+  for(let i=0;i<n;i++){
+    const cx=ns[i].cx!=null?ns[i].cx:EXP_W/2, cy=ns[i].cy!=null?ns[i].cy:EXP_H/2;
+    const t=i*2.3999, rr=16+Math.random()*26;
+    ns[i].x=cx+Math.cos(t)*rr+(Math.random()-.5)*6;
+    ns[i].y=cy+Math.sin(t)*rr+(Math.random()-.5)*6;
+    ns[i].vx=0; ns[i].vy=0; ns[i].fixed=false;
+  }
+  state.alpha = n>1 ? 1 : 0;
+  if (n>1) startForce(); else renderExp();
+}
+let forceRAF=null;
+function startForce(){ if(forceRAF) cancelAnimationFrame(forceRAF); const step=()=>{ if(tickForce()){ renderExp(); forceRAF=requestAnimationFrame(step);} else {forceRAF=null; renderExp();} }; forceRAF=requestAnimationFrame(step); }
+function tickForce(){
+  const ns=state.nodes, n=ns.length;
+  if (state.alpha < 0.01 || n<2) { state.alpha=0; return false; }
+  const k=state.alpha;
+  const REP=2200, SPRL=58, SPRK=0.05, GRAV=0.055, DAMP=0.86;
+  const cx=EXP_W/2, cy=EXP_H/2;
+  for(let i=0;i<n;i++){ ns[i].fx=0; ns[i].fy=0; }
+  for(let i=0;i<n;i++) for(let j=i+1;j<n;j++){
+    let dx=ns[i].x-ns[j].x, dy=ns[i].y-ns[j].y; let d2=dx*dx+dy*dy; if(d2<0.01){d2=0.01; dx=(Math.random()-.5); dy=(Math.random()-.5);}
+    const inv=1/d2; const F=REP*inv; const d=Math.sqrt(d2); const ux=dx/d, uy=dy/d;
+    ns[i].fx+=F*ux; ns[i].fy+=F*uy; ns[j].fx-=F*ux; ns[j].fy-=F*uy;
+  }
+  for(const [a,b] of state.edges){
+    let dx=ns[b].x-ns[a].x, dy=ns[b].y-ns[a].y; let d=Math.sqrt(dx*dx+dy*dy)||0.01;
+    const F=SPRK*(d-SPRL); const ux=dx/d, uy=dy/d;
+    ns[a].fx+=F*ux; ns[a].fy+=F*uy; ns[b].fx-=F*ux; ns[b].fy-=F*uy;
+  }
+  for(let i=0;i<n;i++){
+    if(ns[i].fixed) continue;
+    const gx=ns[i].cx!=null?ns[i].cx:cx, gy=ns[i].cy!=null?ns[i].cy:cy;
+    ns[i].fx += (gx-ns[i].x)*GRAV; ns[i].fy += (gy-ns[i].y)*GRAV;
+    ns[i].vx=(ns[i].vx+ns[i].fx*k)*DAMP; ns[i].vy=(ns[i].vy+ns[i].fy*k)*DAMP;
+    ns[i].x+=ns[i].vx*k; ns[i].y+=ns[i].vy*k;
+    ns[i].x=Math.max(16,Math.min(EXP_W-16,ns[i].x));
+    ns[i].y=Math.max(16,Math.min(EXP_H-16,ns[i].y));
+  }
+  state.alpha*=0.975;
+  return true;
+}
+
+/* ============================================================
+   RENDER: domain + codomain panel
+   ============================================================ */
+function drawGraphInto(parent, graph, colorFn, isDomain){
+  const adj=graph.adj, pos=graph.pos, n=adj.length;
+  for(let i=0;i<n;i++) for(let j=i+1;j<n;j++) if(adj[i][j]){
+    parent.appendChild(el("line",{x1:pos[i].x,y1:pos[i].y,x2:pos[j].x,y2:pos[j].y,stroke:"#9aa3b2","stroke-width":2}));
+  }
+  for(let i=0;i<n;i++) if(adj[i][i]){
+    const p=pos[i];
+    parent.appendChild(el("circle",{cx:p.x,cy:p.y-20,r:11,fill:"none",stroke:"#9aa3b2","stroke-width":2}));
+  }
+  for(let i=0;i<n;i++){
+    const p=pos[i];
+    const g=el("g",{class:"vtx","data-which":isDomain?"G":"H","data-i":i,style:"cursor:pointer"});
+    const fill = colorFn ? colorFn(i) : "#cbd5e1";
+    const sel = state.sel && state.sel.which===(isDomain?"G":"H") && state.sel.i===i;
+    g.appendChild(el("circle",{cx:p.x,cy:p.y,r:14,fill:fill,stroke:sel?"#111827":"#475569","stroke-width":sel?3:1.5}));
+    const t=el("text",{x:p.x,y:p.y+4,"text-anchor":"middle","font-size":12,fill:"#fff","font-family":"ui-monospace,Menlo,monospace","font-weight":600}); t.textContent=i;
+    g.appendChild(t);
+    parent.appendChild(g);
+  }
+}
+function renderMorph(){
+  while(morph.firstChild) morph.removeChild(morph.firstChild);
+  const defs=el("defs"); const nG=G.adj.length;
+  for(let i=0;i<nG;i++){
+    const m=el("marker",{id:"arr"+i,viewBox:"0 0 10 10",refX:9,refY:5,markerWidth:7,markerHeight:7,orient:"auto-start-reverse"});
+    m.appendChild(el("path",{d:"M0,0 L10,5 L0,10 z",fill:domColor(i)})); defs.appendChild(m);
+  }
+  morph.appendChild(defs);
+  morph.appendChild(el("line",{x1:DIV,y1:18,x2:DIV,y2:MORPH_H-14,stroke:"#e5e7eb","stroke-width":1.5,"stroke-dasharray":"4 5"}));
+  let t=el("text",{x:18,y:26,"font-size":13,fill:"#6b7280","font-weight":700}); t.textContent="DOMAIN  G"; morph.appendChild(t);
+  t=el("text",{x:DIV+14,y:26,"font-size":13,fill:"#6b7280","font-weight":700}); t.textContent="CODOMAIN  H"; morph.appendChild(t);
+
+  const node = state.active!=null ? state.nodes[state.active] : null;
+  const arrowLayer=el("g"); morph.appendChild(arrowLayer);
+
+  drawGraphInto(morph, H, (i)=>{
+    if(!node) return "#cbd5e1";
+    let pre=-1; for(let x=0;x<node.f.length;x++){ if(node.f[x]===i){pre=x;break;} }
+    return pre>=0 ? "#e7ecf6" : "#eef1f5";
+  }, false);
+  drawGraphInto(morph, G, (i)=> node ? domColor(i) : "#cbd5e1", true);
+
+  if(node){
+    for(let x=0;x<node.f.length;x++){
+      const a=G.pos[x], b=H.pos[node.f[x]];
+      const dx=b.x-a.x, dy=b.y-a.y, L=Math.hypot(dx,dy)||1; const ux=dx/L, uy=dy/L;
+      const ax=a.x+ux*15, ay=a.y+uy*15, bx=b.x-ux*17, by=b.y-uy*17;
+      arrowLayer.appendChild(el("line",{x1:ax,y1:ay,x2:bx,y2:by,stroke:domColor(x),"stroke-width":2.4,"marker-end":"url(#arr"+x+")","opacity":0.9}));
+    }
+    for(let i=0;i<H.adj.length;i++){
+      const pres=[]; for(let x=0;x<node.f.length;x++) if(node.f[x]===i) pres.push(x);
+      if(pres.length){ const p=H.pos[i];
+        arrowLayer.appendChild(el("circle",{cx:p.x,cy:p.y,r:18,fill:"none",stroke:domColor(pres[0]),"stroke-width":2.2,"opacity":0.85}));
+      }
+    }
+  }
+}
+
+/* ============================================================
+   RENDER: exponential panel
+   ============================================================ */
+function renderExp(){
+  while(expSvg.firstChild) expSvg.removeChild(expSvg.firstChild);
+  const ns=state.nodes;
+  const {es:pES, vs:pVS}=currentPathSets();
+  const activeNode = state.active;
+  const eLayer=el("g"); expSvg.appendChild(eLayer);
+  for(const [a,b] of state.edges){
+    const key=a<b?a+"-"+b:b+"-"+a;
+    const onPath=pES.has(key);
+    const hot=activeNode!=null && (a===activeNode||b===activeNode);
+    let stroke="#c3cad6", w=1.1, op=0.55;
+    if(hot){ stroke="#ef4444"; w=2.2; op=0.9; }
+    if(onPath){ stroke="#111827"; w=3; op=1; }
+    eLayer.appendChild(el("line",{x1:ns[a].x,y1:ns[a].y,x2:ns[b].x,y2:ns[b].y,stroke,"stroke-width":w,opacity:op}));
+  }
+  const nLayer=el("g"); expSvg.appendChild(nLayer);
+  for(let i=0;i<ns.length;i++){
+    const nd=ns[i];
+    const isA=i===state.pathA, isB=i===state.pathB, isHover=i===state.active, onPath=pVS.has(i);
+    const r=(isHover||isA||isB)?13:10;
+    const cc=compColor(state.components[i]||0);
+    const g=el("g",{class:"enode","data-i":i,style:"cursor:pointer"});
+    if(nd.hom){ g.appendChild(el("path",{d:loopArc(nd.x,nd.y,r),fill:"none",stroke:darken(cc,0.5),"stroke-width":1.9,opacity:0.95})); }
+    let stroke=darken(cc,0.55), sw=1.6;
+    if(onPath){ stroke="#111827"; sw=2.4; }
+    if(isA||isB){ stroke="#111827"; sw=3; }
+    if(isHover){ stroke="#ef4444"; sw=3; }
+    g.appendChild(el("circle",{cx:nd.x,cy:nd.y,r,fill:cc,stroke,"stroke-width":sw}));
+    if(nd.showLabel||isHover||isA||isB||onPath){
+      const t=el("text",{x:nd.x,y:nd.y+3.5,"text-anchor":"middle","font-size":(isHover||isA||isB)?11:9.5,
+        fill:textOn(cc),"font-family":"ui-monospace,Menlo,monospace","font-weight":700,style:"pointer-events:none"});
+      t.textContent=nd.label; g.appendChild(t);
+    }
+    if(isA||isB){
+      g.appendChild(el("circle",{cx:nd.x+r-1,cy:nd.y-r+1,r:7.5,fill:"#111827",stroke:"#fff","stroke-width":1.5,style:"pointer-events:none"}));
+      const tb=el("text",{x:nd.x+r-1,y:nd.y-r+4,"text-anchor":"middle","font-size":10,fill:"#fff","font-weight":700,style:"pointer-events:none"}); tb.textContent=isA?"A":"B"; g.appendChild(tb);
+    }
+    nLayer.appendChild(g);
+  }
+  if(ns.length===0 && state.exp && state.exp.enumerated){
+    const t=el("text",{x:EXP_W/2,y:EXP_H/2,"text-anchor":"middle","font-size":14,fill:"#9aa3b2"});
+    t.textContent="(no vertices to display)"; expSvg.appendChild(t);
+  }
+}
+
+/* ============================================================
+   INFO
+   ============================================================ */
+function updateInfo(){
+  const exp=state.exp;
+  const cg=countEdges(G.adj), ch=countEdges(H.adj);
+  const fmtE=(c)=> `${c.e}${c.l?` (+${c.l} loop${c.l>1?'s':''})`:''}`;
+  document.getElementById("iG").textContent = `${G.adj.length},  ${fmtE(cg)}`;
+  document.getElementById("iH").textContent = `${H.adj.length},  ${fmtE(ch)}`;
+  document.getElementById("iN").textContent = exp.N.toLocaleString();
+  document.getElementById("iHom").textContent = exp.enumerated ? exp.homCount.toLocaleString() : "—";
+  document.getElementById("iE").textContent = (exp.edgeCountFull!=null) ? exp.edgeCountFull.toLocaleString() : (exp.enumerated?"(N too large to count)":"—");
+  document.getElementById("iL").textContent = exp.enumerated ? exp.homCount.toLocaleString() : "—";
+}
+
+/* ============================================================
+   READOUT (active function)
+   ============================================================ */
+function updateReadout(){
+  const ro=document.getElementById("readout");
+  if(state.active==null){ ro.innerHTML='<span style="color:var(--muted)">Hover a vertex of H<sup>G</sup> to inspect its function. Click two to trace paths.</span>'; return; }
+  const nd=state.nodes[state.active];
+  let pills="";
+  for(let x=0;x<nd.f.length;x++){ pills+=`<span class="pill" style="border-color:${domColor(x)};color:${domColor(x)}">${x} ↦ ${nd.f[x]}</span>`; }
+  if(nd.f.length===0) pills='<span class="pill">empty function</span>';
+  const tag = nd.hom ? '<span class="badge ok">homomorphism · looped</span>' : '<span class="badge bad">not a homomorphism</span>';
+  let deg=0; for(const [a,b] of state.edges){ if(a===state.active||b===state.active) deg++; }
+  let role=""; if(state.active===state.pathA) role=' · endpoint <b>A</b>'; else if(state.active===state.pathB) role=' · endpoint <b>B</b>';
+  const compTxt = (state.components&&state.components.length>state.active)?` · component ${(state.components[state.active]||0)+1}/${state.compCount}`:"";
+  ro.innerHTML = `<div class="ftitle">f = ${nd.label} &nbsp; ${tag}</div>
+    <div class="pillrow">${pills}</div>
+    <div class="hint">degree: ${deg}${compTxt}${role}</div>`;
+}
+
+/* ============================================================
+   INTERACTION — morph (edit) panel
+   ============================================================ */
+let mDrag=null, mDown=null;
+function hitVtx(graph, x, y){ const pos=graph.pos; for(let i=0;i<pos.length;i++){ if(Math.hypot(pos[i].x-x,pos[i].y-y)<=15) return i; } return -1; }
+function whichHalf(x){ return x<DIV ? "G":"H"; }
+function graphOf(which){ return which==="G"?G:H; }
+
+morph.addEventListener("pointerdown",(ev)=>{
+  morph.setPointerCapture(ev.pointerId);
+  const p=svgPt(morph,ev);
+  let which=whichHalf(p.x); let i=hitVtx(graphOf(which),p.x,p.y);
+  if(i<0){ const other=which==="G"?"H":"G"; const j=hitVtx(graphOf(other),p.x,p.y); if(j>=0){which=other;i=j;} }
+  if(i>=0){ mDrag={which,i,moved:false}; mDown=null; }
+  else { mDown={x:p.x,y:p.y,half:which}; mDrag=null; }
+});
+morph.addEventListener("pointermove",(ev)=>{
+  if(!mDrag) return;
+  const p=svgPt(morph,ev); mDrag.moved=true;
+  const gph=graphOf(mDrag.which); let x=p.x,y=p.y;
+  if(mDrag.which==="G") x=Math.max(16,Math.min(DIV-16,x)); else x=Math.max(DIV+16,Math.min(MORPH_W-16,x));
+  y=Math.max(16,Math.min(MORPH_H-16,y));
+  gph.pos[mDrag.i]={x,y}; renderMorph();
+});
+morph.addEventListener("pointerup",(ev)=>{
+  const p=svgPt(morph,ev);
+  if(mDrag){ if(!mDrag.moved) handleVtxClick(mDrag.which,mDrag.i); mDrag=null; return; }
+  if(mDown){ addVertex(mDown.half, p.x, p.y); mDown=null; }
+});
+morph.addEventListener("dblclick",(ev)=>{
+  const p=svgPt(morph,ev); const which=whichHalf(p.x); const i=hitVtx(graphOf(which),p.x,p.y);
+  if(i>=0){ deleteVertex(which,i); }
+});
+function handleVtxClick(which,i){
+  if(!state.sel){ state.sel={which,i}; renderMorph(); return; }
+  if(state.sel.which!==which){ state.sel={which,i}; renderMorph(); return; }
+  const gph=graphOf(which); const a=state.sel.i, b=i;
+  if(a===b){ gph.adj[a][a]=!gph.adj[a][a]; }
+  else { const v=!gph.adj[a][b]; gph.adj[a][b]=v; gph.adj[b][a]=v; }
+  state.sel=null; recompute();
+}
+function addVertex(half,x,y){
+  const gph=graphOf(half); const n=gph.adj.length;
+  for(const row of gph.adj) row.push(false);
+  gph.adj.push(new Array(n+1).fill(false));
+  if(half==="G") x=Math.max(16,Math.min(DIV-16,x)); else x=Math.max(DIV+16,Math.min(MORPH_W-16,x));
+  y=Math.max(16,Math.min(MORPH_H-16,y));
+  gph.pos.push({x,y}); state.sel=null; recompute();
+}
+function deleteVertex(which,i){
+  const gph=graphOf(which);
+  gph.adj.splice(i,1); for(const row of gph.adj) row.splice(i,1);
+  gph.pos.splice(i,1); state.sel=null; recompute();
+}
+
+/* ============================================================
+   INTERACTION — exponential panel (hover = correspondence, click = path endpoint)
+   ============================================================ */
+let eDrag=null;
+function focusR(i){ return (i===state.active||i===state.pathA||i===state.pathB)?13:10; }
+function hitNode(x,y){ const ns=state.nodes; for(let i=ns.length-1;i>=0;i--){ if(Math.hypot(ns[i].x-x,ns[i].y-y)<=focusR(i)+2) return i; } return -1; }
+function setActive(i){ if(state.active===i) return; state.active=i; renderMorph(); renderExp(); updateReadout(); }
+function selectEndpoint(i){
+  if(state.pathA==null){ state.pathA=i; state.pathB=null; state.paths=null; }
+  else if(state.pathB==null){ if(i===state.pathA){ state.pathA=null; } else { state.pathB=i; } }
+  else { state.pathA=i; state.pathB=null; state.paths=null; }
+  if(state.pathA!=null && state.pathB!=null) computePaths(); else state.paths=null;
+  state.active = (state.pathB!=null?state.pathB:state.pathA);
+  updatePathUI(); renderMorph(); renderExp(); updateReadout();
+}
+expSvg.addEventListener("pointermove",(ev)=>{
+  const p=svgPt(expSvg,ev);
+  if(eDrag){ eDrag.moved=true; const nd=state.nodes[eDrag.i]; nd.x=Math.max(16,Math.min(EXP_W-16,p.x)); nd.y=Math.max(16,Math.min(EXP_H-16,p.y)); nd.fixed=true; nd.vx=nd.vy=0; renderExp(); return; }
+  const i=hitNode(p.x,p.y);
+  setActive(i>=0?i:(state.pathB!=null?state.pathB:state.pathA));
+});
+expSvg.addEventListener("pointerleave",()=>{ setActive(state.pathB!=null?state.pathB:state.pathA); });
+expSvg.addEventListener("pointerdown",(ev)=>{ const p=svgPt(expSvg,ev); const i=hitNode(p.x,p.y); if(i>=0){ expSvg.setPointerCapture(ev.pointerId); eDrag={i,moved:false}; } });
+expSvg.addEventListener("pointerup",(ev)=>{
+  if(eDrag){ if(!eDrag.moved){ selectEndpoint(eDrag.i); } else { state.nodes[eDrag.i].fixed=false; renderExp(); } eDrag=null; }
+});
+
+/* path controls */
+document.getElementById("pathPrev").onclick=()=>{ if(!state.paths||!state.paths.length)return; state.pathShowAll=false; state.pathIdx=(state.pathIdx-1+state.paths.length)%state.paths.length; updatePathUI(); renderExp(); };
+document.getElementById("pathNext").onclick=()=>{ if(!state.paths||!state.paths.length)return; state.pathShowAll=false; state.pathIdx=(state.pathIdx+1)%state.paths.length; updatePathUI(); renderExp(); };
+document.getElementById("pathAll").onchange=(e)=>{ state.pathShowAll=e.target.checked; updatePathUI(); renderExp(); };
+document.getElementById("lenPlus").onclick=()=>{ if(state.pathA==null||state.pathB==null||state.pathDist<0)return; const hi=Math.min(state.nodes.length-1,state.pathDist+6); if(state.pathMaxLen>=hi)return; state.pathMaxLen++; enumeratePaths(); updatePathUI(); renderExp(); };
+document.getElementById("lenMinus").onclick=()=>{ if(state.pathA==null||state.pathB==null||state.pathDist<0)return; if(state.pathMaxLen<=state.pathDist)return; state.pathMaxLen--; enumeratePaths(); updatePathUI(); renderExp(); };
+document.getElementById("pathClear").onclick=()=>{ state.pathA=null;state.pathB=null;state.paths=null;state.active=null; updatePathUI(); renderMorph(); renderExp(); updateReadout(); };
+
+/* ============================================================
+   CONTROLS
+   ============================================================ */
+function fillPresetSelect(sel){
+  PRESETS.forEach((p,idx)=>{ const o=document.createElement("option"); o.value=idx; o.textContent=p[0]; sel.appendChild(o); });
+  const o0=document.createElement("option"); o0.value="-1"; o0.textContent="— preset… —"; o0.selected=true; sel.insertBefore(o0, sel.firstChild);
+}
+const presetG=document.getElementById("presetG"), presetH=document.getElementById("presetH");
+fillPresetSelect(presetG); fillPresetSelect(presetH);
+presetG.addEventListener("change",()=>{ const v=+presetG.value; if(v>=0){ G.adj=PRESETS[v][1](); layoutCircle(G,190,180,Math.min(120,40+G.adj.length*14)); presetG.value="-1"; recompute(); } });
+presetH.addEventListener("change",()=>{ const v=+presetH.value; if(v>=0){ H.adj=PRESETS[v][1](); layoutCircle(H,570,180,Math.min(120,40+H.adj.length*14)); presetH.value="-1"; recompute(); } });
+document.querySelectorAll("[data-clear]").forEach(b=>b.addEventListener("click",()=>{
+  const w=b.getAttribute("data-clear"); const gph=graphOf(w); gph.adj=[[false]];
+  layoutCircle(gph, w==="G"?190:570,180,10); recompute();
+}));
+document.getElementById("homOnly").addEventListener("change",()=>{ buildRenderSet(); initExpLayout(); renderExp(); renderMorph(); updateReadout(); updatePathUI(); });
+document.getElementById("cap").addEventListener("change",()=>{ buildRenderSet(); initExpLayout(); renderExp(); renderMorph(); updateReadout(); updatePathUI(); });
+document.getElementById("relayout").addEventListener("click",()=>{ for(const nd of state.nodes) nd.fixed=false; initExpLayout(); });
+
+/* ============================================================
+   SELF-TESTS  (visible correctness check)
+   ============================================================ */
+function selfTest(){
+  const tests=[]; const T=(name,cond)=>tests.push([name,!!cond]);
+  let e=computeExp(gLoopPt(), gComplete(3), MAXENUM);
+  T("H^1: N=3", e.N===3); T("H^1: loops=0", e.homCount===0); T("H^1: edges=3", e.edgeCountFull===3);
+  e=computeExp(gComplete(2), gComplete(3), MAXENUM);
+  T("Hom(K2,K3)=6", e.homCount===6); T("|K3^K2|=9", e.N===9);
+  e=computeExp(gCycle(3), gComplete(2), MAXENUM); T("Hom(K3,K2)=0", e.homCount===0);
+  e=computeExp(gComplete(2), gComplete(2), MAXENUM);
+  T("|K2^K2|=4", e.N===4); T("K2^K2 homs=2", e.homCount===2); T("K2^K2 edges=1", e.edgeCountFull===1);
+  e=computeExp(gEmpty(0), gComplete(3), MAXENUM);
+  T("H^0: N=1", e.N===1); T("H^0: loops=1", e.homCount===1); T("H^0: edges=0", e.edgeCountFull===0);
+  e=computeExp(gPath(3), gCycle(4), MAXENUM); let sym=true;
+  for(let a=0;a<e.N&&sym;a++)for(let b=0;b<e.N&&sym;b++) if(e.adjacent(e.funcs[a],e.funcs[b])!==e.adjacent(e.funcs[b],e.funcs[a])) sym=false;
+  T("adjacency symmetric", sym);
+  const pass=tests.filter(t=>t[1]).length, all=tests.length;
+  const badge=document.getElementById("selfbadge");
+  if(pass===all){ badge.className="badge ok"; badge.textContent=`self-tests ✓ ${pass}/${all}`; }
+  else { badge.className="badge bad"; badge.textContent=`self-tests ✗ ${pass}/${all}`; console.warn("Failed:",tests.filter(t=>!t[1])); }
+  return pass===all;
+}
+
+/* ============================================================
+   BOOT
+   ============================================================ */
+relayoutGraphs();
+recompute();
+selfTest();
+</script>
+</body>
+</html>
