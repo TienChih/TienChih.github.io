@@ -1,0 +1,61 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<knowl mode="exercise" xmlns="https://spatext.clontz.org" version="0.2">
+        <intro>
+            <p>
+                Solve the following integrals. Note that there are many ways to write the same trig expression via identities.  Recall that <m>\displaystyle \sin^2(\theta) = \frac{1 - \cos(2\theta)}{2}, \cos^2(\theta) = \frac{1 + \cos(2\theta)}{2}</m>.
+            </p>
+            <!--<p>
+                (If an open circle appears on an point which is not a jump discontinuity, ignore it.)
+            </p>-->
+        </intro>
+
+        <!-- {{#tasks}} -->
+
+        <knowl>
+            <content>
+            <!-- {{#definite}} -->
+                <p>
+                    <m>\renewcommand{\log}{\ln} \displaystyle \int_{ {{a}} }^{ {{b}} } {{fx}}dx</m>.
+            <!-- {{/definite}} -->
+
+            <!-- {{#indefinite}} -->
+                <p>
+                    <m>\renewcommand{\log}{\ln} \displaystyle \int {{fx}}dx</m>.
+            <!-- {{/indefinite}} -->
+
+                </p>
+
+
+            </content>
+            <outtro>
+            <!-- {{#definite}} -->
+                <p>
+                    <me>\renewcommand{\log}{\ln} \displaystyle \int_{ {{a}} }^{ {{b}} } {{fx}}dx = \left({{Fx}}\right)\Big|_{ {{a}} }^{ {{b}} }  ={{Int}}.</me>
+                </p>
+            <!-- {{/definite}} -->    
+
+            <!-- {{#indefinite}} -->
+                <p>
+                    <me>\renewcommand{\log}{\ln} \displaystyle \int {{fx}}dx = {{Fx}} +C.</me>
+                </p>
+            <!-- {{/indefinite}} -->    
+
+
+            </outtro>
+        </knowl>
+
+        <!-- {{/tasks}} -->
+
+        
+    
+    
+        
+    
+    
+    
+    
+    
+   
+    
+   
+</knowl>

@@ -1,0 +1,83 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<knowl mode="exercise" xmlns="https://spatext.clontz.org" version="0.2">
+        <intro>
+            <p>
+                Use legitimate inequalities and the <m>p</m>-test to determine if an improper integral converges. 
+            </p>
+            
+        </intro>
+
+        <!-- {{#tasks}} -->
+
+        <knowl>
+            <content>
+                <!-- {{#infinite}} -->
+                <p>
+                    <m>\renewcommand{\log}{\ln} \displaystyle \int_{ {{start }} }^\infty {{fx}}dx</m>.
+                </p>
+                <!-- {{/infinite}} -->
+                <!-- {{#finite}} -->
+                <p>
+                    <m>\renewcommand{\log}{\ln} \displaystyle \int_0^1 {{fx}}dx</m>.
+                </p>
+                <!-- {{/finite}} -->
+
+
+            </content>
+            <outtro>
+                <!-- {{#infinite}} -->
+                <p>
+                    Note that for <m>x\geq {{start}}</m>, we have that 
+                
+
+
+                <!-- {{#converges}} -->
+                <m>\displaystyle 0\leq 
+                <!-- {{#top}} -->
+                    \frac{ \sqrt{ {{T11}} + {{T12}} + {{T14}} +{{T13}}  } }{  {{T21}} + {{T22}} + {{T24}} +{{T23}}   } \leq \frac{ \sqrt{ {{t11}} + {{t12}} + {{t14}} +{{t13}}  } }{ {{t21}} }
+                <!-- {{/top}} -->
+                <!-- {{#bottom}} -->
+                    \frac{  {{T11}} + {{T12}} + {{T14}} +{{T13}}   }{ \sqrt{  {{T21}} + {{T22}} + {{T24}} +{{T23}} }  }\leq \frac{  {{t11}} + {{t12}} + {{t14}} +{{t13}}   }{ \sqrt{ {{t21}} } }
+                <!-- {{/bottom}} -->
+                = {{simp}}</m>.  Thus <m>\displaystyle \int_{ {{start }} }^\infty {{fx}}dx \leq \int_{ {{start }} }^\infty {{simp}}dx </m> which
+                converges since <m> {{P}} &gt; 1 </m>.  Thus <m>\renewcommand{\log}{\ln} \displaystyle \int_{ {{start }} }^\infty {{fx}}dx</m> converges as well by the Comparison Theorem.
+                <!-- {{/converges}} -->
+
+
+                <!-- {{#diverges}} -->
+                <m>\displaystyle
+                <!-- {{#top}} -->
+                    \frac{ \sqrt{ {{T11}} + {{T12}} + {{T14}} +{{T13}}  } }{  {{T21}} + {{T22}} + {{T24}} +{{T23}}   } \geq \frac{ \sqrt{ {{t11}} } }{ {{t21}} +{{t22}} +{{t24}} +{{t23}} }
+                <!-- {{/top}} -->
+                <!-- {{#bottom}} -->
+                    \frac{  {{T11}} + {{T12}} + {{T14}} +{{T13}}   }{ \sqrt{  {{T21}} + {{T22}} + {{T24}} +{{T23}} }  }\geq \frac{  {{t11}}   }{ \sqrt{ {{t21}} +{{t22}} + {{t24}} +{{t23}} } }
+                <!-- {{/bottom}} -->
+                = {{simp}}\geq 0</m>.  Thus <m>\displaystyle \int_{ {{start }} }^\infty {{fx}}dx \geq \int_{ {{start }} }^\infty {{simp}}dx </m> which
+
+                diverges since <m> {{P}} \leq 1 </m>.  Thus <m>\renewcommand{\log}{\ln} \displaystyle \int_{ {{start }} }^\infty {{fx}}dx</m> diverges as well by the Comparison Theorem.
+                <!-- {{/diverges}} -->
+                
+                </p>
+                <!-- {{/infinite}} -->
+
+                
+
+
+            </outtro>
+        </knowl>
+
+        <!-- {{/tasks}} -->
+
+        
+    
+    
+        
+    
+    
+    
+    
+    
+   
+    
+   
+</knowl>

@@ -1,0 +1,72 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<knowl mode="exercise" xmlns="https://spatext.clontz.org" version="0.2">
+    
+        <!-- {{#tasks}} -->
+        <knowl>
+            <!--{{#ratio}}-->
+            
+                <content>
+                    <p>
+                        Determine if <m>\renewcommand{\log}{\ln} \displaystyle \sum_{ n= 0 }^\infty {{an}} </m> converges absolutely,  or diverges using the Ratio or Root Test.
+                    </p>
+                </content>
+            <!-- {{#converges}} -->    
+                <outtro>
+                    <p>
+                        Note that <m>\renewcommand{\log}{\ln} \displaystyle a_n = {{an}}, a_{n+1} = {{anp1}}</m>. 
+                        We have that:
+
+                            <me>\renewcommand{\log}{\ln} \displaystyle  \lim_{n\to\infty} \left| {{anp1}} \cdot {{ar}} \right| = \lim_{n\to\infty}  {{combine}} = {{limit}} &lt; 1.</me> 
+                        So  <m>\renewcommand{\log}{\ln} \displaystyle \sum_{ n= 0 }^\infty {{an}} </m> converges absolutely by the Ratio Test.
+                    </p>
+                </outtro>
+            <!-- {{/converges}} -->
+            <!-- {{#diverges}} -->
+                <outtro>
+                    <p>
+                        Note that <m>\renewcommand{\log}{\ln} \displaystyle a_n = {{an}}, a_{n+1} = {{anp1}}</m>. 
+                        We have that:
+
+                            <me>\renewcommand{\log}{\ln} \displaystyle  \lim_{n\to\infty} \left| {{anp1}} \cdot {{ar}} \right| = \lim_{n\to\infty}  {{combine}} = {{limit}} &gt; 1.</me> 
+                        So  <m>\renewcommand{\log}{\ln} \displaystyle \sum_{ n= 0 }^\infty {{an}} </m> diverges by the Ratio Test.
+                    </p>
+                </outtro>
+            <!-- {{/diverges}} -->
+            <!--{{/ratio}}-->
+
+            <!--{{#root}}-->
+            
+                <content>
+                    <p>
+                        Determine if <m>\renewcommand{\log}{\ln} \displaystyle \sum_{ n= 0 }^\infty   {{an}}  </m> converges absolutely,  or diverges using the Ratio or Root Test.
+                    </p>
+                </content>
+            <!-- {{#converges}} -->    
+                <outtro>
+                    <p>
+                        Note that <m>\renewcommand{\log}{\ln} \displaystyle \sqrt[n]{|a_n|} = {{absan}}</m>. 
+                        We have that:
+
+                            <me>\renewcommand{\log}{\ln} \displaystyle  \lim_{n\to\infty} {{absan}} = {{limit}} &lt; 1.</me> 
+                        So  <m>\renewcommand{\log}{\ln} \displaystyle \sum_{ n= 0 }^\infty {{an}} </m> converges absolutely by the Ratio Test.
+                    </p>
+                </outtro>
+            </knowl>
+            <!-- {{/converges}} -->
+            <!-- {{#diverges}} -->
+                <outtro>
+                    <p>
+                        Note that <m>\renewcommand{\log}{\ln} \displaystyle \sqrt[n]{|a_n|} = {{absan}}</m>. 
+                        We have that:
+
+                            <me>\renewcommand{\log}{\ln} \displaystyle  \lim_{n\to\infty} {{absan}} = {{limit}} &gt; 1.</me> 
+                        So  <m>\renewcommand{\log}{\ln} \displaystyle \sum_{ n= 0 }^\infty {{an}} </m> diverges by the Ratio Test.
+                    </p>
+                </outtro>
+            <!-- {{/diverges}} -->
+            <!--{{/root}}-->
+
+            
+        </knowl>
+<!-- {{/tasks}} -->
+</knowl>

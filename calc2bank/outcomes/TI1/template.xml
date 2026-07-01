@@ -1,0 +1,77 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<knowl mode="exercise" xmlns="https://spatext.clontz.org" version="0.2">
+        <intro>
+            <p>
+                Solve the following integrals.  Make a note to yourself whether or not, we use substitution, substitution with some algebra replacement, or if substitution is not necessary.
+            </p>
+            <!--<p>
+                (If an open circle appears on an point which is not a jump discontinuity, ignore it.)
+            </p>-->
+        </intro>
+
+        <knowl>
+            <content>
+                <p>
+                    <m>\renewcommand{\log}{\ln} \displaystyle \int {{f0}}dx</m>.
+
+
+                </p>
+
+
+            </content>
+            <outtro>
+                <p>
+                    <m>\renewcommand{\log}{\ln} {{v0}} {{u0}}</m>.  Then <me>\renewcommand{\log}{\ln} \displaystyle \int {{f0}}dx = {{F0}}+C.</me>
+                </p>
+
+
+            </outtro>
+        </knowl>
+
+        <knowl>
+            <content>
+                <p>
+                    <m>\renewcommand{\log}{\ln} \displaystyle \int {{f1}}dx</m>.
+
+
+                </p>
+
+
+            </content>
+            <outtro>
+                <p>
+                    <m>\renewcommand{\log}{\ln} {{v1}} {{u1}}</m>.  Then <me>\renewcommand{\log}{\ln} \displaystyle \int {{f1}}dx = {{F1}}+C.</me>
+                </p>
+
+
+            </outtro>
+        </knowl>
+    
+    
+        <knowl>
+            <content>
+                <p>
+                    <m>\renewcommand{\log}{\ln} \displaystyle \int {{f2}}dx</m>.
+
+
+                </p>
+
+
+            </content>
+            <outtro>
+                <p>
+                    <m>\renewcommand{\log}{\ln} {{v2}} {{u2}}</m>.  Then <me>\renewcommand{\log}{\ln} \displaystyle \int {{f2}}dx = {{F2}}+C.</me>
+                </p>
+
+
+            </outtro>
+        </knowl>
+    
+    
+    
+    
+    
+   
+    
+   
+</knowl>

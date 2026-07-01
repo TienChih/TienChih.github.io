@@ -1,0 +1,61 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<knowl mode="exercise" xmlns="https://spatext.clontz.org" version="0.2">
+        <intro>
+            <p>
+                Solve the following integrals. 
+            </p>
+            <!--<p>
+                (If an open circle appears on an point which is not a jump discontinuity, ignore it.)
+            </p>-->
+        </intro>
+
+        <knowl>
+            <content>
+                <p>
+                    <m>\renewcommand{\log}{\ln} \displaystyle \int_{ {{a1}} }^{ {{b1}} } {{fx}}dx</m>.
+
+
+                </p>
+
+
+            </content>
+            <outtro>
+                <p>
+                    <me>\renewcommand{\log}{\ln} \displaystyle \int_{ {{a1}} }^{ {{b1}} } {{fx}}dx = {{Int1}}.</me>
+                </p>
+
+
+            </outtro>
+        </knowl>
+
+        <knowl>
+            <content>
+                <p>
+                    <m>\renewcommand{\log}{\ln} \displaystyle \int {{gx}}dx</m>.
+
+
+                </p>
+
+
+            </content>
+            <outtro>
+                <p>
+                    By letting <m>\renewcommand{\log}{\ln} u={{U}}</m>, we have that <m>\renewcommand{\log}{\ln} dx = {{dx}}du</m>.  Then by applying parts to the <m>u</m> integral we obtain:
+                    <me>\renewcommand{\log}{\ln} \displaystyle \int {{gx}}dx = {{Int2}}+C.</me>
+                </p>
+
+
+            </outtro>
+        </knowl>
+    
+    
+        
+    
+    
+    
+    
+    
+   
+    
+   
+</knowl>

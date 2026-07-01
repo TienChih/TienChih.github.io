@@ -1,0 +1,251 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<bank xmlns="https://checkit.clontz.org" version="0.2">
+    <title>OxCalc II Bank</title>
+    <slug>new-checkit-bank</slug>
+    <url>https://checkit.clontz.org</url>
+    <outcomes>
+        <outcome>
+            <title>Integration Review</title>
+            <slug>TI1</slug>
+            <path>outcomes/TI1</path>
+            <description>
+                Find the integral of a function using substitution and/or algebra.
+            </description>
+        </outcome>
+        <outcome>
+            <title>Integration by Parts</title>
+            <slug>TI2</slug>
+            <path>outcomes/TI2</path>
+            <description>
+                Find the integral of a function using integration by parts (and substitution when appropriate).
+            </description>
+        </outcome>
+        <outcome>
+            <title>Integral of Trigonometric Functions</title>
+            <slug>TI3</slug>
+            <path>outcomes/TI3</path>
+            <description>
+                Find the integral of trigonometric functions using identities, parts and/or substitution.
+            </description>
+        </outcome>
+        <outcome>
+            <title>Trigonometric Substitution</title>
+            <slug>TI4</slug>
+            <path>outcomes/TI4</path>
+            <description>
+                Find the integral of algebraic functions via trigonometric substitution.
+            </description>
+        </outcome>
+        <outcome>
+            <title>Partial Fractions</title>
+            <slug>TI5</slug>
+            <path>outcomes/TI5</path>
+            <description>
+                Find the integral of rational functions via partial fraction decomposition.
+            </description>
+        </outcome>
+        <outcome>
+            <title>Select a Strategy</title>
+            <slug>TI6</slug>
+            <path>outcomes/TI6</path>
+            <description>
+                Identify the appropriate integration technique(s) and apply them to integrate a function.
+            </description>
+        </outcome>
+        <outcome>
+            <title>Improper Integrals as Limits</title>
+            <slug>TI7</slug>
+            <path>outcomes/TI7</path>
+            <description>
+                Write an improper integral as the limit of a proper definite integral to compute the value.
+            </description>
+        </outcome>
+        <outcome>
+            <title>Improper Integrals via p-test and Comparison Theorem</title>
+            <slug>TI8</slug>
+            <path>outcomes/TI8</path>
+            <description>
+                Use  the p-test and the Comparison Theorem for integrals to determine if an improper integral converges.
+            </description>
+        </outcome>
+        <outcome>
+            <title>Sequence Formulas</title>
+            <slug>SS1</slug>
+            <path>outcomes/SS1</path>
+            <description>
+                Define and use explicit and recursive formulas for sequences.
+            </description>
+        </outcome>
+        <outcome>
+            <title>Sequence Properties and Limits</title>
+            <slug>SS2</slug>
+            <path>outcomes/SS2</path>
+            <description>
+                Determine if a sequence is convergent, divergent, monotonic, or bounded, and compute limits of convergent sequences.
+            </description>
+        </outcome>
+        <outcome>
+            <title>Closed Forms</title>
+            <slug>SS3</slug>
+            <path>outcomes/SS3</path>
+            <description>
+                Find the closed form for a partial sum series and use it to evaluate an infinite series.
+            </description>
+        </outcome>
+        <outcome>
+            <title>Integral Test</title>
+            <slug>SS4</slug>
+            <path>outcomes/SS4</path>
+            <description>
+                Apply the integral test to determine if a series converges or diverges.
+            </description>
+        </outcome>
+        <outcome>
+            <title>Direct Comparison Test</title>
+            <slug>SS5</slug>
+            <path>outcomes/SS5</path>
+            <description>
+                Apply the direct comparison test to determine if a series converges or diverges.
+            </description>
+        </outcome>
+
+        <outcome>
+            <title>Limit Comparison Test</title>
+            <slug>SS6</slug>
+            <path>outcomes/SS6</path>
+            <description>
+                Apply the limit comparison test to determine if a series converges or diverges.
+            </description>
+        </outcome>
+        <outcome>
+            <title>Alternating Series Test</title>
+            <slug>SS7</slug>
+            <path>outcomes/SS7</path>
+            <description>
+                Determine if a series is absolutely convergent, conditionally convergent or divergent.
+            </description>
+        </outcome>
+
+        <outcome>
+            <title>Ratio and Root Test</title>
+            <slug>SS8</slug>
+            <path>outcomes/SS8</path>
+            <description>
+                Use the ratio or root test to determine if a series is absolutely convergent or divergent.
+            </description>
+        </outcome>
+
+        <outcome>
+            <title>Intervals of Convergence</title>
+            <slug>PS1</slug>
+            <path>outcomes/PS1</path>
+            <description>
+                Find the radius of convergence of a power series.
+            </description>
+        </outcome>
+
+        <outcome>
+            <title>Power Series of a Function</title>
+            <slug>PS2</slug>
+            <path>outcomes/PS2</path>
+            <description>
+                Find the power series of a function.
+            </description>
+        </outcome>
+
+        <outcome>
+            <title>Closed Form for a Power Series</title>
+            <slug>PS3</slug>
+            <path>outcomes/PS3</path>
+            <description>
+                Find the closed form for a power series.
+            </description>
+        </outcome>
+        <outcome>
+            <title>Evaluate Limits using Power Series</title>
+            <slug>PS4</slug>
+            <path>outcomes/PS4</path>
+            <description>
+                Evaluate the limit of a series using power series.
+            </description>
+        </outcome>
+
+        <outcome>
+            <title>Power Series via Taylor Series</title>
+            <slug>PS5</slug>
+            <path>outcomes/PS5</path>
+            <description>
+                Work with power series derived via Taylor series. 
+            </description>
+        </outcome>
+
+        <outcome>
+            <title>Closed Forms for Taylor Series</title>
+            <slug>PS6</slug>
+            <path>outcomes/PS6</path>
+            <description>
+                Find the closed form of power series derived via Taylor series. 
+            </description>
+        </outcome>
+
+        <outcome>
+            <title>Evaluate Limits using Power Series derived via Taylor Series</title>
+            <slug>PS7</slug>
+            <path>outcomes/PS7</path>
+            <description>
+                Evaluate the limit of a series using power series derived via Taylor series.
+            </description>
+        </outcome>
+        <outcome>
+            <title>General Power Series of Functions</title>
+            <slug>PS8</slug>
+            <path>outcomes/PS8</path>
+            <description>
+                Find the power series of a variety of functions.
+            </description>
+        </outcome>
+        <outcome>
+            <title>General Closed Form of a Power Series</title>
+            <slug>PS9</slug>
+            <path>outcomes/PS9</path>
+            <description>
+                Find the closed form for a variety of power series.
+            </description>
+        </outcome>
+        <outcome>
+            <title>Taylor Series and Taylor Polynomials</title>
+            <slug>PS10</slug>
+            <path>outcomes/PS10</path>
+            <description>
+                Interpret a power series as a Taylor series.
+            </description>
+        </outcome>
+
+        <outcome>
+            <title>Polar Coordinates</title>
+            <slug>PO1</slug>
+            <path>outcomes/PO1</path>
+            <description>
+                Convert points and equations between polar and Cartesian coordinates and equations.
+            </description>
+        </outcome>
+        <outcome>
+            <title>Polar Arclength</title>
+            <slug>PO2</slug>
+            <path>outcomes/PO2</path>
+            <description>
+                Compute arclengths of curves given in polar coordinates.
+            </description>
+        </outcome>
+
+        <outcome>
+            <title>Polar Area</title>
+            <slug>PO3</slug>
+            <path>outcomes/PO3</path>
+            <description>
+                Compute area of curves given in polar coordinates.
+            </description>
+        </outcome>
+
+    </outcomes>
+</bank>

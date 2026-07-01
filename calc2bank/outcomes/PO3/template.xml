@@ -1,0 +1,45 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<knowl mode="exercise" xmlns="https://spatext.clontz.org" version="0.2">
+    
+    
+    <!--{{#single}}-->
+    <content>
+        <p>
+            Sketch the polar curve defined by <m>r={{f}}</m> and find a difference of integrals which compute the area bound
+            between the inner and outer loop.
+        </p>
+    </content>
+    <outtro>
+        <p>
+            Note that multiple expressions for bounding angles are possible.
+            <m>\displaystyle \int_{ {{a2}} }^{ {{b2}} }\left({{fs}} \right) d\theta - \displaystyle \int_{ {{a1}} }^{ {{b1}} }\left({{fs}} \right) d\theta</m>.
+        </p>
+        <p>
+            <image
+                    source="assets/PO3/generated/{{__seed__}}/plot.png"
+                    description="polar curve r={{f}}."/>
+        </p>
+    </outtro>
+    <!--{{/single}}-->
+
+
+    <!--{{#double}}-->
+    <content>
+        <p>
+            Sketch the polar curves defined by <m>r={{f}}</m> and <m>r={{R}}</m>.  Then find an integral which compute the area {{first}}
+            of <m>r={{f}}</m> and {{second}} of <m>r={{R}}</m>.
+        </p>
+    </content>
+    <outtro>
+        <p>
+            Note that multiple expressions for bounding angles are possible.
+            <m>\displaystyle \int_{ {{a}} }^{ {{b}} }\left({{fs}} \right) d\theta </m>.
+        </p>
+        <p>
+            <image
+                    source="assets/PO3/generated/{{__seed__}}/plot2.png"
+                    description="polar curves r={{f}} and r={{R}}."/>
+        </p>
+    </outtro>
+    <!--{{/double}}-->
+</knowl>

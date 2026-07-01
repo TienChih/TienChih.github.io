@@ -1,0 +1,106 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<knowl mode="exercise" xmlns="https://spatext.clontz.org" version="0.2">
+    
+        <!-- {{#tasks}} -->
+        <knowl>
+            <!--{{#fraction}}-->
+            <!-- {{#converges}} -->
+                <content>
+                    <p>
+                        Determine if <m>\renewcommand{\log}{\ln} \displaystyle \sum_{ n= {{k0}} }^\infty (-1)^n\frac{ {{top}} }{ {{bottom}} } </m> converges absolutely, converges conditionally or diverges.
+                    </p>
+                </content>
+                <outtro>
+                    <p>
+                        Note that <m>\renewcommand{\log}{\ln} \displaystyle |a_n| = \frac{ {{top}} }{ {{bottom}} }, b_n = \frac{1}{n^{ {{P}} } }</m>. Note that <m>a_n</m> is a positive, eventually  decreasing sequence.  
+                        We have that:
+
+                            <me>\renewcommand{\log}{\ln} \displaystyle  \lim_{n\to\infty}  \frac{ {{top}} }{ {{bottom}} } \cdot \frac{ n^{ {{P}} } }{1} = \lim_{n\to\infty} \sqrt{\frac{ {{topsquare}} }{ {{bottomsquare}} } \cdot \frac{n^{ {{Psquare}} }}{1} } = \sqrt{\lim_{n\to\infty}\frac{ {{final}} }{ {{bottomsquare}} } } = {{simpcoeff}}.</me>
+                        We can see that <m>0 &lt; {{simpcoeff}} &lt; \infty </m> so by the Limit Comparison Test, <m>\renewcommand{\log}{\ln} \displaystyle \sum_{ n= {{k0}} }^\infty \frac{ {{top}} }{ {{bottom}} } </m> converges if and only if <m>\renewcommand{\log}{\ln} \displaystyle \sum_{ n= {{k0}} }^\infty \frac{ 1 }{ n^{ {{P}} } } </m> converges, which it does by the <m>p</m>-test since <m>{{P}} &gt; 1</m>.  
+                        So  <m>\renewcommand{\log}{\ln} \displaystyle \sum_{ n= {{k0}} }^\infty \frac{ {{top}} }{ {{bottom}} } </m> converges, and <m>\renewcommand{\log}{\ln} \displaystyle \sum_{ n= {{k0}} }^\infty (-1)^n \frac{ {{top}} }{ {{bottom}} } </m> converges absolutely.
+                    </p>
+                </outtro>
+            <!-- {{/converges}} -->
+            <!-- {{#diverges}} -->
+                <content>
+                    <p>
+                        Determine if <m>\renewcommand{\log}{\ln} \displaystyle \sum_{ n= {{k0}} }^\infty (-1)^n \frac{ {{top}} }{ {{bottom}} } </m> converges absolutely, converges conditionally or diverges.
+                    </p>
+                </content>
+                <outtro>
+                    <p>
+                        Note that <m>\renewcommand{\log}{\ln} \displaystyle |a_n| = \frac{ {{top}} }{ {{bottom}} }, b_n = \frac{1}{n^{ {{P}} } }</m>. Note that <m>a_n</m> is a positive, eventually  decreasing sequence.  
+                        We have that:
+
+                            <me>\renewcommand{\log}{\ln} \displaystyle  \lim_{n\to\infty}  \frac{ {{top}} }{ {{bottom}} } \cdot \frac{ n^{ {{P}} } }{1} = \lim_{n\to\infty} \sqrt{\frac{ {{topsquare}} }{ {{bottomsquare}} } \cdot \frac{n^{ {{Psquare}} }}{1} } = \sqrt{\lim_{n\to\infty}\frac{ {{final}} }{ {{bottomsquare}} } } = {{simpcoeff}}.</me>
+                        We can see that <m>0 &lt; {{simpcoeff}} &lt; \infty </m> so by the Limit Comparison Test, <m>\renewcommand{\log}{\ln} \displaystyle \sum_{ n= {{k0}} }^\infty \frac{ {{top}} }{ {{bottom}} } </m> converges if and only if <m>\renewcommand{\log}{\ln} \displaystyle \sum_{ n= {{k0}} }^\infty \frac{ 1 }{ n^{ {{P}} } } </m> converges, which it does not by the <m>p</m>-test since <m>{{P}} \leq 1</m>.
+                        So  <m>\renewcommand{\log}{\ln} \displaystyle \sum_{ n= {{k0}} }^\infty \frac{ {{top}} }{ {{bottom}} } </m> diverges and <m>\renewcommand{\log}{\ln} \displaystyle \sum_{ n= {{k0}} }^\infty (-1)^n \frac{ {{top}} }{ {{bottom}} } </m> does not converge absolutely.
+                    </p>
+                    <p>
+                        But since <m>\renewcommand{\log}{\ln} \displaystyle   \frac{ {{top}} }{ {{bottom}} }</m> is a positive, eventually  decreasing sequence, and <m>\renewcommand{\log}{\ln} \displaystyle  \lim_{n\to\infty} \frac{ {{top}} }{ {{bottom}} } = 0</m>, by the 
+                        Alternating Series Test, <m>\renewcommand{\log}{\ln} \displaystyle \sum_{ n= {{k0}} }^\infty (-1)^n \frac{ {{top}} }{ {{bottom}} } </m> converges and is condionally convergent.
+                    </p>
+                </outtro>
+            <!-- {{/diverges}} -->
+            <!--{{/fraction}}-->
+
+            <!--{{#trans}}-->
+            <!-- {{#converges}} -->
+                <content>
+                    <p>
+                        Determine if <m>\renewcommand{\log}{\ln} \displaystyle \sum_{ n= {{k0}} }^\infty (-1)^n\left( {{Fn}} \right) </m> converges absolutely, converges conditionally or diverges.
+                    </p>
+                </content>
+                <outtro>
+                    <p>
+                        Note that <m>\renewcommand{\log}{\ln} \displaystyle |a_n| = {{Fn}} , b_n = \frac{1}{n^{ {{P}} } }</m>. Note that <m>a_n</m> is a positive, eventually  decreasing sequence.  
+                        We have that:
+
+                            <me>\renewcommand{\log}{\ln} \displaystyle  \lim_{n\to\infty}  \frac{ {{Fn}} }{ \frac{1}{ n^{ {{P}} } } } = \lim_{n\to\infty} \frac{ {{Fd}} }{ {{Pd}} } = {{limit}}.</me>
+                        (Not all work shown.)  We can see that <m>\renewcommand{\log}{\ln} 0 &lt; {{limit}} &lt; \infty </m> so by the Limit Comparison Test, <m>\renewcommand{\log}{\ln} \displaystyle \sum_{ n= {{k0}} }^\infty \left( {{Fn}} \right) </m> converges if and only if <m>\renewcommand{\log}{\ln} \displaystyle \sum_{ n= {{k0}} }^\infty \frac{ 1 }{ n^{ {{P}} } } </m> converges, which it does by the <m>p</m>-test since <m>{{P}} &gt; 1</m>.  
+                        So  <m>\renewcommand{\log}{\ln} \displaystyle \sum_{ n= {{k0}} }^\infty\left( {{Fn}} \right)</m> converges and <m>\renewcommand{\log}{\ln} \displaystyle \sum_{ n= {{k0}} }^\infty (-1)^n\left( {{Fn}} \right)</m> converges absolutely.
+                    </p>
+                </outtro>
+            <!-- {{/converges}} -->
+            <!-- {{#diverges}} -->
+                <content>
+                    <p>
+                        Determine if <m>\renewcommand{\log}{\ln} \displaystyle \sum_{ n= {{k0}} }^\infty (-1)^n \left( {{Fn}} \right) </m> converges absolutely, condtionally or diverges.
+                    </p>
+                </content>
+                <outtro>
+                    <p>
+                        Note that <m>\renewcommand{\log}{\ln} \displaystyle |a_n| = {{Fn}} , b_n = \frac{1}{n^{ {{P}} } }</m>. Note that <m>a_n</m> is a positive, eventually  decreasing sequence.  
+                        We have that:
+
+                            <me>\renewcommand{\log}{\ln} \displaystyle  \lim_{n\to\infty}  \frac{ {{Fn}} }{ \frac{1}{ n^{ {{P}} } } } = \lim_{n\to\infty} \frac{ {{Fd}} }{ {{Pd}} } = {{limit}}.</me>
+                        (Not all work shown.)  We can see that <m>\renewcommand{\log}{\ln} 0 &lt; {{limit}} &lt; \infty </m> so by the Limit Comparison Test, <m>\renewcommand{\log}{\ln} \displaystyle \sum_{ n= {{k0}} }^\infty \left(  {{Fn}} \right) </m> converges if and only if <m>\renewcommand{\log}{\ln} \displaystyle \sum_{ n= {{k0}} }^\infty \frac{ 1 }{ n^{ {{P}} } } </m> converges, 
+                        which it does not by the <m>p</m>-test since <m>{{P}} \leq 1</m>.  So  <m>\renewcommand{\log}{\ln} \displaystyle \sum_{ n= {{k0}} }^\infty \left(  {{Fn}} \right) </m> diverges.
+
+                    </p>
+                    <p>
+                        But since <m>{{Fn}} </m> is a positive, eventually  decreasing sequence, and <m>\renewcommand{\log}{\ln} \displaystyle  \lim_{n\to\infty} {{Fn}} = 0</m>, by the 
+                        Alternating Series Test, <m>\renewcommand{\log}{\ln} \displaystyle \sum_{ n= {{k0}} }^\infty (-1)^n \left( {{Fn}} \right) </m> converges and is condionally convergent.
+                    </p>
+                </outtro>
+            <!-- {{/diverges}} -->
+            <!--{{/trans}}-->
+            <!-- {{#bad}} -->
+                <content>
+                    <p>
+                        Determine if <m>\renewcommand{\log}{\ln} \displaystyle \sum_{ n= {{k0}} }^\infty (-1)^n\frac{ {{top}} }{ {{bottom}} } </m> converges absolutely, converges conditionally or diverges.
+                    </p>
+                </content>
+                <outtro>
+                    <p>
+                        Note that <m>\renewcommand{\log}{\ln} \displaystyle |a_n| = \frac{ {{top}} }{ {{bottom}} }</m> and that 
+                        <m>\renewcommand{\log}{\ln} \displaystyle \lim_{n\to \infty} \frac{ {{top}} }{ {{bottom}} } = \sqrt{\lim_{n\to \infty} \frac{ {{topsquare}} }{ {{bottomsquare}} }} = {{simpcoeff}}\neq 0</m> 
+                        and so <m>\renewcommand{\log}{\ln} \displaystyle \sum_{ n= {{k0}} }^\infty (-1)^n\frac{ {{top}} }{ {{bottom}} } </m> diverges.
+                    </p>
+                </outtro>
+            <!-- {{/bad}} -->
+
+            
+        </knowl>
+<!-- {{/tasks}} -->
+</knowl>

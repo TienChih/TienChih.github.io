@@ -1,0 +1,61 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<knowl mode="exercise" xmlns="https://spatext.clontz.org" version="0.2">
+    
+        <!-- {{#tasks}} -->
+        <knowl>
+            
+            
+                <content>
+                    <p>
+                        Find the interval of convergence for  <m>\renewcommand{\log}{\ln} \displaystyle \sum_{ n= {{start}} }^\infty {{summand}} </m>.
+                    </p>
+                </content>
+            <!--{{#finite}}-->    
+                <outtro>
+                    <p>
+                        We begin with finding the radius of convergence <m>R</m>.  
+                        By letting <m>\renewcommand{\log}{\ln}\displaystyle   b_n = {{summand}}</m>, we have that <m>\displaystyle \renewcommand{\log}{\ln} b_{n+1} = {{Bnp1}}</m>.  We wish to
+                        find the values of <m>x</m> where 
+                        <me>\renewcommand{\log}{\ln} \lim_{n\to\infty} \left| {{Bnp1}} \cdot {{Bnr}} \right| &lt; 1 </me>
+                        which occurs precisely when 
+                        <me>\renewcommand{\log}{\ln} |{{xma}}| \lim_{n\to\infty} \left( {{aRatio}} \right) &lt; 1. </me> By evaluating the limit, we see that this occurs when
+                        <me>\renewcommand{\log}{\ln} |{{xma}}| &lt; {{R}}</me> or when <m>\renewcommand{\log}{\ln} \displaystyle {{Lpoint}} &lt; x &lt; {{Rpoint}}</m>.
+                    </p>
+                    <p>
+                        When <m>\displaystyle  x={{Rpoint}}</m>, we obtain the series <m>\renewcommand{\log}{\ln} \displaystyle \sum_{n = {{start}} }^\infty {{Rtest}}</m>
+                        which {{Rtext}} (the student should verify this).
+                    </p>
+                    <p>
+                        When <m>\displaystyle  x={{Lpoint}}</m>, consider the limit <m>\renewcommand{\log}{\ln} \displaystyle \sum_{n = {{start}} }^\infty {{Ltest}}</m>
+                        which {{Ltext}} (the student should verify this).
+                    </p>
+                    <p>
+                        Thus the interval of convergence is <m>\renewcommand{\log}{\ln}\displaystyle  {{Lsymbol}} {{Lpoint}}, {{Rpoint}} {{Rsymbol}}  </m>.
+                    </p>
+                </outtro>
+            
+            <!--{{/finite}}-->
+
+            <!--{{#infinite}}-->    
+                <outtro>
+                    <p>
+                        We begin with finding the radius of convergence <m>R</m>.  
+                        By letting <m>\renewcommand{\log}{\ln}\displaystyle   b_n = {{summand}}</m>, we have that <m>\displaystyle \renewcommand{\log}{\ln} b_{n+1} = {{Bnp1}}</m>.  We wish to
+                        find the values of <m>x</m> where 
+                        <me>\renewcommand{\log}{\ln} \lim_{n\to\infty} \left| {{Bnp1}} \cdot {{Bnr}} \right| &lt; 1 </me>
+                        which occurs precisely when 
+                        <me>\renewcommand{\log}{\ln} |{{xma}}| \lim_{n\to\infty} \left( {{aRatio}} \right) &lt; 1. </me> By evaluating the limit, we see that this occurs when
+                        <me>\renewcommand{\log}{\ln} |{{xma}}|\cdot 0 &lt; 1.</me> 
+                        This inequality holds for every real number. 
+                        Thus the interval of convergence is <m>\renewcommand{\log}{\ln} \displaystyle (-\infty, \infty)</m>.
+                    </p>
+                </outtro>
+            
+            <!--{{/infinite}}-->
+
+            
+
+            
+        </knowl>
+<!-- {{/tasks}} -->
+</knowl>

@@ -1,0 +1,75 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<knowl mode="exercise" xmlns="https://spatext.clontz.org" version="0.2">
+        <intro>
+            <p>
+                Express the following improper integrals as the (sum of) limit(s) of proper integral(s), and compute the integrals. 
+            </p>
+            
+        </intro>
+
+        <!-- {{#tasks}} -->
+
+        <knowl>
+            <content>
+                <p>
+                    <m>\renewcommand{\log}{\ln} \displaystyle \int_{ {{left}} }^{ {{right}} } {{fx}}dx</m>.
+
+            
+
+                </p>
+
+
+            </content>
+            <outtro>
+
+                <p>
+                    Note  that <m>\renewcommand{\log}{\ln} \displaystyle \int {{fx}}dx ={{Fx}} +C.</m>
+                </p>
+                <p>    
+                    Thus 
+                
+                <!--{{#Left}}-->
+                    <m>\renewcommand{\log}{\ln} \displaystyle \int_{ {{left}} }^{ {{right}} } {{fx}} dx 
+                    = \lim_{c\to {{left}}^+ } \left( {{Fx}} \right)\Big|_{c}^{ {{right}} } = {{Int}}</m>.
+                
+                <!--{{/Left}}-->
+
+                <!--{{#Right}}-->
+                    <m>\renewcommand{\log}{\ln} \displaystyle \int_{ {{left}} }^{ {{right}} } {{fx}} dx 
+                    = \lim_{c\to \infty } \left( {{Fx}} \right)\Big|_{ {{left}} }^{ c } = {{Int}}</m>.
+                
+                <!--{{/Right}}-->
+
+                <!--{{#Both}}-->
+                    <m>\renewcommand{\log}{\ln} \displaystyle \int_{ {{left}} }^{ {{right}} } {{fx}} dx 
+                    =  \displaystyle \int_{ {{left}} }^{ 1 } {{fx}} dx 
+                    + \displaystyle \int_{ 1 }^{ {{right}} } {{fx}} dx 
+                    = \lim_{c_1\to 0^+ } \left( {{Fx}} \right)\Big|_{ c_1 }^{ 1 }
+                    +\lim_{c_2\to \infty } \left( {{Fx}} \right)\Big|_{ 1 }^{ c_2 }
+                    = \left({{Int1}}\right) + \left({{Int2}}\right)
+                    = {{Int}}
+                    </m>.
+                
+                <!--{{/Both}}-->
+
+                </p>
+
+
+            </outtro>
+        </knowl>
+
+        <!-- {{/tasks}} -->
+
+        
+    
+    
+        
+    
+    
+    
+    
+    
+   
+    
+   
+</knowl>

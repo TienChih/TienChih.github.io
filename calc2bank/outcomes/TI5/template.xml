@@ -1,0 +1,64 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<knowl mode="exercise" xmlns="https://spatext.clontz.org" version="0.2">
+        <intro>
+            <p>
+                Solve the following integrals using partial fraction decomposition and substitution when appropriate. 
+            </p>
+            <!--<p>
+                (If an open circle appears on an point which is not a jump discontinuity, ignore it.)
+            </p>-->
+        </intro>
+
+        <knowl>
+            <content>
+                <p>
+                    <m>\renewcommand{\log}{\ln} \displaystyle \int \frac{ {{num}} }{ {{denom}} } dx</m>.
+
+
+                </p>
+
+
+            </content>
+            <outtro>
+                <p>
+                  Since
+                    <me>\renewcommand{\log}{\ln} \displaystyle \frac{ {{num}} }{ {{denom}} }  = {{PF}} </me>
+                  We have that   
+                  <m>\renewcommand{\log}{\ln} \displaystyle \int \frac{ {{num}} }{ {{denom}} } dx = \int \left( {{PF}} \right)dx = {{Fx}} +C </m>.
+                </p>
+
+
+            </outtro>
+        </knowl>
+
+        <knowl>
+            <content>
+                <p>
+                    <m>\renewcommand{\log}{\ln} \displaystyle \int {{f2x}}dx</m>.
+
+
+                </p>
+
+
+            </content>
+            <outtro>
+                <p>
+                    By letting <m>\renewcommand{\log}{\ln} u={{U}}</m>, we have that 
+                    <m>\renewcommand{\log}{\ln} \displaystyle \int {{f2x}}dx = {{F2x}}+C.</m>
+                </p>
+
+
+            </outtro>
+        </knowl>
+    
+    
+        
+    
+    
+    
+    
+    
+   
+    
+   
+</knowl>

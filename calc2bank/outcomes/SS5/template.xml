@@ -1,0 +1,41 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<knowl mode="exercise" xmlns="https://spatext.clontz.org" version="0.2">
+    
+        <!-- {{#tasks}} -->
+        <knowl>
+            <!-- {{#converges}} -->
+                <content>
+                    <p>
+                        Use the Direct Comparison Test to determine if <m>\renewcommand{\log}{\ln} \displaystyle \sum_{ n= {{k0}} }^\infty \frac{ {{top}} }{ {{bottom}} } </m> converges.
+                    </p>
+                </content>
+                <outtro>
+                    <p>
+                        Note that <m>\renewcommand{\log}{\ln} \displaystyle \frac{ {{top}} }{ {{bottom}} }</m> is a positive, eventually  decreasing sequence.  
+                        We have that:
+
+                            <me>\renewcommand{\log}{\ln} 0 \leq \displaystyle \sum_{ n= {{k0}} }^\infty \frac{ {{top}} }{ {{bottom}} } \leq \sum_{ n= {{k0}} }^\infty \frac{ {{simptop}} }{ {{simpbottom}} } =\sum_{ n= {{k0}} }^\infty \frac{ {{simpcoeff}} }{ n^{{P}}  } </me>
+                            which converges by the <m>p</m>-test since <m>{{P}} &gt; 1</m>.  So by the direct comparison text, <m>\renewcommand{\log}{\ln} \displaystyle \sum_{ n= {{k0}} }^\infty \frac{ {{top}} }{ {{bottom}} } </m> converges.
+                    </p>
+                </outtro>
+            <!-- {{/converges}} -->
+            <!-- {{#diverges}} -->
+                <content>
+                    <p>
+                        Use the Direct Comparison Test to determine if <m>\renewcommand{\log}{\ln} \displaystyle \sum_{ n= {{k0}} }^\infty \frac{ {{top}} }{ {{bottom}} } </m> converges.
+                    </p>
+                </content>
+                <outtro>
+                    <p>
+                        Note that <m>\renewcommand{\log}{\ln} \displaystyle \frac{ {{top}} }{ {{bottom}} }</m> is a positive, eventually  decreasing sequence.  
+                        We have that:
+
+                            <me>\renewcommand{\log}{\ln} \displaystyle \sum_{ n= {{k0}} }^\infty \frac{ {{top}} }{ {{bottom}} } \geq \sum_{ n= {{k0}} }^\infty \frac{ {{simptop}} }{ {{simpbottom}} } =\sum_{ n= {{k0}} }^\infty \frac{ {{simpcoeff}} }{ n^{{P}}  }</me>
+                            which diverges by the <m>p</m>-test since <m>{{P}} \leq 1</m> So by the direct comparison text, <m>\renewcommand{\log}{\ln} \displaystyle \sum_{ n= {{k0}} }^\infty \frac{ {{top}} }{ {{bottom}} } </m> diverges.
+                    </p>
+                </outtro>
+            <!-- {{/diverges}} -->
+            
+        </knowl>
+<!-- {{/tasks}} -->
+</knowl>

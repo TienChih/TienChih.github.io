@@ -1,0 +1,63 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<knowl mode="exercise" xmlns="https://spatext.clontz.org" version="0.2">
+        <intro>
+            <p>
+                Solve the following integrals. Note that there are many ways to write the same trig expression via identities. 
+            </p>
+            <!--<p>
+                (If an open circle appears on an point which is not a jump discontinuity, ignore it.)
+            </p>-->
+        </intro>
+
+        <!-- {{#tasks}} -->
+
+        <knowl>
+            <content>
+            <!-- {{#definite}} -->
+                <p>
+                    <m>\renewcommand{\log}{\ln} \displaystyle \int_{ {{lowx}} }^{ {{highx}} } {{fx}}dx</m>.
+            <!-- {{/definite}} -->
+
+            <!-- {{#indefinite}} -->
+                <p>
+                    <m>\renewcommand{\log}{\ln} \displaystyle \int {{fx}}dx</m>.
+            <!-- {{/indefinite}} -->
+
+                </p>
+
+
+            </content>
+            <outtro>
+            <!-- {{#definite}} -->
+                <p>
+                    By letting <m>x = {{sub}}</m>, we obtain:
+                    <m>\renewcommand{\log}{\ln} \displaystyle \int_{ {{lowx}} }^{ {{highx}} } {{fx}}dx =  \int_{ {{lowt}} }^{ {{hight}} } {{ft}}d\theta =\left({{Ft}}\right)\Big|_{ {{lowt}} }^{ {{hight}} }  ={{Int}}.</m>
+                </p>
+            <!-- {{/definite}} -->    
+
+            <!-- {{#indefinite}} -->
+                <p>
+                    By letting <m>x = {{sub}}</m>, we obtain:
+                    <m>\renewcommand{\log}{\ln} \displaystyle \int {{fx}}dx =  \int {{ft}}d\theta = {{Ft}} +C ={{Fx}} +C.</m>
+                </p>
+            <!-- {{/indefinite}} -->    
+
+
+            </outtro>
+        </knowl>
+
+        <!-- {{/tasks}} -->
+
+        
+    
+    
+        
+    
+    
+    
+    
+    
+   
+    
+   
+</knowl>

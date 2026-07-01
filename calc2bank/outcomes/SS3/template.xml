@@ -1,0 +1,74 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<knowl mode="exercise" xmlns="https://spatext.clontz.org" version="0.2">
+    
+        <!-- {{#tasks}} -->
+        <knowl>
+            <intro>
+                <p>
+                    Let <m>\displaystyle s_n=\sum_{k = {{k0}} }^n a_k</m>. 
+                    <!--{{#given}}-->
+                        Suppose <m>s_n = {{closedformn}}</m>.
+                    <!--{{/given}}-->
+                    <!--{{#notgiven}}-->
+                        Suppose <m>a_n = {{summandn}}</m>.
+                    <!--{{/notgiven}}-->
+                </p>
+            </intro>
+            
+                <!--{{#notgiven}}-->
+            <knowl>    
+                <content>
+                    <p>
+                        Find a closed form for <m>s_n</m>. 
+                    </p>
+                </content>
+                <outtro>
+                    <p>
+                        <m>\displaystyle s_n = \sum_{ k= {{k0}} }^n {{summandk}} = \displaystyle{{closedformn}}</m>.
+                    </p>
+                </outtro>
+            </knowl>    
+                <!--{{/notgiven}}-->
+                <!--{{#given}}-->
+            <knowl>    
+                <content>
+                    <p>
+                        Find a closed form for <m>a_n</m>. 
+                    </p>
+                </content>
+                <outtro>
+                    <p>
+                        <m>\displaystyle a_n = s_n - s_{n-1} = \left( {{closedformn}} \right) - \left( {{closedformnm1}} \right) = {{summandn}} </m>.
+                    </p>
+                </outtro>
+            </knowl>    
+            <!--{{/given}}-->
+            
+            
+            <knowl>
+                <content>
+                    <p>
+                        Find <m>\displaystyle \sum_{ k= {{k0}} }^\infty a_k </m>, or explain why the series diverges.
+                    </p>
+                </content>
+                <outtro>
+                    <p>
+                        <m>\displaystyle \sum_{ k= {{k0}} }^\infty {{summandk}}= \lim_{n\to\infty} \left( {{closedformn}} \right) =\displaystyle{{limit}}</m>.
+                    </p>
+                </outtro>
+            </knowl>
+            <knowl>
+                <content>
+                    <p>
+                        Find <m>\displaystyle \sum_{n = {{k0}} }^\infty s_n </m>, or explain why the series diverges.
+                    </p>
+                </content>
+                <outtro>
+                    <p>
+                        Since <m>\displaystyle \lim_{n\to \infty} s_n = \lim_{n\to \infty} \left( {{closedformn}} \right) ={{limit}}\neq 0</m>, <m>\displaystyle \sum_{n = {{k0}} }^\infty s_n </m> diverges and is undefined by the Divergence Test.
+                    </p>
+                </outtro>
+            </knowl>
+        </knowl>
+<!-- {{/tasks}} -->
+</knowl>

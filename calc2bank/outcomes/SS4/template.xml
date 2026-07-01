@@ -1,0 +1,45 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<knowl mode="exercise" xmlns="https://spatext.clontz.org" version="0.2">
+    
+        <!-- {{#tasks}} -->
+        <knowl>
+            <!-- {{#converges}} -->
+                <content>
+                    <p>
+                        Use the Integral Test to determine if <m>\renewcommand{\log}{\ln} \displaystyle \sum_{ n= {{k0}} }^\infty {{summand}} </m> converges.
+                    </p>
+                </content>
+                <outtro>
+                    <p>
+                        Note that <m>\renewcommand{\log}{\ln} \displaystyle {{integrand}}</m> is a positive, eventually  decreasing function.  
+                        We have that:
+
+                            <me>\renewcommand{\log}{\ln} \displaystyle \int_{ {{k0}} }^\infty {{integrand}} dx= \lim_{c\to \infty}\int_{ {{k0}} }^c {{integrand}} dx =  \lim_{c\to \infty} \left( {{integral}} \right) \Big|_{ {{k0}} }^c </me>
+                            <me>\renewcommand{\log}{\ln} = \lim_{c\to \infty} \left( \left( {{up}} \right) - \left({{down}}\right) \right)  = {{limit}}.  </me>
+                        
+                        The integral <m>\displaystyle \int_{ {{k0}} }^\infty {{integrand}} dx</m> converges and thus by the Integral Test, <m>\displaystyle \sum_{ n= {{k0}} }^\infty {{summand}} </m> converges as well.
+                    </p>
+                </outtro>
+            <!-- {{/converges}} -->
+            <!-- {{#diverges}} -->
+                <content>
+                    <p>
+                        Use the Integral Test to determine if <m>\renewcommand{\log}{\ln} \displaystyle \sum_{ n= {{k0}} }^\infty {{summand}} </m> converges.
+                    </p>
+                </content>
+                <outtro>
+                    <p>
+                        Note that <m>\renewcommand{\log}{\ln} \displaystyle {{integrand}}</m> is a positive, eventually  decreasing function.  
+                        We have that:
+
+                            <me>\renewcommand{\log}{\ln} \displaystyle \int_{ {{k0}} }^\infty {{integrand}} dx= \lim_{c\to \infty}\int_{ {{k0}} }^c {{integrand}} dx =  \lim_{c\to \infty} \left( {{integral}} \right) \Big|_{ {{k0}} }^c </me>
+                            <me>\renewcommand{\log}{\ln} = \lim_{c\to \infty} \left( \left( {{up}} \right) - \left({{down}}\right) \right)  = \infty.  </me>
+                        
+                        The integral <m>\displaystyle \int_{ {{k0}} }^\infty {{integrand}} dx</m> diverges and thus by the Integral Test, <m>\displaystyle \sum_{ n= {{k0}} }^\infty {{summand}} </m> diverges as well.
+                    </p>
+                </outtro>
+            <!-- {{/diverges}} -->
+            
+        </knowl>
+<!-- {{/tasks}} -->
+</knowl>
