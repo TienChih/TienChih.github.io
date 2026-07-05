@@ -7,18 +7,39 @@
                 <content>
                     <p>
                         Find the limit of 
-                        <m>\renewcommand{\log}{\ln}\displaystyle \left({{T0}}\right) + \left({{T1}}\right) +\left({{T2}}\right) +\left({{T3}}\right)+\left({{T4}}\right) +\cdots </m>.
+                        <m>\renewcommand{\log}{\ln}\displaystyle \left( \frac{ {{num0}} }{ {{dem0}}\cdot {{fv0}}! } \right) 
+                        + \left( \frac{ {{num1}}  }{ {{dem1}}\cdot {{fv1}}! } \right) 
+                        + \left( \frac{ {{num2}}  }{ {{dem2}}\cdot {{fv2}}! } \right)
+                        +\left( \frac{ {{num3}} }{ {{dem3}}\cdot {{fv3}}! } \right)
+                        +\left( \frac{ {{num4}} }{ {{dem4}}\cdot {{fv4}}! } \right)
+                        +\cdots </m>.
+                    
                     </p>
                 </content>
                 <outtro>
                     <p>
-                        Note that the summands of <m>\renewcommand{\log}{\ln}\displaystyle \left({{T0}}\right) + \left({{T1}}\right) +\left({{T2}}\right) +\left({{T3}}\right)+\left({{T4}}\right) +\cdots </m> follows
+                        Note that the summands of 
+                        <m>\renewcommand{\log}{\ln}\displaystyle \left( \frac{ {{num0}} }{ {{dem0}}\cdot {{fv0}}! } \right) 
+                        + \left( \frac{ {{num1}}  }{ {{dem1}}\cdot {{fv1}}! } \right) 
+                        + \left( \frac{ {{num2}}  }{ {{dem2}}\cdot {{fv2}}! } \right)
+                        +\left( \frac{ {{num3}} }{ {{dem3}}\cdot {{fv3}}! } \right)
+                        +\left( \frac{ {{num4}} }{ {{dem4}}\cdot {{fv4}}! } \right)
+                        +\cdots </m>
+                        
+                         follows
                         the pattern of <m>\renewcommand{\log}{\ln}\displaystyle {{Ax}}</m> where <m>x={{Input}}</m> and <m>n</m> starts at <m>{{k0}}</m>.
                     </p>
                     <p>
-                        Since <m>\renewcommand{\log}{\ln}  \displaystyle {{fx}} = \sum_{ n = {{k1}} }^\infty {{ax}}</m>,
+                        Since <m>\renewcommand{\log}{\ln}  \displaystyle {{fx}} = \sum_{ n = {{k0}} }^\infty {{ax}}</m>,
                         we have that <m>\renewcommand{\log}{\ln}\displaystyle F(x) = {{Fx}} =  \sum_{ n = {{k0}} }^\infty {{Ax}}</m>.
-                        So <m>\renewcommand{\log}{\ln}\displaystyle \left({{T0}}\right) + \left({{T1}}\right) +\left({{T2}}\right) +\left({{T3}}\right)+\left({{T4}}\right) +\cdots = F\left({{Input}}\right) = {{Limit}}</m>.
+                        So 
+                        <m>\renewcommand{\log}{\ln}\displaystyle \left( \frac{ {{num0}} }{ {{dem0}}\cdot {{fv0}}! } \right) 
+                        + \left( \frac{ {{num1}}  }{ {{dem1}}\cdot {{fv1}}! } \right) 
+                        + \left( \frac{ {{num2}}  }{ {{dem2}}\cdot {{fv2}}! } \right)
+                        +\left( \frac{ {{num3}} }{ {{dem3}}\cdot {{fv3}}! } \right)
+                        +\left( \frac{ {{num4}} }{ {{dem4}}\cdot {{fv4}}! } \right)
+                        +\cdots 
+                        = F\left({{Input}}\right) = {{Limit}}</m>.
                     </p>
                 </outtro>
             

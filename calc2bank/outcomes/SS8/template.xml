@@ -51,7 +51,6 @@
                         So  <m>\renewcommand{\log}{\ln} \displaystyle \sum_{ n= 0 }^\infty {{an}} </m> converges absolutely by the Ratio Test.
                     </p>
                 </outtro>
-            </knowl>
             <!-- {{/converges}} -->
             <!-- {{#diverges}} -->
                 <outtro>

@@ -5,63 +5,62 @@ class Generator(BaseGenerator):
         
         tasks = []
         
-        # 1/(1-x)^2 - 1, ln(1+x), arctan(x), 
-        selection = randrange(0,3)
+        # e^x, sin(x), cos(x)
+        selection =  randrange(0,3)
 
         coeff = 1
-        alt = choice([-1,1])
         P = randrange(1,3)
         outside = choice([-1,0,1])
-        K = randrange(2,6)
-
-
-        Input = 1/randrange(2,4)*choice([-1,1])
+        N = [2,3,5,7,11]
+        shuffle(N)
+        Input = choice([-1,1])*min(N[0], N[1])/max(N[0], N[1])
+        C = randrange(1,6)*choice([-1,1])
         
-        k0 = 1
-        k1 = 1
+        
+        
+        k0 = 0
+        k = [0,0,0,0,0]
+        factvalue = [0,0,0,0,0]
+        num = [0,0,0,0,0]
+
 
         if selection == 0:
-            if outside != -1:
-                f(x) = 1/(1-x)^2
-                a(x, n) = (n+1)*x^n
-                A(x, n) = (n+1)*x^(P*n+outside)*(coeff)^n
-                if alt == -1:
-                    A(x, n) = A(x,n)*(-1)^n
-                k1 = 0
-            else:    
-                f(x) = 1/(1-x)^2 -1
-                a(x, n) = (n+1)*x^n
-                A(x, n) = (n+1)*x^(P*n+outside)*(coeff)^n
-                if alt == -1:
-                    A(x, n) = A(x,n)*(-1)^n
-                k1 = 1 
+            a(x, n) = (-1)^(n-1)*x^(n)/n
+            A(x, n) = (-1)^(n-1)* C* x^(P*n+outside)/n
+            f(x) = ln(1+x)
+            k0 = 1
+
+            k[0] = k0
+            for i in range(4):
+                k[i+1] = k[i]+1
+            for i in range(5):
+                num[i] = C* (Input^(P*k[i]+outside )/k[i])*(-1)^(k[i]  -1)  
+
         if selection == 1:
-            f(x) = K*ln(1+x)
-            a(x, n) = K*(-1)^(n-1)*x^n/n
-            A(x, n) = K*(-1)^(n-1)*x^(P*n+outside)*(coeff)^n/n
-            if alt == -1:
-                A(x, n) = -1*K*x^(P*n+outside)*(coeff)^n/n
-        
+            a(x, n) = (-1)^(n)*x^(2*n+1)/(2*n+1)
+            A(x, n) = (-1)^(n)* C* x^(2*P*n+P + outside)/(2*n+1)
+            f(x) = arctan(x)
+
+            k[0] = k0
+            for i in range(4):
+                k[i+1] = k[i]+1
+            for i in range(5):
+                num[i] = C* (Input^(P*k[i]+P+outside )/(2*k[i]+1))*(-1)^(k[i])    
+                
+                
         if selection == 2:
-            f(x) = K*1/(1-x)
-            a(x, n) = K*x^n
-            A(x, n) = K*x^(P*n+outside)*coeff^n
-            if alt == -1:
-                A(x, n) = -1*A(x,n)
-            k0 = 0    
-            k1 = 0   
-            
-            
-        F(x) = K*(x^outside)*f(alt*coeff*x^P)
-        if outside == -1 :
-            k0 = 0
-            A(x,n) = A(x,n+1)
+            a(x, n) = (n+1)*x^n
+            A(x, n) = C* (n+1)*x^(P*n+outside)
+            f(x) = 1/(1-x)^2
+
+            k[0] = k0
+            for i in range(4):
+                k[i+1] = k[i]+1
+            for i in range(5):
+                num[i] = C* (k[i]+1)*Input^(P*k[i]+outside)           
         
-        T = [0,0,0,0,0]
-        for i in range(5):
-            T[i] = A(Input, k0+i)
-            
-        Limit = F(Input)    
+        F(x) = C*(x^outside)*f(x^P)  
+        Limit = F(Input) 
 
         tasks+=[{
             "fx": f(x),
@@ -69,16 +68,23 @@ class Generator(BaseGenerator):
             "Fx": F(x).simplify(),
             "Ax": A(x,n).simplify(),
             "k0": k0, 
-            "k1": k1, 
             "Input": Input,
             "Limit": Limit,
-            "T0": T[0],
-            "T1": T[1],
-            "T2": T[2],
-            "T3": T[3],
-            "T4": T[4],
-
-
+            "num0": num[0].numerator().factor(),
+            "num1": num[1].numerator().factor(),
+            "num2": num[2].numerator().factor(),       
+            "num3": num[3].numerator().factor(),
+            "num4": num[4].numerator().factor(),
+            "dem0": num[0].denominator().factor(),
+            "dem1": num[1].denominator().factor(),
+            "dem2": num[2].denominator().factor(),       
+            "dem3": num[3].denominator().factor(),
+            "dem4": num[4].denominator().factor(),
+            "fv0": factvalue[0],
+            "fv1": factvalue[1],
+            "fv2": factvalue[2],       
+            "fv3": factvalue[3],
+            "fv4": factvalue[4],
         }
         ]
         

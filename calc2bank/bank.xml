@@ -196,6 +196,7 @@
                 Evaluate the limit of a series using power series derived via Taylor series.
             </description>
         </outcome>
+        
         <outcome>
             <title>General Power Series of Functions</title>
             <slug>PS8</slug>

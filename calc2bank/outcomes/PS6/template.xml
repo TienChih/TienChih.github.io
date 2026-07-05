@@ -2,7 +2,6 @@
 <knowl mode="exercise" xmlns="https://spatext.clontz.org" version="0.2">
     
         <!-- {{#tasks}} -->
-        <knowl>
             
                 <content>
                     <p>
@@ -21,6 +20,5 @@
             
 
             
-        </knowl>
 <!-- {{/tasks}} -->
 </knowl>
