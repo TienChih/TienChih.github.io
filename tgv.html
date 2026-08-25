@@ -1,0 +1,1369 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Token Graph Explorer</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600&family=Spectral:wght@500;600&display=swap">
+<style>
+:root{
+  --paper:#E9EEEF;
+  --surface:#FBFCFC;
+  --surface-2:#F1F5F6;
+  --line:#CFD9DC;
+  --line-soft:#E2E9EB;
+  --ink:#11202A;
+  --ink-2:#3B4E59;
+  --muted:#6B7D87;
+  --g:#0B6A72;
+  --g-soft:#C2DEDF;
+  --f:#9B2F55;
+  --f-soft:#EBCAD5;
+  --tok:#A9670A;
+  --tok-soft:#F2DFBA;
+  --shadow:0 1px 2px rgba(17,32,42,.05), 0 14px 30px -20px rgba(17,32,42,.35);
+  --r:10px;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --paper:#0C151A;
+    --surface:#121E25;
+    --surface-2:#17242C;
+    --line:#2A3B44;
+    --line-soft:#203039;
+    --ink:#E3ECEF;
+    --ink-2:#AEC0C8;
+    --muted:#7C919B;
+    --g:#4FC7CE;
+    --g-soft:#1A484E;
+    --f:#F58BAD;
+    --f-soft:#4C2231;
+    --tok:#EDB35A;
+    --tok-soft:#493516;
+    --shadow:0 1px 2px rgba(0,0,0,.4), 0 14px 30px -20px rgba(0,0,0,.8);
+  }
+}
+:root[data-theme="dark"]{
+  --paper:#0C151A;
+  --surface:#121E25;
+  --surface-2:#17242C;
+  --line:#2A3B44;
+  --line-soft:#203039;
+  --ink:#E3ECEF;
+  --ink-2:#AEC0C8;
+  --muted:#7C919B;
+  --g:#4FC7CE;
+  --g-soft:#1A484E;
+  --f:#F58BAD;
+  --f-soft:#4C2231;
+  --tok:#EDB35A;
+  --tok-soft:#493516;
+  --shadow:0 1px 2px rgba(0,0,0,.4), 0 14px 30px -20px rgba(0,0,0,.8);
+}
+
+*{box-sizing:border-box}
+body{
+  margin:0;
+  background:var(--paper);
+  color:var(--ink);
+  font-family:"IBM Plex Sans", ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+  font-size:15px;
+  line-height:1.5;
+  -webkit-font-smoothing:antialiased;
+}
+.wrap{max-width:1360px;margin:0 auto;padding:28px 22px 40px;display:flex;flex-direction:column;gap:18px}
+
+/* ---------- masthead ---------- */
+.masthead{display:flex;flex-wrap:wrap;align-items:flex-end;gap:18px 28px;justify-content:space-between}
+h1{
+  font-family:Spectral, Georgia, "Times New Roman", serif;
+  font-weight:600;font-size:clamp(28px,3.4vw,40px);line-height:1.05;
+  margin:0;letter-spacing:-.015em;text-wrap:balance;
+}
+h1 em{font-style:normal;color:var(--f)}
+.lede{
+  margin:0;max-width:62ch;color:var(--ink-2);font-size:14.5px;
+}
+.lede code{
+  font-family:"IBM Plex Mono", ui-monospace, monospace;font-size:.92em;
+  background:var(--surface-2);border:1px solid var(--line-soft);
+  padding:.1em .38em;border-radius:5px;color:var(--ink);
+}
+.eyebrow{
+  font-family:"IBM Plex Mono", ui-monospace, monospace;
+  font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);
+  margin:0 0 6px;
+}
+
+/* ---------- control rail ---------- */
+.rail{
+  background:var(--surface);border:1px solid var(--line);border-radius:var(--r);
+  box-shadow:var(--shadow);
+  display:flex;flex-wrap:wrap;align-items:flex-end;gap:14px 20px;padding:14px 16px;
+}
+.field{display:flex;flex-direction:column;align-items:flex-start;gap:5px;min-width:0}
+.field > label,.field > span.lbl{
+  font-family:"IBM Plex Mono", ui-monospace, monospace;
+  font-size:10.5px;letter-spacing:.13em;text-transform:uppercase;color:var(--muted);
+}
+select,button,input[type=range]{font-family:inherit;font-size:14px;color:var(--ink)}
+select{
+  appearance:none;background:var(--surface-2);border:1px solid var(--line);
+  border-radius:7px;padding:7px 30px 7px 10px;min-width:200px;cursor:pointer;
+  background-image:linear-gradient(45deg,transparent 50%,currentColor 50%),linear-gradient(135deg,currentColor 50%,transparent 50%);
+  background-position:calc(100% - 16px) calc(50% + 1px),calc(100% - 11px) calc(50% + 1px);
+  background-size:5px 5px,5px 5px;background-repeat:no-repeat;
+}
+.slider{display:flex;align-items:center;gap:9px}
+input[type=range]{
+  -webkit-appearance:none;appearance:none;width:118px;height:20px;background:transparent;cursor:pointer;
+}
+input[type=range]::-webkit-slider-runnable-track{height:3px;background:var(--line);border-radius:2px}
+input[type=range]::-moz-range-track{height:3px;background:var(--line);border-radius:2px}
+input[type=range]::-webkit-slider-thumb{
+  -webkit-appearance:none;width:14px;height:14px;border-radius:50%;
+  background:var(--g);margin-top:-5.5px;border:2px solid var(--surface);
+}
+input[type=range]::-moz-range-thumb{
+  width:14px;height:14px;border-radius:50%;background:var(--g);border:2px solid var(--surface);
+}
+input[type=range]:disabled{opacity:.4;cursor:not-allowed}
+.num{
+  font-family:"IBM Plex Mono", ui-monospace, monospace;font-variant-numeric:tabular-nums;
+  font-size:14px;min-width:2ch;text-align:right;color:var(--ink);
+}
+.seg{display:flex;border:1px solid var(--line);border-radius:7px;overflow:hidden;background:var(--surface-2)}
+.seg button{
+  border:0;background:transparent;padding:7px 12px;cursor:pointer;color:var(--muted);
+  font-size:13.5px;white-space:nowrap;
+}
+.seg button + button{border-left:1px solid var(--line)}
+.seg button[aria-pressed="true"]{background:var(--g);color:var(--surface);font-weight:500}
+.btn{
+  border:1px solid var(--line);background:var(--surface-2);border-radius:7px;
+  padding:7px 12px;cursor:pointer;font-size:13.5px;white-space:nowrap;
+}
+.btn:hover{border-color:var(--g);color:var(--g)}
+.spacer{flex:1 1 12px}
+:where(button,select,input,canvas,[tabindex]):focus-visible{
+  outline:2px solid var(--f);outline-offset:2px;border-radius:4px;
+}
+
+/* ---------- panes ---------- */
+.panes{display:grid;grid-template-columns:minmax(0,45fr) minmax(0,55fr);gap:18px}
+@media (max-width:940px){.panes{grid-template-columns:minmax(0,1fr)}}
+.pane{
+  background:var(--surface);border:1px solid var(--line);border-radius:var(--r);
+  box-shadow:var(--shadow);display:flex;flex-direction:column;overflow:hidden;position:relative;
+}
+.pane::before{content:"";height:3px;display:block;background:var(--stripe,var(--line))}
+.pane.g{--stripe:var(--g)}
+.pane.f{--stripe:var(--f)}
+.pane-head{
+  display:flex;align-items:baseline;gap:12px;flex-wrap:wrap;
+  padding:11px 15px 10px;border-bottom:1px solid var(--line-soft);
+}
+.pane-title{
+  font-family:Spectral, Georgia, serif;font-weight:600;font-size:17px;margin:0;letter-spacing:-.01em;
+}
+.pane-note{font-size:12.5px;color:var(--muted);margin:0}
+.stage{position:relative;flex:1 1 auto;min-height:0}
+canvas{display:block;width:100%;height:100%;touch-action:none}
+.pane.g .stage{height:clamp(300px,42vh,430px)}
+.pane.f .stage{height:clamp(340px,58vh,560px)}
+.overlay{
+  position:absolute;inset:0;display:none;place-items:center;padding:28px;text-align:center;
+  background:var(--surface);
+}
+.overlay.on{display:grid}
+.overlay p{margin:0;max-width:38ch;color:var(--ink-2);font-size:14px}
+.overlay strong{
+  display:block;font-family:"IBM Plex Mono",monospace;font-size:15px;color:var(--f);
+  margin-bottom:8px;font-variant-numeric:tabular-nums;
+}
+
+/* ---------- readouts ---------- */
+.readout{
+  display:flex;flex-wrap:wrap;gap:0;border-top:1px solid var(--line-soft);
+  background:var(--surface-2);
+}
+.stat{
+  flex:1 1 auto;min-width:96px;padding:9px 14px;border-right:1px solid var(--line-soft);
+}
+.stat:last-child{border-right:0}
+.stat .k{
+  font-family:"IBM Plex Mono",monospace;font-size:10px;letter-spacing:.12em;
+  text-transform:uppercase;color:var(--muted);display:block;
+}
+.stat .v{
+  font-family:"IBM Plex Mono",monospace;font-variant-numeric:tabular-nums;
+  font-size:15px;color:var(--ink);font-weight:500;
+}
+.stat .v.ok{color:var(--g)}
+.stat .v.no{color:var(--f)}
+
+.config-bar{
+  padding:10px 15px;border-top:1px solid var(--line-soft);display:flex;
+  align-items:center;gap:10px;flex-wrap:wrap;font-size:13px;color:var(--muted);
+}
+.config-bar .set{
+  font-family:"IBM Plex Mono",monospace;font-size:14.5px;color:var(--tok);font-weight:500;
+}
+.config-bar .hint{color:var(--muted)}
+
+/* ---------- legend ---------- */
+.legend{
+  display:flex;flex-wrap:wrap;gap:8px 22px;align-items:center;
+  font-size:12.5px;color:var(--muted);padding:2px 4px;
+}
+.legend span{display:inline-flex;align-items:center;gap:7px}
+.dot{width:11px;height:11px;border-radius:50%;flex:0 0 auto}
+.dot.tok{background:var(--tok)}
+.dot.nbr{background:var(--surface);border:2.5px solid var(--tok)}
+.dot.con{background:var(--g-soft);border:1px solid var(--g)}
+.dot.pln{background:var(--f-soft);border:1px solid var(--f)}
+
+footer{
+  font-size:12.5px;color:var(--muted);border-top:1px solid var(--line);padding-top:14px;
+  display:flex;flex-wrap:wrap;gap:6px 18px;justify-content:space-between;
+}
+footer b{font-weight:500;color:var(--ink-2)}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header class="masthead">
+    <div>
+      <p class="eyebrow">Reconfiguration &middot; k-subset adjacency</p>
+      <h1>Token Graph <em>F<sub>k</sub>(G)</em></h1>
+    </div>
+    <p class="lede">Put <code>k</code> indistinguishable tokens on distinct vertices of a graph <code>G</code>. Every placement becomes a single vertex of the token graph, and two placements are joined when one token moves while the rest stay put. Place tokens on the left; the matching vertex lights up on the right.</p>
+  </header>
+
+  <div class="rail">
+    <div class="field">
+      <label for="preset">Base graph G</label>
+      <select id="preset"></select>
+    </div>
+    <div class="field">
+      <span class="lbl">Vertices n</span>
+      <div class="slider"><input type="range" id="nSlider" min="2" max="14" value="6"><span class="num" id="nVal">6</span></div>
+    </div>
+    <div class="field">
+      <span class="lbl">Tokens k</span>
+      <div class="slider"><input type="range" id="kSlider" min="1" max="5" value="2"><span class="num" id="kVal">2</span></div>
+    </div>
+    <div class="field">
+      <span class="lbl">Move rule</span>
+      <div class="seg" id="ruleSeg">
+        <button data-v="slide" aria-pressed="true">Sliding</button>
+        <button data-v="jump" aria-pressed="false">Jumping</button>
+      </div>
+    </div>
+    <div class="field">
+      <span class="lbl">Left pane</span>
+      <div class="seg" id="modeSeg">
+        <button data-v="tokens" aria-pressed="true">Place tokens</button>
+        <button data-v="edit" aria-pressed="false">Edit graph</button>
+      </div>
+    </div>
+    <div class="field">
+      <span class="lbl">Token graph view</span>
+      <div class="seg" id="dimSeg">
+        <button data-v="2" aria-pressed="false">2D</button>
+        <button data-v="3" aria-pressed="true">3D</button>
+      </div>
+    </div>
+    <div class="spacer"></div>
+    <div class="field">
+      <span class="lbl">Actions</span>
+      <div class="slider">
+        <button class="btn" id="randomBtn">Random placement</button>
+        <button class="btn" id="clearBtn">Clear tokens</button>
+        <button class="btn" id="relaxBtn">Re-relax layout</button>
+        <button class="btn" id="labelBtn" aria-pressed="true">Labels: on</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="panes">
+
+    <section class="pane g">
+      <div class="pane-head">
+        <h2 class="pane-title">G &mdash; the base graph</h2>
+        <p class="pane-note" id="gNote">Click a vertex to place or lift a token.</p>
+      </div>
+      <div class="stage"><canvas id="gCanvas" tabindex="0" aria-label="Base graph G. Click vertices to place tokens."></canvas></div>
+      <div class="readout">
+        <div class="stat"><span class="k">Order n</span><span class="v" id="sN">&mdash;</span></div>
+        <div class="stat"><span class="k">Size |E|</span><span class="v" id="sE">&mdash;</span></div>
+        <div class="stat"><span class="k">Tokens placed</span><span class="v" id="sT">&mdash;</span></div>
+        <div class="stat"><span class="k">Moves available</span><span class="v" id="sM">&mdash;</span></div>
+      </div>
+      <div class="config-bar">
+        <span>Placement</span>
+        <span class="set" id="cfgSet">&mdash;</span>
+        <span class="hint" id="cfgHint"></span>
+      </div>
+    </section>
+
+    <section class="pane f">
+      <div class="pane-head">
+        <h2 class="pane-title">F<sub>k</sub>(G) &mdash; the token graph</h2>
+        <p class="pane-note" id="fNote">Drag to rotate. Click a vertex to send that placement back to G.</p>
+      </div>
+      <div class="stage">
+        <canvas id="fCanvas" tabindex="0" aria-label="Token graph. Drag to rotate, click a vertex to select a placement."></canvas>
+        <div class="overlay" id="fOverlay"><p><strong id="ovCount"></strong><span id="ovText"></span></p></div>
+      </div>
+      <div class="readout">
+        <div class="stat"><span class="k">Vertices C(n,k)</span><span class="v" id="tN">&mdash;</span></div>
+        <div class="stat"><span class="k">Edges</span><span class="v" id="tE">&mdash;</span></div>
+        <div class="stat"><span class="k">Degree min&ndash;max</span><span class="v" id="tD">&mdash;</span></div>
+        <div class="stat"><span class="k">Components</span><span class="v" id="tC">&mdash;</span></div>
+        <div class="stat"><span class="k">Connected</span><span class="v" id="tK">&mdash;</span></div>
+      </div>
+      <div class="config-bar">
+        <span>Highlighted vertex</span>
+        <span class="set" id="fSet">&mdash;</span>
+        <span class="hint" id="fHint"></span>
+      </div>
+    </section>
+
+  </div>
+
+  <div class="legend">
+    <span><i class="dot tok"></i> current placement</span>
+    <span><i class="dot nbr"></i> one move away</span>
+    <span><i class="dot con"></i> contains the hovered vertex of G</span>
+    <span><i class="dot pln"></i> every other placement</span>
+  </div>
+
+  <footer>
+    <span><b>Sliding:</b> a token may move only along an edge of G &mdash; the classical k-token graph.</span>
+    <span><b>Jumping:</b> a token may move to any free vertex &mdash; this gives the Johnson graph J(n,k) regardless of G.</span>
+    <span><b>Editing G:</b> double-click empty space to add a vertex; shift-click or right-click one to remove it.</span>
+  </footer>
+
+</div>
+
+<script>
+(function(){
+"use strict";
+
+/* ============================================================
+   0.  Colour tokens read back out of the stylesheet
+   ============================================================ */
+var VARS = ["paper","surface","surface-2","line","line-soft","ink","ink-2","muted",
+            "g","g-soft","f","f-soft","tok","tok-soft"];
+var C = {};
+function readColors(){
+  var cs = getComputedStyle(document.documentElement);
+  for (var i=0;i<VARS.length;i++){
+    C[VARS[i]] = cs.getPropertyValue("--"+VARS[i]).trim() || "#888888";
+  }
+}
+function rgba(hex, a){
+  var h = String(hex).replace("#","");
+  if (h.length === 3) h = h[0]+h[0]+h[1]+h[1]+h[2]+h[2];
+  var n = parseInt(h,16);
+  if (isNaN(n)) return "rgba(128,128,128,"+a+")";
+  return "rgba("+((n>>16)&255)+","+((n>>8)&255)+","+(n&255)+","+a+")";
+}
+readColors();
+if (window.matchMedia){
+  var mq = window.matchMedia("(prefers-color-scheme: dark)");
+  var onScheme = function(){ readColors(); };
+  if (mq.addEventListener) mq.addEventListener("change", onScheme);
+  else if (mq.addListener) mq.addListener(onScheme);
+}
+new MutationObserver(readColors).observe(document.documentElement,{attributes:true,attributeFilter:["data-theme","style","class"]});
+
+var REDUCED = window.matchMedia ? window.matchMedia("(prefers-reduced-motion: reduce)").matches : false;
+var MAX_NODES = 1001;
+
+/* ============================================================
+   1.  Base graph presets
+   ============================================================ */
+function ring(m, r, cx, cy, phase){
+  var out = [];
+  for (var i=0;i<m;i++){
+    var a = phase + 2*Math.PI*i/m;
+    out.push([cx + r*Math.cos(a), cy + r*Math.sin(a)]);
+  }
+  return out;
+}
+
+var PRESETS = {
+  path:      { label:"Path  Pₙ",                 min:2, max:14 },
+  cycle:     { label:"Cycle  Cₙ",                min:3, max:14 },
+  complete:  { label:"Complete  Kₙ",             min:2, max:12 },
+  star:      { label:"Star  K₁,ₙ₋₁",             min:2, max:14 },
+  wheel:     { label:"Wheel  Wₙ",                min:4, max:14 },
+  bipartite: { label:"Complete bipartite  Ka,b", min:2, max:14 },
+  ladder:    { label:"Ladder  P₂ □ Pₘ",          min:4, max:14, even:true },
+  tree:      { label:"Complete binary tree",     min:3, max:15 },
+  petersen:  { label:"Petersen graph",           fixed:10 },
+  cube:      { label:"Hypercube  Q₃",            fixed:8 },
+  empty:     { label:"Empty graph  Ēₙ",          min:1, max:14 },
+  custom:    { label:"Custom — draw your own",   min:1, max:16 }
+};
+
+function makeGraph(kind, n){
+  var pos = [], edges = [], i, j, m;
+  function E(a,b){ edges.push([a,b]); }
+
+  if (kind === "path"){
+    for (i=0;i<n;i++){
+      var t = n===1 ? 0.5 : i/(n-1);
+      pos.push([0.09 + 0.82*t, 0.5 + (i%2 ? 0.055 : -0.055)]);
+      if (i) E(i-1,i);
+    }
+  } else if (kind === "cycle" || kind === "complete"){
+    pos = ring(n, 0.40, 0.5, 0.5, -Math.PI/2);
+    if (kind === "cycle"){ for (i=0;i<n;i++) E(i,(i+1)%n); }
+    else { for (i=0;i<n;i++) for (j=i+1;j<n;j++) E(i,j); }
+  } else if (kind === "star"){
+    pos.push([0.5,0.5]);
+    var outer = ring(n-1, 0.38, 0.5, 0.5, -Math.PI/2);
+    for (i=0;i<outer.length;i++){ pos.push(outer[i]); E(0,i+1); }
+  } else if (kind === "wheel"){
+    pos.push([0.5,0.5]);
+    var rim = ring(n-1, 0.38, 0.5, 0.5, -Math.PI/2);
+    for (i=0;i<rim.length;i++) pos.push(rim[i]);
+    for (i=1;i<n;i++){ E(0,i); E(i, i===n-1 ? 1 : i+1); }
+  } else if (kind === "bipartite"){
+    var a = Math.ceil(n/2), b = n-a;
+    for (i=0;i<a;i++) pos.push([0.24, a===1 ? 0.5 : 0.12+0.76*i/(a-1)]);
+    for (i=0;i<b;i++) pos.push([0.76, b===1 ? 0.5 : 0.12+0.76*i/(b-1)]);
+    for (i=0;i<a;i++) for (j=0;j<b;j++) E(i, a+j);
+  } else if (kind === "ladder"){
+    m = Math.max(2, Math.floor(n/2));
+    for (i=0;i<m;i++){
+      var x = m===1 ? 0.5 : 0.12 + 0.76*i/(m-1);
+      pos.push([x, 0.32]); pos.push([x, 0.68]);
+      E(2*i, 2*i+1);
+      if (i){ E(2*i-2, 2*i); E(2*i-1, 2*i+1); }
+    }
+  } else if (kind === "tree"){
+    var depth = 0; while (Math.pow(2, depth+1)-1 <= n) depth++;
+    var counts = [];
+    for (i=0;i<n;i++){ var lvl = Math.floor(Math.log(i+1)/Math.log(2)); counts[lvl] = (counts[lvl]||0)+1; }
+    var seen = [];
+    for (i=0;i<n;i++){
+      var L = Math.floor(Math.log(i+1)/Math.log(2));
+      seen[L] = (seen[L]||0);
+      var w = counts[L], idx = seen[L]++;
+      pos.push([w===1 ? 0.5 : 0.1 + 0.8*idx/(w-1), counts.length===1 ? 0.5 : 0.12 + 0.76*L/(counts.length-1)]);
+      if (i) E(Math.floor((i-1)/2), i);
+    }
+  } else if (kind === "petersen"){
+    var o = ring(5, 0.40, 0.5, 0.5, -Math.PI/2);
+    var inn = ring(5, 0.17, 0.5, 0.5, -Math.PI/2);
+    for (i=0;i<5;i++) pos.push(o[i]);
+    for (i=0;i<5;i++) pos.push(inn[i]);
+    for (i=0;i<5;i++){ E(i,(i+1)%5); E(i,i+5); E(5+i, 5+((i+2)%5)); }
+  } else if (kind === "cube"){
+    var pts = [[0.18,0.20],[0.60,0.20],[0.18,0.62],[0.60,0.62],
+               [0.40,0.38],[0.82,0.38],[0.40,0.80],[0.82,0.80]];
+    for (i=0;i<8;i++) pos.push(pts[i]);
+    for (i=0;i<8;i++) for (var bit=0;bit<3;bit++){ j = i ^ (1<<bit); if (j>i) E(i,j); }
+  } else if (kind === "empty"){
+    pos = ring(n, 0.36, 0.5, 0.5, -Math.PI/2);
+    if (n === 1) pos = [[0.5,0.5]];
+  } else {
+    pos = ring(Math.max(1,n), 0.36, 0.5, 0.5, -Math.PI/2);
+    if (n === 1) pos = [[0.5,0.5]];
+  }
+  return { n: pos.length, pos: pos, edges: edges };
+}
+
+/* ============================================================
+   2.  State
+   ============================================================ */
+var S = {
+  preset: "cycle",
+  n: 6,
+  k: 2,
+  rule: "slide",
+  mode: "tokens",
+  dim: 3,
+  labels: true,
+  G: null,
+  nbr: [],          // adjacency bitmasks
+  tokens: [],       // ordered list of occupied vertices
+  hoverV: -1,
+  selV: -1,
+  dragV: -1,
+  dragMoved: false,
+  F: null,
+  hoverF: -1
+};
+
+function rebuildNbr(){
+  var i, nb = new Array(S.G.n);
+  for (i=0;i<S.G.n;i++) nb[i] = 0;
+  for (i=0;i<S.G.edges.length;i++){
+    var e = S.G.edges[i];
+    nb[e[0]] |= (1 << e[1]);
+    nb[e[1]] |= (1 << e[0]);
+  }
+  S.nbr = nb;
+}
+function hasEdge(a,b){ return (S.nbr[a] >> b) & 1; }
+function toggleEdge(a,b){
+  if (a === b) return;
+  if (hasEdge(a,b)){
+    S.G.edges = S.G.edges.filter(function(e){
+      return !((e[0]===a&&e[1]===b)||(e[0]===b&&e[1]===a));
+    });
+  } else S.G.edges.push([a,b]);
+  rebuildNbr();
+}
+
+/* ============================================================
+   3.  Token graph construction  (bitmask k-subsets)
+   ============================================================ */
+function binom(n,k){
+  if (k<0 || k>n) return 0;
+  k = Math.min(k, n-k);
+  var r = 1;
+  for (var i=1;i<=k;i++) r = r*(n-k+i)/i;
+  return Math.round(r);
+}
+
+function buildTokenGraph(){
+  var n = S.G.n, k = Math.min(S.k, n);
+  var total = binom(n,k);
+  if (n < 1 || k < 1 || total === 0 || total > MAX_NODES){
+    S.F = { N: total, tooBig: total > MAX_NODES, masks: [], edges: [], adj: [], deg: [], comps: 0 };
+    return;
+  }
+
+  // enumerate k-subsets in lexicographic order
+  var masks = [], combo = [], i;
+  for (i=0;i<k;i++) combo.push(i);
+  while (true){
+    var m = 0;
+    for (i=0;i<k;i++) m |= (1 << combo[i]);
+    masks.push(m);
+    var p = k-1;
+    while (p >= 0 && combo[p] === n-k+p) p--;
+    if (p < 0) break;
+    combo[p]++;
+    for (i=p+1;i<k;i++) combo[i] = combo[i-1]+1;
+  }
+
+  var index = new Map();
+  for (i=0;i<masks.length;i++) index.set(masks[i], i);
+
+  var N = masks.length;
+  var edges = [];                       // flat pairs
+  var adj = new Array(N);
+  for (i=0;i<N;i++) adj[i] = [];
+  var full = (n === 32) ? -1 : ((1 << n) - 1);
+
+  for (i=0;i<N;i++){
+    var mask = masks[i];
+    for (var v=0;v<n;v++){
+      if (!((mask >> v) & 1)) continue;
+      var rest = mask & ~(1 << v);
+      var targets = (S.rule === "slide") ? (S.nbr[v] & ~mask) : (full & ~mask);
+      while (targets){
+        var low = targets & -targets;
+        var u = Math.round(Math.log(low)/Math.LN2);
+        targets ^= low;
+        var j = index.get(rest | low);
+        if (j !== undefined && j > i){
+          edges.push(i, j);
+          adj[i].push(j); adj[j].push(i);
+        }
+      }
+    }
+  }
+
+  var deg = new Array(N);
+  for (i=0;i<N;i++) deg[i] = adj[i].length;
+
+  // connected components
+  var seen = new Uint8Array(N), comps = 0, stack = [];
+  for (i=0;i<N;i++){
+    if (seen[i]) continue;
+    comps++; seen[i]=1; stack.length=0; stack.push(i);
+    while (stack.length){
+      var c = stack.pop(), a = adj[c];
+      for (var q=0;q<a.length;q++) if (!seen[a[q]]){ seen[a[q]]=1; stack.push(a[q]); }
+    }
+  }
+
+  S.F = { N:N, tooBig:false, masks:masks, index:index, edges:edges, adj:adj, deg:deg, comps:comps, k:k };
+}
+
+/* ============================================================
+   4.  Force-directed layout (Fruchterman–Reingold, 2D or 3D)
+   ============================================================ */
+var sim = { N:0, p:null, disp:null, t:0, tmin:0.0009, ideal:0.1, dim:3 };
+
+function seedLayout(){
+  var F = S.F, N = F.N;
+  sim.N = N; sim.dim = S.dim;
+  sim.p = new Float64Array(N*3);
+  sim.disp = new Float64Array(N*3);
+  sim.ideal = (S.dim === 3 ? Math.pow(1/Math.max(N,2), 1/3) : Math.sqrt(1/Math.max(N,2))) * 1.7;
+  sim.t = 0.16;
+
+  // Seed each k-subset near the centroid of its vertices in G, lifted along z by
+  // how spread out those vertices are. Placements that share a centroid — {1,4}
+  // and {2,5} on a hexagon, say — then start apart instead of on top of each other.
+  var spread = new Float64Array(N), sMean = 0;
+  var cxs = new Float64Array(N), cys = new Float64Array(N);
+  for (var i=0;i<N;i++){
+    var m = F.masks[i], cx=0, cy=0, c=0, members = [];
+    for (var v=0; v<S.G.n; v++){
+      if ((m>>v)&1){ members.push(v); cx += S.G.pos[v][0]-0.5; cy += 0.5-S.G.pos[v][1]; c++; }
+    }
+    if (c){ cx/=c; cy/=c; }
+    cxs[i] = cx; cys[i] = cy;
+    var sp = 0;
+    for (var a=0;a<members.length;a++) for (var b=a+1;b<members.length;b++){
+      var pa = S.G.pos[members[a]], pb = S.G.pos[members[b]];
+      sp += Math.sqrt((pa[0]-pb[0])*(pa[0]-pb[0]) + (pa[1]-pb[1])*(pa[1]-pb[1]));
+    }
+    spread[i] = members.length > 1 ? sp/(members.length*(members.length-1)/2) : 0;
+    sMean += spread[i];
+  }
+  sMean /= Math.max(1,N);
+
+  for (i=0;i<N;i++){
+    var jit = 0.16;
+    sim.p[i*3]   = cxs[i]*1.5 + (Math.random()-0.5)*jit;
+    sim.p[i*3+1] = cys[i]*1.5 + (Math.random()-0.5)*jit;
+    sim.p[i*3+2] = S.dim === 3 ? (spread[i]-sMean)*1.8 + (Math.random()-0.5)*jit : 0;
+  }
+
+  // Small graphs settle instantly rather than visibly crawling into place.
+  if (N <= 260){ for (i=0;i<420;i++) simStep(); sim.t = Math.max(sim.t, 0.02); }
+}
+
+function simStep(){
+  var N = sim.N; if (!N || sim.t <= sim.tmin) return false;
+  var p = sim.p, d = sim.disp, k = sim.ideal, i, i3, j, j3;
+  d.fill(0);
+
+  // Repulsion. Small graphs get every pair; past a few hundred vertices that is
+  // the whole frame budget, so each vertex is repelled by a random sample of the
+  // others instead, scaled up to the same expected total.
+  var sample = N > 340 ? 150 : 0;
+  if (!sample){
+    for (i=0;i<N;i++){
+      i3 = i*3;
+      var px = p[i3], py = p[i3+1], pz = p[i3+2];
+      for (j=i+1;j<N;j++){
+        j3 = j*3;
+        var dx = px - p[j3], dy = py - p[j3+1], dz = pz - p[j3+2];
+        var q = dx*dx + dy*dy + dz*dz;
+        if (q < 1e-8){ dx = (Math.random()-0.5)*1e-3; dy = (Math.random()-0.5)*1e-3; dz = (Math.random()-0.5)*1e-3; q = dx*dx+dy*dy+dz*dz + 1e-12; }
+        var f = (k*k)/q;
+        var ux = dx*f, uy = dy*f, uz = dz*f;
+        d[i3]+=ux; d[i3+1]+=uy; d[i3+2]+=uz;
+        d[j3]-=ux; d[j3+1]-=uy; d[j3+2]-=uz;
+      }
+    }
+  } else {
+    var wgt = (N-1)/sample;
+    for (i=0;i<N;i++){
+      i3 = i*3;
+      var sx = p[i3], sy = p[i3+1], sz = p[i3+2];
+      var ax = 0, ay = 0, az = 0;
+      for (var s=0;s<sample;s++){
+        j = (Math.random()*N)|0;
+        if (j === i) continue;
+        j3 = j*3;
+        var ex = sx - p[j3], ey = sy - p[j3+1], ez = sz - p[j3+2];
+        var eq = ex*ex + ey*ey + ez*ez;
+        if (eq < 1e-8) eq = 1e-8;
+        var ef = (k*k)/eq*wgt;
+        ax += ex*ef; ay += ey*ef; az += ez*ef;
+      }
+      d[i3]+=ax; d[i3+1]+=ay; d[i3+2]+=az;
+    }
+  }
+
+  var E = S.F.edges;
+  for (var e=0;e<E.length;e+=2){
+    i3 = E[e]*3; j3 = E[e+1]*3;
+    var ex = p[i3]-p[j3], ey = p[i3+1]-p[j3+1], ez = p[i3+2]-p[j3+2];
+    var ed = Math.sqrt(ex*ex+ey*ey+ez*ez) || 1e-6;
+    var ef = ed/k;
+    var ax = ex*ef, ay = ey*ef, az = ez*ef;
+    d[i3]-=ax; d[i3+1]-=ay; d[i3+2]-=az;
+    d[j3]+=ax; d[j3+1]+=ay; d[j3+2]+=az;
+  }
+
+  var t = sim.t, two = (sim.dim === 2);
+  for (i=0;i<N;i++){
+    i3 = i*3;
+    var gx = d[i3] - p[i3]*0.13,
+        gy = d[i3+1] - p[i3+1]*0.13,
+        gz = two ? 0 : d[i3+2] - p[i3+2]*0.13;
+    var mag = Math.sqrt(gx*gx+gy*gy+gz*gz) || 1e-9;
+    var s = Math.min(mag, t)/mag;
+    p[i3] += gx*s; p[i3+1] += gy*s; p[i3+2] += gz*s;
+    if (two) p[i3+2] = 0;
+  }
+  sim.t = Math.max(sim.tmin, sim.t * 0.988);
+  return true;
+}
+function reheat(v){ sim.t = Math.max(sim.t, v || 0.06); }
+
+/* ============================================================
+   5.  Canvas plumbing
+   ============================================================ */
+function fit(cv, maxDpr){
+  var dpr = Math.min(window.devicePixelRatio || 1, maxDpr || 2);
+  var r = cv.getBoundingClientRect();
+  var w = Math.max(1, Math.round(r.width*dpr)), h = Math.max(1, Math.round(r.height*dpr));
+  if (cv.width !== w || cv.height !== h){ cv.width = w; cv.height = h; }
+  var ctx = cv.getContext("2d");
+  ctx.setTransform(dpr,0,0,dpr,0,0);
+  ctx.clearRect(0,0,r.width,r.height);
+  return { ctx: ctx, w: r.width, h: r.height };
+}
+var MONO = '500 12px "IBM Plex Mono", ui-monospace, monospace';
+
+/* ---- 5a. base graph G ---- */
+var gCanvas = document.getElementById("gCanvas");
+var gScreen = [];      // screen coords per vertex
+
+function drawG(){
+  var d = fit(gCanvas), ctx = d.ctx, W = d.w, H = d.h;
+  var G = S.G, i;
+  var pad = 34;
+  var sx = function(x){ return pad + x*(W-2*pad); };
+  var sy = function(y){ return pad + y*(H-2*pad); };
+  gScreen.length = 0;
+  for (i=0;i<G.n;i++) gScreen.push([sx(G.pos[i][0]), sy(G.pos[i][1])]);
+
+  var tokenSet = 0;
+  for (i=0;i<S.tokens.length;i++) tokenSet |= (1 << S.tokens[i]);
+
+  // edges
+  for (i=0;i<G.edges.length;i++){
+    var a = G.edges[i][0], b = G.edges[i][1];
+    if (a >= G.n || b >= G.n) continue;
+    var live = S.rule === "slide" && (
+      (((tokenSet>>a)&1) && !((tokenSet>>b)&1)) ||
+      (((tokenSet>>b)&1) && !((tokenSet>>a)&1))
+    ) && S.tokens.length === Math.min(S.k, G.n);
+    ctx.beginPath();
+    ctx.moveTo(gScreen[a][0], gScreen[a][1]);
+    ctx.lineTo(gScreen[b][0], gScreen[b][1]);
+    ctx.lineWidth = live ? 2.6 : 1.5;
+    ctx.strokeStyle = live ? rgba(C.tok, 0.9) : rgba(C["ink-2"], 0.45);
+    ctx.stroke();
+  }
+
+  // pending edge in edit mode
+  if (S.mode === "edit" && S.selV >= 0 && S.hoverV >= 0 && S.hoverV !== S.selV){
+    ctx.save(); ctx.setLineDash([4,4]);
+    ctx.beginPath();
+    ctx.moveTo(gScreen[S.selV][0], gScreen[S.selV][1]);
+    ctx.lineTo(gScreen[S.hoverV][0], gScreen[S.hoverV][1]);
+    ctx.lineWidth = 1.6; ctx.strokeStyle = rgba(C.f, 0.7); ctx.stroke();
+    ctx.restore();
+  }
+
+  // vertices
+  var R = G.n > 11 ? 12 : 14;
+  for (i=0;i<G.n;i++){
+    var x = gScreen[i][0], y = gScreen[i][1];
+    var isTok = (tokenSet >> i) & 1;
+    ctx.beginPath(); ctx.arc(x,y,R,0,6.2832);
+    ctx.fillStyle = isTok ? C.tok : C.surface;
+    ctx.fill();
+    ctx.lineWidth = isTok ? 2 : 1.6;
+    ctx.strokeStyle = isTok ? C.tok : rgba(C.g, 0.9);
+    ctx.stroke();
+
+    if (i === S.hoverV){
+      ctx.beginPath(); ctx.arc(x,y,R+4.5,0,6.2832);
+      ctx.lineWidth = 1.6; ctx.strokeStyle = rgba(isTok ? C.tok : C.g, 0.55); ctx.stroke();
+    }
+    if (S.mode === "edit" && i === S.selV){
+      ctx.save(); ctx.setLineDash([3,3]);
+      ctx.beginPath(); ctx.arc(x,y,R+6.5,0,6.2832);
+      ctx.lineWidth = 1.8; ctx.strokeStyle = C.f; ctx.stroke(); ctx.restore();
+    }
+
+    if (G.n <= 24){
+      ctx.font = MONO; ctx.textAlign = "center"; ctx.textBaseline = "middle";
+      ctx.fillStyle = isTok ? C.surface : C["ink-2"];
+      ctx.fillText(String(i+1), x, y+0.5);
+    }
+  }
+}
+
+/* ---- 5b. token graph F ---- */
+var fCanvas = document.getElementById("fCanvas");
+var view = { yaw: 0.6, pitch: 0.35, scale: 1, cx: 0, cy: 0, ready: false, spin: !REDUCED };
+var proj = null, fScreen = null, order = null;
+
+function ensureBuffers(){
+  var N = S.F ? S.F.N : 0;
+  if (!proj || proj.length < N*3){ proj = new Float64Array(Math.max(N,1)*3); }
+  if (!fScreen || fScreen.length < N*3){ fScreen = new Float64Array(Math.max(N,1)*3); }
+  if (!order || order.length < N){ order = new Int32Array(Math.max(N,1)); }
+}
+
+function projectAll(W,H){
+  var F = S.F, N = F.N, p = sim.p;
+  ensureBuffers();
+  var cy = Math.cos(view.yaw), sy = Math.sin(view.yaw);
+  var cp = Math.cos(view.pitch), sp = Math.sin(view.pitch);
+  var focal = 3.0, i, i3;
+  var minX=1e9,maxX=-1e9,minY=1e9,maxY=-1e9;
+
+  for (i=0;i<N;i++){
+    i3 = i*3;
+    var x = p[i3], y = p[i3+1], z = p[i3+2], X, Y, Z, s;
+    if (S.dim === 3){
+      var x1 = x*cy + z*sy, z1 = -x*sy + z*cy;
+      var y1 = y*cp - z1*sp; Z = y*sp + z1*cp;
+      s = focal/(focal - Z);
+      X = x1*s; Y = y1*s;
+    } else { X = x; Y = y; Z = 0; s = 1; }
+    proj[i3] = X; proj[i3+1] = Y; proj[i3+2] = Z;
+    fScreen[i3+2] = s;
+    if (X<minX) minX=X; if (X>maxX) maxX=X;
+    if (Y<minY) minY=Y; if (Y>maxY) maxY=Y;
+  }
+  var dx = Math.max(maxX-minX, 1e-3), dy = Math.max(maxY-minY, 1e-3);
+  var target = Math.min((W-70)/dx, (H-60)/dy);
+  var tcx = (minX+maxX)/2, tcy = (minY+maxY)/2;
+  if (!view.ready){ view.scale = target; view.cx = tcx; view.cy = tcy; view.ready = true; }
+  else {
+    view.scale += (target - view.scale)*0.16;
+    view.cx += (tcx - view.cx)*0.16;
+    view.cy += (tcy - view.cy)*0.16;
+  }
+  for (i=0;i<N;i++){
+    i3 = i*3;
+    fScreen[i3]   = W/2 + (proj[i3]   - view.cx)*view.scale;
+    fScreen[i3+1] = H/2 - (proj[i3+1] - view.cy)*view.scale;
+  }
+}
+
+function currentIndex(){
+  var F = S.F;
+  if (!F || F.tooBig || !F.N) return -1;
+  var k = Math.min(S.k, S.G.n);
+  if (S.tokens.length !== k) return -1;
+  var m = 0;
+  for (var i=0;i<S.tokens.length;i++) m |= (1 << S.tokens[i]);
+  var idx = F.index ? F.index.get(m) : undefined;
+  return idx === undefined ? -1 : idx;
+}
+
+function subsetLabel(mask){
+  var out = [];
+  for (var v=0; v<S.G.n; v++) if ((mask>>v)&1) out.push(v+1);
+  return "{" + out.join(", ") + "}";
+}
+
+function drawF(){
+  // Past a few hundred vertices the mesh is thousands of hairlines; rasterising
+  // that at 2x on a HiDPI screen costs more than everything else combined, so the
+  // dense case renders at 1x and stays interactive.
+  var F = S.F;
+  var d = fit(fCanvas, (F && F.N > 400) ? 1 : 2), ctx = d.ctx, W = d.w, H = d.h;
+  if (!F || F.tooBig || !F.N) return;
+  projectAll(W,H);
+
+  var cur = currentIndex();
+  var nbrSet = null;
+  if (cur >= 0){ nbrSet = new Set(F.adj[cur]); }
+  var containMask = (S.hoverV >= 0) ? (1 << S.hoverV) : 0;
+
+  var N = F.N;
+  var baseR = Math.max(2.6, Math.min(8, 9.5 - N/95));
+
+  // depth order (far first)
+  for (var i=0;i<N;i++) order[i] = i;
+  var ord = Array.prototype.slice.call(order, 0, N);
+  if (S.dim === 3) ord.sort(function(a,b){ return proj[a*3+2] - proj[b*3+2]; });
+
+  // Edges, sorted into four depth buckets so the whole mesh is four strokes
+  // rather than one per edge — the difference between 8fps and 60 at ~900 vertices.
+  var E = F.edges, hot = [];
+  var eA = N > 240 ? 0.16 : (N > 60 ? 0.28 : 0.44);
+  var NB = 4, bx = [[],[],[],[]];
+  for (var e=0;e<E.length;e+=2){
+    var a = E[e], b = E[e+1];
+    if (cur >= 0 && (a === cur || b === cur)){ hot.push(a,b); continue; }
+    var bi = 3;
+    if (S.dim === 3){
+      var dep = (fScreen[a*3+2] + fScreen[b*3+2])/2;      // perspective scale ≈ nearness
+      bi = Math.max(0, Math.min(3, Math.floor((dep - 0.66)/0.26)));
+    }
+    var arr = bx[bi];
+    arr.push(fScreen[a*3], fScreen[a*3+1], fScreen[b*3], fScreen[b*3+1]);
+  }
+  ctx.lineWidth = N > 300 ? 0.8 : 1;
+  for (var bkt=0; bkt<NB; bkt++){
+    var arr2 = bx[bkt];
+    if (!arr2.length) continue;
+    ctx.beginPath();
+    for (var t2=0; t2<arr2.length; t2+=4){
+      ctx.moveTo(arr2[t2], arr2[t2+1]);
+      ctx.lineTo(arr2[t2+2], arr2[t2+3]);
+    }
+    var mult = S.dim === 3 ? (0.5 + 0.22*bkt) : 1;
+    ctx.strokeStyle = rgba(C.f, Math.max(0.05, Math.min(0.5, eA*mult)));
+    ctx.stroke();
+  }
+  ctx.lineWidth = 2;
+  for (var q=0;q<hot.length;q+=2){
+    ctx.beginPath();
+    ctx.moveTo(fScreen[hot[q]*3], fScreen[hot[q]*3+1]);
+    ctx.lineTo(fScreen[hot[q+1]*3], fScreen[hot[q+1]*3+1]);
+    ctx.strokeStyle = rgba(C.tok, 0.85);
+    ctx.stroke();
+  }
+
+  // nodes
+  for (var oi=0; oi<N; oi++){
+    var idx = ord[oi], i3 = idx*3;
+    var s = S.dim === 3 ? fScreen[i3+2] : 1;
+    var x = fScreen[i3], y = fScreen[i3+1];
+    var r = baseR * (S.dim === 3 ? (0.62 + 0.5*(s-0.72)) : 1);
+    var fill, stroke, lw = 1.2, ring = 0;
+
+    if (idx === cur){ fill = C.tok; stroke = C.tok; r *= 1.85; lw = 2; ring = 1; }
+    else if (nbrSet && nbrSet.has(idx)){ fill = C.surface; stroke = C.tok; r *= 1.35; lw = 2.4; }
+    else if (containMask && (F.masks[idx] & containMask)){ fill = C["g-soft"]; stroke = C.g; lw = 1.6; r *= 1.15; }
+    else { fill = C["f-soft"]; stroke = rgba(C.f, 0.75); }
+
+    if (idx === S.hoverF){ r *= 1.3; stroke = C.ink; lw = 2; }
+
+    ctx.beginPath(); ctx.arc(x, y, Math.max(1.2, r), 0, 6.2832);
+    ctx.fillStyle = fill; ctx.fill();
+    if (r > 2){ ctx.lineWidth = lw; ctx.strokeStyle = stroke; ctx.stroke(); }
+    if (ring){
+      ctx.beginPath(); ctx.arc(x, y, r+5, 0, 6.2832);
+      ctx.lineWidth = 1.4; ctx.strokeStyle = rgba(C.tok, 0.5); ctx.stroke();
+    }
+  }
+
+  // labels — greedy, skipping any that would collide with one already placed
+  ctx.font = MONO; ctx.textAlign = "center"; ctx.textBaseline = "bottom";
+  var taken = [];
+  function free(x0,y0,x1,y1){
+    for (var t=0;t<taken.length;t++){
+      var r = taken[t];
+      if (x0 < r[2] && x1 > r[0] && y0 < r[3] && y1 > r[1]) return false;
+    }
+    taken.push([x0,y0,x1,y1]);
+    return true;
+  }
+
+  // the two callout labels claim their space first
+  [cur, S.hoverF].forEach(function(idx){
+    if (idx < 0 || idx >= N) return;
+    var tx = fScreen[idx*3], ty = fScreen[idx*3+1] - baseR*2.6 - 7;
+    var txt = subsetLabel(F.masks[idx]);
+    var w = ctx.measureText(txt).width;
+    var x0 = tx - w/2 - 6, y0 = ty - 15, x1 = x0 + w + 12, y1 = y0 + 18;
+    free(x0-2, y0-2, x1+2, y1+2);
+    ctx.fillStyle = rgba(C.surface, 0.94);
+    ctx.fillRect(x0, y0, w + 12, 18);
+    ctx.strokeStyle = rgba(idx === cur ? C.tok : C.ink, 0.45);
+    ctx.lineWidth = 1;
+    ctx.strokeRect(x0, y0, w + 12, 18);
+    ctx.fillStyle = idx === cur ? C.tok : C.ink;
+    ctx.fillText(txt, tx, ty);
+  });
+
+  if (S.labels && N <= 40){
+    ctx.fillStyle = rgba(C["ink-2"], 0.85);
+    for (var li=0; li<N; li++){
+      if (li === cur || li === S.hoverF) continue;
+      var lx = fScreen[li*3], ly = fScreen[li*3+1] - baseR - 4;
+      var lt = subsetLabel(F.masks[li]);
+      var lw = ctx.measureText(lt).width;
+      if (!free(lx - lw/2 - 2, ly - 13, lx + lw/2 + 2, ly + 2)) continue;
+      ctx.fillText(lt, lx, ly);
+    }
+  }
+}
+
+/* ============================================================
+   6.  Interaction — base graph
+   ============================================================ */
+function pickG(ev){
+  var r = gCanvas.getBoundingClientRect();
+  var mx = ev.clientX - r.left, my = ev.clientY - r.top;
+  var best = -1, bd = 400;
+  for (var i=0;i<gScreen.length;i++){
+    var dx = gScreen[i][0]-mx, dy = gScreen[i][1]-my, q = dx*dx+dy*dy;
+    if (q < bd){ bd = q; best = i; }
+  }
+  return { v: best, x: mx, y: my };
+}
+function normFromScreen(x,y){
+  var r = gCanvas.getBoundingClientRect(), pad = 34;
+  return [ (x-pad)/Math.max(1,(r.width-2*pad)), (y-pad)/Math.max(1,(r.height-2*pad)) ];
+}
+
+function placeToken(v){
+  var k = Math.min(S.k, S.G.n);
+  var at = S.tokens.indexOf(v);
+  if (at >= 0) S.tokens.splice(at,1);
+  else {
+    S.tokens.push(v);
+    while (S.tokens.length > k) S.tokens.shift();
+  }
+  refreshReadouts();
+}
+
+gCanvas.addEventListener("pointerdown", function(ev){
+  var p = pickG(ev);
+  S.dragMoved = false;
+  if (S.mode === "edit"){
+    if (p.v >= 0){
+      if (ev.shiftKey || ev.altKey){ deleteVertex(p.v); return; }
+      S.dragV = p.v;
+      gCanvas.setPointerCapture(ev.pointerId);
+    }
+  } else if (p.v >= 0){
+    placeToken(p.v);
+  }
+});
+gCanvas.addEventListener("pointermove", function(ev){
+  var p = pickG(ev);
+  var prevHover = S.hoverV;
+  S.hoverV = p.v;
+  if (S.dragV >= 0){
+    var nn = normFromScreen(p.x, p.y);
+    S.G.pos[S.dragV] = [Math.max(0.02, Math.min(0.98, nn[0])), Math.max(0.02, Math.min(0.98, nn[1]))];
+    S.dragMoved = true;
+  }
+  if (prevHover !== S.hoverV) refreshFHint();
+  gCanvas.style.cursor = p.v >= 0 ? "pointer" : (S.mode === "edit" ? "crosshair" : "default");
+});
+gCanvas.addEventListener("pointerup", function(ev){
+  if (S.mode === "edit"){
+    var p = pickG(ev);
+    if (S.dragV >= 0 && !S.dragMoved){
+      if (S.selV < 0) S.selV = S.dragV;
+      else if (S.selV === S.dragV) S.selV = -1;
+      else { toggleEdge(S.selV, S.dragV); S.selV = -1; rebuild(); }
+    }
+    S.dragV = -1;
+    if (p.v < 0 && !S.dragMoved && ev.detail === 0){ /* no-op */ }
+  }
+});
+gCanvas.addEventListener("pointerleave", function(){ S.hoverV = -1; S.dragV = -1; refreshFHint(); });
+gCanvas.addEventListener("dblclick", function(ev){
+  if (S.mode !== "edit") return;
+  var p = pickG(ev);
+  if (p.v >= 0) return;
+  if (S.G.n >= 16) return;
+  var nn = normFromScreen(p.x, p.y);
+  S.G.pos.push([Math.max(0.03, Math.min(0.97, nn[0])), Math.max(0.03, Math.min(0.97, nn[1]))]);
+  S.G.n = S.G.pos.length;
+  setPresetCustom();
+  rebuildNbr(); rebuild();
+});
+gCanvas.addEventListener("contextmenu", function(ev){
+  if (S.mode !== "edit") return;
+  ev.preventDefault();
+  var p = pickG(ev);
+  if (p.v >= 0) deleteVertex(p.v);
+});
+
+function deleteVertex(v){
+  if (S.G.n <= 1) return;
+  S.G.pos.splice(v,1);
+  S.G.edges = S.G.edges.filter(function(e){ return e[0]!==v && e[1]!==v; })
+    .map(function(e){ return [e[0] > v ? e[0]-1 : e[0], e[1] > v ? e[1]-1 : e[1]]; });
+  S.G.n = S.G.pos.length;
+  S.tokens = S.tokens.filter(function(t){ return t !== v; }).map(function(t){ return t > v ? t-1 : t; });
+  S.selV = -1; S.hoverV = -1;
+  setPresetCustom();
+  rebuildNbr(); rebuild();
+}
+function setPresetCustom(){
+  S.preset = "custom";
+  presetSel.value = "custom";
+  syncSliders();
+}
+
+/* ============================================================
+   7.  Interaction — token graph
+   ============================================================ */
+var drag = null;
+fCanvas.addEventListener("pointerdown", function(ev){
+  drag = { x: ev.clientX, y: ev.clientY, moved: false, yaw: view.yaw, pitch: view.pitch };
+  view.spin = false;
+  fCanvas.setPointerCapture(ev.pointerId);
+});
+fCanvas.addEventListener("pointermove", function(ev){
+  if (drag){
+    var dx = ev.clientX - drag.x, dy = ev.clientY - drag.y;
+    if (Math.abs(dx) + Math.abs(dy) > 3) drag.moved = true;
+    if (S.dim === 3){
+      view.yaw = drag.yaw + dx*0.008;
+      view.pitch = Math.max(-1.45, Math.min(1.45, drag.pitch + dy*0.008));
+    }
+    return;
+  }
+  var idx = pickF(ev);
+  if (idx !== S.hoverF){ S.hoverF = idx; refreshFHint(); }
+  fCanvas.style.cursor = idx >= 0 ? "pointer" : (S.dim === 3 ? "grab" : "default");
+});
+fCanvas.addEventListener("pointerup", function(ev){
+  var wasDrag = drag && drag.moved;
+  drag = null;
+  if (wasDrag) return;
+  var idx = pickF(ev);
+  if (idx >= 0){
+    var m = S.F.masks[idx], t = [];
+    for (var v=0; v<S.G.n; v++) if ((m>>v)&1) t.push(v);
+    S.tokens = t;
+    refreshReadouts();
+  }
+});
+fCanvas.addEventListener("pointerleave", function(){ drag = null; S.hoverF = -1; refreshFHint(); });
+
+function pickF(ev){
+  var F = S.F;
+  if (!F || F.tooBig || !F.N || !fScreen) return -1;
+  var r = fCanvas.getBoundingClientRect();
+  var mx = ev.clientX - r.left, my = ev.clientY - r.top;
+  var best = -1, bd = 1e9, bz = -1e9;
+  var tol = 13*13;
+  for (var i=0;i<F.N;i++){
+    var dx = fScreen[i*3]-mx, dy = fScreen[i*3+1]-my, q = dx*dx+dy*dy;
+    if (q > tol) continue;
+    var z = S.dim === 3 ? proj[i*3+2] : 0;
+    if (z > bz || (z === bz && q < bd)){ bz = z; bd = q; best = i; }
+  }
+  return best;
+}
+
+/* ============================================================
+   8.  Controls
+   ============================================================ */
+var presetSel = document.getElementById("preset");
+Object.keys(PRESETS).forEach(function(key){
+  var o = document.createElement("option");
+  o.value = key; o.textContent = PRESETS[key].label;
+  presetSel.appendChild(o);
+});
+presetSel.value = S.preset;
+
+var nSlider = document.getElementById("nSlider"), nVal = document.getElementById("nVal");
+var kSlider = document.getElementById("kSlider"), kVal = document.getElementById("kVal");
+
+function syncSliders(){
+  var p = PRESETS[S.preset];
+  if (p.fixed){
+    nSlider.min = p.fixed; nSlider.max = p.fixed; nSlider.value = p.fixed;
+    nSlider.disabled = true;
+  } else {
+    nSlider.disabled = (S.preset === "custom");
+    nSlider.min = p.min; nSlider.max = p.max;
+    nSlider.value = Math.max(p.min, Math.min(p.max, S.n));
+  }
+  nVal.textContent = S.G ? S.G.n : S.n;
+  var maxK = Math.max(1, S.G ? S.G.n : S.n);
+  kSlider.max = maxK;
+  if (S.k > maxK) S.k = maxK;
+  kSlider.value = S.k;
+  kVal.textContent = S.k;
+}
+
+function applyPreset(){
+  var p = PRESETS[S.preset];
+  var n = p.fixed ? p.fixed : Math.max(p.min, Math.min(p.max, S.n));
+  if (S.preset === "ladder") n = Math.max(4, n - (n % 2));
+  if (S.preset === "custom"){
+    if (!S.G) S.G = makeGraph("cycle", n);
+  } else {
+    S.G = makeGraph(S.preset, n);
+  }
+  S.n = S.G.n;
+  S.tokens = []; S.selV = -1; S.hoverV = -1; S.hoverF = -1;
+  rebuildNbr();
+  rebuild();
+  syncSliders();
+}
+
+function rebuild(){
+  if (S.k > S.G.n) S.k = S.G.n;
+  buildTokenGraph();
+  var F = S.F;
+  var ov = document.getElementById("fOverlay");
+  if (F.tooBig){
+    ov.classList.add("on");
+    document.getElementById("ovCount").textContent = "C(" + S.G.n + ", " + S.k + ") = " + F.N.toLocaleString() + " vertices";
+    document.getElementById("ovText").textContent =
+      "That is past the " + (MAX_NODES-1).toLocaleString() + "-vertex ceiling this layout stays readable at. Lower n or move k toward 1 or n.";
+  } else if (!F.N){
+    ov.classList.add("on");
+    document.getElementById("ovCount").textContent = "No placements";
+    document.getElementById("ovText").textContent = "There is no way to place " + S.k + " tokens on " + S.G.n + " vertices.";
+  } else {
+    ov.classList.remove("on");
+    view.ready = false;
+    seedLayout();
+  }
+  refreshReadouts();
+}
+
+function refreshReadouts(){
+  var G = S.G, F = S.F, k = Math.min(S.k, G.n);
+  document.getElementById("sN").textContent = G.n;
+  document.getElementById("sE").textContent = G.edges.length;
+  document.getElementById("sT").textContent = S.tokens.length + " / " + k;
+
+  var cur = currentIndex();
+  document.getElementById("sM").textContent = cur >= 0 ? F.deg[cur] : "—";
+
+  var mask = 0;
+  for (var i=0;i<S.tokens.length;i++) mask |= (1 << S.tokens[i]);
+  document.getElementById("cfgSet").textContent = S.tokens.length ? subsetLabel(mask) : "—";
+  document.getElementById("cfgHint").textContent =
+    S.tokens.length === 0 ? "click vertices in G to place tokens"
+    : (S.tokens.length < k ? "place " + (k - S.tokens.length) + " more" : "");
+
+  document.getElementById("tN").textContent = F.N.toLocaleString();
+  document.getElementById("tE").textContent = F.tooBig ? "—" : (F.edges.length/2).toLocaleString();
+  if (F.tooBig || !F.N){
+    document.getElementById("tD").textContent = "—";
+    document.getElementById("tC").textContent = "—";
+    document.getElementById("tK").textContent = "—";
+    document.getElementById("tK").className = "v";
+  } else {
+    var mn = Infinity, mx = -Infinity;
+    for (var j=0;j<F.N;j++){ if (F.deg[j]<mn) mn=F.deg[j]; if (F.deg[j]>mx) mx=F.deg[j]; }
+    document.getElementById("tD").textContent = (mn===mx) ? (mn + "-regular") : (mn + "–" + mx);
+    document.getElementById("tC").textContent = F.comps;
+    var kk = document.getElementById("tK");
+    kk.textContent = F.comps === 1 ? "yes" : "no";
+    kk.className = "v " + (F.comps === 1 ? "ok" : "no");
+  }
+  refreshFHint();
+}
+
+function refreshFHint(){
+  var F = S.F, cur = currentIndex();
+  var show = S.hoverF >= 0 ? S.hoverF : cur;
+  var el = document.getElementById("fSet"), hint = document.getElementById("fHint");
+  if (F && !F.tooBig && show >= 0 && show < F.N){
+    el.textContent = subsetLabel(F.masks[show]);
+    hint.textContent = "degree " + F.deg[show] + (show === cur && S.hoverF < 0 ? " · matches the tokens on G" : "");
+  } else {
+    el.textContent = "—";
+    hint.textContent = S.hoverV >= 0
+      ? "vertex " + (S.hoverV+1) + " of G is shaded across every placement containing it"
+      : "place all " + Math.min(S.k, S.G.n) + " tokens to light one up";
+  }
+}
+
+presetSel.addEventListener("change", function(){
+  S.preset = presetSel.value;
+  applyPreset();
+});
+nSlider.addEventListener("input", function(){
+  S.n = +nSlider.value;
+  nVal.textContent = S.n;
+  applyPreset();
+});
+kSlider.addEventListener("input", function(){
+  S.k = +kSlider.value;
+  kVal.textContent = S.k;
+  S.tokens = [];
+  rebuild();
+});
+
+function segment(id, apply){
+  var el = document.getElementById(id);
+  el.addEventListener("click", function(ev){
+    var b = ev.target.closest("button");
+    if (!b) return;
+    Array.prototype.forEach.call(el.querySelectorAll("button"), function(x){
+      x.setAttribute("aria-pressed", String(x === b));
+    });
+    apply(b.getAttribute("data-v"));
+  });
+}
+segment("ruleSeg", function(v){ S.rule = v; rebuild(); });
+segment("modeSeg", function(v){
+  S.mode = v; S.selV = -1;
+  document.getElementById("gNote").textContent = v === "edit"
+    ? "Click two vertices to toggle an edge · drag to move · shift-click to delete."
+    : "Click a vertex to place or lift a token.";
+});
+segment("dimSeg", function(v){
+  S.dim = +v;
+  view.ready = false;
+  view.spin = (S.dim === 3) && !REDUCED;
+  document.getElementById("fNote").textContent = S.dim === 3
+    ? "Drag to rotate. Click a vertex to send that placement back to G."
+    : "Click a vertex to send that placement back to G.";
+  seedLayout();
+});
+
+document.getElementById("randomBtn").addEventListener("click", function(){
+  var k = Math.min(S.k, S.G.n), pool = [];
+  for (var i=0;i<S.G.n;i++) pool.push(i);
+  for (i=pool.length-1;i>0;i--){ var j = Math.floor(Math.random()*(i+1)); var t=pool[i]; pool[i]=pool[j]; pool[j]=t; }
+  S.tokens = pool.slice(0,k).sort(function(a,b){return a-b;});
+  refreshReadouts();
+});
+document.getElementById("clearBtn").addEventListener("click", function(){
+  S.tokens = []; refreshReadouts();
+});
+document.getElementById("relaxBtn").addEventListener("click", function(){
+  view.ready = false; seedLayout();
+});
+var labelBtn = document.getElementById("labelBtn");
+labelBtn.addEventListener("click", function(){
+  S.labels = !S.labels;
+  labelBtn.setAttribute("aria-pressed", String(S.labels));
+  labelBtn.textContent = "Labels: " + (S.labels ? "on" : "off");
+});
+
+gCanvas.addEventListener("keydown", function(ev){
+  if (S.mode !== "tokens") return;
+  var num = parseInt(ev.key, 10);
+  if (!isNaN(num) && num >= 1 && num <= S.G.n){ placeToken(num-1); ev.preventDefault(); }
+});
+
+/* ============================================================
+   9.  Loop
+   ============================================================ */
+function frame(){
+  if (S.F && !S.F.tooBig && S.F.N){
+    var reps = S.F.N <= 400 ? 2 : 1;
+    for (var r=0;r<reps;r++) if (!simStep()) break;
+  }
+  if (S.dim === 3 && view.spin && !drag) view.yaw += 0.0021;
+  drawG();
+  drawF();
+  requestAnimationFrame(frame);
+}
+
+applyPreset();
+requestAnimationFrame(frame);
+window.addEventListener("resize", function(){ view.ready = false; });
+
+})();
+</script>
+</body>
+</html>
