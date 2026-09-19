@@ -1,0 +1,1491 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="color-scheme" content="dark">
+<meta name="theme-color" content="#002C60">
+<meta name="description" content="A Wordle-style daily puzzle: pivot a randomized Tucker tableau and call the outcome of the underlying linear program.">
+<title>Simplex Pivoter</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%23066378'/%3E%3Cstop offset='.5' stop-color='%23002C60'/%3E%3Cstop offset='1' stop-color='%2300004B'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='32' height='32' rx='7' fill='url(%23g)'/%3E%3Cg fill='none' stroke='%235fd2ec' stroke-width='2.4' stroke-linecap='round'%3E%3Cpath d='M7 9h18M7 16h18M7 23h18'/%3E%3C/g%3E%3C/svg%3E">
+<style>
+*, *::before, *::after { box-sizing: border-box; }
+
+:root {
+  color-scheme: dark;
+
+  /* the three requested colours */
+  --grad-1: #066378;
+  --grad-2: #002C60;
+  --grad-3: #00004B;
+
+  --ink:   #eaf2f8;
+  --ink-2: #b9d0e0;
+  --ink-3: #9ab8cd;
+
+  /* dark translucent panels: they keep the gradient visible but hold text
+     contrast steady over the pale teal at the top of the ramp */
+  --surface:    rgba(3, 20, 58, .46);
+  --surface-2:  rgba(3, 20, 58, .28);
+  --surface-3:  rgba(0, 6, 38, .50);
+  --line:        rgba(170, 212, 236, .20);
+  --line-strong: rgba(170, 212, 236, .46);
+
+  --accent:      #5fd2ec;
+  --accent-deep: #2a9fc4;
+  --accent-soft: rgba(95, 210, 236, .17);
+  --on-accent:   #00203f;
+
+  --good: #62e0ab; --good-soft: rgba(98, 224, 171, .16);
+  --bad:  #ff9d92; --bad-soft:  rgba(255, 157, 146, .17);
+  --warn: #ffc96b; --warn-soft: rgba(255, 201, 107, .15);
+
+  --radius: 14px;
+  --shadow: 0 1px 2px rgba(0, 0, 25, .35), 0 10px 30px rgba(0, 0, 25, .28), inset 0 1px 0 rgba(255, 255, 255, .06);
+  --mono: ui-monospace, "SF Mono", "Cascadia Mono", Menlo, Consolas, monospace;
+  --serif: "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, serif;
+}
+
+/* The gradient lives on the root element so it paints onto the canvas and
+   covers the viewport no matter how long the page gets. `fixed` keeps the
+   ramp anchored to the screen rather than stretching with the content. */
+html {
+  -webkit-text-size-adjust: 100%;
+  background-color: var(--grad-3);
+  background-image:
+    radial-gradient(150% 85% at 50% 132%, rgba(0, 0, 75, .55) 0%, rgba(0, 0, 75, 0) 66%),
+    radial-gradient(115% 62% at 84% -2%, rgba(6, 99, 120, .8) 0%, rgba(6, 99, 120, 0) 64%),
+    linear-gradient(162deg, var(--grad-1) 0%, var(--grad-2) 47%, var(--grad-3) 100%);
+  background-attachment: fixed, fixed, fixed;
+  background-repeat: no-repeat;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: transparent;
+  color: var(--ink);
+  font: 16px/1.5 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  padding: 0 16px calc(56px + env(safe-area-inset-bottom));
+  overscroll-behavior-y: contain;
+}
+
+.wrap { max-width: 720px; margin: 0 auto; }
+
+/* ---------- header ---------- */
+header { padding: 26px 0 8px; }
+h1 {
+  margin: 0;
+  font: 600 clamp(23px, 6.4vw, 32px)/1.15 var(--serif);
+  letter-spacing: -.01em;
+  background: linear-gradient(96deg, #ffffff 12%, var(--accent) 96%);
+  -webkit-background-clip: text; background-clip: text;
+  -webkit-text-fill-color: transparent; color: var(--ink);
+}
+.tag { margin: 7px 0 15px; color: var(--ink-2); font-size: 14px; max-width: 46ch; }
+
+.modes { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; }
+
+button, select, input { font: inherit; color: inherit; font-family: inherit; }
+
+button {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  padding: 9px 14px;
+  min-height: 42px;
+  font-size: 14px;
+  color: var(--ink);
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-backdrop-filter: blur(6px); backdrop-filter: blur(6px);
+  transition: background .12s, border-color .12s, transform .08s, box-shadow .12s;
+}
+button:hover { border-color: var(--line-strong); background: rgba(24, 56, 104, .58); }
+button:active { transform: scale(.975); }
+button:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+button.chip[aria-pressed="true"] {
+  background: linear-gradient(135deg, var(--accent) 0%, var(--accent-deep) 100%);
+  border-color: transparent; color: var(--on-accent); font-weight: 650;
+  box-shadow: 0 2px 14px rgba(95, 210, 236, .28);
+}
+button.primary {
+  background: linear-gradient(135deg, var(--accent) 0%, var(--accent-deep) 100%);
+  border-color: transparent; color: var(--on-accent); font-weight: 650;
+  border-radius: 12px; width: 100%; min-height: 48px; font-size: 15px;
+  box-shadow: 0 2px 16px rgba(95, 210, 236, .26);
+}
+button.primary:hover { filter: brightness(1.06); background: linear-gradient(135deg, var(--accent) 0%, var(--accent-deep) 100%); }
+button.ghost { background: transparent; color: var(--ink-2); border-color: transparent; }
+button.ghost:hover { background: var(--surface-2); color: var(--ink); }
+button[disabled] { opacity: .38; cursor: default; }
+button[disabled]:hover { background: var(--surface); border-color: var(--line); }
+
+select {
+  background: var(--surface-3);
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  padding: 9px 12px;
+  min-height: 42px;
+  font-size: 14px;
+}
+select.block { width: 100%; border-radius: 12px; min-height: 48px; font-size: 15px; padding: 10px 12px; }
+select:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+
+.stats {
+  display: flex; align-items: baseline; gap: 18px; row-gap: 6px;
+  margin: 15px 0 0; padding: 12px 14px;
+  background: var(--surface); border: 1px solid var(--line);
+  border-radius: var(--radius); box-shadow: var(--shadow);
+  -webkit-backdrop-filter: blur(12px); backdrop-filter: blur(12px);
+  flex-wrap: wrap;
+}
+.stats div { display: flex; align-items: baseline; gap: 5px; }
+.stats b { font: 650 19px/1 var(--mono); font-variant-numeric: tabular-nums; color: var(--accent); }
+.stats span { font-size: 12px; color: var(--ink-3); text-transform: uppercase; letter-spacing: .06em; }
+.stats .puzid { margin-left: auto; font-size: 12px; color: var(--ink-3); letter-spacing: .04em; }
+
+/* ---------- cards ---------- */
+.card {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  -webkit-backdrop-filter: blur(12px); backdrop-filter: blur(12px);
+  padding: 16px 14px;
+  margin: 14px 0;
+}
+.cardhead { display: flex; align-items: center; gap: 10px; margin-bottom: 12px; flex-wrap: wrap; }
+h2 {
+  margin: 0; font: 650 14px/1.2 system-ui, sans-serif;
+  text-transform: uppercase; letter-spacing: .09em; color: var(--ink-2);
+}
+.pill {
+  font-size: 12px; padding: 3px 9px; border-radius: 999px; font-weight: 600;
+  background: var(--surface-2); color: var(--ink-2); border: 1px solid var(--line);
+}
+.pill.ok { background: var(--good-soft); color: var(--good); border-color: transparent; }
+.pill.no { background: var(--bad-soft); color: var(--bad); border-color: transparent; }
+.pill.hm { background: var(--warn-soft); color: var(--warn); border-color: transparent; }
+
+/* ---------- tableau ---------- */
+.boardwrap { overflow-x: auto; margin: 0 -4px; padding: 0 4px 2px; }
+.board { display: grid; gap: 3px; min-width: min-content; font-variant-numeric: tabular-nums; }
+.board .hd, .board .lb, .board .cell, .board .obj {
+  display: flex; align-items: center; justify-content: center;
+  min-height: 46px; padding: 2px 4px;
+  border-radius: 9px;
+  font-family: var(--mono);
+  font-size: clamp(13px, 3.6vw, 16px);
+  line-height: 1.05;
+}
+.board .hd, .board .lb {
+  font-family: var(--serif); font-style: italic; font-size: clamp(14px, 3.8vw, 17px);
+  color: var(--ink-2); min-height: 34px;
+}
+.board .lb { justify-content: flex-end; padding-right: 8px; white-space: nowrap; }
+.board .hd { color: var(--accent); font-weight: 500; }
+.board .corner { min-height: 34px; }
+
+.board .cell {
+  background: rgba(255, 255, 255, .085);
+  border: 1px solid var(--line);
+  color: var(--ink);
+  cursor: pointer;
+  position: relative;
+  -webkit-tap-highlight-color: transparent;
+  transition: background .1s, border-color .1s, transform .08s, box-shadow .1s;
+}
+.board .cell:active { transform: scale(.94); }
+.board .cell:hover { border-color: var(--line-strong); background: rgba(255, 255, 255, .14); }
+.board .cell.dead { cursor: default; color: var(--ink-3); background: rgba(255, 255, 255, .03); }
+.board .cell.dead:hover { border-color: var(--line); background: rgba(255, 255, 255, .03); }
+.board .cell.legal {
+  border-color: var(--accent); background: var(--accent-soft); color: var(--accent);
+  font-weight: 700; box-shadow: 0 0 0 1px rgba(95, 210, 236, .35), 0 2px 12px rgba(95, 210, 236, .18);
+}
+.board .cell.lastpiv { box-shadow: inset 0 0 0 2px var(--accent); }
+
+.board .konst, .board .obj { background: transparent; border: 1px dashed transparent; color: var(--ink); }
+/* beats .board .cell.dead, which would otherwise tint the constant column */
+.board .cell.konst, .board .cell.konst:hover { background: transparent; border-color: transparent; }
+.board .konst { border-radius: 0 9px 9px 0; padding-left: 8px; }
+.board .konst, .board .hd.konsthd { position: relative; }
+.board .konst::before, .board .hd.konsthd::before {
+  content: ""; position: absolute; left: 0; top: -3px; bottom: -3px;
+  width: 2px; background: var(--line-strong); border-radius: 1px;
+}
+.board .hd.konsthd::before { top: 0; }
+.board .rule { grid-column: 1 / -1; height: 2px; background: var(--line-strong); border-radius: 1px; margin: 3px 0 1px; }
+.board .obj { font-weight: 650; }
+.board .lb.objlb { font-weight: 700; color: var(--ink); }
+
+.fr { display: inline-flex; flex-direction: column; align-items: center; line-height: 1.02; }
+.fr i { font-style: normal; font-size: .82em; padding: 0 1px; }
+.fr i:last-child { border-top: 1.2px solid currentColor; }
+.neg { margin-right: 1px; }
+
+.hintline { margin: 10px 2px 0; font-size: 13px; color: var(--ink-3); min-height: 1.2em; }
+.hintline.warn { color: var(--warn); }
+
+.rulenote {
+  margin: 10px 0 0; padding: 9px 11px;
+  background: var(--surface-3); border: 1px solid var(--line); border-radius: 10px;
+  font-size: 12px; line-height: 1.65; color: var(--ink-2);
+}
+.rulenote b { color: var(--ink); font-weight: 650; }
+.rulenote code {
+  font-family: var(--mono); font-size: 11.5px; color: var(--accent);
+  background: rgba(95, 210, 236, .10); border: 1px solid rgba(95, 210, 236, .22);
+  border-radius: 5px; padding: 1px 4px; white-space: nowrap;
+}
+.rulenote em { color: var(--ink-3); font-style: normal; }
+
+/* ---------- readout ---------- */
+.readout { margin-top: 12px; border-top: 1px solid var(--line); padding-top: 12px; }
+.readout h3 { margin: 0 0 8px; font: 650 12px/1 system-ui, sans-serif; letter-spacing: .08em; text-transform: uppercase; color: var(--ink-3); }
+.vars { display: flex; flex-wrap: wrap; gap: 6px; }
+.vchip {
+  font-family: var(--mono); font-size: 13px;
+  background: var(--surface-2); border: 1px solid var(--line);
+  border-radius: 8px; padding: 4px 8px; display: inline-flex; align-items: center; gap: 4px;
+}
+.vchip .vn { font-family: var(--serif); font-style: italic; }
+.vchip.basic { background: var(--accent-soft); border-color: rgba(95, 210, 236, .3); color: var(--ink); }
+.vchip.negv { background: var(--bad-soft); border-color: transparent; color: var(--bad); }
+.vchip.obj { background: transparent; border-style: dashed; border-color: var(--line-strong); font-weight: 700; }
+
+.btnrow { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 14px; }
+.btnrow.stack { flex-direction: column; }
+
+/* ---------- guess ---------- */
+label.lbl { display: block; font-size: 13px; color: var(--ink-2); margin: 0 0 6px; }
+.solnote { margin: 11px 0 0; font-size: 12.5px; color: var(--ink-3); }
+.solnote .vn { font-family: var(--serif); font-style: italic; color: var(--ink-2); }
+
+#feedback { margin-top: 12px; font-size: 14px; }
+.fb { padding: 10px 12px; border-radius: 10px; }
+.fb.no { background: var(--bad-soft); color: var(--bad); }
+.fb.ok { background: var(--good-soft); color: var(--good); }
+.fb.hm { background: var(--warn-soft); color: var(--warn); }
+.fb b { color: inherit; }
+
+/* ---------- result ---------- */
+#resultCard h2 { color: var(--ink); font-size: 15px; }
+.bigverdict {
+  font: 600 clamp(19px, 5.4vw, 25px)/1.2 var(--serif); margin: 4px 0 10px;
+  display: flex; align-items: baseline; gap: 9px;
+}
+.bigverdict .mark { font-family: system-ui, sans-serif; font-size: .82em; flex: none; }
+.bigverdict .grad {
+  background: linear-gradient(96deg, #ffffff 10%, var(--accent) 95%);
+  -webkit-background-clip: text; background-clip: text;
+  -webkit-text-fill-color: transparent; color: var(--ink);
+}
+.summary { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 12px; }
+.sq { font-family: var(--mono); font-size: 20px; letter-spacing: 2px; margin: 4px 0 12px; word-break: break-all; }
+.sharebox {
+  width: 100%; min-height: 96px; resize: vertical; margin-top: 10px;
+  background: rgba(0, 0, 40, .42); border: 1px solid var(--line); border-radius: 10px;
+  padding: 10px; font-family: var(--mono); font-size: 12px; line-height: 1.5; color: var(--ink);
+}
+.answer { font-size: 14px; line-height: 1.55; background: var(--surface-3); border-radius: 10px; padding: 12px 14px; color: var(--ink-2); }
+.answer b { color: var(--ink); }
+.answer .vn { font-family: var(--serif); font-style: italic; color: var(--ink); }
+
+/* ---------- history ---------- */
+details.card > summary {
+  cursor: pointer; list-style: none; display: flex; align-items: center; gap: 8px;
+  font: 650 14px/1.2 system-ui, sans-serif; text-transform: uppercase; letter-spacing: .09em; color: var(--ink-2);
+}
+details.card > summary::-webkit-details-marker { display: none; }
+details.card > summary::after { content: "▸"; margin-left: auto; color: var(--ink-3); transition: transform .15s; }
+details.card[open] > summary::after { transform: rotate(90deg); }
+.histitem { margin-top: 16px; padding-top: 14px; border-top: 1px dashed var(--line); }
+.histitem:first-child { border-top: 0; padding-top: 4px; }
+.histcap { font-size: 12px; color: var(--ink-3); margin: 0 0 8px; letter-spacing: .03em; }
+.histcap b { color: var(--ink-2); font-weight: 650; }
+.histcap .vn { font-family: var(--serif); font-style: italic; font-weight: 600; color: var(--accent); }
+.mini .hd, .mini .lb, .mini .cell, .mini .obj { min-height: 32px; font-size: clamp(11px, 3vw, 13px); }
+.mini .hd, .mini .lb { min-height: 24px; }
+.mini .cell { cursor: default; }
+.mini .cell:hover { border-color: var(--line); background: rgba(255, 255, 255, .085); }
+.mini .cell.pivcell {
+  background: linear-gradient(135deg, var(--accent) 0%, var(--accent-deep) 100%);
+  border-color: transparent; color: var(--on-accent); font-weight: 700;
+}
+
+/* ---------- overlay ---------- */
+.overlay {
+  position: fixed; inset: 0; z-index: 50;
+  background: rgba(0, 0, 40, .62);
+  display: flex; align-items: flex-end; justify-content: center;
+  -webkit-backdrop-filter: blur(3px); backdrop-filter: blur(3px);
+}
+.overlay[hidden] { display: none; }
+.sheet {
+  width: 100%; max-width: 640px;
+  background: linear-gradient(168deg, #0a4a68 0%, #002C60 55%, #00073f 100%);
+  border: 1px solid var(--line); border-bottom: 0;
+  border-radius: 18px 18px 0 0; padding: 18px 18px calc(26px + env(safe-area-inset-bottom));
+  max-height: 86vh; overflow-y: auto; box-shadow: 0 -8px 48px rgba(0, 0, 25, .55);
+}
+@media (min-width: 640px) {
+  .overlay { align-items: center; padding: 24px; }
+  .sheet { border-radius: 18px; border-bottom: 1px solid var(--line); }
+}
+.sheet h2 { margin-bottom: 10px; }
+.sheet h3 { font: 650 14px/1.3 system-ui, sans-serif; margin: 18px 0 6px; color: var(--accent); }
+.sheet p, .sheet li { font-size: 14px; color: var(--ink-2); }
+.sheet ul { padding-left: 20px; margin: 6px 0; }
+.sheet b { color: var(--ink); }
+.sheet p, .sheet li { overflow-wrap: break-word; }
+.sheet code, .kbd {
+  font-family: var(--mono); font-size: .92em; color: var(--accent);
+  background: rgba(95, 210, 236, .10); border: 1px solid rgba(95, 210, 236, .22);
+  border-radius: 5px; padding: 1px 5px;
+  white-space: nowrap; display: inline-block; max-width: 100%;
+}
+.sheet .vn { font-family: var(--serif); font-style: italic; color: var(--ink); }
+.sheetclose { margin-top: 18px; }
+
+.toast {
+  position: fixed; left: 50%; bottom: calc(22px + env(safe-area-inset-bottom));
+  transform: translateX(-50%) translateY(12px);
+  background: var(--ink); color: var(--grad-3);
+  padding: 10px 16px; border-radius: 999px; font-size: 13px; font-weight: 550;
+  opacity: 0; pointer-events: none; transition: opacity .18s, transform .18s; z-index: 80;
+  max-width: calc(100vw - 32px); text-align: center;
+  box-shadow: 0 6px 24px rgba(0, 0, 25, .5);
+}
+.toast.show { opacity: 1; transform: translateX(-50%) translateY(0); }
+
+footer { margin: 26px 2px 0; font-size: 12px; color: var(--ink-3); line-height: 1.6; }
+footer b { color: var(--ink-2); }
+
+.shake { animation: shake .3s; }
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  25% { transform: translateX(-5px); }
+  75% { transform: translateX(5px); }
+}
+.pop { animation: pop .22s ease-out; }
+@keyframes pop { from { transform: scale(.96); opacity: .4; } to { transform: scale(1); opacity: 1; } }
+@media (prefers-reduced-motion: reduce) { * { animation: none !important; transition: none !important; } }
+
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <h1>Simplex Pivoter</h1>
+    <p class="tag">Pivot a randomized Tucker tableau until you can call the outcome: one optimum, no feasible points, or unbounded above.</p>
+    <div class="modes">
+      <button id="mDaily" class="chip" aria-pressed="false">Daily challenge</button>
+      <button id="mRandom" class="chip" aria-pressed="true">Random</button>
+      <select id="size" aria-label="Puzzle size">
+        <option value="4x4" selected>4 vars &times; 4 constraints</option>
+        <option value="5x4">5 vars &times; 4 constraints</option>
+        <option value="4x5">4 vars &times; 5 constraints</option>
+        <option value="5x5">5 vars &times; 5 constraints</option>
+      </select>
+      <button id="btnNew">New puzzle</button>
+    </div>
+    <div class="stats">
+      <div><b id="sPivots">0</b><span>pivots</span></div>
+      <div><b id="sMiss">0</b><span>misses</span></div>
+      <div><b id="sPar">&ndash;</b><span>par</span></div>
+      <div class="puzid" id="puzId"></div>
+    </div>
+  </header>
+
+  <section class="card">
+    <div class="cardhead">
+      <h2>Tableau</h2>
+      <span class="pill" id="statusPill" hidden></span>
+    </div>
+    <div class="boardwrap"><div id="board" class="board" aria-label="Tucker tableau"></div></div>
+    <p class="hintline" id="hintline">Tap any nonzero entry in a constraint row to pivot there.</p>
+    <p class="rulenote" id="rulenote" hidden></p>
+
+    <div class="readout">
+      <h3>Variables at this basic solution</h3>
+      <div class="vars" id="vars"></div>
+    </div>
+
+    <div class="btnrow">
+      <button id="btnUndo">Undo</button>
+      <button id="btnRestart">Restart</button>
+      <button id="btnHints" class="toggle" aria-pressed="false">Hints: off</button>
+      <button id="btnConv" class="toggle">Form: &minus;1 (Strayer)</button>
+      <button id="btnHelp">How to play</button>
+    </div>
+  </section>
+
+  <section class="card" id="guessCard">
+    <div class="cardhead"><h2>Call it</h2></div>
+    <label class="lbl" for="verdict">Call the outcome for this problem:</label>
+    <select id="verdict" class="block">
+      <option value="">&mdash; choose one &mdash;</option>
+      <option value="optimal">Basic solution is optimal</option>
+      <option value="infeasible">Feasible region is empty</option>
+      <option value="unbounded">Objective is unbounded above</option>
+    </select>
+
+    <p class="solnote">You have to be able to read the verdict off the tableau in front of you: the right
+    outcome called from a tableau that doesn't yet establish it still counts as a miss. Get it right and
+    the solution is shown for you &mdash; decision variables, slacks and the maximum of
+    <span class="vn">f</span>.</p>
+
+    <div class="btnrow stack">
+      <button id="btnSubmit" class="primary">Submit answer</button>
+      <button id="btnGiveUp" class="ghost">Give up and show the answer</button>
+    </div>
+    <div id="feedback" aria-live="polite"></div>
+  </section>
+
+  <section class="card" id="resultCard" hidden>
+    <div class="cardhead"><h2 id="resultHead">Result</h2></div>
+    <p class="bigverdict" id="resultVerdict"></p>
+    <div class="summary" id="resultStats"></div>
+    <div class="sq" id="resultSquares"></div>
+    <div class="answer" id="resultAnswer"></div>
+    <div class="btnrow" id="resultBtns"></div>
+    <textarea class="sharebox" id="shareBox" readonly hidden aria-label="Shareable result"></textarea>
+  </section>
+
+  <details class="card" id="probCard">
+    <summary>The problem behind this tableau</summary>
+    <div id="probBody" style="margin-top:12px"></div>
+  </details>
+
+  <details class="card" id="histCard">
+    <summary>Iterations <span class="pill" id="histCount">0</span></summary>
+    <div id="history"></div>
+  </details>
+
+  <footer>
+    Free pivoting: any nonzero entry in a constraint row is a legal tap, whether or not the simplex
+    algorithm would choose it. Turn on <b>Hints</b> to highlight the entries the algorithm allows.
+    Nothing here leaves your device.
+  </footer>
+</div>
+
+<div class="overlay" id="helpOverlay" hidden>
+  <div class="sheet" role="dialog" aria-modal="true" aria-label="How to play">
+    <h2>How to play</h2>
+
+    <h3>The tableau</h3>
+    <p id="helpConv"></p>
+    <p>Variables across the top are the <b>independent</b> (nonbasic) variables and are all zero, so
+    the basic solution reads straight off the constant column. Variables down the left are
+    <b>dependent</b> (basic). The <span class="vn">x</span> variables are the decision variables and
+    the <span class="vn">t</span> variables are the slacks; both move between the top and the side as
+    you pivot, and the panel under the tableau always shows all of them.</p>
+
+    <h3>Pivoting</h3>
+    <p>Tap a nonzero entry in a constraint row. Its row label and column label trade places and the
+    tableau is rewritten so that every row still expresses its left label in terms of the new top
+    labels. <span id="helpPivRule"></span></p>
+
+    <h3>Calling it</h3>
+    <p>Exactly one of three things is true of every puzzle, each with probability one third:</p>
+    <ul>
+      <li><b>Basic solution is optimal</b> &mdash; call it and the game shows you the optimal values of
+      the decision variables, the slacks there, and the maximum of <span class="vn">f</span>.</li>
+      <li><b>Feasible region is empty</b> &mdash; some constraint row rules out every nonnegative point.</li>
+      <li><b>Objective is unbounded above</b> &mdash; from a feasible tableau, some direction raises
+      <span class="vn">f</span> forever.</li>
+    </ul>
+    <p>A call is only accepted when the tableau you are looking at <em>certifies</em> it &mdash; a
+    feasible constant column with no positive entry left in the objective row, a row that rules out every
+    nonnegative point, or a column that raises <span class="vn">f</span> forever. Naming the right
+    outcome from a tableau that does not yet show it is still a miss, so you have to pivot until the
+    answer is visible rather than guess it. Pivots and misses are both recorded, so the daily challenge
+    rewards getting there in few pivots with no wrong calls. <b>Par</b> is how many pivots the textbook
+    algorithm needs.</p>
+
+    <h3>Reading off the answer</h3>
+    <p id="helpCriteria"></p>
+
+    <button class="primary sheetclose" id="helpClose">Got it</button>
+  </div>
+</div>
+
+<div class="toast" id="toast"></div>
+
+<script>
+/* ============================================================
+   Simplex Pivoter -- single-file game.  Two parts:
+   (1) exact rational LP core, (2) the interface.
+   ============================================================ */
+/* ===========================================================
+   Simplex Pivoter -- exact rational core
+   Internal tableau convention ("+1 / t_i" form):
+
+        row i  :  L[i] = sum_j M[i][j] * T[j]  +  M[i][n]
+        row m  :  f    = sum_j M[m][j] * T[j]  +  M[m][n]
+
+   T[] = top (independent / nonbasic) labels, value 0
+   L[] = left (dependent / basic) labels
+   Last column (index n) is the constant column, header "1".
+
+   Initial tableau for   max f = c.x   s.t. Ax <= b, x >= 0 :
+        M[i][j] = -A[i][j],  M[i][n] = b[i],  L[i] = t_{i+1}
+        M[m][j] =  c[j],     M[m][n] = 0,     T[j] = x_{j+1}
+   =========================================================== */
+
+// ---------- BigInt fractions ----------
+function bgcd(a, b) { if (a < 0n) a = -a; if (b < 0n) b = -b; while (b) { const t = a % b; a = b; b = t; } return a; }
+function fr(n, d) {
+  n = BigInt(n); d = (d === undefined) ? 1n : BigInt(d);
+  if (d === 0n) throw new Error('division by zero');
+  if (d < 0n) { n = -n; d = -d; }
+  if (n === 0n) return { n: 0n, d: 1n };
+  const g = bgcd(n, d); return { n: n / g, d: d / g };
+}
+const F0 = fr(0), F1 = fr(1);
+function fadd(a, b) { return fr(a.n * b.d + b.n * a.d, a.d * b.d); }
+function fsub(a, b) { return fr(a.n * b.d - b.n * a.d, a.d * b.d); }
+function fmul(a, b) { return fr(a.n * b.n, a.d * b.d); }
+function fdiv(a, b) { return fr(a.n * b.d, a.d * b.n); }
+function fneg(a) { return { n: -a.n, d: a.d }; }
+function fsgn(a) { return a.n > 0n ? 1 : (a.n < 0n ? -1 : 0); }
+function fcmp(a, b) { return fsgn(fsub(a, b)); }
+function fz(a) { return a.n === 0n; }
+function fstr(a) { return a.d === 1n ? a.n.toString() : (a.n.toString() + '/' + a.d.toString()); }
+function fnum(a) { return Number(a.n) / Number(a.d); }
+function fparse(s) {
+  if (typeof s !== 'string') return null;
+  s = s.trim().replace(/\s+/g, '');
+  if (!s) return null;
+  let m = /^([+-]?\d+)\/([+-]?\d+)$/.exec(s);
+  if (m) { if (BigInt(m[2]) === 0n) return null; return fr(BigInt(m[1]), BigInt(m[2])); }
+  m = /^([+-]?)(\d*)\.(\d+)$/.exec(s);
+  if (m) {
+    const sign = m[1] === '-' ? -1n : 1n;
+    const whole = m[2] === '' ? 0n : BigInt(m[2]);
+    const frac = BigInt(m[3]); const den = 10n ** BigInt(m[3].length);
+    return fr(sign * (whole * den + frac), den);
+  }
+  m = /^([+-]?\d+)$/.exec(s);
+  if (m) return fr(BigInt(m[1]));
+  return null;
+}
+
+// ---------- exact linear solve (k x k) ----------
+function solveLin(Mat, vec) {
+  const k = vec.length;
+  const A = Mat.map((r, i) => r.slice().concat([vec[i]]));
+  for (let col = 0; col < k; col++) {
+    let p = -1;
+    for (let r = col; r < k; r++) if (!fz(A[r][col])) { p = r; break; }
+    if (p < 0) return null;
+    const tmp = A[col]; A[col] = A[p]; A[p] = tmp;
+    const pv = A[col][col];
+    for (let j = col; j <= k; j++) A[col][j] = fdiv(A[col][j], pv);
+    for (let r = 0; r < k; r++) {
+      if (r === col || fz(A[r][col])) continue;
+      const f = A[r][col];
+      for (let j = col; j <= k; j++) A[r][j] = fsub(A[r][j], fmul(f, A[col][j]));
+    }
+  }
+  return A.map(r => r[k]);
+}
+
+function combos(m, k) {
+  const out = [], idx = [];
+  (function rec(start) {
+    if (idx.length === k) { out.push(idx.slice()); return; }
+    for (let i = start; i < m; i++) { idx.push(i); rec(i + 1); idx.pop(); }
+  })(0);
+  return out;
+}
+const COMBO_CACHE = {};
+function combosC(m, k) { const key = m + ':' + k; return COMBO_CACHE[key] || (COMBO_CACHE[key] = combos(m, k)); }
+
+// vertices of { x in R^n : G x <= h }  (assumes pointed)
+function vertices(G, h, n) {
+  const m = G.length, verts = [];
+  const CS = combosC(m, n);
+  for (let s = 0; s < CS.length; s++) {
+    const S = CS[s];
+    const Mat = new Array(n), vec = new Array(n);
+    for (let i = 0; i < n; i++) { Mat[i] = G[S[i]]; vec[i] = h[S[i]]; }
+    const x = solveLin(Mat, vec);
+    if (!x) continue;
+    let ok = true;
+    for (let i = 0; i < m && ok; i++) {
+      let acc = F0; const gi = G[i];
+      for (let j = 0; j < n; j++) if (!fz(gi[j])) acc = fadd(acc, fmul(gi[j], x[j]));
+      if (fcmp(acc, h[i]) > 0) ok = false;
+    }
+    if (!ok) continue;
+    let dup = false;
+    for (let v = 0; v < verts.length && !dup; v++) {
+      let same = true;
+      for (let j = 0; j < n && same; j++) if (fcmp(verts[v][j], x[j]) !== 0) same = false;
+      if (same) dup = true;
+    }
+    if (!dup) verts.push(x);
+  }
+  return verts;
+}
+
+/* ---------- exact classification of  max c.x  s.t. Ax<=b, x>=0 ----------
+   returns { kind: 'infeasible' | 'unbounded' | 'optimal',
+             unique: bool, x: [F], value: F }                             */
+function classify(A, b, c) {
+  const m = A.length, n = A[0].length;
+  // primal feasible region
+  const G = [], h = [];
+  for (let i = 0; i < m; i++) { G.push(A[i].map(v => fr(v))); h.push(fr(b[i])); }
+  for (let j = 0; j < n; j++) { const r = new Array(n).fill(F0); r[j] = fr(-1); G.push(r); h.push(F0); }
+  const V = vertices(G, h, n);
+  if (V.length === 0) return { kind: 'infeasible' };
+
+  // recession cone truncated by sum r_j <= 1
+  const G2 = [], h2 = [];
+  for (let i = 0; i < m; i++) { G2.push(A[i].map(v => fr(v))); h2.push(F0); }
+  for (let j = 0; j < n; j++) { const r = new Array(n).fill(F0); r[j] = fr(-1); G2.push(r); h2.push(F0); }
+  G2.push(new Array(n).fill(F1)); h2.push(F1);
+  const R = vertices(G2, h2, n);
+  const cf = c.map(v => fr(v));
+  const dot = x => { let a = F0; for (let j = 0; j < n; j++) if (!fz(cf[j])) a = fadd(a, fmul(cf[j], x[j])); return a; };
+
+  let rayFlat = false;
+  for (const r of R) {
+    if (r.every(fz)) continue;
+    const s = fsgn(dot(r));
+    if (s > 0) return { kind: 'unbounded' };
+    if (s === 0) rayFlat = true;
+  }
+
+  let best = null, cnt = 0, arg = null;
+  for (const v of V) {
+    const val = dot(v);
+    if (best === null || fcmp(val, best) > 0) { best = val; cnt = 1; arg = v; }
+    else if (fcmp(val, best) === 0) cnt++;
+  }
+  return { kind: 'optimal', unique: (cnt === 1 && !rayFlat), x: arg, value: best };
+}
+
+// ---------- tableau (internal +1 / t_i form) ----------
+function makeTableau(A, b, c, n, m) {
+  const M = [];
+  for (let i = 0; i < m; i++) {
+    const row = [];
+    for (let j = 0; j < n; j++) row.push(fr(-A[i][j]));
+    row.push(fr(b[i]));
+    M.push(row);
+  }
+  const obj = [];
+  for (let j = 0; j < n; j++) obj.push(fr(c[j]));
+  obj.push(F0);
+  M.push(obj);
+  return {
+    n: n, m: m,
+    top: Array.from({ length: n }, (_, j) => ({ k: 'x', i: j + 1 })),
+    left: Array.from({ length: m }, (_, i) => ({ k: 't', i: i + 1 })),
+    M: M
+  };
+}
+
+function cloneTab(T) {
+  return {
+    n: T.n, m: T.m,
+    top: T.top.map(v => ({ k: v.k, i: v.i })),
+    left: T.left.map(v => ({ k: v.k, i: v.i })),
+    M: T.M.map(r => r.map(e => ({ n: e.n, d: e.d })))
+  };
+}
+
+/* Pivot on constraint row r, variable column c (0-based).
+   p = M[r][c] must be nonzero.  Swaps top[c] <-> left[r].       */
+function pivot(T, r, c) {
+  const n = T.n, m = T.m, M = T.M, p = M[r][c];
+  if (fz(p)) return null;
+  const N = M.map(row => row.slice());
+  // pivot row
+  N[r][c] = fdiv(F1, p);
+  for (let j = 0; j <= n; j++) if (j !== c) N[r][j] = fneg(fdiv(M[r][j], p));
+  // other rows (including objective row m)
+  for (let i = 0; i <= m; i++) {
+    if (i === r) continue;
+    const a = M[i][c];
+    N[i][c] = fdiv(a, p);
+    if (!fz(a)) {
+      for (let j = 0; j <= n; j++) if (j !== c) N[i][j] = fsub(M[i][j], fdiv(fmul(a, M[r][j]), p));
+    } else {
+      for (let j = 0; j <= n; j++) if (j !== c) N[i][j] = M[i][j];
+    }
+  }
+  const out = { n: n, m: m, top: T.top.slice(), left: T.left.slice(), M: N };
+  const tmp = out.top[c]; out.top[c] = out.left[r]; out.left[r] = tmp;
+  return out;
+}
+
+// state of the current tableau w.r.t. the simplex algorithm
+function tabState(T) {
+  const n = T.n, m = T.m, M = T.M;
+  let firstNeg = -1;
+  for (let i = 0; i < m; i++) if (fsgn(M[i][n]) < 0) { firstNeg = i; break; }
+  if (firstNeg >= 0) {
+    // infeasibility certificate?  row with beta<0 and all alpha<=0
+    for (let i = 0; i < m; i++) {
+      if (fsgn(M[i][n]) >= 0) continue;
+      let cert = true;
+      for (let j = 0; j < n; j++) if (fsgn(M[i][j]) > 0) { cert = false; break; }
+      if (cert) return { feasible: false, badRow: firstNeg, certifies: 'infeasible', row: i };
+    }
+    return { feasible: false, badRow: firstNeg, certifies: null };
+  }
+  let anyPos = false;
+  for (let j = 0; j < n; j++) if (fsgn(M[m][j]) > 0) { anyPos = true; break; }
+  if (!anyPos) return { feasible: true, certifies: 'optimal' };
+  for (let j = 0; j < n; j++) {
+    if (fsgn(M[m][j]) <= 0) continue;
+    let blocked = false;
+    for (let i = 0; i < m; i++) if (fsgn(M[i][j]) < 0) { blocked = true; break; }
+    if (!blocked) return { feasible: true, certifies: 'unbounded', col: j };
+  }
+  return { feasible: true, certifies: null };
+}
+
+/* Pivots allowed by the simplex algorithm (used for the optional hint).
+   Feasible case: entering column with positive objective entry, leaving
+   row by min ratio -beta_i/alpha_ic over alpha_ic < 0.
+   Infeasible case: r = topmost row with beta<0; entering column needs
+   alpha_rc > 0; leaving row = argmin over {r} u {i: beta_i>=0, alpha_ic<0}. */
+function legalPivots(T) {
+  const n = T.n, m = T.m, M = T.M, out = [];
+  const st = tabState(T);
+  if (st.certifies) return out;
+  if (st.feasible) {
+    for (let c = 0; c < n; c++) {
+      if (fsgn(M[m][c]) <= 0) continue;
+      let bestR = -1, bestRatio = null;
+      for (let i = 0; i < m; i++) {
+        if (fsgn(M[i][c]) >= 0) continue;
+        const ratio = fdiv(fneg(M[i][n]), M[i][c]);
+        if (bestRatio === null || fcmp(ratio, bestRatio) < 0) { bestRatio = ratio; bestR = i; }
+      }
+      if (bestR < 0) continue;
+      for (let i = 0; i < m; i++) {
+        if (fsgn(M[i][c]) >= 0) continue;
+        if (fcmp(fdiv(fneg(M[i][n]), M[i][c]), bestRatio) === 0) out.push([i, c]);
+      }
+    }
+  } else {
+    const r = st.badRow;
+    for (let c = 0; c < n; c++) {
+      if (fsgn(M[r][c]) <= 0) continue;
+      let bestRatio = fdiv(fneg(M[r][n]), M[r][c]), rows = [r];
+      for (let i = 0; i < m; i++) {
+        if (i === r || fsgn(M[i][n]) < 0) continue;
+        if (fsgn(M[i][c]) >= 0) continue;
+        const ratio = fdiv(fneg(M[i][n]), M[i][c]);
+        const cp = fcmp(ratio, bestRatio);
+        if (cp < 0) { bestRatio = ratio; rows = [i]; }
+        else if (cp === 0 && !rows.includes(r)) rows.push(i);
+      }
+      for (const i of rows) out.push([i, c]);
+    }
+  }
+  return out;
+}
+
+// current basic solution: value of every variable + objective
+function basicSolution(T) {
+  const n = T.n, m = T.m, vals = {};
+  for (const v of T.top) vals[v.k + v.i] = F0;
+  for (let i = 0; i < m; i++) vals[T.left[i].k + T.left[i].i] = T.M[i][n];
+  return { vals: vals, f: T.M[m][n] };
+}
+
+// ---------- seeded PRNG ----------
+function mulberry32(a) {
+  return function () {
+    a |= 0; a = (a + 0x6D2B79F5) | 0;
+    let t = Math.imul(a ^ (a >>> 15), 1 | a);
+    t = (t + Math.imul(t ^ (t >>> 7), 61 | t)) ^ t;
+    return ((t ^ (t >>> 14)) >>> 0) / 4294967296;
+  };
+}
+function hashStr(s) {
+  let h = 2166136261 >>> 0;
+  for (let i = 0; i < s.length; i++) { h ^= s.charCodeAt(i); h = Math.imul(h, 16777619) >>> 0; }
+  return h >>> 0;
+}
+
+// ---------- puzzle generation ----------
+// One sampling distribution for every target category, so the shape of the
+// tableau never gives the answer away.
+function sampleInstance(rnd, n, m) {
+  const ri = (lo, hi) => lo + Math.floor(rnd() * (hi - lo + 1));
+  const A = [], b = [], c = [];
+  const aVals = [-3, -2, -2, -1, -1, 0, 1, 1, 2, 2, 3, 3, 4];
+  for (let i = 0; i < m; i++) {
+    const row = [];
+    for (let j = 0; j < n; j++) row.push(aVals[Math.floor(rnd() * aVals.length)]);
+    A.push(row);
+  }
+  for (let i = 0; i < m; i++) b.push(rnd() < 0.34 ? -ri(1, 6) : ri(0, 9));
+  for (let j = 0; j < n; j++) c.push(rnd() < 0.2 ? -ri(1, 3) : ri(1, 6));
+  return { A: A, b: b, c: c };
+}
+
+function maxDen(xs) { let d = 1n; for (const x of xs) if (x.d > d) d = x.d; return d; }
+
+/* Play the textbook algorithm (legalPivots, lowest index on ties) to a
+   certificate.  Used to grade difficulty and to publish a "par". */
+function solvePath(A, b, c, n, m) {
+  let T = makeTableau(A, b, c, n, m);
+  for (let step = 0; step < 300; step++) {
+    const st = tabState(T);
+    if (st.certifies) return { kind: st.certifies, pivots: step, T: T };
+    const lp = legalPivots(T);
+    if (!lp.length) return { kind: 'stuck', pivots: step, T: T };
+    T = pivot(T, lp[0][0], lp[0][1]);
+  }
+  return { kind: 'cycle', pivots: 300, T: T };
+}
+
+// reject instances whose answer is visible in the starting tableau
+function tooEasy(inst, kind, n, m) {
+  const { A, b, c } = inst;
+  const T = makeTableau(A, b, c, n, m);
+  const st = tabState(T);
+  if (st.certifies) return true;           // starting tableau already settles it
+  if (kind === 'optimal') {
+    const lp = inst._lp;
+    let pos = 0; for (const v of lp.x) if (fsgn(v) > 0) pos++;
+    if (pos < 2) return true;              // want at least a couple of pivots
+    if (maxDen(lp.x) > 12n) return true;   // keep the answer typable
+    if (fsgn(lp.value) <= 0) return true;
+  }
+  if (legalPivots(T).length === 0) return true;
+  // difficulty floor: the textbook path must take a few pivots
+  const path = solvePath(A, b, c, n, m);
+  if (path.kind !== kind) return true;               // paranoia: paths must agree
+  inst._par = path.pivots;
+  if (path.pivots < (kind === 'optimal' ? 3 : 2)) return true;
+  if (path.pivots > 9) return true;                  // keep a session finite
+  return false;
+}
+
+function generatePuzzle(seedStr, n, m, forcedKind) {
+  const KINDS = ['optimal', 'infeasible', 'unbounded'];
+  const rnd = mulberry32(hashStr(seedStr));
+  const target = forcedKind || KINDS[Math.floor(rnd() * 3)];
+  let fallback = null;
+  for (let attempt = 0; attempt < 4000; attempt++) {
+    const inst = sampleInstance(rnd, n, m);
+    const res = classify(inst.A, inst.b, inst.c);
+    let kind = res.kind;
+    if (kind === 'optimal' && !res.unique) continue;
+    inst._lp = res;
+    if (tooEasy(inst, kind, n, m)) continue;
+    const puz = {
+      A: inst.A, b: inst.b, c: inst.c, n: n, m: m,
+      kind: kind,
+      x: res.x ? res.x.map(fstr) : null,
+      value: res.value ? fstr(res.value) : null,
+      par: inst._par,
+      seed: seedStr, attempts: attempt + 1
+    };
+    if (kind === target) return puz;
+    if (!fallback) fallback = puz;
+  }
+  return fallback;
+}
+
+
+/* =======================  UI  ======================= */
+const $ = id => document.getElementById(id);
+const SUB = ['₀', '₁', '₂', '₃', '₄', '₅', '₆', '₇', '₈', '₉'];
+const MINUS = '−';
+
+// ---------- prefs / storage ----------
+const store = {
+  get(k, d) { try { const v = localStorage.getItem(k); return v === null ? d : JSON.parse(v); } catch (e) { return d; } },
+  set(k, v) { try { localStorage.setItem(k, JSON.stringify(v)); } catch (e) { } }
+};
+let prefs = Object.assign({ conv: 'A', hints: false, histOpen: false }, store.get('sp_prefs', {}));
+const savePrefs = () => store.set('sp_prefs', prefs);
+
+// ---------- daily bookkeeping ----------
+const EPOCH_UTC = Date.UTC(2026, 0, 1);
+function todayKey() {
+  const d = new Date();
+  const p = n => (n < 10 ? '0' : '') + n;
+  return d.getFullYear() + '-' + p(d.getMonth() + 1) + '-' + p(d.getDate());
+}
+// normalise through Date.UTC so daylight-saving shifts can never skip or
+// repeat a day number
+function dayNumber() {
+  const d = new Date();
+  return Math.round((Date.UTC(d.getFullYear(), d.getMonth(), d.getDate()) - EPOCH_UTC) / 86400000) + 1;
+}
+
+// ---------- state ----------
+let S = null;
+
+function newGame(mode, sizeStr, opts) {
+  opts = opts || {};
+  let n = 4, m = 4, seed, dayNum = null, dateKey = null;
+  if (mode === 'daily') {
+    dateKey = todayKey(); dayNum = dayNumber();
+    seed = 'simplex-daily-' + dateKey;
+  } else {
+    const mm = /^(\d)x(\d)$/.exec(sizeStr || '4x4');
+    n = +mm[1]; m = +mm[2];
+    seed = 'r-' + Date.now() + '-' + Math.floor(Math.random() * 1e9);
+  }
+  const puz = generatePuzzle(seed, n, m);
+  if (!puz) { toast('Could not build a puzzle — try again.'); return; }
+  S = {
+    mode: mode, puz: puz, n: puz.n, m: puz.m,
+    tabs: [makeTableau(puz.A, puz.b, puz.c, puz.n, puz.m)],
+    moves: [], misses: 0,
+    finished: false, won: false, gaveUp: false,
+    dayNum: dayNum, dateKey: dateKey
+  };
+  if (mode === 'daily') {
+    const saved = store.get('sp_d_' + dateKey, null);
+    if (saved && saved.seed === seed) {
+      (saved.moves || []).forEach(mv => { const t = pivot(cur(), mv[0], mv[1]); if (t) { S.tabs.push(t); S.moves.push(mv); } });
+      S.misses = saved.misses || 0;
+      S.finished = !!saved.finished; S.won = !!saved.won; S.gaveUp = !!saved.gaveUp;
+    }
+  }
+  $('size').disabled = (mode === 'daily');
+  store.set('sp_lastMode', mode);
+  $('verdict').value = ''; $('feedback').innerHTML = ''; $('shareBox').hidden = true;
+  const stray = $('resultCard').querySelectorAll('details'); stray.forEach(d => d.remove());
+  renderAll();
+  if (S.finished) showResult();
+  else { $('resultCard').hidden = true; $('guessCard').hidden = false; }
+}
+
+const cur = () => S.tabs[S.tabs.length - 1];
+
+function saveDaily() {
+  if (S.mode !== 'daily') return;
+  store.set('sp_d_' + S.dateKey, {
+    seed: S.puz.seed, moves: S.moves, misses: S.misses,
+    finished: S.finished, won: S.won, gaveUp: S.gaveUp
+  });
+}
+
+function recordStats() {
+  if (S.mode !== 'daily') return;
+  const st = store.get('sp_stats', { played: 0, won: 0, cur: 0, max: 0, last: null });
+  if (st.last === S.dateKey) return;
+  st.played++;
+  if (S.won) { st.won++; st.cur = (st.lastWon === S.dayNum - 1) ? st.cur + 1 : 1; st.lastWon = S.dayNum; if (st.cur > st.max) st.max = st.cur; }
+  else st.cur = 0;
+  st.last = S.dateKey;
+  store.set('sp_stats', st);
+}
+
+// ---------- display helpers ----------
+function sub(i) { return String(i).split('').map(ch => SUB[+ch]).join(''); }
+function vName(v, negate) { return (negate ? MINUS : '') + v.k + sub(v.i); }
+function vHTML(v) { return '<span class="vn">' + v.k + sub(v.i) + '</span>'; }
+
+function fracHTML(f) {
+  if (f.d === 1n) return f.n.toString().replace('-', MINUS);
+  const neg = f.n < 0n;
+  const num = (neg ? -f.n : f.n).toString();
+  return (neg ? '<span class="neg">' + MINUS + '</span>' : '') +
+    '<span class="fr"><i>' + num + '</i><i>' + f.d.toString() + '</i></span>';
+}
+function fracText(f) { return fstr(f).replace('-', MINUS); }
+
+// entry as displayed under the current convention
+function dispEntry(T, i, j) {
+  const e = T.M[i][j];
+  if (prefs.conv === 'B') return e;
+  if (i < T.m) return (j < T.n) ? fneg(e) : e;
+  return (j < T.n) ? e : fneg(e);
+}
+const constHeader = () => prefs.conv === 'B' ? '1' : MINUS + '1';
+const negLabels = () => prefs.conv === 'A';
+
+// ---------- board ----------
+function renderBoard(T, host, opts) {
+  opts = opts || {};
+  const n = T.n, m = T.m;
+  host.innerHTML = '';
+  const w = opts.mini ? '30px' : '44px';
+  host.style.gridTemplateColumns = 'minmax(34px,auto) repeat(' + n + ', minmax(' + w + ',1fr)) minmax(' + w + ',1fr)';
+  const legal = opts.legal || [];
+  const isLegal = (i, j) => legal.some(p => p[0] === i && p[1] === j);
+
+  const add = (cls, html, attrs) => {
+    const el = document.createElement(attrs && attrs.btn ? 'button' : 'div');
+    el.className = cls; el.innerHTML = html;
+    if (attrs) { if (attrs.r !== undefined) el.dataset.r = attrs.r; if (attrs.c !== undefined) el.dataset.c = attrs.c; if (attrs.label) el.setAttribute('aria-label', attrs.label); }
+    host.appendChild(el); return el;
+  };
+
+  add('corner', '');
+  for (let j = 0; j < n; j++) add('hd', T.top[j].k + '<sub>' + T.top[j].i + '</sub>');
+  add('hd konsthd', constHeader());
+
+  for (let i = 0; i < m; i++) {
+    add('lb', (negLabels() ? MINUS : '') + T.left[i].k + '<sub>' + T.left[i].i + '</sub>');
+    for (let j = 0; j < n; j++) {
+      const e = T.M[i][j], d = dispEntry(T, i, j);
+      let cls = 'cell';
+      if (fz(e)) cls += ' dead';
+      if (opts.mini) cls += (opts.piv && opts.piv[0] === i && opts.piv[1] === j) ? ' pivcell' : '';
+      else {
+        if (isLegal(i, j)) cls += ' legal';
+        if (opts.last && opts.last[0] === i && opts.last[1] === j) cls += ' lastpiv';
+      }
+      const el = add(cls, fracHTML(d), {
+        btn: !opts.mini && !fz(e) && !opts.frozen, r: i, c: j,
+        label: 'pivot on row ' + vName(T.left[i], negLabels()) + ', column ' + vName(T.top[j]) + ', entry ' + fracText(d)
+      });
+      if (!opts.mini && !fz(e) && !opts.frozen) el.addEventListener('click', () => doPivot(i, j));
+    }
+    add('cell konst dead', fracHTML(dispEntry(T, i, n)));
+  }
+
+  add('rule', '');
+  add('lb objlb', 'f');
+  for (let j = 0; j < n; j++) add('obj', fracHTML(dispEntry(T, m, j)));
+  add('obj konst', fracHTML(dispEntry(T, m, n)));
+}
+
+// ---------- readout ----------
+function renderVars(T) {
+  const bs = basicSolution(T), host = $('vars');
+  host.innerHTML = '';
+  const order = [];
+  for (let j = 1; j <= T.n; j++) order.push('x' + j);
+  for (let i = 1; i <= T.m; i++) order.push('t' + i);
+  const basicSet = new Set(T.left.map(v => v.k + v.i));
+  order.forEach(key => {
+    const v = bs.vals[key];
+    if (v === undefined) return;
+    const isB = basicSet.has(key);
+    let cls = 'vchip' + (isB ? ' basic' : '');
+    if (isB && fsgn(v) < 0) cls = 'vchip negv';
+    const el = document.createElement('span');
+    el.className = cls;
+    el.innerHTML = '<span class="vn">' + key[0] + sub(key.slice(1)) + '</span> = ' + fracHTML(v);
+    host.appendChild(el);
+  });
+  const fe = document.createElement('span');
+  fe.className = 'vchip obj';
+  fe.innerHTML = '<span class="vn">f</span> = ' + fracHTML(bs.f);
+  host.appendChild(fe);
+}
+
+const RULE_NOTE = {
+  A: '<b>Pivot rule</b> (p = the entry you tap): <code>p → 1/p</code>, rest of the pivot row '
+    + '<code>a → a/p</code>, rest of the pivot column <code>a → −a/p</code>, every other entry '
+    + '<code>a → a − bc/p</code>. <em>The −1 column is an ordinary column here — it follows the same rule, '
+    + 'so the pivot row’s b entry is divided by p.</em>',
+  B: '<b>Pivot rule</b> (p = the entry you tap): <code>p → 1/p</code>, rest of the pivot row '
+    + '<code>a → −a/p</code>, rest of the pivot column <code>a → a/p</code>, every other entry '
+    + '<code>a → a − bc/p</code>. <em>The pivot-row signs are the mirror of Strayer’s, because every '
+    + 'constraint entry here is −aᵢⱼ and so is the pivot entry. The constant column follows the same rule.</em>'
+};
+
+function renderHints(T) {
+  const pill = $('statusPill'), line = $('hintline'), note = $('rulenote');
+  note.hidden = !prefs.hints;
+  if (prefs.hints) note.innerHTML = RULE_NOTE[prefs.conv];
+  if (!prefs.hints) {
+    pill.hidden = true;
+    line.className = 'hintline';
+    line.textContent = S.finished ? 'Puzzle over — see the result below.'
+      : 'Tap any nonzero entry in a constraint row to pivot there.';
+    return renderBoardMain(T, []);
+  }
+  const st = tabState(T);
+  pill.hidden = false;
+  if (!st.feasible) { pill.className = 'pill no'; pill.textContent = 'basic solution not feasible'; }
+  else { pill.className = 'pill ok'; pill.textContent = 'basic solution feasible'; }
+  const legal = legalPivots(T);
+  line.className = 'hintline warn';
+  if (st.certifies) {
+    line.textContent = 'No pivot is called for — this tableau already settles the question.';
+  } else if (!st.feasible) {
+    line.textContent = 'Row ' + vName(T.left[st.badRow], negLabels()) + ' is negative. Enter a column whose entry in that row is '
+      + (prefs.conv === 'B' ? 'positive' : 'negative') + ', then leave on the smallest ratio.';
+  } else {
+    line.textContent = 'Feasible. The objective row still has a '
+      + (prefs.conv === 'B' ? 'positive' : 'positive') + ' entry — enter that column and leave on the min ratio.';
+  }
+  renderBoardMain(T, legal);
+}
+
+function renderBoardMain(T, legal) {
+  renderBoard(T, $('board'), {
+    legal: legal, frozen: S.finished,
+    last: S.moves.length ? S.moves[S.moves.length - 1] : null
+  });
+}
+
+// ---------- history ----------
+function renderHistory() {
+  const host = $('history');
+  host.innerHTML = '';
+  $('histCount').textContent = S.moves.length;
+  for (let k = 0; k < S.tabs.length; k++) {
+    const item = document.createElement('div'); item.className = 'histitem';
+    const cap = document.createElement('p'); cap.className = 'histcap';
+    const T = S.tabs[k];
+    if (k < S.moves.length) {
+      const mv = S.moves[k];
+      cap.innerHTML = (k === 0 ? '<b>Start</b>' : '<b>After ' + k + ' pivot' + (k > 1 ? 's' : '') + '</b>')
+        + ' &mdash; pivot ' + (k + 1) + ' on row <span class="vn">' + vName(T.left[mv[0]], negLabels()) + '</span>, column <span class="vn">' + vName(T.top[mv[1]]) + '</span>';
+    } else {
+      cap.innerHTML = (k === 0 ? '<b>Start</b> &mdash; no pivots yet' : '<b>Current</b> &mdash; after ' + k + ' pivot' + (k > 1 ? 's' : ''));
+    }
+    item.appendChild(cap);
+    const wrap = document.createElement('div'); wrap.className = 'boardwrap';
+    const g = document.createElement('div'); g.className = 'board mini';
+    wrap.appendChild(g); item.appendChild(wrap);
+    host.appendChild(item);
+    renderBoard(T, g, { mini: true, piv: k < S.moves.length ? S.moves[k] : null });
+  }
+}
+
+// ---------- problem statement ----------
+function problemHTML(puz) {
+  const term = (co, j, first) => {
+    if (co === 0) return '';
+    const a = Math.abs(co);
+    const sign = co < 0 ? (first ? MINUS : ' ' + MINUS + ' ') : (first ? '' : ' + ');
+    return sign + (a === 1 ? '' : a) + 'x' + sub(j + 1);
+  };
+  const lin = arr => {
+    let s = '', first = true;
+    for (let j = 0; j < arr.length; j++) { const t = term(arr[j], j, first); if (t) { s += t; first = false; } }
+    return s || '0';
+  };
+  let h = '<p style="font-family:var(--serif);font-size:15px;margin:0 0 8px">maximize &nbsp;<i>f</i> = ' + lin(puz.c) + '</p>';
+  h += '<p style="font-family:var(--serif);font-size:15px;margin:0">subject to</p><ul style="font-family:var(--serif);font-size:15px;margin:6px 0 0;padding-left:20px">';
+  for (let i = 0; i < puz.m; i++) h += '<li>' + lin(puz.A[i]) + ' &le; ' + String(puz.b[i]).replace('-', MINUS) + '</li>';
+  h += '</ul><p style="font-family:var(--serif);font-size:15px;margin:8px 0 0">' +
+    Array.from({ length: puz.n }, (_, j) => 'x' + sub(j + 1)).join(', ') + ' &ge; 0</p>';
+  return h;
+}
+
+// ---------- main render ----------
+function renderAll() {
+  const T = cur();
+  renderHints(T);
+  renderVars(T);
+  renderHistory();
+  $('sPivots').textContent = S.moves.length;
+  $('sMiss').textContent = S.misses;
+  $('sPar').textContent = S.finished ? S.puz.par : '?';
+  $('puzId').textContent = S.mode === 'daily'
+    ? 'Daily #' + S.dayNum + ' · ' + S.n + '×' + S.m
+    : 'Random · ' + S.n + '×' + S.m;
+  $('mDaily').setAttribute('aria-pressed', S.mode === 'daily');
+  $('mRandom').setAttribute('aria-pressed', S.mode === 'random');
+  $('btnUndo').disabled = S.moves.length === 0 || S.finished;
+  $('btnRestart').disabled = S.moves.length === 0;
+  $('btnSubmit').disabled = S.finished;
+  $('btnGiveUp').disabled = S.finished;
+  $('verdict').disabled = S.finished;
+  $('probBody').innerHTML = problemHTML(S.puz);
+}
+
+// ---------- pivoting ----------
+function doPivot(r, c) {
+  if (S.finished) return;
+  const T = pivot(cur(), r, c);
+  if (!T) { toast('You cannot pivot on a zero entry.'); return; }
+  S.tabs.push(T); S.moves.push([r, c]);
+  saveDaily();
+  renderAll();
+  $('board').classList.remove('pop'); void $('board').offsetWidth; $('board').classList.add('pop');
+}
+
+// ---------- guess ----------
+function fb(cls, html) { $('feedback').innerHTML = '<div class="fb ' + cls + '">' + html + '</div>'; }
+
+/* A call only counts when the tableau in front of the player actually
+   certifies it — tabState returns 'optimal' / 'infeasible' / 'unbounded'
+   only for a terminal tableau, and those certificates are sound, so
+   cert === v already implies v is the right outcome for the problem.
+   The miss message is deliberately identical in both failure cases: a
+   different wording for "right call, wrong tableau" would give the
+   answer away. */
+function submitGuess() {
+  if (S.finished) return;
+  const v = $('verdict').value;
+  if (!v) { toast('Choose one of the three outcomes first.'); shake($('verdict')); return; }
+  if (tabState(cur()).certifies === v) return win();
+  S.misses++; saveDaily(); renderAll();
+  fb('no', 'This tableau does not establish that. <b>' + S.misses + ' miss' + (S.misses > 1 ? 'es' : '')
+    + '</b> so far — keep pivoting.');
+  shake($('guessCard'));
+}
+
+function win() { S.finished = true; S.won = true; saveDaily(); recordStats(); $('feedback').innerHTML = ''; renderAll(); showResult(); }
+function giveUp() {
+  if (S.finished) return;
+  const b = $('btnGiveUp');
+  if (b.dataset.armed !== '1') { b.dataset.armed = '1'; b.textContent = 'Tap again to reveal the answer'; setTimeout(() => { b.dataset.armed = ''; b.textContent = 'Give up and show the answer'; }, 4000); return; }
+  S.finished = true; S.won = false; S.gaveUp = true;
+  saveDaily(); recordStats(); $('feedback').innerHTML = ''; renderAll(); showResult();
+}
+
+// ---------- result ----------
+const VERDICT_TEXT = {
+  optimal: 'Basic solution is optimal',
+  infeasible: 'Feasible region is empty',
+  unbounded: 'Objective is unbounded above'
+};
+const VERDICT_EMOJI = { optimal: '🎯', infeasible: '⛔', unbounded: '♾️' };
+
+/* "−2 − x₁ − 2x₄" from a constant and a list of coefficients */
+function linExpr(constF, coeffs, names) {
+  let s = fracText(constF);
+  for (let j = 0; j < coeffs.length; j++) {
+    const a = coeffs[j];
+    if (fz(a)) continue;
+    const neg = fsgn(a) < 0, mag = neg ? fneg(a) : a;
+    const co = (mag.n === 1n && mag.d === 1n) ? '' : (mag.d === 1n ? mag.n.toString() : '(' + fstr(mag) + ')');
+    s += (neg ? ' ' + MINUS + ' ' : ' + ') + co + names[j];
+  }
+  return s;
+}
+
+function explainHTML(puz) {
+  const path = solvePath(puz.A, puz.b, puz.c, puz.n, puz.m);
+  const T = path.T, n = T.n, m = T.m;
+  const topNames = T.top.map(v => vName(v));
+  if (puz.kind === 'optimal') {
+    let s = '<div><b>Optimal solution:</b> ';
+    s += puz.x.map((v, j) => '<span class="vn">x' + sub(j + 1) + '</span> = ' + v.replace('-', MINUS)).join(',&nbsp; ');
+    s += '</div><div style="margin-top:6px"><b>Maximum:</b> <span class="vn">f</span> = ' + puz.value.replace('-', MINUS) + '</div>';
+    const bs = basicSolution(T);
+    s += '<div style="margin-top:6px;color:var(--ink-3)">Slacks there: ' +
+      Array.from({ length: m }, (_, i) => '<span class="vn">t' + sub(i + 1) + '</span> = ' + fracText(bs.vals['t' + (i + 1)])).join(',&nbsp; ') + '</div>';
+    return s;
+  }
+  if (puz.kind === 'infeasible') {
+    const r = tabState(T).row;
+    return '<div><b>No feasible point exists.</b></div><div style="margin-top:8px">After ' + path.pivots +
+      ' pivot' + (path.pivots === 1 ? '' : 's') + ' the tableau states the identity<div style="font-family:var(--mono);margin:6px 0;font-size:14px">' +
+      vName(T.left[r]) + ' = ' + linExpr(T.M[r][n], T.M[r].slice(0, n), topNames) +
+      '</div>and every term on the right is &le; 0 while the left side must be &ge; 0 — so no nonnegative point satisfies all the constraints at once.</div>';
+  }
+  const c = tabState(T).col;
+  const lines = [];
+  for (let i = 0; i < m; i++) lines.push(vName(T.left[i]) + ' = ' + linExpr(T.M[i][n], [T.M[i][c]], [vName(T.top[c])]));
+  lines.push('f = ' + linExpr(T.M[m][n], [T.M[m][c]], [vName(T.top[c])]));
+  return '<div><b>The objective is unbounded above.</b></div><div style="margin-top:8px">After ' + path.pivots +
+    ' pivot' + (path.pivots === 1 ? '' : 's') + ', hold every top variable at 0 except <span class="vn">' + vName(T.top[c]) +
+    '</span> and let that one grow:<div style="font-family:var(--mono);margin:6px 0;font-size:14px">' + lines.join('<br>') +
+    '</div>every basic variable stays &ge; 0 no matter how large <span class="vn">' + vName(T.top[c]) +
+    '</span> gets, while <span class="vn">f</span> grows without bound.</div>';
+}
+
+function shareText() {
+  const p = S.puz;
+  const head = S.mode === 'daily'
+    ? 'Simplex Pivoter · Daily #' + S.dayNum + ' (' + S.n + '×' + S.m + ')'
+    : 'Simplex Pivoter · random ' + S.n + '×' + S.m;
+  const l2 = VERDICT_EMOJI[p.kind] + ' ' + VERDICT_TEXT[p.kind] + (S.won ? ' ✅' : ' ❌');
+  const l3 = S.moves.length + ' pivot' + (S.moves.length === 1 ? '' : 's') + ' (par ' + p.par + ') · '
+    + S.misses + ' miss' + (S.misses === 1 ? '' : 'es');
+  const np = Math.min(S.moves.length, 24);
+  let sq = '🟦'.repeat(np) + (S.moves.length > 24 ? '+' : '') + '🟥'.repeat(Math.min(S.misses, 10)) + (S.won ? '✅' : '💀');
+  return head + '\n' + l2 + '\n' + l3 + '\n' + sq;
+}
+
+function showResult() {
+  const p = S.puz, card = $('resultCard');
+  card.hidden = false;
+  $('guessCard').hidden = true;
+  $('resultHead').textContent = S.won ? 'Solved' : 'Answer revealed';
+  // the emoji sits outside the gradient-clipped span, or it renders as a solid block
+  $('resultVerdict').innerHTML = '<span class="mark">' + (S.won ? '✅' : '❌') + '</span>'
+    + '<span class="grad">' + VERDICT_TEXT[p.kind] + '</span>';
+  $('resultStats').innerHTML =
+    '<span class="pill">' + S.moves.length + ' pivot' + (S.moves.length === 1 ? '' : 's') + '</span>' +
+    '<span class="pill">par ' + p.par + '</span>' +
+    '<span class="pill' + (S.misses ? ' no' : ' ok') + '">' + S.misses + ' miss' + (S.misses === 1 ? '' : 'es') + '</span>' +
+    (S.mode === 'daily' ? '<span class="pill">Daily #' + S.dayNum + '</span>' : '');
+  $('resultSquares').textContent = '🟦'.repeat(Math.min(S.moves.length, 24)) + '🟥'.repeat(Math.min(S.misses, 10)) + (S.won ? '✅' : '💀');
+  $('resultAnswer').innerHTML = explainHTML(p);
+
+  const btns = $('resultBtns');
+  btns.innerHTML = '';
+  if (S.mode === 'daily') {
+    const b = document.createElement('button'); b.className = 'primary'; b.textContent = 'Share result';
+    b.addEventListener('click', doShare); btns.appendChild(b);
+  }
+  const b2 = document.createElement('button'); b2.textContent = S.mode === 'daily' ? 'Play a random puzzle' : 'New random puzzle';
+  b2.addEventListener('click', () => { if (S.mode === 'daily') setMode('random'); else newGame('random', $('size').value); });
+  btns.appendChild(b2);
+  const b3 = document.createElement('button'); b3.textContent = 'Show the textbook path';
+  b3.addEventListener('click', () => { b3.remove(); showPath(); });
+  btns.appendChild(b3);
+  $('shareBox').hidden = true;
+  card.classList.add('pop');
+  card.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+}
+
+function showPath() {
+  const p = S.puz;
+  const d = document.createElement('details'); d.className = 'card'; d.style.margin = '14px 0 0'; d.open = true;
+  d.innerHTML = '<summary>Textbook path <span class="pill">' + p.par + ' pivot' + (p.par === 1 ? '' : 's') + '</span></summary>';
+  const body = document.createElement('div'); d.appendChild(body);
+  $('resultCard').appendChild(d);
+  let T = makeTableau(p.A, p.b, p.c, p.n, p.m), k = 0;
+  while (k < 60) {
+    const st = tabState(T);
+    const lp = st.certifies ? [] : legalPivots(T);
+    const mv = lp.length ? lp[0] : null;
+    const item = document.createElement('div'); item.className = 'histitem';
+    const cap = document.createElement('p'); cap.className = 'histcap';
+    cap.innerHTML = k === 0 ? '<b>Start</b>' : '<b>After ' + k + ' pivot' + (k > 1 ? 's' : '') + '</b>';
+    if (mv) cap.innerHTML += ' &mdash; pivot on row <span class="vn">' + vName(T.left[mv[0]], negLabels()) + '</span>, column <span class="vn">' + vName(T.top[mv[1]]) + '</span>';
+    else cap.innerHTML += ' &mdash; ' + (st.certifies === 'optimal' ? 'optimal: no positive entry left in the objective row'
+      : st.certifies === 'infeasible' ? 'a row now certifies infeasibility' : 'a column now certifies unboundedness');
+    item.appendChild(cap);
+    const wrap = document.createElement('div'); wrap.className = 'boardwrap';
+    const g = document.createElement('div'); g.className = 'board mini';
+    wrap.appendChild(g); item.appendChild(wrap);
+    body.appendChild(item);
+    renderBoard(T, g, { mini: true, piv: mv });
+    if (!mv) break;
+    T = pivot(T, mv[0], mv[1]); k++;
+  }
+}
+
+function doShare() {
+  const txt = shareText();
+  const done = () => toast('Result copied.');
+  if (navigator.share) {
+    navigator.share({ text: txt }).then(() => { }, () => copy(txt, done));
+    return;
+  }
+  copy(txt, done);
+}
+function copy(txt, done) {
+  const box = $('shareBox');
+  box.hidden = false; box.value = txt;
+  if (navigator.clipboard && navigator.clipboard.writeText) {
+    navigator.clipboard.writeText(txt).then(done, () => { box.select(); toast('Select and copy the text above.'); });
+  } else {
+    box.select();
+    try { document.execCommand('copy'); done(); } catch (e) { toast('Select and copy the text above.'); }
+  }
+}
+
+// ---------- misc UI ----------
+let toastTimer = null;
+function toast(msg) {
+  const t = $('toast'); t.textContent = msg; t.classList.add('show');
+  clearTimeout(toastTimer); toastTimer = setTimeout(() => t.classList.remove('show'), 2200);
+}
+function shake(el) { el.classList.remove('shake'); void el.offsetWidth; el.classList.add('shake'); }
+
+function setMode(mode) {
+  newGame(mode, $('size').value);
+}
+
+function updateHelpText() {
+  if (prefs.conv === 'B') {
+    $('helpConv').innerHTML = 'Each row is an equation. With the <b>+1 form</b> (the one showing now) row ' +
+      '<span class="vn">i</span> reads <code>left label = (entries) · (top variables) + constant</code>, that is ' +
+      '<span class="vn">t<sub>i</sub></span> = <span class="vn">b<sub>i</sub></span> &minus; &Sigma; <span class="vn">a<sub>ij</sub> x<sub>j</sub></span>, ' +
+      'and the bottom row reads <span class="vn">f</span> = &Sigma; <span class="vn">c<sub>j</sub> x<sub>j</sub></span> + constant. ' +
+      'So values are read off directly and the last column <i>is</i> the current basic solution.';
+    $('helpPivRule').innerHTML = 'With the +1 form the arithmetic on pivot entry <span class="vn">p</span> is: ' +
+      '<code>p → 1/p</code>, the rest of the pivot row <code>a → −a/p</code>, the rest of the pivot column ' +
+      '<code>a → a/p</code>, and every other entry <code>a → a − bc/p</code> where <span class="vn">b</span> and ' +
+      '<span class="vn">c</span> are its neighbours in the pivot column and pivot row.';
+    $('helpCriteria').innerHTML = 'The basic solution is <b>feasible</b> when every entry in the constant column is ' +
+      '&ge; 0. It is <b>optimal</b> when, in addition, no entry in the objective row is positive. A row with a ' +
+      'negative constant and no positive entry proves the <b>feasible region is empty</b>. A column with a positive ' +
+      'objective entry and no negative entry above it, in a feasible tableau, proves the objective is <b>unbounded</b>.';
+  } else {
+    $('helpConv').innerHTML = 'Each row is an equation read against the column headings, the last of which is ' +
+      '<code>−1</code>. With the <b>−1 form</b> (Strayer\'s Tucker tableau, the one showing now) row ' +
+      '<span class="vn">i</span> reads <code>−t_i = Σ a_ij x_j − b_i</code>: the entries are the coefficients ' +
+      '<span class="vn">a<sub>ij</sub></span> and <span class="vn">b<sub>i</sub></span> exactly as they appear in the ' +
+      'constraints, and the row labels carry the minus sign. The bottom row reads ' +
+      '<span class="vn">f</span> = &Sigma; <span class="vn">c<sub>j</sub> x<sub>j</sub></span> &minus; <span class="vn">d</span>.';
+    $('helpPivRule').innerHTML = 'With the −1 form this is the classic Tucker pivot on entry <span class="vn">p</span>: ' +
+      '<code>p → 1/p</code>, the rest of the pivot row <code>a → a/p</code>, the rest of the pivot column ' +
+      '<code>a → −a/p</code>, and every other entry <code>a → (ap − bc)/p</code>.';
+    $('helpCriteria').innerHTML = 'The basic solution is <b>feasible</b> when every entry in the −1 column is &ge; 0 ' +
+      '(those entries are the values of the basic variables). It is <b>optimal</b> when no objective-row entry over a ' +
+      'variable column is positive. A constant entry that is negative in a row with no negative coefficient proves the ' +
+      '<b>feasible region is empty</b>; a column with a positive objective entry and no positive entry above it, in a ' +
+      'feasible tableau, proves the objective is <b>unbounded above</b>.';
+  }
+}
+
+// ---------- wiring ----------
+function init() {
+  $('btnConv').addEventListener('click', () => {
+    prefs.conv = prefs.conv === 'B' ? 'A' : 'B'; savePrefs();
+    $('btnConv').textContent = 'Form: ' + (prefs.conv === 'B' ? '+1' : MINUS + '1 (Strayer)');
+    updateHelpText(); renderAll();
+    toast(prefs.conv === 'B' ? 'Showing the +1 form: tᵢ = bᵢ − Σaᵢⱼxⱼ — pivot-row signs mirror Strayer’s'
+      : 'Showing Strayer’s −1 form: −tᵢ row labels, entries aᵢⱼ');
+  });
+  $('btnHints').addEventListener('click', () => {
+    prefs.hints = !prefs.hints; savePrefs();
+    $('btnHints').textContent = 'Hints: ' + (prefs.hints ? 'on' : 'off');
+    $('btnHints').setAttribute('aria-pressed', String(prefs.hints));
+    renderAll();
+  });
+  $('btnUndo').addEventListener('click', () => {
+    if (!S.moves.length || S.finished) return;
+    S.tabs.pop(); S.moves.pop(); saveDaily(); renderAll();
+  });
+  $('btnRestart').addEventListener('click', () => {
+    S.tabs = [S.tabs[0]]; S.moves = []; saveDaily(); renderAll();
+  });
+  $('btnHelp').addEventListener('click', () => { $('helpOverlay').hidden = false; });
+  $('helpClose').addEventListener('click', () => { $('helpOverlay').hidden = true; });
+  $('helpOverlay').addEventListener('click', e => { if (e.target === $('helpOverlay')) $('helpOverlay').hidden = true; });
+  $('mDaily').addEventListener('click', () => setMode('daily'));
+  $('mRandom').addEventListener('click', () => setMode('random'));
+  $('btnNew').addEventListener('click', () => {
+    if (S.mode === 'daily') { toast('The daily puzzle is the same for everyone today.'); return; }
+    newGame('random', $('size').value);
+  });
+  $('size').addEventListener('change', () => { if (S.mode === 'random') newGame('random', $('size').value); });
+  $('verdict').addEventListener('change', () => { $('feedback').innerHTML = ''; });
+  $('btnSubmit').addEventListener('click', submitGuess);
+  $('btnGiveUp').addEventListener('click', giveUp);
+  $('histCard').addEventListener('toggle', () => { prefs.histOpen = $('histCard').open; savePrefs(); });
+
+  $('btnHints').textContent = 'Hints: ' + (prefs.hints ? 'on' : 'off');
+  $('btnHints').setAttribute('aria-pressed', String(prefs.hints));
+  $('btnConv').textContent = 'Form: ' + (prefs.conv === 'B' ? '+1' : MINUS + '1 (Strayer)');
+  $('histCard').open = !!prefs.histOpen;
+  updateHelpText();
+
+  const st = store.get('sp_stats', null);
+  const done = store.get('sp_d_' + todayKey(), null);
+  newGame(done && !done.finished ? 'daily' : (store.get('sp_lastMode', 'daily')), '4x4');
+  if (st && st.played) {
+    const f = document.querySelector('footer');
+    f.insertAdjacentHTML('afterbegin', '<p style="margin:0 0 8px"><b>Daily record:</b> ' + st.won + '/' + st.played +
+      ' solved · current streak ' + (st.cur || 0) + ' · best ' + (st.max || 0) + '</p>');
+  }
+}
+
+init();
+</script>
+</body>
+</html>
