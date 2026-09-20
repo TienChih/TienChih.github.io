@@ -1,0 +1,1597 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>SET · Affine Geometry Puzzle</title>
+<meta name="description" content="Fill a 3x3 or 3x3x3 grid of SET cards so that every line of the finite affine geometry AG(2,3) / AG(3,3) is a SET, then lay out the projective plane PG(2,3).">
+<style>
+/* ===================== tokens & base ===================== */
+:root {
+  --bg: #f4f2ec; --bg2: #eae6dc; --panel: #fffefb; --ink: #1b1a17; --ink2: #4a463d;
+  --muted: #7a7466; --line: #ded8ca; --line2: #cdc5b3;
+  --accent: #4b45c6; --accent-soft: #e8e6fb;
+  --good: #16794a; --good-soft: #dff2e6; --bad: #bb2418; --bad-soft: #fbe3e0;
+  --c0: #cf1f2d; --c1: #0f8a4d; --c2: #6b2fd6;
+  --card-bg: #fffdf7; --card-line: #d9d2c2;
+  --shadow: 0 1px 2px rgba(40,34,20,.07), 0 6px 18px -8px rgba(40,34,20,.18);
+  --radius: 14px;
+  --cw: 58px;
+  color-scheme: light;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #12141a; --bg2: #0d0f14; --panel: #1a1d25; --ink: #eceaE4; --ink2: #c4c1b8;
+    --muted: #8f95a1; --line: #2b303a; --line2: #3b424f;
+    --accent: #9a97ff; --accent-soft: #232a44;
+    --good: #46cd8a; --good-soft: #14301f; --bad: #ff7367; --bad-soft: #3a1a17;
+    --c0: #ff5666; --c1: #22cf85; --c2: #a98bff;
+    --card-bg: #232833; --card-line: #394253;
+    --shadow: 0 1px 2px rgba(0,0,0,.4), 0 10px 24px -12px rgba(0,0,0,.6);
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #12141a; --bg2: #0d0f14; --panel: #1a1d25; --ink: #ecEae4; --ink2: #c4c1b8;
+  --muted: #8f95a1; --line: #2b303a; --line2: #3b424f;
+  --accent: #9a97ff; --accent-soft: #232a44;
+  --good: #46cd8a; --good-soft: #14301f; --bad: #ff7367; --bad-soft: #3a1a17;
+  --c0: #ff5666; --c1: #22cf85; --c2: #a98bff;
+  --card-bg: #232833; --card-line: #394253;
+  --shadow: 0 1px 2px rgba(0,0,0,.4), 0 10px 24px -12px rgba(0,0,0,.6);
+  color-scheme: dark;
+}
+* { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; }
+body {
+  background: var(--bg); color: var(--ink);
+  font: 15px/1.55 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  -webkit-text-size-adjust: 100%;
+  padding: 0 16px 64px;
+}
+h1, h2, h3 { font-family: ui-serif, Georgia, "Times New Roman", serif; font-weight: 600; letter-spacing: -.01em; margin: 0; }
+p { margin: 0 0 .7em; }
+a { color: var(--accent); }
+.wrap { max-width: 1080px; margin: 0 auto; }
+.mono { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; font-size: .85em; }
+.muted { color: var(--muted); }
+.sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); }
+
+/* ===================== header ===================== */
+header { display: flex; align-items: flex-end; gap: 14px; flex-wrap: wrap; padding: 26px 0 18px; }
+header .title { flex: 1 1 260px; }
+header h1 { font-size: 27px; }
+header h1 .dot { color: var(--accent); }
+header .sub { color: var(--muted); font-size: 13.5px; }
+.hbtns { display: flex; gap: 8px; align-items: center; }
+
+/* ===================== controls ===================== */
+button { font: inherit; color: inherit; }
+.btn {
+  border: 1px solid var(--line2); background: var(--panel); color: var(--ink);
+  padding: 8px 14px; border-radius: 10px; cursor: pointer; font-size: 14px;
+  box-shadow: 0 1px 0 rgba(0,0,0,.02); transition: background .12s, border-color .12s, transform .06s;
+}
+.btn:hover { border-color: var(--accent); }
+.btn:active { transform: translateY(1px); }
+.btn.primary { background: var(--accent); border-color: var(--accent); color: #fff; }
+.btn.primary:hover { filter: brightness(1.08); }
+.btn.ghost { background: transparent; border-color: var(--line); }
+.btn.small { padding: 5px 10px; font-size: 13px; border-radius: 8px; }
+.btn:disabled { opacity: .45; cursor: default; }
+.btn.pulse { animation: pulse 1.6s ease-in-out infinite; }
+@keyframes pulse { 0%,100% { box-shadow: 0 0 0 0 rgba(120,110,255,.5); } 50% { box-shadow: 0 0 0 7px rgba(120,110,255,0); } }
+.iconbtn { border: 1px solid var(--line2); background: var(--panel); border-radius: 10px; width: 34px; height: 34px; cursor: pointer; display: grid; place-items: center; }
+.iconbtn:hover { border-color: var(--accent); }
+input[type="text"] {
+  font: inherit; padding: 7px 10px; border-radius: 9px; border: 1px solid var(--line2);
+  background: var(--panel); color: var(--ink); min-width: 0;
+}
+.switch { display: inline-flex; align-items: center; gap: 7px; cursor: pointer; font-size: 13px; color: var(--ink2); }
+.switch .track { width: 34px; height: 19px; border-radius: 99px; background: var(--line2); position: relative; transition: background .15s; flex: none; }
+.switch .track::after { content: ""; position: absolute; top: 2px; left: 2px; width: 15px; height: 15px; border-radius: 99px; background: var(--panel); transition: transform .15s; box-shadow: 0 1px 2px rgba(0,0,0,.25); }
+.switch[aria-checked="true"] .track { background: var(--accent); }
+.switch[aria-checked="true"] .track::after { transform: translateX(15px); }
+
+/* ===================== panels ===================== */
+.panel { background: var(--panel); border: 1px solid var(--line); border-radius: var(--radius); box-shadow: var(--shadow); }
+.pad { padding: 18px; }
+@media (min-width: 640px) { .pad { padding: 22px; } }
+
+/* ===================== setup ===================== */
+.choices { display: grid; gap: 14px; grid-template-columns: 1fr; margin: 0 0 20px; }
+@media (min-width: 720px) { .choices { grid-template-columns: 1fr 1fr; } }
+.choice { text-align: left; cursor: pointer; border: 1.5px solid var(--line); background: var(--panel); border-radius: var(--radius); padding: 16px 18px; box-shadow: var(--shadow); }
+.choice:hover { border-color: var(--accent); }
+.choice[aria-pressed="true"] { border-color: var(--accent); background: var(--accent-soft); }
+.choice h3 { font-size: 17px; margin-bottom: 4px; }
+.choice .k { font-size: 12px; text-transform: uppercase; letter-spacing: .08em; color: var(--accent); font-weight: 600; }
+.choice ul { margin: 8px 0 0; padding-left: 18px; color: var(--ink2); font-size: 13.5px; }
+.choice li { margin: 2px 0; }
+.modes { display: flex; gap: 10px; flex-wrap: wrap; align-items: center; margin-bottom: 8px; }
+.seg { display: inline-flex; border: 1px solid var(--line2); border-radius: 10px; overflow: hidden; background: var(--panel); }
+.seg button { border: 0; background: transparent; padding: 8px 14px; cursor: pointer; font-size: 14px; border-right: 1px solid var(--line); }
+.seg button:last-child { border-right: 0; }
+.seg button[aria-pressed="true"] { background: var(--accent); color: #fff; }
+
+/* ===================== status bar ===================== */
+.bar { display: flex; gap: 10px; flex-wrap: wrap; align-items: center; margin: 0 0 14px; }
+.chip { display: inline-flex; align-items: center; gap: 6px; border: 1px solid var(--line); background: var(--panel); border-radius: 99px; padding: 5px 12px; font-size: 13px; color: var(--ink2); }
+.chip b { color: var(--ink); font-weight: 600; }
+.chip.ok { background: var(--good-soft); border-color: transparent; color: var(--good); }
+.chip.err { background: var(--bad-soft); border-color: transparent; color: var(--bad); }
+.spacer { flex: 1 1 auto; }
+.msg { border-radius: 12px; padding: 12px 16px; margin: 0 0 16px; font-size: 14.5px; border: 1px solid var(--line); background: var(--panel); }
+.msg.ok { background: var(--good-soft); border-color: transparent; color: var(--good); }
+.msg.err { background: var(--bad-soft); border-color: transparent; color: var(--bad); }
+.msg.ask { background: var(--accent-soft); border-color: transparent; }
+.msg b { font-weight: 600; }
+.msg .row { display: flex; gap: 10px; align-items: center; flex-wrap: wrap; margin-top: 10px; }
+
+/* ===================== cards ===================== */
+.card { display: block; width: 100%; height: 100%; }
+.cardface {
+  width: var(--cw); aspect-ratio: 5 / 7; background: var(--card-bg); border: 1px solid var(--card-line);
+  border-radius: 8px; padding: 3px; display: block; cursor: pointer; position: relative;
+  box-shadow: 0 1px 1px rgba(0,0,0,.06);
+}
+.cardface:hover { border-color: var(--accent); }
+.cardface.sel { border-color: var(--accent); box-shadow: 0 0 0 3px var(--accent-soft), 0 2px 8px rgba(0,0,0,.14); transform: translateY(-2px); }
+.cardface.used { opacity: .22; pointer-events: none; }
+.cardface.static { cursor: default; }
+
+/* ===================== grid ===================== */
+.boards { display: flex; gap: 26px; flex-wrap: wrap; align-items: flex-start; }
+.layer { }
+.layer h3 { font-size: 13px; text-transform: uppercase; letter-spacing: .08em; color: var(--muted); font-family: inherit; font-weight: 600; margin-bottom: 8px; }
+.grid { display: grid; grid-template-columns: repeat(3, var(--cw)); gap: 7px; }
+.cell {
+  width: var(--cw); aspect-ratio: 5 / 7; border-radius: 8px; padding: 0; cursor: pointer; position: relative;
+  border: 1px dashed var(--line2); background: transparent;
+}
+.cell.filled { border: 1px solid var(--card-line); background: var(--card-bg); padding: 3px; box-shadow: 0 1px 1px rgba(0,0,0,.06); }
+.cell.empty:hover { border-color: var(--accent); background: var(--accent-soft); }
+.cell.target { border-color: var(--accent); background: var(--accent-soft); }
+.cell.given { box-shadow: 0 0 0 2px var(--accent) inset; cursor: default; }
+.cell.given::after { content: ""; position: absolute; top: 3px; right: 3px; width: 6px; height: 6px; border-radius: 99px; background: var(--accent); }
+.cell.sel { border-color: var(--accent); box-shadow: 0 0 0 3px var(--accent-soft); }
+.cell.bad { border-color: var(--bad) !important; box-shadow: 0 0 0 2px var(--bad) inset; }
+.cell.hl { box-shadow: 0 0 0 3px var(--accent); z-index: 2; }
+.cell.hlbad { box-shadow: 0 0 0 3px var(--bad); z-index: 2; }
+.cell .idx { position: absolute; inset: 0; display: grid; place-items: center; font-size: 11px; color: var(--muted); font-family: ui-monospace, monospace; }
+
+/* ===================== card picker ===================== */
+.sheetwrap { position: fixed; inset: 0; z-index: 60; background: rgba(20, 16, 10, .45); display: flex; align-items: center; justify-content: center; padding: 16px; backdrop-filter: blur(2px); }
+.sheet { background: var(--panel); border: 1px solid var(--line); border-radius: 18px; box-shadow: 0 24px 60px -18px rgba(0,0,0,.5); padding: 18px; width: min(430px, 100%); max-height: 92vh; overflow: auto; }
+.shead { display: flex; align-items: center; justify-content: space-between; gap: 12px; margin-bottom: 14px; }
+.shead h3 { font-size: 18px; }
+.shead .cardface { width: 52px; }
+.shead .cardface.empty { border-style: dashed; background: transparent; }
+.prow { display: flex; align-items: center; gap: 10px; margin-bottom: 9px; }
+.plabel { width: 58px; flex: none; font-size: 12px; text-transform: uppercase; letter-spacing: .06em; color: var(--muted); }
+.popts { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 8px; flex: 1 1 auto; }
+.popt { display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 3px; min-height: 52px; padding: 6px 4px; cursor: pointer;
+  border: 1.5px solid var(--line2); background: var(--panel); border-radius: 11px; }
+.popt:hover { border-color: var(--accent); }
+.popt.on { border-color: var(--accent); background: var(--accent-soft); box-shadow: 0 0 0 2px var(--accent-soft); }
+.popt .pglyph { width: 46px; height: 23px; display: block; }
+.pdigit { font-family: ui-serif, Georgia, serif; font-size: 23px; line-height: 1; }
+.pswatch { width: 34px; height: 20px; border-radius: 5px; display: block; }
+.pcap { font-size: 10.5px; color: var(--muted); letter-spacing: .01em; }
+.popt.on .pcap { color: var(--ink2); }
+.sfoot { margin-top: 14px; padding-top: 12px; border-top: 1px solid var(--line); display: flex; flex-direction: column; gap: 10px; }
+.sfoot .row { display: flex; gap: 8px; flex-wrap: wrap; }
+.pnote { background: var(--accent-soft); border-radius: 10px; padding: 9px 12px; font-size: 13px; }
+.pnote .row { margin-top: 8px; }
+@media (max-width: 560px) {
+  .sheetwrap { align-items: flex-end; padding: 0; }
+  .sheet { width: 100%; max-width: none; border-radius: 18px 18px 0 0; border-bottom: 0; padding: 16px 14px calc(16px + env(safe-area-inset-bottom)); }
+  .popt { min-height: 58px; }
+}
+
+/* ===================== 3-D lattice ===================== */
+.boardcol { flex: 0 1 auto; min-width: 0; }
+.viewbar { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; margin-bottom: 12px; }
+.viewbar .seg button { padding: 6px 12px; font-size: 13px; }
+.nudge { display: inline-flex; gap: 5px; align-items: center; }
+.iconbtn.small { width: 28px; height: 28px; border-radius: 8px; font-size: 13px; line-height: 1; }
+.scene {
+  --cw: 56px;
+  position: relative; width: min(660px, 100%); height: 540px; margin: 0 auto;
+  perspective: 1900px; touch-action: none; cursor: grab; user-select: none;
+  border: 1px solid var(--line); border-radius: 14px; background:
+    radial-gradient(120% 90% at 50% 15%, var(--panel) 0%, var(--bg2) 100%);
+  overflow: hidden;
+}
+.scene:active { cursor: grabbing; }
+.scene:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+.cube { position: absolute; left: 50%; top: 50%; width: 0; height: 0; transform-style: preserve-3d;
+  transform: translate(var(--tx, 0px), var(--ty, 0px)) scale(var(--zoom)) rotateX(var(--rx)) rotateY(var(--ry)); }
+.cube .cell3d { position: absolute; left: 0; top: 0; width: var(--cw); height: calc(var(--cw) * 1.4);
+  margin-left: calc(var(--cw) / -2); margin-top: calc(var(--cw) * -0.7); transition: opacity .18s; }
+.cube .cell3d.empty { background: var(--panel); opacity: .62; }
+.cube .cell3d.empty:hover { opacity: 1; }
+.plate { position: absolute; left: 0; top: 0; border: 1px dashed var(--line2);
+  border-radius: 14px; opacity: .7; pointer-events: none; }
+.platelab { position: absolute; top: 4px; left: 10px; font-size: 11px; text-transform: uppercase; letter-spacing: .09em; color: var(--muted); }
+.scene.focus .cell3d:not(.hlbad) { opacity: .13; }
+.scenehint { position: absolute; left: 0; right: 0; bottom: 6px; text-align: center; font-size: 11.5px; pointer-events: none; }
+@media (max-width: 620px) { .scene { height: 380px; } }
+
+/* ===================== deck ===================== */
+.playarea { display: flex; gap: 30px; flex-wrap: wrap; align-items: flex-start; }
+.tray { margin-top: 22px; }
+.playarea .tray { margin-top: 0; flex: 1 1 320px; min-width: 0; max-width: 560px; }
+.tray h3 { font-size: 13px; text-transform: uppercase; letter-spacing: .08em; color: var(--muted); font-family: inherit; font-weight: 600; margin-bottom: 8px; }
+.traycards { display: flex; flex-wrap: wrap; gap: 8px; }
+.deck { display: grid; grid-template-columns: max-content repeat(9, minmax(0, 1fr)); gap: 5px; align-items: center; }
+.deck .dcard { width: 100%; }
+.dlabel { display: flex; align-items: center; gap: 4px; padding-right: 3px; font-size: 12px; color: var(--muted); }
+.dlabel b { font-weight: 600; color: var(--ink2); }
+.dlabel i { width: 7px; height: 7px; border-radius: 99px; display: block; }
+.deck .cardface.used { opacity: .3; background: transparent; border-style: dashed; box-shadow: none; }
+/* a little air between the three count groups */
+.deck > :nth-child(n+21):nth-child(-n+30), .deck > :nth-child(n+51):nth-child(-n+60) { margin-bottom: 9px; }
+@media (max-width: 460px) { .deck { gap: 3px; } .dlabel { font-size: 10px; gap: 2px; } .dlabel i { width: 5px; height: 5px; } }
+
+/* ===================== failure list ===================== */
+.fails { margin-top: 20px; }
+.faillist { display: flex; flex-wrap: wrap; gap: 7px; max-height: 172px; overflow: auto; padding: 2px; }
+.faillist button { border: 1px solid var(--bad); background: var(--bad-soft); color: var(--bad); border-radius: 8px; padding: 5px 9px; font-size: 12.5px; cursor: pointer; text-align: left; }
+.faillist button:hover { filter: brightness(1.04); }
+
+/* ===================== projective board ===================== */
+.pgcols { display: grid; gap: 22px; grid-template-columns: 1fr; align-items: start; }
+@media (min-width: 900px) { .pgcols { grid-template-columns: minmax(0,1fr) 300px; } }
+.pgwrap { position: relative; width: 100%; max-width: 560px; aspect-ratio: 1; margin: 0 auto; }
+.pgwrap svg.pgsvg { position: absolute; inset: 0; width: 100%; height: 100%; overflow: visible; }
+.pgsvg .circ { fill: none; stroke: var(--line2); stroke-width: .35; stroke-dasharray: 1.6 1.6; }
+.pgsvg .hlpath { fill: none; stroke: var(--accent); stroke-width: .8; stroke-linejoin: round; stroke-linecap: round; opacity: .85; }
+.pgsvg .hlpath.bad { stroke: var(--bad); }
+.pgnode {
+  position: absolute; transform: translate(-50%, -50%); border-radius: 9px; cursor: pointer;
+  border: 1px dashed var(--line2); background: var(--panel); padding: 3px;
+  display: flex; gap: 2px; align-items: center; justify-content: center;
+  width: 60px; height: 44px;
+}
+.pgnode .mini { width: 24px; aspect-ratio: 5/7; background: var(--card-bg); border: 1px solid var(--card-line); border-radius: 4px; padding: 1px; }
+.pgnode .lbl { font-size: 10px; color: var(--muted); font-family: ui-monospace, monospace; }
+.pgnode.filled { border-style: solid; border-color: var(--card-line); }
+.pgnode.inf { border-radius: 99px; }
+.pgnode:hover { border-color: var(--accent); }
+.pgnode.sel { border-color: var(--accent); box-shadow: 0 0 0 3px var(--accent-soft); }
+.pgnode.bad { border-color: var(--bad); box-shadow: 0 0 0 2px var(--bad); }
+.pgnode.hl { box-shadow: 0 0 0 3px var(--accent); z-index: 3; }
+.pgnode.hlbad { box-shadow: 0 0 0 3px var(--bad); z-index: 3; }
+@media (max-width: 560px) { .pgnode { width: 48px; height: 36px; } .pgnode .mini { width: 19px; } }
+.pgpal { display: flex; flex-wrap: wrap; gap: 7px; }
+.pgitem { border: 1px solid var(--line2); background: var(--panel); border-radius: 9px; padding: 4px; cursor: pointer; display: flex; gap: 3px; }
+.pgitem .mini { width: 26px; aspect-ratio: 5/7; background: var(--card-bg); border: 1px solid var(--card-line); border-radius: 4px; padding: 1px; }
+.pgitem:hover { border-color: var(--accent); }
+.pgitem.sel { border-color: var(--accent); box-shadow: 0 0 0 3px var(--accent-soft); }
+.pgitem.used { opacity: .22; pointer-events: none; }
+.pglines { display: flex; flex-direction: column; gap: 4px; }
+.dragover { border-color: var(--accent) !important; background: var(--accent-soft) !important; }
+.traycards.dragover, .pgpal.dragover, .deck.dragover { outline: 2px dashed var(--accent); outline-offset: 6px; border-radius: 10px; background: transparent !important; }
+.pgline { display: flex; align-items: center; gap: 8px; border: 1px solid var(--line); border-radius: 8px; padding: 4px 9px; font-size: 12.5px; background: var(--panel); cursor: default; text-align: left; }
+.pgline .st { font-weight: 700; width: 12px; }
+.pgline.good { border-color: transparent; background: var(--good-soft); color: var(--good); }
+.pgline.bad { border-color: var(--bad); background: var(--bad-soft); color: var(--bad); }
+
+/* ===================== misc ===================== */
+.centercard { display: flex; gap: 10px; align-items: center; font-size: 13px; color: var(--ink2); }
+.centercard .cardface { width: 44px; }
+details.help { margin-top: 26px; border-top: 1px solid var(--line); padding-top: 14px; }
+details.help summary { cursor: pointer; color: var(--accent); font-size: 14px; }
+details.help .body { margin-top: 10px; font-size: 14px; color: var(--ink2); max-width: 70ch; }
+details.help h4 { margin: 14px 0 4px; font-size: 14px; }
+.sharebox { margin-top: 14px; }
+.sharebox pre { background: var(--bg2); border: 1px solid var(--line); border-radius: 10px; padding: 12px; font-size: 12.5px; white-space: pre-wrap; margin: 0 0 10px; font-family: ui-monospace, monospace; }
+footer { margin-top: 34px; padding-top: 14px; border-top: 1px solid var(--line); color: var(--muted); font-size: 12.5px; }
+.stats { display: flex; gap: 18px; flex-wrap: wrap; font-size: 14px; }
+.stats div b { display: block; font-size: 20px; font-family: ui-serif, Georgia, serif; }
+
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs>
+  <pattern id="stripe0" width="11" height="11" patternUnits="userSpaceOnUse"><line x1="2.5" y1="-1" x2="2.5" y2="12" style="stroke:var(--c0);stroke-width:4"/></pattern>
+  <pattern id="stripe1" width="11" height="11" patternUnits="userSpaceOnUse"><line x1="2.5" y1="-1" x2="2.5" y2="12" style="stroke:var(--c1);stroke-width:4"/></pattern>
+  <pattern id="stripe2" width="11" height="11" patternUnits="userSpaceOnUse"><line x1="2.5" y1="-1" x2="2.5" y2="12" style="stroke:var(--c2);stroke-width:4"/></pattern>
+  <pattern id="stripe3" width="11" height="11" patternUnits="userSpaceOnUse"><line x1="2.5" y1="-1" x2="2.5" y2="12" style="stroke:var(--ink2);stroke-width:4"/></pattern>
+</defs></svg>
+
+<div class="wrap">
+  <header>
+    <div class="title">
+      <h1>SET<span class="dot"> · </span>Affine Geometry</h1>
+      <div class="sub">Every row, column and diagonal a SET — the finite geometries AG(2,3), AG(3,3) and PG(2,3)</div>
+    </div>
+    <div class="hbtns">
+      <button class="iconbtn" id="themebtn" data-act="theme" aria-label="switch light / dark theme" title="light / dark">☾</button>
+    </div>
+  </header>
+  <main id="main"></main>
+  <footer>
+    81 SET cards = the points of AG(4,3). A SET is a line. Built to be played with a pencil-and-paper frame of mind.
+  </footer>
+</div>
+
+<script>
+/* =====================================================================
+   SET · Affine Geometry Puzzle — core mathematics
+   AG(2,3) (3x3), AG(3,3) (3x3x3) inside the 81-card SET deck = AG(4,3),
+   plus the projective plane PG(2,3) of directions through a point.
+   ===================================================================== */
+'use strict';
+
+/* ---------- seeded RNG (deterministic, for daily puzzles) ---------- */
+function xmur3(str) {
+  let h = 1779033703 ^ str.length;
+  for (let i = 0; i < str.length; i++) {
+    h = Math.imul(h ^ str.charCodeAt(i), 3432918353);
+    h = (h << 13) | (h >>> 19);
+  }
+  return function () {
+    h = Math.imul(h ^ (h >>> 16), 2246822507);
+    h = Math.imul(h ^ (h >>> 13), 3266489909);
+    h ^= h >>> 16;
+    return h >>> 0;
+  };
+}
+function mulberry32(a) {
+  return function () {
+    a |= 0; a = (a + 0x6D2B79F5) | 0;
+    let t = Math.imul(a ^ (a >>> 15), 1 | a);
+    t = (t + Math.imul(t ^ (t >>> 7), 61 | t)) ^ t;
+    return ((t ^ (t >>> 14)) >>> 0) / 4294967296;
+  };
+}
+function makeRng(seed) { const h = xmur3(String(seed)); h(); h(); return mulberry32(h()); }
+
+/* ---------- vectors over F_3 ---------- */
+const F3 = {
+  add: (a, b) => a.map((x, i) => (x + b[i]) % 3),
+  sub: (a, b) => a.map((x, i) => (x - b[i] + 3) % 3),
+  scale: (s, a) => a.map(x => (x * ((s % 3) + 3)) % 3),
+  neg: a => a.map(x => (3 - x) % 3),
+  eq: (a, b) => a.length === b.length && a.every((x, i) => x === b[i]),
+  isZero: a => a.every(x => x === 0)
+};
+/* little-endian base-3 encoding */
+function enc(v) { let n = 0; for (let i = v.length - 1; i >= 0; i--) n = n * 3 + v[i]; return n; }
+function dec(n, len) { const v = []; for (let i = 0; i < len; i++) { v.push(n % 3); n = Math.floor(n / 3); } return v; }
+/* scale so the first nonzero coordinate is 1 — a canonical projective rep */
+function normDir(v) {
+  for (let i = 0; i < v.length; i++) {
+    if (v[i] !== 0) { const inv = v[i] === 1 ? 1 : 2; return v.map(x => (x * inv) % 3); }
+  }
+  return v.slice();
+}
+/* rank of a list of F_3 vectors (Gaussian elimination) */
+function rankF3(vecs) {
+  if (!vecs.length) return 0;
+  const m = vecs.map(v => v.slice());
+  const n = m[0].length;
+  let rank = 0;
+  for (let col = 0; col < n && rank < m.length; col++) {
+    let piv = -1;
+    for (let r = rank; r < m.length; r++) if (m[r][col] !== 0) { piv = r; break; }
+    if (piv < 0) continue;
+    const t = m[rank]; m[rank] = m[piv]; m[piv] = t;
+    const inv = m[rank][col] === 1 ? 1 : 2;
+    m[rank] = m[rank].map(x => (x * inv) % 3);
+    for (let r = 0; r < m.length; r++) {
+      if (r !== rank && m[r][col] !== 0) {
+        const f = m[r][col];
+        m[r] = m[r].map((x, i) => (x - f * m[rank][i] + 9) % 3);
+      }
+    }
+    rank++;
+  }
+  return rank;
+}
+/* every vector in the span of `dirs`, as an encoded-index Set */
+function spanSet(dirs, len) {
+  const out = new Set();
+  const total = Math.pow(3, dirs.length);
+  for (let m = 0; m < total; m++) {
+    const coef = dec(m, dirs.length);
+    let v = new Array(len).fill(0);
+    for (let k = 0; k < dirs.length; k++) v = F3.add(v, F3.scale(coef[k], dirs[k]));
+    out.add(enc(v));
+  }
+  return out;
+}
+
+/* ---------- the SET deck = AG(4,3) ---------- */
+/* card vector = [count, color, shape, fill], each in {0,1,2}; id = enc(vector) */
+const COUNT_NAMES = ['one', 'two', 'three'];
+const COLOR_NAMES = ['red', 'green', 'purple'];
+const SHAPE_NAMES = ['diamond', 'squiggle', 'oval'];
+const FILL_NAMES = ['solid', 'striped', 'open'];
+
+const cardVec = id => dec(id, 4);
+const cardId = v => enc(v);
+const thirdCard = (a, b) => F3.neg(F3.add(a, b));
+const isSetTriple = (a, b, c) => F3.isZero(F3.add(F3.add(a, b), c));
+const isSetIds = (a, b, c) => isSetTriple(cardVec(a), cardVec(b), cardVec(c));
+function cardName(id) {
+  const v = cardVec(id);
+  return COUNT_NAMES[v[0]] + ' ' + COLOR_NAMES[v[1]] + ' ' + FILL_NAMES[v[3]] + ' ' +
+    SHAPE_NAMES[v[2]] + (v[0] > 0 ? 's' : '');
+}
+
+/* ---------- lines of AG(dim,3) on the grid of positions ---------- */
+/* Three distinct points of F_3^n are collinear exactly when they sum to 0.   */
+function buildLines(dim) {
+  const npos = Math.pow(3, dim);
+  const lines = [];
+  for (let a = 0; a < npos; a++) {
+    for (let b = a + 1; b < npos; b++) {
+      const va = dec(a, dim), vb = dec(b, dim);
+      const c = enc(F3.neg(F3.add(va, vb)));
+      if (c > b) lines.push({ cells: [a, b, c], dir: normDir(F3.sub(vb, va)) });
+    }
+  }
+  return lines;
+}
+
+/* ---------- puzzle generation ---------- */
+/* An affine dim-subspace of AG(4,3): base point + dim independent directions.
+   grid(p) = base + p0*d0 + p1*d1 (+ p2*d2).  Position coords are
+   [row, col] for dim 2 and [row, col, layer] for dim 3.
+   The given "corner" cards sit at the origin and the dim unit positions:
+   affinely independent, so no three of them form a SET, and they pin the
+   affine map down completely — the rest of the grid is forced. */
+function genPuzzle(dim, seed) {
+  const rng = makeRng(seed);
+  const base = dec(Math.floor(rng() * 81), 4);
+  const dirs = [];
+  while (dirs.length < dim) {
+    const sp = spanSet(dirs, 4);
+    let d;
+    do { d = dec(Math.floor(rng() * 81), 4); } while (sp.has(enc(d)));
+    dirs.push(d);
+  }
+  const npos = Math.pow(3, dim);
+  const solution = new Array(npos);
+  for (let p = 0; p < npos; p++) {
+    const pv = dec(p, dim);
+    let v = base.slice();
+    for (let k = 0; k < dim; k++) v = F3.add(v, F3.scale(pv[k], dirs[k]));
+    solution[p] = enc(v);
+  }
+  const given = [0];
+  for (let k = 0; k < dim; k++) { const pv = new Array(dim).fill(0); pv[k] = 1; given.push(enc(pv)); }
+  /* the cards the player must place, shuffled */
+  const pool = [];
+  for (let p = 0; p < npos; p++) if (given.indexOf(p) < 0) pool.push(solution[p]);
+  for (let i = pool.length - 1; i > 0; i--) {
+    const j = Math.floor(rng() * (i + 1));
+    const t = pool[i]; pool[i] = pool[j]; pool[j] = t;
+  }
+  return { dim, seed: String(seed), base, dirs, solution, given, pool, lines: buildLines(dim) };
+}
+
+/* ---------- grid checking ---------- */
+function checkGrid(placed, lines) {
+  let filled = 0;
+  for (let i = 0; i < placed.length; i++) if (placed[i] != null) filled++;
+  const fails = [];
+  for (let i = 0; i < lines.length; i++) {
+    const c = lines[i].cells;
+    if (placed[c[0]] == null || placed[c[1]] == null || placed[c[2]] == null) continue;
+    if (!isSetIds(placed[c[0]], placed[c[1]], placed[c[2]])) fails.push(i);
+  }
+  return { filled, total: placed.length, complete: filled === placed.length, fails };
+}
+/* fill every cell that is forced by a line with two known cards (used in tests
+   to confirm the puzzle is uniquely solvable by pure logic) */
+function propagate(placed, lines) {
+  const out = placed.slice();
+  let changed = true;
+  while (changed) {
+    changed = false;
+    for (const L of lines) {
+      const unk = L.cells.filter(c => out[c] == null);
+      if (unk.length === 1) {
+        const kn = L.cells.filter(c => out[c] != null);
+        out[unk[0]] = cardId(thirdCard(cardVec(out[kn[0]]), cardVec(out[kn[1]])));
+        changed = true;
+      }
+    }
+  }
+  return out;
+}
+
+/* ---------- the projective plane PG(2,3) ---------- */
+/* The 13 lines of AG(3,3) through the centre cell (1,1,1) are in bijection
+   with the 13 directions, i.e. with the 13 points of PG(2,3); four of them
+   are coplanar exactly when the four points are collinear in PG(2,3).
+   The board drawn for the player is the classical model
+       PG(2,3) = AG(2,3)  +  a line at infinity,
+   nodes 0..8 = the 3x3 affine block, nodes 9..12 = the four directions of
+   AG(2,3) (its points at infinity), and the 13th line is the circle. */
+const CENTER_POS = [1, 1, 1];
+
+function dirClasses(dim) {           /* the (3^dim - 1)/2 projective directions */
+  const seen = new Set(), out = [];
+  for (let i = 1; i < Math.pow(3, dim); i++) {
+    const d = normDir(dec(i, dim)), k = enc(d);
+    if (!seen.has(k)) { seen.add(k); out.push(d); }
+  }
+  return out;
+}
+
+function buildPG() {
+  const nodes = [];
+  for (let r = 0; r < 3; r++) for (let c = 0; c < 3; c++) nodes.push({ id: r * 3 + c, kind: 'affine', r: r, c: c });
+  const cls = [[0, 1], [1, 0], [1, 1], [1, 2]];   /* rows, columns, ↘, ↙ */
+  cls.forEach((d, i) => nodes.push({ id: 9 + i, kind: 'inf', d: d }));
+  const lines = [];
+  for (let a = 0; a < 9; a++) {
+    for (let b = a + 1; b < 9; b++) {
+      const va = [Math.floor(a / 3), a % 3], vb = [Math.floor(b / 3), b % 3];
+      const vc = F3.neg(F3.add(va, vb)), c = vc[0] * 3 + vc[1];
+      if (c > b) {
+        const d = normDir(F3.sub(vb, va));
+        const ci = cls.findIndex(x => x[0] === d[0] && x[1] === d[1]);
+        lines.push({ nodes: [a, b, c, 9 + ci], kind: 'affine', cls: ci, dir: d });
+      }
+    }
+  }
+  lines.push({ nodes: [9, 10, 11, 12], kind: 'inf', cls: -1 });
+  return { nodes: nodes, lines: lines, cls: cls };
+}
+
+/* assignment: assign[node] = index into dirs13 (or null).
+   A projective line is wrong as soon as three of its four nodes carry
+   directions that do not lie in a common plane. */
+function planeLineStatus(L, assign, dirs13) {
+  const vs = L.nodes.map(n => assign[n]).filter(x => x != null).map(x => dirs13[x]);
+  if (vs.length >= 3 && rankF3(vs) > 2) return 'bad';
+  return vs.length === 4 ? 'good' : 'open';
+}
+function checkPlane(assign, pg, dirs13) {
+  const fails = [];
+  let filled = 0;
+  for (let i = 0; i < 13; i++) if (assign[i] != null) filled++;
+  pg.lines.forEach((L, i) => { if (planeLineStatus(L, assign, dirs13) === 'bad') fails.push(i); });
+  return { filled, total: 13, complete: filled === 13, fails };
+}
+/* backtracking completion: returns a full valid assignment extending `assign`,
+   or null if the partial assignment is already doomed. */
+function solvePlane(assign, pg, dirs13, opts) {
+  const a = assign.slice();
+  const used = new Set(a.filter(x => x != null));
+  const linesOf = [];
+  for (let n = 0; n < 13; n++) linesOf.push(pg.lines.filter(L => L.nodes.indexOf(n) >= 0));
+  const countAll = opts && opts.count;
+  let solutions = 0, first = null;
+
+  const fits = (n, v) => {
+    a[n] = v;
+    for (const L of linesOf[n]) if (planeLineStatus(L, a, dirs13) === 'bad') { a[n] = null; return false; }
+    a[n] = null; return true;
+  };
+  const pick = () => {                       /* minimum-remaining-values */
+    let best = -1, bestVals = null;
+    for (let n = 0; n < 13; n++) {
+      if (a[n] != null) continue;
+      const vals = [];
+      for (let v = 0; v < 13; v++) if (!used.has(v) && fits(n, v)) vals.push(v);
+      if (bestVals == null || vals.length < bestVals.length) { best = n; bestVals = vals; }
+      if (bestVals.length === 0) break;
+    }
+    return best < 0 ? null : { node: best, vals: bestVals };
+  };
+  const rec = () => {
+    const s = pick();
+    if (!s) { solutions++; if (!first) first = a.slice(); return !countAll; }
+    for (const v of s.vals) {
+      a[s.node] = v; used.add(v);
+      const done = rec();
+      used.delete(v); a[s.node] = null;
+      if (done) return true;
+    }
+    return false;
+  };
+  rec();
+  return countAll ? { count: solutions, first: first } : first;
+}
+
+/* the 13 SETs through the centre of a solved 3-D grid, one per direction */
+function centreSets(puzzle) {
+  const dirs13 = dirClasses(3);
+  return dirs13.map((d, i) => {
+    const cells = [0, 1, 2].map(t => enc(F3.add(CENTER_POS, F3.scale(t, d))));
+    return { idx: i, dir: d, cells: cells, cards: cells.map(c => puzzle.solution[c]) };
+  });
+}
+
+/* ---------- exports for the node test harness ---------- */
+if (typeof module !== 'undefined' && module.exports) {
+  module.exports = {
+    F3, enc, dec, normDir, rankF3, spanSet, makeRng,
+    cardVec, cardId, thirdCard, isSetTriple, isSetIds, cardName,
+    buildLines, genPuzzle, checkGrid, propagate,
+    dirClasses, buildPG, checkPlane, planeLineStatus, solvePlane, centreSets, CENTER_POS
+  };
+}
+
+/* =====================================================================
+   SET · Affine Geometry Puzzle — interface
+   ===================================================================== */
+(function () {
+  'use strict';
+
+  /* ---------------- tiny helpers ---------------- */
+  const $ = s => document.querySelector(s);
+  const esc = s => String(s).replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
+  const pad2 = n => String(n).padStart(2, '0');
+  const fmtMs = ms => { if (ms == null) return '—'; const s = Math.round(ms / 1000); return Math.floor(s / 60) + ':' + pad2(s % 60); };
+  const store = {
+    get(k, d) { try { const v = localStorage.getItem('setaffine.' + k); return v == null ? d : JSON.parse(v); } catch (e) { return d; } },
+    set(k, v) { try { localStorage.setItem('setaffine.' + k, JSON.stringify(v)); } catch (e) { } }
+  };
+  function todayStr() { const d = new Date(); return d.getFullYear() + '-' + pad2(d.getMonth() + 1) + '-' + pad2(d.getDate()); }
+  function randSeed() { return Math.random().toString(36).slice(2, 8); }
+
+  /* ---------------- card drawing ---------------- */
+  const SYM = [
+    /* diamond  */ 'M50 3 L96 25 L50 47 L4 25 Z',
+    /* squiggle */ 'M9 33 C1 13 20 1 43 7 C61 12 82 17 92 8 C99 28 79 46 55 39 C37 34 18 25 9 33 Z',
+    /* oval     */ 'M25 3 H75 A22 22 0 0 1 75 47 H25 A22 22 0 0 1 25 3 Z'
+  ];
+  function cardSVG(id) {
+    const v = cardVec(id), n = v[0] + 1, col = v[1], sh = v[2], fl = v[3];
+    const ys = n === 1 ? [55] : n === 2 ? [30, 80] : [5, 55, 105];
+    let g = '';
+    for (const y of ys) {
+      const fill = fl === 0 ? 'var(--c' + col + ')' : fl === 1 ? 'url(#stripe' + col + ')' : 'none';
+      g += '<g transform="translate(10 ' + y + ') scale(.8)"><path d="' + SYM[sh] +
+        '" style="fill:' + fill + ';stroke:var(--c' + col + ');stroke-width:4.5;stroke-linejoin:round"/></g>';
+    }
+    return '<svg class="card" viewBox="0 0 100 150" aria-hidden="true">' + g + '</svg>';
+  }
+  const faceHTML = (id, cls) => '<span class="cardface static ' + (cls || '') + '" title="' + esc(cardName(id)) + '">' + cardSVG(id) + '</span>';
+
+  /* ---------------- labels ---------------- */
+  const posLabel = (dim, p) => { const v = dec(p, dim); return dim === 2 ? (v[0] + 1) + ',' + (v[1] + 1) : (v[0] + 1) + ',' + (v[1] + 1) + ',' + (v[2] + 1); };
+  function label2(dir, cells) {
+    if (dir[0] === 0) return 'Row ' + (cells[0][0] + 1);
+    if (dir[1] === 0) return 'Column ' + (cells[0][1] + 1);
+    if (dir[0] === 1 && dir[1] === 1) { const k = ((cells[0][1] - cells[0][0]) % 3 + 3) % 3; return k === 0 ? 'Main diagonal ↘' : 'Broken diagonal ↘'; }
+    const s = (cells[0][0] + cells[0][1]) % 3; return s === 2 ? 'Main diagonal ↙' : 'Broken diagonal ↙';
+  }
+  function lineLabel(dim, line) {
+    const cells = line.cells.map(c => dec(c, dim));
+    if (dim === 2) return label2(line.dir, cells);
+    const d = line.dir;
+    if (d[2] === 0) return 'Layer ' + (cells[0][2] + 1) + ' · ' + label2([d[0], d[1]], cells.map(c => [c[0], c[1]]));
+    if (d[0] === 0 && d[1] === 0) return 'Through the layers';
+    if (d[0] === 0 || d[1] === 0) return 'Cross-layer diagonal';
+    return 'Space diagonal';
+  }
+  const lineCells = (dim, line) => line.cells.map(c => '(' + posLabel(dim, c) + ')').join('·');
+
+  /* ---------------- projective board geometry ---------------- */
+  const PG = buildPG();
+  const DIRS13 = dirClasses(3);
+  const PGPOS = (function () {
+    const p = [], cx = 50, cy = 47, sp = 19, R = 39;
+    for (let r = 0; r < 3; r++) for (let c = 0; c < 3; c++) p.push({ x: cx + (c - 1) * sp, y: cy + (r - 1) * sp });
+    [0, 90, 45, 135].forEach(a => { const t = a * Math.PI / 180; p.push({ x: cx + R * Math.cos(t), y: cy + R * Math.sin(t) }); });
+    return p;
+  })();
+  const PGPATH = PG.lines.map(L => {
+    if (L.kind === 'inf') {
+      const cx = 50, cy = 47, R = 39;
+      return 'M' + (cx + R) + ' ' + cy + ' A' + R + ' ' + R + ' 0 1 1 ' + (cx - R) + ' ' + cy + ' A' + R + ' ' + R + ' 0 1 1 ' + (cx + R) + ' ' + cy;
+    }
+    const start = Math.min(L.nodes[0], L.nodes[1], L.nodes[2]);
+    const v0 = [Math.floor(start / 3), start % 3];
+    const seq = [0, 1, 2].map(t => ((v0[0] + t * L.dir[0]) % 3) * 3 + ((v0[1] + t * L.dir[1]) % 3));
+    const pts = seq.map(n => PGPOS[n]), inf = PGPOS[L.nodes[3]];
+    let d = 'M' + pts[0].x + ' ' + pts[0].y;
+    for (let i = 1; i < 3; i++) d += ' L' + pts[i].x + ' ' + pts[i].y;
+    const last = pts[2], mx = (last.x + inf.x) / 2, my = (last.y + inf.y) / 2;
+    d += ' Q' + (mx - (inf.y - last.y) * .22) + ' ' + (my + (inf.x - last.x) * .22) + ' ' + inf.x + ' ' + inf.y;
+    return d;
+  });
+  const pgNodeName = n => n < 9 ? 'affine point (' + (Math.floor(n / 3) + 1) + ',' + (n % 3 + 1) + ')'
+    : 'point at infinity ' + ['→ rows', '↓ columns', '↘ diagonals', '↙ diagonals'][n - 9];
+  const pgLineName = i => PG.lines[i].kind === 'inf' ? 'The line at infinity'
+    : 'Line ' + (i + 1) + ' · ' + label2(PG.lines[i].dir, PG.lines[i].nodes.slice(0, 3).map(n => [Math.floor(n / 3), n % 3])) + ' + ∞';
+
+  /* ---------------- state ---------------- */
+  const S = {
+    view: 'setup', dim: 2, mode: 'daily', seedIn: '',
+    picker: null, view3: '3d', v3: { rx: -24, ry: -32, zoom: 1 }, noClick: 0,
+    puzzle: null, placed: [], sel: null, phase: 'grid',
+    submitted: false, hl: null, revealed: false,
+    live: { grid: false, plane: true },
+    plane: { assign: [], sets: [], sel: null, submitted: false, hl: null },
+    stats: {}, hist: [], drag: null, copied: false
+  };
+
+  /* ---------------- puzzle lifecycle ---------------- */
+  function startPuzzle(dim, mode, seed) {
+    S.dim = dim; S.mode = mode;
+    const sd = seed || (mode === 'daily' ? 'daily-' + todayStr() + '-d' + dim : 'r' + randSeed() + '-d' + dim);
+    S.puzzle = genPuzzle(dim, sd);
+    S.placed = new Array(Math.pow(3, dim)).fill(null);
+    S.puzzle.given.forEach(p => S.placed[p] = S.puzzle.solution[p]);
+    S.sel = null; S.picker = null; S.phase = 'grid'; S.submitted = false; S.hl = null; S.revealed = false;
+    S.hist = []; S.copied = false;
+    S.plane = { assign: new Array(13).fill(null), sets: dim === 3 ? centreSets(S.puzzle) : [], sel: null, submitted: false, hl: null };
+    S.stats = { t0: null, gridMs: null, pT0: null, planeMs: null, hintsG: 0, hintsP: 0, checksG: 0, checksP: 0 };
+    S.view = 'game';
+    try { history.replaceState(null, '', '#p=' + encodeURIComponent(sd) + '&d=' + dim); } catch (e) { }
+    render();
+  }
+  const startClock = () => { if (S.stats.t0 == null) S.stats.t0 = Date.now(); };
+  const elapsed = () => S.stats.t0 == null ? 0 : (S.stats.gridMs != null && S.phase !== 'grid' ? S.stats.gridMs : Date.now() - S.stats.t0);
+  const snapshot = () => { S.hist.push(JSON.stringify([S.placed, S.plane.assign])); if (S.hist.length > 300) S.hist.shift(); };
+  function undo() {
+    const h = S.hist.pop(); if (!h) return;
+    const v = JSON.parse(h); S.placed = v[0]; S.plane.assign = v[1];
+    S.submitted = false; S.plane.submitted = false; S.sel = null; S.plane.sel = null;
+    if (S.phase === 'gridDone') S.phase = 'grid';
+    if (S.phase === 'planeDone') S.phase = 'plane';
+    render();
+  }
+
+  /* ---------------- grid actions ---------------- */
+  function placeAt(pos, card) {
+    snapshot(); startClock();
+    const old = S.placed.indexOf(card); if (old >= 0) S.placed[old] = null;
+    S.placed[pos] = card; S.sel = null; S.submitted = false; render();
+  }
+  function clearCell(pos) { snapshot(); S.placed[pos] = null; S.sel = null; S.submitted = false; render(); }
+  function onCell(pos) {
+    const given = S.puzzle.given.indexOf(pos) >= 0;
+    const sel = S.sel;
+    if (sel && sel.kind === 'tray') { if (given) { S.sel = null; return render(); } return placeAt(pos, sel.card); }
+    if (given) { S.sel = null; return render(); }
+    openPicker(pos);
+  }
+  function onTray(card) {
+    const sel = S.sel;
+    if (sel && sel.kind === 'target') return placeAt(sel.pos, card);
+    S.sel = (sel && sel.kind === 'tray' && sel.card === card) ? null : { kind: 'tray', card: card };
+    render();
+  }
+
+  /* ---------------- the card picker ---------------- */
+  /* Clicking a cell asks for the card by its four attributes, which is far
+     quicker on a phone than hunting for it in an 81-card deck. */
+  function openPicker(pos) {
+    const card = S.placed[pos];
+    S.picker = { pos: pos, sel: card != null ? cardVec(card) : [null, null, null, null] };
+    S.sel = null; render();
+  }
+  function closePicker() { S.picker = null; render(); }
+  function pickAttr(k, v) {
+    const P = S.picker; if (!P) return;
+    P.sel[k] = P.sel[k] === v ? null : v;
+    if (P.sel.every(x => x != null)) {
+      const card = cardId(P.sel), at = S.placed.indexOf(card);
+      if (at < 0 || at === P.pos) { const pos = P.pos; S.picker = null; return placeAt(pos, card); }
+    }
+    render();
+  }
+  function pickConfirm() {
+    const P = S.picker; if (!P || !P.sel.every(x => x != null)) return;
+    const pos = P.pos, card = cardId(P.sel); S.picker = null; placeAt(pos, card);
+  }
+  function hintGrid() {
+    const empty = [];
+    for (let p = 0; p < S.placed.length; p++) if (S.placed[p] == null) empty.push(p);
+    /* prefer a cell that is forced by two already-placed cards */
+    let pick = null;
+    for (const L of S.puzzle.lines) {
+      const unk = L.cells.filter(c => S.placed[c] == null);
+      if (unk.length === 1 && empty.indexOf(unk[0]) >= 0) { pick = unk[0]; break; }
+    }
+    if (pick == null) {
+      const wrong = [];
+      for (let p = 0; p < S.placed.length; p++) if (S.placed[p] != null && S.placed[p] !== S.puzzle.solution[p]) wrong.push(p);
+      if (empty.length) pick = empty[0];
+      else if (wrong.length) pick = wrong[0];
+      else return;
+    }
+    snapshot(); startClock(); S.stats.hintsG++;
+    const card = S.puzzle.solution[pick];
+    const old = S.placed.indexOf(card); if (old >= 0) S.placed[old] = null;
+    S.placed[pick] = card; S.submitted = false; S.sel = null; render();
+  }
+  function submitGrid() {
+    S.stats.checksG++; S.submitted = true;
+    const r = checkGrid(S.placed, S.puzzle.lines);
+    if (r.complete && r.fails.length === 0) {
+      S.stats.gridMs = S.stats.t0 ? Date.now() - S.stats.t0 : 0;
+      S.phase = 'gridDone'; S.sel = null;
+    }
+    render();
+  }
+  function revealGrid() {
+    snapshot(); S.revealed = true; S.placed = S.puzzle.solution.slice();
+    S.stats.gridMs = S.stats.t0 ? Date.now() - S.stats.t0 : 0;
+    S.phase = 'gridDone'; S.sel = null; S.submitted = false; render();
+  }
+
+  /* ---------------- plane actions ---------------- */
+  function startPlane() {
+    S.phase = 'plane'; S.stats.pT0 = Date.now(); S.plane.submitted = false; render();
+  }
+  function onPgNode(n) {
+    const sel = S.plane.sel;
+    if (sel && sel.kind === 'item') { snapshot(); assignPg(n, sel.i); S.plane.sel = null; return render(); }
+    if (sel && sel.kind === 'node' && sel.n !== n) {
+      snapshot(); const a = S.plane.assign[sel.n], b = S.plane.assign[n];
+      S.plane.assign[n] = a; S.plane.assign[sel.n] = b; S.plane.sel = null; S.plane.submitted = false; return render();
+    }
+    if (sel && sel.kind === 'node' && sel.n === n) { snapshot(); S.plane.assign[n] = null; S.plane.sel = null; S.plane.submitted = false; return render(); }
+    if (S.plane.assign[n] != null) { S.plane.sel = { kind: 'node', n: n }; return render(); }
+    S.plane.sel = (sel && sel.kind === 'target' && sel.n === n) ? null : { kind: 'target', n: n };
+    render();
+  }
+  function assignPg(n, i) {
+    const old = S.plane.assign.indexOf(i); if (old >= 0) S.plane.assign[old] = null;
+    S.plane.assign[n] = i; S.plane.submitted = false;
+  }
+  function onPgItem(i) {
+    const sel = S.plane.sel;
+    if (sel && sel.kind === 'target') { snapshot(); assignPg(sel.n, i); S.plane.sel = null; return render(); }
+    S.plane.sel = (sel && sel.kind === 'item' && sel.i === i) ? null : { kind: 'item', i: i };
+    render();
+  }
+  function hintPlane() {
+    const sol = solvePlane(S.plane.assign, PG, DIRS13);
+    if (!sol) { S.plane.msg = 'dead'; return render(); }
+    const open = [];
+    for (let n = 0; n < 13; n++) if (S.plane.assign[n] == null) open.push(n);
+    if (!open.length) return;
+    snapshot(); S.stats.hintsP++; S.plane.msg = null;
+    assignPg(open[0], sol[open[0]]); render();
+  }
+  function submitPlane() {
+    S.stats.checksP++; S.plane.submitted = true;
+    const r = checkPlane(S.plane.assign, PG, DIRS13);
+    if (r.complete && r.fails.length === 0) { S.stats.planeMs = Date.now() - S.stats.pT0; S.phase = 'planeDone'; S.plane.sel = null; }
+    render();
+  }
+  function revealPlane() {
+    const sol = solvePlane(new Array(13).fill(null), PG, DIRS13);
+    snapshot(); S.revealed = true; S.plane.assign = sol;
+    S.stats.planeMs = S.stats.pT0 ? Date.now() - S.stats.pT0 : 0;
+    S.phase = 'planeDone'; S.plane.sel = null; S.plane.submitted = false; render();
+  }
+
+  /* ---------------- share ---------------- */
+  function shareText() {
+    const g = checkGrid(S.placed, S.puzzle.lines);
+    const gridOK = g.complete && g.fails.length === 0;
+    const pl = checkPlane(S.plane.assign, PG, DIRS13);
+    const planeOK = S.dim === 3 && pl.complete && pl.fails.length === 0;
+    const L = [];
+    L.push('SET · Affine Geometry Puzzle');
+    L.push((S.mode === 'daily' ? 'Daily ' + todayStr() : 'Random') + ' · AG(' + S.dim + ',3) · ' +
+      (S.dim === 2 ? '3×3' : '3×3×3') + ' · ' + S.puzzle.lines.length + ' SETs');
+    L.push('Grid ' + g.filled + '/' + g.total + ' ' + (gridOK ? '✅' : '⬜') + '  ' + fmtMs(S.stats.gridMs) +
+      '  🔍' + S.stats.checksG + ' 💡' + S.stats.hintsG);
+    if (S.dim === 3 && (S.phase === 'plane' || S.phase === 'planeDone'))
+      L.push('PG(2,3) ' + pl.filled + '/13 ' + (planeOK ? '✅' : '⬜') + '  ' + fmtMs(S.stats.planeMs) +
+        '  🔍' + S.stats.checksP + ' 💡' + S.stats.hintsP);
+    if (S.revealed) L.push('(solution revealed)');
+    const ok = [gridOK, planeOK].filter(Boolean).length;
+    L.push(gridOK ? (S.dim === 3 ? (planeOK ? '🟩🟩 both stages clean' : '🟩⬜ grid only') : '🟩 solved') : '⬜ unfinished');
+    L.push('puzzle: ' + S.puzzle.seed);
+    if (location.protocol === 'http:' || location.protocol === 'https:')
+      L.push(location.href.split('#')[0] + '#p=' + encodeURIComponent(S.puzzle.seed) + '&d=' + S.dim);
+    return L.join('\n');
+  }
+  function doShare() {
+    const t = shareText();
+    const done = () => { S.copied = true; render(); setTimeout(() => { S.copied = false; render(); }, 2200); };
+    if (navigator.share && /Mobi|Android/i.test(navigator.userAgent)) {
+      navigator.share({ text: t }).then(done, () => { });
+      return;
+    }
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText(t).then(done, fallback);
+    } else fallback();
+    function fallback() {
+      const ta = document.createElement('textarea');
+      ta.value = t; ta.style.position = 'fixed'; ta.style.opacity = '0';
+      document.body.appendChild(ta); ta.select();
+      try { document.execCommand('copy'); done(); } catch (e) { }
+      document.body.removeChild(ta);
+    }
+  }
+  function recordDone() {
+    if (S.mode !== 'daily' || S.revealed) return;
+    const k = 'daily', all = store.get(k, {});
+    const day = all[todayStr()] || {};
+    const cur = day['d' + S.dim] || {};
+    if (S.phase === 'gridDone' || S.phase === 'plane' || S.phase === 'planeDone') cur.grid = Math.round((S.stats.gridMs || 0) / 1000);
+    if (S.phase === 'planeDone') cur.plane = Math.round((S.stats.planeMs || 0) / 1000);
+    day['d' + S.dim] = cur; all[todayStr()] = day;
+    const keys = Object.keys(all).sort(); while (keys.length > 60) delete all[keys.shift()];
+    store.set(k, all);
+  }
+
+  /* =====================================================================
+     rendering
+     ===================================================================== */
+  function render() {
+    const focusKey = document.activeElement && document.activeElement.dataset ? document.activeElement.dataset.k : null;
+    $('#main').innerHTML = S.view === 'setup' ? renderSetup() : renderGame();
+    if (focusKey) { const t = document.querySelector('[data-k="' + focusKey + '"]'); if (t) t.focus(); }
+    applyView3d();
+    if (S.phase === 'gridDone' || S.phase === 'planeDone') recordDone();
+  }
+
+  function renderSetup() {
+    const daily = store.get('daily', {})[todayStr()] || {};
+    const badge = d => {
+      const r = daily['d' + d]; if (!r) return '';
+      return ' <span class="chip ok">done ' + fmtMs((r.grid || 0) * 1000) + (r.plane ? ' + ' + fmtMs(r.plane * 1000) : '') + '</span>';
+    };
+    return '' +
+      '<div class="panel pad" style="margin-bottom:18px">' +
+      '<p style="max-width:74ch;margin-bottom:16px">The 81 SET cards are the points of the affine geometry <b class="mono">AG(4,3)</b>: each card is a vector of four coordinates mod 3, and three cards form a <b>SET</b> exactly when they sum to zero — i.e. when they lie on a line. Pick a dimension, then fill a grid so that <em>every</em> line of the geometry is a SET.</p>' +
+      '<div class="choices">' +
+      choiceCard(2, 'Two dimensions', 'AG(2,3)', ['<b>3&times;3</b> grid, 9 cards', '<b>12</b> lines: 3 rows, 3 columns, 6 (broken) diagonals', '<b>3</b> corner cards given, no 3 of them a SET', 'find the other 6 among the <b>78</b> cards left in the deck']) +
+      choiceCard(3, 'Three dimensions', 'AG(3,3)', ['<b>3&times;3&times;3</b> grid, 27 cards', '<b>117</b> lines through the 13 directions', '<b>4</b> corner cards given, no 3 of them a SET', 'find the other 23 among the <b>77</b> cards left in the deck', 'bonus stage: the projective plane <span class="mono">PG(2,3)</span>']) +
+      '</div>' +
+      '<div class="modes">' +
+      '<div class="seg" role="group" aria-label="puzzle source">' +
+      '<button data-act="mode" data-v="daily" aria-pressed="' + (S.mode === 'daily') + '">Daily &middot; ' + todayStr() + '</button>' +
+      '<button data-act="mode" data-v="random" aria-pressed="' + (S.mode === 'random') + '">Random</button>' +
+      '</div>' +
+      '<span class="muted">or a shared code</span>' +
+      '<input type="text" data-act="seedin" data-k="seedin" value="' + esc(S.seedIn) + '" placeholder="seed" size="10" aria-label="puzzle seed">' +
+      '<button class="btn primary" data-act="start" data-k="start">Start</button>' +
+      '</div>' +
+      '<p class="muted" style="margin:6px 0 0;font-size:13px">Daily today: 2D' + (badge(2) || ' <span class="muted">unplayed</span>') + ' &nbsp; 3D' + (badge(3) || ' <span class="muted">unplayed</span>') + '</p>' +
+      '</div>' + helpHTML();
+  }
+  function choiceCard(d, title, k, items) {
+    return '<button class="choice" data-act="dim" data-v="' + d + '" aria-pressed="' + (S.dim === d) + '">' +
+      '<span class="k">' + k + '</span><h3>' + title + '</h3><ul>' + items.map(i => '<li>' + i + '</li>').join('') + '</ul></button>';
+  }
+
+  /* ---------------- game screen ---------------- */
+  function renderGame() {
+    const inPlane = S.phase === 'plane' || S.phase === 'planeDone';
+    return bar() + msgHTML() + (inPlane ? planeHTML() : gridHTML()) +
+      (S.phase === 'gridDone' || S.phase === 'planeDone' ? doneHTML() : '') + helpHTML();
+  }
+
+  function bar() {
+    const g = checkGrid(S.placed, S.puzzle.lines);
+    const inPlane = S.phase === 'plane' || S.phase === 'planeDone';
+    const pl = checkPlane(S.plane.assign, PG, DIRS13);
+    let c = '<span class="chip"><b>AG(' + S.dim + ',3)</b> ' + (S.dim === 2 ? '3×3' : '3×3×3') + '</span>' +
+      '<span class="chip">' + (S.mode === 'daily' ? 'Daily · ' + todayStr()
+        : 'Random · <span class="mono">' + esc(S.puzzle.seed) + '</span>') + '</span>';
+    if (inPlane) {
+      c += '<span class="chip">points <b>' + pl.filled + '/13</b></span>';
+      if (S.plane.submitted || S.live.plane) c += pl.fails.length
+        ? '<span class="chip err">' + pl.fails.length + ' bad line' + (pl.fails.length > 1 ? 's' : '') + '</span>'
+        : '<span class="chip ok">no contradictions</span>';
+    } else {
+      c += '<span class="chip">cards <b>' + g.filled + '/' + g.total + '</b></span>';
+      if (S.submitted || S.live.grid) c += g.fails.length
+        ? '<span class="chip err">' + g.fails.length + ' / ' + S.puzzle.lines.length + ' SETs fail</span>'
+        : '<span class="chip ok">' + S.puzzle.lines.length + ' SETs hold</span>';
+      c += '<span class="chip">⏱ <b data-k="clock">' + fmtMs(elapsed()) + '</b></span>';
+    }
+    c += '<span class="spacer"></span>' +
+      '<button class="btn small ghost" data-act="undo" ' + (S.hist.length ? '' : 'disabled') + '>Undo</button>' +
+      '<button class="btn small ghost" data-act="hint">Hint</button>' +
+      '<button class="btn small ghost" data-act="reset">Reset</button>' +
+      '<button class="btn small ghost" data-act="reveal">Reveal</button>' +
+      '<button class="btn small ghost" data-act="home">New puzzle</button>';
+    return '<div class="bar">' + c + '</div>';
+  }
+
+  function liveSwitch(which) {
+    const on = S.live[which];
+    return '<span class="switch" role="switch" tabindex="0" data-act="live" data-v="' + which + '" aria-checked="' + on + '" data-k="live' + which + '">' +
+      '<span class="track"></span>check as I go</span>';
+  }
+
+  function msgHTML() {
+    const g = checkGrid(S.placed, S.puzzle.lines);
+    if (S.phase === 'grid') {
+      if (S.submitted && g.complete && g.fails.length)
+        return '<div class="msg err"><b>Not quite.</b> ' + g.fails.length + ' of ' + S.puzzle.lines.length +
+          ' lines are not SETs — they are listed below the grid; hover or tap one to see its three cells.' +
+          '<div class="row"><button class="btn" data-act="submit" data-k="submit">Check again</button>' + liveSwitch('grid') + '</div></div>';
+      if (S.submitted && !g.complete)
+        return '<div class="msg err">Every cell has to be filled before submitting.</div>';
+      if (g.complete)
+        return '<div class="msg ask"><b>Grid complete.</b> Submit it to check every line of AG(' + S.dim + ',3).' +
+          '<div class="row"><button class="btn primary pulse" data-act="submit" data-k="submit">Submit grid</button>' + liveSwitch('grid') + '</div></div>';
+      return '<div class="msg">Fill the remaining ' + (g.total - g.filled) + ' cell' + (g.total - g.filled === 1 ? '' : 's') +
+        ' <b>from the whole deck</b>, so that every row, column and diagonal — every line of AG(' + S.dim + ',3) — is a SET. Tap a cell and name the card you want; or pick it out of the deck and tap a cell.' +
+        '<div class="row">' + liveSwitch('grid') + '</div></div>';
+    }
+    if (S.phase === 'gridDone') {
+      let h = '<div class="msg ok"><b>Correct — all ' + S.puzzle.lines.length + ' lines are SETs.</b> ' +
+        (S.revealed ? '(revealed)' : 'Solved in ' + fmtMs(S.stats.gridMs) + '.');
+      if (S.dim === 3) h += ' The 13 SETs through the centre card are the 13 points of the projective plane PG(2,3) — want to lay them out?' +
+        '<div class="row"><button class="btn primary" data-act="plane" data-k="plane">Build PG(2,3)</button></div>';
+      return h + '</div>';
+    }
+    if (S.phase === 'plane') {
+      const pl = checkPlane(S.plane.assign, PG, DIRS13);
+      if (S.plane.msg === 'dead')
+        return '<div class="msg err">No labelling can extend what is on the board — undo a placement or two, then try again.<div class="row">' + liveSwitch('plane') + '</div></div>';
+      if (S.plane.submitted && pl.complete && pl.fails.length)
+        return '<div class="msg err"><b>Not a collineation yet.</b> ' + pl.fails.length + ' of the 13 projective lines hold four SETs that are not coplanar — shown in red.' +
+          '<div class="row"><button class="btn" data-act="psubmit" data-k="psubmit">Check again</button>' + liveSwitch('plane') + '</div></div>';
+      if (pl.complete)
+        return '<div class="msg ask"><b>All 13 points filled.</b> Submit to check the 13 lines.<div class="row"><button class="btn primary pulse" data-act="psubmit" data-k="psubmit">Submit plane</button>' + liveSwitch('plane') + '</div></div>';
+      return '<div class="msg">Drop each of the 13 SETs through the centre onto a point of PG(2,3), so that whenever four points are collinear here, the four SETs lie in a common plane of AG(3,3). ' +
+        '<span class="muted">(' + pl.filled + '/13 placed)</span><div class="row">' + liveSwitch('plane') + '</div></div>';
+    }
+    return '<div class="msg ok"><b>The whole thing checks out.</b> ' +
+      (S.revealed ? '(revealed)' : 'Grid ' + fmtMs(S.stats.gridMs) + ', plane ' + fmtMs(S.stats.planeMs) + '.') +
+      ' Every one of the 13 projective lines carries four coplanar SETs.</div>';
+  }
+
+  /* ---------------- grid ---------------- */
+  function gridHTML() {
+    const g = checkGrid(S.placed, S.puzzle.lines);
+    const show = S.submitted || S.live.grid;
+    const badCells = new Set();
+    if (show) g.fails.forEach(i => S.puzzle.lines[i].cells.forEach(c => badCells.add(c)));
+    const hlCells = new Set();
+    if (S.hl != null) S.puzzle.lines[S.hl].cells.forEach(c => hlCells.add(c));
+
+    const cell = (p, extraCls, extraAttr, noDrag) => {
+      const card = S.placed[p], given = S.puzzle.given.indexOf(p) >= 0;
+      const cls = ['cell', 'c' + p, card != null ? 'filled' : 'empty'];
+      if (extraCls) cls.push(extraCls);
+      if (given) cls.push('given');
+      if (badCells.has(p)) cls.push('bad');
+      if (hlCells.has(p)) cls.push('hlbad');
+      if (S.picker && S.picker.pos === p) cls.push('sel');
+      if (S.sel && S.sel.kind === 'tray' && card == null) cls.push('target');
+      const lab = 'cell ' + posLabel(S.dim, p) + (given ? ', given: ' : ', ') + (card != null ? cardName(card) : 'empty');
+      return '<button class="' + cls.join(' ') + '" data-act="cell" data-pos="' + p + '" data-k="c' + p + '"' +
+        (extraAttr || '') + (card != null && !given && !noDrag ? ' draggable="true"' : '') + ' aria-label="' + esc(lab) + '">' +
+        (card != null ? cardSVG(card) : '<span class="idx">' + posLabel(S.dim, p) + '</span>') + '</button>';
+    };
+    const layer = l => {
+      let h = S.dim === 3 ? '<h3>Layer ' + (l + 1) + '</h3>' : '';
+      h += '<div class="grid">';
+      for (let r = 0; r < 3; r++) for (let c = 0; c < 3; c++) h += cell(r + 3 * c + 9 * l);
+      return '<div class="layer">' + h + '</div></div>';
+    };
+    let boards = '';
+    if (S.dim === 3 && S.view3 === '3d') boards = scene3dHTML(cell);
+    else {
+      let ls = '';
+      for (let l = 0; l < (S.dim === 3 ? 3 : 1); l++) ls += layer(l);
+      boards = '<div class="boards">' + ls + '</div>';
+    }
+    if (S.dim === 3) boards = '<div class="viewbar">' +
+      '<div class="seg"><button data-act="view3" data-v="3d" aria-pressed="' + (S.view3 === '3d') + '">3-D lattice</button>' +
+      '<button data-act="view3" data-v="layers" aria-pressed="' + (S.view3 === 'layers') + '">Layers</button></div>' +
+      (S.view3 === '3d' ? '<span class="nudge">' +
+        '<button class="iconbtn small" data-act="rot" data-v="left" aria-label="rotate left">&#8592;</button>' +
+        '<button class="iconbtn small" data-act="rot" data-v="up" aria-label="rotate up">&#8593;</button>' +
+        '<button class="iconbtn small" data-act="rot" data-v="down" aria-label="rotate down">&#8595;</button>' +
+        '<button class="iconbtn small" data-act="rot" data-v="right" aria-label="rotate right">&#8594;</button>' +
+        '<button class="btn small ghost" data-act="rot" data-v="reset">Reset view</button></span>' : '') +
+      '</div>' + boards;
+
+    const empties = S.placed.filter(c => c == null).length;
+    let trayHTML = '';
+    if (S.phase === 'grid') {
+      trayHTML = '<div class="tray"><h3>The deck <span class="muted" style="text-transform:none;letter-spacing:0">&middot; ' +
+        (empties ? empties + ' cell' + (empties === 1 ? '' : 's') + ' to fill' : 'all cells filled') + '</span>' +
+        '</h3><div class="deck" data-zone="tray">' + deckHTML() + '</div></div>';
+    }
+
+    let fails = '';
+    if (show && g.fails.length) {
+      const items = g.fails.slice(0, 40).map(i =>
+        '<button data-act="hl" data-line="' + i + '" data-k="f' + i + '">' + lineLabel(S.dim, S.puzzle.lines[i]) +
+        ' <span class="mono">' + lineCells(S.dim, S.puzzle.lines[i]) + '</span></button>').join('');
+      fails = '<div class="fails"><h3 style="font:inherit;font-weight:600;font-size:13px;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);margin-bottom:8px">' +
+        g.fails.length + ' line' + (g.fails.length > 1 ? 's' : '') + ' that fail to be SETs' + (g.fails.length > 40 ? ' (first 40)' : '') +
+        '</h3><div class="faillist" data-zone="fails">' + items + '</div></div>';
+    }
+    const wide = S.dim === 2 ? ' style="--cw:78px"' : '';
+    return '<div class="panel pad"' + wide + '><div class="playarea"><div class="boardcol">' + boards + '</div>' +
+      trayHTML + '</div>' + fails + '</div>' + pickerHTML();
+  }
+
+  /* ---------------- attribute picker sheet ---------------- */
+  const ATTRS = [
+    { k: 0, name: 'Number', opts: ['one', 'two', 'three'] },
+    { k: 1, name: 'Colour', opts: COLOR_NAMES },
+    { k: 2, name: 'Shape', opts: SHAPE_NAMES },
+    { k: 3, name: 'Fill', opts: FILL_NAMES }
+  ];
+  const colRef = c => c == null ? 'var(--ink2)' : 'var(--c' + c + ')';
+  function miniShape(sh, fl, col) {
+    const stroke = colRef(col);
+    const fill = fl === 0 ? stroke : fl === 1 ? 'url(#stripe' + (col == null ? 3 : col) + ')' : 'none';
+    return '<svg viewBox="0 0 100 50" class="pglyph" aria-hidden="true"><path d="' + SYM[sh] +
+      '" style="fill:' + fill + ';stroke:' + stroke + ';stroke-width:5;stroke-linejoin:round"/></svg>';
+  }
+  function pickerHTML() {
+    const P = S.picker; if (!P) return '';
+    const cur = P.sel, complete = cur.every(x => x != null);
+    const card = complete ? cardId(cur) : null;
+    const at = complete ? S.placed.indexOf(card) : -1;
+    const dup = at >= 0 && at !== P.pos;
+    const here = S.placed[P.pos];
+
+    const rows = ATTRS.map(a => {
+      const opts = [0, 1, 2].map(v => {
+        let g;
+        if (a.k === 0) g = '<span class="pdigit" style="color:' + colRef(cur[1]) + '">' + (v + 1) + '</span>';
+        else if (a.k === 1) g = '<span class="pswatch" style="background:var(--c' + v + ')"></span>';
+        else if (a.k === 2) g = miniShape(v, cur[3] == null ? 2 : cur[3], cur[1]);
+        else g = miniShape(cur[2] == null ? 2 : cur[2], v, cur[1]);
+        return '<button class="popt' + (cur[a.k] === v ? ' on' : '') + '" data-act="pick" data-i="' + a.k + '" data-v="' + v +
+          '" data-k="pk' + a.k + v + '" aria-pressed="' + (cur[a.k] === v) + '" aria-label="' + esc(a.name + ': ' + a.opts[v]) + '">' +
+          g + '<span class="pcap">' + (a.k === 0 ? '' : a.opts[v]) + '</span></button>';
+      }).join('');
+      return '<div class="prow"><span class="plabel">' + a.name + '</span><div class="popts">' + opts + '</div></div>';
+    }).join('');
+
+    const words = cur.map((v, i) => v == null ? '<span class="muted">?</span>' : ATTRS[i].opts[v]);
+    const preview = complete
+      ? '<span class="cardface static">' + cardSVG(card) + '</span>'
+      : '<span class="cardface static empty"></span>';
+
+    let foot;
+    if (dup) foot = '<div class="pnote">That card is already at cell ' + posLabel(S.dim, at) + '.' +
+      '<div class="row"><button class="btn primary small" data-act="pickok" data-k="pickok">Move it here</button></div></div>';
+    else foot = '<p class="muted" style="margin:0;font-size:12.5px">The card is placed as soon as all four are chosen.</p>';
+
+    return '<div class="sheetwrap" data-act="pickbg"><div class="sheet" role="dialog" aria-modal="true" aria-label="choose a card">' +
+      '<div class="shead"><div><h3>Cell ' + posLabel(S.dim, P.pos) + '</h3>' +
+      '<div class="muted" style="font-size:13px">' + words[0] + ' &middot; ' + words[1] + ' &middot; ' + words[3] + ' &middot; ' + words[2] + '</div></div>' +
+      preview + '</div>' + rows + '<div class="sfoot">' + foot +
+      '<div class="row">' + (here != null ? '<button class="btn small" data-act="pickclear">Empty this cell</button>' : '') +
+      '<button class="btn small ghost" data-act="pickclose" data-k="pickcancel">Close</button></div></div></div></div>';
+  }
+
+  /* ---------------- the 3-D lattice ---------------- */
+  /* 27 cards at the points of a 3x3x3 lattice, drawn with CSS 3-D transforms.
+     The cube carries --rx / --ry / --zoom; every card cancels the rotation so
+     it always faces the viewer, which keeps it readable at any angle. */
+  const SP = { x: 116, y: 138, z: 265 };
+  /* the largest scale at which the whole lattice still fits the frame at the
+     current angles — found by bisection on the projected bounding box, so the
+     grid never runs off the edge however it is turned */
+  const PERSP = 1900;
+  function fitScale(w, h, cw) {
+    const rx = S.v3.rx * Math.PI / 180, ry = S.v3.ry * Math.PI / 180;
+    const cx = Math.cos(rx), sx = Math.sin(rx), cy = Math.cos(ry), sy = Math.sin(ry);
+    const hx = SP.x + 41, hy = SP.y + 54, hz = SP.z;   /* plate half-size */
+    const pts = [];
+    for (const a of [-1, 1]) for (const b of [-1, 1]) for (const d of [-1, 1]) {
+      const x = a * hx, y = b * hy, z = d * hz;
+      const x1 = x * cy + z * sy, z1 = -x * sy + z * cy;
+      pts.push([x1, y * cx - z1 * sx, y * sx + z1 * cx]);
+    }
+    const box = s => {
+      let a = 1e9, b = -1e9, c = 1e9, d = -1e9;
+      for (const p of pts) {
+        const k = PERSP / Math.max(80, PERSP - p[2] * s);
+        const X = p[0] * s * k, Y = p[1] * s * k;
+        if (X < a) a = X; if (X > b) b = X; if (Y < c) c = Y; if (Y > d) d = Y;
+      }
+      return [a, b, c, d];
+    };
+    const fits = s => { const q = box(s); return q[1] - q[0] <= w - 16 && q[3] - q[2] <= h - 26; };
+    let lo = 0.15, hi = 1.25;
+    if (!fits(hi)) { for (let i = 0; i < 22; i++) { const m = (lo + hi) / 2; if (fits(m)) lo = m; else hi = m; } hi = lo; }
+    const q = box(hi);
+    return { s: hi, tx: -(q[0] + q[1]) / 2, ty: -(q[2] + q[3]) / 2 };
+  }
+  function applyView3d() {
+    const c = document.getElementById('cube'); if (!c) return;
+    const sc = c.parentElement;
+    const cw = parseFloat(getComputedStyle(sc).getPropertyValue('--cw')) || 56;
+    const f = fitScale(sc.clientWidth || 620, (sc.clientHeight || 520) - 16, cw);
+    c.style.setProperty('--rx', S.v3.rx + 'deg');
+    c.style.setProperty('--ry', S.v3.ry + 'deg');
+    c.style.setProperty('--zoom', (S.v3.zoom * f.s).toFixed(3));
+    c.style.setProperty('--tx', f.tx.toFixed(1) + 'px');
+    c.style.setProperty('--ty', f.ty.toFixed(1) + 'px');
+  }
+  function scene3dHTML(cell) {
+    let plates = '';
+    const pw = 2 * SP.x + 78, ph = 2 * SP.y + 104;
+    for (let l = 0; l < 3; l++)
+      plates += '<div class="plate" style="width:' + pw + 'px;height:' + ph + 'px;margin-left:' + (-pw / 2) +
+        'px;margin-top:' + (-ph / 2) + 'px;transform:translate3d(0,0,' + ((l - 1) * SP.z) + 'px)">' +
+        '<span class="platelab">Layer ' + (l + 1) + '</span></div>';
+    let cards = '';
+    for (let p = 0; p < 27; p++) {
+      const v = dec(p, 3);
+      /* each card lies in its own layer plane, so the three planes stay
+         distinguishable however the lattice is turned */
+      const t = 'translate3d(' + ((v[1] - 1) * SP.x) + 'px,' + ((v[0] - 1) * SP.y) + 'px,' + ((v[2] - 1) * SP.z) + 'px)';
+      cards += cell(p, 'cell3d', ' style="transform:' + t + '"', true);
+    }
+    return '<div class="scene' + (S.hl != null ? ' focus' : '') + '" tabindex="0" aria-label="3-D grid, drag to rotate">' +
+      '<div class="cube" id="cube" style="--tx:0px;--ty:0px;--rx:' + S.v3.rx + 'deg;--ry:' + S.v3.ry + 'deg;--zoom:' + S.v3.zoom + '">' +
+      plates + cards + '</div>' +
+      '<div class="scenehint muted">drag to rotate &middot; scroll to zoom</div></div>';
+  }
+
+  /* the whole 81-card deck, in nine rows of nine: rows are (count, colour),
+     and within a row the cards run diamond / squiggle / oval x solid / striped / open.
+     Cards already on the board keep their slot, greyed out. */
+  const DECK_ROWS = (function () {
+    const rows = [];
+    for (let n = 0; n < 3; n++) for (let col = 0; col < 3; col++) {
+      const cards = [];
+      for (let sh = 0; sh < 3; sh++) for (let fl = 0; fl < 3; fl++) cards.push(cardId([n, col, sh, fl]));
+      rows.push({ n: n, col: col, cards: cards });
+    }
+    return rows;
+  })();
+  function deckHTML() {
+    const used = new Set(S.placed.filter(c => c != null));
+    let h = '';
+    for (const r of DECK_ROWS) {
+      h += '<span class="dlabel" aria-hidden="true"><b>' + (r.n + 1) + '</b><i style="background:var(--c' + r.col + ')"></i></span>';
+      for (const c of r.cards) {
+        const u = used.has(c);
+        const sel = S.sel && S.sel.kind === 'tray' && S.sel.card === c;
+        h += '<button class="cardface dcard' + (u ? ' used' : '') + (sel ? ' sel' : '') + '"' + (u ? '' : ' draggable="true"') +
+          ' data-act="tray" data-card="' + c + '" data-k="t' + c + '" aria-pressed="' + !!sel + '" aria-label="' +
+          esc(cardName(c) + (u ? ', already on the board' : '')) + '">' + cardSVG(c) + '</button>';
+      }
+    }
+    return h;
+  }
+
+  /* ---------------- projective plane ---------------- */
+  function planeHTML() {
+    const pl = checkPlane(S.plane.assign, PG, DIRS13);
+    const show = S.plane.submitted || S.live.plane;
+    const badNodes = new Set();
+    if (show) pl.fails.forEach(i => PG.lines[i].nodes.forEach(n => badNodes.add(n)));
+    const centre = S.puzzle.solution[enc(CENTER_POS)];
+
+    /* board */
+    let guides = '';
+    for (let i = 0; i < 3; i++) {
+      const a = PGPOS[i * 3], b = PGPOS[i * 3 + 2];
+      guides += '<line x1="' + a.x + '" y1="' + a.y + '" x2="' + b.x + '" y2="' + b.y + '" class="circ" style="stroke-dasharray:none;opacity:.6"/>';
+      const c = PGPOS[i], d = PGPOS[i + 6];
+      guides += '<line x1="' + c.x + '" y1="' + c.y + '" x2="' + d.x + '" y2="' + d.y + '" class="circ" style="stroke-dasharray:none;opacity:.6"/>';
+    }
+    let svg = '<svg class="pgsvg" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true">' +
+      guides + '<circle cx="50" cy="47" r="39" class="circ"/>' +
+      '<path class="hlpath" id="hlpath" d=""/></svg>';
+    let nodes = '';
+    for (let n = 0; n < 13; n++) {
+      const i = S.plane.assign[n], p = PGPOS[n];
+      const cls = ['pgnode', 'n' + n, n >= 9 ? 'inf' : ''];
+      if (i != null) cls.push('filled');
+      if (badNodes.has(n)) cls.push('bad');
+      if (S.plane.sel && (S.plane.sel.n === n)) cls.push('sel');
+      let inner;
+      if (i != null) {
+        const pair = S.plane.sets[i].cards.filter(c => c !== centre);
+        inner = pair.map(c => '<span class="mini">' + cardSVG(c) + '</span>').join('');
+      } else inner = '<span class="lbl">' + (n < 9 ? (Math.floor(n / 3) + 1) + ',' + (n % 3 + 1) : ['→', '↓', '↘', '↙'][n - 9]) + '</span>';
+      nodes += '<button class="' + cls.join(' ') + '" style="left:' + p.x + '%;top:' + p.y + '%"' + (i != null ? ' draggable="true"' : '') +
+        ' data-act="pgnode" data-node="' + n + '" data-k="n' + n + '" aria-label="' + esc(pgNodeName(n) + (i != null ? ', holds a SET' : ', empty')) + '">' + inner + '</button>';
+    }
+    const board = '<div class="pgwrap">' + svg + nodes + '</div>';
+
+    /* palette */
+    const items = S.plane.sets.map((s, i) => {
+      const used = S.plane.assign.indexOf(i) >= 0;
+      const sel = S.plane.sel && S.plane.sel.kind === 'item' && S.plane.sel.i === i;
+      const pair = s.cards.filter(c => c !== centre);
+      return '<button class="pgitem' + (used ? ' used' : '') + (sel ? ' sel' : '') + '" draggable="true" data-act="pgitem" data-i="' + i + '" data-k="p' + i + '" aria-label="SET number ' + (i + 1) + '" aria-pressed="' + !!sel + '">' +
+        pair.map(c => '<span class="mini">' + cardSVG(c) + '</span>').join('') + '</button>';
+    }).join('');
+
+    /* the 13 lines */
+    const rows = PG.lines.map((L, i) => {
+      const st = planeLineStatus(L, S.plane.assign, DIRS13);
+      const cls = 'pgline ' + (show && st === 'bad' ? 'bad' : st === 'good' ? 'good' : '');
+      const mark = st === 'bad' && show ? '✕' : st === 'good' ? '✓' : '·';
+      return '<button class="' + cls + '" data-act="pghl" data-line="' + i + '" data-k="L' + i + '">' +
+        '<span class="st">' + mark + '</span><span>' + pgLineName(i) + '</span></button>';
+    }).join('');
+
+    const solved = [];
+    for (let l = 0; l < 3; l++) {
+      let g = '<div class="grid" style="--cw:34px">';
+      for (let r = 0; r < 3; r++) for (let c = 0; c < 3; c++) {
+        const p = r + 3 * c + 9 * l, id = S.puzzle.solution[p];
+        g += '<span class="cell filled" style="cursor:default' + (p === enc(CENTER_POS) ? ';box-shadow:0 0 0 2px var(--accent) inset' : '') + '">' + cardSVG(id) + '</span>';
+      }
+      solved.push('<div class="layer"><h3>Layer ' + (l + 1) + '</h3>' + g + '</div></div>');
+    }
+
+    return '<div class="panel pad">' +
+      '<div class="centercard" style="margin-bottom:14px">' + faceHTML(centre) +
+      '<div><b>The centre card.</b> Exactly 13 SETs of the solved grid run through it, one per direction — the 13 points of PG(2,3).<br>' +
+      '<span class="muted">Four points are collinear in the plane below ⇔ their four SETs span a single plane of AG(3,3).</span></div></div>' +
+      '<div class="pgcols"><div>' + board +
+      '<div class="tray"><h3>The 13 SETs through the centre <span class="muted">(centre card omitted)</span></h3><div class="pgpal" data-zone="pgpal">' + items + '</div></div>' +
+      '</div><div><h3 style="font-size:13px;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);margin-bottom:8px">The 13 lines</h3>' +
+      '<div class="pglines" data-zone="pglines">' + rows + '</div>' +
+      '<p class="muted" style="font-size:12.5px;margin-top:8px">Hover a line to trace it on the board.</p></div></div>' +
+      '<details style="margin-top:16px"><summary class="muted" style="cursor:pointer;font-size:13px">Show the solved grid</summary><div class="boards" style="margin-top:12px">' + solved.join('') + '</div></details>' +
+      '</div>';
+  }
+
+  /* ---------------- done / share ---------------- */
+  function doneHTML() {
+    const twoStage = S.dim === 3;
+    return '<div class="panel pad" style="margin-top:18px">' +
+      '<h2 style="font-size:20px;margin-bottom:12px">' + (S.phase === 'planeDone' ? 'Both stages complete' : 'Grid complete') + '</h2>' +
+      '<div class="stats">' +
+      '<div><b>' + fmtMs(S.stats.gridMs) + '</b><span class="muted">grid time</span></div>' +
+      (twoStage && S.stats.planeMs != null ? '<div><b>' + fmtMs(S.stats.planeMs) + '</b><span class="muted">plane time</span></div>' : '') +
+      '<div><b>' + S.stats.checksG + (twoStage ? '+' + S.stats.checksP : '') + '</b><span class="muted">submissions</span></div>' +
+      '<div><b>' + S.stats.hintsG + (twoStage ? '+' + S.stats.hintsP : '') + '</b><span class="muted">hints</span></div>' +
+      '</div>' +
+      '<div class="sharebox"><pre>' + esc(shareText()) + '</pre>' +
+      '<button class="btn primary" data-act="share" data-k="share">' + (S.copied ? 'Copied ✓' : 'Copy result') + '</button> ' +
+      '<button class="btn" data-act="again">New random ' + S.dim + 'D puzzle</button> ' +
+      '<button class="btn ghost" data-act="home">Change mode</button></div></div>';
+  }
+
+  /* ---------------- help ---------------- */
+  function helpHTML() {
+    return '<details class="help"><summary>What is going on here? (the geometry)</summary><div class="body">' +
+      '<p>A SET card has four attributes with three values each, so it is a point of <span class="mono">F<sub>3</sub><sup>4</sup></span>. Writing each attribute as 0, 1 or 2, three cards form a SET exactly when their four coordinates each sum to 0 mod 3 — that is, when the three points are <em>collinear</em> in the affine geometry <span class="mono">AG(4,3)</span>. The deck is the geometry; SETs are its 1080 lines.</p>' +
+      '<h4>The 3&times;3 puzzle</h4>' +
+      '<p>Nine cards closed under "third card of any two" form a plane, a copy of <span class="mono">AG(2,3)</span>. Laid out as a 3&times;3 array it has 12 lines: 3 rows, 3 columns and 6 diagonals — the diagonals wrap around, since 0,1,2 is cyclic. Three cards with no SET among them are affinely independent, so they pin the plane down: the other six cards are forced, and the puzzle has exactly one solution reachable by pure logic. You choose them from the whole remaining deck — 78 candidates, of which only six belong — so the work is to compute each one, not to arrange a pre-cut set.</p>' +
+      '<h4>The 3&times;3&times;3 puzzle</h4>' +
+      '<p>Twenty-seven cards give <span class="mono">AG(3,3)</span>, with 117 lines falling into 13 parallel classes. Four cards with no SET among them fix it; every other cell is then forced.</p>' +
+      '<h4>The projective plane</h4>' +
+      '<p>The 13 directions of <span class="mono">AG(3,3)</span> are the 13 points of the projective plane <span class="mono">PG(2,3)</span>, and each direction gives exactly one line through the centre cell. A plane of <span class="mono">AG(3,3)</span> through the centre contains four of those lines, which is a line of <span class="mono">PG(2,3)</span>: 13 points, 13 lines, 4 points on every line, 4 lines through every point. The board is drawn the classical way — a 3&times;3 affine part plus four points at infinity on the dashed circle, which is itself the thirteenth line. Placing the 13 centre-SETs correctly means finding a collineation; there are 5616 of them, so there is plenty of room, but every choice constrains the rest.</p>' +
+      '<h4>Playing</h4>' +
+      '<p><b>Two ways in.</b> Tap a cell and the card is asked for by its four attributes — number, colour, shape, fill — which is the quick way on a phone; it drops into the cell as soon as all four are chosen. Or find the card in the deck and tap the cell you want it in. The deck is laid out in nine rows of nine: each row is one count and colour, and within a row the cards run diamond, squiggle, oval, each solid, striped, open. Cards on the board keep their place in the deck, greyed out. With a mouse you can also drag cards into place, drag one cell onto another to swap them, and drag a card back to the deck.</p>' +
+      '<p><b>The 3-D view</b> puts the 27 cards at the points of an actual lattice — drag to rotate it, scroll to zoom, arrow keys when it has focus, and the reset button to come back to the standard angle. The cards turn to face you as it spins so they stay readable, and the three dashed plates are the layers. Hovering a failing line dims everything except its three cards. Switch to <b>Layers</b> for the flat three-panel view when you want to read rows and columns carefully. <b>Hint</b> fills one forced cell, <b>Reveal</b> gives up and shows the answer, and <b>check as I go</b> turns on live validation instead of waiting for a submission. The daily puzzle is the same for everybody on a given date; a random puzzle can be replayed by anyone from the seed in its share text.</p>' +
+      '</div></details>';
+  }
+
+  /* =====================================================================
+     events
+     ===================================================================== */
+  function hlCells(sel, cls, on) {
+    sel.forEach(q => { const e = document.querySelector(q); if (e) e.classList[on ? 'add' : 'remove'](cls); });
+  }
+  document.addEventListener('click', ev => {
+    const t = ev.target.closest('[data-act]'); if (!t) return;
+    /* a click that ends a rotate drag must not also hit the card under it */
+    if (S.noClick && Date.now() - S.noClick < 300 && ev.target.closest('.scene')) return;
+    const act = t.dataset.act;
+    switch (act) {
+      case 'pick': pickAttr(+t.dataset.i, +t.dataset.v); break;
+      case 'pickok': pickConfirm(); break;
+      case 'pickclear': { const p = S.picker.pos; S.picker = null; clearCell(p); break; }
+      case 'pickbg': if (!ev.target.closest('.sheet')) closePicker(); break;
+      case 'pickclose': closePicker(); break;
+      case 'view3': S.view3 = t.dataset.v; store.set('view3', S.view3); render(); break;
+      case 'rot': {
+        const v = t.dataset.v;
+        if (v === 'reset') S.v3 = { rx: -24, ry: -32, zoom: 1 };
+        else if (v === 'left') S.v3.ry -= 15;
+        else if (v === 'right') S.v3.ry += 15;
+        else if (v === 'up') S.v3.rx = Math.max(-85, S.v3.rx - 12);
+        else if (v === 'down') S.v3.rx = Math.min(85, S.v3.rx + 12);
+        applyView3d(); break;
+      }
+      case 'dim': S.dim = +t.dataset.v; render(); break;
+      case 'mode': S.mode = t.dataset.v; render(); break;
+      case 'start': {
+        const raw = ($('[data-act="seedin"]') || {}).value || '';
+        const s = raw.trim();
+        startPuzzle(S.dim, s ? 'random' : S.mode, s || null); break;
+      }
+      case 'cell': onCell(+t.dataset.pos); break;
+      case 'tray': onTray(+t.dataset.card); break;
+      case 'submit': submitGrid(); break;
+      case 'hint': (S.phase === 'plane' ? hintPlane : hintGrid)(); break;
+      case 'undo': undo(); break;
+      case 'reset':
+        if (S.phase === 'plane' || S.phase === 'planeDone') { snapshot(); S.plane.assign = new Array(13).fill(null); S.plane.submitted = false; S.plane.msg = null; S.phase = 'plane'; }
+        else { snapshot(); S.placed = new Array(S.placed.length).fill(null); S.puzzle.given.forEach(p => S.placed[p] = S.puzzle.solution[p]); S.submitted = false; S.phase = 'grid'; }
+        S.sel = null; S.plane.sel = null; render(); break;
+      case 'reveal': (S.phase === 'plane' || S.phase === 'planeDone' ? revealPlane : revealGrid)(); break;
+      case 'plane': startPlane(); break;
+      case 'psubmit': submitPlane(); break;
+      case 'pgnode': onPgNode(+t.dataset.node); break;
+      case 'pgitem': onPgItem(+t.dataset.i); break;
+      case 'hl': S.hl = (S.hl === +t.dataset.line ? null : +t.dataset.line); render(); break;
+      case 'pghl': S.plane.hl = (S.plane.hl === +t.dataset.line ? null : +t.dataset.line); paintPgHl(S.plane.hl, true); break;
+      case 'live': S.live[t.dataset.v] = !S.live[t.dataset.v]; render(); break;
+      case 'home': S.view = 'setup'; S.puzzle = null; render(); break;
+      case 'again': startPuzzle(S.dim, 'random', null); break;
+      case 'share': doShare(); break;
+      case 'theme': {
+        const cur = document.documentElement.getAttribute('data-theme');
+        const next = cur === 'dark' ? 'light' : cur === 'light' ? 'dark' :
+          (matchMedia('(prefers-color-scheme: dark)').matches ? 'light' : 'dark');
+        document.documentElement.setAttribute('data-theme', next); store.set('theme', next);
+        $('#themebtn').textContent = next === 'dark' ? '☀' : '☽';
+        break;
+      }
+    }
+  });
+  document.addEventListener('keydown', ev => {
+    if (ev.key === 'Escape' && S.picker) { ev.preventDefault(); return closePicker(); }
+    if (ev.target.closest && ev.target.closest('.scene') && /^Arrow/.test(ev.key)) {
+      ev.preventDefault();
+      if (ev.key === 'ArrowLeft') S.v3.ry -= 8;
+      else if (ev.key === 'ArrowRight') S.v3.ry += 8;
+      else if (ev.key === 'ArrowUp') S.v3.rx = Math.max(-85, S.v3.rx - 8);
+      else S.v3.rx = Math.min(85, S.v3.rx + 8);
+      return applyView3d();
+    }
+    if (ev.key !== ' ' && ev.key !== 'Enter') return;
+    const t = ev.target.closest('[role="switch"]'); if (!t) return;
+    ev.preventDefault(); t.click();
+  });
+
+  /* ---------------- rotate the lattice ---------------- */
+  let rot = null;
+  const clamp = (v, a, b) => v < a ? a : v > b ? b : v;
+  document.addEventListener('pointerdown', ev => {
+    const sc = ev.target.closest('.scene'); if (!sc || ev.button > 0) return;
+    if (ev.target.closest('[draggable="true"]')) return;
+    rot = { x: ev.clientX, y: ev.clientY, rx: S.v3.rx, ry: S.v3.ry, moved: false, el: sc, id: ev.pointerId };
+  });
+  document.addEventListener('pointermove', ev => {
+    if (!rot || ev.pointerId !== rot.id) return;
+    const dx = ev.clientX - rot.x, dy = ev.clientY - rot.y;
+    /* capture only once a real drag starts — capturing on pointerdown would
+       retarget the following click away from the cell that was tapped */
+    if (!rot.moved && Math.abs(dx) + Math.abs(dy) > 5) {
+      rot.moved = true;
+      try { rot.el.setPointerCapture(rot.id); } catch (e) { }
+    }
+    if (!rot.moved) return;
+    S.v3.ry = rot.ry + dx * 0.42;
+    S.v3.rx = clamp(rot.rx - dy * 0.42, -85, 85);
+    applyView3d();
+  });
+  const endRot = ev => {
+    if (!rot || (ev.pointerId != null && ev.pointerId !== rot.id)) return;
+    if (rot.moved) S.noClick = Date.now();
+    try { rot.el.releasePointerCapture(rot.id); } catch (e) { }
+    rot = null;
+  };
+  document.addEventListener('pointerup', endRot);
+  document.addEventListener('pointercancel', endRot);
+  document.addEventListener('wheel', ev => {
+    if (!ev.target.closest || !ev.target.closest('.scene')) return;
+    ev.preventDefault();
+    S.v3.zoom = clamp(S.v3.zoom * (ev.deltaY > 0 ? 0.93 : 1.07), 0.5, 1.9);
+    applyView3d();
+  }, { passive: false });
+  /* hover previews, without re-rendering */
+  document.addEventListener('mouseover', ev => {
+    const t = ev.target.closest('[data-act="hl"]');
+    if (t && S.puzzle) {
+      hlCells(S.puzzle.lines[+t.dataset.line].cells.map(c => '.c' + c), 'hlbad', true);
+      const sc = document.querySelector('.scene'); if (sc) sc.classList.add('focus');
+    }
+    const p = ev.target.closest('[data-act="pghl"]');
+    if (p) paintPgHl(+p.dataset.line, false);
+  });
+  document.addEventListener('mouseout', ev => {
+    const t = ev.target.closest('[data-act="hl"]');
+    if (t && S.puzzle) {
+      hlCells(S.puzzle.lines[+t.dataset.line].cells.map(c => '.c' + c), 'hlbad', false);
+      const sc = document.querySelector('.scene'); if (sc && S.hl == null) sc.classList.remove('focus');
+    }
+    const p = ev.target.closest('[data-act="pghl"]');
+    if (p) paintPgHl(S.plane.hl, false);
+  });
+  function paintPgHl(i, sticky) {
+    const path = document.querySelector('#hlpath'); if (!path) return;
+    document.querySelectorAll('.pgnode.hl,.pgnode.hlbad').forEach(e => e.classList.remove('hl', 'hlbad'));
+    if (i == null) { path.setAttribute('d', ''); return; }
+    const bad = (S.plane.submitted || S.live.plane) && planeLineStatus(PG.lines[i], S.plane.assign, DIRS13) === 'bad';
+    path.setAttribute('d', PGPATH[i]);
+    path.classList[bad ? 'add' : 'remove']('bad');
+    PG.lines[i].nodes.forEach(n => { const e = document.querySelector('.pgnode.n' + n); if (e) e.classList.add(bad ? 'hlbad' : 'hl'); });
+  }
+
+  /* ---------------- drag and drop ---------------- */
+  const DROP = '[data-act="cell"],[data-act="pgnode"],[data-zone="tray"],[data-zone="pgpal"]';
+  document.addEventListener('dragstart', ev => {
+    const t = ev.target.closest('[draggable="true"]'); if (!t) return;
+    const a = t.dataset.act;
+    const p = a === 'tray' ? { k: 'tray', v: +t.dataset.card } : a === 'cell' ? { k: 'cell', v: +t.dataset.pos }
+      : a === 'pgitem' ? { k: 'item', v: +t.dataset.i } : a === 'pgnode' ? { k: 'node', v: +t.dataset.node } : null;
+    if (!p) return;
+    S.drag = p;
+    try { ev.dataTransfer.setData('text/plain', JSON.stringify(p)); ev.dataTransfer.effectAllowed = 'move'; } catch (e) { }
+  });
+  document.addEventListener('dragover', ev => {
+    if (!S.drag) return;
+    const t = ev.target.closest(DROP); if (!t) return;
+    ev.preventDefault();
+    try { ev.dataTransfer.dropEffect = 'move'; } catch (e) { }
+    t.classList.add('dragover');
+  });
+  document.addEventListener('dragleave', ev => { const t = ev.target.closest(DROP); if (t) t.classList.remove('dragover'); });
+  document.addEventListener('dragend', () => { S.drag = null; document.querySelectorAll('.dragover').forEach(e => e.classList.remove('dragover')); });
+  document.addEventListener('drop', ev => {
+    const d = S.drag; S.drag = null;
+    const t = ev.target.closest(DROP); if (!t || !d) return;
+    ev.preventDefault(); t.classList.remove('dragover');
+    if (t.dataset.zone === 'tray') { if (d.k === 'cell' && S.placed[d.v] != null) return clearCell(d.v); return render(); }
+    if (t.dataset.zone === 'pgpal') { if (d.k === 'node' && S.plane.assign[d.v] != null) { snapshot(); S.plane.assign[d.v] = null; S.plane.submitted = false; } return render(); }
+    if (t.dataset.act === 'cell') {
+      const pos = +t.dataset.pos;
+      if (S.puzzle.given.indexOf(pos) >= 0) return render();
+      if (d.k === 'tray') return placeAt(pos, d.v);
+      if (d.k === 'cell' && d.v !== pos) {
+        snapshot(); const a = S.placed[d.v], b = S.placed[pos];
+        S.placed[pos] = a; S.placed[d.v] = b; S.submitted = false; S.sel = null;
+      }
+      return render();
+    }
+    const n = +t.dataset.node;
+    if (d.k === 'item') { snapshot(); assignPg(n, d.v); S.plane.sel = null; }
+    else if (d.k === 'node' && d.v !== n) {
+      snapshot(); const a = S.plane.assign[d.v], b = S.plane.assign[n];
+      S.plane.assign[n] = a; S.plane.assign[d.v] = b; S.plane.submitted = false; S.plane.sel = null;
+    }
+    render();
+  });
+
+  addEventListener('resize', applyView3d);
+
+  /* ---------------- clock ---------------- */
+  setInterval(() => {
+    if (S.view !== 'game' || S.phase !== 'grid' || S.stats.t0 == null) return;
+    const b = document.querySelector('[data-k="clock"]'); if (b) b.textContent = fmtMs(elapsed());
+  }, 500);
+
+  /* ---------------- boot ---------------- */
+  const th = store.get('theme', null);
+  S.view3 = store.get('view3', '3d') === 'layers' ? 'layers' : '3d';
+  if (th) document.documentElement.setAttribute('data-theme', th);
+  $('#themebtn').textContent = (th === 'dark' || (!th && matchMedia('(prefers-color-scheme: dark)').matches)) ? '☀' : '☽';
+  (function () {
+    const m = /[#&]p=([^&]+)/.exec(location.hash), d = /[#&]d=([23])/.exec(location.hash);
+    if (m) { S.dim = d ? +d[1] : 2; startPuzzle(S.dim, 'random', decodeURIComponent(m[1])); }
+    else render();
+  })();
+
+  /* hooks for automated testing */
+  window.__set = {
+    S: S, render: render, start: startPuzzle,
+    solveGrid: () => { S.placed = S.puzzle.solution.slice(); S.stats.t0 = S.stats.t0 || Date.now(); render(); },
+    breakGrid: () => { S.placed = S.puzzle.solution.slice(); const a = S.puzzle.pool[0], b = S.puzzle.pool[1]; const i = S.placed.indexOf(a), j = S.placed.indexOf(b); S.placed[i] = b; S.placed[j] = a; render(); },
+    solvePlaneNow: () => { S.plane.assign = solvePlane(new Array(13).fill(null), PG, DIRS13); render(); },
+    breakPlane: () => { const s = solvePlane(new Array(13).fill(null), PG, DIRS13); const t = s[0]; s[0] = s[1]; s[1] = t; S.plane.assign = s; render(); },
+    check: () => ({ grid: checkGrid(S.placed, S.puzzle.lines), plane: checkPlane(S.plane.assign, PG, DIRS13), phase: S.phase }),
+    share: shareText
+  };
+})();
+
+</script>
+</body>
+</html>
