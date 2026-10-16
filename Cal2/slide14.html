@@ -110,6 +110,8 @@
 							Let \(\{b_n\}\) be a positive decreasing sequence which converges to 0, and \(a_n=b_n\cdot(-1)^{n+1}\).  Then \(\displaystyle \sum a_n\) converges.
 								
 						</p>
+
+						<iframe src="https://www.desmos.com/calculator/xwreakyy4y" width="100%" height="500" style="border: 1px solid #ccc" frameborder=0></iframe>
 						
 
 						
@@ -226,22 +228,26 @@
 						
 						<div class="r-frame">
 							<p style="font-size: 25px;">
-								If \(\sum a_n\) is absolutely convergent, then it is convergent.  
+								If \(\displaystyle \sum_{n=1}^\infty a_n\) is absolutely convergent, then it is convergent.  
 							</p>
 						</div>
 						<p style="font-size: 25px;" class="fragment">
-							Suppose \(\sum |a_n|\) converges.  Why is \[0\leq a_n+|a_n|\leq 2|a_n|? \]
+							Suppose \(\displaystyle \sum_{n=1}^\infty |a_n|\) converges.  Why is \(0\leq a_n+|a_n|\leq 2|a_n|? \)
 						</p>
 						<p style="font-size: 25px;" class="fragment">
-							So we now have \[\sum 0\leq \sum (a_n+|a_n|)\leq \sum 2|a_n|, \] why does \(\sum 2|a_n|\) converge?
-						</p>
-
-						<p style="font-size: 25px;" class="fragment">
-							Why does \(\sum (a_n+|a_n|)\) converge?
+							So we now have \(\displaystyle \sum_{n=1}^\infty (a_n+|a_n|)\leq \sum_{n=1}^\infty 2|a_n|, \) why does \(\displaystyle\sum_{n=1}^\infty 2|a_n|\) converge?
 						</p>
 
 						<p style="font-size: 25px;" class="fragment">
-							Why does \(\sum a_n\) converge?
+							Why is \(\displaystyle s_m = \sum_{n=1}^m (a_n+|a_n|)\) a non-decreasing sequence?
+						</p>
+
+						<p style="font-size: 25px;" class="fragment">
+							Why does \(\displaystyle \sum_{n=1}^\infty (a_n+|a_n|)\) converge?
+						</p>
+
+						<p style="font-size: 25px;" class="fragment">
+							Why does \(\displaystyle \sum_{n=1}^\infty a_n\) converge?
 						</p>
 
 
@@ -250,7 +256,7 @@
 
 					<section data-auto-animate>
 							<p style="font-size: 25px;">
-								Classify the following as absolutely convergent, conditionally convergent and divergent.
+								Classify the following as absolutely convergent, conditionally convergent or divergent.
 								\[\sum_{n=3}^\infty \frac{\ln(n)(-1)^n}{n^2},  \sum_{n=1}^\infty \frac{(-1)^n}{n},  \sum_{n=0}^\infty \frac{\arctan(n)(-1)^n}{e^n},  \sum_{n=1}^\infty \frac{\cos(n\pi)}{n^2}\] 
 								\[\sum_{n=3}^\infty \frac{\ln(n)}{n^2},  \sum_{n=1}^\infty \frac{1}{n},  \sum_{n=0}^\infty \frac{\arctan(n)}{e^n}\] 
 							</p>
